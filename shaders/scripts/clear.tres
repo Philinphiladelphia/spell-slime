@@ -1,0 +1,82 @@
+[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://c25sxox4enjs3"]
+
+[ext_resource type="Script" uid="uid://cnf0iogivtjhp" path="res://addons/shaderV/rgba/sobelEdge.gd" id="1_g0j6d"]
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_jw7qj"]
+constant = -1.0
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_e5eqa"]
+constant = Color(0, 0, 0, 1)
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_6hbkf"]
+default_input_values = [2, -1.0, 3, 0.001, 4, false, 5, false]
+initialized = true
+script = ExtResource("1_g0j6d")
+
+[sub_resource type="VisualShaderNodeBooleanConstant" id="VisualShaderNodeBooleanConstant_1tmsb"]
+
+[sub_resource type="VisualShaderNodeBooleanConstant" id="VisualShaderNodeBooleanConstant_fwrtc"]
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_md8bp"]
+constant = 0.005
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+
+// SobelEdge
+#include \"res://addons/shaderV/rgba/sobelEdge.gdshaderinc\"
+
+void fragment() {
+// ColorConstant:11
+	vec4 n_out11p0 = vec4(0.000000, 0.000000, 0.000000, 1.000000);
+
+
+// FloatConstant:10
+	float n_out10p0 = -1.000000;
+
+
+// FloatConstant:9
+	float n_out9p0 = 0.005000;
+
+
+// BooleanConstant:7
+	bool n_out7p0 = false;
+
+
+// BooleanConstant:8
+	bool n_out8p0 = false;
+
+
+	float n_out6p0;
+// SobelEdge:6
+	{
+		n_out6p0 = _sobelEdgeFunc(TEXTURE, UV.xy, n_out10p0, n_out9p0, n_out7p0, n_out8p0);
+	}
+
+
+// Output:0
+	COLOR.rgb = vec3(n_out11p0.xyz);
+	COLOR.a = n_out6p0;
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(340, 100)
+nodes/fragment/6/node = SubResource("VisualShaderNodeCustom_6hbkf")
+nodes/fragment/6/position = Vector2(40, 220)
+nodes/fragment/7/node = SubResource("VisualShaderNodeBooleanConstant_1tmsb")
+nodes/fragment/7/position = Vector2(-240, 360)
+nodes/fragment/8/node = SubResource("VisualShaderNodeBooleanConstant_fwrtc")
+nodes/fragment/8/position = Vector2(-260, 460)
+nodes/fragment/9/node = SubResource("VisualShaderNodeFloatConstant_md8bp")
+nodes/fragment/9/position = Vector2(-340, 240)
+nodes/fragment/10/node = SubResource("VisualShaderNodeFloatConstant_jw7qj")
+nodes/fragment/10/position = Vector2(-180, 180)
+nodes/fragment/11/node = SubResource("VisualShaderNodeColorConstant_e5eqa")
+nodes/fragment/11/position = Vector2(80, 120)
+nodes/fragment/connections = PackedInt32Array(10, 0, 6, 2, 9, 0, 6, 3, 7, 0, 6, 4, 8, 0, 6, 5, 11, 0, 0, 0, 6, 0, 0, 1)

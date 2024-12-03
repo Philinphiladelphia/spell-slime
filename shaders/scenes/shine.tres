@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cnvd3sd2rq3x8"]
+
+[ext_resource type="Shader" uid="uid://bwa21t2k571a3" path="res://shaders/scripts/shine.tres" id="1_7fa4t"]
+
+[resource]
+shader = ExtResource("1_7fa4t")

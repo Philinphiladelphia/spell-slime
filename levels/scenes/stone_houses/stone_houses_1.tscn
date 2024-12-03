@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3028tksjsqof"]
+
+[ext_resource type="Texture2D" uid="uid://burv074pori0v" path="res://spell_machine_tower/assets/stone/1999630919.png" id="1_6oiio"]
+[ext_resource type="Texture2D" uid="uid://bdg78nkkgj4j3" path="res://spell_machine_tower/assets/stone/637059872.png" id="2_i07jf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cr10"]
+size = Vector2(352.5, 148.5)
+
+[node name="StoneHouses1" type="Node2D"]
+
+[node name="stone_houses" type="Node2D" parent="."]
+position = Vector2(2958, -729)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stone_houses"]
+
+[node name="1999630919" type="Sprite2D" parent="stone_houses/StaticBody2D"]
+position = Vector2(-729, 270)
+texture = ExtResource("1_6oiio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stone_houses/StaticBody2D"]
+position = Vector2(-703.25, 347.25)
+shape = SubResource("RectangleShape2D_5cr10")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stone_houses/StaticBody2D"]
+polygon = PackedVector2Array(-531, 271, -570, 229, -568, 131, -615, 129, -611, 181, -795, 96, -906, 250, -884, 263, -871, 283, -538, 287)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="stone_houses"]
+
+[node name="637059872" type="Sprite2D" parent="stone_houses/StaticBody2D2"]
+position = Vector2(650, 233)
+texture = ExtResource("2_i07jf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stone_houses/StaticBody2D2"]
+position = Vector2(530, 250)
+polygon = PackedVector2Array(192, -197, 189, -10, 213, 13, 224, 34, 220, 55, 208, 68, 224, 83, 224, 108, 211, 121, 209, 140, 226, 149, 240, 176, 18, 189, 3, 148, 14, 113, 38, 113, 54, 136, 56, 149, 71, 147, 72, 102, 58, 84, 54, 62, 71, 39, 71, -175, 64, -201, 86, -216, 118, -228, 130, -233, 123, -250, 138, -252, 141, -225, 173, -218)

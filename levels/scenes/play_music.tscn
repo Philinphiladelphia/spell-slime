@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://sy47niqx0ehu"]
+
+[ext_resource type="AudioStream" uid="uid://bjf11x7ikdn8q" path="res://music/assets/lehrer/4-The-Elements.mp3" id="1_3ubxg"]
+[ext_resource type="PackedScene" uid="uid://dkmnhwrbi6fme" path="res://levels/scenes/sunset_level.tscn" id="1_xdo7p"]
+
+[node name="PlayMusic" type="Node2D"]
+
+[node name="SunsetLevel" parent="." instance=ExtResource("1_xdo7p")]
+
+[node name="the_elements_intro_theme" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_3ubxg")
+volume_db = 5.0
+autoplay = true
+max_distance = 40000.0

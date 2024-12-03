@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtxmvoh8n5kre"]
+
+[ext_resource type="Material" uid="uid://bk5k46uehklx2" path="res://shaders/scenes/clear.tres" id="1_4eysd"]
+
+[node name="Node2D" type="Node2D"]
+material = ExtResource("1_4eysd")

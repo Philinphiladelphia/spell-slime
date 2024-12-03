@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpk812tchyer5"]
+
+[ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_3ert3"]
+[ext_resource type="PackedScene" uid="uid://e6og876glwxo" path="res://background/scenes/parallaxes/sunrise_maxxfield_parrish.tscn" id="2_srk34"]
+[ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="3_8l7d3"]
+[ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="4_qypbl"]
+[ext_resource type="Texture2D" uid="uid://bjvp3lk3almqm" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version B/Layers/sky.png" id="5_jigly"]
+[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="6_yiftn"]
+[ext_resource type="Script" path="res://levels/scenes/track_slimes.gd" id="7_blygw"]
+[ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="8_8bbjr"]
+
+[node name="SunsetLevel" type="Node2D"]
+script = ExtResource("1_3ert3")
+
+[node name="ParallaxTest" parent="." instance=ExtResource("2_srk34")]
+z_index = -5
+position = Vector2(-2947, -4136)
+
+[node name="terrain" parent="." instance=ExtResource("3_8l7d3")]
+position = Vector2(11194, -862)
+scale = Vector2(4, 2)
+
+[node name="SpellMachineTower" parent="." instance=ExtResource("4_qypbl")]
+position = Vector2(-2022, -2025)
+
+[node name="level_camera" type="Camera2D" parent="."]
+position = Vector2(-2000, -2528)
+scale = Vector2(0.25, 0.25)
+zoom = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="level_camera"]
+z_index = -10
+position = Vector2(120, 464)
+scale = Vector2(60, 60)
+texture = ExtResource("5_jigly")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="level_camera"]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="PowderViewport" parent="." instance=ExtResource("6_yiftn")]
+position = Vector2(-4544, -3843)
+scale = Vector2(4.2, 4.2)
+
+[node name="slime_tracker" type="Node2D" parent="."]
+script = ExtResource("7_blygw")
+
+[node name="right_spawner" type="Node2D" parent="slime_tracker"]
+position = Vector2(-3914, -1398)
+script = ExtResource("8_8bbjr")
+
+[node name="left_spawner" type="Node2D" parent="slime_tracker"]
+position = Vector2(1225, -1410)
+script = ExtResource("8_8bbjr")

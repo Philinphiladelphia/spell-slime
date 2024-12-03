@@ -1,0 +1,9 @@
+*.rar
+*.so
+music/
+assets/
+Models/
+addons/
+background/
+test_folder/
+.godot/

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://p0maedeb06bm"]
+
+[ext_resource type="Material" uid="uid://kinnni2xr74d" path="res://shaders/scenes/gameboy.tres" id="1_a8u5k"]
+
+[node name="Gameboy" type="Node2D"]
+material = ExtResource("1_a8u5k")

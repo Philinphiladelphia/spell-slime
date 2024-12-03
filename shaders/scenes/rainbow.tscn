@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8bwskeh1hwdg"]
+
+[ext_resource type="Shader" uid="uid://dsssibld31awi" path="res://shaders/scripts/rainbow.tres" id="1_jkjgn"]
+
+[sub_resource type="Gradient" id="408"]
+offsets = PackedFloat32Array(0, 0.174242, 0.336134, 0.504202, 0.705882, 0.865546, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.726563, 0, 1, 0.640625, 1, 0, 1, 0, 1, 1, 1, 0, 0.132813, 1, 1, 1, 0, 0.984375, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_y2syp"]
+gradient = SubResource("408")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_naayf"]
+shader = ExtResource("1_jkjgn")
+shader_parameter/gradient = SubResource("GradientTexture1D_y2syp")
+
+[node name="RainbowSlime" type="Node2D"]
+material = SubResource("ShaderMaterial_naayf")
