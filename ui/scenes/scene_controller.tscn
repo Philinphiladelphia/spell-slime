@@ -1,0 +1,354 @@
+[gd_scene load_steps=49 format=3 uid="uid://c5mrow4562250"]
+
+[ext_resource type="Script" path="res://ui/scripts/scene_controller.gd" id="1_klp42"]
+[ext_resource type="Script" uid="uid://cm1825mm02hx8" path="res://addons/imjp94.yafsm/src/StateMachinePlayer.gd" id="2_e02id"]
+[ext_resource type="Script" uid="uid://24kyoxi8gydf" path="res://addons/imjp94.yafsm/src/states/StateMachine.gd" id="3_vtghi"]
+[ext_resource type="Script" uid="uid://d3kwke54fnmq4" path="res://addons/imjp94.yafsm/src/states/State.gd" id="4_qi1nr"]
+[ext_resource type="Script" uid="uid://b5aaxrl3q1s0i" path="res://addons/imjp94.yafsm/src/transitions/Transition.gd" id="5_yax2i"]
+
+[sub_resource type="Resource" id="Resource_jy85i"]
+script = ExtResource("4_qi1nr")
+name = "Entry"
+metadata/graph_offset = Vector2(265, 542)
+
+[sub_resource type="Resource" id="Resource_1gmr5"]
+script = ExtResource("4_qi1nr")
+name = "SplashScreen"
+metadata/graph_offset = Vector2(261, 442)
+
+[sub_resource type="Resource" id="Resource_p2wa4"]
+script = ExtResource("4_qi1nr")
+name = "StartScreen"
+metadata/graph_offset = Vector2(467, 442)
+
+[sub_resource type="Resource" id="Resource_4v551"]
+script = ExtResource("4_qi1nr")
+name = "MainMenu"
+metadata/graph_offset = Vector2(692.5, 442)
+
+[sub_resource type="Resource" id="Resource_tp4sc"]
+script = ExtResource("4_qi1nr")
+name = "Exit"
+metadata/graph_offset = Vector2(865, 502)
+
+[sub_resource type="Resource" id="Resource_c3al3"]
+script = ExtResource("4_qi1nr")
+name = "NewRun"
+metadata/graph_offset = Vector2(859.5, 322)
+
+[sub_resource type="Resource" id="Resource_1xmge"]
+script = ExtResource("4_qi1nr")
+name = "SlimeCave"
+metadata/graph_offset = Vector2(1091, 362)
+
+[sub_resource type="Resource" id="Resource_svcoq"]
+script = ExtResource("4_qi1nr")
+name = "Slimassacre"
+metadata/graph_offset = Vector2(1466.5, 422)
+
+[sub_resource type="Resource" id="Resource_vi8bm"]
+script = ExtResource("4_qi1nr")
+name = "Slimesiege"
+metadata/graph_offset = Vector2(1490, 302)
+
+[sub_resource type="Resource" id="Resource_q0m1r"]
+script = ExtResource("4_qi1nr")
+name = "Slimelaunch"
+metadata/graph_offset = Vector2(1465.5, 362)
+
+[sub_resource type="Resource" id="Resource_fvh5w"]
+script = ExtResource("4_qi1nr")
+name = "Settings"
+metadata/graph_offset = Vector2(859.5, 442)
+
+[sub_resource type="Resource" id="Resource_c3lm7"]
+script = ExtResource("4_qi1nr")
+name = "LoadRun"
+metadata/graph_offset = Vector2(858, 382)
+
+[sub_resource type="Resource" id="Resource_3iag1"]
+script = ExtResource("4_qi1nr")
+name = "Overworld"
+metadata/graph_offset = Vector2(1232, 362)
+
+[sub_resource type="Resource" id="Resource_ye0sj"]
+script = ExtResource("4_qi1nr")
+name = "LevelEnd"
+metadata/graph_offset = Vector2(1636.5, 402)
+
+[sub_resource type="Resource" id="Resource_p3eg1"]
+script = ExtResource("4_qi1nr")
+name = "GameOver"
+metadata/graph_offset = Vector2(1450.5, 642)
+
+[sub_resource type="Resource" id="Resource_wgwg0"]
+script = ExtResource("4_qi1nr")
+name = "LesserSlimelord"
+metadata/graph_offset = Vector2(1453, 482)
+
+[sub_resource type="Resource" id="Resource_6fxqy"]
+script = ExtResource("4_qi1nr")
+name = "VictoryScreen"
+metadata/graph_offset = Vector2(1499.5, 222)
+
+[sub_resource type="Resource" id="Resource_f4idj"]
+script = ExtResource("4_qi1nr")
+name = "RunVictory"
+metadata/graph_offset = Vector2(1290.5, 142)
+
+[sub_resource type="Resource" id="Resource_vl1te"]
+script = ExtResource("5_yax2i")
+from = "Entry"
+to = "SplashScreen"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_vwjnr"]
+script = ExtResource("5_yax2i")
+from = "SplashScreen"
+to = "StartScreen"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_du6e6"]
+script = ExtResource("5_yax2i")
+from = "StartScreen"
+to = "MainMenu"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_ry7ip"]
+script = ExtResource("5_yax2i")
+from = "MainMenu"
+to = "NewRun"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_hwbxc"]
+script = ExtResource("5_yax2i")
+from = "MainMenu"
+to = "LoadRun"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_hsj6b"]
+script = ExtResource("5_yax2i")
+from = "MainMenu"
+to = "Settings"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_4othe"]
+script = ExtResource("5_yax2i")
+from = "MainMenu"
+to = "Exit"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_7vq7f"]
+script = ExtResource("5_yax2i")
+from = "NewRun"
+to = "SlimeCave"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_tx0bb"]
+script = ExtResource("5_yax2i")
+from = "LoadRun"
+to = "SlimeCave"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_5y6ql"]
+script = ExtResource("5_yax2i")
+from = "SlimeCave"
+to = "Overworld"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_1p66p"]
+script = ExtResource("5_yax2i")
+from = "Overworld"
+to = "Slimassacre"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_f3tsf"]
+script = ExtResource("5_yax2i")
+from = "Overworld"
+to = "Slimelaunch"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_dj64x"]
+script = ExtResource("5_yax2i")
+from = "Overworld"
+to = "Slimesiege"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_jxqop"]
+script = ExtResource("5_yax2i")
+from = "Overworld"
+to = "LesserSlimelord"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_e01sp"]
+script = ExtResource("5_yax2i")
+from = "Slimesiege"
+to = "LevelEnd"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_8styq"]
+script = ExtResource("5_yax2i")
+from = "Slimelaunch"
+to = "LevelEnd"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_xlfjn"]
+script = ExtResource("5_yax2i")
+from = "Slimassacre"
+to = "LevelEnd"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_sbwo1"]
+script = ExtResource("5_yax2i")
+from = "LesserSlimelord"
+to = "LevelEnd"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_eg3fh"]
+script = ExtResource("5_yax2i")
+from = "LevelEnd"
+to = "VictoryScreen"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_i8oq4"]
+script = ExtResource("5_yax2i")
+from = "LevelEnd"
+to = "GameOver"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_i50yo"]
+script = ExtResource("5_yax2i")
+from = "VictoryScreen"
+to = "SlimeCave"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_hb24t"]
+script = ExtResource("5_yax2i")
+from = "VictoryScreen"
+to = "RunVictory"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_orcnn"]
+script = ExtResource("5_yax2i")
+from = "GameOver"
+to = "NewRun"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_p5mlk"]
+script = ExtResource("5_yax2i")
+from = "RunVictory"
+to = "NewRun"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_j0lbq"]
+script = ExtResource("3_vtghi")
+states = {
+"Entry": SubResource("Resource_jy85i"),
+"Exit": SubResource("Resource_tp4sc"),
+"GameOver": SubResource("Resource_p3eg1"),
+"LesserSlimelord": SubResource("Resource_wgwg0"),
+"LevelEnd": SubResource("Resource_ye0sj"),
+"LoadRun": SubResource("Resource_c3lm7"),
+"MainMenu": SubResource("Resource_4v551"),
+"NewRun": SubResource("Resource_c3al3"),
+"Overworld": SubResource("Resource_3iag1"),
+"RunVictory": SubResource("Resource_f4idj"),
+"Settings": SubResource("Resource_fvh5w"),
+"Slimassacre": SubResource("Resource_svcoq"),
+"SlimeCave": SubResource("Resource_1xmge"),
+"Slimelaunch": SubResource("Resource_q0m1r"),
+"Slimesiege": SubResource("Resource_vi8bm"),
+"SplashScreen": SubResource("Resource_1gmr5"),
+"StartScreen": SubResource("Resource_p2wa4"),
+"VictoryScreen": SubResource("Resource_6fxqy")
+}
+transitions = {
+"Entry": {
+"SplashScreen": SubResource("Resource_vl1te")
+},
+"GameOver": {
+"NewRun": SubResource("Resource_orcnn")
+},
+"LesserSlimelord": {
+"LevelEnd": SubResource("Resource_sbwo1")
+},
+"LevelEnd": {
+"GameOver": SubResource("Resource_i8oq4"),
+"VictoryScreen": SubResource("Resource_eg3fh")
+},
+"LoadRun": {
+"SlimeCave": SubResource("Resource_tx0bb")
+},
+"MainMenu": {
+"Exit": SubResource("Resource_4othe"),
+"LoadRun": SubResource("Resource_hwbxc"),
+"NewRun": SubResource("Resource_ry7ip"),
+"Settings": SubResource("Resource_hsj6b")
+},
+"NewRun": {
+"SlimeCave": SubResource("Resource_7vq7f")
+},
+"Overworld": {
+"LesserSlimelord": SubResource("Resource_jxqop"),
+"Slimassacre": SubResource("Resource_1p66p"),
+"Slimelaunch": SubResource("Resource_f3tsf"),
+"Slimesiege": SubResource("Resource_dj64x")
+},
+"RunVictory": {
+"NewRun": SubResource("Resource_p5mlk")
+},
+"Slimassacre": {
+"LevelEnd": SubResource("Resource_xlfjn")
+},
+"SlimeCave": {
+"Overworld": SubResource("Resource_5y6ql")
+},
+"Slimelaunch": {
+"LevelEnd": SubResource("Resource_8styq")
+},
+"Slimesiege": {
+"LevelEnd": SubResource("Resource_e01sp")
+},
+"SplashScreen": {
+"StartScreen": SubResource("Resource_vwjnr")
+},
+"StartScreen": {
+"MainMenu": SubResource("Resource_du6e6")
+},
+"VictoryScreen": {
+"RunVictory": SubResource("Resource_hb24t"),
+"SlimeCave": SubResource("Resource_i50yo")
+}
+}
+name = ""
+
+[node name="SceneController" type="Node2D"]
+script = ExtResource("1_klp42")
+
+[node name="StateMachinePlayer" type="Node" parent="."]
+script = ExtResource("2_e02id")
+state_machine = SubResource("Resource_j0lbq")

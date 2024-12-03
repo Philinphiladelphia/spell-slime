@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://co4exnrkvk5sd"]
+
+[ext_resource type="Material" uid="uid://cnvd3sd2rq3x8" path="res://shaders/scenes/shine.tres" id="1_ln00c"]
+
+[node name="Shine" type="Node2D"]
+material = ExtResource("1_ln00c")

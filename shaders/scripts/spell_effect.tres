@@ -1,0 +1,90 @@
+[gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://d5u0us211jwd"]
+
+[ext_resource type="Script" uid="uid://bvc2rl1h23tse" path="res://addons/shaderV/rgba/glow/glowEmpty.gd" id="1_q742b"]
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_iwjbb"]
+constant = 0.7
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_o40yd"]
+constant = 0.5
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_37ohi"]
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_tdbbh"]
+constant = 0.5
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_lnepx"]
+constant = -1.0
+
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_2ym7d"]
+default_input_values = [2, -1.0, 3, 1.0, 4, 1.0, 5, 1.0, 6, Vector3(1, 1, 1), 7, 1.0]
+initialized = true
+script = ExtResource("1_q742b")
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_fuogs"]
+input_name = "texture"
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+
+// GlowEmpty
+#include \"res://addons/shaderV/rgba/glow/glowEmpty.gdshaderinc\"
+
+void fragment() {
+// FloatConstant:6
+	float n_out6p0 = -1.000000;
+
+
+// FloatConstant:5
+	float n_out5p0 = 0.500000;
+
+
+// FloatConstant:4
+	float n_out4p0 = 0.000000;
+
+
+// FloatConstant:3
+	float n_out3p0 = 0.500000;
+
+
+// FloatConstant:10
+	float n_out10p0 = 0.700000;
+
+
+	vec3 n_out7p0;
+	float n_out7p1;
+// GlowEmpty:7
+	vec3 n_in7p6 = vec3(1.00000, 1.00000, 1.00000);
+	{
+		vec4 n_out7p0n_out7p1 = _inoutGlowEmptyFunc(TEXTURE, UV.xy, n_out6p0, n_out5p0, n_out4p0, n_out3p0, vec4(n_in7p6, n_out10p0));
+		n_out7p0 = n_out7p0n_out7p1.rgb;
+		n_out7p1 = n_out7p0n_out7p1.a;
+	}
+
+
+// Output:0
+	COLOR.a = n_out7p1;
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/3/node = SubResource("VisualShaderNodeFloatConstant_o40yd")
+nodes/fragment/3/position = Vector2(-140, 380)
+nodes/fragment/4/node = SubResource("VisualShaderNodeFloatConstant_37ohi")
+nodes/fragment/4/position = Vector2(-140, 300)
+nodes/fragment/5/node = SubResource("VisualShaderNodeFloatConstant_tdbbh")
+nodes/fragment/5/position = Vector2(-140, 220)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatConstant_lnepx")
+nodes/fragment/6/position = Vector2(-140, 140)
+nodes/fragment/7/node = SubResource("VisualShaderNodeCustom_2ym7d")
+nodes/fragment/7/position = Vector2(100, 160)
+nodes/fragment/9/node = SubResource("VisualShaderNodeInput_fuogs")
+nodes/fragment/9/position = Vector2(-180, 40)
+nodes/fragment/10/node = SubResource("VisualShaderNodeFloatConstant_iwjbb")
+nodes/fragment/10/position = Vector2(-200, 480)
+nodes/fragment/connections = PackedInt32Array(6, 0, 7, 2, 5, 0, 7, 3, 4, 0, 7, 4, 3, 0, 7, 5, 7, 1, 0, 1, 9, 0, 7, 0, 10, 0, 7, 7)

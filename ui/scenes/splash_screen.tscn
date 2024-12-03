@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdhajovi05pu7"]
+
+[ext_resource type="Texture2D" uid="uid://b75qpe64vvqli" path="res://common_assets/branding/SpS_elements_Mesa de trabajo 1.png" id="1_pnhqg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tay8n"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="SplashScreen" type="Node2D"]
+
+[node name="SpSElementsMesaDeTrabajo1" type="Sprite2D" parent="."]
+position = Vector2(582, 360)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_pnhqg")
+
+[node name="Label" type="Label" parent="SpSElementsMesaDeTrabajo1"]
+offset_left = -326.667
+offset_top = 853.333
+offset_right = 337.333
+offset_bottom = 908.333
+text = "Makkamon LLC, all rights reserved"
+label_settings = SubResource("LabelSettings_tay8n")

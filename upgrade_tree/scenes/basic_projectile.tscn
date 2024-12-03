@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://csgifsasipgj"]
+
+[ext_resource type="Script" path="res://upgrade_tree/scripts/projectile.gd" id="1_0unes"]
+[ext_resource type="Texture2D" uid="uid://bsn5gm2nqsy42" path="res://spell_machine_tower/assets/gun_pieces/509133326.png" id="2_7djns"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_od1rp"]
+radius = 24.4
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o77uf"]
+radius = 50.636
+
+[node name="projectile" type="RigidBody2D"]
+collision_layer = 7
+collision_mask = 3
+mass = 2.0
+script = ExtResource("1_0unes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_od1rp")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 9
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_o77uf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_7djns")
+region_enabled = true
+region_rect = Rect2(28.2392, 193.259, 71.1503, 71.8298)
+
+[node name="SpellProjectile" type="Node2D" parent="."]
+physics_interpolation_mode = 2
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

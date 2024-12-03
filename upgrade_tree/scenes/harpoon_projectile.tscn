@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://brqki6a6mcmul"]
+
+[ext_resource type="Script" path="res://upgrade_tree/scripts/projectile.gd" id="1_rma2u"]
+[ext_resource type="Texture2D" uid="uid://d1snijpt3fy63" path="res://upgrade_tree/assets/305010425.png" id="2_m7y3y"]
+
+[node name="projectile" type="RigidBody2D"]
+position = Vector2(3, 2)
+collision_layer = 7
+collision_mask = 3
+script = ExtResource("1_rma2u")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(4.41933, 60.72)
+collision_layer = 9
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2(1.5, 1.5)
+polygon = PackedVector2Array(-36, -25, -28, 10, -25, 49, -15, 90, -1, 104, 17, 87, 21, 55, 29, 6, 37, -27, 35, -61, 15, -88, -7, -97, -38, -71)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.01933, 81.32)
+rotation = -0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_m7y3y")
+region_rect = Rect2(398, 239, 105, 268)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(4.41933, 60.72)
+scale = Vector2(2, 2)
+polygon = PackedVector2Array(-2.20967, -67.2, -5.70967, -65.7, -6.70967, -62.2, -7.70967, -59.2, -9.20967, -56.2, -10.7097, -48.7, -8.20967, -40.7, -11.7097, -36.36, -16.7097, -31.86, -21.7097, -19.36, -7.20967, -21.7, -4.70967, -19.7, -3.40607, 64.5987, -3.20967, 77.3, -2, 100, 0.790333, 76.8, 1.79033, -19.2, 3.29033, -20.7, 4.79033, -21.7, 18.7903, -20.36, 13.2903, -34.36, 9.79033, -37.36, 5.79033, -46.2, 4.79033, -57.2, 1.79033, -61.2, 0.790333, -64.7)
+
+[node name="SpellProjectile" type="Node2D" parent="."]
+physics_interpolation_mode = 2
+position = Vector2(4.41933, 60.72)
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

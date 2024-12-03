@@ -1,0 +1,401 @@
+[gd_scene load_steps=13 format=3 uid="uid://djliomfdt10qs"]
+
+[ext_resource type="Texture2D" uid="uid://deqynrtg8b57u" path="res://spell_machine_tower/assets/pipes/541219343.png" id="1_hmq6p"]
+[ext_resource type="Texture2D" uid="uid://sqgprijtkl08" path="res://spell_machine_tower/assets/pipes/614223861.png" id="2_igtuv"]
+[ext_resource type="Texture2D" uid="uid://0gores6s7gm5" path="res://spell_machine_tower/assets/pipes/718034747.png" id="3_udvri"]
+[ext_resource type="LabelSettings" uid="uid://c34qgwo4ca7bk" path="res://upgrade_tree/assets/major_font.tres" id="4_lj4cm"]
+[ext_resource type="Texture2D" uid="uid://bi0ddiktgkm0e" path="res://upgrade_tree/assets/weapons/2089157264.png" id="4_v6bf5"]
+[ext_resource type="LabelSettings" uid="uid://8338ay754mqw" path="res://upgrade_tree/assets/minor_font.tres" id="5_5pkrp"]
+[ext_resource type="Texture2D" uid="uid://c2j3ajgmw0ep2" path="res://upgrade_tree/assets/weapons/chainsword-Sheet.png" id="5_w2o1r"]
+[ext_resource type="Texture2D" uid="uid://j0lyj8ummo6s" path="res://spell_machine_tower/assets/pipes/2110537216.png" id="7_kbt7v"]
+[ext_resource type="Texture2D" uid="uid://yghjatoge347" path="res://upgrade_tree/assets/weapons/761542438.png" id="9_m7ggv"]
+[ext_resource type="Texture2D" uid="uid://22b0kywx7a46" path="res://upgrade_tree/assets/weapons/926930900.png" id="10_cy2wi"]
+[ext_resource type="Texture2D" uid="uid://dlbp76x6re8vu" path="res://upgrade_tree/assets/weapons/1652368269.png" id="11_2vslu"]
+[ext_resource type="Texture2D" uid="uid://b4yloh7do48n2" path="res://upgrade_tree/assets/weapons/2071000882.png" id="12_a6q4h"]
+
+[node name="UpgradeTree" type="Node2D"]
+position = Vector2(29, -771)
+
+[node name="labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="labels"]
+offset_left = -702.0
+offset_top = 1925.5
+offset_right = -371.0
+offset_bottom = 1994.5
+text = "Sword tree"
+label_settings = ExtResource("4_lj4cm")
+
+[node name="Label" type="Label" parent="labels/Label"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 322.5
+offset_right = 1065.0
+offset_bottom = 460.5
+text = "Hollow swords full of magical energy. Strike en enemy to unleash it upon them."
+label_settings = ExtResource("5_5pkrp")
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="labels"]
+offset_left = -1886.0
+offset_top = 225.0
+offset_right = -1492.0
+offset_bottom = 294.0
+text = "Basic weapon"
+label_settings = ExtResource("4_lj4cm")
+
+[node name="Label3" type="Label" parent="labels"]
+offset_left = -708.0
+offset_top = 986.0
+offset_right = -345.0
+offset_bottom = 1055.0
+text = "Gatling tree"
+label_settings = ExtResource("4_lj4cm")
+
+[node name="Label4" type="Label" parent="labels"]
+offset_left = -719.0
+offset_top = -1018.0
+offset_right = -375.0
+offset_bottom = -949.0
+text = "Sniper tree"
+label_settings = ExtResource("4_lj4cm")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="labels"]
+offset_left = -702.0
+offset_top = 14.0
+offset_right = -346.0
+offset_bottom = 83.0
+text = "Cannon tree"
+label_settings = ExtResource("4_lj4cm")
+
+[node name="Label6" type="Label" parent="labels"]
+offset_left = 601.0
+offset_top = -1674.0
+offset_right = 1433.0
+offset_bottom = -1543.0
+text = "Sniper-cannon
+Guided missle tree"
+label_settings = ExtResource("4_lj4cm")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="labels/Label6"]
+layout_mode = 0
+offset_top = 149.0
+offset_right = 894.0
+offset_bottom = 334.0
+text = "This combines the targeting systems of the sniper rifle with the destructive payload of the cannon. Select a location and a guided missle will strike there. Middle one is a cluster, last one is a nuke."
+label_settings = ExtResource("5_5pkrp")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label7" type="Label" parent="labels"]
+offset_left = 497.0
+offset_top = -610.0
+offset_right = 1511.0
+offset_bottom = -479.0
+text = "Cannon-gatling
+Artillery autoturret tree
+"
+label_settings = ExtResource("4_lj4cm")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label7" type="Label" parent="labels/Label7"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 143.0
+offset_right = 936.0
+offset_bottom = 356.0
+text = "This loads artillery autoturrets into the cannon. Deploy them and they will fire gatling rounds at all nearby enemies."
+label_settings = ExtResource("5_5pkrp")
+autowrap_mode = 3
+
+[node name="Label8" type="Label" parent="labels"]
+offset_left = 1985.0
+offset_top = 28.0
+offset_right = 3171.0
+offset_bottom = 293.0
+text = "After third tier, abilities are not orthagonal enough to be easily implementable. Any upgrades beyond this point are rule of cool one-offs."
+label_settings = ExtResource("4_lj4cm")
+autowrap_mode = 3
+
+[node name="Label9" type="Label" parent="labels"]
+offset_left = 446.0
+offset_top = 1213.0
+offset_right = 1546.0
+offset_bottom = 1344.0
+text = "Gatling-sword
+Spellsword tree"
+label_settings = ExtResource("4_lj4cm")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="labels/Label9"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 161.0
+offset_right = 904.0
+offset_bottom = 299.0
+text = "This connects the gatling gun barrel to the hollow sword blade. Destructive magical energy will pulse outwards from the blade."
+label_settings = ExtResource("5_5pkrp")
+autowrap_mode = 3
+
+[node name="Label10" type="Label" parent="labels"]
+offset_left = 577.0
+offset_top = -2334.0
+offset_right = 1864.0
+offset_bottom = -1868.0
+text = "Third-tier upgrades allow you to go back and buy upgrades from one of the other paths to apply to your current one.
+
+Of course, the price to do this is far higher that your second-tier upgrades. Pay the price for synergy."
+label_settings = ExtResource("4_lj4cm")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label11" type="Label" parent="labels"]
+offset_left = -1855.0
+offset_top = -2337.0
+offset_right = -890.0
+offset_bottom = -1804.0
+text = "Basic-tier upgrades are simple stuff like fire rate, ammo spell type, turret rotation, ordinace payload, and overall damage. There will be a lot of basic upgrades in the defense and utility categories. All of these upgrades are basically required."
+label_settings = ExtResource("4_lj4cm")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label12" type="Label" parent="labels"]
+offset_left = -661.0
+offset_top = -2354.0
+offset_right = 304.0
+offset_bottom = -1883.0
+text = "Second-tier upgrades are where the player specializes. They must pick one of four upgrade paths which are (partially) exclusive. The more overlap I can find between them, the more synergy will be possible."
+label_settings = ExtResource("4_lj4cm")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label13" type="Label" parent="labels"]
+offset_left = 441.0
+offset_top = 290.0
+offset_right = 1541.0
+offset_bottom = 421.0
+text = "Minigun
+Gatling tree"
+label_settings = ExtResource("4_lj4cm")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="labels/Label13"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 141.0
+offset_right = 977.0
+offset_bottom = 279.0
+text = "This increases the firing rate of the gatling gun to ridiculous levels. After firing for a prolonged period the minigun will need to cool down."
+label_settings = ExtResource("5_5pkrp")
+autowrap_mode = 3
+
+[node name="Label14" type="Label" parent="labels"]
+offset_left = 1426.0
+offset_top = 2249.0
+offset_right = 1757.0
+offset_bottom = 2318.0
+text = "Runesword path (fast)"
+label_settings = ExtResource("5_5pkrp")
+
+[node name="Label15" type="Label" parent="labels"]
+offset_left = 1417.0
+offset_top = 1814.0
+offset_right = 1748.0
+offset_bottom = 1883.0
+text = "Energy chainsaw path (strong)"
+label_settings = ExtResource("5_5pkrp")
+
+[node name="Label16" type="Label" parent="labels"]
+offset_left = -2484.0
+offset_top = 909.0
+offset_right = -1762.0
+offset_bottom = 1241.0
+text = "Basic defensive turret
+
+Does the same job as the lawnmowers in Plants vs Zombies."
+label_settings = ExtResource("4_lj4cm")
+autowrap_mode = 3
+
+[node name="swords" type="Node" parent="."]
+
+[node name="Sprite2D70" type="Sprite2D" parent="swords"]
+position = Vector2(102, 1928.5)
+texture = ExtResource("2_igtuv")
+region_enabled = true
+region_rect = Rect2(143.263, 1.53963, 114.346, 507.311)
+
+[node name="Sprite2D71" type="Sprite2D" parent="swords"]
+position = Vector2(-103, 1964.5)
+texture = ExtResource("2_igtuv")
+region_enabled = true
+region_rect = Rect2(370.345, 220.569, 70.8624, 283.45)
+
+[node name="Sprite2D72" type="Sprite2D" parent="swords"]
+position = Vector2(-294, 1956.5)
+texture = ExtResource("2_igtuv")
+region_enabled = true
+region_rect = Rect2(90.1166, 273.716, 49.9258, 231.913)
+
+[node name="Sprite2D" type="Sprite2D" parent="swords"]
+position = Vector2(827, 2049)
+texture = ExtResource("4_v6bf5")
+region_enabled = true
+region_rect = Rect2(401.079, -6.20704, 73.205, 219.615)
+
+[node name="Sprite2D3" type="Sprite2D" parent="swords"]
+position = Vector2(1047.5, 2381)
+texture = ExtResource("4_v6bf5")
+region_enabled = true
+region_rect = Rect2(8.4339, 370.466, 105.149, 138.424)
+
+[node name="Sprite2D6" type="Sprite2D" parent="swords"]
+position = Vector2(1043.5, 2214)
+texture = ExtResource("4_v6bf5")
+region_enabled = true
+region_rect = Rect2(11.0959, 4.44096, 94.501, 276.848)
+
+[node name="Sprite2D5" type="Sprite2D" parent="swords"]
+position = Vector2(1282, 1820)
+rotation = 1.17286
+texture = ExtResource("5_w2o1r")
+region_enabled = true
+region_rect = Rect2(71.7575, 1013.37, 432.261, 223.217)
+
+[node name="Sprite2D2" type="Sprite2D" parent="swords/Sprite2D5"]
+position = Vector2(-50, -4)
+texture = ExtResource("5_w2o1r")
+region_enabled = true
+region_rect = Rect2(60.8001, 5.8, 343.2, 184.8)
+
+[node name="Sprite2D7" type="Sprite2D" parent="swords"]
+position = Vector2(1050, 1877)
+rotation = 1.50796
+texture = ExtResource("5_w2o1r")
+region_enabled = true
+region_rect = Rect2(237.519, 1903.07, 265.692, 123.625)
+
+[node name="Sprite2D8" type="Sprite2D" parent="swords"]
+position = Vector2(1309, 2304)
+rotation = 1.08909
+texture = ExtResource("5_w2o1r")
+region_enabled = true
+region_rect = Rect2(15.6472, 630.482, 451.748, 262.191)
+
+[node name="gatlings" type="Node" parent="."]
+
+[node name="Sprite2D63" type="Sprite2D" parent="gatlings"]
+position = Vector2(-74, 992)
+rotation = -3.14159
+texture = ExtResource("1_hmq6p")
+region_enabled = true
+region_rect = Rect2(0, 0, 141.653, 294.652)
+
+[node name="Sprite2D68" type="Sprite2D" parent="gatlings"]
+position = Vector2(-270, 1010)
+texture = ExtResource("1_hmq6p")
+region_enabled = true
+region_rect = Rect2(9.59113, 297.874, 136.893, 204.535)
+
+[node name="Sprite2D9" type="Sprite2D" parent="gatlings"]
+position = Vector2(109, 886)
+texture = ExtResource("7_kbt7v")
+
+[node name="Ammo" type="Node" parent="gatlings"]
+
+[node name="snipers" type="Node" parent="."]
+
+[node name="Sprite2D64" type="Sprite2D" parent="snipers"]
+position = Vector2(104, -1012)
+texture = ExtResource("1_hmq6p")
+region_enabled = true
+region_rect = Rect2(388.061, 3.15014, 114.346, 500.869)
+
+[node name="Sprite2D65" type="Sprite2D" parent="snipers"]
+position = Vector2(-290, -1018)
+texture = ExtResource("1_hmq6p")
+region_enabled = true
+region_rect = Rect2(307.536, 14.4237, 75.694, 494.427)
+
+[node name="Sprite2D66" type="Sprite2D" parent="snipers"]
+position = Vector2(-96, -1019)
+texture = ExtResource("1_hmq6p")
+region_enabled = true
+region_rect = Rect2(239.894, 1.53963, 72.473, 502.479)
+
+[node name="Sprite2D84" type="Sprite2D" parent="snipers"]
+position = Vector2(753, -902)
+texture = ExtResource("3_udvri")
+region_enabled = true
+region_rect = Rect2(0, 0, 105.151, 234.122)
+
+[node name="Sprite2D85" type="Sprite2D" parent="snipers"]
+position = Vector2(953, -1198)
+texture = ExtResource("3_udvri")
+region_enabled = true
+region_rect = Rect2(380.008, 0, 77.3045, 125.549)
+
+[node name="Sprite2D86" type="Sprite2D" parent="snipers"]
+position = Vector2(1210, -1004.5)
+texture = ExtResource("3_udvri")
+region_enabled = true
+region_rect = Rect2(201.242, 0, 152.998, 505.629)
+
+[node name="Sprite2D88" type="Sprite2D" parent="snipers"]
+position = Vector2(704, -991)
+texture = ExtResource("3_udvri")
+region_enabled = true
+region_rect = Rect2(0, 234.122, 105.151, 268.286)
+
+[node name="Sprite2D89" type="Sprite2D" parent="snipers"]
+position = Vector2(951.5, -939)
+texture = ExtResource("3_udvri")
+region_enabled = true
+region_rect = Rect2(375.177, 120.717, 85.3571, 375.249)
+
+[node name="Sprite2D87" type="Sprite2D" parent="snipers"]
+position = Vector2(753, -1140)
+texture = ExtResource("3_udvri")
+region_enabled = true
+region_rect = Rect2(0, 0, 105.151, 234.122)
+
+[node name="Ammo" type="Node" parent="snipers"]
+
+[node name="cannons" type="Node" parent="."]
+
+[node name="Sprite2D69" type="Sprite2D" parent="cannons"]
+position = Vector2(-280, 20)
+texture = ExtResource("1_hmq6p")
+region_enabled = true
+region_rect = Rect2(135.211, 4.76064, 112.736, 354.312)
+
+[node name="Sprite2D" type="Sprite2D" parent="cannons"]
+position = Vector2(960, -19)
+texture = ExtResource("9_m7ggv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="cannons"]
+position = Vector2(-93, -15)
+texture = ExtResource("10_cy2wi")
+
+[node name="Sprite2D3" type="Sprite2D" parent="cannons"]
+position = Vector2(131, -38)
+texture = ExtResource("11_2vslu")
+
+[node name="Ammo" type="Node" parent="cannons"]
+
+[node name="basic" type="Node" parent="."]
+
+[node name="Sprite2D67" type="Sprite2D" parent="basic"]
+position = Vector2(-1453, 253)
+texture = ExtResource("1_hmq6p")
+region_enabled = true
+region_rect = Rect2(146.484, 359.073, 91.7991, 146.556)
+
+[node name="Sprite2D" type="Sprite2D" parent="basic"]
+position = Vector2(-1537, 1050)
+texture = ExtResource("12_a6q4h")
+
+[node name="Ammo" type="Node" parent="basic"]

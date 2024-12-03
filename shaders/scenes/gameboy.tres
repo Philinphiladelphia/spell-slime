@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://kinnni2xr74d"]
+
+[ext_resource type="Shader" uid="uid://c1e6up5r0lndt" path="res://shaders/scripts/gameboy.tres" id="1_k3lfl"]
+
+[resource]
+shader = ExtResource("1_k3lfl")

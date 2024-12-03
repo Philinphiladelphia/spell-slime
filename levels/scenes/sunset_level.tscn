@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkmnhwrbi6fme"]
+
+[ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_l88nd"]
+[ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="1_spb3g"]
+[ext_resource type="PackedScene" uid="uid://e6og876glwxo" path="res://background/scenes/parallaxes/sunrise_maxxfield_parrish.tscn" id="3_mpna4"]
+[ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="4_tb22u"]
+[ext_resource type="Script" path="res://levels/scenes/track_slimes.gd" id="5_qjk6u"]
+[ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="5_slx2u"]
+[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="6_rbl1c"]
+[ext_resource type="Texture2D" uid="uid://bjvp3lk3almqm" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version B/Layers/sky.png" id="8_p5j0j"]
+[ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="9_vl4tg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28xsr"]
+bg_color = Color(0.1863, 0.69, 0.379385, 1)
+
+[node name="SunsetLevel" type="Node2D"]
+script = ExtResource("1_l88nd")
+
+[node name="ParallaxTest" parent="." instance=ExtResource("3_mpna4")]
+z_index = -5
+position = Vector2(-2947, -4136)
+
+[node name="terrain" parent="." instance=ExtResource("1_spb3g")]
+position = Vector2(11194, -862)
+scale = Vector2(4, 2)
+
+[node name="SpellMachineTower" parent="." instance=ExtResource("5_slx2u")]
+position = Vector2(-2022, -2025)
+
+[node name="level_camera" type="Camera2D" parent="."]
+position = Vector2(-1999, -2696)
+scale = Vector2(0.25, 0.25)
+zoom = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="level_camera"]
+physics_interpolation_mode = 1
+z_index = -10
+position = Vector2(76, 2092)
+scale = Vector2(70, 70)
+texture = ExtResource("8_p5j0j")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="level_camera"]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="PowderViewport" parent="." instance=ExtResource("6_rbl1c")]
+position = Vector2(-4090, -3542)
+scale = Vector2(4.4, 4.4)
+
+[node name="slime_health_layer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="HealthBar" parent="slime_health_layer" instance=ExtResource("9_vl4tg")]
+z_index = 10
+offset_left = 222.0
+offset_top = 44.0
+offset_right = 1041.0
+offset_bottom = 86.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_28xsr")
+
+[node name="slime_tracker" type="Node" parent="."]
+script = ExtResource("5_qjk6u")
+
+[node name="right_spawner" type="Node2D" parent="slime_tracker"]
+position = Vector2(670, -578)
+script = ExtResource("4_tb22u")
+
+[node name="left_spawner" type="Node2D" parent="slime_tracker"]
+position = Vector2(-4666, -579)
+script = ExtResource("4_tb22u")
+
+[editable path="slime_health_layer/HealthBar"]
