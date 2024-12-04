@@ -7,12 +7,8 @@ var powder_duration = 2
 var max_health = 1000.0
 var jump_power = 8000
 
-var element_numbers = [21]
-
-
-
-# I have a bug right now
-# When I set the slime params for the first time, they are that way for all future slimes
+var element_numbers = [49, 129, 87]
+# different shaders to show the more dangerous elements
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

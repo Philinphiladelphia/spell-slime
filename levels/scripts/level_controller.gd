@@ -9,9 +9,9 @@ var init_spellward_health = true
 
 # slimes should jump over the tower, dropping powder. Another reason for flying slimes.
 
-var powder_scale = 14
-var powder_offset_x = 1
-var powder_offset_y = 32
+var powder_scale = 23
+var powder_offset_x = 0
+var powder_offset_y = 20
 
 var total_slime_health = 10
 
@@ -28,7 +28,7 @@ func _ready() -> void:
 	
 	$PowderViewport.powder_instance.health_element = tower_element
 	
-	$PowderViewport.powder_instance.polygon(Vector2(40,40), 20.0, 8, 5, tower_element)
+	$PowderViewport.powder_instance.polygon(Vector2(60,60), 20.0, 8, 5, tower_element)
 	
 	$slime_tracker.set_tower_midpoint($SpellMachineTower.global_position.x)
 	
@@ -42,6 +42,8 @@ func _process(delta: float) -> void:
 	if (powder_health > $SpellMachineTower.spellward_health_margin) && init_spellward_health:
 		$SpellMachineTower.init_spellward_health(powder_health - $SpellMachineTower.spellward_health_margin)
 		init_spellward_health = false
+		
+	# smoking barrel
 	
 	$SpellMachineTower.set_spellward_health(powder_health - $SpellMachineTower.spellward_health_margin)
 	
@@ -66,8 +68,8 @@ func _process(delta: float) -> void:
 		var dist = slime_positions[i] - $SpellMachineTower.position
 		
 		if dist.x < 1000 && dist.y < 1000:
-			var powder_x = 80-(40-(dist.x/powder_scale)) + powder_offset_x
-			var powder_y = (dist.y/powder_scale) +110
+			var powder_x = 120-(60-(dist.x/powder_scale)) + powder_offset_x
+			var powder_y = (dist.y/powder_scale) +90
 			#powder_toy.clear_sim_area(wall_offset, wall_offset, width - (wall_offset*2), border)
 			$PowderViewport.powder_instance.powder_toy.clear_sim_area(powder_x, powder_y, slime_circle_size, slime_circle_size)
 			$PowderViewport.powder_instance.circle(Vector2(powder_x,powder_y), slime_circle_size, element)
@@ -77,4 +79,4 @@ func _process(delta: float) -> void:
 	elif Input.is_physical_key_pressed(KEY_D):
 		level_camera.position.x += camera_move_speed * delta
 	elif Input.is_physical_key_pressed(KEY_E):
-		$PowderViewport.powder_instance.polygon(Vector2(80,65), 25.0, 8, 5, 2)
+		$PowderViewport.powder_instance.polygon(Vector2(40,40), 30.0, 8, 2, 2)

@@ -20,6 +20,9 @@ var primary_firing_interval = 0.05
 var primary_post_hit_lifespan = 0.1
 var primary_shake = 0.1
 
+var cooldown_timer : Timer
+var is_smoking = false
+
 # Secondary gun parameters
 var secondary_projectile_dmg = 1
 var secondary_firing_velocity = 2000
@@ -44,6 +47,12 @@ func _ready() -> void:
 	basic_projectile_scene = preload("res://upgrade_tree/scenes/basic_projectile.tscn")
 	missile_projectile_scene = preload("res://upgrade_tree/scenes/harpoon_projectile.tscn")
 	slime_scene = preload("res://slimes/scenes/small_slime.tscn")
+	
+	var cooldown_timer = Timer.new()
+	cooldown_timer.wait_time = 4
+	cooldown_timer.one_shot = true
+	add_child(cooldown_timer)
+	cooldown_timer.connect("timeout", reset_primary_cooldown)
 
 func _process(delta: float) -> void:
 	# Handle rotation
@@ -61,12 +70,8 @@ func _process(delta: float) -> void:
 			primary_firing_timer = primary_firing_interval
 			primary_projectiles_fired += 1
 			if primary_projectiles_fired >= primary_cooldown_max:
-				var timer = Timer.new()
-				timer.wait_time = 4
-				timer.one_shot = true
-				add_child(timer)
-				timer.connect("timeout", reset_primary_cooldown)
-				timer.start()
+				is_smoking = true
+				cooldown_timer.start()
 
 	secondary_firing_timer -= delta
 	# Handle secondary firing
@@ -76,6 +81,7 @@ func _process(delta: float) -> void:
 			secondary_firing_timer = secondary_firing_interval
 
 func reset_primary_cooldown():
+	is_smoking = false
 	primary_projectiles_fired = 0
 
 func handle_rotation() -> void:

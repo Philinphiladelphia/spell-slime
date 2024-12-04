@@ -43,6 +43,9 @@ var is_dead = false
 
 func set_go_right(value):
 	go_right = value
+	
+func set_element(value):
+	element = value
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

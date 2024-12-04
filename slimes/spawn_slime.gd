@@ -47,6 +47,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	slime_positions.clear()
 	powder_activated_bitmap.clear()
+	
+	slime_elements.clear()
+	slime_circle_sizes.clear()
+	
+	
 	current_slime_health = 0
 	current_max_slime_health = 0
 	for child in get_children():
