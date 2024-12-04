@@ -45,8 +45,8 @@ layer = -1
 follow_viewport_enabled = true
 
 [node name="PowderViewport" parent="." instance=ExtResource("6_rbl1c")]
-position = Vector2(-4090, -3542)
-scale = Vector2(4.4, 4.4)
+position = Vector2(-3415, -4238)
+scale = Vector2(3.5, 3.5)
 
 [node name="slime_health_layer" type="CanvasLayer" parent="."]
 layer = 10
