@@ -68,10 +68,6 @@ offset_right = 19472.0
 offset_bottom = 11092.0
 color = Color(0.0156863, 0.0470588, 0.0470588, 1)
 
-[node name="PowderViewport" parent="." instance=ExtResource("9_1x0cq")]
-position = Vector2(-4145, -3591)
-scale = Vector2(4.5, 4.5)
-
 [node name="slime_health_layer" type="CanvasLayer" parent="."]
 layer = 10
 
@@ -101,5 +97,9 @@ texture_scale = 50.0
 
 [node name="enable_slime_light" type="Node" parent="."]
 script = ExtResource("10_27ni7")
+
+[node name="PowderViewport" parent="." instance=ExtResource("9_1x0cq")]
+position = Vector2(-3415, -4238)
+scale = Vector2(3.5, 3.5)
 
 [editable path="slime_health_layer/HealthBar"]
