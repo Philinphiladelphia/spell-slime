@@ -11,7 +11,7 @@ var init_spellward_health = true
 
 var powder_scale = 23
 var powder_offset_x = 0
-var powder_offset_y = 20
+var powder_offset_y = 95
 
 var total_slime_health = 10
 
@@ -29,6 +29,8 @@ func _ready() -> void:
 	$PowderViewport.powder_instance.health_element = tower_element
 	
 	$PowderViewport.powder_instance.polygon(Vector2(60,60), 20.0, 8, 5, tower_element)
+	$PowderViewport.powder_instance.powder_toy.powder_box(40, 120, 80, 75id, tower_element)
+	
 	
 	$slime_tracker.set_tower_midpoint($SpellMachineTower.global_position.x)
 	
@@ -69,7 +71,7 @@ func _process(delta: float) -> void:
 		
 		if dist.x < 1000 && dist.y < 1000:
 			var powder_x = 120-(60-(dist.x/powder_scale)) + powder_offset_x
-			var powder_y = (dist.y/powder_scale) +90
+			var powder_y = (dist.y/powder_scale) + powder_offset_y
 			#powder_toy.clear_sim_area(wall_offset, wall_offset, width - (wall_offset*2), border)
 			$PowderViewport.powder_instance.powder_toy.clear_sim_area(powder_x, powder_y, slime_circle_size, slime_circle_size)
 			$PowderViewport.powder_instance.circle(Vector2(powder_x,powder_y), slime_circle_size, element)
