@@ -71,12 +71,10 @@ func _process(delta: float) -> void:
 		# I might need to make powdertoy an autoload singleton.
 		
 		if $SpellMachineTower.tower_health <= 0:
-			$PowderViewport.queue_free()
+			#$PowderViewport.queue_free() this segfaults
 			print("powder toy freed")
 		
-		print(dist.x)
 		if abs(dist.x) < 700 && dist.y < 400 && dist.y > -1300:
-			print("accepted:" + str(dist.x))
 			if powder_health <= $SpellMachineTower.spellward_health_margin:
 				$SpellMachineTower.apply_tower_damage($slime_tracker.slime_damages[i])
 		
