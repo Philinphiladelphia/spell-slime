@@ -3,5 +3,5 @@
 [ext_resource type="Script" path="res://levels/scripts/night_lighting.gd" id="1_0eg0b"]
 
 [node name="NightLighting" type="CanvasModulate"]
-color = Color(0.29219, 0.29219, 0.29219, 1)
+color = Color(0.442911, 0.442911, 0.442911, 1)
 script = ExtResource("1_0eg0b")

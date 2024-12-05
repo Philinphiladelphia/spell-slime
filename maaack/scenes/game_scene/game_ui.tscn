@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmkmh165rbb1w"]
+
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/pause_menu_controller.gd" id="1_kc15v"]
+[ext_resource type="PackedScene" uid="uid://kphq3kn2asve" path="res://maaack/scenes/overlaid_menus/pause_menu.tscn" id="2_4dmbs"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/level_list_loader.gd" id="3_ntr80"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="4_igg55"]
+[ext_resource type="PackedScene" uid="uid://dgmr8p30lfcvq" path="res://maaack/scenes/loading_screen/level_loading_screen.tscn" id="5_c5lfa"]
+[ext_resource type="Script" path="res://maaack/scenes/game_scene/configurable_sub_viewport.gd" id="6_wuhd6"]
+[ext_resource type="Script" path="res://maaack/scenes/game_scene/input_display_label.gd" id="7_v0tn5"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/level_list_manager.gd" id="8_0ior6"]
+[ext_resource type="PackedScene" uid="uid://0pokao86pmcm" path="res://maaack/scenes/overlaid_menus/game_won_menu.tscn" id="9_ys1t3"]
+[ext_resource type="PackedScene" uid="uid://bbbnwlatlgo6x" path="res://maaack/scenes/overlaid_menus/level_lost_menu.tscn" id="10_84hqg"]
+[ext_resource type="PackedScene" uid="uid://4iqaruyt2w2b" path="res://maaack/scenes/overlaid_menus/level_won_menu.tscn" id="11_tqylr"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenuController" type="Node" parent="." node_paths=PackedStringArray("focused_viewport")]
+script = ExtResource("1_kc15v")
+pause_menu_packed = ExtResource("2_4dmbs")
+focused_viewport = NodePath("../ViewportContainer/ConfigurableSubViewport")
+
+[node name="LevelLoader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
+script = ExtResource("3_ntr80")
+level_container = NodePath("../ViewportContainer/ConfigurableSubViewport")
+files = Array[String](["res://maaack/scenes/game_scene/levels/level_1.tscn", "res://maaack/scenes/game_scene/levels/level_2.tscn", "res://maaack/scenes/game_scene/levels/level_3.tscn"])
+directory = "res://maaack/scenes/game_scene/levels"
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("4_igg55")]
+bus = &"Master"
+
+[node name="LevelLoadingScreen" parent="." instance=ExtResource("5_c5lfa")]
+visible = false
+
+[node name="ViewportContainer" type="SubViewportContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="ConfigurableSubViewport" type="SubViewport" parent="ViewportContainer"]
+handle_input_locally = false
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+script = ExtResource("6_wuhd6")
+
+[node name="InputDisplayLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -44.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("7_v0tn5")
+
+[node name="LevelListManager" type="Node" parent="." node_paths=PackedStringArray("level_list_loader", "level_loading_screen")]
+script = ExtResource("8_0ior6")
+level_list_loader = NodePath("../LevelLoader")
+main_menu_scene = "res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn"
+ending_scene = "res://maaack/scenes/end_credits/end_credits.tscn"
+level_loading_screen = NodePath("../LevelLoadingScreen")
+game_won_scene = ExtResource("9_ys1t3")
+level_lost_scene = ExtResource("10_84hqg")
+level_won_scene = ExtResource("11_tqylr")
+
+[connection signal="level_load_started" from="LevelLoader" to="." method="_on_level_loader_level_load_started"]
+[connection signal="level_loaded" from="LevelLoader" to="." method="_on_level_loader_level_loaded"]
+[connection signal="levels_finished" from="LevelLoader" to="." method="_on_level_loader_levels_finished"]

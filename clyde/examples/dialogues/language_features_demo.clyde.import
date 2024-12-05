@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://bn3hm0vpi3r8g"
+path="res://.godot/imported/language_features_demo.clyde-e48f76b5fa4f9d4c9f8df11a4c3dbd67.res"
+
+[deps]
+
+source_file="res://clyde/examples/dialogues/language_features_demo.clyde"
+dest_files=["res://.godot/imported/language_features_demo.clyde-e48f76b5fa4f9d4c9f8df11a4c3dbd67.res"]
+
+[params]
+

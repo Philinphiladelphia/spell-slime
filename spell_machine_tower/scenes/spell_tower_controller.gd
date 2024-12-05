@@ -4,6 +4,9 @@ var spellward_health_margin = 200 # you still die if there are only 20 particles
 var spellward_max_health = 0
 
 var spellward_health = spellward_max_health
+
+var tower_max_health = 10000
+var tower_health = tower_max_health
 # I need to define something similar to a powder hitbox. If powder enters that region, it deals damage to the tower.
 # I'll also need to maintain a seperate json damage map for each powder type. Some types may even be 0 damage or negative damage (heal the tower).
 # powder of different types deal damage for each second within the defined powder hitbox zone. The damage is added up every frame.
@@ -19,6 +22,7 @@ var spellward_health = spellward_max_health
 var health_offset = Vector2(-100,-1300)
 
 @onready var spellward_health_bar = $CanvasLayer/SpellwardHealthBar
+@onready var tower_health_bar = $CanvasLayer/TowerHealthBar
 @onready var machine_gun_cooldown_bar = $CanvasLayer/MachineGunCooldown
 @onready var harpoon_cooldown_bar = $CanvasLayer/HarpoonCooldown
 
@@ -53,8 +57,6 @@ func _ready() -> void:
 	
 	harpoon_cooldown_bar.init_health($spell_machine_tower/main_gun.secondary_firing_interval * 100)
 	#harpoon_cooldown_bar.get_child(0).hide()
-	
-	# I need to be able to fire projectiles by referencing them.
 
 func init_spellward_health(amount):
 	spellward_health_bar.init_health(amount)
@@ -64,6 +66,15 @@ func init_spellward_health(amount):
 func set_spellward_health(amount):
 	spellward_health_bar._set_health(amount)
 	spellward_health = amount
+	
+func init_tower_health(max_health):
+	tower_health_bar.init_health(max_health)
+	
+func apply_tower_damage(amount):
+	#print("applied_damage" + str(amount))
+	#print("tower health: "+ str(tower_health))
+	tower_health_bar._set_health(tower_health_bar.health - amount)
+	tower_health = tower_health_bar.health - amount
 
 func _process(delta: float) -> void:
 	machine_gun_cooldown_bar._set_health($spell_machine_tower/main_gun.primary_projectiles_fired)

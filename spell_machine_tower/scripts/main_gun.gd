@@ -48,7 +48,7 @@ func _ready() -> void:
 	missile_projectile_scene = preload("res://upgrade_tree/scenes/harpoon_projectile.tscn")
 	slime_scene = preload("res://slimes/scenes/small_slime.tscn")
 	
-	var cooldown_timer = Timer.new()
+	cooldown_timer = Timer.new()
 	cooldown_timer.wait_time = 4
 	cooldown_timer.one_shot = true
 	add_child(cooldown_timer)
