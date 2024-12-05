@@ -17,7 +17,7 @@ var element_numbers = [49, 129, 87]
 
 var jump_interval = 5
 var powder_interval = 3
-var powder_duration = 10
+var powder_duration = 0.5
 
 var max_health = 2000.0
 var jump_power = 10000
@@ -36,7 +36,8 @@ func _ready() -> void:
 	$slime_node.powder_interval = powder_interval
 	$slime_node.powder_duration = powder_duration
 	$slime_node.element = 129
-	$slime_node.element_circle_size = 12
+	$slime_node.element_circle_size = 8
+	$slime_node.damage = 10
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

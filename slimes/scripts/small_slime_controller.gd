@@ -1,13 +1,13 @@
 extends Node2D
 
 var jump_interval = 2.5
-var powder_interval = 5
-var powder_duration = 1
+var powder_interval = 2
+var powder_duration = 0.2
 
 var max_health = 200.0
 var jump_power = 1000
 
-var element_numbers = [2, 1, 4]
+var element_numbers = [21, 3, 4, 6, 7]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +24,7 @@ func _ready() -> void:
 	$slime_node.powder_duration = powder_duration
 	$slime_node.element = element_numbers[randi() % element_numbers.size()]
 	$slime_node.element_circle_size = 1
+	$slime_node.damage = 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

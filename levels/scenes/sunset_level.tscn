@@ -45,6 +45,7 @@ layer = -1
 follow_viewport_enabled = true
 
 [node name="PowderViewport" parent="." instance=ExtResource("6_rbl1c")]
+visible = false
 position = Vector2(-3415, -4238)
 scale = Vector2(3.5, 3.5)
 

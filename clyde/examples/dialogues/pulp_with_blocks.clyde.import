@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://dqf0fygu5ca61"
+path="res://.godot/imported/pulp_with_blocks.clyde-2b90c1823578a7d1df25f87e43fccc5f.res"
+
+[deps]
+
+source_file="res://clyde/examples/dialogues/pulp_with_blocks.clyde"
+dest_files=["res://.godot/imported/pulp_with_blocks.clyde-2b90c1823578a7d1df25f87e43fccc5f.res"]
+
+[params]
+

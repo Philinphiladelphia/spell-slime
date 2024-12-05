@@ -26,6 +26,8 @@ var powder_duration = 1
 
 var powder_warning_time = 1
 
+var damage = 0
+
 var touching_something = false
 
 var slime_powder_shader =  preload("res://shaders/scenes/rainbow_shader.tres")
@@ -179,6 +181,7 @@ func _on_timeout() -> void:
 
 func _on_slime_hitbox_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	touching_something = true
+	
 
 func _on_slime_hitbox_area_entered(area: Area2D) -> void:
 	touching_something = true

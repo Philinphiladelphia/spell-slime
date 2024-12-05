@@ -6,6 +6,8 @@ var powder_activated_bitmap: PackedInt32Array
 var slime_elements: PackedInt32Array
 var slime_circle_sizes: PackedInt32Array
 
+var slime_damages: PackedInt32Array
+
 var current_max_slime_health = 0
 var current_slime_health = 0
 
@@ -24,6 +26,8 @@ func _process(delta: float) -> void:
 	slime_elements.clear()
 	slime_circle_sizes.clear()
 	
+	slime_damages.clear()
+	
 	current_slime_health = 0
 	current_max_slime_health = 0
 	for slime_spawner in get_children():
@@ -31,6 +35,7 @@ func _process(delta: float) -> void:
 		powder_activated_bitmap.append_array(slime_spawner.powder_activated_bitmap)
 		slime_elements.append_array(slime_spawner.slime_elements)
 		slime_circle_sizes.append_array(slime_spawner.slime_circle_sizes)
+		slime_damages.append_array(slime_spawner.slime_damages)
 		
 		current_slime_health += slime_spawner.current_slime_health
 		current_max_slime_health += slime_spawner.current_max_slime_health

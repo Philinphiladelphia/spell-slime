@@ -15,10 +15,7 @@ var powder_offset_y = 95
 
 var total_slime_health = 10
 
-# I need to delegate slime powder amounts here
-# the slimes themselves always fuck it up
-
-var small_slime_elements = [2, 4]
+var tower_health = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,12 +26,14 @@ func _ready() -> void:
 	$PowderViewport.powder_instance.health_element = tower_element
 	
 	$PowderViewport.powder_instance.polygon(Vector2(60,60), 20.0, 8, 5, tower_element)
-	$PowderViewport.powder_instance.powder_toy.powder_box(40, 120, 80, 75id, tower_element)
+	$PowderViewport.powder_instance.powder_toy.powder_box(40, 120, 80, 75, tower_element)
 	
 	
 	$slime_tracker.set_tower_midpoint($SpellMachineTower.global_position.x)
 	
-	#$PowderViewport.powder_instance.polygon(Vector2(80,70), 7.0, 3, 5, 12)
+	$PowderViewport.powder_instance.powder_toy.flood_powder(60, 60, 28, 0) # diamond
+	
+	$SpellMachineTower.init_tower_health(tower_health)
 	
 	$slime_health_layer/HealthBar.init_health(100)
 	$slime_health_layer/HealthBar._set_health(0)
@@ -69,11 +68,23 @@ func _process(delta: float) -> void:
 		
 		var dist = slime_positions[i] - $SpellMachineTower.position
 		
+		# I might need to make powdertoy an autoload singleton.
+		
+		if $SpellMachineTower.tower_health <= 0:
+			$PowderViewport.queue_free()
+			print("powder toy freed")
+		
+		print(dist.x)
+		if abs(dist.x) < 700 && dist.y < 400 && dist.y > -1300:
+			print("accepted:" + str(dist.x))
+			if powder_health <= $SpellMachineTower.spellward_health_margin:
+				$SpellMachineTower.apply_tower_damage($slime_tracker.slime_damages[i])
+		
 		if dist.x < 1000 && dist.y < 1000:
 			var powder_x = 120-(60-(dist.x/powder_scale)) + powder_offset_x
 			var powder_y = (dist.y/powder_scale) + powder_offset_y
 			#powder_toy.clear_sim_area(wall_offset, wall_offset, width - (wall_offset*2), border)
-			$PowderViewport.powder_instance.powder_toy.clear_sim_area(powder_x, powder_y, slime_circle_size, slime_circle_size)
+			#$PowderViewport.powder_instance.powder_toy.clear_sim_area(powder_x, powder_y, slime_circle_size, slime_circle_size)
 			$PowderViewport.powder_instance.circle(Vector2(powder_x,powder_y), slime_circle_size, element)
 	
 	if Input.is_physical_key_pressed(KEY_A):
@@ -81,4 +92,7 @@ func _process(delta: float) -> void:
 	elif Input.is_physical_key_pressed(KEY_D):
 		level_camera.position.x += camera_move_speed * delta
 	elif Input.is_physical_key_pressed(KEY_E):
-		$PowderViewport.powder_instance.polygon(Vector2(40,40), 30.0, 8, 2, 2)
+		$PowderViewport.powder_instance.polygon(Vector2(60,60), 30.0, 8, 2, 2)
+
+
+# I need to make slimes damage the tower's main health

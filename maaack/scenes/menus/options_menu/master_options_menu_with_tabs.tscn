@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://qwdg5twpsixn"]
+
+[ext_resource type="PackedScene" uid="uid://gny04dwpodct" path="res://maaack/scenes/menus/options_menu/master_options_menu.tscn" id="1_ppmf5"]
+[ext_resource type="PackedScene" uid="uid://bqsea6rq3isud" path="res://maaack/scenes/menus/options_menu/input/input_options_menu_with_mouse_sensitivity.tscn" id="2_5nyjs"]
+[ext_resource type="PackedScene" uid="uid://bajk220jyjx2e" path="res://maaack/scenes/menus/options_menu/audio/audio_options_menu.tscn" id="3_grcer"]
+[ext_resource type="PackedScene" uid="uid://bqg8awbwmu18p" path="res://maaack/scenes/menus/options_menu/video/video_options_menu_with_extras.tscn" id="4_g4ft7"]
+[ext_resource type="PackedScene" uid="uid://bjxsjh8o6un06" path="res://maaack/scenes/menus/options_menu/game/game_options_menu.tscn" id="5_c88j1"]
+
+[node name="MasterOptionsMenu" instance=ExtResource("1_ppmf5")]
+
+[node name="TabContainer" parent="." index="0"]
+current_tab = 0
+
+[node name="Controls" parent="TabContainer" index="1" instance=ExtResource("2_5nyjs")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Audio" parent="TabContainer" index="2" instance=ExtResource("3_grcer")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Video" parent="TabContainer" index="3" instance=ExtResource("4_g4ft7")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Game" parent="TabContainer" index="4" instance=ExtResource("5_c88j1")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3

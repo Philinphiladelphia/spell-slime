@@ -149,7 +149,7 @@ radius = 46.6154
 radius = 36.2215
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iscp3"]
-size = Vector2(344.5, 1191)
+size = Vector2(300, 1191)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tpllv"]
 bg_color = Color(0.97, 0.489042, 0.1455, 1)

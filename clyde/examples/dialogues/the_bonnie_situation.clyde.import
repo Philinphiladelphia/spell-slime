@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://dai2jkwo71jbg"
+path="res://.godot/imported/the_bonnie_situation.clyde-1213a095c0b337fc1f7fdc44d11e1d89.res"
+
+[deps]
+
+source_file="res://clyde/examples/dialogues/the_bonnie_situation.clyde"
+dest_files=["res://.godot/imported/the_bonnie_situation.clyde-1213a095c0b337fc1f7fdc44d11e1d89.res"]
+
+[params]
+

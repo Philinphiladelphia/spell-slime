@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Spellslime"
-run/main_scene="res://ui/scenes/Test1.tscn"
+run/main_scene="res://maaack/scenes/opening/opening_with_logo.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=30
 config/icon="res://icon.svg"
@@ -20,7 +20,16 @@ scenes/error_scene_path="res://addons/yet_another_scene_manager/Scenes/Error.tsc
 
 [autoload]
 
-YASM="*res://addons/yet_another_scene_manager/Scenes.gd"
+AppConfig="*res://addons/maaacks_game_template/base/scenes/autoloads/app_config.tscn"
+SceneLoader="*res://addons/maaacks_game_template/base/scenes/autoloads/scene_loader.tscn"
+ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_music_controller.tscn"
+ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
+Dialogue="*res://addons/clyde/helpers/dialogue_manager.gd"
+
+[dialogue]
+
+source_folder="res://clyde/examples/dialogues"
+enable_helpers=true
 
 [display]
 
@@ -34,7 +43,16 @@ movie_writer/movie_file="/home/phil/Desktop/movies/steam_video.avi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/imjp94.yafsm/plugin.cfg", "res://addons/powder_toy_godot/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg", "res://addons/softbody2d/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg", "res://addons/yet_another_scene_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/clyde/plugin.cfg", "res://addons/imjp94.yafsm/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/powder_toy_godot/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg", "res://addons/softbody2d/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+
+[maaacks_game_template]
+
+disable_plugin_dialogues=true
+copy_path="res://maaack"
 
 [physics]
 
