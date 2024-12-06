@@ -14,57 +14,75 @@ height = 403.92
 modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_7blkc")
 
-[node name="RockingSlime" type="RigidBody2D" parent="."]
-position = Vector2(700, 483)
-rotation = 0.268781
-disable_mode = 1
-collision_layer = 0
-script = ExtResource("1_qthyf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RockingSlime"]
-shape = SubResource("CapsuleShape2D_ynpcj")
-
-[node name="Sprite2D" type="Sprite2D" parent="RockingSlime"]
-scale = Vector2(0.13, 0.13)
-texture = ExtResource("2_hilx8")
-
-[node name="PowderViewport" parent="." instance=ExtResource("5_das1m")]
-position = Vector2(-237, -753)
-scale = Vector2(1.5, 1.5)
-
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(642, 219)
 scale = Vector2(0.401103, 0.368318)
 texture = ExtResource("3_r7rwl")
 
-[node name="RockingSlime2" type="RigidBody2D" parent="."]
+[node name="PowderViewport" parent="." instance=ExtResource("5_das1m")]
+top_level = true
+z_index = 10
+position = Vector2(-69, -449)
+scale = Vector2(1.8, 1.8)
+
+[node name="slimes" type="Node" parent="."]
+
+[node name="RockingSlime" type="RigidBody2D" parent="slimes"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(1043, 520)
-rotation = 0.268781
+position = Vector2(622, 534)
+rotation = -0.144862
+scale = Vector2(1, 1)
 disable_mode = 1
 collision_layer = 0
 script = ExtResource("1_qthyf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RockingSlime2"]
-scale = Vector2(0.6, 0.6)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimes/RockingSlime"]
+scale = Vector2(0.7, 0.7)
 shape = SubResource("CapsuleShape2D_ynpcj")
 
-[node name="Sprite2D" type="Sprite2D" parent="RockingSlime2"]
-scale = Vector2(0.09, 0.09)
+[node name="Sprite2D" type="Sprite2D" parent="slimes/RockingSlime"]
+scale = Vector2(0.12, 0.12)
 texture = ExtResource("2_hilx8")
 
-[node name="RockingSlime3" type="RigidBody2D" parent="."]
+[node name="Marker2D" type="Marker2D" parent="slimes/RockingSlime"]
+position = Vector2(-85.2557, -106.172)
+
+[node name="RockingSlime2" type="RigidBody2D" parent="slimes"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(345, 516)
+position = Vector2(989, 571)
 rotation = 0.268781
+scale = Vector2(1, 1)
 disable_mode = 1
 collision_layer = 0
 script = ExtResource("1_qthyf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RockingSlime3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimes/RockingSlime2"]
 scale = Vector2(0.6, 0.6)
 shape = SubResource("CapsuleShape2D_ynpcj")
 
-[node name="Sprite2D" type="Sprite2D" parent="RockingSlime3"]
+[node name="Sprite2D" type="Sprite2D" parent="slimes/RockingSlime2"]
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_hilx8")
+
+[node name="Marker2D" type="Marker2D" parent="slimes/RockingSlime2"]
+position = Vector2(-59.2079, -71.857)
+
+[node name="RockingSlime3" type="RigidBody2D" parent="slimes"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(359, 569)
+rotation = 0.268781
+scale = Vector2(1, 1)
+disable_mode = 1
+collision_layer = 0
+script = ExtResource("1_qthyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slimes/RockingSlime3"]
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CapsuleShape2D_ynpcj")
+
+[node name="Sprite2D" type="Sprite2D" parent="slimes/RockingSlime3"]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_hilx8")
+
+[node name="Marker2D" type="Marker2D" parent="slimes/RockingSlime3"]
+position = Vector2(-60.2701, -75.7133)
