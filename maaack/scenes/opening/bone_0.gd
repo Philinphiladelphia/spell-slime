@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 	set_modulate(lerp(get_modulate(), Color(1,1,1,1), delta))
 	
 	var angle_difference = rotation
-	var impulse_strength = 50
+	var impulse_strength = 30
 
 	if angle_difference > 0:
 		apply_central_impulse(Vector2(-impulse_strength, 0))
