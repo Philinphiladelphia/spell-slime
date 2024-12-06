@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd2he5vfhcd2g"]
+
+[ext_resource type="Script" path="res://maaack/scenes/opening/run_intro_powder_toy.gd" id="1_7blkc"]
+[ext_resource type="Script" path="res://maaack/scenes/opening/bone_0.gd" id="1_qthyf"]
+[ext_resource type="Texture2D" uid="uid://cf6uxtbq21vub" path="res://common_assets/branding/SpS_elements-03.png" id="2_hilx8"]
+[ext_resource type="Texture2D" uid="uid://dfbctm1wuykwo" path="res://common_assets/branding/SpS_elements-02.png" id="3_r7rwl"]
+[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="5_das1m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ynpcj"]
+radius = 138.49
+height = 403.92
+
+[node name="Node2D" type="Node2D"]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("1_7blkc")
+
+[node name="RockingSlime" type="RigidBody2D" parent="."]
+position = Vector2(700, 483)
+rotation = 0.268781
+disable_mode = 1
+collision_layer = 0
+script = ExtResource("1_qthyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RockingSlime"]
+shape = SubResource("CapsuleShape2D_ynpcj")
+
+[node name="Sprite2D" type="Sprite2D" parent="RockingSlime"]
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_hilx8")
+
+[node name="PowderViewport" parent="." instance=ExtResource("5_das1m")]
+position = Vector2(-237, -753)
+scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(642, 219)
+scale = Vector2(0.401103, 0.368318)
+texture = ExtResource("3_r7rwl")
+
+[node name="RockingSlime2" type="RigidBody2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1043, 520)
+rotation = 0.268781
+disable_mode = 1
+collision_layer = 0
+script = ExtResource("1_qthyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RockingSlime2"]
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CapsuleShape2D_ynpcj")
+
+[node name="Sprite2D" type="Sprite2D" parent="RockingSlime2"]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_hilx8")
+
+[node name="RockingSlime3" type="RigidBody2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(345, 516)
+rotation = 0.268781
+disable_mode = 1
+collision_layer = 0
+script = ExtResource("1_qthyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RockingSlime3"]
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CapsuleShape2D_ynpcj")
+
+[node name="Sprite2D" type="Sprite2D" parent="RockingSlime3"]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_hilx8")
