@@ -8,7 +8,7 @@ var final_scene: Timer
 func _ready() -> void:
 	super()
 	final_scene = Timer.new()
-	final_scene.wait_time = 3
+	final_scene.wait_time = 5
 	add_child(final_scene)
 	final_scene.one_shot = true
 	final_scene.connect("timeout", run_powder_slimes)

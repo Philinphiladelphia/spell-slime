@@ -12,11 +12,12 @@ size = Vector2(2000, 300)
 
 [node name="Opening" instance=ExtResource("1_cfc4h")]
 images = Array[Texture2D]([ExtResource("2_yvy0p"), ExtResource("3_1pq6d")])
-fade_in_time = 1.0
-fade_out_time = 0.5
+fade_in_time = 2.0
+fade_out_time = 3.0
 visible_time = 2.0
-start_delay = 1.0
-end_delay = 17.0
+start_delay = 2.0
+end_delay = 16.0
+show_loading_screen = true
 
 [node name="background" type="TextureRect" parent="." index="1"]
 layout_mode = 1
@@ -29,11 +30,12 @@ texture = ExtResource("5_putg6")
 expand_mode = 1
 
 [node name="Parallax2D" type="Parallax2D" parent="." index="2"]
+scroll_offset = Vector2(-17, -212)
 repeat_size = Vector2(5000, 0)
 autoscroll = Vector2(-25, 0)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Parallax2D" index="0"]
-position = Vector2(2076, 139)
+position = Vector2(2111, 331)
 scale = Vector2(1.43921, 0.433145)
 texture = ExtResource("6_a4nhj")
 
