@@ -39,6 +39,10 @@ func _ready() -> void:
 	$slime_health_layer/HealthBar._set_health(0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if $SpellMachineTower.is_dead == true:
+		queue_free()
+	
+	# init powder health. Gotta wait a sec for the initial powder manifests to go off
 	var powder_health = $PowderViewport.powder_instance.get_health()
 	if (powder_health > $SpellMachineTower.spellward_health_margin) && init_spellward_health:
 		$SpellMachineTower.init_spellward_health(powder_health - $SpellMachineTower.spellward_health_margin)
@@ -74,10 +78,6 @@ func _process(delta: float) -> void:
 			#$PowderViewport.queue_free() this segfaults
 			print("powder toy freed")
 		
-		if abs(dist.x) < 700 && dist.y < 400 && dist.y > -1300:
-			if powder_health <= $SpellMachineTower.spellward_health_margin:
-				$SpellMachineTower.apply_tower_damage($slime_tracker.slime_damages[i])
-		
 		if dist.x < 1000 && dist.y < 1000:
 			var powder_x = 120-(60-(dist.x/powder_scale)) + powder_offset_x
 			var powder_y = (dist.y/powder_scale) + powder_offset_y
@@ -91,6 +91,16 @@ func _process(delta: float) -> void:
 		level_camera.position.x += camera_move_speed * delta
 	elif Input.is_physical_key_pressed(KEY_E):
 		$PowderViewport.powder_instance.polygon(Vector2(60,60), 30.0, 8, 2, 2)
+
+	# Determine the camera's relative position to the center and call face_left or face_right
+	var camera_center_x = level_camera.position.x
+	var screen_center_x = $SpellMachineTower.position.x
+
+	if camera_center_x > screen_center_x:
+		$SpellMachineTower.face_left()
+	else:
+		$SpellMachineTower.face_right()
+
 
 
 # I need to make slimes damage the tower's main health

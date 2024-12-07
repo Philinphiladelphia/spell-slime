@@ -1,12 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://iatpne3a4rwl"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_7f0hg"]
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/scenes/menus/main_menu/main_menu.tscn" id="1_7f0hg"]
 [ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/main_menu.gd" id="2_x7ag5"]
-[ext_resource type="PackedScene" path="res://maaack/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_e82kk"]
-[ext_resource type="PackedScene" path="res://maaack/scenes/credits/credits.tscn" id="4_q7aji"]
+[ext_resource type="PackedScene" uid="uid://qwdg5twpsixn" path="res://maaack/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_e82kk"]
+[ext_resource type="PackedScene" uid="uid://dqs3x24f0ntpj" path="res://maaack/scenes/credits/credits.tscn" id="4_q7aji"]
 
 [node name="MainMenu" instance=ExtResource("1_7f0hg")]
 script = ExtResource("2_x7ag5")
 game_scene_path = "res://maaack/scenes/game_scene/game_ui.tscn"
 options_packed_scene = ExtResource("3_e82kk")
 credits_packed_scene = ExtResource("4_q7aji")
+
+[node name="BackgroundMusicPlayer" parent="." index="1"]
+bus = &"Master"
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "Spellslime"

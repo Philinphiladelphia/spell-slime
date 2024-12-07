@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://dd32qqj6y33t2"]
+[gd_scene load_steps=101 format=3 uid="uid://dd32qqj6y33t2"]
 
 [ext_resource type="Script" path="res://spell_machine_tower/scenes/spell_tower_controller.gd" id="1_dsv4g"]
 [ext_resource type="Shader" path="res://spell_machine_tower/scenes/spell_tower.gdshader" id="2_218il"]
@@ -154,14 +154,24 @@ size = Vector2(300, 1191)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tpllv"]
 bg_color = Color(0.97, 0.489042, 0.1455, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m4hn"]
+size = Vector2(500, 681)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbvm8"]
+size = Vector2(400, 500)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfi1t"]
+radius = 153.75
+height = 400.0
+
 [node name="SpellMachineTower" type="Node2D"]
 script = ExtResource("1_dsv4g")
 
 [node name="stars2" type="RigidBody2D" parent="."]
-position = Vector2(-2, -876)
+position = Vector2(17, -812)
 collision_layer = 0
 collision_mask = 0
-mass = 0.01
+mass = 0.1
 gravity_scale = 0.0
 
 [node name="PinJoint2D" type="PinJoint2D" parent="stars2"]
@@ -169,7 +179,7 @@ position = Vector2(-1.5, -0.5)
 node_a = NodePath("../../spell_machine_tower/hitboxes/tower_body")
 node_b = NodePath("..")
 motor_enabled = true
-motor_target_velocity = -0.174533
+motor_target_velocity = -0.0349066
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stars2"]
 position = Vector2(-2.5, -1.5)
@@ -683,8 +693,8 @@ region_rect = Rect2(0, 269.925, 89.7047, 242.075)
 [node name="hitboxes" type="Node2D" parent="spell_machine_tower"]
 
 [node name="tower_body" type="StaticBody2D" parent="spell_machine_tower/hitboxes"]
-collision_layer = 132
-collision_mask = 133
+collision_layer = 4
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spell_machine_tower/hitboxes/tower_body"]
 z_index = -10
@@ -692,20 +702,13 @@ position = Vector2(13.75, -124.5)
 shape = SubResource("RectangleShape2D_iscp3")
 
 [node name="slime_dome" type="StaticBody2D" parent="spell_machine_tower/hitboxes"]
-collision_layer = 128
-collision_mask = 128
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="spell_machine_tower/hitboxes/slime_dome"]
 polygon = PackedVector2Array(-179, -681, -167, -696, -167, -727, -148, -747, -139, -767, -138, -815, -129, -860, -116, -896, -98, -929, -75, -957, -32, -992, -2, -1004, -3, -1013, -19, -1026, -24, -1045, -12, -1067, 11, -1076, 27, -1071, 38, -1061, 45, -1040, 40, -1024, 28, -1013, 24, -1004, 43, -993, 71, -980, 94, -961, 125, -926, 151, -879, 158, -839, 163, -818, 166, -798, 164, -774, 168, -766, 175, -753, 180, -743, 195, -727, 202, -705, 204, -692, 211, -678, 183, -662, 130, -654, 71, -651, -79, -649, -121, -652, -151, -655, -172, -668)
 one_way_collision = true
 one_way_collision_margin = 5.0
-
-[node name="inner_slime_collider" type="StaticBody2D" parent="spell_machine_tower/hitboxes"]
-collision_layer = 16
-collision_mask = 16
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="spell_machine_tower/hitboxes/inner_slime_collider"]
-polygon = PackedVector2Array(156, -748, 152, -814, 141, -859, 117, -917, 82, -955, 49, -981, 7, -987, -32, -981, -63, -953, -97, -913, -113, -864, -123, -824, -125, -778, -127, -758, -83, -746, -39, -743, 23, -740, 85, -746, 137, -750, 146, -750, 166, -656, -38, -648, -173, -664, -252, -771, -244, -907, -201, -1066, -109, -1097, 3, -1126, 323, -1047, 338, -917, 321, -749, 287, -665, 207, -647, 168, -686)
 
 [node name="joints" type="Node" parent="spell_machine_tower"]
 
@@ -2045,10 +2048,9 @@ position = Vector2(4024, -450)
 texture = ExtResource("86_c75nb")
 
 [node name="Slime" type="Sprite2D" parent="."]
-position = Vector2(34.9998, -773)
+position = Vector2(13, -774)
 scale = Vector2(0.5, 0.449)
 texture = ExtResource("96_ssyy0")
-flip_h = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -2116,5 +2118,28 @@ offset_top = 310.0
 offset_right = 127.0
 offset_bottom = 723.0
 scale = Vector2(0.5, 0.5)
+
+[node name="damage_timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="hurt_box" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box"]
+position = Vector2(9, 136.5)
+shape = SubResource("RectangleShape2D_5m4hn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="hurt_box"]
+position = Vector2(13, -457)
+shape = SubResource("RectangleShape2D_jbvm8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="hurt_box"]
+position = Vector2(13, -797)
+shape = SubResource("CapsuleShape2D_gfi1t")
+
+[connection signal="timeout" from="damage_timer" to="." method="_on_damage_timer_timeout"]
+[connection signal="body_shape_entered" from="hurt_box" to="." method="_on_hurt_box_body_shape_entered"]
 
 [editable path="CanvasLayer/MachineGunCooldown"]
