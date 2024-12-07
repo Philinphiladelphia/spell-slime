@@ -354,8 +354,8 @@ radius = 100
 shape_type = "Circle"
 margin_offset_edge = 49.4
 mass = 6.0
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 
 [node name="Skeleton2D" type="Skeleton2D" parent="slime_node/slime_soft_body"]
 visible = false
@@ -851,8 +851,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-0" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(201.459, 304.71)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 0
 metadata/bone_name = &"Bone-0"
@@ -908,8 +908,8 @@ metadata/joint_distance = 119.189
 
 [node name="Bone-1" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(201.22, 421.785)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 1
 metadata/bone_name = &"Bone-1"
@@ -975,8 +975,8 @@ metadata/joint_distance = 130.762
 
 [node name="Bone-2" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(196.739, 543.552)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 2
 metadata/bone_name = &"Bone-2"
@@ -1032,8 +1032,8 @@ metadata/joint_distance = 114.994
 
 [node name="Bone-3" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(281.172, 216.099)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 3
 metadata/bone_name = &"Bone-3"
@@ -1099,8 +1099,8 @@ metadata/joint_distance = 116.733
 
 [node name="Bone-4" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(288.951, 321.362)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 4
 metadata/bone_name = &"Bone-4"
@@ -1186,8 +1186,8 @@ metadata/joint_distance = 154.05
 
 [node name="Bone-5" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(291.082, 420.406)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 5
 metadata/bone_name = &"Bone-5"
@@ -1283,8 +1283,8 @@ metadata/joint_distance = 139.532
 
 [node name="Bone-6" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(285.191, 522.023)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 6
 metadata/bone_name = &"Bone-6"
@@ -1370,8 +1370,8 @@ metadata/joint_distance = 142.742
 
 [node name="Bone-7" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(372.226, 143.052)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 7
 metadata/bone_name = &"Bone-7"
@@ -1427,8 +1427,8 @@ metadata/joint_distance = 148.9
 
 [node name="Bone-8" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(391.056, 225.952)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 8
 metadata/bone_name = &"Bone-8"
@@ -1514,8 +1514,8 @@ metadata/joint_distance = 166.137
 
 [node name="Bone-9" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(404.63, 330.961)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 9
 metadata/bone_name = &"Bone-9"
@@ -1611,8 +1611,8 @@ metadata/joint_distance = 126.739
 
 [node name="Bone-10" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(410.404, 416.128)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 10
 metadata/bone_name = &"Bone-10"
@@ -1708,8 +1708,8 @@ metadata/joint_distance = 115.529
 
 [node name="Bone-11" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(397.046, 511.184)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 11
 metadata/bone_name = &"Bone-11"
@@ -1805,8 +1805,8 @@ metadata/joint_distance = 139.354
 
 [node name="Bone-12" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(487.257, 145.119)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 12
 metadata/bone_name = &"Bone-12"
@@ -1872,8 +1872,8 @@ metadata/joint_distance = 128.844
 
 [node name="Bone-13" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(489.477, 234.831)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 13
 metadata/bone_name = &"Bone-13"
@@ -1969,8 +1969,8 @@ metadata/joint_distance = 131.721
 
 [node name="Bone-14" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(498.714, 352.486)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 14
 metadata/bone_name = &"Bone-14"
@@ -2066,8 +2066,8 @@ metadata/joint_distance = 80.4637
 
 [node name="Bone-15" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(514, 395)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 15
 metadata/bone_name = &"Bone-15"
@@ -2163,8 +2163,8 @@ metadata/joint_distance = 125.371
 
 [node name="Bone-16" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(492.241, 497.673)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 16
 metadata/bone_name = &"Bone-16"
@@ -2260,8 +2260,8 @@ metadata/joint_distance = 152.189
 
 [node name="Bone-17" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(588.052, 143.39)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 17
 metadata/bone_name = &"Bone-17"
@@ -2327,8 +2327,8 @@ metadata/joint_distance = 125.883
 
 [node name="Bone-18" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(582.83, 231.529)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 18
 metadata/bone_name = &"Bone-18"
@@ -2424,8 +2424,8 @@ metadata/joint_distance = 132.694
 
 [node name="Bone-19" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(567.267, 341.128)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 19
 metadata/bone_name = &"Bone-19"
@@ -2521,8 +2521,8 @@ metadata/joint_distance = 131.26
 
 [node name="Bone-20" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(555.406, 409.586)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 20
 metadata/bone_name = &"Bone-20"
@@ -2618,8 +2618,8 @@ metadata/joint_distance = 166.027
 
 [node name="Bone-21" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(577.126, 503.319)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 21
 metadata/bone_name = &"Bone-21"
@@ -2715,8 +2715,8 @@ metadata/joint_distance = 166.396
 
 [node name="Bone-22" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(277.383, 625.527)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 22
 metadata/bone_name = &"Bone-22"
@@ -2772,8 +2772,8 @@ metadata/joint_distance = 108.814
 
 [node name="Bone-23" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(386.166, 622.914)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 23
 metadata/bone_name = &"Bone-23"
@@ -2839,8 +2839,8 @@ metadata/joint_distance = 101.802
 
 [node name="Bone-24" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(487.793, 616.941)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 24
 metadata/bone_name = &"Bone-24"
@@ -2906,8 +2906,8 @@ metadata/joint_distance = 98.8475
 
 [node name="Bone-25" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(586.64, 617.049)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 25
 metadata/bone_name = &"Bone-25"
@@ -2973,8 +2973,8 @@ metadata/joint_distance = 105.299
 
 [node name="Bone-26" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(692.625, 140.438)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 26
 metadata/bone_name = &"Bone-26"
@@ -3020,8 +3020,8 @@ metadata/joint_distance = 80.7625
 
 [node name="Bone-27" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(687.153, 221.015)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 27
 metadata/bone_name = &"Bone-27"
@@ -3107,8 +3107,8 @@ metadata/joint_distance = 146.589
 
 [node name="Bone-28" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(676.583, 325.433)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 28
 metadata/bone_name = &"Bone-28"
@@ -3204,8 +3204,8 @@ metadata/joint_distance = 152.266
 
 [node name="Bone-29" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(673.14, 418.718)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 29
 metadata/bone_name = &"Bone-29"
@@ -3301,8 +3301,8 @@ metadata/joint_distance = 161.216
 
 [node name="Bone-30" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(682.023, 516.979)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 30
 metadata/bone_name = &"Bone-30"
@@ -3398,8 +3398,8 @@ metadata/joint_distance = 143.856
 
 [node name="Bone-31" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(792.64, 213.013)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 31
 metadata/bone_name = &"Bone-31"
@@ -3445,8 +3445,8 @@ metadata/joint_distance = 105.914
 
 [node name="Bone-32" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(796.304, 318.863)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 32
 metadata/bone_name = &"Bone-32"
@@ -3512,8 +3512,8 @@ metadata/joint_distance = 102.527
 
 [node name="Bone-33" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(794.817, 421.38)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 33
 metadata/bone_name = &"Bone-33"
@@ -3579,8 +3579,8 @@ metadata/joint_distance = 103.807
 
 [node name="Bone-34" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(794.199, 525.185)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 34
 metadata/bone_name = &"Bone-34"
@@ -3646,8 +3646,8 @@ metadata/joint_distance = 93.873
 
 [node name="Bone-35" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(691.712, 623.975)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 35
 metadata/bone_name = &"Bone-35"
@@ -3713,8 +3713,8 @@ metadata/joint_distance = 92.3997
 
 [node name="Bone-36" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(783.949, 618.497)
-collision_layer = 13
-collision_mask = 13
+collision_layer = 141
+collision_mask = 141
 mass = 6.0
 metadata/idx = 36
 metadata/bone_name = &"Bone-36"

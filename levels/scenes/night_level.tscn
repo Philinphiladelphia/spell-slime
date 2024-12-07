@@ -92,7 +92,7 @@ script = ExtResource("7_xdq1o")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-1988, -2833)
-energy = 0.5
+energy = 0.8
 texture = SubResource("GradientTexture2D_txd4r")
 texture_scale = 50.0
 
