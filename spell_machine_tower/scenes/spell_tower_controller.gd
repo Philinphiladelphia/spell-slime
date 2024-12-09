@@ -55,7 +55,7 @@ var base_stats = {
 }
 
 func _ready() -> void:
-	set_base_stats("slime2")
+	set_base_stats("slime1")
 
 func set_base_stats(slime_type: String) -> void:
 	var stats = base_stats.get(slime_type, null)
