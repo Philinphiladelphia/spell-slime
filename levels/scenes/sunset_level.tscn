@@ -63,7 +63,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_28xsr")
 script = ExtResource("5_qjk6u")
 
 [node name="spawner1" type="Node2D" parent="slime_tracker"]
-position = Vector2(-1262, -951)
+position = Vector2(1264, -781)
 script = ExtResource("4_tb22u")
 
 [editable path="slime_health_layer/HealthBar"]

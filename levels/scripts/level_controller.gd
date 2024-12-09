@@ -21,7 +21,7 @@ var tower_health = 1000
 func _ready() -> void:
 	level_camera = $level_camera
 	
-	var tower_element = 17
+	var tower_element = 144
 	
 	$PowderViewport.powder_instance.health_element = tower_element
 	

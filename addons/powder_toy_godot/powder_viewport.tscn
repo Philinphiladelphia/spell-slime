@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dod8ieervu1pf"]
+
+[ext_resource type="Shader" uid="uid://d5u0us211jwd" path="res://shaders/scripts/spell_effect.tres" id="1_maven"]
+[ext_resource type="Script" path="res://addons/powder_toy_godot/command_powder_toy.gd" id="1_n7khg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f54hy"]
+shader = ExtResource("1_maven")
+
+[node name="PowderViewport" type="Node2D"]
+script = ExtResource("1_n7khg")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_f54hy")
+offset_right = 2000.0
+offset_bottom = 2000.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(2000, 2000)
+render_target_update_mode = 4

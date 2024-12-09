@@ -47,7 +47,6 @@ func _process(delta: float) -> void:
 				
 			var powder_pos = slime.get_node("Marker2D").global_position
 			$PowderViewport.powder_instance.powder_toy.powder_circle((powder_pos.x/12) + 5, (powder_pos.y/12) + 37, radius, element)
-			print(i)
 			i = i + 1
 			
 	

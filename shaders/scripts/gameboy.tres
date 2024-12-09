@@ -1,4 +1,6 @@
-[gd_resource type="VisualShader" load_steps=4 format=3 uid="uid://c1e6up5r0lndt"]
+[gd_resource type="VisualShader" load_steps=5 format=3 uid="uid://c1e6up5r0lndt"]
+
+[ext_resource type="Script" uid="uid://covecmenr8xew" path="res://addons/shaderV/rgba/turnGBPalette.gd" id="1_eoji6"]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_8bcoq"]
 output_port_for_preview = 0
@@ -11,6 +13,7 @@ constant = 1.6
 [sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_vuj02"]
 default_input_values = [1, 1.5]
 initialized = true
+script = ExtResource("1_eoji6")
 
 [resource]
 code = "shader_type canvas_item;
@@ -18,6 +21,31 @@ render_mode blend_mix;
 
 
 
+// TurnGameBoyPalette
+#include \"res://addons/shaderV/rgba/turnGBPalette.gdshaderinc\"
+
+void fragment() {
+	vec4 n_out2p0;
+// Texture2D:2
+	n_out2p0 = texture(TEXTURE, UV);
+
+
+// FloatConstant:3
+	float n_out3p0 = 1.600000;
+
+
+	vec3 n_out4p0;
+// TurnGameBoyPalette:4
+	{
+		n_out4p0 = _gameboyPaletteFunc(vec3(n_out2p0.xyz), n_out3p0);
+	}
+
+
+// Output:0
+	COLOR.rgb = n_out4p0;
+
+
+}
 "
 mode = 1
 flags/light_only = false
@@ -27,3 +55,4 @@ nodes/fragment/3/node = SubResource("VisualShaderNodeFloatConstant_uekm7")
 nodes/fragment/3/position = Vector2(-140, 180)
 nodes/fragment/4/node = SubResource("VisualShaderNodeCustom_vuj02")
 nodes/fragment/4/position = Vector2(120, 160)
+nodes/fragment/connections = PackedInt32Array(3, 0, 4, 1, 2, 0, 4, 0, 4, 0, 0, 0)

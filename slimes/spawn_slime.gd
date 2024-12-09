@@ -25,11 +25,11 @@ var current_max_slime_health = 0
 #Use slime x and y distance from the center of the powder toy. Much more useful for spawning.
 
 
-var max_small_slimes = 10
-var max_med_slimes = 10
-var max_large_slimes = 10
+var max_small_slimes = 100
+var max_med_slimes = 100
+var max_large_slimes = 100
 
-var slime_cooldown = 0.5
+var slime_cooldown = 0.3
 var last_spawn_time = 0.0
 
 var small_slime_count = 0
