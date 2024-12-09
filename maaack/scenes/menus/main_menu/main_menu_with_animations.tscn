@@ -1,7 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://bccavc2gq6x18"]
+[gd_scene load_steps=18 format=3 uid="uid://bccavc2gq6x18"]
 
 [ext_resource type="PackedScene" uid="uid://iatpne3a4rwl" path="res://maaack/scenes/menus/main_menu/main_menu.tscn" id="1_umbo3"]
+[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/scenes/spellslime_theme.tres" id="2_28l5c"]
 [ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_xtkjf"]
+[ext_resource type="Texture2D" uid="uid://dfbctm1wuykwo" path="res://common_assets/branding/SpS_elements-02.png" id="4_xpgjj"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -348,6 +350,7 @@ transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "Open
 graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" instance=ExtResource("1_umbo3")]
+theme = ExtResource("2_28l5c")
 script = ExtResource("2_xtkjf")
 game_scene_path = "res://levels/scenes/night_lighting.tscn"
 
@@ -367,10 +370,34 @@ modulate = Color(1, 1, 1, 0)
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="MenuContainer/TitleMargin/TitleContainer" index="1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -277.5
+offset_top = -100.0
+offset_right = 277.5
+offset_bottom = 360.0
+grow_horizontal = 2
+texture = ExtResource("4_xpgjj")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -85.0
+offset_top = 100.0
+offset_right = 85.0
+offset_bottom = 134.0
 text = "Be the Slimelord"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" index="0"]
@@ -378,3 +405,9 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
 lock = true
+
+[node name="FlowControlContainer" parent="." index="9"]
+layout_mode = 1
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2

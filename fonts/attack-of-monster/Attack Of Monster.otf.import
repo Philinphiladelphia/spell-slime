@@ -1,0 +1,34 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://ccda0lm3e00ho"
+path="res://.godot/imported/Attack Of Monster.otf-ecb384be54b8e618a1d5b0f314e65a34.fontdata"
+
+[deps]
+
+source_file="res://fonts/attack-of-monster/Attack Of Monster.otf"
+dest_files=["res://.godot/imported/Attack Of Monster.otf-ecb384be54b8e618a1d5b0f314e65a34.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

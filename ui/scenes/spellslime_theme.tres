@@ -1,16 +1,15 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://baaib8wk3l0l1"]
 
-[ext_resource type="FontFile" uid="uid://dwul80xck2qea" path="res://fonts/8-bit-limit/8bitlim.ttf" id="1_qieas"]
+[ext_resource type="FontFile" uid="uid://fhes64g5term" path="res://fonts/the-bomb-sound/The Bomb Sound.otf" id="1_jejyr"]
 
 [resource]
-Button/fonts/font = ExtResource("1_qieas")
-Label/fonts/font = ExtResource("1_qieas")
-LineEdit/fonts/font = ExtResource("1_qieas")
-ProgressBar/fonts/font = ExtResource("1_qieas")
-TabBar/fonts/font = ExtResource("1_qieas")
-TabContainer/fonts/font = ExtResource("1_qieas")
+Button/fonts/font = ExtResource("1_jejyr")
+Label/fonts/font = ExtResource("1_jejyr")
+LineEdit/fonts/font = ExtResource("1_jejyr")
+ProgressBar/fonts/font = ExtResource("1_jejyr")
+TabBar/fonts/font = ExtResource("1_jejyr")
 TextEdit/colors/background_color = Color(0.53164, 0.00377634, 0.996002, 0.290196)
 TextEdit/colors/caret_background_color = Color(0.844474, 0.177655, 0.222573, 1)
-TextEdit/fonts/font = ExtResource("1_qieas")
-Tree/fonts/font = ExtResource("1_qieas")
-Tree/fonts/title_button_font = ExtResource("1_qieas")
+TextEdit/fonts/font = ExtResource("1_jejyr")
+Tree/fonts/font = ExtResource("1_jejyr")
+Tree/fonts/title_button_font = ExtResource("1_jejyr")
