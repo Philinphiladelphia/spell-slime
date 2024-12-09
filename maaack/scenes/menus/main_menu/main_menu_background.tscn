@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://vo862xlfj2rr"]
+
+[ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/main_menu_background.gd" id="1_vom88"]
+
+[node name="MainMenuBackground" type="Node2D"]
+script = ExtResource("1_vom88")

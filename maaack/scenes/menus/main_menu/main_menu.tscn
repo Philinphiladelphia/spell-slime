@@ -10,9 +10,3 @@ script = ExtResource("2_x7ag5")
 game_scene_path = "res://maaack/scenes/game_scene/game_ui.tscn"
 options_packed_scene = ExtResource("3_e82kk")
 credits_packed_scene = ExtResource("4_q7aji")
-
-[node name="BackgroundMusicPlayer" parent="." index="1"]
-bus = &"Master"
-
-[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
-text = "Spellslime"

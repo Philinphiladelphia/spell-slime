@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm2qbbd6l7pvk"]
+
+[ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_rb2gq"]
+
+[node name="ItemInterpreter" type="Node"]
+script = ExtResource("1_rb2gq")

@@ -1,7 +1,4 @@
-[gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://dsssibld31awi"]
-
-[ext_resource type="Script" uid="uid://dxf6oadv4qgca" path="res://addons/shaderV/tools/TimeScaled.gd" id="1_8o24h"]
-[ext_resource type="Script" uid="uid://cklwgjb15nw3g" path="res://addons/shaderV/rgba/gradientMapping.gd" id="2_f85nk"]
+[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://dsssibld31awi"]
 
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_o0hix"]
 parameter_name = "gradient"
@@ -12,7 +9,6 @@ constant = true
 [sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_cpifa"]
 default_input_values = [0, 1.0]
 initialized = true
-script = ExtResource("1_8o24h")
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_bx0vd"]
 expanded_output_ports = [0]
@@ -21,7 +17,6 @@ source = 2
 [sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_c6g0b"]
 default_input_values = [1, 1.0, 2, 0.0, 3, false]
 initialized = true
-script = ExtResource("2_f85nk")
 
 [sub_resource type="VisualShaderNodeRandomRange" id="VisualShaderNodeRandomRange_albtj"]
 default_input_values = [0, Vector3(1, 1, 1), 1, 0.0, 2, 2.0]
@@ -30,60 +25,8 @@ default_input_values = [0, Vector3(1, 1, 1), 1, 0.0, 2, 2.0]
 code = "shader_type canvas_item;
 render_mode blend_mix;
 
-uniform sampler2D gradient;
 
 
-
-
-// 3D Noise with friendly permission by Inigo Quilez
-vec3 hash_noise_range( vec3 p ) {
-	p *= mat3(vec3(127.1, 311.7, -53.7), vec3(269.5, 183.3, 77.1), vec3(-301.7, 27.3, 215.3));
-	return 2.0 * fract(fract(p)*4375.55) -1.;
-}
-
-// GradientMapping
-#include \"res://addons/shaderV/rgba/gradientMapping.gdshaderinc\"
-
-void fragment() {
-	vec4 n_out5p0;
-// Texture2D:5
-	n_out5p0 = texture(TEXTURE, UV);
-	float n_out5p4 = n_out5p0.a;
-
-
-// RandomRange:9
-	vec3 n_in9p0 = vec3(1.00000, 1.00000, 1.00000);
-	float n_in9p1 = 0.00000;
-	float n_in9p2 = 2.00000;
-	float n_out9p0 = mix(n_in9p1, n_in9p2, hash_noise_range(n_in9p0).x);
-
-
-	float n_out4p0;
-// ScaledTIME:4
-	{
-		n_out4p0 = n_out9p0 * TIME;
-	}
-
-
-// BooleanConstant:3
-	bool n_out3p0 = true;
-
-
-	vec3 n_out7p0;
-	float n_out7p1;
-// GradientMapping:7
-	{
-		vec4 n_out7p0n_out7p1 = _gradientMappingFunc(vec3(n_out5p0.xyz), n_out4p0, gradient, n_out3p0);
-		n_out7p0 = n_out7p0n_out7p1.rgb;
-		n_out7p1 = n_out7p0n_out7p1.a * n_out5p4;
-	}
-
-
-// Output:0
-	COLOR.rgb = n_out7p0;
-
-
-}
 "
 mode = 1
 flags/light_only = false
@@ -99,4 +42,3 @@ nodes/fragment/7/node = SubResource("VisualShaderNodeCustom_c6g0b")
 nodes/fragment/7/position = Vector2(160, 160)
 nodes/fragment/9/node = SubResource("VisualShaderNodeRandomRange_albtj")
 nodes/fragment/9/position = Vector2(-600, 280)
-nodes/fragment/connections = PackedInt32Array(5, 0, 7, 0, 3, 0, 7, 3, 5, 4, 7, 1, 2, 0, 7, 4, 4, 0, 7, 2, 7, 0, 0, 0, 9, 0, 4, 0)
