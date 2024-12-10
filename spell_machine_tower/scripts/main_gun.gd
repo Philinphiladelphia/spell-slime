@@ -66,17 +66,23 @@ func _process(delta: float) -> void:
 	# Handle primary firing
 	if primary_firing and primary_projectiles_fired < primary_cooldown_max:
 		if primary_firing_timer <= 0:
+			if not SoundManager.is_playing("machine_gun_fire"):
+				SoundManager.play_sfx("machine_gun_fire", 0, -6, 1)
+				#SoundManager.play_sfx("machine_gun_fire", 0, 0.6, 1)
 			fire_projectile(basic_projectile_scene, primary_projectile_dmg, primary_firing_velocity, primary_max_lifespan, primary_post_hit_lifespan, primary_mass, primary_shake)
 			primary_firing_timer = primary_firing_interval
 			primary_projectiles_fired += 1
 			if primary_projectiles_fired >= primary_cooldown_max:
 				is_smoking = true
 				cooldown_timer.start()
-
+	else:
+		SoundManager.stop("machine_gun_fire")
+		
 	secondary_firing_timer -= delta
 	# Handle secondary firing
 	if secondary_firing:
 		if secondary_firing_timer <= 0:
+			SoundManager.play_sfx("harpoon", 0, -3, 3)
 			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake)
 			secondary_firing_timer = secondary_firing_interval
 
@@ -110,12 +116,14 @@ func fire_projectile(projectile_scene, damage: int, velocity: float, max_lifespa
 	node_to_fire.position = get_parent().get_parent().global_position + projectile_location_vector * barrel_length
 	node_to_fire.rotation = rotation
 
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			primary_firing = event.pressed
-		elif event.button_index == MOUSE_BUTTON_RIGHT:
-			secondary_firing = event.pressed
+func _physics_process(delta):
+	primary_firing = false
+	secondary_firing = false
+	
+	if Input.is_action_pressed("primary_fire"):
+		primary_firing = true
+	elif Input.is_action_pressed("secondary_fire"):
+		secondary_firing = true
 
 func apply_firing_velocity(node, velocity, shake):
 	var random_addition = (((randi() % 100) - 50) / 100.0) * shake

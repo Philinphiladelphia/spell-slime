@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgmr8p30lfcvq"]
+[gd_scene load_steps=4 format=3 uid="uid://dgmr8p30lfcvq"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.tscn" id="1_abli7"]
+[ext_resource type="PackedScene" uid="uid://cd0jbh4metflb" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.tscn" id="1_abli7"]
 [ext_resource type="Script" path="res://maaack/scenes/loading_screen/loading_screen.gd" id="2_irgpf"]
+[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/scenes/spellslime_theme.tres" id="3_kw67p"]
 
 [node name="LevelLoadingScreen" instance=ExtResource("1_abli7")]
 script = ExtResource("2_irgpf")
@@ -9,3 +10,6 @@ _in_progress = "Loading Level..."
 _in_progress_waiting = "Still Loading Level..."
 _in_progress_still_waiting = "Still Loading Level... (%d seconds)"
 _complete = "Loading Level Complete!"
+
+[node name="Control" parent="." index="0"]
+theme = ExtResource("3_kw67p")

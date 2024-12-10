@@ -12,6 +12,8 @@ var element_numbers = [49, 61, 87]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SoundManager.play_sfx("slime1", 0, -6, 2)
+	
 	$slime_node.health_offset = Vector2(-300, -550)
 	
 	# must be done in this order

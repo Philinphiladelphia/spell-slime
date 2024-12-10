@@ -213,7 +213,7 @@ show_shapes = true
 vertex_interval = 85
 joint_type = "spring"
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 radius = 70
 shape_type = "Circle"
 margin_offset_edge = 30.8
@@ -512,7 +512,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 63.3873
 
 [node name="Joint2D-Bone-0-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
@@ -522,7 +522,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 59.0315
 
 [node name="Joint2D-Bone-0-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
@@ -532,7 +532,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 89.6096
 
 [node name="Bone-1" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -559,7 +559,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-0")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 63.3873
 
 [node name="Joint2D-Bone-1-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
@@ -569,7 +569,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 98.5448
 
 [node name="Joint2D-Bone-1-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
@@ -579,7 +579,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 63.7299
 
 [node name="Joint2D-Bone-1-Bone-2" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
@@ -589,7 +589,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-2")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 71.8869
 
 [node name="Joint2D-Bone-1-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
@@ -599,7 +599,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 87.4841
 
 [node name="Bone-2" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -626,7 +626,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 71.8869
 
 [node name="Joint2D-Bone-2-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
@@ -636,7 +636,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 98.7258
 
 [node name="Joint2D-Bone-2-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
@@ -646,7 +646,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 60.5039
 
 [node name="Joint2D-Bone-2-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
@@ -656,7 +656,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 71.3687
 
 [node name="Bone-3" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -683,7 +683,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-0")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 59.0315
 
 [node name="Joint2D-Bone-3-Bone-1" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
@@ -693,7 +693,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 98.5448
 
 [node name="Joint2D-Bone-3-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
@@ -703,7 +703,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 80.7493
 
 [node name="Joint2D-Bone-3-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
@@ -713,7 +713,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 76.0021
 
 [node name="Joint2D-Bone-3-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
@@ -723,7 +723,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 116.379
 
 [node name="Joint2D-Bone-3-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
@@ -733,7 +733,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 76.5469
 
 [node name="Bone-4" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -760,7 +760,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-0")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 89.6096
 
 [node name="Joint2D-Bone-4-Bone-1" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
@@ -770,7 +770,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 63.7299
 
 [node name="Joint2D-Bone-4-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
@@ -780,7 +780,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 80.7493
 
 [node name="Joint2D-Bone-4-Bone-2" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
@@ -790,7 +790,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-2")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 98.7258
 
 [node name="Joint2D-Bone-4-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
@@ -800,7 +800,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 67.4147
 
 [node name="Joint2D-Bone-4-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
@@ -810,7 +810,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 83.7242
 
 [node name="Joint2D-Bone-4-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
@@ -820,7 +820,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 80.3362
 
 [node name="Joint2D-Bone-4-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
@@ -830,7 +830,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 84.7153
 
 [node name="Bone-5" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -857,7 +857,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 87.4841
 
 [node name="Joint2D-Bone-5-Bone-2" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
@@ -867,7 +867,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-2")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 60.5039
 
 [node name="Joint2D-Bone-5-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
@@ -877,7 +877,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 67.4147
 
 [node name="Joint2D-Bone-5-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
@@ -887,7 +887,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 53.7053
 
 [node name="Joint2D-Bone-5-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
@@ -897,7 +897,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 112.417
 
 [node name="Joint2D-Bone-5-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
@@ -907,7 +907,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 70.3676
 
 [node name="Joint2D-Bone-5-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
@@ -917,7 +917,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 81.5926
 
 [node name="Bone-6" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -944,7 +944,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-2")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 71.3687
 
 [node name="Joint2D-Bone-6-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
@@ -954,7 +954,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 53.7053
 
 [node name="Joint2D-Bone-6-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
@@ -964,7 +964,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 99.7011
 
 [node name="Joint2D-Bone-6-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
@@ -974,7 +974,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 74.0257
 
 [node name="Bone-7" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1001,7 +1001,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 76.5469
 
 [node name="Joint2D-Bone-7-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
@@ -1011,7 +1011,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 62.8515
 
 [node name="Joint2D-Bone-7-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
@@ -1021,7 +1021,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 67.7946
 
 [node name="Joint2D-Bone-7-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
@@ -1031,7 +1031,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 84.3998
 
 [node name="Bone-8" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1058,7 +1058,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 76.0021
 
 [node name="Joint2D-Bone-8-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
@@ -1068,7 +1068,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 83.7242
 
 [node name="Joint2D-Bone-8-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
@@ -1078,7 +1078,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 52.8436
 
 [node name="Joint2D-Bone-8-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
@@ -1088,7 +1088,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 62.8515
 
 [node name="Joint2D-Bone-8-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
@@ -1098,7 +1098,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 90.6825
 
 [node name="Joint2D-Bone-8-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
@@ -1108,7 +1108,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 57.2511
 
 [node name="Joint2D-Bone-8-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
@@ -1118,7 +1118,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 69.2697
 
 [node name="Bone-9" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1145,7 +1145,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 116.379
 
 [node name="Joint2D-Bone-9-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
@@ -1155,7 +1155,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 80.3362
 
 [node name="Joint2D-Bone-9-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
@@ -1165,7 +1165,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 52.8436
 
 [node name="Joint2D-Bone-9-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
@@ -1175,7 +1175,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 112.417
 
 [node name="Joint2D-Bone-9-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
@@ -1185,7 +1185,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 63.3608
 
 [node name="Joint2D-Bone-9-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
@@ -1195,7 +1195,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 68.2013
 
 [node name="Joint2D-Bone-9-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
@@ -1205,7 +1205,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 28.4558
 
 [node name="Joint2D-Bone-9-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
@@ -1215,7 +1215,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 77.2336
 
 [node name="Bone-10" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1242,7 +1242,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 84.7153
 
 [node name="Joint2D-Bone-10-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
@@ -1252,7 +1252,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 70.3676
 
 [node name="Joint2D-Bone-10-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
@@ -1262,7 +1262,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 63.3608
 
 [node name="Joint2D-Bone-10-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
@@ -1272,7 +1272,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 99.7011
 
 [node name="Joint2D-Bone-10-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
@@ -1282,7 +1282,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 57.6016
 
 [node name="Joint2D-Bone-10-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
@@ -1292,7 +1292,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 74.1217
 
 [node name="Joint2D-Bone-10-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
@@ -1302,7 +1302,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 59.7956
 
 [node name="Joint2D-Bone-10-Bone-16" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
@@ -1312,7 +1312,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-16")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 87.7576
 
 [node name="Bone-11" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1339,7 +1339,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 81.5926
 
 [node name="Joint2D-Bone-11-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
@@ -1349,7 +1349,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 74.0257
 
 [node name="Joint2D-Bone-11-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
@@ -1359,7 +1359,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 57.6016
 
 [node name="Joint2D-Bone-11-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
@@ -1369,7 +1369,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 82.694
 
 [node name="Joint2D-Bone-11-Bone-16" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
@@ -1379,7 +1379,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-16")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 68.3276
 
 [node name="Bone-12" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1406,7 +1406,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-17")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 82.9301
 
 [node name="Joint2D-Bone-12-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
@@ -1416,7 +1416,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 67.7946
 
 [node name="Joint2D-Bone-12-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
@@ -1426,7 +1426,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 90.6825
 
 [node name="Joint2D-Bone-12-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
@@ -1436,7 +1436,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 60.3687
 
 [node name="Bone-13" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1463,7 +1463,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 84.3998
 
 [node name="Joint2D-Bone-13-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
@@ -1473,7 +1473,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 57.2511
 
 [node name="Joint2D-Bone-13-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
@@ -1483,7 +1483,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 60.3687
 
 [node name="Joint2D-Bone-13-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
@@ -1493,7 +1493,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 68.2013
 
 [node name="Joint2D-Bone-13-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
@@ -1503,7 +1503,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 58.7135
 
 [node name="Joint2D-Bone-13-Bone-17" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
@@ -1513,7 +1513,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-17")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 83.8911
 
 [node name="Joint2D-Bone-13-Bone-18" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
@@ -1523,7 +1523,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-18")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 97.3427
 
 [node name="Bone-14" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1550,7 +1550,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 69.2697
 
 [node name="Joint2D-Bone-14-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
@@ -1560,7 +1560,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 28.4558
 
 [node name="Joint2D-Bone-14-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
@@ -1570,7 +1570,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 58.7135
 
 [node name="Joint2D-Bone-14-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
@@ -1580,7 +1580,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 74.1217
 
 [node name="Joint2D-Bone-14-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
@@ -1590,7 +1590,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 63.5835
 
 [node name="Joint2D-Bone-14-Bone-17" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
@@ -1600,7 +1600,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-17")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 122.839
 
 [node name="Joint2D-Bone-14-Bone-18" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
@@ -1610,7 +1610,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-18")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 89.6546
 
 [node name="Joint2D-Bone-14-Bone-19" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
@@ -1620,7 +1620,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-19")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 124.737
 
 [node name="Bone-15" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1647,7 +1647,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 77.2336
 
 [node name="Joint2D-Bone-15-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
@@ -1657,7 +1657,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 59.7956
 
 [node name="Joint2D-Bone-15-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
@@ -1667,7 +1667,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 63.5835
 
 [node name="Joint2D-Bone-15-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
@@ -1677,7 +1677,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 82.694
 
 [node name="Joint2D-Bone-15-Bone-16" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
@@ -1687,7 +1687,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-16")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 55.3025
 
 [node name="Joint2D-Bone-15-Bone-18" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
@@ -1697,7 +1697,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-18")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 96.8758
 
 [node name="Joint2D-Bone-15-Bone-19" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
@@ -1707,7 +1707,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-19")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 81.7045
 
 [node name="Bone-16" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1734,7 +1734,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 87.7576
 
 [node name="Joint2D-Bone-16-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-16"]
@@ -1744,7 +1744,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 68.3276
 
 [node name="Joint2D-Bone-16-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-16"]
@@ -1754,7 +1754,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 55.3025
 
 [node name="Joint2D-Bone-16-Bone-19" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-16"]
@@ -1764,7 +1764,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-19")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 80.7449
 
 [node name="Bone-17" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1791,7 +1791,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 82.9301
 
 [node name="Joint2D-Bone-17-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-17"]
@@ -1801,7 +1801,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 83.8911
 
 [node name="Joint2D-Bone-17-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-17"]
@@ -1811,7 +1811,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 122.839
 
 [node name="Joint2D-Bone-17-Bone-18" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-17"]
@@ -1821,7 +1821,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-18")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 81.9884
 
 [node name="Bone-18" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1848,7 +1848,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 97.3427
 
 [node name="Joint2D-Bone-18-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-18"]
@@ -1858,7 +1858,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 89.6546
 
 [node name="Joint2D-Bone-18-Bone-17" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-18"]
@@ -1868,7 +1868,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-17")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 81.9884
 
 [node name="Joint2D-Bone-18-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-18"]
@@ -1878,7 +1878,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 96.8758
 
 [node name="Joint2D-Bone-18-Bone-19" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-18"]
@@ -1888,7 +1888,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-19")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 81.8041
 
 [node name="Bone-19" type="RigidBody2D" parent="slime_node/slime_soft_body"]
@@ -1915,7 +1915,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 124.737
 
 [node name="Joint2D-Bone-19-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-19"]
@@ -1925,7 +1925,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 81.7045
 
 [node name="Joint2D-Bone-19-Bone-18" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-19"]
@@ -1935,7 +1935,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-18")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 81.8041
 
 [node name="Joint2D-Bone-19-Bone-16" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-19"]
@@ -1945,7 +1945,7 @@ node_a = NodePath("..")
 node_b = NodePath("../../Bone-16")
 length = 0.0
 stiffness = 160.0
-damping = 0.51
+damping = 0.31
 metadata/joint_distance = 80.7449
 
 [node name="damage_bar" type="TextureProgressBar" parent="slime_node"]

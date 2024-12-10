@@ -16,7 +16,7 @@ extends SoundManagerModule
 
 @export var Default_Sounds_Properties : Dictionary = {
 	"BGM" : {
-		"Volume" : 0,
+		"Volume" : 1,
 		"Pitch" : 1,
 	},
 	"BGS" : {

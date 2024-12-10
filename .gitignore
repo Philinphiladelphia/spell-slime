@@ -2,6 +2,7 @@
 *.so
 *.tpz
 music/
+kenney_sfx/
 assets/
 Models/
 background/

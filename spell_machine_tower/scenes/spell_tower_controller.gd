@@ -110,6 +110,11 @@ func init_spellward_health(amount):
 
 func set_spellward_health(amount):
 	spellward_health_bar._set_health(amount)
+	
+	if amount < spellward_health:
+		if not SoundManager.is_playing("explosion2"):
+			SoundManager.play_sfx("explosion2", 0, 5, 1)
+	
 	spellward_health = amount
 
 func init_tower_health(max_health):
@@ -142,4 +147,6 @@ func _on_damage_timer_timeout() -> void:
 
 func _on_hurt_box_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if spellward_health <= 0:
+		if not SoundManager.is_playing("metal1"):
+			SoundManager.play_sfx("metal1", 0, 1, 3)
 		apply_tower_damage(body.get_parent().get_parent().damage)
