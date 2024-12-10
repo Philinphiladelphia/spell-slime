@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://bdtxmyrmmsy4m"]
+[gd_scene load_steps=207 format=3 uid="uid://bdtxmyrmmsy4m"]
 
 [ext_resource type="Texture2D" uid="uid://ng5ovrpumnnq" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/asteroid-fighter/PNG/background.png" id="1_nq2v4"]
 [ext_resource type="Texture2D" uid="uid://cmc3iaa76jm82" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Magic Cliffs/Environment/PNG/clouds.png" id="2_621qm"]
@@ -102,13 +102,110 @@
 [ext_resource type="Texture2D" uid="uid://7ug1o2aoyyuk" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/near.png" id="100_4s6df"]
 [ext_resource type="Texture2D" uid="uid://lwns0rd0ui85" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/tileset.png" id="101_qc6rr"]
 [ext_resource type="Texture2D" uid="uid://qsdtid0bu0k7" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/Props/crystal-1.png" id="102_4i3r5"]
+[ext_resource type="Texture2D" uid="uid://vlxu0muypnu0" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/caverns-files-web/layers/back-walls.png" id="102_mwbrn"]
 [ext_resource type="Texture2D" uid="uid://c00lg08h0t7o5" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/Props/crystal-2.png" id="103_1s0i7"]
+[ext_resource type="Texture2D" uid="uid://cr6ofk3le3wij" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/caverns-files-web/layers/background.png" id="103_7mqqn"]
+[ext_resource type="Texture2D" uid="uid://cw1hurse0cunh" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/caverns-files-web/layers/tiles.png" id="104_2yyn7"]
 [ext_resource type="Texture2D" uid="uid://dcwr5xod6oyjf" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/Props/plant-1.png" id="104_eyfna"]
+[ext_resource type="Texture2D" uid="uid://c1gwle1sidn7p" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/country-platform-files/layers/country-platform-back.png" id="105_hxt27"]
 [ext_resource type="Texture2D" uid="uid://b7wx14r3vmvrj" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/Props/plant-2.png" id="105_tpd7b"]
 [ext_resource type="Texture2D" uid="uid://bht67r1pg1rxd" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/lava-background/PNG/background.png" id="106_dndy1"]
+[ext_resource type="Texture2D" uid="uid://cdybcckpewmkx" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/country-platform-files/layers/country-platform-forest.png" id="106_qjb6q"]
 [ext_resource type="Texture2D" uid="uid://dgj3jrqeper6w" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/lava-background/PNG/lava-background-preview.png" id="107_014qi"]
+[ext_resource type="Texture2D" uid="uid://cie6md062g3av" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/country-platform-files/layers/country-platform-tiles-example.png" id="107_g6hbl"]
 [ext_resource type="Texture2D" uid="uid://bswr3shpjlbwh" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/lava-background/PNG/lava-tile.png" id="108_0g1vu"]
+[ext_resource type="Texture2D" uid="uid://dmlk4qis8ixe4" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/country-platform-files/layers/country-platform-tileset.png" id="108_jw1rk"]
+[ext_resource type="Texture2D" uid="uid://lq713qp3y8bl" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Day-Platformer/PNG/clouds.png" id="109_qjdwr"]
 [ext_resource type="Texture2D" uid="uid://cawmla7ten0cp" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/lava-background/PNG/middle-rocks.png" id="109_xm1kl"]
+[ext_resource type="Texture2D" uid="uid://vegct58aooaa" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Day-Platformer/PNG/sky.png" id="110_jemwx"]
+[ext_resource type="Texture2D" uid="uid://d24lsrjef273d" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Day-Platformer/PNG/tileset.png" id="111_38va4"]
+[ext_resource type="Texture2D" uid="uid://deolf5oq1c8fj" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Day-Platformer/PNG/trees.png" id="112_dtagh"]
+[ext_resource type="Texture2D" uid="uid://5tulw328hcuw" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Beach environment/layers/background.png" id="113_s0gvp"]
+[ext_resource type="Texture2D" uid="uid://d1yf2bkjs7ec7" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Beach environment/layers/mountain.png" id="114_fhlwx"]
+[ext_resource type="Texture2D" uid="uid://bd3cu2cgwi6vb" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Beach environment/layers/tiles-example.png" id="115_4nqsn"]
+[ext_resource type="Texture2D" uid="uid://kqmvktm5uqti" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Beach environment/layers/tileset.png" id="116_720ko"]
+[ext_resource type="Texture2D" uid="uid://1ahfgybhqi71" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/sci-fi-environment-background-files/PNG/back.png" id="125_vyfv7"]
+[ext_resource type="Texture2D" uid="uid://ctg6ekek1hsuy" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/sci-fi-environment-background-files/PNG/sci-fi-environment-tileset.png" id="126_uxwbc"]
+[ext_resource type="Texture2D" uid="uid://d287ihqwvysp3" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/sci-fi-environment-background-files/PNG/sky.png" id="127_rssip"]
+[ext_resource type="Texture2D" uid="uid://c1mxrtgwvl2w5" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/sci-fi-interior-platform/PNG/background.png" id="128_8jm58"]
+[ext_resource type="Texture2D" uid="uid://cflw6ga6ga84x" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/sci-fi-interior-platform/PNG/tile-set-sci-fi-interior-platform.png" id="129_alnq2"]
+[ext_resource type="Texture2D" uid="uid://d0j15tkd166m2" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/Version 2/Layers/back.png" id="130_hi8cl"]
+[ext_resource type="Texture2D" uid="uid://qjgs8mhvukt1" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/Version 2/Layers/foreground-empty.png" id="131_fmcb4"]
+[ext_resource type="Texture2D" uid="uid://bsfonkwnmdx4p" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/Version 2/Layers/foreground.png" id="132_awx02"]
+[ext_resource type="Texture2D" uid="uid://cqyejdseitims" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/Version 2/Layers/middle.png" id="133_6jgjg"]
+[ext_resource type="Texture2D" uid="uid://dnxgte50t8y08" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/Version 1/PNG/layers/back-buildings.png" id="134_wyuvh"]
+[ext_resource type="Texture2D" uid="uid://xf4v7putso72" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/Version 1/PNG/layers/far-buildings.png" id="135_m3cdd"]
+[ext_resource type="Texture2D" uid="uid://cynmjq7nhl6lu" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/Version 1/PNG/layers/foreground.png" id="136_dgy86"]
+[ext_resource type="Texture2D" uid="uid://cnl3jqb270kl2" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/city skyline/Layers/back.png" id="137_n4c28"]
+[ext_resource type="Texture2D" uid="uid://c85sm83hafqku" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/city skyline/Layers/buildings.png" id="138_xpvic"]
+[ext_resource type="Texture2D" uid="uid://ces2rg5fh8w2q" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Synth City/city skyline/Layers/front.png" id="139_ymd22"]
+[ext_resource type="Texture2D" uid="uid://btpmc6pmwu0ai" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Tiny RPG Mountain Files/png/bridge.png" id="140_srgxu"]
+[ext_resource type="Texture2D" uid="uid://dxl6p04cj3lw5" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Underwater Fantasy/PNG/layers/far.png" id="141_n8nm3"]
+[ext_resource type="Texture2D" uid="uid://dq5elpjlvetcu" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Underwater Fantasy/PNG/layers/foregound-merged.png" id="142_856ov"]
+[ext_resource type="Texture2D" uid="uid://caow6atijcrds" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Underwater Fantasy/PNG/layers/foreground-1.png" id="143_ka0of"]
+[ext_resource type="Texture2D" uid="uid://b3w1ljay1ho34" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Underwater Fantasy/PNG/layers/foreground-2.png" id="144_2rs4t"]
+[ext_resource type="Texture2D" uid="uid://cmd7476bqn7ds" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Underwater Fantasy/PNG/layers/sand.png" id="145_fjvhf"]
+[ext_resource type="Texture2D" uid="uid://m1ie4f0mxa5p" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Warped Zone 202/back-2.png" id="146_2fddw"]
+[ext_resource type="Texture2D" uid="uid://ww07blkyagag" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Warped Zone 202/back.png" id="147_vilbq"]
+[ext_resource type="Texture2D" uid="uid://cex7yfhnmyibi" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Warped Zone 202/tileset.png" id="148_f5hil"]
+[ext_resource type="Texture2D" uid="uid://d4gt7temncco1" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/gems/spritesheets/gems-spritesheet.png" id="149_5nnxp"]
+[ext_resource type="Texture2D" uid="uid://bb6evf4n2yy7y" path="res://upgrade_tree/assets/sprite_animations/Explosions pack/explosion-1-b/spritesheet.png" id="150_f1pd1"]
+[ext_resource type="Texture2D" uid="uid://bcmkscy1lak6u" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/ShipandThrust/frame1.png" id="151_g1ywe"]
+[ext_resource type="Texture2D" uid="uid://m3qktluewqyr" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/ShipandThrust/frame2.png" id="152_istoo"]
+[ext_resource type="Texture2D" uid="uid://bbm70ldj60tk7" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/ShipandThrust/frame3.png" id="153_5ttpx"]
+[ext_resource type="Texture2D" uid="uid://c2op5d7udq1ib" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/ShipandThrust/frame4.png" id="154_f6a8k"]
+[ext_resource type="Texture2D" uid="uid://bs5c5gw2bk2oo" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/ShipandThrust/frame5.png" id="155_tnd8w"]
+[ext_resource type="Texture2D" uid="uid://daocv7b1opsxn" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/ShipandThrust/frame6.png" id="156_yhsmw"]
+[ext_resource type="Texture2D" uid="uid://b0cuntkew7j46" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/ShipandThrust/frame7.png" id="157_fdwnp"]
+[ext_resource type="Texture2D" uid="uid://cvdqp6jd5ln4j" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/ShipandThrust/frame8.png" id="158_k3kah"]
+[ext_resource type="Texture2D" uid="uid://ch12stlubdfog" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/Thrust/frame1.png" id="159_2s8bt"]
+[ext_resource type="Texture2D" uid="uid://ch5ro8i27uens" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/spaceship-unit/Sprites/Thrust/frame2.png" id="160_e8dns"]
+[ext_resource type="Texture2D" uid="uid://mrpsp1h63bft" path="res://upgrade_tree/assets/sprite_animations/Warped Fast Ship Files/Spritesheets/ship-fly-preview.png" id="161_stcne"]
+[ext_resource type="Texture2D" uid="uid://0hwgvj6m7j7w" path="res://upgrade_tree/assets/sprite_animations/Warped Fast Ship Files/Spritesheets/ship-rotate-preview.png" id="162_0fa57"]
+[ext_resource type="Texture2D" uid="uid://bbmdkn5xds1vb" path="res://upgrade_tree/assets/sprite_animations/Warped Fast Ship Files/Spritesheets/thrust-preview.png" id="163_88nlu"]
+[ext_resource type="Texture2D" uid="uid://5ef1aimykiv1" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/Bolt/Sprites/bolt1.png" id="164_mroim"]
+[ext_resource type="Texture2D" uid="uid://b14l4oufbtq17" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/Bolt/Sprites/bolt2.png" id="165_fxo0u"]
+[ext_resource type="Texture2D" uid="uid://wagmdi27w1yy" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/Bolt/Sprites/bolt3.png" id="166_fjbyh"]
+[ext_resource type="Texture2D" uid="uid://bsop81xbmcrvr" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/Bolt/Sprites/bolt4.png" id="167_xqqfq"]
+[ext_resource type="Texture2D" uid="uid://b3dmmmfjsnbmw" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/charged/Sprites/charged1.png" id="168_1hlri"]
+[ext_resource type="Texture2D" uid="uid://bxmarggfhcx65" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/charged/Sprites/charged2.png" id="169_qpnwr"]
+[ext_resource type="Texture2D" uid="uid://c27iscxpf0t8e" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/charged/Sprites/charged3.png" id="170_jvwkd"]
+[ext_resource type="Texture2D" uid="uid://g6jeq6kdpha0" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/charged/Sprites/charged4.png" id="171_64kqa"]
+[ext_resource type="Texture2D" uid="uid://djusmsbvb6qdl" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/charged/Sprites/charged5.png" id="172_csnqv"]
+[ext_resource type="Texture2D" uid="uid://bn4hyf6y4ndm" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/charged/Sprites/charged6.png" id="173_x7t7j"]
+[ext_resource type="Texture2D" uid="uid://b4liqa48sgnd5" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/waveform/Sprites/waveform1.png" id="174_fldgk"]
+[ext_resource type="Texture2D" uid="uid://dkkkdner4fnsd" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/waveform/Sprites/waveform2.png" id="175_jmuuq"]
+[ext_resource type="Texture2D" uid="uid://ctgtshhdtbuc4" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/waveform/Sprites/waveform3.png" id="176_jw5gf"]
+[ext_resource type="Texture2D" uid="uid://drtxsw4gw27dp" path="res://upgrade_tree/assets/sprite_animations/Warped shooting fx/waveform/Sprites/waveform4.png" id="177_rp0ln"]
+[ext_resource type="Texture2D" uid="uid://d1jw3m754o1d6" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/dive_kick.png" id="178_jj75a"]
+[ext_resource type="Texture2D" uid="uid://c63pkongtygto" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/hurt.png" id="179_h2w40"]
+[ext_resource type="Texture2D" uid="uid://be3huwrwmeanw" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/idle.png" id="180_jqulh"]
+[ext_resource type="Texture2D" uid="uid://b3lcd30d5rvjd" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/jab.png" id="181_texnh"]
+[ext_resource type="Texture2D" uid="uid://bbotg16j400ox" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/jump.png" id="182_p8dju"]
+[ext_resource type="Texture2D" uid="uid://dywshgtub7k4i" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/jump_kick.png" id="183_c3vt0"]
+[ext_resource type="Texture2D" uid="uid://cd00tmlif5ekl" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/kick.png" id="184_hcn7h"]
+[ext_resource type="Texture2D" uid="uid://ctwd4yom3lua6" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/punch.png" id="185_0xkst"]
+[ext_resource type="Texture2D" uid="uid://b5kyfgkwagqri" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Brawler Girl/walk.png" id="186_rey3a"]
+[ext_resource type="Texture2D" uid="uid://bbta4nka20ado" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Streets of Fight/Spritesheets/Enemy Punk/walk.png" id="187_gbfqb"]
+[ext_resource type="Texture2D" uid="uid://bydak6gkkw46k" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/background.png" id="188_tnpo5"]
+[ext_resource type="Texture2D" uid="uid://c6646dj43vqpf" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/middleground-no-fungus.png" id="189_fayjk"]
+[ext_resource type="Texture2D" uid="uid://dxagqvhhjympf" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/middleground.png" id="190_tjblc"]
+[ext_resource type="Texture2D" uid="uid://cqa18ijhundjy" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/props.png" id="191_3mhb1"]
+[ext_resource type="Texture2D" uid="uid://lunrxo0lcy0m" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/tilesets.png" id="192_30nk2"]
+[ext_resource type="Texture2D" uid="uid://cd2es2378mnml" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/walls.png" id="193_hfr4d"]
+[ext_resource type="Texture2D" uid="uid://b3xk0qpryo72i" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/props/gate-01.png" id="194_2ru5q"]
+[ext_resource type="Texture2D" uid="uid://isao7k3abmaf" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/props/gate-02.png" id="195_0golx"]
+[ext_resource type="Texture2D" uid="uid://ddk8s0mthn6gf" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/props/gate-03.png" id="196_5y8vf"]
+[ext_resource type="Texture2D" uid="uid://cuibpk68366n3" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/props/plant-big.png" id="197_cabbt"]
+[ext_resource type="Texture2D" uid="uid://bsnpr2ftt4oie" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/props/plant-small.png" id="198_egrvw"]
+[ext_resource type="Texture2D" uid="uid://kbqdrcm7g0x1" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/props/stalactite.png" id="199_qtup1"]
+[ext_resource type="Texture2D" uid="uid://br4ydj8xtoaf3" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/props/stone-head.png" id="200_l8w8u"]
+[ext_resource type="Texture2D" uid="uid://brokd447g7ctf" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/props/stone.png" id="201_yfo0c"]
+[ext_resource type="Texture2D" uid="uid://kvjfoecfgw5t" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/spritesheets/enemies/crab-idle.png" id="202_ocayl"]
+[ext_resource type="Texture2D" uid="uid://1ooy6qybkaah" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/spritesheets/enemies/crab-walk.png" id="203_j7s3f"]
+[ext_resource type="Texture2D" uid="uid://coif5mjcedpil" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/spritesheets/enemies/jumper-idle.png" id="204_5am01"]
+[ext_resource type="Texture2D" uid="uid://b57cysgycrqqk" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/spritesheets/enemies/jumper-jump.png" id="205_3k0cu"]
+[ext_resource type="Texture2D" uid="uid://c771iifxfbbjd" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/spritesheets/enemies/octopus.png" id="206_5yhd3"]
 
 [node name="OpeningCutscene" type="Node2D"]
 
@@ -137,91 +234,91 @@ position = Vector2(569, 471)
 texture = ExtResource("6_quadf")
 
 [node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(850, 107)
+position = Vector2(-519, -794)
 texture = ExtResource("7_jvchc")
 
 [node name="Middleground-no-fungus" type="Sprite2D" parent="."]
-position = Vector2(850, 107)
+position = Vector2(-519, -794)
 texture = ExtResource("8_dc50g")
 
 [node name="Middleground" type="Sprite2D" parent="."]
-position = Vector2(850, 107)
+position = Vector2(-519, -794)
 texture = ExtResource("9_3daqb")
 
 [node name="Props" type="Sprite2D" parent="."]
-position = Vector2(850, 107)
+position = Vector2(-519, -794)
 texture = ExtResource("10_budd5")
 
 [node name="Tilesets" type="Sprite2D" parent="."]
-position = Vector2(850, 107)
+position = Vector2(-519, -794)
 texture = ExtResource("11_lmscb")
 
 [node name="Walls" type="Sprite2D" parent="."]
-position = Vector2(850, 107)
+position = Vector2(-519, -794)
 texture = ExtResource("12_1ggvc")
 
 [node name="1" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("13_h7pdu")
 
 [node name="2" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("14_qj4ly")
 
 [node name="3Fx" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("15_a483l")
 
 [node name="4" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("16_jqhqb")
 
 [node name="5" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("17_r5dq5")
 
 [node name="6Fx" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("18_68531")
 
 [node name="7" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("19_cynbf")
 
 [node name="8Fx" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("20_hb3df")
 
 [node name="9" type="Sprite2D" parent="."]
-position = Vector2(1778, -776)
+position = Vector2(-4388, -776)
 texture = ExtResource("21_8qxfk")
 
 [node name="Buildings-bg" type="Sprite2D" parent="."]
-position = Vector2(-831, -676)
+position = Vector2(-1570.5, -835)
 texture = ExtResource("22_ev3lm")
 
 [node name="Near-buildings-bg" type="Sprite2D" parent="."]
-position = Vector2(-831, -676)
+position = Vector2(-1570.5, -835)
 texture = ExtResource("23_saj5h")
 
 [node name="Skyline-a" type="Sprite2D" parent="."]
-position = Vector2(-831, -676)
+position = Vector2(-1570.5, -835)
 texture = ExtResource("24_3l3y6")
 
 [node name="Skyline-b" type="Sprite2D" parent="."]
-position = Vector2(-831, -676)
+position = Vector2(-1570.5, -835)
 texture = ExtResource("25_ik448")
 
 [node name="Clouds2" type="Sprite2D" parent="."]
-position = Vector2(-927, 552)
+position = Vector2(-1866, -1699)
 texture = ExtResource("26_ykjng")
 
 [node name="Tiles" type="Sprite2D" parent="."]
-position = Vector2(-927, 552)
+position = Vector2(-1866, -1699)
 texture = ExtResource("27_c3w2c")
 
 [node name="Town" type="Sprite2D" parent="."]
-position = Vector2(-927, 552)
+position = Vector2(-1866, -1699)
 texture = ExtResource("28_st1sr")
 
 [node name="Old-dark-castle-interior-background" type="Sprite2D" parent="."]
@@ -237,51 +334,51 @@ position = Vector2(-628, 1374)
 texture = ExtResource("31_ujn4m")
 
 [node name="Back" type="Sprite2D" parent="."]
-position = Vector2(1059, 1214)
+position = Vector2(-958, -767)
 texture = ExtResource("32_q87wf")
 
 [node name="Front" type="Sprite2D" parent="."]
-position = Vector2(1059, 1214)
+position = Vector2(-958, -767)
 texture = ExtResource("33_u6dao")
 
 [node name="Middle" type="Sprite2D" parent="."]
-position = Vector2(1059, 1214)
+position = Vector2(-958, -767)
 texture = ExtResource("34_lpnq2")
 
 [node name="Grunge-tileset" type="Sprite2D" parent="."]
-position = Vector2(-575, 2111)
+position = Vector2(-949, -1668)
 texture = ExtResource("35_0a25l")
 
 [node name="Big-computer" type="Sprite2D" parent="."]
-position = Vector2(-1792, -249)
+position = Vector2(-3024, -1684)
 texture = ExtResource("36_5hx36")
 
 [node name="Cryo-pod" type="Sprite2D" parent="."]
-position = Vector2(-1792, -249)
+position = Vector2(-3024, -1684)
 texture = ExtResource("37_swpek")
 
 [node name="Cyberpunk-props-preview" type="Sprite2D" parent="."]
-position = Vector2(-1792, -249)
+position = Vector2(-3024, -1684)
 texture = ExtResource("38_vr6ss")
 
 [node name="Elevator-track" type="Sprite2D" parent="."]
-position = Vector2(-1792, -249)
+position = Vector2(-3024, -1684)
 texture = ExtResource("39_vbyqx")
 
 [node name="Elevator" type="Sprite2D" parent="."]
-position = Vector2(-1792, -249)
+position = Vector2(-3024, -1684)
 texture = ExtResource("40_ougxn")
 
 [node name="Hanging-terminal" type="Sprite2D" parent="."]
-position = Vector2(-1792, -249)
+position = Vector2(-3024, -1684)
 texture = ExtResource("41_ycnhe")
 
 [node name="Server-gabinetes" type="Sprite2D" parent="."]
-position = Vector2(-1792, -249)
+position = Vector2(-3024, -1684)
 texture = ExtResource("42_yus4t")
 
 [node name="Small-terminal" type="Sprite2D" parent="."]
-position = Vector2(-1792, -249)
+position = Vector2(-3024, -1684)
 texture = ExtResource("43_neols")
 
 [node name="Bg-wall-with-supports" type="Sprite2D" parent="."]
@@ -305,83 +402,83 @@ position = Vector2(-1781, 1182)
 texture = ExtResource("48_ipltr")
 
 [node name="Back-sand" type="Sprite2D" parent="."]
-position = Vector2(-1824, 1780)
+position = Vector2(756.5, -780.5)
 texture = ExtResource("49_8m4gt")
 
 [node name="Boat-far" type="Sprite2D" parent="."]
-position = Vector2(-1824, 1780)
+position = Vector2(743.5, -777.5)
 texture = ExtResource("50_1ysup")
 
 [node name="Boat-front" type="Sprite2D" parent="."]
-position = Vector2(-1824, 1780)
+position = Vector2(617.5, -829.5)
 texture = ExtResource("51_sg18r")
 
 [node name="Boat-middle" type="Sprite2D" parent="."]
-position = Vector2(-1824, 1780)
+position = Vector2(745.5, -887.5)
 texture = ExtResource("52_l26y3")
 
 [node name="Front2" type="Sprite2D" parent="."]
-position = Vector2(-1824, 1780)
+position = Vector2(821.5, -648.5)
 texture = ExtResource("53_rvmca")
 
 [node name="Middle-sand" type="Sprite2D" parent="."]
-position = Vector2(-1824, 1780)
+position = Vector2(691.5, -690.5)
 texture = ExtResource("54_b5ol4")
 
 [node name="Water" type="Sprite2D" parent="."]
-position = Vector2(-1824, 1780)
+position = Vector2(984.5, -805.5)
 texture = ExtResource("55_ngquv")
 
 [node name="Bg" type="Sprite2D" parent="."]
-position = Vector2(320, -451)
+position = Vector2(353, -1654)
 texture = ExtResource("56_gbyoe")
 
 [node name="Buildings" type="Sprite2D" parent="."]
-position = Vector2(320, -451)
+position = Vector2(353, -1654)
 texture = ExtResource("57_r8sgf")
 
 [node name="Far-buildings" type="Sprite2D" parent="."]
-position = Vector2(320, -451)
+position = Vector2(353, -1654)
 texture = ExtResource("58_wwpph")
 
 [node name="Skill-foreground" type="Sprite2D" parent="."]
-position = Vector2(320, -451)
+position = Vector2(353, -1654)
 texture = ExtResource("59_gvj01")
 
 [node name="Back2" type="Sprite2D" parent="."]
-position = Vector2(-290, -884)
+position = Vector2(-2024, -763)
 texture = ExtResource("60_qo27a")
 
 [node name="Front3" type="Sprite2D" parent="."]
-position = Vector2(-290, -884)
+position = Vector2(-2024, -763)
 texture = ExtResource("61_dwcjb")
 
 [node name="Middle2" type="Sprite2D" parent="."]
-position = Vector2(-290, -884)
+position = Vector2(-2024, -763)
 texture = ExtResource("62_8x1gx")
 
 [node name="Background3" type="Sprite2D" parent="."]
-position = Vector2(-477, -155)
+position = Vector2(-1046, -2241)
 texture = ExtResource("63_pr821")
 
 [node name="Graveyard" type="Sprite2D" parent="."]
-position = Vector2(-477, -155)
+position = Vector2(-1046, -2241)
 texture = ExtResource("64_b1v6p")
 
 [node name="Mountains" type="Sprite2D" parent="."]
-position = Vector2(-477, -155)
+position = Vector2(-1046, -2241)
 texture = ExtResource("65_qldj6")
 
 [node name="Objects" type="Sprite2D" parent="."]
-position = Vector2(-477, -155)
+position = Vector2(-1046, -2241)
 texture = ExtResource("66_7brxj")
 
 [node name="Tileset-sliced" type="Sprite2D" parent="."]
-position = Vector2(-477, -155)
+position = Vector2(-1046, -2241)
 texture = ExtResource("67_irh5k")
 
 [node name="Tileset2" type="Sprite2D" parent="."]
-position = Vector2(-477, -155)
+position = Vector2(-1046, -2241)
 texture = ExtResource("68_l8vob")
 
 [node name="Fire1" type="Sprite2D" parent="."]
@@ -449,101 +546,489 @@ position = Vector2(-900, 272)
 texture = ExtResource("84_g6rd5")
 
 [node name="Background4" type="Sprite2D" parent="."]
-position = Vector2(-243, -449)
+position = Vector2(-2398, -733)
 texture = ExtResource("85_sd8yc")
 
 [node name="Mid-layer-01" type="Sprite2D" parent="."]
-position = Vector2(-243, -449)
+position = Vector2(-2398, -733)
 texture = ExtResource("86_ohdtu")
 
 [node name="Mid-layer-02" type="Sprite2D" parent="."]
-position = Vector2(-243, -449)
+position = Vector2(-2398, -733)
 texture = ExtResource("87_flc4w")
 
 [node name="Props2" type="Sprite2D" parent="."]
-position = Vector2(-243, -449)
+position = Vector2(-2398, -733)
 texture = ExtResource("88_k338w")
 
 [node name="Tileset3" type="Sprite2D" parent="."]
-position = Vector2(-243, -449)
+position = Vector2(-2398, -733)
 texture = ExtResource("89_fg5v5")
 
 [node name="Trees" type="Sprite2D" parent="."]
-position = Vector2(-243, -449)
+position = Vector2(-2398, -733)
 texture = ExtResource("90_78tnd")
 
 [node name="Back3" type="Sprite2D" parent="."]
-position = Vector2(-870, 113)
+position = Vector2(1076, -1638)
 texture = ExtResource("91_gk8b3")
 
 [node name="Front4" type="Sprite2D" parent="."]
-position = Vector2(-870, 113)
+position = Vector2(1076, -1638)
 texture = ExtResource("92_gov7m")
 
 [node name="Middle3" type="Sprite2D" parent="."]
-position = Vector2(-870, 113)
+position = Vector2(1076, -1638)
 texture = ExtResource("93_n5sjk")
 
 [node name="Tileset4" type="Sprite2D" parent="."]
-position = Vector2(-870, 113)
+position = Vector2(1076, -1638)
 texture = ExtResource("94_m3bbi")
 
 [node name="Back4" type="Sprite2D" parent="."]
-position = Vector2(-153, 721)
+position = Vector2(-193, -1642)
 texture = ExtResource("95_i2rjc")
 
 [node name="Middle4" type="Sprite2D" parent="."]
-position = Vector2(-153, 721)
+position = Vector2(-193, -1642)
 texture = ExtResource("96_tw8hs")
 
 [node name="Tileset5" type="Sprite2D" parent="."]
-position = Vector2(-153, 721)
+position = Vector2(-193, -1642)
 texture = ExtResource("97_tfm8o")
 
-[node name="Back5" type="Sprite2D" parent="."]
-position = Vector2(440, -117)
-texture = ExtResource("98_rmil2")
-
-[node name="Middle5" type="Sprite2D" parent="."]
-position = Vector2(440, -117)
-texture = ExtResource("99_udq43")
-
-[node name="Near" type="Sprite2D" parent="."]
-position = Vector2(440, -117)
-texture = ExtResource("100_4s6df")
-
-[node name="Tileset6" type="Sprite2D" parent="."]
-position = Vector2(440, -117)
-texture = ExtResource("101_qc6rr")
-
-[node name="Crystal-1" type="Sprite2D" parent="."]
-position = Vector2(81, 56)
-texture = ExtResource("102_4i3r5")
-
-[node name="Crystal-2" type="Sprite2D" parent="."]
-position = Vector2(81, 56)
-texture = ExtResource("103_1s0i7")
-
-[node name="Plant-1" type="Sprite2D" parent="."]
-position = Vector2(81, 56)
-texture = ExtResource("104_eyfna")
-
-[node name="Plant-2" type="Sprite2D" parent="."]
-position = Vector2(81, 56)
-texture = ExtResource("105_tpd7b")
-
 [node name="Background5" type="Sprite2D" parent="."]
-position = Vector2(-931, -389)
+position = Vector2(-2928, -776)
 texture = ExtResource("106_dndy1")
 
 [node name="Lava-background-preview" type="Sprite2D" parent="."]
-position = Vector2(-931, -389)
+position = Vector2(-2928, -776)
 texture = ExtResource("107_014qi")
 
 [node name="Lava-tile" type="Sprite2D" parent="."]
-position = Vector2(-931, -389)
+position = Vector2(-2928, -776)
 texture = ExtResource("108_0g1vu")
 
 [node name="Middle-rocks" type="Sprite2D" parent="."]
-position = Vector2(-931, -389)
+position = Vector2(-2928, -776)
 texture = ExtResource("109_xm1kl")
+
+[node name="Back-walls" type="Sprite2D" parent="."]
+position = Vector2(-3928, -1660)
+texture = ExtResource("102_mwbrn")
+
+[node name="Background6" type="Sprite2D" parent="."]
+position = Vector2(-3928, -1660)
+texture = ExtResource("103_7mqqn")
+
+[node name="Tiles2" type="Sprite2D" parent="."]
+position = Vector2(-3928, -1660)
+texture = ExtResource("104_2yyn7")
+
+[node name="Country-platform-back" type="Sprite2D" parent="."]
+position = Vector2(-935, -1393)
+texture = ExtResource("105_hxt27")
+
+[node name="Country-platform-forest" type="Sprite2D" parent="."]
+position = Vector2(-935, -1393)
+texture = ExtResource("106_qjb6q")
+
+[node name="Country-platform-tiles-example" type="Sprite2D" parent="."]
+position = Vector2(-935, -1393)
+texture = ExtResource("107_g6hbl")
+
+[node name="Country-platform-tileset" type="Sprite2D" parent="."]
+position = Vector2(-935, -1393)
+texture = ExtResource("108_jw1rk")
+
+[node name="Clouds3" type="Sprite2D" parent="."]
+position = Vector2(-2840, -324)
+texture = ExtResource("109_qjdwr")
+
+[node name="Sky2" type="Sprite2D" parent="."]
+position = Vector2(-2840, -324)
+texture = ExtResource("110_jemwx")
+
+[node name="Tileset7" type="Sprite2D" parent="."]
+position = Vector2(-2840, -324)
+texture = ExtResource("111_38va4")
+
+[node name="Trees2" type="Sprite2D" parent="."]
+position = Vector2(-2840, -324)
+texture = ExtResource("112_dtagh")
+
+[node name="Background7" type="Sprite2D" parent="."]
+position = Vector2(-2804, -2028)
+texture = ExtResource("113_s0gvp")
+
+[node name="Mountain" type="Sprite2D" parent="."]
+position = Vector2(-2804, -2028)
+texture = ExtResource("114_fhlwx")
+
+[node name="Tiles-example" type="Sprite2D" parent="."]
+position = Vector2(-2804, -2028)
+texture = ExtResource("115_4nqsn")
+
+[node name="Tileset8" type="Sprite2D" parent="."]
+position = Vector2(-2804, -2028)
+texture = ExtResource("116_720ko")
+
+[node name="Crystal-3" type="Sprite2D" parent="."]
+position = Vector2(-209.5, -799)
+texture = ExtResource("102_4i3r5")
+
+[node name="Crystal-4" type="Sprite2D" parent="."]
+position = Vector2(-209.5, -799)
+texture = ExtResource("103_1s0i7")
+
+[node name="Plant-3" type="Sprite2D" parent="."]
+position = Vector2(-209.5, -799)
+texture = ExtResource("104_eyfna")
+
+[node name="Plant-4" type="Sprite2D" parent="."]
+position = Vector2(-209.5, -799)
+texture = ExtResource("105_tpd7b")
+
+[node name="Back6" type="Sprite2D" parent="."]
+position = Vector2(153.5, -810)
+texture = ExtResource("98_rmil2")
+
+[node name="Middle6" type="Sprite2D" parent="."]
+position = Vector2(153.5, -810)
+texture = ExtResource("99_udq43")
+
+[node name="Near2" type="Sprite2D" parent="."]
+position = Vector2(153.5, -810)
+texture = ExtResource("100_4s6df")
+
+[node name="Tileset9" type="Sprite2D" parent="."]
+position = Vector2(153.5, -810)
+texture = ExtResource("101_qc6rr")
+
+[node name="Back5" type="Sprite2D" parent="."]
+position = Vector2(-1991, -1260)
+texture = ExtResource("125_vyfv7")
+
+[node name="Sci-fi-environment-tileset" type="Sprite2D" parent="."]
+position = Vector2(-1991, -1260)
+texture = ExtResource("126_uxwbc")
+
+[node name="Sky3" type="Sprite2D" parent="."]
+position = Vector2(-1991, -1260)
+texture = ExtResource("127_rssip")
+
+[node name="Background8" type="Sprite2D" parent="."]
+position = Vector2(-1528, -1222)
+texture = ExtResource("128_8jm58")
+
+[node name="Tile-set-sci-fi-interior-platform" type="Sprite2D" parent="."]
+position = Vector2(-1528, -1222)
+texture = ExtResource("129_alnq2")
+
+[node name="Back7" type="Sprite2D" parent="."]
+position = Vector2(-1218, -3151)
+texture = ExtResource("130_hi8cl")
+
+[node name="Foreground-empty" type="Sprite2D" parent="."]
+position = Vector2(-1218, -3151)
+texture = ExtResource("131_fmcb4")
+
+[node name="Foreground2" type="Sprite2D" parent="."]
+position = Vector2(-1218, -3151)
+texture = ExtResource("132_awx02")
+
+[node name="Middle5" type="Sprite2D" parent="."]
+position = Vector2(-1218, -3151)
+texture = ExtResource("133_6jgjg")
+
+[node name="Back-buildings" type="Sprite2D" parent="."]
+position = Vector2(-1158, -2899)
+texture = ExtResource("134_wyuvh")
+
+[node name="Far-buildings2" type="Sprite2D" parent="."]
+position = Vector2(-1158, -2899)
+texture = ExtResource("135_m3cdd")
+
+[node name="Foreground3" type="Sprite2D" parent="."]
+position = Vector2(-1158, -2899)
+texture = ExtResource("136_dgy86")
+
+[node name="Back8" type="Sprite2D" parent="."]
+position = Vector2(-754, -2818)
+texture = ExtResource("137_n4c28")
+
+[node name="Buildings2" type="Sprite2D" parent="."]
+position = Vector2(-754, -2818)
+texture = ExtResource("138_xpvic")
+
+[node name="Front5" type="Sprite2D" parent="."]
+position = Vector2(-754, -2818)
+texture = ExtResource("139_ymd22")
+
+[node name="Bridge" type="Sprite2D" parent="."]
+position = Vector2(-436, -2250)
+texture = ExtResource("140_srgxu")
+
+[node name="Far" type="Sprite2D" parent="."]
+position = Vector2(1398, -835)
+texture = ExtResource("141_n8nm3")
+
+[node name="Foregound-merged" type="Sprite2D" parent="."]
+position = Vector2(1398, -835)
+texture = ExtResource("142_856ov")
+
+[node name="Foreground-1" type="Sprite2D" parent="."]
+position = Vector2(1398, -835)
+texture = ExtResource("143_ka0of")
+
+[node name="Foreground-2" type="Sprite2D" parent="."]
+position = Vector2(1398, -835)
+texture = ExtResource("144_2rs4t")
+
+[node name="Sand" type="Sprite2D" parent="."]
+position = Vector2(1398, -835)
+texture = ExtResource("145_fjvhf")
+
+[node name="Back-2" type="Sprite2D" parent="."]
+position = Vector2(1746, -1615)
+texture = ExtResource("146_2fddw")
+
+[node name="Back9" type="Sprite2D" parent="."]
+position = Vector2(1746, -1615)
+texture = ExtResource("147_vilbq")
+
+[node name="Tileset6" type="Sprite2D" parent="."]
+position = Vector2(1746, -1615)
+texture = ExtResource("148_f5hil")
+
+[node name="Gems-spritesheet" type="Sprite2D" parent="."]
+position = Vector2(-3529, 699)
+texture = ExtResource("149_5nnxp")
+
+[node name="Spritesheet" type="Sprite2D" parent="."]
+position = Vector2(-3984, 1454)
+texture = ExtResource("150_f1pd1")
+
+[node name="Frame1" type="Sprite2D" parent="."]
+position = Vector2(-3816, 2305)
+texture = ExtResource("151_g1ywe")
+
+[node name="Frame2" type="Sprite2D" parent="."]
+position = Vector2(-3816, 2305)
+texture = ExtResource("152_istoo")
+
+[node name="Frame3" type="Sprite2D" parent="."]
+position = Vector2(-3816, 2305)
+texture = ExtResource("153_5ttpx")
+
+[node name="Frame4" type="Sprite2D" parent="."]
+position = Vector2(-3816, 2305)
+texture = ExtResource("154_f6a8k")
+
+[node name="Frame5" type="Sprite2D" parent="."]
+position = Vector2(-3816, 2305)
+texture = ExtResource("155_tnd8w")
+
+[node name="Frame6" type="Sprite2D" parent="."]
+position = Vector2(-3816, 2305)
+texture = ExtResource("156_yhsmw")
+
+[node name="Frame7" type="Sprite2D" parent="."]
+position = Vector2(-3816, 2305)
+texture = ExtResource("157_fdwnp")
+
+[node name="Frame8" type="Sprite2D" parent="."]
+position = Vector2(-3816, 2305)
+texture = ExtResource("158_k3kah")
+
+[node name="Frame9" type="Sprite2D" parent="."]
+position = Vector2(-3972, 2389)
+texture = ExtResource("159_2s8bt")
+
+[node name="Frame10" type="Sprite2D" parent="."]
+position = Vector2(-3972, 2389)
+texture = ExtResource("160_e8dns")
+
+[node name="Ship-fly-preview" type="Sprite2D" parent="."]
+position = Vector2(-3061, 2389)
+texture = ExtResource("161_stcne")
+
+[node name="Ship-rotate-preview" type="Sprite2D" parent="."]
+position = Vector2(-3061, 2389)
+texture = ExtResource("162_0fa57")
+
+[node name="Thrust-preview" type="Sprite2D" parent="."]
+position = Vector2(-3061, 2389)
+texture = ExtResource("163_88nlu")
+
+[node name="Bolt1" type="Sprite2D" parent="."]
+position = Vector2(-4392, 2221)
+texture = ExtResource("164_mroim")
+
+[node name="Bolt2" type="Sprite2D" parent="."]
+position = Vector2(-4392, 2221)
+texture = ExtResource("165_fxo0u")
+
+[node name="Bolt3" type="Sprite2D" parent="."]
+position = Vector2(-4392, 2221)
+texture = ExtResource("166_fjbyh")
+
+[node name="Bolt4" type="Sprite2D" parent="."]
+position = Vector2(-4392, 2221)
+texture = ExtResource("167_xqqfq")
+
+[node name="Charged1" type="Sprite2D" parent="."]
+position = Vector2(-3217, 1538)
+texture = ExtResource("168_1hlri")
+
+[node name="Charged2" type="Sprite2D" parent="."]
+position = Vector2(-3217, 1538)
+texture = ExtResource("169_qpnwr")
+
+[node name="Charged3" type="Sprite2D" parent="."]
+position = Vector2(-3217, 1538)
+texture = ExtResource("170_jvwkd")
+
+[node name="Charged4" type="Sprite2D" parent="."]
+position = Vector2(-3217, 1538)
+texture = ExtResource("171_64kqa")
+
+[node name="Charged5" type="Sprite2D" parent="."]
+position = Vector2(-3217, 1538)
+texture = ExtResource("172_csnqv")
+
+[node name="Charged6" type="Sprite2D" parent="."]
+position = Vector2(-3217, 1538)
+texture = ExtResource("173_x7t7j")
+
+[node name="Waveform1" type="Sprite2D" parent="."]
+position = Vector2(-3600, 1837)
+texture = ExtResource("174_fldgk")
+
+[node name="Waveform2" type="Sprite2D" parent="."]
+position = Vector2(-3600, 1837)
+texture = ExtResource("175_jmuuq")
+
+[node name="Waveform3" type="Sprite2D" parent="."]
+position = Vector2(-3600, 1837)
+texture = ExtResource("176_jw5gf")
+
+[node name="Waveform4" type="Sprite2D" parent="."]
+position = Vector2(-3600, 1837)
+texture = ExtResource("177_rp0ln")
+
+[node name="DiveKick" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("178_jj75a")
+
+[node name="Hurt" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("179_h2w40")
+
+[node name="Idle" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("180_jqulh")
+
+[node name="Jab" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("181_texnh")
+
+[node name="Jump" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("182_p8dju")
+
+[node name="JumpKick" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("183_c3vt0")
+
+[node name="Kick" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("184_hcn7h")
+
+[node name="Punch" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("185_0xkst")
+
+[node name="Walk" type="Sprite2D" parent="."]
+position = Vector2(-4943, 1837)
+texture = ExtResource("186_rey3a")
+
+[node name="Walk2" type="Sprite2D" parent="."]
+position = Vector2(-4955, 2137)
+texture = ExtResource("187_gbfqb")
+
+[node name="Background9" type="Sprite2D" parent="."]
+position = Vector2(1985, -955)
+texture = ExtResource("188_tnpo5")
+
+[node name="Middleground-no-fungus2" type="Sprite2D" parent="."]
+position = Vector2(1985, -955)
+texture = ExtResource("189_fayjk")
+
+[node name="Middleground2" type="Sprite2D" parent="."]
+position = Vector2(1985, -955)
+texture = ExtResource("190_tjblc")
+
+[node name="Props3" type="Sprite2D" parent="."]
+position = Vector2(1985, -955)
+texture = ExtResource("191_3mhb1")
+
+[node name="Tilesets2" type="Sprite2D" parent="."]
+position = Vector2(1985, -955)
+texture = ExtResource("192_30nk2")
+
+[node name="Walls2" type="Sprite2D" parent="."]
+position = Vector2(1985, -955)
+texture = ExtResource("193_hfr4d")
+
+[node name="Gate-01" type="Sprite2D" parent="."]
+position = Vector2(2285, -943)
+texture = ExtResource("194_2ru5q")
+
+[node name="Gate-02" type="Sprite2D" parent="."]
+position = Vector2(2285, -943)
+texture = ExtResource("195_0golx")
+
+[node name="Gate-03" type="Sprite2D" parent="."]
+position = Vector2(2285, -943)
+texture = ExtResource("196_5y8vf")
+
+[node name="Plant-big" type="Sprite2D" parent="."]
+position = Vector2(2285, -943)
+texture = ExtResource("197_cabbt")
+
+[node name="Plant-small" type="Sprite2D" parent="."]
+position = Vector2(2285, -943)
+texture = ExtResource("198_egrvw")
+
+[node name="Stalactite" type="Sprite2D" parent="."]
+position = Vector2(2285, -943)
+texture = ExtResource("199_qtup1")
+
+[node name="Stone-head" type="Sprite2D" parent="."]
+position = Vector2(2285, -943)
+texture = ExtResource("200_l8w8u")
+
+[node name="Stone" type="Sprite2D" parent="."]
+position = Vector2(2285, -943)
+texture = ExtResource("201_yfo0c")
+
+[node name="Crab-idle" type="Sprite2D" parent="."]
+position = Vector2(-5087, -80)
+texture = ExtResource("202_ocayl")
+
+[node name="Crab-walk" type="Sprite2D" parent="."]
+position = Vector2(-5087, -80)
+texture = ExtResource("203_j7s3f")
+
+[node name="Jumper-idle" type="Sprite2D" parent="."]
+position = Vector2(-5087, -80)
+texture = ExtResource("204_5am01")
+
+[node name="Jumper-jump" type="Sprite2D" parent="."]
+position = Vector2(-5087, -80)
+texture = ExtResource("205_3k0cu")
+
+[node name="Octopus" type="Sprite2D" parent="."]
+position = Vector2(-5087, -80)
+texture = ExtResource("206_5yhd3")

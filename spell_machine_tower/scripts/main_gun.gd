@@ -42,11 +42,18 @@ var primary_projectiles_fired = 0
 var primary_cooldown_max = 20
 var primary_cooldown_rate = 5.0 # 5 projectiles per second
 
+var lightning_animation
+var basic_animation
+
 func _ready() -> void:
 	# Load the projectile and slime scenes
 	basic_projectile_scene = preload("res://upgrade_tree/scenes/basic_projectile.tscn")
 	missile_projectile_scene = preload("res://upgrade_tree/scenes/harpoon_projectile.tscn")
 	slime_scene = preload("res://slimes/scenes/small_slime.tscn")
+	
+	basic_animation = preload("res://upgrade_tree/scenes/on_hit_animation.tscn")
+	lightning_animation = preload("res://upgrade_tree/assets/sprite_animations/lightning_animation.tscn")
+	
 	
 	cooldown_timer = Timer.new()
 	cooldown_timer.wait_time = 4
@@ -69,7 +76,7 @@ func _process(delta: float) -> void:
 			if not SoundManager.is_playing("machine_gun_fire"):
 				SoundManager.play_sfx("machine_gun_fire", 0, -6, 1)
 				#SoundManager.play_sfx("machine_gun_fire", 0, 0.6, 1)
-			fire_projectile(basic_projectile_scene, primary_projectile_dmg, primary_firing_velocity, primary_max_lifespan, primary_post_hit_lifespan, primary_mass, primary_shake)
+			fire_projectile(basic_projectile_scene, primary_projectile_dmg, primary_firing_velocity, primary_max_lifespan, primary_post_hit_lifespan, primary_mass, primary_shake, basic_animation)
 			primary_firing_timer = primary_firing_interval
 			primary_projectiles_fired += 1
 			if primary_projectiles_fired >= primary_cooldown_max:
@@ -83,7 +90,7 @@ func _process(delta: float) -> void:
 	if secondary_firing:
 		if secondary_firing_timer <= 0:
 			SoundManager.play_sfx("harpoon", 0, -3, 3)
-			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake)
+			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake, lightning_animation)
 			secondary_firing_timer = secondary_firing_interval
 
 func reset_primary_cooldown():
@@ -103,9 +110,10 @@ func handle_rotation() -> void:
 	else:
 		rotation = target_angle
 
-func fire_projectile(projectile_scene, damage: int, velocity: float, max_lifespan: float, post_hit_lifespan: float, mass: float, gun_shake : float) -> void:
+func fire_projectile(projectile_scene, damage: int, velocity: float, max_lifespan: float, post_hit_lifespan: float, mass: float, gun_shake : float, on_hit_animation) -> void:
 	var node_to_fire = projectile_scene.instantiate()
 	apply_firing_velocity(node_to_fire, velocity, gun_shake)
+	node_to_fire.on_hit_animation = on_hit_animation
 	node_to_fire.damage = damage
 	node_to_fire.max_projectile_lifespan = max_lifespan
 	node_to_fire.projectile_mass = mass
