@@ -26,7 +26,6 @@ collision_mask = 8
 shape = SubResource("CircleShape2D_o77uf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_7djns")
 region_enabled = true
 region_rect = Rect2(28.2392, 193.259, 71.1503, 71.8298)

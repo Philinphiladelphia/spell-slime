@@ -232,11 +232,10 @@ motor_target_velocity = -0.511905
 
 [node name="Sprite2D67" type="Sprite2D" parent="spell_machine_tower/main_gun"]
 z_index = 16
-position = Vector2(9, 264)
-rotation = 3.14159
+position = Vector2(5, 322)
 texture = ExtResource("7_wlgph")
 region_enabled = true
-region_rect = Rect2(146.484, 359.073, 91.7991, 146.556)
+region_rect = Rect2(16.1581, 2.30527, 122.984, 294.284)
 
 [node name="Sprite2D" type="Sprite2D" parent="spell_machine_tower/main_gun"]
 z_index = 20

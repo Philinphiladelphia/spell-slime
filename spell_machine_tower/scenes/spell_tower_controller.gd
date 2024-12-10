@@ -121,6 +121,9 @@ func init_tower_health(max_health):
 	tower_health_bar.init_health(max_health)
 
 func apply_tower_damage(amount):
+	if not SoundManager.is_playing("metal1"):
+		SoundManager.play_sfx("metal1", 0, 2, 2)
+	
 	tower_health_bar._set_health(tower_health_bar.health - amount)
 	tower_health = tower_health_bar.health - amount
 	$spell_machine_tower.modulate = Color(1, 0.2, 0.2)  # Set the color to red
@@ -147,6 +150,4 @@ func _on_damage_timer_timeout() -> void:
 
 func _on_hurt_box_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if spellward_health <= 0:
-		if not SoundManager.is_playing("metal1"):
-			SoundManager.play_sfx("metal1", 0, 1, 3)
 		apply_tower_damage(body.get_parent().get_parent().damage)

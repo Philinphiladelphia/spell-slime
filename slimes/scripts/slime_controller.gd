@@ -167,7 +167,7 @@ func enable_light():
 	$slime_hitbox/PointLight2D.enabled = true
 
 func kill_slime():
-	SoundManager.play_sfx("enemy_down", 0, -3, 0.5)
+	SoundManager.play_sfx("enemy_down", 0, -6, 0.5)
 	
 	is_powdering = 0
 	
