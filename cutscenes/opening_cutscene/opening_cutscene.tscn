@@ -1,0 +1,549 @@
+[gd_scene load_steps=110 format=3 uid="uid://bdtxmyrmmsy4m"]
+
+[ext_resource type="Texture2D" uid="uid://ng5ovrpumnnq" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/asteroid-fighter/PNG/background.png" id="1_nq2v4"]
+[ext_resource type="Texture2D" uid="uid://cmc3iaa76jm82" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Magic Cliffs/Environment/PNG/clouds.png" id="2_621qm"]
+[ext_resource type="Texture2D" uid="uid://dpm3svfc4l1uv" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Magic Cliffs/Environment/PNG/far-grounds.png" id="3_x80b4"]
+[ext_resource type="Texture2D" uid="uid://56vajbyeydkk" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Magic Cliffs/Environment/PNG/sea.png" id="4_62hux"]
+[ext_resource type="Texture2D" uid="uid://cdnnao5qm36p7" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Magic Cliffs/Environment/PNG/sky.png" id="5_pms0v"]
+[ext_resource type="Texture2D" uid="uid://cp7srjpu5ril0" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Magic Cliffs/Environment/PNG/tileset.png" id="6_quadf"]
+[ext_resource type="Texture2D" uid="uid://c1oqe2yccfcye" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/background.png" id="7_jvchc"]
+[ext_resource type="Texture2D" uid="uid://dss8n01y8tsdk" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/middleground-no-fungus.png" id="8_dc50g"]
+[ext_resource type="Texture2D" uid="uid://ttj24fkjgfn0" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/middleground.png" id="9_3daqb"]
+[ext_resource type="Texture2D" uid="uid://dqj0jmg78uxwr" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/props.png" id="10_budd5"]
+[ext_resource type="Texture2D" uid="uid://64myexh6srj0" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/tilesets.png" id="11_lmscb"]
+[ext_resource type="Texture2D" uid="uid://b6fvgm5fy8f7b" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/walls.png" id="12_1ggvc"]
+[ext_resource type="Texture2D" uid="uid://dh5fkoeiayaud" path="res://background/parallax_backgrounds/Parallax Cave/1.png" id="13_h7pdu"]
+[ext_resource type="Texture2D" uid="uid://c4h7758qkof5w" path="res://background/parallax_backgrounds/Parallax Cave/2.png" id="14_qj4ly"]
+[ext_resource type="Texture2D" uid="uid://dlwv3ro2yxq65" path="res://background/parallax_backgrounds/Parallax Cave/3fx.png" id="15_a483l"]
+[ext_resource type="Texture2D" uid="uid://di1igr6jpsngy" path="res://background/parallax_backgrounds/Parallax Cave/4.png" id="16_jqhqb"]
+[ext_resource type="Texture2D" uid="uid://dq3o1b3qunts3" path="res://background/parallax_backgrounds/Parallax Cave/5.png" id="17_r5dq5"]
+[ext_resource type="Texture2D" uid="uid://mcqckoefi42p" path="res://background/parallax_backgrounds/Parallax Cave/6fx.png" id="18_68531"]
+[ext_resource type="Texture2D" uid="uid://bdk1ykwa2pq5f" path="res://background/parallax_backgrounds/Parallax Cave/7.png" id="19_cynbf"]
+[ext_resource type="Texture2D" uid="uid://4kbl1r8njb1u" path="res://background/parallax_backgrounds/Parallax Cave/8fx.png" id="20_hb3df"]
+[ext_resource type="Texture2D" uid="uid://bd5taeb7oge3e" path="res://background/parallax_backgrounds/Parallax Cave/9.png" id="21_8qxfk"]
+[ext_resource type="Texture2D" uid="uid://bytsyhopu0uos" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Warped City/V1/warped city files/ENVIRONMENT/background/buildings-bg.png" id="22_ev3lm"]
+[ext_resource type="Texture2D" uid="uid://b2jodq3l4qwjc" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Warped City/V1/warped city files/ENVIRONMENT/background/near-buildings-bg.png" id="23_saj5h"]
+[ext_resource type="Texture2D" uid="uid://ddke32cyqfyhd" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-a.png" id="24_3l3y6"]
+[ext_resource type="Texture2D" uid="uid://6utg5liv4vq4" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Packs/Warped City/V1/warped city files/ENVIRONMENT/background/skyline-b.png" id="25_ik448"]
+[ext_resource type="Texture2D" uid="uid://2ufgwaxwk6x2" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Gothic-Horror-Files/PNG/layers/clouds.png" id="26_ykjng"]
+[ext_resource type="Texture2D" uid="uid://b075aid5u65a" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Gothic-Horror-Files/PNG/layers/tiles.png" id="27_c3w2c"]
+[ext_resource type="Texture2D" uid="uid://m3glalnhx4mj" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Gothic-Horror-Files/PNG/layers/town.png" id="28_st1sr"]
+[ext_resource type="Texture2D" uid="uid://cd4ywktnofl3g" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Old-dark-Castle-tileset-Files/PNG/old-dark-castle-interior-background.png" id="29_tib3m"]
+[ext_resource type="Texture2D" uid="uid://ddxbsw51y685a" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Old-dark-Castle-tileset-Files/PNG/old-dark-castle-interior-tileset.png" id="30_1on65"]
+[ext_resource type="Texture2D" uid="uid://btfw3ubol5y1b" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Old-dark-Castle-tileset-Files/PNG/preview-old-dark-castle-interior-tileset.png" id="31_ujn4m"]
+[ext_resource type="Texture2D" uid="uid://dpubofqbeimg1" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Scifi lab Files/layers/back.png" id="32_q87wf"]
+[ext_resource type="Texture2D" uid="uid://mqi5xr6jujpd" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Scifi lab Files/layers/front.png" id="33_u6dao"]
+[ext_resource type="Texture2D" uid="uid://ci7pe8h7jftw6" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Scifi lab Files/layers/middle.png" id="34_lpnq2"]
+[ext_resource type="Texture2D" uid="uid://7wcx7hihgg6l" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/grunge-tileset-files-web/grunge-tileset.png" id="35_0a25l"]
+[ext_resource type="Texture2D" uid="uid://bkht8vrvspi1c" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/cyberpunk-detective-props/PNG/big-computer.png" id="36_5hx36"]
+[ext_resource type="Texture2D" uid="uid://b3hysnf60ot2a" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/cyberpunk-detective-props/PNG/cryo-pod.png" id="37_swpek"]
+[ext_resource type="Texture2D" uid="uid://hlits3tifahb" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/cyberpunk-detective-props/PNG/cyberpunk-props-preview.png" id="38_vr6ss"]
+[ext_resource type="Texture2D" uid="uid://bb7hhipjocly2" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/cyberpunk-detective-props/PNG/elevator-track.png" id="39_vbyqx"]
+[ext_resource type="Texture2D" uid="uid://di77wdk20vqpu" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/cyberpunk-detective-props/PNG/elevator.png" id="40_ougxn"]
+[ext_resource type="Texture2D" uid="uid://2b4agooxnb37" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/cyberpunk-detective-props/PNG/hanging-terminal.png" id="41_ycnhe"]
+[ext_resource type="Texture2D" uid="uid://dup25rkffa04f" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/cyberpunk-detective-props/PNG/server-gabinetes.png" id="42_yus4t"]
+[ext_resource type="Texture2D" uid="uid://dc1qb0gj04iyi" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/cyberpunk-detective-props/PNG/small-terminal.png" id="43_neols"]
+[ext_resource type="Texture2D" uid="uid://d2prdcm1sw7of" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/bulkhead-walls/v2/PNG/bg-wall-with-supports.png" id="44_d0eiu"]
+[ext_resource type="Texture2D" uid="uid://cr7j7eowtaj4i" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/bulkhead-walls/v2/PNG/bg-wall.png" id="45_oiahi"]
+[ext_resource type="Texture2D" uid="uid://bsgt4abe6clie" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/bulkhead-walls/v2/PNG/floor.png" id="46_2hjrn"]
+[ext_resource type="Texture2D" uid="uid://bkwfln3ar1psv" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/bulkhead-walls/v2/PNG/foreground.png" id="47_po5ds"]
+[ext_resource type="Texture2D" uid="uid://c3h67qoho6b55" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/bulkhead-walls/v2/PNG/preview-bulkhead-walls-v2.png" id="48_ipltr"]
+[ext_resource type="Texture2D" uid="uid://ckia8svdhax6y" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/ships-graveyard/PNG/layers/back-sand.png" id="49_8m4gt"]
+[ext_resource type="Texture2D" uid="uid://cnm6ewll54817" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/ships-graveyard/PNG/layers/boat-far.png" id="50_1ysup"]
+[ext_resource type="Texture2D" uid="uid://dpd6688kdxu7d" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/ships-graveyard/PNG/layers/boat-front.png" id="51_sg18r"]
+[ext_resource type="Texture2D" uid="uid://omojgl1ojaof" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/ships-graveyard/PNG/layers/boat-middle.png" id="52_l26y3"]
+[ext_resource type="Texture2D" uid="uid://p235tottntpk" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/ships-graveyard/PNG/layers/front.png" id="53_rvmca"]
+[ext_resource type="Texture2D" uid="uid://bv7gd7n5f7bj3" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/ships-graveyard/PNG/layers/middle-sand.png" id="54_b5ol4"]
+[ext_resource type="Texture2D" uid="uid://bbpua5x43k7yh" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/ships-graveyard/PNG/layers/water.png" id="55_ngquv"]
+[ext_resource type="Texture2D" uid="uid://bfra1ru3oei7l" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/parallax-industrial-web/Layers/bg.png" id="56_gbyoe"]
+[ext_resource type="Texture2D" uid="uid://ukjjv2qo8phg" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/parallax-industrial-web/Layers/buildings.png" id="57_r8sgf"]
+[ext_resource type="Texture2D" uid="uid://dncn0r0baflib" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/parallax-industrial-web/Layers/far-buildings.png" id="58_wwpph"]
+[ext_resource type="Texture2D" uid="uid://cndit5e7lyhco" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/parallax-industrial-web/Layers/skill-foreground.png" id="59_gvj01"]
+[ext_resource type="Texture2D" uid="uid://cnjvar6fl02io" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/parallax_forest_pack web/v2/layers/back.png" id="60_qo27a"]
+[ext_resource type="Texture2D" uid="uid://bkua1pemrt0bn" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/parallax_forest_pack web/v2/layers/front.png" id="61_dwcjb"]
+[ext_resource type="Texture2D" uid="uid://b6qgindi8ayjl" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/parallax_forest_pack web/v2/layers/middle.png" id="62_8x1gx"]
+[ext_resource type="Texture2D" uid="uid://cbqv520667os6" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Cemetery/Environment/background.png" id="63_pr821"]
+[ext_resource type="Texture2D" uid="uid://dgrdfqh36s5lr" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Cemetery/Environment/graveyard.png" id="64_b1v6p"]
+[ext_resource type="Texture2D" uid="uid://bj2oc45s3o1tg" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Cemetery/Environment/mountains.png" id="65_qldj6"]
+[ext_resource type="Texture2D" uid="uid://doq1c7oqdn5bq" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Cemetery/Environment/objects.png" id="66_7brxj"]
+[ext_resource type="Texture2D" uid="uid://dhf2qwp21ektr" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Cemetery/Environment/tileset-sliced.png" id="67_irh5k"]
+[ext_resource type="Texture2D" uid="uid://bilqxeubikry2" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Cemetery/Environment/tileset.png" id="68_l8vob"]
+[ext_resource type="Texture2D" uid="uid://dxp4uemq0wtss" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire1.png" id="69_rdi4i"]
+[ext_resource type="Texture2D" uid="uid://pxc7f70krp7f" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire2.png" id="70_2t3sx"]
+[ext_resource type="Texture2D" uid="uid://ctrmlacxr5yls" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire3.png" id="71_itxo5"]
+[ext_resource type="Texture2D" uid="uid://cllm1ytsn1wv" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire4.png" id="72_i8x77"]
+[ext_resource type="Texture2D" uid="uid://dc2ldrrybe6s0" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire5.png" id="73_0ekr7"]
+[ext_resource type="Texture2D" uid="uid://bgxpkbdy34gxq" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire6.png" id="74_7bwxd"]
+[ext_resource type="Texture2D" uid="uid://4c6xknrta1yt" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire7.png" id="75_g2yi4"]
+[ext_resource type="Texture2D" uid="uid://d7vc25shiuni" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire8.png" id="76_yw4sq"]
+[ext_resource type="Texture2D" uid="uid://dukyhf1mfdwxl" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire9.png" id="77_2516u"]
+[ext_resource type="Texture2D" uid="uid://cpika75k5s08x" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/fire-sprites/fire10.png" id="78_as16a"]
+[ext_resource type="Texture2D" uid="uid://cvxa40rnott7s" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/idle-sprites/wizard-idle-1.png" id="79_16e1n"]
+[ext_resource type="Texture2D" uid="uid://c1epq7h0r1ydq" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/idle-sprites/wizard-idle-2.png" id="80_jyth3"]
+[ext_resource type="Texture2D" uid="uid://jvqn18id3xum" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/idle-sprites/wizard-idle-3.png" id="81_ynro4"]
+[ext_resource type="Texture2D" uid="uid://dyjwbetinoamc" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/idle-sprites/wizard-idle-4.png" id="82_u647h"]
+[ext_resource type="Texture2D" uid="uid://pcw7lvflygrw" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/idle-sprites/wizard-idle-5.png" id="83_rtbt3"]
+[ext_resource type="Texture2D" uid="uid://clauak5iwxajc" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Church/SPRITES/wizard/spritesheet/wizard.png" id="84_g6rd5"]
+[ext_resource type="Texture2D" uid="uid://c81sxjuic0i82" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Swamp files/Evironment/background.png" id="85_sd8yc"]
+[ext_resource type="Texture2D" uid="uid://b8ev13gx538kj" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Swamp files/Evironment/mid-layer-01.png" id="86_ohdtu"]
+[ext_resource type="Texture2D" uid="uid://bp2au4unmpyfx" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Swamp files/Evironment/mid-layer-02.png" id="87_flc4w"]
+[ext_resource type="Texture2D" uid="uid://xg4qhoicyhuf" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Swamp files/Evironment/props.png" id="88_k338w"]
+[ext_resource type="Texture2D" uid="uid://br4vs6530l58t" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Swamp files/Evironment/tileset.png" id="89_fg5v5"]
+[ext_resource type="Texture2D" uid="uid://beppykof0vfo0" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Gothicvania Swamp files/Evironment/trees.png" id="90_78tnd"]
+[ext_resource type="Texture2D" uid="uid://dbfj2078try46" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Sewers pack files/Environment/v2/Layers/back.png" id="91_gk8b3"]
+[ext_resource type="Texture2D" uid="uid://br02xp036d5ws" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Sewers pack files/Environment/v2/Layers/front.png" id="92_gov7m"]
+[ext_resource type="Texture2D" uid="uid://dn5t2d1r77guc" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Sewers pack files/Environment/v2/Layers/middle.png" id="93_n5sjk"]
+[ext_resource type="Texture2D" uid="uid://clhejrtrba6fj" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Sewers pack files/Environment/v2/Layers/tileset.png" id="94_m3bbi"]
+[ext_resource type="Texture2D" uid="uid://bmwl45uwopwj6" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Sewers pack files/Environment/v2/Layers_2/back.png" id="95_i2rjc"]
+[ext_resource type="Texture2D" uid="uid://wbe5vrx31duq" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Sewers pack files/Environment/v2/Layers_2/middle.png" id="96_tw8hs"]
+[ext_resource type="Texture2D" uid="uid://e66rwdsp7mfd" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/Sewers pack files/Environment/v2/Layers_2/tileset.png" id="97_tfm8o"]
+[ext_resource type="Texture2D" uid="uid://yb42ulg2tqum" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/back.png" id="98_rmil2"]
+[ext_resource type="Texture2D" uid="uid://degvtq2riwfiv" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/middle.png" id="99_udq43"]
+[ext_resource type="Texture2D" uid="uid://7ug1o2aoyyuk" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/near.png" id="100_4s6df"]
+[ext_resource type="Texture2D" uid="uid://lwns0rd0ui85" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/tileset.png" id="101_qc6rr"]
+[ext_resource type="Texture2D" uid="uid://qsdtid0bu0k7" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/Props/crystal-1.png" id="102_4i3r5"]
+[ext_resource type="Texture2D" uid="uid://c00lg08h0t7o5" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/Props/crystal-2.png" id="103_1s0i7"]
+[ext_resource type="Texture2D" uid="uid://dcwr5xod6oyjf" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/Props/plant-1.png" id="104_eyfna"]
+[ext_resource type="Texture2D" uid="uid://b7wx14r3vmvrj" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Rocky Pass Files/PNG/Props/plant-2.png" id="105_tpd7b"]
+[ext_resource type="Texture2D" uid="uid://bht67r1pg1rxd" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/lava-background/PNG/background.png" id="106_dndy1"]
+[ext_resource type="Texture2D" uid="uid://dgj3jrqeper6w" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/lava-background/PNG/lava-background-preview.png" id="107_014qi"]
+[ext_resource type="Texture2D" uid="uid://bswr3shpjlbwh" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/lava-background/PNG/lava-tile.png" id="108_0g1vu"]
+[ext_resource type="Texture2D" uid="uid://cawmla7ten0cp" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/lava-background/PNG/middle-rocks.png" id="109_xm1kl"]
+
+[node name="OpeningCutscene" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(199, 385)
+texture = ExtResource("1_nq2v4")
+
+[node name="Clouds" type="Sprite2D" parent="."]
+position = Vector2(569, 471)
+texture = ExtResource("2_621qm")
+
+[node name="Far-grounds" type="Sprite2D" parent="."]
+position = Vector2(569, 471)
+texture = ExtResource("3_x80b4")
+
+[node name="Sea" type="Sprite2D" parent="."]
+position = Vector2(569, 471)
+texture = ExtResource("4_62hux")
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(569, 471)
+texture = ExtResource("5_pms0v")
+
+[node name="Tileset" type="Sprite2D" parent="."]
+position = Vector2(569, 471)
+texture = ExtResource("6_quadf")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(850, 107)
+texture = ExtResource("7_jvchc")
+
+[node name="Middleground-no-fungus" type="Sprite2D" parent="."]
+position = Vector2(850, 107)
+texture = ExtResource("8_dc50g")
+
+[node name="Middleground" type="Sprite2D" parent="."]
+position = Vector2(850, 107)
+texture = ExtResource("9_3daqb")
+
+[node name="Props" type="Sprite2D" parent="."]
+position = Vector2(850, 107)
+texture = ExtResource("10_budd5")
+
+[node name="Tilesets" type="Sprite2D" parent="."]
+position = Vector2(850, 107)
+texture = ExtResource("11_lmscb")
+
+[node name="Walls" type="Sprite2D" parent="."]
+position = Vector2(850, 107)
+texture = ExtResource("12_1ggvc")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("13_h7pdu")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("14_qj4ly")
+
+[node name="3Fx" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("15_a483l")
+
+[node name="4" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("16_jqhqb")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("17_r5dq5")
+
+[node name="6Fx" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("18_68531")
+
+[node name="7" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("19_cynbf")
+
+[node name="8Fx" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("20_hb3df")
+
+[node name="9" type="Sprite2D" parent="."]
+position = Vector2(1778, -776)
+texture = ExtResource("21_8qxfk")
+
+[node name="Buildings-bg" type="Sprite2D" parent="."]
+position = Vector2(-831, -676)
+texture = ExtResource("22_ev3lm")
+
+[node name="Near-buildings-bg" type="Sprite2D" parent="."]
+position = Vector2(-831, -676)
+texture = ExtResource("23_saj5h")
+
+[node name="Skyline-a" type="Sprite2D" parent="."]
+position = Vector2(-831, -676)
+texture = ExtResource("24_3l3y6")
+
+[node name="Skyline-b" type="Sprite2D" parent="."]
+position = Vector2(-831, -676)
+texture = ExtResource("25_ik448")
+
+[node name="Clouds2" type="Sprite2D" parent="."]
+position = Vector2(-927, 552)
+texture = ExtResource("26_ykjng")
+
+[node name="Tiles" type="Sprite2D" parent="."]
+position = Vector2(-927, 552)
+texture = ExtResource("27_c3w2c")
+
+[node name="Town" type="Sprite2D" parent="."]
+position = Vector2(-927, 552)
+texture = ExtResource("28_st1sr")
+
+[node name="Old-dark-castle-interior-background" type="Sprite2D" parent="."]
+position = Vector2(-628, 1374)
+texture = ExtResource("29_tib3m")
+
+[node name="Old-dark-castle-interior-tileset" type="Sprite2D" parent="."]
+position = Vector2(-628, 1374)
+texture = ExtResource("30_1on65")
+
+[node name="Preview-old-dark-castle-interior-tileset" type="Sprite2D" parent="."]
+position = Vector2(-628, 1374)
+texture = ExtResource("31_ujn4m")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(1059, 1214)
+texture = ExtResource("32_q87wf")
+
+[node name="Front" type="Sprite2D" parent="."]
+position = Vector2(1059, 1214)
+texture = ExtResource("33_u6dao")
+
+[node name="Middle" type="Sprite2D" parent="."]
+position = Vector2(1059, 1214)
+texture = ExtResource("34_lpnq2")
+
+[node name="Grunge-tileset" type="Sprite2D" parent="."]
+position = Vector2(-575, 2111)
+texture = ExtResource("35_0a25l")
+
+[node name="Big-computer" type="Sprite2D" parent="."]
+position = Vector2(-1792, -249)
+texture = ExtResource("36_5hx36")
+
+[node name="Cryo-pod" type="Sprite2D" parent="."]
+position = Vector2(-1792, -249)
+texture = ExtResource("37_swpek")
+
+[node name="Cyberpunk-props-preview" type="Sprite2D" parent="."]
+position = Vector2(-1792, -249)
+texture = ExtResource("38_vr6ss")
+
+[node name="Elevator-track" type="Sprite2D" parent="."]
+position = Vector2(-1792, -249)
+texture = ExtResource("39_vbyqx")
+
+[node name="Elevator" type="Sprite2D" parent="."]
+position = Vector2(-1792, -249)
+texture = ExtResource("40_ougxn")
+
+[node name="Hanging-terminal" type="Sprite2D" parent="."]
+position = Vector2(-1792, -249)
+texture = ExtResource("41_ycnhe")
+
+[node name="Server-gabinetes" type="Sprite2D" parent="."]
+position = Vector2(-1792, -249)
+texture = ExtResource("42_yus4t")
+
+[node name="Small-terminal" type="Sprite2D" parent="."]
+position = Vector2(-1792, -249)
+texture = ExtResource("43_neols")
+
+[node name="Bg-wall-with-supports" type="Sprite2D" parent="."]
+position = Vector2(-1781, 1182)
+texture = ExtResource("44_d0eiu")
+
+[node name="Bg-wall" type="Sprite2D" parent="."]
+position = Vector2(-1781, 1182)
+texture = ExtResource("45_oiahi")
+
+[node name="Floor" type="Sprite2D" parent="."]
+position = Vector2(-1781, 1182)
+texture = ExtResource("46_2hjrn")
+
+[node name="Foreground" type="Sprite2D" parent="."]
+position = Vector2(-1781, 1182)
+texture = ExtResource("47_po5ds")
+
+[node name="Preview-bulkhead-walls-v2" type="Sprite2D" parent="."]
+position = Vector2(-1781, 1182)
+texture = ExtResource("48_ipltr")
+
+[node name="Back-sand" type="Sprite2D" parent="."]
+position = Vector2(-1824, 1780)
+texture = ExtResource("49_8m4gt")
+
+[node name="Boat-far" type="Sprite2D" parent="."]
+position = Vector2(-1824, 1780)
+texture = ExtResource("50_1ysup")
+
+[node name="Boat-front" type="Sprite2D" parent="."]
+position = Vector2(-1824, 1780)
+texture = ExtResource("51_sg18r")
+
+[node name="Boat-middle" type="Sprite2D" parent="."]
+position = Vector2(-1824, 1780)
+texture = ExtResource("52_l26y3")
+
+[node name="Front2" type="Sprite2D" parent="."]
+position = Vector2(-1824, 1780)
+texture = ExtResource("53_rvmca")
+
+[node name="Middle-sand" type="Sprite2D" parent="."]
+position = Vector2(-1824, 1780)
+texture = ExtResource("54_b5ol4")
+
+[node name="Water" type="Sprite2D" parent="."]
+position = Vector2(-1824, 1780)
+texture = ExtResource("55_ngquv")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(320, -451)
+texture = ExtResource("56_gbyoe")
+
+[node name="Buildings" type="Sprite2D" parent="."]
+position = Vector2(320, -451)
+texture = ExtResource("57_r8sgf")
+
+[node name="Far-buildings" type="Sprite2D" parent="."]
+position = Vector2(320, -451)
+texture = ExtResource("58_wwpph")
+
+[node name="Skill-foreground" type="Sprite2D" parent="."]
+position = Vector2(320, -451)
+texture = ExtResource("59_gvj01")
+
+[node name="Back2" type="Sprite2D" parent="."]
+position = Vector2(-290, -884)
+texture = ExtResource("60_qo27a")
+
+[node name="Front3" type="Sprite2D" parent="."]
+position = Vector2(-290, -884)
+texture = ExtResource("61_dwcjb")
+
+[node name="Middle2" type="Sprite2D" parent="."]
+position = Vector2(-290, -884)
+texture = ExtResource("62_8x1gx")
+
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(-477, -155)
+texture = ExtResource("63_pr821")
+
+[node name="Graveyard" type="Sprite2D" parent="."]
+position = Vector2(-477, -155)
+texture = ExtResource("64_b1v6p")
+
+[node name="Mountains" type="Sprite2D" parent="."]
+position = Vector2(-477, -155)
+texture = ExtResource("65_qldj6")
+
+[node name="Objects" type="Sprite2D" parent="."]
+position = Vector2(-477, -155)
+texture = ExtResource("66_7brxj")
+
+[node name="Tileset-sliced" type="Sprite2D" parent="."]
+position = Vector2(-477, -155)
+texture = ExtResource("67_irh5k")
+
+[node name="Tileset2" type="Sprite2D" parent="."]
+position = Vector2(-477, -155)
+texture = ExtResource("68_l8vob")
+
+[node name="Fire1" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("69_rdi4i")
+
+[node name="Fire2" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("70_2t3sx")
+
+[node name="Fire3" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("71_itxo5")
+
+[node name="Fire4" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("72_i8x77")
+
+[node name="Fire5" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("73_0ekr7")
+
+[node name="Fire6" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("74_7bwxd")
+
+[node name="Fire7" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("75_g2yi4")
+
+[node name="Fire8" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("76_yw4sq")
+
+[node name="Fire9" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("77_2516u")
+
+[node name="Fire10" type="Sprite2D" parent="."]
+position = Vector2(-700, 264)
+texture = ExtResource("78_as16a")
+
+[node name="Wizard-idle-1" type="Sprite2D" parent="."]
+position = Vector2(-568, 268)
+texture = ExtResource("79_16e1n")
+
+[node name="Wizard-idle-2" type="Sprite2D" parent="."]
+position = Vector2(-568, 268)
+texture = ExtResource("80_jyth3")
+
+[node name="Wizard-idle-3" type="Sprite2D" parent="."]
+position = Vector2(-568, 268)
+texture = ExtResource("81_ynro4")
+
+[node name="Wizard-idle-4" type="Sprite2D" parent="."]
+position = Vector2(-568, 268)
+texture = ExtResource("82_u647h")
+
+[node name="Wizard-idle-5" type="Sprite2D" parent="."]
+position = Vector2(-568, 268)
+texture = ExtResource("83_rtbt3")
+
+[node name="Wizard" type="Sprite2D" parent="."]
+position = Vector2(-900, 272)
+texture = ExtResource("84_g6rd5")
+
+[node name="Background4" type="Sprite2D" parent="."]
+position = Vector2(-243, -449)
+texture = ExtResource("85_sd8yc")
+
+[node name="Mid-layer-01" type="Sprite2D" parent="."]
+position = Vector2(-243, -449)
+texture = ExtResource("86_ohdtu")
+
+[node name="Mid-layer-02" type="Sprite2D" parent="."]
+position = Vector2(-243, -449)
+texture = ExtResource("87_flc4w")
+
+[node name="Props2" type="Sprite2D" parent="."]
+position = Vector2(-243, -449)
+texture = ExtResource("88_k338w")
+
+[node name="Tileset3" type="Sprite2D" parent="."]
+position = Vector2(-243, -449)
+texture = ExtResource("89_fg5v5")
+
+[node name="Trees" type="Sprite2D" parent="."]
+position = Vector2(-243, -449)
+texture = ExtResource("90_78tnd")
+
+[node name="Back3" type="Sprite2D" parent="."]
+position = Vector2(-870, 113)
+texture = ExtResource("91_gk8b3")
+
+[node name="Front4" type="Sprite2D" parent="."]
+position = Vector2(-870, 113)
+texture = ExtResource("92_gov7m")
+
+[node name="Middle3" type="Sprite2D" parent="."]
+position = Vector2(-870, 113)
+texture = ExtResource("93_n5sjk")
+
+[node name="Tileset4" type="Sprite2D" parent="."]
+position = Vector2(-870, 113)
+texture = ExtResource("94_m3bbi")
+
+[node name="Back4" type="Sprite2D" parent="."]
+position = Vector2(-153, 721)
+texture = ExtResource("95_i2rjc")
+
+[node name="Middle4" type="Sprite2D" parent="."]
+position = Vector2(-153, 721)
+texture = ExtResource("96_tw8hs")
+
+[node name="Tileset5" type="Sprite2D" parent="."]
+position = Vector2(-153, 721)
+texture = ExtResource("97_tfm8o")
+
+[node name="Back5" type="Sprite2D" parent="."]
+position = Vector2(440, -117)
+texture = ExtResource("98_rmil2")
+
+[node name="Middle5" type="Sprite2D" parent="."]
+position = Vector2(440, -117)
+texture = ExtResource("99_udq43")
+
+[node name="Near" type="Sprite2D" parent="."]
+position = Vector2(440, -117)
+texture = ExtResource("100_4s6df")
+
+[node name="Tileset6" type="Sprite2D" parent="."]
+position = Vector2(440, -117)
+texture = ExtResource("101_qc6rr")
+
+[node name="Crystal-1" type="Sprite2D" parent="."]
+position = Vector2(81, 56)
+texture = ExtResource("102_4i3r5")
+
+[node name="Crystal-2" type="Sprite2D" parent="."]
+position = Vector2(81, 56)
+texture = ExtResource("103_1s0i7")
+
+[node name="Plant-1" type="Sprite2D" parent="."]
+position = Vector2(81, 56)
+texture = ExtResource("104_eyfna")
+
+[node name="Plant-2" type="Sprite2D" parent="."]
+position = Vector2(81, 56)
+texture = ExtResource("105_tpd7b")
+
+[node name="Background5" type="Sprite2D" parent="."]
+position = Vector2(-931, -389)
+texture = ExtResource("106_dndy1")
+
+[node name="Lava-background-preview" type="Sprite2D" parent="."]
+position = Vector2(-931, -389)
+texture = ExtResource("107_014qi")
+
+[node name="Lava-tile" type="Sprite2D" parent="."]
+position = Vector2(-931, -389)
+texture = ExtResource("108_0g1vu")
+
+[node name="Middle-rocks" type="Sprite2D" parent="."]
+position = Vector2(-931, -389)
+texture = ExtResource("109_xm1kl")

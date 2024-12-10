@@ -17,11 +17,26 @@ var total_slime_health = 10
 
 var tower_health = 1000
 
+
+## Defines the path to the game scene. Hides the play button if empty.
+@export_file("*.tscn") var game_scene_path : String
+@export var options_packed_scene : PackedScene
+@export var credits_packed_scene : PackedScene
+
+var options_scene
+var credits_scene
+var sub_menu
+
+func load_scene(scene_path : String):
+	SceneLoader.load_scene(scene_path)
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	level_camera = $level_camera
 	
-	var tower_element = 144
+	var tower_element = 17
 	
 	$PowderViewport.powder_instance.health_element = tower_element
 	

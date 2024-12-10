@@ -1,0 +1,105 @@
+In v1, the spell tower isn't getting different versions. The spell tower I have here is the one I'm using for release.
+
+I really love seeing all the open source devs going around saying "hey I used this in my game". It's sch a wonderful moment of human connection.
+
+People can judge absolutely however they want for me using premade assets. Shut the fuck up, I'm running my business. One man can't and shouldn't do everyhtng. Instead, he should use the tools available to him and expand on the ideas he finds in his world! He should try to make art instead of tearing down other's art.
+
+rate or hate! please rate <3
+
+On Pensubic's page: Feel free to use this for commercial projects!
+I think this is how to make industry contacts. This guy will be really happy if my game succeeds with his art. The Dark Series is exactly what I need and want. I want a dark tone for half od the game. It should feel mysterious and spooky. That'll give players a good thrill and provide contrast to the overworld.
+
+Let's credit the hell out of Penusbmic for his work and art for this gamme.
+
+Lets go! we're using someone's else's parrallax.
+
+If I'm gonna use this guy's stuff, then Let's show it off to the grestest extent possible and make it look really really good.
+
+
+I could use two weeks, I get a week. I can live with that.
+
+I can composite michelle's two logos to make one complete logo in this format:
+
+
+SPELL
+SLIME!
+
+
+
+My logo will have three animations. Eyes side to side, eyes roll like lottery machine, and move arm to cast spell. I can do a circular screen wipe with a shader at the point of his want to load/unload scenes. That'll add a lot of polish.
+
+So I just gotta run an ollama server and I'm ok. Godot can connect to it using a plugin called fuku.
+
+Let's get talking with the AI. Let's see how it can manifest a spell phrase.
+
+looks like the AI isn't smart enough to do it quick. Gotta write my own format to give to the AI.
+
+Looks like the bullets should be different for every single gun.
+
+
+Tower with slimes and powder is the key art. Put lots of different kinds of slimes and sizes of slimes. 
+
+I've always preferred starving on my own terms than feasting on someone else's. That's independance.
+
+Hard work is my path to freedom right now. If I work hard, I can earn my freedom. That's so worth it.
+
+I'm publishing on steam because it's a smart and fast way to monetization, and it takes care of so much for me. Online presence, marketing, sales, tax shit, etc etc etc. It's an amazing deal, and I really wanna pursue it to the max. I'm the man who found a pearl of great worth, and sold his house and all he had to possess it. That's the game and Adri.
+
+I'm done fucking around now. Let's make a great game.
+
+projectiles, then skies, then assemble slime png scenes for branding.
+
+I gotta belive in my own knowledge of tech. I have great reason to. All my features are already working! My tech is done.  Demo'd. Everything else is window dressing. Let's dress this baby up reaaaal nice.
+Believe in your tech!!!
+
+A big reason I left RR was that thir tech stack is dated as fuck. I'm outta there.
+
+I'll have to make the powder toy a scrolling buffer. Moves as the screen does, old particles go off-screen and go away.
+
+move the simulation window to where I need simulation running. Powder can be saved in a much bigger array, just not loaded into the sim yet.
+
+
+
+
+
+I might need to research better ways to change the simulation size. I feel like I'm doing it wrong right now.
+
+
+
+
+Remember,it's all just an array. Don't respect it too much. Access it!
+
+
+In defined regions, certain powder gets spawned. Prexisting powder takes precendence over cast spells. Spells just spam powder if they can, get overridden by prexisting if they can't.
+Nice easy elegant system. Let the powder toy handle the lack of overwriting. Actually, isn't there a replace flag? Maybe I'll use it.
+
+I can control the powder toy via pre-spawning particles. I should keep track of what powder chunks have already been spawned into a magical toy. When a chunk exits the spell, if there is powder in it, it gets resaved.
+
+Enemy cores get the same spawnin/resave method as normal powder, except they also move relative to everything else.
+
+
+My bug was switching the x and y when I imported the particle array. Thay's why it only worked when x and y were equal. Now it should work at any resolution! hehe
+
+load and unload the extension when you're ready
+
+
+Spells can only be active in one area at a time. When you cast a new one, it either joins or obviates the old one.
+
+I can make the edges of the powder toy solid or loop. Solid will be good for relationships between non loaded and loaded powder I think.
+
+
+Maybe I can auto-wrap the powder toy box to make it self-contained? I should totally be able to do that. I think it'll produce much more satisfying effects. Let's say our only goal is to kill slimes,
+And the only way to do that is to trap them in a powder toy then burn their core with magic of differemt kinds. That's as far as I need to go, I think.
+
+Particles already have consistent IDs. I can track these and move them to keep track of enemies and objects.
+
+Spells are gautunteed to run for a certain number of frames, not in a certain amount of time. I'll switch the powder toy back and forth between them to process. This will give the illusion that they're all running at the same time.
+
+
+Don't make the spell zone a limitation. Make it a mechanic.
+Players can deal good damage with the normal gun, but when a part of the screen is getting hectic, they can select it and call down a powder zone.
+Then, any bullets that strike enemies within that zone will explode into powder of their given type.
+
+The "spell zone" should look like a rectangualr hole in the world with stars visible through it. Like in Celeste.
+
+Might be worth devoting a little more time to making pwoder toy less jeaslous of other copies of itself running at the same time.

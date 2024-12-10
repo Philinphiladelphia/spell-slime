@@ -24,6 +24,8 @@ var jump_power = 10000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SoundManager.play_sfx("slime1", 0, -4, 1)
+	
 	$slime_node.health_offset = Vector2(-450, -900)
 	
 	# must be done in this order

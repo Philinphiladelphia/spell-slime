@@ -4,4 +4,3 @@
 
 [node name="SoundManager" type="Node"]
 script = ExtResource("1")
-preload_resources = true

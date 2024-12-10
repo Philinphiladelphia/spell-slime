@@ -50,7 +50,7 @@ func set_element(value):
 	element = value
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready() -> void:	
 	$health_bar.bone_number = bone_number
 	$damage_bar.bone_number = bone_number
 	
@@ -96,6 +96,8 @@ func _on_jump_timer_timeout() -> void:
 		jump_direction.y = local_move_direction.y
 		jump(jump_direction)
 		touching_something = false
+	else:
+		jump_timer.wait_time = jump_interval/2
 	
 	# Called when the jump timer times out
 func _on_powdering_timeout() -> void:
@@ -112,6 +114,7 @@ func _disable_powdering():
 
 
 func jump(jump_direction):
+	SoundManager.play_sfx("drop1", 0, 1, 1)
 	get_child(0).apply_impulse(jump_direction * jump_power)
 
 func set_max_health(amount):
@@ -164,6 +167,8 @@ func enable_light():
 	$slime_hitbox/PointLight2D.enabled = true
 
 func kill_slime():
+	SoundManager.play_sfx("enemy_down", 0, -3, 0.5)
+	
 	is_powdering = 0
 	
 	garbage_collect_timer.start()
@@ -180,8 +185,4 @@ func _on_timeout() -> void:
 	garbage_collect = true
 
 func _on_slime_hitbox_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	touching_something = true
-	
-
-func _on_slime_hitbox_area_entered(area: Area2D) -> void:
 	touching_something = true

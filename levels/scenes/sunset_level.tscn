@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dkmnhwrbi6fme"]
+[gd_scene load_steps=14 format=3 uid="uid://dkmnhwrbi6fme"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_l88nd"]
 [ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="1_spb3g"]
@@ -6,9 +6,12 @@
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="4_tb22u"]
 [ext_resource type="Script" path="res://levels/scenes/track_slimes.gd" id="5_qjk6u"]
 [ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="5_slx2u"]
+[ext_resource type="Texture2D" uid="uid://6iq70kpx3kie" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version A/Layers/sky.png" id="5_yda0f"]
 [ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="6_rbl1c"]
-[ext_resource type="Texture2D" uid="uid://bjvp3lk3almqm" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version B/Layers/sky.png" id="8_p5j0j"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="9_vl4tg"]
+[ext_resource type="Script" path="res://addons/rhythm_notifier/rhythm_notifier.gd" id="10_kjrj2"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="11_kqtcf"]
+[ext_resource type="AudioStream" uid="uid://y4gp0h428vu1" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 05 Synth Gunk.mp3" id="12_r8drp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28xsr"]
 bg_color = Color(0.1863, 0.69, 0.379385, 1)
@@ -37,7 +40,7 @@ physics_interpolation_mode = 1
 z_index = -10
 position = Vector2(76, 2092)
 scale = Vector2(70, 70)
-texture = ExtResource("8_p5j0j")
+texture = ExtResource("5_yda0f")
 region_rect = Rect2(0, 0, 1500, 500)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="level_camera"]
@@ -65,5 +68,18 @@ script = ExtResource("5_qjk6u")
 [node name="spawner1" type="Node2D" parent="slime_tracker"]
 position = Vector2(1264, -781)
 script = ExtResource("4_tb22u")
+
+[node name="RhythmNotifier" type="Node" parent="." node_paths=PackedStringArray("audio_stream_player")]
+script = ExtResource("10_kjrj2")
+bpm = 114.0
+beat_length = 0.526316
+audio_stream_player = NodePath("../BackgroundMusicPlayer")
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("11_kqtcf")]
+stream = ExtResource("12_r8drp")
+volume_db = -6.0
+bus = &"Master"
+
+[connection signal="beat" from="RhythmNotifier" to="slime_tracker" method="_on_rhythm_notifier_beat"]
 
 [editable path="slime_health_layer/HealthBar"]
