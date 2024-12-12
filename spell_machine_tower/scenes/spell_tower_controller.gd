@@ -26,12 +26,12 @@ var base_stats = {
 		"primary_shake": 0.2,
 		"primary_cooldown_max": 8,
 		"primary_cooldown_rate": 3,
-		"secondary_projectile_dmg": 30,
-		"secondary_firing_velocity": 10000,
+		"secondary_projectile_dmg": 10,
+		"secondary_firing_velocity": 15000,
 		"secondary_max_lifespan": 2,
 		"secondary_post_hit_lifespan": 0.4,
-		"secondary_mass": 10,
-		"secondary_firing_interval": 3
+		"secondary_mass": 5,
+		"secondary_firing_interval": 1.5
 	},
 		"slime2": {
 		"max_health": 10000,

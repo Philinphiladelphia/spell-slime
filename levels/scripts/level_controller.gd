@@ -23,6 +23,8 @@ var tower_health = 1000
 @export var options_packed_scene : PackedScene
 @export var credits_packed_scene : PackedScene
 
+@export var spelltowernode : Node2D
+
 var options_scene
 var credits_scene
 var sub_menu

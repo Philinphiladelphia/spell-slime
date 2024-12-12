@@ -13,6 +13,9 @@ radius = 50.636
 collision_layer = 7
 collision_mask = 3
 mass = 2.0
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 5
 script = ExtResource("1_0unes")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
