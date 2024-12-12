@@ -1,8 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://bnvr02pptg8vv"]
+[gd_scene load_steps=17 format=3 uid="uid://bnvr02pptg8vv"]
 
 [ext_resource type="Texture2D" uid="uid://w8hw61f36sgv" path="res://spell_machine_tower/assets/useful_parts/1113850873(1).png" id="1_7qht6"]
 [ext_resource type="Texture2D" uid="uid://bkunirc4rfomy" path="res://background/parallax_backgrounds/Cave Tileset Pack/PNG files/ParallaxCave4.png" id="1_nnbsx"]
-[ext_resource type="Texture2D" uid="uid://c82tj3lm5xhk2" path="res://spell_machine_tower/assets/useful_parts/335313623.png" id="2_0upi6"]
 [ext_resource type="Texture2D" uid="uid://duvoay5wfjns6" path="res://background/parallax_backgrounds/Cave Tileset Pack/PNG files/ParallaxCave3.png" id="2_d4khv"]
 [ext_resource type="Texture2D" uid="uid://db551joutwrtf" path="res://background/parallax_backgrounds/Cave Tileset Pack/PNG files/ParallaxCave2.png" id="3_24uk7"]
 [ext_resource type="LabelSettings" uid="uid://c34qgwo4ca7bk" path="res://upgrade_tree/assets/major_font.tres" id="3_bi300"]
@@ -76,16 +75,12 @@ texture = ExtResource("1_7qht6")
 region_enabled = true
 region_rect = Rect2(340.7, 46.6699, 163.35, 458.59)
 
-[node name="robot" type="Sprite2D" parent="spell_machine_base"]
-position = Vector2(-3, 479)
-texture = ExtResource("2_0upi6")
-
-[node name="Label" type="Label" parent="spell_machine_base/robot"]
-offset_left = -114.0
-offset_top = 238.0
-offset_right = 93.0
-offset_bottom = 302.0
-text = "Roberto"
+[node name="Label2" type="Label" parent="spell_machine_base"]
+offset_left = -722.0
+offset_top = 618.0
+offset_right = -368.0
+offset_bottom = 682.0
+text = "Mechagrandpa"
 label_settings = ExtResource("3_bi300")
 metadata/_edit_use_anchors_ = true
 

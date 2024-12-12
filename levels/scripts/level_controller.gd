@@ -76,7 +76,10 @@ func _process(delta: float) -> void:
 	# handle slime positions
 	var slime_positions = $slime_tracker.collected_slime_positions
 	var slime_powder_activation = $slime_tracker.powder_activated_bitmap
-	
+	var slime_elements = $slime_tracker.slime_elements
+	var slime_circle_sizes = $slime_tracker.slime_circle_sizes
+	var ignore_elements = []  # Add any elements to ignore here
+
 	for i in range(len(slime_positions)):
 		
 		if slime_powder_activation[i] != 1:
@@ -96,6 +99,9 @@ func _process(delta: float) -> void:
 		if dist.x < 1000 && dist.y < 1000:
 			var powder_x = 120-(60-(dist.x/powder_scale)) + powder_offset_x
 			var powder_y = (dist.y/powder_scale) + powder_offset_y
+			
+			#var slime_powder = $PowderViewport.powder_instance.collide_slime(Vector2(powder_x, powder_y), 10)
+			#print(slime_powder)
 			#powder_toy.clear_sim_area(wall_offset, wall_offset, width - (wall_offset*2), border)
 			#$PowderViewport.powder_instance.powder_toy.clear_sim_area(powder_x, powder_y, slime_circle_size, slime_circle_size)
 			$PowderViewport.powder_instance.circle(Vector2(powder_x,powder_y), slime_circle_size, element)

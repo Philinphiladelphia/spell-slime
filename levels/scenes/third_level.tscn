@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="4_qypbl"]
 [ext_resource type="Texture2D" uid="uid://bjvp3lk3almqm" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version B/Layers/sky.png" id="5_jigly"]
 [ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="6_yiftn"]
-[ext_resource type="Script" path="res://levels/scenes/track_slimes.gd" id="7_blygw"]
+[ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="7_blygw"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="8_8bbjr"]
 
 [node name="SunsetLevel" type="Node2D"]

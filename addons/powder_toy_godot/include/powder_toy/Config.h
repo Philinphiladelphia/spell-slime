@@ -3,18 +3,18 @@
 #include "common/Version.h"
 
 constexpr bool SET_WINDOW_ICON          = true;
-constexpr bool DEBUG                    = false;
+constexpr bool DEBUG                    = true;
 constexpr bool X86                      = true;
 constexpr bool BETA                     = false;
 constexpr bool SNAPSHOT                 = false;
 constexpr bool MOD                      = false;
 constexpr bool NOHTTP                   = false;
 constexpr bool LUACONSOLE               = true;
-constexpr bool ALLOW_FAKE_NEWER_VERSION = false;
+constexpr bool ALLOW_FAKE_NEWER_VERSION = true;
 constexpr bool USE_UPDATESERVER         = false;
 constexpr bool CAN_INSTALL              = true;
-constexpr bool USE_BLUESCREEN           = true;
-constexpr bool INSTALL_CHECK            = true;
+constexpr bool USE_BLUESCREEN           = false;
+constexpr bool INSTALL_CHECK            = false;
 constexpr bool IGNORE_UPDATES           = true;
 constexpr bool ENFORCE_HTTPS            = true;
 constexpr bool SECURE_CIPHERS_ONLY      = false;
