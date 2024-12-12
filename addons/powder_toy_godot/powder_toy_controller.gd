@@ -115,6 +115,18 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseMotion and is_drawing:
 		mouse_pos = event.position
 
+func collide_slime(position: Vector2, radius: float) -> Array:
+	var particles_within_radius = []
+	var particle_types = powder_toy.get_particle_type_array()
+
+	for particle in particle_types:
+		var particle_position = particle.position
+		var distance = position.distance_to(particle_position)
+		if distance <= radius:
+			particles_within_radius.append(particle)
+
+	return particles_within_radius
+
 # this function makes it possible for the powder toy to have void edges while maintaining air pressure.
 func clear_outer_area() -> void:
 	var width = 120

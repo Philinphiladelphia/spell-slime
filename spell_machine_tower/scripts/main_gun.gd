@@ -45,6 +45,9 @@ var primary_cooldown_rate = 5.0 # 5 projectiles per second
 var lightning_animation
 var basic_animation
 
+# gem system
+# slimes scan for particle damage, json dict to determine how much
+
 func _ready() -> void:
 	# Load the projectile and slime scenes
 	basic_projectile_scene = preload("res://upgrade_tree/scenes/basic_projectile.tscn")
@@ -74,7 +77,7 @@ func _process(delta: float) -> void:
 	if primary_firing and primary_projectiles_fired < primary_cooldown_max:
 		if primary_firing_timer <= 0:
 			if not SoundManager.is_playing("machine_gun_fire"):
-				SoundManager.play_sfx("machine_gun_fire", 0, -6, 1)
+				SoundManager.play_sfx("machine_gun_fire", 0, -20, 1)
 				#SoundManager.play_sfx("machine_gun_fire", 0, 0.6, 1)
 			fire_projectile(basic_projectile_scene, primary_projectile_dmg, primary_firing_velocity, primary_max_lifespan, primary_post_hit_lifespan, primary_mass, primary_shake, basic_animation)
 			primary_firing_timer = primary_firing_interval
@@ -89,7 +92,7 @@ func _process(delta: float) -> void:
 	# Handle secondary firing
 	if secondary_firing:
 		if secondary_firing_timer <= 0:
-			SoundManager.play_sfx("harpoon", 0, -3, 3)
+			SoundManager.play_sfx("harpoon", 0, -12, 3)
 			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake, lightning_animation)
 			secondary_firing_timer = secondary_firing_interval
 

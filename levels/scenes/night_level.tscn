@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c58iyoi4wlpjr" path="res://background/scenes/parallaxes/night.tscn" id="3_ej0ht"]
 [ext_resource type="Texture2D" uid="uid://d240bm81yewd" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/night-town-background-files/layers/night-town-background-sky.png" id="4_586re"]
 [ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="4_ybr3v"]
-[ext_resource type="Script" path="res://levels/scenes/track_slimes.gd" id="5_5g6k6"]
+[ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="5_5g6k6"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="7_xdq1o"]
 [ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="9_1x0cq"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="9_4kvi6"]

@@ -726,43 +726,43 @@ position = Vector2(-1528, -1222)
 texture = ExtResource("129_alnq2")
 
 [node name="Back7" type="Sprite2D" parent="."]
-position = Vector2(-1218, -3151)
+position = Vector2(-1510, -3363)
 texture = ExtResource("130_hi8cl")
 
 [node name="Foreground-empty" type="Sprite2D" parent="."]
-position = Vector2(-1218, -3151)
+position = Vector2(-1004, -3194)
 texture = ExtResource("131_fmcb4")
 
 [node name="Foreground2" type="Sprite2D" parent="."]
-position = Vector2(-1218, -3151)
+position = Vector2(-1092, -3484)
 texture = ExtResource("132_awx02")
 
 [node name="Middle5" type="Sprite2D" parent="."]
-position = Vector2(-1218, -3151)
+position = Vector2(-1696, -3250)
 texture = ExtResource("133_6jgjg")
 
 [node name="Back-buildings" type="Sprite2D" parent="."]
-position = Vector2(-1158, -2899)
+position = Vector2(-2041, -2788)
 texture = ExtResource("134_wyuvh")
 
 [node name="Far-buildings2" type="Sprite2D" parent="."]
-position = Vector2(-1158, -2899)
+position = Vector2(-2042, -2957)
 texture = ExtResource("135_m3cdd")
 
 [node name="Foreground3" type="Sprite2D" parent="."]
-position = Vector2(-1158, -2899)
+position = Vector2(-2075, -3193)
 texture = ExtResource("136_dgy86")
 
 [node name="Back8" type="Sprite2D" parent="."]
-position = Vector2(-754, -2818)
+position = Vector2(-409, -3169)
 texture = ExtResource("137_n4c28")
 
 [node name="Buildings2" type="Sprite2D" parent="."]
-position = Vector2(-754, -2818)
+position = Vector2(-409, -3460)
 texture = ExtResource("138_xpvic")
 
 [node name="Front5" type="Sprite2D" parent="."]
-position = Vector2(-754, -2818)
+position = Vector2(-414, -3390)
 texture = ExtResource("139_ymd22")
 
 [node name="Bridge" type="Sprite2D" parent="."]
@@ -802,7 +802,7 @@ position = Vector2(1746, -1615)
 texture = ExtResource("148_f5hil")
 
 [node name="Gems-spritesheet" type="Sprite2D" parent="."]
-position = Vector2(-3529, 699)
+position = Vector2(-2079, 155)
 texture = ExtResource("149_5nnxp")
 
 [node name="Spritesheet" type="Sprite2D" parent="."]

@@ -2,7 +2,7 @@
 #include <cassert>
 
 template<class Type>
-class ExplicitSingleton
+class ExplicitSingleton // not anymore lol
 {
 	static Type *&Instance()
 	{
@@ -15,7 +15,7 @@ public:
 	ExplicitSingleton()
 	{
 		auto &instance = Instance();
-		//assert(!instance);
+		//assert(!instance);  singleton be gone
 		instance = static_cast<Type *>(this);
 	}
 

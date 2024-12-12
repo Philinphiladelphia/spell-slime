@@ -114,7 +114,7 @@ func _disable_powdering():
 
 
 func jump(jump_direction):
-	SoundManager.play_sfx("drop1", 0, 1, 1)
+	SoundManager.play_sfx("drop1", 0, -6, 1)
 	get_child(0).apply_impulse(jump_direction * jump_power)
 
 func set_max_health(amount):
@@ -130,7 +130,7 @@ func set_health(amount):
 	else:
 		print("Slime health is above health max")
 
-func apply_damage(amount):
+func apply_damage(amount, projectile_position):
 	health -= amount
 	$health_bar.current_health = health
 	$health_bar.show()
@@ -167,7 +167,7 @@ func enable_light():
 	$slime_hitbox/PointLight2D.enabled = true
 
 func kill_slime():
-	SoundManager.play_sfx("enemy_down", 0, -6, 0.5)
+	SoundManager.play_sfx("enemy_down", 0, -12, 0.5)
 	
 	is_powdering = 0
 	

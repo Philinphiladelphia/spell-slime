@@ -27,6 +27,11 @@ ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autolo
 Dialogue="*res://addons/clyde/helpers/dialogue_manager.gd"
 ItemQueue="*res://item_system/scripts/item_queue.gd"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
+GameData="*res://destructible_tiles/scripts/GameData.gd"
+GlobalTools="*res://destructible_tiles/scripts/GlobalTools.gd"
+EffectsManager="*res://destructible_tiles/scripts/EffectsManager.gd"
+AudioManager="*res://destructible_tiles/scripts/AudioManager.gd"
+SignalManager="*res://destructible_tiles/scripts/SignalManager.gd"
 
 [debug]
 

@@ -90,6 +90,8 @@ public:
     void GetParticles(int* particles);
     void GetParticleColors(int* particle_colors);
 
+    void collide_slimes(const std::vector<std::pair<int, int>>& positions, const std::vector<int>& sizes, const std::vector<int>& ignore_elements, std::vector<std::vector<int>>& collidable_particles);
+
     void InitializeSingletons();
 
 private:
