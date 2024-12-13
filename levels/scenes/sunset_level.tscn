@@ -1,7 +1,6 @@
 [gd_scene load_steps=25 format=4 uid="uid://dkmnhwrbi6fme"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_l88nd"]
-[ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="1_spb3g"]
 [ext_resource type="PackedScene" uid="uid://e6og876glwxo" path="res://background/scenes/parallaxes/sunrise_maxxfield_parrish.tscn" id="3_mpna4"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="4_tb22u"]
 [ext_resource type="Script" path="res://levels/scripts/move_level_camera.gd" id="5_2oow1"]
@@ -18,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bcksxanqyip0w" path="res://destructible_tiles/destructible_tileset.tscn" id="15_ens3l"]
 [ext_resource type="Script" path="res://addons/cameraregion2d/CameraRegionController2D.gd" id="16_wpgqt"]
 [ext_resource type="Script" path="res://addons/cameraregion2d/CameraRegion2D.gd" id="17_mycij"]
+[ext_resource type="PackedScene" uid="uid://chufmtlsuka0f" path="res://slimes/environment/foreground/branding_platform.tscn" id="19_h8pe4"]
 [ext_resource type="Script" path="res://levels/scenes/mouse_follower_node.gd" id="19_vfvgw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28xsr"]
@@ -748,11 +748,7 @@ camera_node = NodePath("level_camera")
 
 [node name="ParallaxTest" parent="." instance=ExtResource("3_mpna4")]
 z_index = -5
-position = Vector2(-2947, -4136)
-
-[node name="terrain" parent="." instance=ExtResource("1_spb3g")]
-position = Vector2(11194, -862)
-scale = Vector2(4, 2)
+position = Vector2(75, -4193)
 
 [node name="SpellMachineTower" parent="." instance=ExtResource("5_slx2u")]
 position = Vector2(-2022, -2019)
@@ -760,7 +756,7 @@ position = Vector2(-2022, -2019)
 [node name="level_camera" type="Camera2D" parent="."]
 position = Vector2(-1999, -2696)
 scale = Vector2(0.25, 0.25)
-zoom = Vector2(0.25, 0.25)
+zoom = Vector2(0.2, 0.2)
 script = ExtResource("5_2oow1")
 max_distance_x = 1000.0
 max_distance_y = 500.0
@@ -771,7 +767,7 @@ deadzone_size_y = 5000.0
 physics_interpolation_mode = 1
 z_index = -10
 position = Vector2(76, 2092)
-scale = Vector2(70, 70)
+scale = Vector2(85, 85)
 texture = ExtResource("5_yda0f")
 region_rect = Rect2(0, 0, 1500, 500)
 
@@ -797,9 +793,10 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_28xsr")
 [node name="slime_tracker" type="Node" parent="."]
 script = ExtResource("5_qjk6u")
 
-[node name="spawner1" type="Node2D" parent="slime_tracker"]
-position = Vector2(1650, -575)
+[node name="spawner1" type="Node2D" parent="slime_tracker" node_paths=PackedStringArray("spawntimer")]
+position = Vector2(-3425, -1972)
 script = ExtResource("4_tb22u")
+spawntimer = NodePath("../../slime_spawn_timer")
 
 [node name="RhythmNotifier" type="Node" parent="." node_paths=PackedStringArray("audio_stream_player")]
 script = ExtResource("10_kjrj2")
@@ -813,7 +810,7 @@ volume_db = -18.586
 bus = &"Master"
 
 [node name="test_tilesets" type="Node2D" parent="."]
-position = Vector2(-1063, -2064)
+position = Vector2(2077, -3666)
 script = ExtResource("13_1ou65")
 
 [node name="middle" type="Node2D" parent="test_tilesets"]
@@ -825,7 +822,7 @@ tile_map_data = PackedByteArray("AAAZAAIAAAAQAAIAAAAZAAEAAAAVAAgAAAAZAAAAAAAaAAg
 tile_set = SubResource("TileSet_6lm7a")
 
 [node name="destructible_tileset" parent="." instance=ExtResource("15_ens3l")]
-position = Vector2(-482, -5178)
+position = Vector2(2871, -4836)
 scale = Vector2(6, 6)
 
 [node name="CameraRegionController2D" type="Node2D" parent="." node_paths=PackedStringArray("camera", "target_node")]
@@ -845,6 +842,14 @@ camera_zoom = Vector2(0.25, 0.25)
 [node name="mouse_follower_node" type="Node2D" parent="."]
 script = ExtResource("19_vfvgw")
 
+[node name="slime_spawn_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="terrain" parent="." instance=ExtResource("19_h8pe4")]
+position = Vector2(4675, -136)
+scale = Vector2(3, 3.03)
+
 [connection signal="beat" from="RhythmNotifier" to="slime_tracker" method="_on_rhythm_notifier_beat"]
+[connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner1" method="_on_slime_spawn_timer_timeout"]
 
 [editable path="slime_health_layer/HealthBar"]

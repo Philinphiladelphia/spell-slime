@@ -20,7 +20,7 @@ func _ready() -> void:
 	$slime_node.set_max_health(max_health)
 	$slime_node.set_health(max_health)
 	$slime_node.jump_power = jump_power
-	$slime_node.local_move_direction = Vector2(-0.3, -1).normalized()
+	$slime_node.local_move_direction = Vector2(-1, -1).normalized()
 	
 	$slime_node.jump_interval = jump_interval
 	$slime_node.powder_interval = powder_interval

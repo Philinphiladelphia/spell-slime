@@ -42,9 +42,29 @@ var enable_light = false
 
 var tower_midpoint = Vector2(0,0)
 
+@export var spawntimer: Timer
+
+var _slime_types = []
+var _delays = []
+
+var spawner_depleted = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
+	
+	var slimes_to_spawn = []
+	var delays = []
+	
+	for i in range(5):
+		slimes_to_spawn.append(SlimeType.SMALL)
+		delays.append(1)
+		
+	
+	slimes_to_spawn.append_array([SlimeType.SMALL, SlimeType.MEDIUM, SlimeType.LARGE])
+	delays.append_array([1.5, 2.5, 3.5])
+
+	spawn_slimes_with_delay(slimes_to_spawn, delays)
 	
 func _process(delta: float) -> void:
 	slime_positions.clear()
@@ -65,6 +85,12 @@ func _process(delta: float) -> void:
 			slime.go_right = false
 		else:
 			slime.go_right = true
+			
+		var slime_dist = slime.slime_position - get_parent().get_parent().spelltowernode.position
+		
+		if slime_dist.length() > 8000 && not slime.is_dead:
+			print("Slime off screen, killing")
+			slime.kill_slime()
 		
 		powder_activated_bitmap.append(slime.is_powdering)
 		
@@ -80,10 +106,32 @@ func _process(delta: float) -> void:
 func set_tower_midpoint(value):
 	tower_midpoint = value
 
+enum SlimeType { SMALL, MEDIUM, LARGE }
+
+var default_delays = {
+	SlimeType.SMALL: 1.0,
+	SlimeType.MEDIUM: 2.0,
+	SlimeType.LARGE: 3.0
+	}
+
+func spawn_slimes_with_delay(slime_types: Array, delays: Array = []):
+	_slime_types = slime_types
+	_delays = delays
+	spawn_slime_helper()
+		
+func spawn_slime_helper():
+	if _delays.size() == 0:
+		spawner_depleted = true
+		return
+	spawntimer.wait_time = _delays.pop_front()
+	spawntimer.start()
+
+# Example usage:
+# spawn_slimes_with_delay([SlimeType.SMALL, SlimeType.MEDIUM, SlimeType.LARGE], [1.5, 2.5, 3.5])
+
 func spawn_small_slime():
 	var instance = small_slime.instantiate()
 	small_slime_count += 1
-	instance.position = position
 	instance.get_child(0).slime_warning_shader = shine_shader
 	instance.get_child(0).slime_powder_shader = gameboy_shader
 	if enable_light:
@@ -93,7 +141,6 @@ func spawn_small_slime():
 func spawn_med_slime():
 	var instance = med_slime.instantiate()
 	med_slime_count += 1
-	instance.position = position
 	instance.get_child(0).slime_warning_shader = shine_shader
 	instance.get_child(0).slime_powder_shader = gameboy_shader
 	if enable_light:
@@ -103,7 +150,6 @@ func spawn_med_slime():
 func spawn_large_slime():
 	var instance = large_slime.instantiate()
 	large_slime_count += 1
-	instance.position = position
 	instance.get_child(0).slime_warning_shader = shine_shader
 	instance.get_child(0).slime_powder_shader = gameboy_shader
 	if enable_light:
@@ -133,3 +179,16 @@ func _input(event):
 	elif Input.is_key_pressed(KEY_P) and large_slime_count < max_large_slimes:
 		spawn_large_slime()
 		last_spawn_time = current_time
+
+
+func _on_slime_spawn_timer_timeout() -> void:
+	var next_slime_type = _slime_types.pop_front()
+	match next_slime_type:
+		SlimeType.SMALL:
+			spawn_small_slime()
+		SlimeType.MEDIUM:
+			spawn_med_slime()
+		SlimeType.LARGE:
+			spawn_large_slime()
+	
+	spawn_slime_helper()
