@@ -83,21 +83,18 @@ func _ready() -> void:
 
 # Called when the jump timer times out
 func _on_jump_timer_timeout() -> void:
-	if touching_something:
-		var random_offset = randf_range(-jump_interval/5.0, jump_interval/5.0)
-		jump_timer.wait_time = jump_interval + random_offset
-		
-		var jump_direction : Vector2
-		if go_right:
-			jump_direction.x = local_move_direction.x
-		else:
-			jump_direction.x = -local_move_direction.x
-			
-		jump_direction.y = local_move_direction.y
-		jump(jump_direction)
-		touching_something = false
+	var random_offset = randf_range(-jump_interval/5.0, jump_interval/5.0)
+	jump_timer.wait_time = jump_interval + random_offset
+	
+	var jump_direction : Vector2
+	if go_right:
+		jump_direction.x = local_move_direction.x
 	else:
-		jump_timer.wait_time = jump_interval/2
+		jump_direction.x = -local_move_direction.x
+		
+	jump_direction.y = local_move_direction.y
+	jump(jump_direction)
+	touching_something = false
 	
 	# Called when the jump timer times out
 func _on_powdering_timeout() -> void:
