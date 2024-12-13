@@ -4,8 +4,9 @@ extends Camera2D
 @export var max_distance_x = 500.0
 @export var max_distance_y = 300.0
 
-# Deadzone size
-@export var deadzone_size: float = 100.0
+# Deadzone sizes
+@export var deadzone_size_x: float = 100.0
+@export var deadzone_size_y: float = 100.0
 
 var original_position : Vector2
 
@@ -17,19 +18,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# Get the mouse position relative to the viewport
 	var mouse_position = get_local_mouse_position()
-	
+
 	# Calculate the offset from the tower position
 	var target_position = original_position + mouse_position
-	
+
 	# Apply deadzone
-	if abs(mouse_position.x) < deadzone_size:
+	if abs(mouse_position.x - original_position.x -2000) < deadzone_size_x:
 		target_position.x = original_position.x
-	if abs(mouse_position.y) < deadzone_size:
+	if abs(mouse_position.y - original_position.y -5000) < deadzone_size_y:
 		target_position.y = original_position.y
-	
-	## Clamp the offset to the maximum distances
+
+	# Clamp the offset to the maximum distances
 	target_position.x = clamp(target_position.x, original_position.x-max_distance_x, original_position.x+max_distance_x)
 	target_position.y = clamp(target_position.y, original_position.y-max_distance_y, original_position.y+max_distance_y)
-	
+
 	# Move the camera towards the target position asymptotically
 	global_position = lerp(global_position, target_position, 0.03)

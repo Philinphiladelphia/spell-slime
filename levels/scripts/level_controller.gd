@@ -2,7 +2,7 @@ extends Node2D
 
 var level_camera: Camera2D
 
-var camera_move_speed = 1000
+var camera_move_speed = 2500
 
 var health = 100
 var init_spellward_health = true
@@ -110,8 +110,15 @@ func _process(delta: float) -> void:
 	
 	if Input.is_physical_key_pressed(KEY_A):
 		level_camera.position.x -= camera_move_speed * delta
-	elif Input.is_physical_key_pressed(KEY_D):
+	if Input.is_physical_key_pressed(KEY_D):
 		level_camera.position.x += camera_move_speed * delta
+	if Input.is_physical_key_pressed(KEY_W):
+		level_camera.position.y -= camera_move_speed/2.0 * delta
+	if Input.is_physical_key_pressed(KEY_S):
+		level_camera.position.y += camera_move_speed/2.0 * delta
+		
+		
+		
 	elif Input.is_physical_key_pressed(KEY_E):
 		$PowderViewport.powder_instance.polygon(Vector2(60,60), 30.0, 8, 2, 2)
 
