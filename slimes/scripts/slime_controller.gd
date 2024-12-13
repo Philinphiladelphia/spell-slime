@@ -161,7 +161,6 @@ func _process(delta: float) -> void:
 		
 		if not is_dead:
 			kill_slime()
-			is_dead = true
 
 func enable_light():
 	$slime_hitbox/PointLight2D.enabled = true
@@ -170,6 +169,7 @@ func kill_slime():
 	SoundManager.play_sfx("enemy_down", 0, -12, 0.5)
 	
 	is_powdering = 0
+	is_dead = true
 	
 	garbage_collect_timer.start()
 	powder_timer.stop()

@@ -59,7 +59,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if $SpellMachineTower.is_dead == true:
-		queue_free()
+		SceneLoader.load_scene("res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn")
 	
 	# init powder health. Gotta wait a sec for the initial powder manifests to go off
 	var powder_health = $PowderViewport.powder_instance.get_health()
@@ -83,6 +83,10 @@ func _process(delta: float) -> void:
 	var slime_elements = $slime_tracker.slime_elements
 	var slime_circle_sizes = $slime_tracker.slime_circle_sizes
 	var ignore_elements = []  # Add any elements to ignore here
+	
+	# player wins!
+	if slime_positions.size() == 0 and $slime_tracker.spawns_done:
+		SceneLoader.load_scene("res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn")
 
 	for i in range(len(slime_positions)):
 		
@@ -110,13 +114,13 @@ func _process(delta: float) -> void:
 			#$PowderViewport.powder_instance.powder_toy.clear_sim_area(powder_x, powder_y, slime_circle_size, slime_circle_size)
 			$PowderViewport.powder_instance.circle(Vector2(powder_x,powder_y), slime_circle_size, element)
 	
-	if Input.is_physical_key_pressed(KEY_A):
+	if Input.is_action_pressed("cam_left"):
 		level_camera.position.x -= camera_move_speed * delta
-	if Input.is_physical_key_pressed(KEY_D):
+	if Input.is_action_pressed("cam_right"):
 		level_camera.position.x += camera_move_speed * delta
-	if Input.is_physical_key_pressed(KEY_W):
+	if Input.is_action_pressed("cam_up"):
 		level_camera.position.y -= camera_move_speed/2.0 * delta
-	if Input.is_physical_key_pressed(KEY_S):
+	if Input.is_action_pressed("cam_down"):
 		level_camera.position.y += camera_move_speed/2.0 * delta
 		
 		
