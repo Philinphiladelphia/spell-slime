@@ -20,7 +20,7 @@ var powder_interval = 3
 var powder_duration = 0.5
 
 var max_health = 2000.0
-var jump_power = 15000
+var jump_power = 12000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

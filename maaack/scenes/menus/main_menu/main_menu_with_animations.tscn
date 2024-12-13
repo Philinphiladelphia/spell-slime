@@ -382,7 +382,7 @@ radius = 17.21
 [node name="MainMenu" instance=ExtResource("1_umbo3")]
 theme = ExtResource("2_28l5c")
 script = ExtResource("2_xtkjf")
-game_scene_path = "res://levels/scenes/sunset_level.tscn"
+game_scene_path = "res://ui/scenes/start_new_run.tscn"
 
 [node name="UISoundController" parent="." index="0"]
 button_hovered = ExtResource("4_oxs2l")

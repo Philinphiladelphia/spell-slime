@@ -86,13 +86,10 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_qbh6e")
 [node name="slime_tracker" type="Node" parent="."]
 script = ExtResource("5_5g6k6")
 
-[node name="right_spawner" type="Node2D" parent="slime_tracker"]
+[node name="right_spawner" type="Node2D" parent="slime_tracker" node_paths=PackedStringArray("spawntimer")]
 position = Vector2(638, -311)
 script = ExtResource("7_xdq1o")
-
-[node name="left_spawner" type="Node2D" parent="slime_tracker"]
-position = Vector2(-3387, -326)
-script = ExtResource("7_xdq1o")
+spawntimer = NodePath("../../slime_spawn_timer")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-1988, -2833)
@@ -106,5 +103,8 @@ script = ExtResource("10_27ni7")
 [node name="PowderViewport" parent="." instance=ExtResource("9_1x0cq")]
 position = Vector2(-3415, -4238)
 scale = Vector2(3.5, 3.5)
+
+[node name="slime_spawn_timer" type="Timer" parent="."]
+one_shot = true
 
 [editable path="slime_health_layer/HealthBar"]

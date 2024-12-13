@@ -1,12 +1,11 @@
 extends Node2D
 
-var jump_interval = 4
+var jump_interval = 3
 var powder_interval = 2
 var powder_duration = 0.2
 
 var max_health = 200.0
-var jump_power = 1000
-
+var jump_power = 600
 var element_numbers = [21, 3, 4, 6, 7]
 
 # Called when the node enters the scene tree for the first time.
