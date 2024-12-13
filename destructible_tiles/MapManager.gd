@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var tilemap = $TileMap
+@onready var tilemap = $Node2D/TileMap/Layer0
 
 func _ready():
 	SignalManager.connect("SPAWN_BLOCK_PARTICLES",spawn_block_particles)
@@ -18,7 +18,7 @@ func damage_block(pos, damage = 1):
 	if pos is Vector2:
 		pos = tilemap.local_to_map(pos)
 	#Grabs the atlas coordinates from the tileset so we can start deducting the x value.
-	var atlas_coord = tilemap.get_cell_atlas_coords(0,pos,true)
+	var atlas_coord = tilemap.get_cell_atlas_coords(pos)
 	#Retrieve the terrain type from a custom function.
 	var block_type = retrieve_terrain(pos)
 	#Variable to store the next atlas coordinates. This is so we can check if the tile been destroyed.
@@ -28,8 +28,8 @@ func damage_block(pos, damage = 1):
 		#Plays the referenced audio.
 		AudioManager.play_audio("STONE_HIT")
 		#We then can deduct 1 from the x value.
-		tilemap.set_cell(0,pos,0,atlas_coord - Vector2i(damage,0))
-		new_atlas_coord = tilemap.get_cell_atlas_coords(0,pos,true)
+		tilemap.set_cell(pos,0,atlas_coord - Vector2i(damage,0))
+		new_atlas_coord = tilemap.get_cell_atlas_coords(pos)
 		#Now we check again, if the new value is negative.
 		if new_atlas_coord.x <= -1:
 			#We can destroy the block.
@@ -46,7 +46,7 @@ func damage_block(pos, damage = 1):
 func fall_block(pos):
 	if pos is Vector2:
 		pos = tilemap.local_to_map(pos)
-	var atlas_coord = tilemap.get_cell_atlas_coords(0,pos,true)
+	var atlas_coord = tilemap.get_cell_atlas_coords(pos)
 	var block_type = retrieve_terrain(pos)
 	if atlas_coord != Vector2i(-1,-1):
 		AudioManager.play_audio("STONE_BREAK")
@@ -56,7 +56,7 @@ func fall_block(pos):
 #Destroys the block.
 func destroy_block(pos,atlas_coord,block_type = "DIRT", apply_force = true):
 	#We set the cell in the tilemap to negative value, meaning we erase it.
-	tilemap.set_cell(0,pos,0,Vector2(-1,-1))
+	tilemap.set_cell(pos,-1,Vector2(-1,-1))
 	#We load a physics block and add it.
 	var physics_block = load("res://destructible_tiles/assets/physics-block/PhysicsBlock.tscn").instantiate()
 	self.add_child(physics_block)
@@ -70,7 +70,7 @@ func retrieve_terrain(pos):
 	if pos is Vector2:
 		pos = tilemap.local_to_map(pos)
 	#Get the cell data at the position.
-	var tile_data = tilemap.get_cell_tile_data(0,pos,true)
+	var tile_data = tilemap.get_cell_tile_data(pos)
 	#Variable to store the name.
 	var terrain_string
 	#Checks if there's data at the position.

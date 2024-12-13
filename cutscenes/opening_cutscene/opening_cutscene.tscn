@@ -209,826 +209,839 @@
 
 [node name="OpeningCutscene" type="Node2D"]
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="unused" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="unused"]
 position = Vector2(199, 385)
 texture = ExtResource("1_nq2v4")
 
-[node name="Clouds" type="Sprite2D" parent="."]
+[node name="Clouds" type="Sprite2D" parent="unused"]
 position = Vector2(569, 471)
 texture = ExtResource("2_621qm")
 
-[node name="Far-grounds" type="Sprite2D" parent="."]
+[node name="Far-grounds" type="Sprite2D" parent="unused"]
 position = Vector2(569, 471)
 texture = ExtResource("3_x80b4")
 
-[node name="Sea" type="Sprite2D" parent="."]
+[node name="Sea" type="Sprite2D" parent="unused"]
 position = Vector2(569, 471)
 texture = ExtResource("4_62hux")
 
-[node name="Sky" type="Sprite2D" parent="."]
+[node name="Sky" type="Sprite2D" parent="unused"]
 position = Vector2(569, 471)
 texture = ExtResource("5_pms0v")
 
-[node name="Tileset" type="Sprite2D" parent="."]
+[node name="Tileset" type="Sprite2D" parent="unused"]
 position = Vector2(569, 471)
 texture = ExtResource("6_quadf")
 
-[node name="Background2" type="Sprite2D" parent="."]
+[node name="Background2" type="Sprite2D" parent="unused"]
 position = Vector2(-519, -794)
 texture = ExtResource("7_jvchc")
 
-[node name="Middleground-no-fungus" type="Sprite2D" parent="."]
+[node name="Middleground-no-fungus" type="Sprite2D" parent="unused"]
 position = Vector2(-519, -794)
 texture = ExtResource("8_dc50g")
 
-[node name="Middleground" type="Sprite2D" parent="."]
+[node name="Middleground" type="Sprite2D" parent="unused"]
 position = Vector2(-519, -794)
 texture = ExtResource("9_3daqb")
 
-[node name="Props" type="Sprite2D" parent="."]
+[node name="Props" type="Sprite2D" parent="unused"]
 position = Vector2(-519, -794)
 texture = ExtResource("10_budd5")
 
-[node name="Tilesets" type="Sprite2D" parent="."]
+[node name="Tilesets" type="Sprite2D" parent="unused"]
 position = Vector2(-519, -794)
 texture = ExtResource("11_lmscb")
 
-[node name="Walls" type="Sprite2D" parent="."]
+[node name="Walls" type="Sprite2D" parent="unused"]
 position = Vector2(-519, -794)
 texture = ExtResource("12_1ggvc")
 
-[node name="1" type="Sprite2D" parent="."]
+[node name="1" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("13_h7pdu")
 
-[node name="2" type="Sprite2D" parent="."]
+[node name="2" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("14_qj4ly")
 
-[node name="3Fx" type="Sprite2D" parent="."]
+[node name="3Fx" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("15_a483l")
 
-[node name="4" type="Sprite2D" parent="."]
+[node name="4" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("16_jqhqb")
 
-[node name="5" type="Sprite2D" parent="."]
+[node name="5" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("17_r5dq5")
 
-[node name="6Fx" type="Sprite2D" parent="."]
+[node name="6Fx" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("18_68531")
 
-[node name="7" type="Sprite2D" parent="."]
+[node name="7" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("19_cynbf")
 
-[node name="8Fx" type="Sprite2D" parent="."]
+[node name="8Fx" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("20_hb3df")
 
-[node name="9" type="Sprite2D" parent="."]
+[node name="9" type="Sprite2D" parent="unused"]
 position = Vector2(-4388, -776)
 texture = ExtResource("21_8qxfk")
 
-[node name="Buildings-bg" type="Sprite2D" parent="."]
+[node name="Buildings-bg" type="Sprite2D" parent="unused"]
 position = Vector2(-1570.5, -835)
 texture = ExtResource("22_ev3lm")
 
-[node name="Near-buildings-bg" type="Sprite2D" parent="."]
+[node name="Near-buildings-bg" type="Sprite2D" parent="unused"]
 position = Vector2(-1570.5, -835)
 texture = ExtResource("23_saj5h")
 
-[node name="Skyline-a" type="Sprite2D" parent="."]
+[node name="Skyline-a" type="Sprite2D" parent="unused"]
 position = Vector2(-1570.5, -835)
 texture = ExtResource("24_3l3y6")
 
-[node name="Skyline-b" type="Sprite2D" parent="."]
+[node name="Skyline-b" type="Sprite2D" parent="unused"]
 position = Vector2(-1570.5, -835)
 texture = ExtResource("25_ik448")
 
-[node name="Clouds2" type="Sprite2D" parent="."]
+[node name="Clouds2" type="Sprite2D" parent="unused"]
 position = Vector2(-1866, -1699)
 texture = ExtResource("26_ykjng")
 
-[node name="Tiles" type="Sprite2D" parent="."]
+[node name="Tiles" type="Sprite2D" parent="unused"]
 position = Vector2(-1866, -1699)
 texture = ExtResource("27_c3w2c")
 
-[node name="Town" type="Sprite2D" parent="."]
+[node name="Town" type="Sprite2D" parent="unused"]
 position = Vector2(-1866, -1699)
 texture = ExtResource("28_st1sr")
 
-[node name="Old-dark-castle-interior-background" type="Sprite2D" parent="."]
+[node name="Old-dark-castle-interior-background" type="Sprite2D" parent="unused"]
 position = Vector2(-628, 1374)
 texture = ExtResource("29_tib3m")
 
-[node name="Old-dark-castle-interior-tileset" type="Sprite2D" parent="."]
+[node name="Old-dark-castle-interior-tileset" type="Sprite2D" parent="unused"]
 position = Vector2(-628, 1374)
 texture = ExtResource("30_1on65")
 
-[node name="Preview-old-dark-castle-interior-tileset" type="Sprite2D" parent="."]
+[node name="Preview-old-dark-castle-interior-tileset" type="Sprite2D" parent="unused"]
 position = Vector2(-628, 1374)
 texture = ExtResource("31_ujn4m")
 
-[node name="Back" type="Sprite2D" parent="."]
+[node name="Back" type="Sprite2D" parent="unused"]
 position = Vector2(-958, -767)
 texture = ExtResource("32_q87wf")
 
-[node name="Front" type="Sprite2D" parent="."]
+[node name="Front" type="Sprite2D" parent="unused"]
 position = Vector2(-958, -767)
 texture = ExtResource("33_u6dao")
 
-[node name="Middle" type="Sprite2D" parent="."]
+[node name="Middle" type="Sprite2D" parent="unused"]
 position = Vector2(-958, -767)
 texture = ExtResource("34_lpnq2")
 
-[node name="Grunge-tileset" type="Sprite2D" parent="."]
+[node name="Grunge-tileset" type="Sprite2D" parent="unused"]
 position = Vector2(-949, -1668)
 texture = ExtResource("35_0a25l")
 
-[node name="Big-computer" type="Sprite2D" parent="."]
+[node name="Big-computer" type="Sprite2D" parent="unused"]
 position = Vector2(-3024, -1684)
 texture = ExtResource("36_5hx36")
 
-[node name="Cryo-pod" type="Sprite2D" parent="."]
+[node name="Cryo-pod" type="Sprite2D" parent="unused"]
 position = Vector2(-3024, -1684)
 texture = ExtResource("37_swpek")
 
-[node name="Cyberpunk-props-preview" type="Sprite2D" parent="."]
+[node name="Cyberpunk-props-preview" type="Sprite2D" parent="unused"]
 position = Vector2(-3024, -1684)
 texture = ExtResource("38_vr6ss")
 
-[node name="Elevator-track" type="Sprite2D" parent="."]
+[node name="Elevator-track" type="Sprite2D" parent="unused"]
 position = Vector2(-3024, -1684)
 texture = ExtResource("39_vbyqx")
 
-[node name="Elevator" type="Sprite2D" parent="."]
+[node name="Elevator" type="Sprite2D" parent="unused"]
 position = Vector2(-3024, -1684)
 texture = ExtResource("40_ougxn")
 
-[node name="Hanging-terminal" type="Sprite2D" parent="."]
+[node name="Hanging-terminal" type="Sprite2D" parent="unused"]
 position = Vector2(-3024, -1684)
 texture = ExtResource("41_ycnhe")
 
-[node name="Server-gabinetes" type="Sprite2D" parent="."]
+[node name="Server-gabinetes" type="Sprite2D" parent="unused"]
 position = Vector2(-3024, -1684)
 texture = ExtResource("42_yus4t")
 
-[node name="Small-terminal" type="Sprite2D" parent="."]
+[node name="Small-terminal" type="Sprite2D" parent="unused"]
 position = Vector2(-3024, -1684)
 texture = ExtResource("43_neols")
 
-[node name="Bg-wall-with-supports" type="Sprite2D" parent="."]
+[node name="Bg-wall-with-supports" type="Sprite2D" parent="unused"]
 position = Vector2(-1781, 1182)
 texture = ExtResource("44_d0eiu")
 
-[node name="Bg-wall" type="Sprite2D" parent="."]
+[node name="Bg-wall" type="Sprite2D" parent="unused"]
 position = Vector2(-1781, 1182)
 texture = ExtResource("45_oiahi")
 
-[node name="Floor" type="Sprite2D" parent="."]
+[node name="Floor" type="Sprite2D" parent="unused"]
 position = Vector2(-1781, 1182)
 texture = ExtResource("46_2hjrn")
 
-[node name="Foreground" type="Sprite2D" parent="."]
+[node name="Foreground" type="Sprite2D" parent="unused"]
 position = Vector2(-1781, 1182)
 texture = ExtResource("47_po5ds")
 
-[node name="Preview-bulkhead-walls-v2" type="Sprite2D" parent="."]
+[node name="Preview-bulkhead-walls-v2" type="Sprite2D" parent="unused"]
 position = Vector2(-1781, 1182)
 texture = ExtResource("48_ipltr")
 
-[node name="Back-sand" type="Sprite2D" parent="."]
+[node name="Back-sand" type="Sprite2D" parent="unused"]
 position = Vector2(756.5, -780.5)
 texture = ExtResource("49_8m4gt")
 
-[node name="Boat-far" type="Sprite2D" parent="."]
+[node name="Boat-far" type="Sprite2D" parent="unused"]
 position = Vector2(743.5, -777.5)
 texture = ExtResource("50_1ysup")
 
-[node name="Boat-front" type="Sprite2D" parent="."]
+[node name="Boat-front" type="Sprite2D" parent="unused"]
 position = Vector2(617.5, -829.5)
 texture = ExtResource("51_sg18r")
 
-[node name="Boat-middle" type="Sprite2D" parent="."]
+[node name="Boat-middle" type="Sprite2D" parent="unused"]
 position = Vector2(745.5, -887.5)
 texture = ExtResource("52_l26y3")
 
-[node name="Front2" type="Sprite2D" parent="."]
+[node name="Front2" type="Sprite2D" parent="unused"]
 position = Vector2(821.5, -648.5)
 texture = ExtResource("53_rvmca")
 
-[node name="Middle-sand" type="Sprite2D" parent="."]
+[node name="Middle-sand" type="Sprite2D" parent="unused"]
 position = Vector2(691.5, -690.5)
 texture = ExtResource("54_b5ol4")
 
-[node name="Water" type="Sprite2D" parent="."]
+[node name="Water" type="Sprite2D" parent="unused"]
 position = Vector2(984.5, -805.5)
 texture = ExtResource("55_ngquv")
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="unused"]
 position = Vector2(353, -1654)
 texture = ExtResource("56_gbyoe")
 
-[node name="Buildings" type="Sprite2D" parent="."]
+[node name="Buildings" type="Sprite2D" parent="unused"]
 position = Vector2(353, -1654)
 texture = ExtResource("57_r8sgf")
 
-[node name="Far-buildings" type="Sprite2D" parent="."]
+[node name="Far-buildings" type="Sprite2D" parent="unused"]
 position = Vector2(353, -1654)
 texture = ExtResource("58_wwpph")
 
-[node name="Skill-foreground" type="Sprite2D" parent="."]
+[node name="Skill-foreground" type="Sprite2D" parent="unused"]
 position = Vector2(353, -1654)
 texture = ExtResource("59_gvj01")
 
-[node name="Back2" type="Sprite2D" parent="."]
+[node name="Back2" type="Sprite2D" parent="unused"]
 position = Vector2(-2024, -763)
 texture = ExtResource("60_qo27a")
 
-[node name="Front3" type="Sprite2D" parent="."]
+[node name="Front3" type="Sprite2D" parent="unused"]
 position = Vector2(-2024, -763)
 texture = ExtResource("61_dwcjb")
 
-[node name="Middle2" type="Sprite2D" parent="."]
+[node name="Middle2" type="Sprite2D" parent="unused"]
 position = Vector2(-2024, -763)
 texture = ExtResource("62_8x1gx")
 
-[node name="Background3" type="Sprite2D" parent="."]
+[node name="Background3" type="Sprite2D" parent="unused"]
 position = Vector2(-1046, -2241)
 texture = ExtResource("63_pr821")
 
-[node name="Graveyard" type="Sprite2D" parent="."]
+[node name="Graveyard" type="Sprite2D" parent="unused"]
 position = Vector2(-1046, -2241)
 texture = ExtResource("64_b1v6p")
 
-[node name="Mountains" type="Sprite2D" parent="."]
+[node name="Mountains" type="Sprite2D" parent="unused"]
 position = Vector2(-1046, -2241)
 texture = ExtResource("65_qldj6")
 
-[node name="Objects" type="Sprite2D" parent="."]
+[node name="Objects" type="Sprite2D" parent="unused"]
 position = Vector2(-1046, -2241)
 texture = ExtResource("66_7brxj")
 
-[node name="Tileset-sliced" type="Sprite2D" parent="."]
+[node name="Tileset-sliced" type="Sprite2D" parent="unused"]
 position = Vector2(-1046, -2241)
 texture = ExtResource("67_irh5k")
 
-[node name="Tileset2" type="Sprite2D" parent="."]
+[node name="Tileset2" type="Sprite2D" parent="unused"]
 position = Vector2(-1046, -2241)
 texture = ExtResource("68_l8vob")
 
-[node name="Fire1" type="Sprite2D" parent="."]
+[node name="Fire1" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("69_rdi4i")
 
-[node name="Fire2" type="Sprite2D" parent="."]
+[node name="Fire2" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("70_2t3sx")
 
-[node name="Fire3" type="Sprite2D" parent="."]
+[node name="Fire3" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("71_itxo5")
 
-[node name="Fire4" type="Sprite2D" parent="."]
+[node name="Fire4" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("72_i8x77")
 
-[node name="Fire5" type="Sprite2D" parent="."]
+[node name="Fire5" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("73_0ekr7")
 
-[node name="Fire6" type="Sprite2D" parent="."]
+[node name="Fire6" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("74_7bwxd")
 
-[node name="Fire7" type="Sprite2D" parent="."]
+[node name="Fire7" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("75_g2yi4")
 
-[node name="Fire8" type="Sprite2D" parent="."]
+[node name="Fire8" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("76_yw4sq")
 
-[node name="Fire9" type="Sprite2D" parent="."]
+[node name="Fire9" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("77_2516u")
 
-[node name="Fire10" type="Sprite2D" parent="."]
+[node name="Fire10" type="Sprite2D" parent="unused"]
 position = Vector2(-700, 264)
 texture = ExtResource("78_as16a")
 
-[node name="Wizard-idle-1" type="Sprite2D" parent="."]
+[node name="Wizard-idle-1" type="Sprite2D" parent="unused"]
 position = Vector2(-568, 268)
 texture = ExtResource("79_16e1n")
 
-[node name="Wizard-idle-2" type="Sprite2D" parent="."]
+[node name="Wizard-idle-2" type="Sprite2D" parent="unused"]
 position = Vector2(-568, 268)
 texture = ExtResource("80_jyth3")
 
-[node name="Wizard-idle-3" type="Sprite2D" parent="."]
+[node name="Wizard-idle-3" type="Sprite2D" parent="unused"]
 position = Vector2(-568, 268)
 texture = ExtResource("81_ynro4")
 
-[node name="Wizard-idle-4" type="Sprite2D" parent="."]
+[node name="Wizard-idle-4" type="Sprite2D" parent="unused"]
 position = Vector2(-568, 268)
 texture = ExtResource("82_u647h")
 
-[node name="Wizard-idle-5" type="Sprite2D" parent="."]
+[node name="Wizard-idle-5" type="Sprite2D" parent="unused"]
 position = Vector2(-568, 268)
 texture = ExtResource("83_rtbt3")
 
-[node name="Wizard" type="Sprite2D" parent="."]
+[node name="Wizard" type="Sprite2D" parent="unused"]
 position = Vector2(-900, 272)
 texture = ExtResource("84_g6rd5")
 
-[node name="Background4" type="Sprite2D" parent="."]
+[node name="Background4" type="Sprite2D" parent="unused"]
 position = Vector2(-2398, -733)
 texture = ExtResource("85_sd8yc")
 
-[node name="Mid-layer-01" type="Sprite2D" parent="."]
+[node name="Mid-layer-01" type="Sprite2D" parent="unused"]
 position = Vector2(-2398, -733)
 texture = ExtResource("86_ohdtu")
 
-[node name="Mid-layer-02" type="Sprite2D" parent="."]
+[node name="Mid-layer-02" type="Sprite2D" parent="unused"]
 position = Vector2(-2398, -733)
 texture = ExtResource("87_flc4w")
 
-[node name="Props2" type="Sprite2D" parent="."]
+[node name="Props2" type="Sprite2D" parent="unused"]
 position = Vector2(-2398, -733)
 texture = ExtResource("88_k338w")
 
-[node name="Tileset3" type="Sprite2D" parent="."]
+[node name="Tileset3" type="Sprite2D" parent="unused"]
 position = Vector2(-2398, -733)
 texture = ExtResource("89_fg5v5")
 
-[node name="Trees" type="Sprite2D" parent="."]
+[node name="Trees" type="Sprite2D" parent="unused"]
 position = Vector2(-2398, -733)
 texture = ExtResource("90_78tnd")
 
-[node name="Back3" type="Sprite2D" parent="."]
+[node name="Back3" type="Sprite2D" parent="unused"]
 position = Vector2(1076, -1638)
 texture = ExtResource("91_gk8b3")
 
-[node name="Front4" type="Sprite2D" parent="."]
+[node name="Front4" type="Sprite2D" parent="unused"]
 position = Vector2(1076, -1638)
 texture = ExtResource("92_gov7m")
 
-[node name="Middle3" type="Sprite2D" parent="."]
+[node name="Middle3" type="Sprite2D" parent="unused"]
 position = Vector2(1076, -1638)
 texture = ExtResource("93_n5sjk")
 
-[node name="Tileset4" type="Sprite2D" parent="."]
+[node name="Tileset4" type="Sprite2D" parent="unused"]
 position = Vector2(1076, -1638)
 texture = ExtResource("94_m3bbi")
 
-[node name="Back4" type="Sprite2D" parent="."]
+[node name="Back4" type="Sprite2D" parent="unused"]
 position = Vector2(-193, -1642)
 texture = ExtResource("95_i2rjc")
 
-[node name="Middle4" type="Sprite2D" parent="."]
+[node name="Middle4" type="Sprite2D" parent="unused"]
 position = Vector2(-193, -1642)
 texture = ExtResource("96_tw8hs")
 
-[node name="Tileset5" type="Sprite2D" parent="."]
+[node name="Tileset5" type="Sprite2D" parent="unused"]
 position = Vector2(-193, -1642)
 texture = ExtResource("97_tfm8o")
 
-[node name="Background5" type="Sprite2D" parent="."]
+[node name="Background5" type="Sprite2D" parent="unused"]
 position = Vector2(-2928, -776)
 texture = ExtResource("106_dndy1")
 
-[node name="Lava-background-preview" type="Sprite2D" parent="."]
+[node name="Lava-background-preview" type="Sprite2D" parent="unused"]
 position = Vector2(-2928, -776)
 texture = ExtResource("107_014qi")
 
-[node name="Lava-tile" type="Sprite2D" parent="."]
+[node name="Lava-tile" type="Sprite2D" parent="unused"]
 position = Vector2(-2928, -776)
 texture = ExtResource("108_0g1vu")
 
-[node name="Middle-rocks" type="Sprite2D" parent="."]
+[node name="Middle-rocks" type="Sprite2D" parent="unused"]
 position = Vector2(-2928, -776)
 texture = ExtResource("109_xm1kl")
 
-[node name="Back-walls" type="Sprite2D" parent="."]
+[node name="Back-walls" type="Sprite2D" parent="unused"]
 position = Vector2(-3928, -1660)
 texture = ExtResource("102_mwbrn")
 
-[node name="Background6" type="Sprite2D" parent="."]
+[node name="Background6" type="Sprite2D" parent="unused"]
 position = Vector2(-3928, -1660)
 texture = ExtResource("103_7mqqn")
 
-[node name="Tiles2" type="Sprite2D" parent="."]
+[node name="Tiles2" type="Sprite2D" parent="unused"]
 position = Vector2(-3928, -1660)
 texture = ExtResource("104_2yyn7")
 
-[node name="Country-platform-back" type="Sprite2D" parent="."]
+[node name="Country-platform-back" type="Sprite2D" parent="unused"]
 position = Vector2(-935, -1393)
 texture = ExtResource("105_hxt27")
 
-[node name="Country-platform-forest" type="Sprite2D" parent="."]
+[node name="Country-platform-forest" type="Sprite2D" parent="unused"]
 position = Vector2(-935, -1393)
 texture = ExtResource("106_qjb6q")
 
-[node name="Country-platform-tiles-example" type="Sprite2D" parent="."]
+[node name="Country-platform-tiles-example" type="Sprite2D" parent="unused"]
 position = Vector2(-935, -1393)
 texture = ExtResource("107_g6hbl")
 
-[node name="Country-platform-tileset" type="Sprite2D" parent="."]
+[node name="Country-platform-tileset" type="Sprite2D" parent="unused"]
 position = Vector2(-935, -1393)
 texture = ExtResource("108_jw1rk")
 
-[node name="Clouds3" type="Sprite2D" parent="."]
+[node name="Clouds3" type="Sprite2D" parent="unused"]
 position = Vector2(-2840, -324)
 texture = ExtResource("109_qjdwr")
 
-[node name="Sky2" type="Sprite2D" parent="."]
+[node name="Sky2" type="Sprite2D" parent="unused"]
 position = Vector2(-2840, -324)
 texture = ExtResource("110_jemwx")
 
-[node name="Tileset7" type="Sprite2D" parent="."]
+[node name="Tileset7" type="Sprite2D" parent="unused"]
 position = Vector2(-2840, -324)
 texture = ExtResource("111_38va4")
 
-[node name="Trees2" type="Sprite2D" parent="."]
+[node name="Trees2" type="Sprite2D" parent="unused"]
 position = Vector2(-2840, -324)
 texture = ExtResource("112_dtagh")
 
-[node name="Background7" type="Sprite2D" parent="."]
+[node name="Background7" type="Sprite2D" parent="unused"]
 position = Vector2(-2804, -2028)
 texture = ExtResource("113_s0gvp")
 
-[node name="Mountain" type="Sprite2D" parent="."]
+[node name="Mountain" type="Sprite2D" parent="unused"]
 position = Vector2(-2804, -2028)
 texture = ExtResource("114_fhlwx")
 
-[node name="Tiles-example" type="Sprite2D" parent="."]
+[node name="Tiles-example" type="Sprite2D" parent="unused"]
 position = Vector2(-2804, -2028)
 texture = ExtResource("115_4nqsn")
 
-[node name="Tileset8" type="Sprite2D" parent="."]
+[node name="Tileset8" type="Sprite2D" parent="unused"]
 position = Vector2(-2804, -2028)
 texture = ExtResource("116_720ko")
 
-[node name="Crystal-3" type="Sprite2D" parent="."]
+[node name="Crystal-3" type="Sprite2D" parent="unused"]
 position = Vector2(-209.5, -799)
 texture = ExtResource("102_4i3r5")
 
-[node name="Crystal-4" type="Sprite2D" parent="."]
+[node name="Crystal-4" type="Sprite2D" parent="unused"]
 position = Vector2(-209.5, -799)
 texture = ExtResource("103_1s0i7")
 
-[node name="Plant-3" type="Sprite2D" parent="."]
+[node name="Plant-3" type="Sprite2D" parent="unused"]
 position = Vector2(-209.5, -799)
 texture = ExtResource("104_eyfna")
 
-[node name="Plant-4" type="Sprite2D" parent="."]
+[node name="Plant-4" type="Sprite2D" parent="unused"]
 position = Vector2(-209.5, -799)
 texture = ExtResource("105_tpd7b")
 
-[node name="Back6" type="Sprite2D" parent="."]
+[node name="Back6" type="Sprite2D" parent="unused"]
 position = Vector2(153.5, -810)
 texture = ExtResource("98_rmil2")
 
-[node name="Middle6" type="Sprite2D" parent="."]
+[node name="Middle6" type="Sprite2D" parent="unused"]
 position = Vector2(153.5, -810)
 texture = ExtResource("99_udq43")
 
-[node name="Near2" type="Sprite2D" parent="."]
+[node name="Near2" type="Sprite2D" parent="unused"]
 position = Vector2(153.5, -810)
 texture = ExtResource("100_4s6df")
 
-[node name="Tileset9" type="Sprite2D" parent="."]
+[node name="Tileset9" type="Sprite2D" parent="unused"]
 position = Vector2(153.5, -810)
 texture = ExtResource("101_qc6rr")
 
-[node name="Back5" type="Sprite2D" parent="."]
+[node name="Back5" type="Sprite2D" parent="unused"]
 position = Vector2(-1991, -1260)
 texture = ExtResource("125_vyfv7")
 
-[node name="Sci-fi-environment-tileset" type="Sprite2D" parent="."]
+[node name="Sci-fi-environment-tileset" type="Sprite2D" parent="unused"]
 position = Vector2(-1991, -1260)
 texture = ExtResource("126_uxwbc")
 
-[node name="Sky3" type="Sprite2D" parent="."]
+[node name="Sky3" type="Sprite2D" parent="unused"]
 position = Vector2(-1991, -1260)
 texture = ExtResource("127_rssip")
 
-[node name="Background8" type="Sprite2D" parent="."]
+[node name="Background8" type="Sprite2D" parent="unused"]
 position = Vector2(-1528, -1222)
 texture = ExtResource("128_8jm58")
 
-[node name="Tile-set-sci-fi-interior-platform" type="Sprite2D" parent="."]
+[node name="Tile-set-sci-fi-interior-platform" type="Sprite2D" parent="unused"]
 position = Vector2(-1528, -1222)
 texture = ExtResource("129_alnq2")
 
-[node name="Back7" type="Sprite2D" parent="."]
-position = Vector2(-1510, -3363)
-texture = ExtResource("130_hi8cl")
-
-[node name="Foreground-empty" type="Sprite2D" parent="."]
+[node name="Foreground-empty" type="Sprite2D" parent="unused"]
 position = Vector2(-1004, -3194)
 texture = ExtResource("131_fmcb4")
 
-[node name="Foreground2" type="Sprite2D" parent="."]
-position = Vector2(-1092, -3484)
+[node name="Foreground2" type="Sprite2D" parent="unused"]
+position = Vector2(-1123, -3660)
 texture = ExtResource("132_awx02")
 
-[node name="Middle5" type="Sprite2D" parent="."]
-position = Vector2(-1696, -3250)
-texture = ExtResource("133_6jgjg")
-
-[node name="Back-buildings" type="Sprite2D" parent="."]
+[node name="Back-buildings" type="Sprite2D" parent="unused"]
 position = Vector2(-2041, -2788)
 texture = ExtResource("134_wyuvh")
 
-[node name="Far-buildings2" type="Sprite2D" parent="."]
+[node name="Far-buildings2" type="Sprite2D" parent="unused"]
 position = Vector2(-2042, -2957)
 texture = ExtResource("135_m3cdd")
 
-[node name="Foreground3" type="Sprite2D" parent="."]
-position = Vector2(-2075, -3193)
-texture = ExtResource("136_dgy86")
-
-[node name="Back8" type="Sprite2D" parent="."]
-position = Vector2(-409, -3169)
-texture = ExtResource("137_n4c28")
-
-[node name="Buildings2" type="Sprite2D" parent="."]
-position = Vector2(-409, -3460)
-texture = ExtResource("138_xpvic")
-
-[node name="Front5" type="Sprite2D" parent="."]
-position = Vector2(-414, -3390)
-texture = ExtResource("139_ymd22")
-
-[node name="Bridge" type="Sprite2D" parent="."]
+[node name="Bridge" type="Sprite2D" parent="unused"]
 position = Vector2(-436, -2250)
 texture = ExtResource("140_srgxu")
 
-[node name="Far" type="Sprite2D" parent="."]
+[node name="Far" type="Sprite2D" parent="unused"]
 position = Vector2(1398, -835)
 texture = ExtResource("141_n8nm3")
 
-[node name="Foregound-merged" type="Sprite2D" parent="."]
+[node name="Foregound-merged" type="Sprite2D" parent="unused"]
 position = Vector2(1398, -835)
 texture = ExtResource("142_856ov")
 
-[node name="Foreground-1" type="Sprite2D" parent="."]
+[node name="Foreground-1" type="Sprite2D" parent="unused"]
 position = Vector2(1398, -835)
 texture = ExtResource("143_ka0of")
 
-[node name="Foreground-2" type="Sprite2D" parent="."]
+[node name="Foreground-2" type="Sprite2D" parent="unused"]
 position = Vector2(1398, -835)
 texture = ExtResource("144_2rs4t")
 
-[node name="Sand" type="Sprite2D" parent="."]
+[node name="Sand" type="Sprite2D" parent="unused"]
 position = Vector2(1398, -835)
 texture = ExtResource("145_fjvhf")
 
-[node name="Back-2" type="Sprite2D" parent="."]
+[node name="Back-2" type="Sprite2D" parent="unused"]
 position = Vector2(1746, -1615)
 texture = ExtResource("146_2fddw")
 
-[node name="Back9" type="Sprite2D" parent="."]
+[node name="Back9" type="Sprite2D" parent="unused"]
 position = Vector2(1746, -1615)
 texture = ExtResource("147_vilbq")
 
-[node name="Tileset6" type="Sprite2D" parent="."]
+[node name="Tileset6" type="Sprite2D" parent="unused"]
 position = Vector2(1746, -1615)
 texture = ExtResource("148_f5hil")
 
-[node name="Gems-spritesheet" type="Sprite2D" parent="."]
+[node name="Gems-spritesheet" type="Sprite2D" parent="unused"]
 position = Vector2(-2079, 155)
 texture = ExtResource("149_5nnxp")
 
-[node name="Spritesheet" type="Sprite2D" parent="."]
+[node name="Spritesheet" type="Sprite2D" parent="unused"]
 position = Vector2(-3984, 1454)
 texture = ExtResource("150_f1pd1")
 
-[node name="Frame1" type="Sprite2D" parent="."]
+[node name="Frame1" type="Sprite2D" parent="unused"]
 position = Vector2(-3816, 2305)
 texture = ExtResource("151_g1ywe")
 
-[node name="Frame2" type="Sprite2D" parent="."]
+[node name="Frame2" type="Sprite2D" parent="unused"]
 position = Vector2(-3816, 2305)
 texture = ExtResource("152_istoo")
 
-[node name="Frame3" type="Sprite2D" parent="."]
+[node name="Frame3" type="Sprite2D" parent="unused"]
 position = Vector2(-3816, 2305)
 texture = ExtResource("153_5ttpx")
 
-[node name="Frame4" type="Sprite2D" parent="."]
+[node name="Frame4" type="Sprite2D" parent="unused"]
 position = Vector2(-3816, 2305)
 texture = ExtResource("154_f6a8k")
 
-[node name="Frame5" type="Sprite2D" parent="."]
+[node name="Frame5" type="Sprite2D" parent="unused"]
 position = Vector2(-3816, 2305)
 texture = ExtResource("155_tnd8w")
 
-[node name="Frame6" type="Sprite2D" parent="."]
+[node name="Frame6" type="Sprite2D" parent="unused"]
 position = Vector2(-3816, 2305)
 texture = ExtResource("156_yhsmw")
 
-[node name="Frame7" type="Sprite2D" parent="."]
+[node name="Frame7" type="Sprite2D" parent="unused"]
 position = Vector2(-3816, 2305)
 texture = ExtResource("157_fdwnp")
 
-[node name="Frame8" type="Sprite2D" parent="."]
+[node name="Frame8" type="Sprite2D" parent="unused"]
 position = Vector2(-3816, 2305)
 texture = ExtResource("158_k3kah")
 
-[node name="Frame9" type="Sprite2D" parent="."]
+[node name="Frame9" type="Sprite2D" parent="unused"]
 position = Vector2(-3972, 2389)
 texture = ExtResource("159_2s8bt")
 
-[node name="Frame10" type="Sprite2D" parent="."]
+[node name="Frame10" type="Sprite2D" parent="unused"]
 position = Vector2(-3972, 2389)
 texture = ExtResource("160_e8dns")
 
-[node name="Ship-fly-preview" type="Sprite2D" parent="."]
+[node name="Ship-fly-preview" type="Sprite2D" parent="unused"]
 position = Vector2(-3061, 2389)
 texture = ExtResource("161_stcne")
 
-[node name="Ship-rotate-preview" type="Sprite2D" parent="."]
+[node name="Ship-rotate-preview" type="Sprite2D" parent="unused"]
 position = Vector2(-3061, 2389)
 texture = ExtResource("162_0fa57")
 
-[node name="Thrust-preview" type="Sprite2D" parent="."]
+[node name="Thrust-preview" type="Sprite2D" parent="unused"]
 position = Vector2(-3061, 2389)
 texture = ExtResource("163_88nlu")
 
-[node name="Bolt1" type="Sprite2D" parent="."]
+[node name="Bolt1" type="Sprite2D" parent="unused"]
 position = Vector2(-4392, 2221)
 texture = ExtResource("164_mroim")
 
-[node name="Bolt2" type="Sprite2D" parent="."]
+[node name="Bolt2" type="Sprite2D" parent="unused"]
 position = Vector2(-4392, 2221)
 texture = ExtResource("165_fxo0u")
 
-[node name="Bolt3" type="Sprite2D" parent="."]
+[node name="Bolt3" type="Sprite2D" parent="unused"]
 position = Vector2(-4392, 2221)
 texture = ExtResource("166_fjbyh")
 
-[node name="Bolt4" type="Sprite2D" parent="."]
+[node name="Bolt4" type="Sprite2D" parent="unused"]
 position = Vector2(-4392, 2221)
 texture = ExtResource("167_xqqfq")
 
-[node name="Charged1" type="Sprite2D" parent="."]
+[node name="Charged1" type="Sprite2D" parent="unused"]
 position = Vector2(-3217, 1538)
 texture = ExtResource("168_1hlri")
 
-[node name="Charged2" type="Sprite2D" parent="."]
+[node name="Charged2" type="Sprite2D" parent="unused"]
 position = Vector2(-3217, 1538)
 texture = ExtResource("169_qpnwr")
 
-[node name="Charged3" type="Sprite2D" parent="."]
+[node name="Charged3" type="Sprite2D" parent="unused"]
 position = Vector2(-3217, 1538)
 texture = ExtResource("170_jvwkd")
 
-[node name="Charged4" type="Sprite2D" parent="."]
+[node name="Charged4" type="Sprite2D" parent="unused"]
 position = Vector2(-3217, 1538)
 texture = ExtResource("171_64kqa")
 
-[node name="Charged5" type="Sprite2D" parent="."]
+[node name="Charged5" type="Sprite2D" parent="unused"]
 position = Vector2(-3217, 1538)
 texture = ExtResource("172_csnqv")
 
-[node name="Charged6" type="Sprite2D" parent="."]
+[node name="Charged6" type="Sprite2D" parent="unused"]
 position = Vector2(-3217, 1538)
 texture = ExtResource("173_x7t7j")
 
-[node name="Waveform1" type="Sprite2D" parent="."]
+[node name="Waveform1" type="Sprite2D" parent="unused"]
 position = Vector2(-3600, 1837)
 texture = ExtResource("174_fldgk")
 
-[node name="Waveform2" type="Sprite2D" parent="."]
+[node name="Waveform2" type="Sprite2D" parent="unused"]
 position = Vector2(-3600, 1837)
 texture = ExtResource("175_jmuuq")
 
-[node name="Waveform3" type="Sprite2D" parent="."]
+[node name="Waveform3" type="Sprite2D" parent="unused"]
 position = Vector2(-3600, 1837)
 texture = ExtResource("176_jw5gf")
 
-[node name="Waveform4" type="Sprite2D" parent="."]
+[node name="Waveform4" type="Sprite2D" parent="unused"]
 position = Vector2(-3600, 1837)
 texture = ExtResource("177_rp0ln")
 
-[node name="DiveKick" type="Sprite2D" parent="."]
+[node name="DiveKick" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("178_jj75a")
 
-[node name="Hurt" type="Sprite2D" parent="."]
+[node name="Hurt" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("179_h2w40")
 
-[node name="Idle" type="Sprite2D" parent="."]
+[node name="Idle" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("180_jqulh")
 
-[node name="Jab" type="Sprite2D" parent="."]
+[node name="Jab" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("181_texnh")
 
-[node name="Jump" type="Sprite2D" parent="."]
+[node name="Jump" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("182_p8dju")
 
-[node name="JumpKick" type="Sprite2D" parent="."]
+[node name="JumpKick" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("183_c3vt0")
 
-[node name="Kick" type="Sprite2D" parent="."]
+[node name="Kick" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("184_hcn7h")
 
-[node name="Punch" type="Sprite2D" parent="."]
+[node name="Punch" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("185_0xkst")
 
-[node name="Walk" type="Sprite2D" parent="."]
+[node name="Walk" type="Sprite2D" parent="unused"]
 position = Vector2(-4943, 1837)
 texture = ExtResource("186_rey3a")
 
-[node name="Walk2" type="Sprite2D" parent="."]
+[node name="Walk2" type="Sprite2D" parent="unused"]
 position = Vector2(-4955, 2137)
 texture = ExtResource("187_gbfqb")
 
-[node name="Background9" type="Sprite2D" parent="."]
+[node name="Background9" type="Sprite2D" parent="unused"]
 position = Vector2(1985, -955)
 texture = ExtResource("188_tnpo5")
 
-[node name="Middleground-no-fungus2" type="Sprite2D" parent="."]
+[node name="Middleground-no-fungus2" type="Sprite2D" parent="unused"]
 position = Vector2(1985, -955)
 texture = ExtResource("189_fayjk")
 
-[node name="Middleground2" type="Sprite2D" parent="."]
+[node name="Middleground2" type="Sprite2D" parent="unused"]
 position = Vector2(1985, -955)
 texture = ExtResource("190_tjblc")
 
-[node name="Props3" type="Sprite2D" parent="."]
+[node name="Props3" type="Sprite2D" parent="unused"]
 position = Vector2(1985, -955)
 texture = ExtResource("191_3mhb1")
 
-[node name="Tilesets2" type="Sprite2D" parent="."]
+[node name="Tilesets2" type="Sprite2D" parent="unused"]
 position = Vector2(1985, -955)
 texture = ExtResource("192_30nk2")
 
-[node name="Walls2" type="Sprite2D" parent="."]
+[node name="Walls2" type="Sprite2D" parent="unused"]
 position = Vector2(1985, -955)
 texture = ExtResource("193_hfr4d")
 
-[node name="Gate-01" type="Sprite2D" parent="."]
+[node name="Gate-01" type="Sprite2D" parent="unused"]
 position = Vector2(2285, -943)
 texture = ExtResource("194_2ru5q")
 
-[node name="Gate-02" type="Sprite2D" parent="."]
+[node name="Gate-02" type="Sprite2D" parent="unused"]
 position = Vector2(2285, -943)
 texture = ExtResource("195_0golx")
 
-[node name="Gate-03" type="Sprite2D" parent="."]
+[node name="Gate-03" type="Sprite2D" parent="unused"]
 position = Vector2(2285, -943)
 texture = ExtResource("196_5y8vf")
 
-[node name="Plant-big" type="Sprite2D" parent="."]
+[node name="Plant-big" type="Sprite2D" parent="unused"]
 position = Vector2(2285, -943)
 texture = ExtResource("197_cabbt")
 
-[node name="Plant-small" type="Sprite2D" parent="."]
+[node name="Plant-small" type="Sprite2D" parent="unused"]
 position = Vector2(2285, -943)
 texture = ExtResource("198_egrvw")
 
-[node name="Stalactite" type="Sprite2D" parent="."]
+[node name="Stalactite" type="Sprite2D" parent="unused"]
 position = Vector2(2285, -943)
 texture = ExtResource("199_qtup1")
 
-[node name="Stone-head" type="Sprite2D" parent="."]
+[node name="Stone-head" type="Sprite2D" parent="unused"]
 position = Vector2(2285, -943)
 texture = ExtResource("200_l8w8u")
 
-[node name="Stone" type="Sprite2D" parent="."]
+[node name="Stone" type="Sprite2D" parent="unused"]
 position = Vector2(2285, -943)
 texture = ExtResource("201_yfo0c")
 
-[node name="Crab-idle" type="Sprite2D" parent="."]
+[node name="Crab-idle" type="Sprite2D" parent="unused"]
 position = Vector2(-5087, -80)
 texture = ExtResource("202_ocayl")
 
-[node name="Crab-walk" type="Sprite2D" parent="."]
+[node name="Crab-walk" type="Sprite2D" parent="unused"]
 position = Vector2(-5087, -80)
 texture = ExtResource("203_j7s3f")
 
-[node name="Jumper-idle" type="Sprite2D" parent="."]
+[node name="Jumper-idle" type="Sprite2D" parent="unused"]
 position = Vector2(-5087, -80)
 texture = ExtResource("204_5am01")
 
-[node name="Jumper-jump" type="Sprite2D" parent="."]
+[node name="Jumper-jump" type="Sprite2D" parent="unused"]
 position = Vector2(-5087, -80)
 texture = ExtResource("205_3k0cu")
 
-[node name="Octopus" type="Sprite2D" parent="."]
+[node name="Octopus" type="Sprite2D" parent="unused"]
 position = Vector2(-5087, -80)
 texture = ExtResource("206_5yhd3")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scale = Vector2(2, 2)
+scroll_offset = Vector2(-66, -4353)
+repeat_size = Vector2(280, 0)
+repeat_times = 6
+
+[node name="Back8" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-755, 161)
+texture = ExtResource("137_n4c28")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-68, -4067)
+repeat_size = Vector2(100, 0)
+repeat_times = 10
+
+[node name="Back7" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-1, 3)
+texture = ExtResource("130_hi8cl")
+
+[node name="Middle5" type="Sprite2D" parent="."]
+position = Vector2(-1807, -3565)
+texture = ExtResource("133_6jgjg")
+
+[node name="Foreground3" type="Sprite2D" parent="."]
+position = Vector2(-1101, -3935)
+texture = ExtResource("136_dgy86")
+
+[node name="Buildings2" type="Sprite2D" parent="."]
+position = Vector2(-595, -3727)
+texture = ExtResource("138_xpvic")
+
+[node name="Front5" type="Sprite2D" parent="."]
+position = Vector2(-446, -3661)
+texture = ExtResource("139_ymd22")

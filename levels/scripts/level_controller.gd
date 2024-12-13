@@ -25,6 +25,8 @@ var tower_health = 1000
 
 @export var spelltowernode : Node2D
 
+@export var camera_node : Camera2D
+
 var options_scene
 var credits_scene
 var sub_menu
