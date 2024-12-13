@@ -93,6 +93,7 @@ func _process(delta: float) -> void:
 	if secondary_firing:
 		if secondary_firing_timer <= 0:
 			SoundManager.play_sfx("harpoon", 0, -12, 3)
+			get_parent().get_parent().level_camera.apply_shake(50)
 			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake, lightning_animation)
 			secondary_firing_timer = secondary_firing_interval
 

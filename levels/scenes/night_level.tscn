@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwrpl5k6kodt8"]
+[gd_scene load_steps=15 format=3 uid="uid://bwrpl5k6kodt8"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_ahstt"]
 [ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="2_10nlx"]
 [ext_resource type="PackedScene" uid="uid://c58iyoi4wlpjr" path="res://background/scenes/parallaxes/night.tscn" id="3_ej0ht"]
 [ext_resource type="Texture2D" uid="uid://d240bm81yewd" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/night-town-background-files/layers/night-town-background-sky.png" id="4_586re"]
 [ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="4_ybr3v"]
+[ext_resource type="Script" path="res://levels/scripts/move_level_camera.gd" id="5_4xf7c"]
 [ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="5_5g6k6"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="7_xdq1o"]
 [ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="9_1x0cq"]
@@ -24,8 +25,10 @@ fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)
 
-[node name="NightLevel" type="Node2D"]
+[node name="NightLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node")]
 script = ExtResource("1_ahstt")
+spelltowernode = NodePath("SpellMachineTower")
+camera_node = NodePath("level_camera")
 
 [node name="terrain" parent="." instance=ExtResource("2_10nlx")]
 position = Vector2(11194, -862)
@@ -42,6 +45,7 @@ position = Vector2(-2022, -2025)
 position = Vector2(-2009, -2678)
 scale = Vector2(0.25, 0.25)
 zoom = Vector2(0.25, 0.25)
+script = ExtResource("5_4xf7c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="level_camera"]
 layer = -1
@@ -63,7 +67,7 @@ region_rect = Rect2(0, 0, 1500, 500)
 [node name="ColorRect" type="ColorRect" parent="level_camera"]
 z_index = -1
 offset_left = -20528.0
-offset_top = 1092.0
+offset_top = -23028.0
 offset_right = 19472.0
 offset_bottom = 11092.0
 color = Color(0.0156863, 0.0470588, 0.0470588, 1)

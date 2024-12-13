@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://dkmnhwrbi6fme"]
+[gd_scene load_steps=25 format=4 uid="uid://dkmnhwrbi6fme"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_l88nd"]
 [ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="1_spb3g"]
@@ -19,7 +19,6 @@
 [ext_resource type="Script" path="res://addons/cameraregion2d/CameraRegionController2D.gd" id="16_wpgqt"]
 [ext_resource type="Script" path="res://addons/cameraregion2d/CameraRegion2D.gd" id="17_mycij"]
 [ext_resource type="Script" path="res://levels/scenes/mouse_follower_node.gd" id="19_vfvgw"]
-[ext_resource type="Texture2D" uid="uid://bobun5wip4t3q" path="res://icon.svg" id="20_r0hhb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28xsr"]
 bg_color = Color(0.1863, 0.69, 0.379385, 1)
@@ -27,11 +26,11 @@ bg_color = Color(0.1863, 0.69, 0.379385, 1)
 [sub_resource type="TileMapPattern" id="TileMapPattern_hlytk"]
 tile_data = PackedInt32Array(65536, 0, 4, 262144, 0, 4, 327680, 393216, 2, 393216, 0, 4, 458752, 0, 4, 524288, 0, 4, 589824, 0, 4, 655360, 0, 4, 720896, 0, 4, 786432, 0, 4, 65537, 0, 4, 262145, 0, 4, 327681, 0, 4, 393217, 393216, 2, 458753, 393216, 2, 524289, 393216, 2, 589825, 0, 4, 655361, 3276800, 4, 720897, 393216, 2, 786433, 393216, 2, 2, 0, 4, 65538, 0, 4, 131074, 0, 4, 196610, 0, 4, 262146, 0, 4, 327682, 0, 4, 524290, 393216, 2, 589826, 0, 4, 655362, 393216, 2, 3, 0, 4, 131075, 0, 4, 327683, 0, 4, 524291, 3276800, 4, 655363, 0, 4, 786435, 3276800, 4, 4, 0, 4, 131076, 0, 4, 196612, 0, 4, 393220, 0, 4, 458756, 3276800, 4, 655364, 0, 4, 720900, 3276800, 4, 5, 0, 4, 65541, 3276800, 4, 131077, 3276800, 4, 196613, 0, 4, 262149, 0, 4, 327685, 3276800, 4, 393221, 0, 4, 458757, 0, 4, 589829, 3276800, 4, 655365, 3276800, 4, 720901, 0, 4)
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0nbnu"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_redwk"]
 friction = 0.61
 bounce = 0.5
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8syjb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j3d7o"]
 texture = ExtResource("13_a68t8")
 4:2/0 = 0
 4:2/0/probability = 0.03
@@ -733,18 +732,19 @@ texture = ExtResource("13_a68t8")
 [sub_resource type="TileSet" id="TileSet_6lm7a"]
 physics_layer_0/collision_layer = 255
 physics_layer_0/collision_mask = 255
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_0nbnu")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_redwk")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 custom_data_layer_0/name = "health"
 custom_data_layer_0/type = 2
-sources/0 = SubResource("TileSetAtlasSource_8syjb")
+sources/0 = SubResource("TileSetAtlasSource_j3d7o")
 pattern_0 = SubResource("TileMapPattern_hlytk")
 
-[node name="SunsetLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode")]
+[node name="SunsetLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node")]
 script = ExtResource("1_l88nd")
 spelltowernode = NodePath("SpellMachineTower")
+camera_node = NodePath("level_camera")
 
 [node name="ParallaxTest" parent="." instance=ExtResource("3_mpna4")]
 z_index = -5
@@ -844,9 +844,6 @@ camera_zoom = Vector2(0.25, 0.25)
 
 [node name="mouse_follower_node" type="Node2D" parent="."]
 script = ExtResource("19_vfvgw")
-
-[node name="Sprite2D" type="Sprite2D" parent="mouse_follower_node"]
-texture = ExtResource("20_r0hhb")
 
 [connection signal="beat" from="RhythmNotifier" to="slime_tracker" method="_on_rhythm_notifier_beat"]
 

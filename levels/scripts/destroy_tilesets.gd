@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	pass
 
 func apply_damage(amount, proj_position):
-	pass
+	print("TILE DAMAGE")
 	# Convert projectile position to tile position
 	#var tile_pos = tileset.world_to_map(proj_position)
 	#

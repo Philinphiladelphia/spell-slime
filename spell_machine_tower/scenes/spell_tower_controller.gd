@@ -14,6 +14,8 @@ var is_dead = false
 @onready var machine_gun_cooldown_bar = $CanvasLayer/MachineGunCooldown
 @onready var harpoon_cooldown_bar = $CanvasLayer/HarpoonCooldown
 
+@onready var level_camera = get_parent().camera_node
+
 var base_stats = {
 	"slime1": {
 		"max_health": 10000,
@@ -113,7 +115,7 @@ func set_spellward_health(amount):
 	
 	if amount < spellward_health:
 		if not SoundManager.is_playing("explosion2"):
-			SoundManager.play_sfx("explosion2", 0, 5, 1)
+			SoundManager.play_sfx("explosion2", 0, 1, 1)
 	
 	spellward_health = amount
 
@@ -121,8 +123,9 @@ func init_tower_health(max_health):
 	tower_health_bar.init_health(max_health)
 
 func apply_tower_damage(amount):
+	level_camera.apply_shake(amount*10)
 	if not SoundManager.is_playing("metal1"):
-		SoundManager.play_sfx("metal1", 0, 2, 2)
+		SoundManager.play_sfx("metal1", 0, 2, pow(amount,0.3))
 	
 	tower_health_bar._set_health(tower_health_bar.health - amount)
 	tower_health = tower_health_bar.health - amount
@@ -134,7 +137,10 @@ func _process(delta: float) -> void:
 		hide()
 		is_dead = true
 		#process_mode = PROCESS_MODE_DISABLED
-	
+		
+	#if $spell_machine_tower/main_gun.primary_firing && not $spell_machine_tower/main_gun.is_smoking:
+		#level_camera.apply_shake($spell_machine_tower/main_gun.primary_projectile_dmg)
+	#
 	
 	machine_gun_cooldown_bar._set_health($spell_machine_tower/main_gun.primary_projectiles_fired)
 	
