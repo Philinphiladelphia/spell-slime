@@ -49,9 +49,27 @@ var _delays = []
 
 var spawner_depleted = false
 
+# Path to the JSON file
+var colors_file_path = "res://addons/powder_toy_godot/colors.json"
+
+# Dictionary to store colors for each particle type
+var slime_colors = {}
+
+func load_colors() -> void:
+	var file = FileAccess.open(colors_file_path, FileAccess.READ)
+	if file:
+		var json = JSON.new()
+		var file_text = file.get_as_text()
+		json.parse(file_text)
+		var data = json.data
+		for key in data.keys():
+			slime_colors[int(key)] = str_to_var(data[key])
+		file.close()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
+	load_colors()
 	
 	var slimes_to_spawn = []
 	var delays = []
@@ -133,7 +151,7 @@ func spawn_small_slime():
 	var instance = small_slime.instantiate()
 	small_slime_count += 1
 	instance.get_child(0).slime_warning_shader = shine_shader
-	instance.get_child(0).slime_powder_shader = gameboy_shader
+	instance.get_child(0).slime_powder_shader = shine_shader
 	if enable_light:
 		instance.get_child(0).enable_light()
 	add_child(instance)

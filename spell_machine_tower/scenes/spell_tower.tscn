@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://dd32qqj6y33t2"]
+[gd_scene load_steps=103 format=3 uid="uid://dd32qqj6y33t2"]
 
 [ext_resource type="Script" path="res://spell_machine_tower/scenes/spell_tower_controller.gd" id="1_dsv4g"]
 [ext_resource type="Shader" path="res://spell_machine_tower/scenes/spell_tower.gdshader" id="2_218il"]
@@ -163,6 +163,16 @@ size = Vector2(400, 500)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfi1t"]
 radius = 153.75
 height = 400.0
+
+[sub_resource type="Gradient" id="Gradient_mvcn1"]
+offsets = PackedFloat32Array(0, 0.968127)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_utg3h"]
+gradient = SubResource("Gradient_mvcn1")
+fill = 1
+fill_from = Vector2(0.5, 0.495726)
+fill_to = Vector2(0.106838, 0.897436)
 
 [node name="SpellMachineTower" type="Node2D"]
 script = ExtResource("1_dsv4g")
@@ -2137,6 +2147,12 @@ shape = SubResource("RectangleShape2D_jbvm8")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="hurt_box"]
 position = Vector2(13, -797)
 shape = SubResource("CapsuleShape2D_gfi1t")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(15, -808)
+energy = 0.6
+texture = SubResource("GradientTexture2D_utg3h")
+texture_scale = 50.0
 
 [connection signal="timeout" from="damage_timer" to="." method="_on_damage_timer_timeout"]
 [connection signal="body_shape_entered" from="hurt_box" to="." method="_on_hurt_box_body_shape_entered"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwy8rh1loal5y"]
+[gd_scene load_steps=5 format=3 uid="uid://dwy8rh1loal5y"]
 
 [ext_resource type="FontFile" uid="uid://fhes64g5term" path="res://fonts/the-bomb-sound/The Bomb Sound.otf" id="1_3jdhg"]
 [ext_resource type="Script" path="res://ui/scenes/start_new_run.gd" id="1_x35ea"]
+[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/scenes/spellslime_theme.tres" id="2_bdicg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bjpst"]
 font = ExtResource("1_3jdhg")
@@ -21,6 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("2_bdicg")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -30,7 +32,7 @@ anchor_right = 0.5
 offset_left = -189.0
 offset_top = 16.0
 offset_right = 189.0
-offset_bottom = 86.0
+offset_bottom = 700.0
 grow_horizontal = 2
 mouse_filter = 2
 
@@ -43,12 +45,16 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-text = "Sunset Level"
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
+text = "Moonrise Level"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
 text = "Night Level"
 
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Button" to="." method="_on_button_pressed"]

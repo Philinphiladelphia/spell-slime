@@ -38,6 +38,7 @@ func _ready() -> void:
 	$slime_node.powder_interval = powder_interval
 	$slime_node.powder_duration = powder_duration
 	$slime_node.element = 129
+	$slime_node.set_original_color(get_parent().slime_colors[$slime_node.element])
 	$slime_node.element_circle_size = 8
 	$slime_node.damage = 10
 

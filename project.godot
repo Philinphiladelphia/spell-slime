@@ -46,8 +46,8 @@ enable_helpers=true
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-mouse_cursor/custom_image="res://common_assets/slimes/slime-quarter.png"
-mouse_cursor/custom_image_hotspot=Vector2(50, 50)
+mouse_cursor/custom_image="res://common_assets/slimes/slime-cursor-slime-export.png"
+mouse_cursor/custom_image_hotspot=Vector2(10, 10)
 
 [editor]
 

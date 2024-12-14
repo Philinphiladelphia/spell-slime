@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	SceneLoader.load_scene("res://levels/scenes/sunset_level.tscn")
+	SceneLoader.load_scene("res://levels/moonswept_fields/day/moonrise_lighting.tscn")
 
 
 func _on_button_2_pressed() -> void:
-	SceneLoader.load_scene("res://levels/scenes/night_lighting.tscn")
+	SceneLoader.load_scene("res://levels/moonswept_fields/night/night_lighting.tscn")

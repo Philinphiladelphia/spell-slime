@@ -19,7 +19,7 @@ expanded_output_ports = [0]
 source = 2
 
 [sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_c6g0b"]
-default_input_values = [1, 1.0, 2, 0.0, 3, false]
+default_input_values = [1, 0.3, 2, 0.0, 3, false]
 initialized = true
 script = ExtResource("2_f85nk")
 
@@ -48,7 +48,6 @@ void fragment() {
 	vec4 n_out5p0;
 // Texture2D:5
 	n_out5p0 = texture(TEXTURE, UV);
-	float n_out5p4 = n_out5p0.a;
 
 
 // RandomRange:9
@@ -72,10 +71,11 @@ void fragment() {
 	vec3 n_out7p0;
 	float n_out7p1;
 // GradientMapping:7
+	float n_in7p1 = 0.30000;
 	{
 		vec4 n_out7p0n_out7p1 = _gradientMappingFunc(vec3(n_out5p0.xyz), n_out4p0, gradient, n_out3p0);
 		n_out7p0 = n_out7p0n_out7p1.rgb;
-		n_out7p1 = n_out7p0n_out7p1.a * n_out5p4;
+		n_out7p1 = n_out7p0n_out7p1.a * n_in7p1;
 	}
 
 
@@ -85,6 +85,7 @@ void fragment() {
 
 }
 "
+graph_offset = Vector2(-17.404, 78.4997)
 mode = 1
 flags/light_only = false
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture2DParameter_o0hix")
@@ -99,4 +100,4 @@ nodes/fragment/7/node = SubResource("VisualShaderNodeCustom_c6g0b")
 nodes/fragment/7/position = Vector2(160, 160)
 nodes/fragment/9/node = SubResource("VisualShaderNodeRandomRange_albtj")
 nodes/fragment/9/position = Vector2(-600, 280)
-nodes/fragment/connections = PackedInt32Array(5, 0, 7, 0, 3, 0, 7, 3, 5, 4, 7, 1, 2, 0, 7, 4, 4, 0, 7, 2, 7, 0, 0, 0, 9, 0, 4, 0)
+nodes/fragment/connections = PackedInt32Array(3, 0, 7, 3, 2, 0, 7, 4, 4, 0, 7, 2, 9, 0, 4, 0, 5, 0, 7, 0, 7, 0, 0, 0)
