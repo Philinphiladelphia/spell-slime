@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bwrpl5k6kodt8"]
+[gd_scene load_steps=14 format=3 uid="uid://bwrpl5k6kodt8"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_ahstt"]
 [ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="2_10nlx"]
@@ -11,19 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="9_1x0cq"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="9_4kvi6"]
 [ext_resource type="Script" path="res://levels/scripts/disable_slime_lights.gd" id="10_27ni7"]
+[ext_resource type="Script" path="res://levels/scripts/mouse_follower_node.gd" id="12_mnotw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbh6e"]
 bg_color = Color(0.1863, 0.69, 0.379385, 1)
-
-[sub_resource type="Gradient" id="Gradient_mvcn1"]
-offsets = PackedFloat32Array(0, 0.968127)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_txd4r"]
-gradient = SubResource("Gradient_mvcn1")
-fill = 1
-fill_from = Vector2(0.5, 0.495726)
-fill_to = Vector2(0.106838, 0.897436)
 
 [node name="NightLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node")]
 script = ExtResource("1_ahstt")
@@ -83,20 +74,6 @@ offset_right = 1041.0
 offset_bottom = 86.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_qbh6e")
 
-[node name="slime_tracker" type="Node" parent="."]
-script = ExtResource("5_5g6k6")
-
-[node name="right_spawner" type="Node2D" parent="slime_tracker" node_paths=PackedStringArray("spawntimer")]
-position = Vector2(638, -311)
-script = ExtResource("7_xdq1o")
-spawntimer = NodePath("../../slime_spawn_timer")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-1988, -2833)
-energy = 0.8
-texture = SubResource("GradientTexture2D_txd4r")
-texture_scale = 50.0
-
 [node name="enable_slime_light" type="Node" parent="."]
 script = ExtResource("10_27ni7")
 
@@ -106,5 +83,19 @@ scale = Vector2(3.5, 3.5)
 
 [node name="slime_spawn_timer" type="Timer" parent="."]
 one_shot = true
+autostart = true
+
+[node name="mouse_follower_node" type="Node2D" parent="."]
+script = ExtResource("12_mnotw")
+
+[node name="slime_tracker" type="Node" parent="."]
+script = ExtResource("5_5g6k6")
+
+[node name="spawner1" type="Node2D" parent="slime_tracker" node_paths=PackedStringArray("spawntimer")]
+position = Vector2(-5966, -2743)
+script = ExtResource("7_xdq1o")
+spawntimer = NodePath("../../slime_spawn_timer")
+
+[connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner1" method="_on_slime_spawn_timer_timeout"]
 
 [editable path="slime_health_layer/HealthBar"]

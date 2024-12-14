@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctmaek0pla3rx"]
+
+[ext_resource type="Script" path="res://levels/moonswept_fields/day/moonrise_lighting.gd" id="1_dsmop"]
+
+[node name="MoonriseLighting" type="CanvasModulate"]
+color = Color(0.699653, 0.699654, 0.699653, 1)
+script = ExtResource("1_dsmop")

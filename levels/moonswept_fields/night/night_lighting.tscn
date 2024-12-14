@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://coducvyvj5h3y"]
 
-[ext_resource type="Script" path="res://levels/scripts/night_lighting.gd" id="1_0eg0b"]
+[ext_resource type="Script" path="res://levels/scripts/night_lighting.gd" id="1_kxorw"]
 
 [node name="NightLighting" type="CanvasModulate"]
 color = Color(0.442911, 0.442911, 0.442911, 1)
-script = ExtResource("1_0eg0b")
+script = ExtResource("1_kxorw")

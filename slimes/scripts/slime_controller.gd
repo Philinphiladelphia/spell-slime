@@ -41,6 +41,8 @@ var garbage_wait = 3
 
 var is_dead = false
 
+var original_color = Color(1, 1, 1, 1)
+
 # slimes should be able to jump over the tower and reverse course.
 
 func set_go_right(value):
@@ -48,6 +50,11 @@ func set_go_right(value):
 	
 func set_element(value):
 	element = value
+
+func set_original_color(color):
+	original_color = color
+	$slime_soft_body.modulate = color
+	$slime_hitbox/PointLight2D.color = color
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
@@ -138,22 +145,27 @@ func apply_damage(amount, projectile_position):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if powder_timer.time_left < powder_warning_time && is_powdering == 0:
-		material = slime_warning_shader
-	elif is_powdering == 1:
-		material = slime_powder_shader
-	else:
-		material = null
-	
+	#if powder_timer.time_left < powder_warning_time && is_powdering == 0:
+		#var current_color = $slime_soft_body.modulate
+		#var warning_color = Color(1, 1, 1, 1)
+		#$slime_soft_body.modulate = lerp(current_color, warning_color, 0.03)
+	#elif is_powdering == 1:
+		#var current_color = $slime_soft_body.modulate
+		#$slime_soft_body.modulate = lerp(current_color, original_color, 0.08)
+	#else:
+		#$slime_soft_body.modulate = original_color
+
 	slime_position = $slime_soft_body.get_bones_center_position()
-	
+
 	$slime_hitbox.global_position = slime_position
-	
+
 	var offset = health_offset
 	$health_bar.health_bar_offset = offset
 	$damage_bar.health_bar_offset = offset
 	if (health <= 0):
-		set_modulate(lerp(get_modulate(), Color(1,1,1,0), 0.1))
+		var current_color = get_modulate()
+		var transparent = Color(current_color.r, current_color.g, current_color.b, 0)
+		set_modulate(lerp(current_color, transparent, 0.1))
 		$slime_soft_body.stiffness = 30
 		
 		if not is_dead:
