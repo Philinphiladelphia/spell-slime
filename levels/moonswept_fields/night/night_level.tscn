@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwrpl5k6kodt8"]
+[gd_scene load_steps=16 format=3 uid="uid://bwrpl5k6kodt8"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_ahstt"]
 [ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="2_10nlx"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="9_4kvi6"]
 [ext_resource type="Script" path="res://levels/scripts/disable_slime_lights.gd" id="10_27ni7"]
 [ext_resource type="Script" path="res://levels/scripts/mouse_follower_node.gd" id="12_mnotw"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="13_y66eb"]
+[ext_resource type="AudioStream" uid="uid://ch5t5guld8q7v" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 08 Soap On The Dance Floor.mp3" id="14_d8b1f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbh6e"]
 bg_color = Color(0.1863, 0.69, 0.379385, 1)
@@ -96,6 +98,11 @@ script = ExtResource("5_5g6k6")
 position = Vector2(-5966, -2743)
 script = ExtResource("7_xdq1o")
 spawntimer = NodePath("../../slime_spawn_timer")
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("13_y66eb")]
+stream = ExtResource("14_d8b1f")
+volume_db = -12.0
+bus = &"Master"
 
 [connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner1" method="_on_slime_spawn_timer_timeout"]
 

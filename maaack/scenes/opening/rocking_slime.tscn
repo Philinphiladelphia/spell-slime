@@ -33,6 +33,7 @@ position = Vector2(989, 571)
 rotation = 0.268781
 disable_mode = 1
 collision_layer = 0
+gravity_scale = 0.8
 script = ExtResource("1_qthyf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="slimes/RockingSlime2"]
@@ -52,6 +53,7 @@ position = Vector2(622, 534)
 rotation = -0.144862
 disable_mode = 1
 collision_layer = 0
+gravity_scale = 0.8
 script = ExtResource("1_qthyf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="slimes/RockingSlime"]
@@ -72,6 +74,7 @@ position = Vector2(359, 569)
 rotation = 0.268781
 disable_mode = 1
 collision_layer = 0
+gravity_scale = 0.8
 script = ExtResource("1_qthyf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="slimes/RockingSlime3"]

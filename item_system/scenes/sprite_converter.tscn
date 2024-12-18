@@ -248,36 +248,36 @@ script = ExtResource("1_l0gwm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_36jh3")
-frame_progress = 0.451448
+frame_progress = 0.820468
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 position = Vector2(53, 20)
 sprite_frames = SubResource("SpriteFrames_156l4")
-frame_progress = 0.612937
+frame_progress = 0.981957
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
 position = Vector2(-49, 20)
 sprite_frames = SubResource("SpriteFrames_70f5x")
-frame_progress = 0.727646
+frame_progress = 0.0966657
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
 position = Vector2(-100, 37)
 sprite_frames = SubResource("SpriteFrames_cntbe")
-frame_progress = 0.51584
+frame_progress = 0.88486
 
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
 position = Vector2(-100, 37)
 sprite_frames = SubResource("SpriteFrames_3q8gj")
-frame_progress = 0.467801
+frame_progress = 0.836821
 
 [node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
 position = Vector2(-74, 65)
 sprite_frames = SubResource("SpriteFrames_ah5eo")
-frame_progress = 0.54184
+frame_progress = 0.91086
 
 [node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-76, -79)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_4rd14")
-frame_progress = 0.10111
+frame_progress = 0.47013
