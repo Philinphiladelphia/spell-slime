@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://c25sxox4enjs3"]
 
-[ext_resource type="Script" uid="uid://cnf0iogivtjhp" path="res://addons/shaderV/rgba/sobelEdge.gd" id="1_g0j6d"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/sobelEdge.gd" id="1_g0j6d"]
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_jw7qj"]
 constant = -1.0

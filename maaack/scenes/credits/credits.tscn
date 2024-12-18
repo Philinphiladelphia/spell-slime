@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqs3x24f0ntpj"]
 
 [ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_game_template/base/scenes/credits/credits.tscn" id="1_3worg"]
-[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/scenes/spellslime_theme.tres" id="2_iilgx"]
+[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/themes/spellslime_theme.tres" id="2_iilgx"]
 [ext_resource type="Script" path="res://maaack/scenes/credits/credits.gd" id="2_veaf0"]
 
 [node name="Credits" instance=ExtResource("1_3worg")]

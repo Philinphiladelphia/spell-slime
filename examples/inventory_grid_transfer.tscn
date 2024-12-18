@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://jopigw4xplp4"]
 
-[ext_resource type="Resource" uid="uid://ddrmqwl3guset" path="res://gloot-b20da4bc8d631b47d033bedb6d69405e3fd0d78f/tests/data/item_definitions_grid.tres" id="1"]
+[ext_resource type="Resource" uid="uid://ddrmqwl3guset" path="res://tests/data/item_definitions_grid.tres" id="1"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_grid.gd" id="2"]
 [ext_resource type="Script" path="res://addons/gloot/ui/ctrl_inventory_grid.gd" id="3"]
 [ext_resource type="Script" path="res://examples/inventory_grid_transfer.gd" id="4"]
-[ext_resource type="Texture2D" uid="uid://c2a86i4aqr4jk" path="res://icon.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b2hkcwwq10cut" path="res://icon.png" id="5"]
 [ext_resource type="Script" path="res://addons/gloot/ui/ctrl_item_slot.gd" id="6"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="8"]
 [ext_resource type="Script" path="res://addons/gloot/core/item_slot.gd" id="8_273xl"]
@@ -36,6 +36,7 @@ layout_mode = 2
 
 [node name="CtrlInventoryGridLeft" type="Container" parent="VBoxContainer/HBoxContainer/VBoxContainer/PanelContainer"]
 texture_filter = 1
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 script = ExtResource("3")
 inventory_path = NodePath("../../../../../InventoryGridLeft")
@@ -54,6 +55,7 @@ layout_mode = 2
 
 [node name="CtrlInventoryGridRight" type="Container" parent="VBoxContainer/HBoxContainer/VBoxContainer2/PanelContainer2"]
 texture_filter = 1
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 script = ExtResource("3")
 inventory_path = NodePath("../../../../../InventoryGridRight")
@@ -95,26 +97,38 @@ Use the 'Unequip' button to unequip it."
 
 [node name="InventoryGridLeft" type="Node" parent="."]
 script = ExtResource("2")
+size = Vector2i(5, 5)
+item_protoset = ExtResource("1")
 
 [node name="L_item_2x2" type="Node" parent="InventoryGridLeft"]
 script = ExtResource("8")
+protoset = ExtResource("1")
+prototype_id = "item_2x2"
 
 [node name="L_item_2x2_2" type="Node" parent="InventoryGridLeft"]
 script = ExtResource("8")
+protoset = ExtResource("1")
+prototype_id = "item_2x2"
 properties = {
-"grid_position": Vector2i(0, 1)
+"grid_position": Vector2i(0, 2)
 }
 
 [node name="InventoryGridRight" type="Node" parent="."]
 script = ExtResource("2")
+size = Vector2i(5, 5)
+item_protoset = ExtResource("1")
 
 [node name="R_item_2x2" type="Node" parent="InventoryGridRight"]
 script = ExtResource("8")
+protoset = ExtResource("1")
+prototype_id = "item_2x2"
 
 [node name="R_item_1x1" type="Node" parent="InventoryGridRight"]
 script = ExtResource("8")
+protoset = ExtResource("1")
+prototype_id = "item_1x1"
 properties = {
-"grid_position": Vector2i(0, 1)
+"grid_position": Vector2i(0, 2)
 }
 
 [node name="LblInfo" type="Label" parent="."]

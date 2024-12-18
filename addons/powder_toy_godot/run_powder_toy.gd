@@ -1,7 +1,7 @@
 extends PowderToyGodot
 
 # this controls simulation speed
-var sim_speed = 1
+var sim_speed = 60.0 # fps
 var accumulated_fractional_frame = 0.0
 
 # Define configurable display scale
@@ -48,28 +48,23 @@ func _ready() -> void:
 	powder_mesh = MeshInstance2D.new()
 	add_child(powder_mesh)
 
-## This function is the prime culprit of my lag.
-## The draw function especially takes forever
-## It gets called from queue_redraw()
-## I'll work on it
+var accumulated_time = 0.0
 
 func _process(delta: float) -> void:
-	var frames_to_run = int(sim_speed)
+	accumulated_time += delta * sim_speed
 
-	for i in range(frames_to_run):
+	while accumulated_time >= 1.0:
 		run_powder_toy_frame()
+		accumulated_time -= 1.0
 
 	# Process buffered powder manifestation requests
 	for request in powder_manifestation_buffer:
 		powder_circle_wrapper(request.x, request.y, request.type, request.size)
 	powder_manifestation_buffer.clear()
-	#
-	
+
 	get_particles_from_powder_toy()
-	#get_walls_from_powder_toy()d
+	#get_walls_from_powder_toy()
 	queue_redraw()
-	
-	## theeeeere's the thing
 
 func count_element(type) -> int:
 	var count = 0

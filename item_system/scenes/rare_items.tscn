@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpc5yypfyfrwm"]
+
+[ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_6vbxn"]
+[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://tests/data/item_definitions_basic.tres" id="2_nla6o"]
+[ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="3_rxdhv"]
+
+[node name="rare_items" type="Node"]
+script = ExtResource("1_6vbxn")
+item_protoset = ExtResource("2_nla6o")
+
+[node name="steampunk_spirit" type="Node" parent="."]
+script = ExtResource("3_rxdhv")
+protoset = ExtResource("2_nla6o")
+prototype_id = "minimal_item"
+properties = {
+"image": "res://item_system/assets/steampunk_spirit.png",
+"name": "steampunk_spirit"
+}
+
+[node name="rifled_barrel" type="Node" parent="."]
+script = ExtResource("3_rxdhv")
+protoset = ExtResource("2_nla6o")
+prototype_id = "item1"
+properties = {
+"image": "res://item_system/assets/rifled_barrel.png",
+"name": "rifled_barrel"
+}
+
+[node name="full_metal_jacket" type="Node" parent="."]
+script = ExtResource("3_rxdhv")
+protoset = ExtResource("2_nla6o")
+prototype_id = "item2"
+properties = {
+"image": "res://item_system/assets/full_metal_jacket.png",
+"name": "full_metal_jacket"
+}

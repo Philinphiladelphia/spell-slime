@@ -134,6 +134,7 @@ func apply_tower_damage(amount):
 
 func _process(delta: float) -> void:
 	if tower_health <= 0:
+		SoundManager.stop_all()
 		hide()
 		is_dead = true
 		#process_mode = PROCESS_MODE_DISABLED

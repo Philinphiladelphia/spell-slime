@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwy8rh1loal5y"]
 
 [ext_resource type="FontFile" uid="uid://fhes64g5term" path="res://fonts/the-bomb-sound/The Bomb Sound.otf" id="1_3jdhg"]
-[ext_resource type="Script" path="res://ui/scenes/start_new_run.gd" id="1_x35ea"]
-[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/scenes/spellslime_theme.tres" id="2_bdicg"]
+[ext_resource type="Script" path="res://ui/scripts/start_new_run.gd" id="1_x35ea"]
+[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/themes/spellslime_theme.tres" id="2_bdicg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bjpst"]
 font = ExtResource("1_3jdhg")
@@ -57,5 +57,13 @@ size_flags_vertical = 6
 theme_override_font_sizes/font_size = 40
 text = "Night Level"
 
+[node name="Button3" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 40
+text = "OVERWORLD"
+
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

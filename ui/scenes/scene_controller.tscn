@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://c5mrow4562250"]
+[gd_scene load_steps=49 format=3 uid="uid://fwe8q416l8vc"]
 
 [ext_resource type="Script" path="res://ui/scripts/scene_controller.gd" id="1_klp42"]
 [ext_resource type="Script" uid="uid://cm1825mm02hx8" path="res://addons/imjp94.yafsm/src/StateMachinePlayer.gd" id="2_e02id"]

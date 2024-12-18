@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=5 format=3 uid="uid://c1e6up5r0lndt"]
 
-[ext_resource type="Script" uid="uid://covecmenr8xew" path="res://addons/shaderV/rgba/turnGBPalette.gd" id="1_eoji6"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/turnGBPalette.gd" id="1_eoji6"]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_8bcoq"]
 output_port_for_preview = 0
