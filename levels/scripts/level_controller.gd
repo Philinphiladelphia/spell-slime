@@ -120,7 +120,10 @@ func _process(delta: float) -> void:
 			#var slime_powder = $PowderViewport.powder_instance.collide_slime(Vector2(powder_x, powder_y), 10)
 			#print(slime_powder)
 			#powder_toy.clear_sim_area(wall_offset, wall_offset, width - (wall_offset*2), border)
+			
+			# slimes tunnel into your tower
 			#$PowderViewport.powder_instance.powder_toy.clear_sim_area(powder_x, powder_y, slime_circle_size, slime_circle_size)
+			
 			$PowderViewport.powder_instance.circle(Vector2(powder_x,powder_y), slime_circle_size, element)
 	
 	if Input.is_action_pressed("cam_left"):

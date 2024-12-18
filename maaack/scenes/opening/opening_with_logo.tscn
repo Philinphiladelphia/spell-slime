@@ -17,8 +17,7 @@ fade_in_time = 2.0
 fade_out_time = 3.0
 visible_time = 2.0
 start_delay = 2.0
-end_delay = 16.0
-show_loading_screen = true
+end_delay = 21.0
 
 [node name="BackgroundMusicPlayer" parent="." index="0"]
 stream = ExtResource("4_asfph")
