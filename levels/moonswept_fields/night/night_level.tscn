@@ -17,6 +17,7 @@
 bg_color = Color(0.1863, 0.69, 0.379385, 1)
 
 [node name="NightLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node")]
+texture_filter = 1
 script = ExtResource("1_ahstt")
 spelltowernode = NodePath("SpellMachineTower")
 camera_node = NodePath("level_camera")
@@ -35,7 +36,7 @@ position = Vector2(-2022, -2025)
 [node name="level_camera" type="Camera2D" parent="."]
 position = Vector2(-2009, -2678)
 scale = Vector2(0.25, 0.25)
-zoom = Vector2(0.25, 0.25)
+zoom = Vector2(0.2, 0.2)
 script = ExtResource("5_4xf7c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="level_camera"]

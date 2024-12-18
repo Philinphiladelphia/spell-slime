@@ -79,8 +79,8 @@ func _ready() -> void:
 		delays.append(1)
 		
 	
-	slimes_to_spawn.append_array([SlimeType.SMALL, SlimeType.MEDIUM, SlimeType.LARGE])
-	delays.append_array([1.5, 2.5, 3.5])
+	slimes_to_spawn.append_array([SlimeType.SMALL, SlimeType.MEDIUM, SlimeType.MEDIUM])
+	delays.append_array([1.5, 2.0, 2.0])
 
 	spawn_slimes_with_delay(slimes_to_spawn, delays)
 	

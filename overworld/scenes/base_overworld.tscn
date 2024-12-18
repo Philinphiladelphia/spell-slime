@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkel1kiqg7t4e"]
+
+[ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_view.gd" id="1_pr5a4"]
+[ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_graph.gd" id="2_kgxnm"]
+[ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_path.gd" id="3_x7quc"]
+[ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_view_item.gd" id="4_xlcjx"]
+
+[node name="BaseOverworld" type="Node2D"]
+
+[node name="WorldmapView" type="Control" parent="." node_paths=PackedStringArray("initial_item")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pr5a4")
+initial_item = NodePath("WorldmapGraph")
+
+[node name="WorldmapGraph" type="Node2D" parent="WorldmapView"]
+script = ExtResource("2_kgxnm")
+node_grid_snap = 1
+node_count = 0
+connection_count = 0
+
+[node name="WorldmapPath" type="Node2D" parent="WorldmapView/WorldmapGraph"]
+script = ExtResource("3_x7quc")
+handle_2 = Vector2(inf, inf)
+node_grid_snap = 1
+node_count = 0
+
+[node name="WorldmapViewItem" type="Node2D" parent="WorldmapView/WorldmapGraph"]
+script = ExtResource("4_xlcjx")

@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi0oy2if357sn"]
+
+[ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_stuct"]
+[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://tests/data/item_definitions_basic.tres" id="2_gr1l2"]
+[ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="3_jx17y"]
+
+[node name="common_items" type="Node"]
+script = ExtResource("1_stuct")
+item_protoset = ExtResource("2_gr1l2")
+
+[node name="gem_core" type="Node" parent="."]
+script = ExtResource("3_jx17y")
+protoset = ExtResource("2_gr1l2")
+prototype_id = "minimal_item"
+properties = {
+"image": "res://item_system/assets/gem_core.png",
+"name": "gem_core"
+}
+
+[node name="slime_bucket" type="Node" parent="."]
+script = ExtResource("3_jx17y")
+protoset = ExtResource("2_gr1l2")
+prototype_id = "item1"
+properties = {
+"image": "res://item_system/assets/slime_bucket.png",
+"name": "slime_bucket"
+}
+
+[node name="grease_can" type="Node" parent="."]
+script = ExtResource("3_jx17y")
+protoset = ExtResource("2_gr1l2")
+prototype_id = "item2"
+properties = {
+"image": "res://item_system/assets/grease_can.png",
+"name": "grease_can"
+}

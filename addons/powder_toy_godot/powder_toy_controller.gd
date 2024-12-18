@@ -15,7 +15,7 @@ var clear_edges_timer : Timer
 # while the spellward is active, slime hits deal greatly reduced damage to the tower.
 
 func _ready() -> void:
-	powder_toy.sim_speed = 2.0
+	powder_toy.sim_speed = 60.0
 	powder_toy.set_edge_mode(0)
 	powder_toy.set_grav_mode(0)
 	

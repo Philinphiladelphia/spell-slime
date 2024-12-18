@@ -27,9 +27,14 @@ var tower_health = 1000
 
 @export var camera_node : Camera2D
 
+@onready var rewards_screen = preload("res://ui/scenes/round_victory.tscn")
+
 var options_scene
 var credits_scene
 var sub_menu
+
+var won = false
+var lost = false
 
 func load_scene(scene_path : String):
 	SceneLoader.load_scene(scene_path)
@@ -85,8 +90,12 @@ func _process(delta: float) -> void:
 	var ignore_elements = []  # Add any elements to ignore here
 	
 	# player wins!
-	if slime_positions.size() == 0 and $slime_tracker.spawns_done:
-		SceneLoader.load_scene("res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn")
+	if slime_positions.size() == 0 and $slime_tracker.spawns_done && not won:
+		won = true
+		var rewards = rewards_screen.instantiate()
+		#rewards.global_position = camera_node.global_position
+		$slime_health_layer.add_child(rewards)
+		#SceneLoader.load_scene("res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn")
 
 	for i in range(len(slime_positions)):
 		

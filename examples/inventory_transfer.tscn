@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://addons/gloot/ui/ctrl_inventory.gd" id="1"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="2"]
-[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://gloot-b20da4bc8d631b47d033bedb6d69405e3fd0d78f/tests/data/item_definitions_basic.tres" id="3"]
+[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://tests/data/item_definitions_basic.tres" id="3"]
 [ext_resource type="Script" path="res://examples/inventory_transfer.gd" id="4"]
-[ext_resource type="Texture2D" uid="uid://bju6hohmp15ua" path="res://gloot-b20da4bc8d631b47d033bedb6d69405e3fd0d78f/images/item_key.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bju6hohmp15ua" path="res://images/item_key.png" id="5"]
 [ext_resource type="Script" path="res://addons/gloot/ui/ctrl_item_slot.gd" id="6"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="8"]
 [ext_resource type="Script" path="res://addons/gloot/core/item_slot.gd" id="8_v60ia"]
@@ -103,16 +103,6 @@ prototype_id = "item1"
 script = ExtResource("8")
 protoset = ExtResource("3")
 prototype_id = "item2"
-
-[node name="_Node_19201" type="Node" parent="Inventory"]
-script = ExtResource("8")
-protoset = ExtResource("3")
-prototype_id = "minimal_item"
-
-[node name="_Node_19206" type="Node" parent="Inventory"]
-script = ExtResource("8")
-protoset = ExtResource("3")
-prototype_id = "minimal_item_2"
 
 [node name="Inventory2" type="Node" parent="."]
 script = ExtResource("2")

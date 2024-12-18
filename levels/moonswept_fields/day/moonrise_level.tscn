@@ -1048,7 +1048,8 @@ terrain_set_0/terrain_3/name = "STONE"
 terrain_set_0/terrain_3/color = Color(0.375, 0.5, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_4ub0g")
 
-[node name="SunsetLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node")]
+[node name="MoonriseLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node")]
+texture_filter = 1
 script = ExtResource("1_pru1i")
 spelltowernode = NodePath("SpellMachineTower")
 camera_node = NodePath("level_camera")

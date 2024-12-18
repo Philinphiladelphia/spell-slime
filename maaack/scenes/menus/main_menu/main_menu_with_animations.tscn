@@ -1,7 +1,7 @@
 [gd_scene load_steps=40 format=3 uid="uid://bccavc2gq6x18"]
 
 [ext_resource type="PackedScene" uid="uid://iatpne3a4rwl" path="res://maaack/scenes/menus/main_menu/main_menu.tscn" id="1_umbo3"]
-[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/scenes/spellslime_theme.tres" id="2_28l5c"]
+[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/themes/spellslime_theme.tres" id="2_28l5c"]
 [ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_xtkjf"]
 [ext_resource type="AudioStream" uid="uid://b5xosksiflobw" path="res://kenney_sfx/kenney_interface_sounds/glass_005.wav" id="4_oxs2l"]
 [ext_resource type="Texture2D" uid="uid://dfbctm1wuykwo" path="res://common_assets/branding/SpS_elements-02.png" id="4_xpgjj"]

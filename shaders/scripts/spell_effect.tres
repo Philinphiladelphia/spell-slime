@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://d5u0us211jwd"]
 
-[ext_resource type="Script" uid="uid://bvc2rl1h23tse" path="res://addons/shaderV/rgba/glow/glowEmpty.gd" id="1_q742b"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/glow/glowEmpty.gd" id="1_q742b"]
 
 [sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_iwjbb"]
 constant = 0.7

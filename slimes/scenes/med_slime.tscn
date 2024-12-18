@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://xy3euqv5p8q3" path="res://common_assets/slimes/slime.png" id="1_3bq4f"]
 [ext_resource type="Script" path="res://slimes/scripts/slime_controller.gd" id="1_abkxf"]
 [ext_resource type="Script" path="res://slimes/scripts/med_slime_controller.gd" id="1_i33h1"]
-[ext_resource type="Script" uid="uid://cpb2ch1lvydrj" path="res://addons/softbody2d/softbody2d.gd" id="2_wpnhm"]
+[ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_wpnhm"]
 [ext_resource type="Texture2D" uid="uid://cfkm8h8yxc1wt" path="res://slimes/assets/damage_indicatior.png" id="4_dwhx8"]
 [ext_resource type="Script" path="res://slimes/scripts/slime_damage_bar.gd" id="5_iva8l"]
 [ext_resource type="Texture2D" uid="uid://ddn3y0pkkg5q1" path="res://slimes/assets/black_frame.png" id="6_tolww"]
@@ -386,7 +386,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-12" type="Bone2D" parent="slime_node/slime_soft_body/Skeleton2D"]
 position = Vector2(304.27, 82.7291)
 rotation = 2.34958
-scale = Vector2(1, 1)
 rest = Transform2D(-0.702412, 0.711771, -0.711771, -0.702412, 304.27, 82.7291)
 auto_calculate_length_and_angle = false
 length = 85.0
@@ -413,7 +412,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-14" type="Bone2D" parent="slime_node/slime_soft_body/Skeleton2D"]
 position = Vector2(285.333, 200.141)
 rotation = 1.35127
-scale = Vector2(1, 1)
 rest = Transform2D(0.217766, 0.976001, -0.976001, 0.217766, 285.333, 200.141)
 auto_calculate_length_and_angle = false
 length = 85.0
@@ -480,7 +478,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-19" type="Bone2D" parent="slime_node/slime_soft_body/Skeleton2D"]
 position = Vector2(378.029, 283.609)
 rotation = -1.60818
-scale = Vector2(1, 1)
 rest = Transform2D(-0.0373776, -0.999301, 0.999301, -0.0373776, 378.029, 283.609)
 auto_calculate_length_and_angle = false
 length = 85.0
