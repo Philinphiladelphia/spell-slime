@@ -1,6 +1,33 @@
-[gd_resource type="Theme" load_steps=36 format=4 uid="uid://baaib8wk3l0l1"]
+[gd_resource type="Theme" load_steps=50 format=4 uid="uid://baaib8wk3l0l1"]
 
 [ext_resource type="FontFile" uid="uid://fhes64g5term" path="res://fonts/the-bomb-sound/The Bomb Sound.otf" id="1_jejyr"]
+[ext_resource type="Texture2D" uid="uid://lu7uw2sqxbnr" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/button_disabled.png" id="2_srj40"]
+[ext_resource type="Texture2D" uid="uid://b8ie5l8c0l1oj" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/button_hovered.png" id="3_76vc2"]
+[ext_resource type="Texture2D" uid="uid://dipyqu8u6b0eb" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/button_default.png" id="4_qwewy"]
+[ext_resource type="Texture2D" uid="uid://bnty4b2hq16la" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/button_pressed.png" id="5_1brfr"]
+[ext_resource type="Texture2D" uid="uid://dsg6wwvg3fj7y" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/subpanel_focused.png" id="6_dg2sq"]
+[ext_resource type="Texture2D" uid="uid://suep3385f3xg" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/tab_active_hovered.png" id="6_h707l"]
+[ext_resource type="Texture2D" uid="uid://dmwoy31v4ruup" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/subpanel_unfocused.png" id="7_hwg37"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecjka"]
+texture = ExtResource("2_srj40")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k35tt"]
+texture = ExtResource("3_76vc2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_avqye"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("4_qwewy")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8fklr"]
+texture = ExtResource("5_1brfr")
 
 [sub_resource type="Image" id="Image_1te13"]
 data = {
@@ -2285,7 +2312,14 @@ content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
 
-[sub_resource type="Image" id="Image_igfh8"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_matox"]
+texture = ExtResource("6_h707l")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="Image" id="Image_cpglq"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///07+//6I/v/+rf7//q3+//6H/P/8Tf///wL///8A////AP///wD///8A////AP///wD///8A////Ff///5D+//6//v/+v/7//r/+//6//v/+v/7//r/+//6P////FP///wD///8A////AP///wD///8A////Av///5D+//6//v/+v/7//r/u8O7Ce31734aGhtz+//6//v/+v/7//o////8C////AP///wD///8A////AP///07+//6//v/+v/7//r/u8O7CdHV04lxcXOl9fn3f/v/+v/7//r/+//6//P/8TP///wD///8A////AP///wD+//6I/v/+v/7//r/u8O7CdHV04lxcXOlzdHPi8PHwwv7//r/+//6//v/+v////4X///8A////AP///wD///8A/v/+rf7//r/+//6/e31731xcXOlpamnl8PHwwv7//r/+//6//v/+v/7//r/+//6t////AP///wD///8A////AP7//q3+//6//v/+v3t9e99cXFzpaWpp5e7w7sL+//6//v/+v/7//r/+//6//v/+rP///wD///8A////AP///wD+//6H/v/+v/7//r/u8O7Cc3Rz4lxcXOlzdHPi7vDuwv7//r/+//6//v/+v////4X///8A////AP///wD///8A/P/8Tf7//r/+//6//v/+v+7w7sJzdHPiXFxc6X1+fd/+//6//v/+v/7//r////9L////AP///wD///8A////AP///wL+//6P/v/+v/7//r/+//6/7vDuwn1+fd+FhYXc/v/+v/7//r/+//6O////Av///wD///8A////AP///wD///8A////FP7//o/+//6//v/+v/7//r/+//6//v/+v/7//r/+//6O////E////wD///8A////AP///wD///8A////AP///wD///8C/P/8TP///4X+//6t/v/+rP///4X///9L////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -2295,9 +2329,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_lrb7d"]
-image = SubResource("Image_igfh8")
+image = SubResource("Image_cpglq")
 
-[sub_resource type="Image" id="Image_a5lpb"]
+[sub_resource type="Image" id="Image_fqmdh"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///2j+//61/v/+5/7//uf+//60////Zv///wL///8A////AP///wD///8A////AP///wD///8A////G/7//sH+//7//v/+//7//v/+//7//v/+//7//v/+//6/////Gv///wD///8A////AP///wD///8A////Av7//sH+//7//v/+//7//v/s7ez/UFBQ/2BgYP/+//7//v/+//7//r////8C////AP///wD///8A////AP///2j+//7//v/+//7//v/s7ez/QkJC/xoaGv9RUVH//v/+//7//v/+//7/////Zf///wD///8A////AP///wD+//61/v/+//7//v/s7ez/QkJC/xoaGv9DQ0P/7e7t//7//v/+//7//v/+//7//rL///8A////AP///wD///8A/v/+5/7//v/+//7/UFBQ/xoaGv8wMDD/7e7t//7//v/+//7//v/+//7//v/+//7n////AP///wD///8A////AP7//uf+//7//v/+/1BQUP8aGhr/MDAw/+zt7P/+//7//v/+//7//v/+//7//v/+5v///wD///8A////AP///wD+//60/v/+//7//v/s7ez/Q0ND/xoaGv9DQ0P/7O3s//7//v/+//7//v/+//7//rL///8A////AP///wD///8A////Zv7//v/+//7//v/+/+zt7P9DQ0P/Ghoa/1FRUf/+//7//v/+//7//v////9k////AP///wD///8A////AP///wL+//6//v/+//7//v/+//7/7O3s/1FRUf9fX1///v/+//7//v/+//69////Av///wD///8A////AP///wD///8A////Gv7//r/+//7//v/+//7//v/+//7//v/+//7//v/+//69////Gf///wD///8A////AP///wD///8A////AP///wD///8C////Zf7//rL+//7n/v/+5v7//rL///9k////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -2307,9 +2341,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_6ex74"]
-image = SubResource("Image_a5lpb")
+image = SubResource("Image_fqmdh")
 
-[sub_resource type="Image" id="Image_gp78d"]
+[sub_resource type="Image" id="Image_iw0qc"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A09PT/9PT0//T09P/09PT/9PT0//T09P/////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANPT0//T09P/09PT/9PT0//T09P/09PT/////wD///8A////AP///wD///8A////AP///wD///8A////AP///wDT09P/09PT/9PT0//T09P/09PT/9PT0/////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wA="),
 "format": "RGBA8",
@@ -2319,9 +2353,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_l5a2v"]
-image = SubResource("Image_gp78d")
+image = SubResource("Image_iw0qc")
 
-[sub_resource type="Image" id="Image_iv8ly"]
+[sub_resource type="Image" id="Image_uoko1"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///07+//6I/v/+rf7//q3+//6H/P/8Tf///wL///8A////AP///wD///8A////AP///wD///8A////Ff///5D+//6//v/+v/7//r/+//6//v/+v/7//r/+//6P////FP///wD///8A////AP///wD///8A////Av///5D+//6//v/+v4WFhdx7fXvf7vDuwv7//r/+//6//v/+v/7//o////8C////AP///wD///8A////AP///07+//6//v/+v/7//r97fXvfXFxc6XN0c+Lu8O7C/v/+v/7//r/+//6//P/8TP///wD///8A////AP///wD+//6I/v/+v/7//r/+//6/7vDuwnN0c+JcXFzpc3Rz4u7w7sL+//6//v/+v////4X///8A////AP///wD///8A/v/+rf7//r/+//6//v/+v/7//r/u8O7CaWlp5VxcXOl9fn3f/v/+v/7//r/+//6t////AP///wD///8A////AP7//q3+//6//v/+v/7//r/+//6/7vDuwmlpaeVcXFzpfX593/7//r/+//6//v/+rP///wD///8A////AP///wD+//6H/v/+v/7//r/+//6/7vDuwnR1dOJcXFzpc3Rz4vDx8ML+//6//v/+v////4X///8A////AP///wD///8A/P/8Tf7//r/+//6//v/+v3t9e99cXFzpc3Rz4vDx8ML+//6//v/+v/7//r////9L////AP///wD///8A////AP///wL+//6P/v/+v/7//r+GhobcfX593/Dx8ML+//6//v/+v/7//r/+//6O////Av///wD///8A////AP///wD///8A////FP7//o/+//6//v/+v/7//r/+//6//v/+v/7//r/+//6O////E////wD///8A////AP///wD///8A////AP///wD///8C/P/8TP///4X+//6t/v/+rP///4X///9L////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -2331,9 +2365,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_sdbvx"]
-image = SubResource("Image_iv8ly")
+image = SubResource("Image_uoko1")
 
-[sub_resource type="Image" id="Image_8gr6f"]
+[sub_resource type="Image" id="Image_uodj1"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////Av///2j+//61/v/+5/7//uf+//60////Zv///wL///8A////AP///wD///8A////AP///wD///8A////G/7//sH+//7//v/+//7//v/+//7//v/+//7//v/+//6/////Gv///wD///8A////AP///wD///8A////Av7//sH+//7//v/+/15eXv9QUFD/7O3s//7//v/+//7//v/+//7//r////8C////AP///wD///8A////AP///2j+//7//v/+//7//v9QUFD/Ghoa/0NDQ//s7ez//v/+//7//v/+//7/////Zf///wD///8A////AP///wD+//61/v/+//7//v/+//7/7O3s/0NDQ/8aGhr/Q0ND/+zt7P/+//7//v/+//7//rL///8A////AP///wD///8A/v/+5/7//v/+//7//v/+//7//v/s7ez/Ly8v/xoaGv9RUVH//v/+//7//v/+//7n////AP///wD///8A////AP7//uf+//7//v/+//7//v/+//7/7O3s/y8vL/8aGhr/UVFR//7//v/+//7//v/+5v///wD///8A////AP///wD+//60/v/+//7//v/+//7/7O3s/0JCQv8aGhr/Q0ND/+3u7f/+//7//v/+//7//rL///8A////AP///wD///8A////Zv7//v/+//7//v/+/1BQUP8aGhr/Q0ND/+3u7f/+//7//v/+//7//v////9k////AP///wD///8A////AP///wL+//6//v/+//7//v9gYGD/UVFR/+3u7f/+//7//v/+//7//v/+//69////Av///wD///8A////AP///wD///8A////Gv7//r/+//7//v/+//7//v/+//7//v/+//7//v/+//69////Gf///wD///8A////AP///wD///8A////AP///wD///8C////Zf7//rL+//7n/v/+5v7//rL///9k////Av///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -2343,9 +2377,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_tlxj2"]
-image = SubResource("Image_8gr6f")
+image = SubResource("Image_uodj1")
 
-[sub_resource type="Image" id="Image_fybls"]
+[sub_resource type="Image" id="Image_5oksh"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8AtbW1H7Ozs2Szs7NktbW1H////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7KysmP///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjsLCwHf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7Ozs2Szs7NktbW1H////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7KysmP///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjs7OzHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7Ozs2SysrJjs7OzHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs2SysrJzsrKyc7S0tGL///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7NksrKyc7KysnOxsbFi////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AtbW1H7KysmOysrJjs7OzHv///wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -2355,9 +2389,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_v167p"]
-image = SubResource("Image_fybls")
+image = SubResource("Image_5oksh")
 
-[sub_resource type="Image" id="Image_v6238"]
+[sub_resource type="Image" id="Image_vig2c"]
 data = {
 "data": PackedByteArray("////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OQsLCwLf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprOzs4////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPtbW1Kf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OQsLCwLf///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprOzs4////8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPsrKyK////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8Atra2LbOzs5Czs7OPsrKyK////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ALOzs5CysrKmsrKyprKyso7///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wCzs7OQsrKyprKysqazs7ON////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AsLCwLbOzs4+zs7OPsrKyK////wD///8A////AP///wD///8A////AA=="),
 "format": "RGBA8",
@@ -2367,7 +2401,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_67iwd"]
-image = SubResource("Image_v6238")
+image = SubResource("Image_vig2c")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8n0l"]
 content_margin_left = 0.0
@@ -2451,8 +2485,26 @@ content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_63jjm"]
+content_margin_left = 10.0
+content_margin_top = 18.0
+texture = ExtResource("6_dg2sq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mcki7"]
+content_margin_left = 18.0
+content_margin_top = 20.0
+texture = ExtResource("7_hwg37")
+
 [resource]
 Button/fonts/font = ExtResource("1_jejyr")
+Button/styles/disabled = SubResource("StyleBoxTexture_ecjka")
+Button/styles/hover = SubResource("StyleBoxTexture_k35tt")
+Button/styles/normal = SubResource("StyleBoxTexture_avqye")
+Button/styles/pressed = SubResource("StyleBoxTexture_8fklr")
 Label/fonts/font = ExtResource("1_jejyr")
 LineEdit/fonts/font = ExtResource("1_jejyr")
 ProgressBar/fonts/font = ExtResource("1_jejyr")
@@ -2486,6 +2538,7 @@ RichTextLabel/fonts/normal_font = ExtResource("1_jejyr")
 RichTextLabel/styles/focus = SubResource("StyleBoxFlat_et5p1")
 RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_no8w2")
 TabBar/fonts/font = ExtResource("1_jejyr")
+TabBar/styles/tab_hovered = SubResource("StyleBoxTexture_matox")
 TabContainer/colors/drop_mark_color = Color(1, 1, 1, 1)
 TabContainer/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 TabContainer/colors/font_hovered_color = Color(0.95, 0.95, 0.95, 1)
@@ -2515,5 +2568,7 @@ TabContainer/styles/tabbar_background = SubResource("StyleBoxEmpty_kovop")
 TextEdit/colors/background_color = Color(0.53164, 0.00377634, 0.996002, 0.290196)
 TextEdit/colors/caret_background_color = Color(0.844474, 0.177655, 0.222573, 1)
 TextEdit/fonts/font = ExtResource("1_jejyr")
+TextEdit/styles/focus = SubResource("StyleBoxTexture_63jjm")
+TextEdit/styles/normal = SubResource("StyleBoxTexture_mcki7")
 Tree/fonts/font = ExtResource("1_jejyr")
 Tree/fonts/title_button_font = ExtResource("1_jejyr")

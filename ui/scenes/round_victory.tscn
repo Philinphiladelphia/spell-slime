@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://46cjgouftjll"]
+[gd_scene load_steps=4 format=3 uid="uid://46cjgouftjll"]
 
-[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/themes/spellslime_theme.tres" id="1_mw542"]
 [ext_resource type="Texture2D" uid="uid://bobun5wip4t3q" path="res://icon.svg" id="1_soytb"]
 [ext_resource type="Script" path="res://ui/scripts/round_victory.gd" id="2_l1kfq"]
 
@@ -15,7 +14,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_mw542")
 script = ExtResource("2_l1kfq")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

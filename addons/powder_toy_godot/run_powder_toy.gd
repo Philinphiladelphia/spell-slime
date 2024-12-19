@@ -1,26 +1,26 @@
 extends PowderToyGodot
 
 # this controls simulation speed
-var sim_speed = 60.0 # fps
-var accumulated_fractional_frame = 0.0
+var sim_speed: float = 60.0 # fps
+var accumulated_fractional_frame: float = 0.0
 
 # Define configurable display scale
-var display_scale = 2
+var display_scale: float = 2
 
-var draw_rect_size_boost = 0.1
+var draw_rect_size_boost: float = 0.1
 
 # Buffer for powder manifestation requests
-var powder_manifestation_buffer = []
+var powder_manifestation_buffer: Array = []
 
 # Dictionary to store colors for each particle type
-var particle_colors = {}
+var particle_colors: Dictionary = {}
 
 # Path to the JSON file
-var colors_file_path = "res://addons/powder_toy_godot/colors.json"
+var colors_file_path: String = "res://addons/powder_toy_godot/colors.json"
 
-var background_transparency = 0
+var background_transparency: float = 0
 
-var base_powder_arrays
+var base_powder_arrays: Array
 var powder_array : ArrayMesh
 var powder_mesh : MeshInstance2D
 
@@ -48,7 +48,7 @@ func _ready() -> void:
 	powder_mesh = MeshInstance2D.new()
 	add_child(powder_mesh)
 
-var accumulated_time = 0.0
+var accumulated_time: float = 0.0
 
 func _process(delta: float) -> void:
 	accumulated_time += delta * sim_speed
@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 		accumulated_time -= 1.0
 
 	# Process buffered powder manifestation requests
-	for request in powder_manifestation_buffer:
+	for request: Dictionary in powder_manifestation_buffer:
 		powder_circle_wrapper(request.x, request.y, request.type, request.size)
 	powder_manifestation_buffer.clear()
 
@@ -66,35 +66,35 @@ func _process(delta: float) -> void:
 	#get_walls_from_powder_toy()
 	queue_redraw()
 
-func count_element(type) -> int:
-	var count = 0
-	var type_array = get_particle_type_array()
-	for y in range(type_array.size()):
-		for x in range(type_array[y].size()):
-			var type_num = type_array[y][x]
+func count_element(type: int) -> int:
+	var count: int = 0
+	var type_array: Array = get_particle_type_array()
+	for y: int in range(type_array.size()):
+		for x: int in range(type_array[y].size()):
+			var type_num: int = type_array[y][x]
 			if (type == type_num):
 				count += 1
 	return count
 
 
 func _draw() -> void:
-	var type_array = get_particle_type_array()
-	var wall_array = get_wall_type_array()
+	var type_array: Array = get_particle_type_array()
+	#var wall_array: Array = get_wall_type_array()
 
 	# Create a PackedVector2Array for 2D vertices
-	var vertices = PackedVector2Array()
-	var colors = PackedColorArray()
+	var vertices: PackedVector2Array = PackedVector2Array()
+	var colors: PackedColorArray = PackedColorArray()
 
-	for y in range(type_array.size()):
-		for x in range(type_array[y].size()):
-			var color_index = type_array[y][x]
-			var color = get_color_from_index(color_index)
+	for y: int in range(type_array.size()):
+		for x: int in range(type_array[y].size()):
+			var particle_type: int = type_array[y][x]
+			var color: Color = get_color_from_index(particle_type)
 
 			# Calculate the vertices for the two triangles forming the rectangle
-			var v0 = Vector2(x * display_scale, y * display_scale)
-			var v1 = Vector2((x + 1) * display_scale, y * display_scale)
-			var v2 = Vector2(x * display_scale, (y + 1) * display_scale)
-			var v3 = Vector2((x + 1) * display_scale, (y + 1) * display_scale)
+			var v0: Vector2 = Vector2(x * display_scale, y * display_scale)
+			var v1: Vector2 = Vector2((x + 1) * display_scale, y * display_scale)
+			var v2: Vector2 = Vector2(x * display_scale, (y + 1) * display_scale)
+			var v3: Vector2 = Vector2((x + 1) * display_scale, (y + 1) * display_scale)
 
 			# First triangle (v0, v1, v2)
 			vertices.push_back(v0)
@@ -144,31 +144,32 @@ func get_color_from_index(index: int) -> Color:
 
 func powder_circle_wrapper(x: int, y: int, type: int, size: int) -> void:
 	# Translate coordinates from [0, x_resolution] to [0, x_resolution - 1]
-	var translated_x = x
-	var translated_y = y
-	powder_circle(translated_x, translated_y, type, size)
+	var translated_x: int = x
+	var translated_y: int = y
+	# this might be busted
+	create_powder_circle(translated_x, translated_y, type, size)
 
-func powder_circle(x, y, type, size):
+func create_powder_circle(x: int, y: int, type: int, size: int) -> void:
 	powder_manifestation_buffer.append({"x": x, "y": y, "type": type, "size": size}) # Example: different type and size
 
 func load_colors() -> void:
-	var file = FileAccess.open(colors_file_path, FileAccess.READ)
+	var file: FileAccess = FileAccess.open(colors_file_path, FileAccess.READ)
 	if file:
-		var json = JSON.new()
-		var file_text = file.get_as_text()
+		var json: JSON = JSON.new()
+		var file_text: String = file.get_as_text()
 		json.parse(file_text)
-		var data = json.data
-		for key in data.keys():
+		var data: Dictionary = json.data
+		for key: String in data.keys():
 			particle_colors[int(key)] = str_to_var(data[key])
 		file.close()
 
 func save_colors() -> void:
-	var file = FileAccess.open(colors_file_path, FileAccess.WRITE)
+	var file: FileAccess = FileAccess.open(colors_file_path, FileAccess.WRITE)
 	if file:
-		var data = {}
-		for key in particle_colors.keys():
+		var data: Dictionary = {}
+		for key: String in particle_colors.keys():
 			data[str(key)] = var_to_str(particle_colors[key])
-		var json_string = JSON.stringify(data, "\t")
+		var json_string: String = JSON.stringify(data, "\t")
 		file.store_string(json_string)
 		file.close()
 

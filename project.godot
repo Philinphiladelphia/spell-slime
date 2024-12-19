@@ -62,6 +62,11 @@ movie_writer/movie_file="/home/phil/Desktop/movies/steam_video.avi"
 
 enabled=PackedStringArray("res://addons/cameraregion2d/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
+[gui]
+
+theme/custom="res://ui/themes/super_pixel_violet.tres"
+theme/custom_font="res://fonts/zig/zig_____.ttf"
+
 [input]
 
 primary_fire={
@@ -116,4 +121,5 @@ copy_path="res://maaack"
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(0.415686, 0.403922, 0.678431, 1)
 anti_aliasing/quality/msaa_2d=1

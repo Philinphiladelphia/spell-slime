@@ -1,18 +1,18 @@
 extends Node2D
 
-@onready var powder_toy = %PowderToyGodot
-var current_x = 0.0
-var ratio = 650.0/200.0
-var is_drawing = false
-var mouse_pos = Vector2()
-var is_right_click = false
+@onready var powder_toy: Node = %PowderToyGodot
+var current_x: float = 0.0
+var ratio: float = 650.0/200.0
+var is_drawing: bool = false
+var mouse_pos: Vector2 = Vector2()
+var is_right_click: bool = false
 
-var health_element = 17
-var health_element_count = 0
+var health_element: int = 17
+var health_element_count: int = 0
 
 var clear_edges_timer : Timer
 
-var sim_speed = 60.0
+var sim_speed: float = 60.0
 
 # while the spellward is active, slime hits deal greatly reduced damage to the tower.
 
@@ -37,7 +37,7 @@ func _ready() -> void:
 	clear_edges_timer.connect("timeout", clear_outer_area)
 	clear_edges_timer.start()
 	
-func get_health():
+func get_health() -> int:
 	return powder_toy.count_element(health_element)
 
 
@@ -54,11 +54,11 @@ func _physics_process(delta: float) -> void:
 		#else:
 			#powder_toy.powder_circle(mouse_pos.x / ratio, mouse_pos.y / ratio, 1, 2) # Different element
 
-func circle(pos: Vector2, radius: float, element: int):
+func circle(pos: Vector2, radius: float, element: int) -> void:
 	powder_toy.powder_circle(pos.x, pos.y, radius, element)
 
 func rectangle(top_left: Vector2, width: float, height: float, thickness: float, element: int) -> void:
-	var bottom_right = top_left + Vector2(width, height)
+	var bottom_right: Vector2 = top_left + Vector2(width, height)
 	powder_toy.powder_line(top_left.x, top_left.y, bottom_right.x, top_left.y, thickness, element)
 	powder_toy.powder_line(bottom_right.x, top_left.y, bottom_right.x, bottom_right.y, thickness, element)
 	powder_toy.powder_line(bottom_right.x, bottom_right.y, top_left.x, bottom_right.y, thickness, element)
@@ -76,24 +76,24 @@ func polygon(center: Vector2, radius: float, sides: int, thickness: float, eleme
 	if sides < 3:
 		return # A polygon must have at least 3 sides
 
-	var angle_step = 2 * PI / sides
-	var points = []
+	var angle_step: float = 2 * PI / sides
+	var points: PackedVector2Array = []
 
 	for i in range(sides):
-		var angle = i * angle_step
-		var x = center.x + radius * cos(angle)
-		var y = center.y + radius * sin(angle)
+		var angle: float = i * angle_step
+		var x: float = center.x + radius * cos(angle)
+		var y: float = center.y + radius * sin(angle)
 		points.append(Vector2(x, y))
 
 	for i in range(sides):
-		var start = points[i]
-		var end = points[(i + 1) % sides]
+		var start: Vector2 = points[i]
+		var end: Vector2 = points[(i + 1) % sides]
 		powder_toy.powder_line(start.x, start.y, end.x, end.y, thickness, element)
 
 func line(start: Vector2, end: Vector2, thickness: float, element: int) -> void:
 	powder_toy.powder_line(start.x, start.y, end.x, end.y, thickness, element)
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed:
 			is_drawing = true
@@ -117,25 +117,25 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseMotion and is_drawing:
 		mouse_pos = event.position
 
-func collide_slime(position: Vector2, radius: float) -> Array:
-	var particles_within_radius = []
-	var particle_types = powder_toy.get_particle_type_array()
-
-	for particle in particle_types:
-		var particle_position = particle.position
-		var distance = position.distance_to(particle_position)
-		if distance <= radius:
-			particles_within_radius.append(particle)
-
-	return particles_within_radius
+#func collide_slime(position: Vector2, radius: float) -> Array:
+	#var particles_within_radius: PackedInt32Array = []
+	#var particle_types: PackedInt32Array = powder_toy.get_particle_type_array()
+#
+	#for particle in particle_types:
+		#var particle_position = particle.position
+		#var distance = position.distance_to(particle_position)
+		#if distance <= radius:
+			#particles_within_radius.append(particle)
+#
+	#return particles_within_radius
 
 # this function makes it possible for the powder toy to have void edges while maintaining air pressure.
 func clear_outer_area() -> void:
-	var width = 120
-	var height = 120
-	var border = 1
-	var wall_offset = 0
-	var bottom_size = 20
+	var width: int = 120
+	var height: int = 120
+	var border: int = 1
+	var wall_offset: int = 0
+	var bottom_size: int = 20
 
 	# Clear top border
 	

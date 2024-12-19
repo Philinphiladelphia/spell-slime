@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var tileset = $middle/TileMapLayer
+@onready var tileset: TileMapLayer = $middle/TileMapLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func apply_damage(amount, proj_position):
+func apply_damage(amount: int, proj_position: Vector2) -> void:
 	pass
 	#print("TILE DAMAGE")
 	# Convert projectile position to tile position
