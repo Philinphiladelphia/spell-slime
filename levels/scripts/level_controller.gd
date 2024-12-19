@@ -78,7 +78,7 @@ func _process(delta: float) -> void:
 	
 	total_slime_health = max(total_slime_health, float($slime_tracker.current_max_slime_health))
 	
-	$sliaaaame_health_layer/HealthBar._set_health(100*($slime_tracker.current_slime_health/total_slime_health))
+	$slime_health_layer/HealthBar._set_health(100*($slime_tracker.current_slime_health/total_slime_health))
 	
 	# set and get total slime health
 	
