@@ -36,6 +36,8 @@ var sub_menu: PackedScene
 var won: bool = false
 var lost: bool = false
 
+var max_spellward_hp = 0.0
+
 func load_scene(scene_path : String) -> void:
 	SceneLoader.load_scene(scene_path)
 
@@ -47,7 +49,7 @@ func _ready() -> void:
 	
 	var tower_element: int = 114 # plant
 	
-	$PowderViewport.powder_instance.health_element = tower_element
+	$PowderViewport.powder_instance.health_element = 20
 	
 	$PowderViewport.powder_instance.polygon(Vector2(60,60), 20.0, 8, 5, tower_element)
 	$PowderViewport.powder_instance.powder_toy.powder_box(40, 120, 80, 75, tower_element)
@@ -68,9 +70,12 @@ func _process(delta: float) -> void:
 	
 	# init powder health. Gotta wait a sec for the initial powder manifests to go off
 	var powder_health: float = $PowderViewport.powder_instance.get_health()
-	if (powder_health > $SpellMachineTower.spellward_health_margin) && init_spellward_health:
-		$SpellMachineTower.init_spellward_health(powder_health - $SpellMachineTower.spellward_health_margin)
-		init_spellward_health = false
+	
+	# calculate spellward hp
+	var margin_health: int = powder_health - $SpellMachineTower.spellward_health_margin
+	if (margin_health > max_spellward_hp):
+		$SpellMachineTower.init_spellward_health(margin_health)
+		max_spellward_hp = margin_health
 		
 	# smoking barrel
 	

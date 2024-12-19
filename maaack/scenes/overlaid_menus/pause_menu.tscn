@@ -8,3 +8,6 @@
 script = ExtResource("2_lo555")
 options_packed_scene = ExtResource("3_114vy")
 main_menu_scene = "res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn"
+
+[node name="PanelColor" parent="MenuPanelContainer" index="0"]
+visible = false
