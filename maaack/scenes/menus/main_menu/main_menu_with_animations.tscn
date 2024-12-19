@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bccavc2gq6x18"]
+[gd_scene load_steps=40 format=3 uid="uid://bccavc2gq6x18"]
 
 [ext_resource type="PackedScene" uid="uid://iatpne3a4rwl" path="res://maaack/scenes/menus/main_menu/main_menu.tscn" id="1_umbo3"]
 [ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_xtkjf"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://2m8p0v7ckmmv" path="res://kenney_sfx/kenney_interface_sounds/bong_001.wav" id="14_qxt3k"]
 [ext_resource type="AudioStream" uid="uid://ccvno5vqbda2k" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 07 Slurp.mp3" id="16_de6p3"]
 [ext_resource type="Texture2D" uid="uid://cyn4gilxsc58" path="res://common_assets/branding/SpS_elements-04.png" id="17_c0cx2"]
+[ext_resource type="FontFile" uid="uid://fhes64g5term" path="res://fonts/the-bomb-sound/The Bomb Sound.otf" id="18_ewea3"]
 [ext_resource type="PackedScene" uid="uid://bw67w52g4rasi" path="res://cutscenes/cutscene_small_slime.tscn" id="19_mstru"]
 [ext_resource type="Script" path="res://vfx/move_to_mouse.gd" id="20_3nrei"]
 [ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/jump_on_beat.gd" id="20_fr6r1"]
@@ -451,6 +452,7 @@ offset_top = -182.0
 offset_right = 321.0
 offset_bottom = -112.0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("18_ewea3")
 text = "Slimelord's Curse"
 label_settings = SubResource("LabelSettings_pu5s1")
 
@@ -472,6 +474,7 @@ offset_top = 95.0
 offset_right = 117.0
 offset_bottom = 129.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("18_ewea3")
 theme_override_font_sizes/font_size = 24
 text = "and the"
 label_settings = SubResource("LabelSettings_a3ls1")
