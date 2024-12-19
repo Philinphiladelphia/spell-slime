@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://s2e3i3nj8yre"]
+
+[ext_resource type="FontFile" uid="uid://byu80w2u2k8ie" path="res://fonts/zig/zig_____.ttf" id="1_t5tvk"]
+
+[resource]
+default_font = ExtResource("1_t5tvk")
+default_font_size = 24
+Label/fonts/font = ExtResource("1_t5tvk")
+Label/styles/normal = null

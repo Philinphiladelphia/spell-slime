@@ -17,7 +17,7 @@ signal joint_removed(rigid_body_a: SoftBodyChild, rigid_body_b: SoftBodyChild)
 
 #region Properties
 
-func _set(property, value):
+func _set(property, value) -> bool:
 	if property == "texture":
 		texture = value as Texture2D
 		vertex_interval = texture.get_size().length() / 10
@@ -984,22 +984,22 @@ var _hinges_bodies:= Dictionary()
 var _hinges_distances_squared := Dictionary()
 
 # The center of the softbody. Updates dynamically if [member SoftBody2D.look_at_center] is true. If not, call [method SoftBody2D.get_bones_center_position] to compute it.
-@onready var bone_center_position = get_bones_center_position()
+@onready var bone_center_position: Vector2 = get_bones_center_position()
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
 	_update_vars()
 
-func _update_vars():
+func _update_vars() -> void:
 	_skeleton_node = get_node_or_null(skeleton)
 	if get_child_count() == 0 || !_skeleton_node:
 		push_warning("Softbody2d not created")
 		return
-	var bone_nodes := _skeleton_node.get_children().filter(func(node): return node is Bone2D)
+	var bone_nodes := _skeleton_node.get_children().filter(func(node: Node) -> bool: return node is Bone2D)
 	_bones_array.clear()
-	for bone in bone_nodes:
+	for bone: Bone2D in bone_nodes:
 		_bones_array.append(bone as Bone2D)
 	_update_soft_body_rigidbodies(_skeleton_node)
 	# This is needed for breaking the rigidbody
@@ -1168,7 +1168,7 @@ func get_rigid_bodies() -> Array[SoftBodyChild]:
 
 ## Computes the center of the softbody.
 func get_bones_center_position() -> Vector2:
-	var center = Vector2()
+	var center: Vector2 = Vector2()
 	var bodies := _soft_body_rigidbodies_array
 	for body in bodies:
 		center = center + body.rigidbody.global_position
@@ -1177,17 +1177,17 @@ func get_bones_center_position() -> Vector2:
 ## Get the body located in the center
 func get_center_body() -> SoftBodyChild:
 	var bodies := get_rigid_bodies()
-	var rb_array := bodies.map(func(body): return body.rigidbody)
+	var rb_array := bodies.map(func(body: SoftBody2DRigidBody) -> RigidBody2D: return body.rigidbody)
 	var center_rb := _get_node_to_follow(rb_array)
 	return _soft_body_rigidbodies_dict[center_rb]
 
-func apply_impulse(impulse: Vector2, position: Vector2 = Vector2(0, 0)):
+func apply_impulse(impulse: Vector2, position: Vector2 = Vector2(0, 0)) -> void:
 	for softbody_el in get_rigid_bodies():
 		var rigidbody := softbody_el.rigidbody
 		if rigidbody is RigidBody2D:
 			(rigidbody as RigidBody2D).apply_impulse(impulse, position)
 
-func apply_force(force: Vector2, position: Vector2 = Vector2(0, 0)):
+func apply_force(force: Vector2, position: Vector2 = Vector2(0, 0)) -> void:
 	for softbody_el in get_rigid_bodies():
 		var rigidbody := softbody_el.rigidbody
 		if rigidbody is RigidBody2D:
@@ -1195,24 +1195,24 @@ func apply_force(force: Vector2, position: Vector2 = Vector2(0, 0)):
 
 #endregion
 
-func _update_soft_body_rigidbodies(skeleton_node:Skeleton2D = null):
+func _update_soft_body_rigidbodies(skeleton_node:Skeleton2D = null) -> void:
 	var result: Array[SoftBodyChild]
-	var children = get_children().filter(func (node: Node): return !(node is Skeleton2D))
+	var children: Array[Node] = get_children().filter(func (node: Node) -> bool: return !(node is Skeleton2D))
 	if !skeleton_node:
 		return
-	var bones = skeleton_node.get_children()
+	var bones: Array[Node] = skeleton_node.get_children()
 	for child in children:
-		var softbodyrb = SoftBodyChild.new()
+		var softbodyrb: SoftBodyChild = SoftBodyChild.new()
 		softbodyrb.rigidbody = child as PhysicsBody2D
-		var nodes_found = bones.filter(func(bone): return bone.name == child.name);
-		if bones.filter(func(bone): return bone.name == child.name).is_empty():
+		var nodes_found: Array[Node] = bones.filter(func(bone: Bone2D) -> bool: return bone.name == child.name);
+		if bones.filter(func(bone: Bone2D) -> bool: return bone.name == child.name).is_empty():
 			push_error("Cannot find node " + child.name + " on " + skeleton_node.get_path().get_concatenated_names())
 			return
-		softbodyrb.bone = bones.filter(func(bone): return bone.name == child.name)[0]
-		var rb_children = child.get_children()
-		softbodyrb.shape = rb_children.filter(func (node): return node is CollisionShape2D)[0]
-		var joints = rb_children.filter(func (node): return node is Joint2D)
-		for joint in joints:
+		softbodyrb.bone = bones.filter(func(bone: Bone2D) -> bool: return bone.name == child.name)[0]
+		var rb_children: Array[Node] = child.get_children()
+		softbodyrb.shape = rb_children.filter(func (node: Node) -> bool: return node is CollisionShape2D)[0]
+		var joints: Array[Node] = rb_children.filter(func (node: Node) -> bool: return node is Joint2D)
+		for joint: Joint2D in joints:
 			# dont add joints we are about to delete
 			if !joint.is_queued_for_deletion():
 				softbodyrb.joints.append(joint)
@@ -1220,10 +1220,10 @@ func _update_soft_body_rigidbodies(skeleton_node:Skeleton2D = null):
 		_soft_body_rigidbodies_dict[softbodyrb.rigidbody] = softbodyrb
 	_soft_body_rigidbodies_array = result
 
-var _max_deletions = 6
+var _max_deletions: int = 6
 var _last_delete_time := 0
 
-@onready var _last_texture = texture
+@onready var _last_texture: Texture2D = texture
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -1237,7 +1237,7 @@ func _physics_process(delta: float) -> void:
 	if break_distance_ratio <= 0 || !_skeleton_node:
 		return
 	# Break at max max_deletions joints
-	var deleted_count = 0
+	var deleted_count: int = 0
 	for rigid_body in get_rigid_bodies():
 		for node in rigid_body.joints:
 			var joint := node

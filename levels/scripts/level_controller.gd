@@ -2,20 +2,20 @@ extends Node2D
 
 var level_camera: Camera2D
 
-var camera_move_speed = 2500
+var camera_move_speed: int = 2500
 
-var health = 100
-var init_spellward_health = true
+var health: float = 100
+var init_spellward_health: bool = true
 
 # slimes should jump over the tower, dropping powder. Another reason for flying slimes.
 
-var powder_scale = 23
-var powder_offset_x = 0
-var powder_offset_y = 95
+var powder_scale: float = 23
+var powder_offset_x: int = 0
+var powder_offset_y: int = 95
 
-var total_slime_health = 10
+var total_slime_health: int = 10
 
-var tower_health = 1000
+var tower_health: int = 1000
 
 
 ## Defines the path to the game scene. Hides the play button if empty.
@@ -27,16 +27,16 @@ var tower_health = 1000
 
 @export var camera_node : Camera2D
 
-@onready var rewards_screen = preload("res://ui/scenes/round_victory.tscn")
+@onready var level_win_screen: PackedScene = preload("res://addons/maaacks_game_template/extras/scenes/overlaid_menus/level_won_menu.tscn")
 
-var options_scene
-var credits_scene
-var sub_menu
+var options_scene: PackedScene
+var credits_scene: PackedScene
+var sub_menu: PackedScene
 
-var won = false
-var lost = false
+var won: bool = false
+var lost: bool = false
 
-func load_scene(scene_path : String):
+func load_scene(scene_path : String) -> void:
 	SceneLoader.load_scene(scene_path)
 
 
@@ -45,7 +45,7 @@ func load_scene(scene_path : String):
 func _ready() -> void:
 	level_camera = $level_camera
 	
-	var tower_element = 67
+	var tower_element: int = 67
 	
 	$PowderViewport.powder_instance.health_element = tower_element
 	
@@ -67,7 +67,7 @@ func _process(delta: float) -> void:
 		SceneLoader.load_scene("res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn")
 	
 	# init powder health. Gotta wait a sec for the initial powder manifests to go off
-	var powder_health = $PowderViewport.powder_instance.get_health()
+	var powder_health: float = $PowderViewport.powder_instance.get_health()
 	if (powder_health > $SpellMachineTower.spellward_health_margin) && init_spellward_health:
 		$SpellMachineTower.init_spellward_health(powder_health - $SpellMachineTower.spellward_health_margin)
 		init_spellward_health = false
@@ -83,18 +83,18 @@ func _process(delta: float) -> void:
 	# set and get total slime health
 	
 	# handle slime positions
-	var slime_positions = $slime_tracker.collected_slime_positions
-	var slime_powder_activation = $slime_tracker.powder_activated_bitmap
-	var slime_elements = $slime_tracker.slime_elements
-	var slime_circle_sizes = $slime_tracker.slime_circle_sizes
-	var ignore_elements = []  # Add any elements to ignore here
+	var slime_positions: PackedVector2Array = $slime_tracker.collected_slime_positions
+	var slime_powder_activation: PackedInt32Array = $slime_tracker.powder_activated_bitmap
+	var slime_elements: PackedInt32Array = $slime_tracker.slime_elements
+	var slime_circle_sizes: PackedInt32Array = $slime_tracker.slime_circle_sizes
+	var ignore_elements: PackedInt32Array = []  # Add any elements to ignore here
 	
 	# player wins!
 	if slime_positions.size() == 0 and $slime_tracker.spawns_done && not won:
 		won = true
-		var rewards = rewards_screen.instantiate()
+		var win: Node = level_win_screen.instantiate()
 		#rewards.global_position = camera_node.global_position
-		$slime_health_layer.add_child(rewards)
+		$slime_health_layer.add_child(win)
 		#SceneLoader.load_scene("res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn")
 
 	for i in range(len(slime_positions)):
@@ -102,10 +102,10 @@ func _process(delta: float) -> void:
 		if slime_powder_activation[i] != 1:
 			continue
 		
-		var element = $slime_tracker.slime_elements[i]
-		var slime_circle_size = $slime_tracker.slime_circle_sizes[i]
+		var element: int = $slime_tracker.slime_elements[i]
+		var slime_circle_size: int = $slime_tracker.slime_circle_sizes[i]
 		
-		var dist = slime_positions[i] - $SpellMachineTower.position
+		var dist: Vector2 = slime_positions[i] - $SpellMachineTower.position
 		
 		# I might need to make powdertoy an autoload singleton.
 		
@@ -114,8 +114,8 @@ func _process(delta: float) -> void:
 			print("powder toy freed")
 		
 		if dist.x < 1000 && dist.y < 1000:
-			var powder_x = 120-(60-(dist.x/powder_scale)) + powder_offset_x
-			var powder_y = (dist.y/powder_scale) + powder_offset_y
+			var powder_x: int = 120-(60-(dist.x/powder_scale)) + powder_offset_x
+			var powder_y: int = (dist.y/powder_scale) + powder_offset_y
 			
 			#var slime_powder = $PowderViewport.powder_instance.collide_slime(Vector2(powder_x, powder_y), 10)
 			#print(slime_powder)
@@ -141,8 +141,8 @@ func _process(delta: float) -> void:
 		$PowderViewport.powder_instance.polygon(Vector2(60,60), 30.0, 8, 2, 2)
 
 	# Determine the camera's relative position to the center and call face_left or face_right
-	var camera_center_x = level_camera.position.x
-	var screen_center_x = $SpellMachineTower.position.x
+	var camera_center_x: float = level_camera.position.x
+	var screen_center_x: float = $SpellMachineTower.position.x
 
 	if camera_center_x > screen_center_x:
 		$SpellMachineTower.face_left()
