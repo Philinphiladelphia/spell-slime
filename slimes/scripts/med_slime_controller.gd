@@ -1,13 +1,13 @@
 extends Node2D
 
-var jump_interval = 5
-var powder_interval = 2
-var powder_duration = 0.5
+var jump_interval: float = 5
+var powder_interval: float = 2
+var powder_duration: float = 0.5
 
-var max_health = 1000.0
-var jump_power = 8500
+var max_health: float = 1000.0
+var jump_power: float = 8500
 
-var element_numbers = [49, 7, 87]
+var element_numbers: PackedInt32Array = [49, 7, 87]
 # different shaders to show the more dangerous elements
 
 # Called when the node enters the scene tree for the first time.

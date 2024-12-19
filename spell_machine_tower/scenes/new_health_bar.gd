@@ -1,21 +1,20 @@
 extends ProgressBar
 
-@onready var timer = $Timer
-@onready var damage_bar = $DamageBar
+@onready var damage_bar: Node = $DamageBar
 
 var damage_timer : Timer
 
 # goes off whenever health changes
-var health = 0 : set = _set_health
+var health: float = 0 : set = _set_health
 
-func _set_health(new_health):
+func _set_health(new_health: float) -> void:
 	health = new_health
 	value = new_health
 	damage_bar.current_health = new_health
 	damage_timer.start()
 	# healing
 
-func init_health(_health):
+func init_health(_health: float) -> void:
 	health = _health
 	max_value = _health
 	value = _health

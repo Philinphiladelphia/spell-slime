@@ -1,57 +1,57 @@
 extends Node2D
 
-var max_health = 0.0
+var max_health: float = 0.0
 
-var health = max_health
+var health: float = max_health
 
-var bone_number = 0
-var health_offset = Vector2(0,0)
-var jump_power = 800
+var bone_number: int = 0
+var health_offset: Vector2 = Vector2(0,0)
+var jump_power: float = 800
 
 var slime_position: Vector2
-var garbage_collect = false
-var local_move_direction = Vector2(1, -1)
+var garbage_collect: bool = false
+var local_move_direction: Vector2 = Vector2(1, -1)
 
 # powder_stuff
-var go_right = false
-var is_powdering = 0
+var go_right: bool = false
+var is_powdering: int = 0
 var powder_timer : Timer
 
-var element = 2
-var element_circle_size = 1
+var element: int = 2
+var element_circle_size: int = 1
 
-var jump_interval = 2.5
-var powder_interval = 6
-var powder_duration = 1
+var jump_interval: float = 2.5
+var powder_interval: float = 6
+var powder_duration: float = 1
 
-var powder_warning_time = 1
+var powder_warning_time: float = 1
 
-var damage = 0
+var damage: float = 0
 
-var touching_something = false
+var touching_something: bool = false
 
-var slime_powder_shader =  preload("res://shaders/scenes/rainbow_shader.tres")
-var slime_warning_shader =  preload("res://shaders/scenes/shine.tres")
+var slime_powder_shader: ShaderMaterial =  preload("res://shaders/scenes/rainbow_shader.tres")
+var slime_warning_shader: ShaderMaterial =  preload("res://shaders/scenes/shine.tres")
 
-var normal_stiffness = 0
+var normal_stiffness: float = 0
 
 var jump_timer : Timer
 var garbage_collect_timer : Timer
-var garbage_wait = 3
+var garbage_wait: float = 3
 
-var is_dead = false
+var is_dead: bool = false
 
-var original_color = Color(1, 1, 1, 1)
+var original_color: Color = Color(1, 1, 1, 1)
 
 # slimes should be able to jump over the tower and reverse course.
 
-func set_go_right(value):
+func set_go_right(value: bool)-> void:
 	go_right = value
 	
-func set_element(value):
+func set_element(value: bool) -> void:
 	element = value
 
-func set_original_color(color):
+func set_original_color(color: Color) -> void:
 	original_color = color
 	$slime_soft_body.modulate = color
 	$slime_hitbox/PointLight2D.color = color
@@ -75,7 +75,7 @@ func _ready() -> void:
 	
 	# jump timer
 	jump_timer = Timer.new()
-	var random_offset = randf_range(-jump_interval/5.0, jump_interval/5.0)
+	var random_offset: float = randf_range(-jump_interval/5.0, jump_interval/5.0)
 	jump_timer.wait_time = jump_interval + random_offset
 	add_child(jump_timer)
 	jump_timer.connect("timeout", _on_jump_timer_timeout)
@@ -90,7 +90,7 @@ func _ready() -> void:
 
 # Called when the jump timer times out
 func _on_jump_timer_timeout() -> void:
-	var random_offset = randf_range(-jump_interval/5.0, jump_interval/5.0)
+	var random_offset: float = randf_range(-jump_interval/5.0, jump_interval/5.0)
 	jump_timer.wait_time = jump_interval + random_offset
 	
 	var jump_direction : Vector2
@@ -108,25 +108,25 @@ func _on_powdering_timeout() -> void:
 	is_powdering = 1-is_powdering
 	
 	if (is_powdering == 1):
-		var random_offset = randf_range(-powder_interval/5.0, powder_interval/5.0)
+		var random_offset: float = randf_range(-powder_interval/5.0, powder_interval/5.0)
 		powder_timer.wait_time = powder_interval + random_offset
 	else:
 		powder_timer.wait_time = powder_duration
 	
-func _disable_powdering():
+func _disable_powdering() -> void:
 	is_powdering = 0
 
 
-func jump(jump_direction):
+func jump(jump_direction: Vector2)-> void:
 	SoundManager.play_sfx("drop1", 0, -6, 1)
 	get_child(0).apply_impulse(jump_direction * jump_power)
 
-func set_max_health(amount):
+func set_max_health(amount: float) -> void:
 	max_health = amount
 	$health_bar.set_max_health(amount)
 	$damage_bar.set_max_health(amount)
 	
-func set_health(amount):
+func set_health(amount: float) -> void:
 	if amount <= max_health:
 		health = amount
 		$health_bar.current_health = health
@@ -134,7 +134,7 @@ func set_health(amount):
 	else:
 		print("Slime health is above health max")
 
-func apply_damage(amount, projectile_position):
+func apply_damage(amount: float, projectile_position: Vector2) -> void:
 	health -= amount
 	$health_bar.current_health = health
 	$health_bar.show()
@@ -159,22 +159,22 @@ func _process(delta: float) -> void:
 
 	$slime_hitbox.global_position = slime_position
 
-	var offset = health_offset
+	var offset: Vector2 = health_offset
 	$health_bar.health_bar_offset = offset
 	$damage_bar.health_bar_offset = offset
 	if (health <= 0):
-		var current_color = get_modulate()
-		var transparent = Color(current_color.r, current_color.g, current_color.b, 0)
+		var current_color: Color = get_modulate()
+		var transparent: Color = Color(current_color.r, current_color.g, current_color.b, 0)
 		set_modulate(lerp(current_color, transparent, 0.1))
 		$slime_soft_body.stiffness = 30
 		
 		if not is_dead:
 			kill_slime()
 
-func enable_light():
+func enable_light() -> void:
 	$slime_hitbox/PointLight2D.enabled = true
 
-func kill_slime():
+func kill_slime() -> void:
 	SoundManager.play_sfx("enemy_down", 0, -12, 0.5)
 	
 	is_powdering = 0

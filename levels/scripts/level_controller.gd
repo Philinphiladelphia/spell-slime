@@ -13,7 +13,7 @@ var powder_scale: float = 23
 var powder_offset_x: int = 0
 var powder_offset_y: int = 95
 
-var total_slime_health: int = 10
+var total_slime_health: float = 10
 
 var tower_health: int = 1000
 
@@ -59,8 +59,8 @@ func _ready() -> void:
 	
 	$SpellMachineTower.init_tower_health(tower_health)
 	
-	$slime_health_layer/HealthBar.init_health(100)
-	$slime_health_layer/HealthBar._set_health(0)
+	$slime_health_layer/HealthBar.init_health(100.0)
+	$slime_health_layer/HealthBar._set_health(0.0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if $SpellMachineTower.is_dead == true:
@@ -78,7 +78,7 @@ func _process(delta: float) -> void:
 	
 	total_slime_health = max(total_slime_health, float($slime_tracker.current_max_slime_health))
 	
-	$slime_health_layer/HealthBar._set_health(100*($slime_tracker.current_slime_health/total_slime_health))
+	$sliaaaame_health_layer/HealthBar._set_health(100*($slime_tracker.current_slime_health/total_slime_health))
 	
 	# set and get total slime health
 	
