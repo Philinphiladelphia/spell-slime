@@ -7,7 +7,7 @@ var powder_duration: float = 0.5
 var max_health: float = 1000.0
 var jump_power: float = 8500
 
-var element_numbers: PackedInt32Array = [49, 7, 87]
+var element_numbers: PackedInt32Array = [49, 15, 87]
 # different shaders to show the more dangerous elements
 
 # Called when the node enters the scene tree for the first time.

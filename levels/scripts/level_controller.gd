@@ -45,7 +45,7 @@ func load_scene(scene_path : String) -> void:
 func _ready() -> void:
 	level_camera = $level_camera
 	
-	var tower_element: int = 67
+	var tower_element: int = 114 # plant
 	
 	$PowderViewport.powder_instance.health_element = tower_element
 	
