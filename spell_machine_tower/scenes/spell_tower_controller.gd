@@ -1,22 +1,25 @@
 extends Node2D
 
-var spellward_health_margin = 200
-var spellward_max_health = 0
-var spellward_health = spellward_max_health
-var tower_max_health = 10000
-var tower_health = tower_max_health
-var health_offset = Vector2(-100, -1300)
+# spellward is particulate based, so all ints
+var spellward_health_margin: int = 200
+var spellward_max_health: int = 0
+var spellward_health: int = spellward_max_health
 
-var is_dead = false
 
-@onready var spellward_health_bar = $CanvasLayer/SpellwardHealthBar
-@onready var tower_health_bar = $CanvasLayer/TowerHealthBar
-@onready var machine_gun_cooldown_bar = $CanvasLayer/MachineGunCooldown
-@onready var harpoon_cooldown_bar = $CanvasLayer/HarpoonCooldown
+var tower_max_health: float = 10000
+var tower_health: float = tower_max_health
+var health_offset: Vector2 = Vector2(-100, -1300)
 
-@onready var level_camera = get_parent().camera_node
+var is_dead: bool = false
 
-var base_stats = {
+@onready var spellward_health_bar: Node = $CanvasLayer/SpellwardHealthBar
+@onready var tower_health_bar: Node = $CanvasLayer/TowerHealthBar
+@onready var machine_gun_cooldown_bar: Node = $CanvasLayer/MachineGunCooldown
+@onready var harpoon_cooldown_bar: Node = $CanvasLayer/HarpoonCooldown
+
+@onready var level_camera: Node = get_parent().camera_node
+
+var base_stats: Dictionary = {
 	"slime1": {
 		"max_health": 10000,
 		"primary_projectile_dmg": 10,
@@ -122,7 +125,7 @@ func set_spellward_health(amount):
 func init_tower_health(max_health):
 	tower_health_bar.init_health(max_health)
 
-func apply_tower_damage(amount):
+func apply_tower_damage(amount: float) -> void:
 	level_camera.apply_shake(amount*10)
 	if not SoundManager.is_playing("metal1"):
 		SoundManager.play_sfx("metal1", 0, 2, pow(amount,0.3))
@@ -144,8 +147,7 @@ func _process(delta: float) -> void:
 	#
 	
 	machine_gun_cooldown_bar._set_health($spell_machine_tower/main_gun.primary_projectiles_fired)
-	
-	var harpoon_value = 0
+
 	if $spell_machine_tower/main_gun.secondary_firing:
 		harpoon_cooldown_bar._set_health($spell_machine_tower/main_gun.secondary_firing_interval * 100)
 	

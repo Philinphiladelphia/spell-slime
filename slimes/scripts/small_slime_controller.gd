@@ -1,12 +1,12 @@
 extends Node2D
 
-var jump_interval = 3
-var powder_interval = 2
-var powder_duration = 0.2
+var jump_interval: float = 3
+var powder_interval: float = 2
+var powder_duration: float = 0.2
 
-var max_health = 200.0
-var jump_power = 600
-var element_numbers = [21, 3, 4, 6, 7]
+var max_health: float = 200.0
+var jump_power: float = 600
+var element_numbers: PackedInt32Array = [21, 3, 4, 6, 7]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,5 +34,5 @@ func _process(delta: float) -> void:
 		print("small slime controller freed")
 		queue_free()
 
-func apply_damage(amount):
+func apply_damage(amount: float) -> void:
 	$slime_node.apply_damage(amount)

@@ -8,12 +8,12 @@ var slime_circle_sizes: PackedInt32Array
 
 var slime_damages: PackedInt32Array
 
-var current_max_slime_health = 0
-var current_slime_health = 0
+var current_max_slime_health: float = 0.0
+var current_slime_health: float = 0.0
 
-var tower_midpoint = Vector2(0,0)
+var tower_midpoint: float = 0.0
 
-var spawns_done = false
+var spawns_done: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,10 +29,10 @@ func _process(delta: float) -> void:
 	
 	slime_damages.clear()
 	
-	current_slime_health = 0
-	current_max_slime_health = 0
+	current_slime_health = 0.0
+	current_max_slime_health = 0.0
 	
-	var all_depleted = true
+	var all_depleted: bool = true
 	for slime_spawner in get_children():
 		collected_slime_positions.append_array(slime_spawner.slime_positions)
 		powder_activated_bitmap.append_array(slime_spawner.powder_activated_bitmap)
@@ -48,11 +48,11 @@ func _process(delta: float) -> void:
 	if all_depleted:
 		spawns_done = true
 
-func enable_slime_lights():
+func enable_slime_lights() -> void:
 	for slime_spawner in get_children():
 		slime_spawner.enable_light = true
 
-func set_tower_midpoint(value):
+func set_tower_midpoint(value: float) -> void:
 	tower_midpoint = value
 	for slime_spawner in get_children():
 		slime_spawner.set_tower_midpoint(value)

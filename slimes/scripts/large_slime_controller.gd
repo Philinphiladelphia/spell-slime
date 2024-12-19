@@ -13,14 +13,14 @@ extends Node2D
 # [21, 87, 129]
 
 # plasma, bomb, lightning
-var element_numbers = [49, 129, 87]
+var element_numbers: PackedInt32Array = [49, 129, 87]
 
-var jump_interval = 4
-var powder_interval = 3
-var powder_duration = 0.5
+var jump_interval: float = 4
+var powder_interval: float = 3
+var powder_duration: float = 0.5
 
-var max_health = 2000.0
-var jump_power = 12000
+var max_health: float = 2000.0
+var jump_power: float = 12000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

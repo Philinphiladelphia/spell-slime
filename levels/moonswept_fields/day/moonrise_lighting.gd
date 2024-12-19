@@ -1,6 +1,6 @@
 extends CanvasModulate
 
-var night_level =  preload("res://levels/moonswept_fields/day/moonrise_level.tscn")
+var night_level = preload("res://levels/moonswept_fields/day/moonrise_level.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

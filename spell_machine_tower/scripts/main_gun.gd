@@ -10,40 +10,40 @@ var rotation_offset : float = 4.75
 var max_rotation_speed : float = 0.03
 
 # Primary gun parameters
-var primary_projectile_dmg = 1
-var primary_firing_velocity = 500
-var primary_max_lifespan = 1
-var primary_mass = 1
-var primary_firing = false
-var primary_firing_timer = 0.0
-var primary_firing_interval = 0.05
-var primary_post_hit_lifespan = 0.1
-var primary_shake = 0.1
+var primary_projectile_dmg: float = 1
+var primary_firing_velocity: float = 500
+var primary_max_lifespan: float = 1
+var primary_mass: float = 1
+var primary_firing: bool = false
+var primary_firing_timer: float = 0.0
+var primary_firing_interval: float = 0.05
+var primary_post_hit_lifespan: float = 0.1
+var primary_shake: float = 0.1
 
 var cooldown_timer : Timer
-var is_smoking = false
+var is_smoking: bool = false
 
 # Secondary gun parameters
-var secondary_projectile_dmg = 1
-var secondary_firing_velocity = 2000
-var secondary_max_lifespan = 1
-var secondary_mass = 1
-var secondary_firing = false
-var secondary_firing_timer = 0.0
-var secondary_firing_interval = 1.5
-var secondary_post_hit_lifespan = 0.5
-var secondary_shake = 0
+var secondary_projectile_dmg: float = 1
+var secondary_firing_velocity: float = 2000
+var secondary_max_lifespan: float = 1
+var secondary_mass: float = 1
+var secondary_firing: bool = false
+var secondary_firing_timer: float = 0.0
+var secondary_firing_interval: float = 1.5
+var secondary_post_hit_lifespan: float = 0.5
+var secondary_shake: float = 0
 
 # used to align firing location with the barrel
-var barrel_length = 350
+var barrel_length: int = 350
 
 # Cooldown parameters
-var primary_projectiles_fired = 0
-var primary_cooldown_max = 20
-var primary_cooldown_rate = 5.0 # 5 projectiles per second
+var primary_projectiles_fired: float = 0.0
+var primary_cooldown_max: float = 20.0
+var primary_cooldown_rate: float = 5.0 # 5 projectiles per second
 
-var lightning_animation
-var basic_animation
+var lightning_animation: PackedScene
+var basic_animation: PackedScene
 
 # gem system
 # slimes scan for particle damage, json dict to determine how much
@@ -81,7 +81,7 @@ func _process(delta: float) -> void:
 				#SoundManager.play_sfx("machine_gun_fire", 0, 0.6, 1)
 			fire_projectile(basic_projectile_scene, primary_projectile_dmg, primary_firing_velocity, primary_max_lifespan, primary_post_hit_lifespan, primary_mass, primary_shake, basic_animation)
 			primary_firing_timer = primary_firing_interval
-			primary_projectiles_fired += 1
+			primary_projectiles_fired += 1.0
 			if primary_projectiles_fired >= primary_cooldown_max:
 				is_smoking = true
 				cooldown_timer.start()
@@ -97,14 +97,14 @@ func _process(delta: float) -> void:
 			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake, lightning_animation)
 			secondary_firing_timer = secondary_firing_interval
 
-func reset_primary_cooldown():
+func reset_primary_cooldown() -> void:
 	is_smoking = false
 	primary_projectiles_fired = 0
 
 func handle_rotation() -> void:
-	var mouse_position = get_global_mouse_position()
-	var target_angle = (mouse_position - global_position).angle() + rotation_offset
-	var angle_difference = wrapf(target_angle - rotation, -PI, PI)
+	var mouse_position: Vector2 = get_global_mouse_position()
+	var target_angle: float = (mouse_position - global_position).angle() + rotation_offset
+	var angle_difference: float = wrapf(target_angle - rotation, -PI, PI)
 
 	if abs(angle_difference) > max_rotation_speed:
 		if angle_difference < 0:
@@ -114,8 +114,8 @@ func handle_rotation() -> void:
 	else:
 		rotation = target_angle
 
-func fire_projectile(projectile_scene, damage: int, velocity: float, max_lifespan: float, post_hit_lifespan: float, mass: float, gun_shake : float, on_hit_animation) -> void:
-	var node_to_fire = projectile_scene.instantiate()
+func fire_projectile(projectile_scene: PackedScene, damage: int, velocity: float, max_lifespan: float, post_hit_lifespan: float, mass: float, gun_shake : float, on_hit_animation: PackedScene) -> void:
+	var node_to_fire: Node = projectile_scene.instantiate()
 	apply_firing_velocity(node_to_fire, velocity, gun_shake)
 	node_to_fire.on_hit_animation = on_hit_animation
 	node_to_fire.damage = damage
@@ -124,11 +124,11 @@ func fire_projectile(projectile_scene, damage: int, velocity: float, max_lifespa
 	node_to_fire.post_hit_lifespan = post_hit_lifespan
 	
 	$Node/ProjectileSpawnPoint.add_child(node_to_fire)
-	var projectile_location_vector = Vector2.DOWN.rotated(rotation)
+	var projectile_location_vector: Vector2 = Vector2.DOWN.rotated(rotation)
 	node_to_fire.position = get_parent().get_parent().global_position + projectile_location_vector * barrel_length
 	node_to_fire.rotation = rotation
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	primary_firing = false
 	secondary_firing = false
 	
@@ -137,7 +137,7 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("secondary_fire"):
 		secondary_firing = true
 
-func apply_firing_velocity(node, velocity, shake):
-	var random_addition = (((randi() % 100) - 50) / 100.0) * shake
-	var local_move_direction = Vector2(0, 1).rotated(get_global_transform().get_rotation() + random_addition)
+func apply_firing_velocity(node: Node, velocity: float, shake: float) -> void:
+	var random_addition: float = (((randi() % 100) - 50) / 100.0) * shake
+	var local_move_direction: Vector2 = Vector2(0, 1).rotated(get_global_transform().get_rotation() + random_addition)
 	node.apply_impulse(local_move_direction * velocity)
