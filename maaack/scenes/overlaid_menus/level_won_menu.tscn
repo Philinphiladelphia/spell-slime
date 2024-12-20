@@ -1,7 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://4iqaruyt2w2b"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/extras/scenes/overlaid_menus/level_won_menu.tscn" id="1_grh4e"]
+[ext_resource type="PackedScene" uid="uid://y3vtx0e0shv4" path="res://addons/maaacks_game_template/extras/scenes/overlaid_menus/level_won_menu.tscn" id="1_grh4e"]
 [ext_resource type="Script" path="res://maaack/scenes/overlaid_menus/level_won_menu.gd" id="2_ewi2u"]
 
 [node name="LevelWonMenu" instance=ExtResource("1_grh4e")]
 script = ExtResource("2_ewi2u")
+
+[node name="MenuPanelContainer" parent="." index="1"]
+offset_left = -352.0
+offset_top = -134.0
+offset_right = 352.0
+offset_bottom = 164.0
+
+[node name="PanelColor" parent="MenuPanelContainer" index="0"]
+visible = false

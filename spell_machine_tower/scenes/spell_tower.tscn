@@ -174,8 +174,9 @@ fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)
 
-[node name="SpellMachineTower" type="Node2D"]
+[node name="SpellMachineTower" type="Node2D" node_paths=PackedStringArray("tower_light")]
 script = ExtResource("1_dsv4g")
+tower_light = NodePath("PointLight2D")
 
 [node name="stars2" type="RigidBody2D" parent="."]
 position = Vector2(17, -812)
@@ -2151,6 +2152,7 @@ shape = SubResource("CapsuleShape2D_gfi1t")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(15, -808)
 energy = 0.6
+shadow_color = Color(0, 0, 0, 0.658824)
 texture = SubResource("GradientTexture2D_utg3h")
 texture_scale = 50.0
 
