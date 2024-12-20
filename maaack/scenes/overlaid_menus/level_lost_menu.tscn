@@ -5,3 +5,12 @@
 
 [node name="LevelLostMenu" instance=ExtResource("1_wbmex")]
 script = ExtResource("2_00qkm")
+
+[node name="MenuPanelContainer" parent="." index="1"]
+offset_left = -319.0
+offset_top = -134.0
+offset_right = 320.0
+offset_bottom = 175.0
+
+[node name="PanelColor" parent="MenuPanelContainer" index="0"]
+visible = false

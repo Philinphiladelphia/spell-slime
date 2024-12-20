@@ -12,6 +12,9 @@ var health_offset: Vector2 = Vector2(-100, -1300)
 
 var is_dead: bool = false
 
+@export var tower_light: PointLight2D
+@export var light_energy = 0.6
+
 @onready var spellward_health_bar: Node = $CanvasLayer/SpellwardHealthBar
 @onready var tower_health_bar: Node = $CanvasLayer/TowerHealthBar
 @onready var machine_gun_cooldown_bar: Node = $CanvasLayer/MachineGunCooldown
@@ -61,6 +64,8 @@ var base_stats: Dictionary = {
 
 func _ready() -> void:
 	set_base_stats("slime1")
+	
+	tower_light.energy = light_energy
 
 func set_base_stats(slime_type: String) -> void:
 	var stats = base_stats.get(slime_type, null)
@@ -136,10 +141,6 @@ func apply_tower_damage(amount: float) -> void:
 	$damage_timer.start()
 
 func _process(delta: float) -> void:
-	if tower_health <= 0:
-		SoundManager.stop_all()
-		hide()
-		is_dead = true
 		#process_mode = PROCESS_MODE_DISABLED
 		
 	#if $spell_machine_tower/main_gun.primary_firing && not $spell_machine_tower/main_gun.is_smoking:

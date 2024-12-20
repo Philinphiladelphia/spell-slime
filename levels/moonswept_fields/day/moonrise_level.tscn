@@ -18,21 +18,26 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28xsr"]
 bg_color = Color(0.1863, 0.69, 0.379385, 1)
 
-[node name="MoonriseLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node")]
+[node name="MoonriseLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node", "powderviewport")]
 texture_filter = 1
 script = ExtResource("1_pru1i")
 spelltowernode = NodePath("SpellMachineTower")
-camera_node = NodePath("level_camera")
+camera_node = NodePath("SpellMachineTower/level_camera")
+powderviewport = NodePath("SpellMachineTower/PowderViewport")
 
 [node name="ParallaxTest" parent="." instance=ExtResource("2_wvtds")]
 z_index = -5
 position = Vector2(75, -4193)
 
 [node name="SpellMachineTower" parent="." instance=ExtResource("3_nn054")]
-position = Vector2(-2022, -2019)
+position = Vector2(-3216, -2504)
 
-[node name="level_camera" type="Camera2D" parent="."]
-position = Vector2(-1999, -2696)
+[node name="PowderViewport" parent="SpellMachineTower" instance=ExtResource("6_trtlv")]
+position = Vector2(-1379, -2196)
+scale = Vector2(3.5, 3.5)
+
+[node name="level_camera" type="Camera2D" parent="SpellMachineTower"]
+position = Vector2(7, -506)
 scale = Vector2(0.25, 0.25)
 zoom = Vector2(0.2, 0.2)
 script = ExtResource("4_bdupt")
@@ -41,7 +46,7 @@ max_distance_y = 500.0
 deadzone_size_x = 10000.0
 deadzone_size_y = 5000.0
 
-[node name="Sprite2D" type="Sprite2D" parent="level_camera"]
+[node name="Sprite2D" type="Sprite2D" parent="SpellMachineTower/level_camera"]
 physics_interpolation_mode = 1
 z_index = -10
 position = Vector2(76, 2092)
@@ -49,13 +54,9 @@ scale = Vector2(85, 85)
 texture = ExtResource("5_na1dl")
 region_rect = Rect2(0, 0, 1500, 500)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="level_camera"]
+[node name="CanvasLayer" type="CanvasLayer" parent="SpellMachineTower/level_camera"]
 layer = -1
 follow_viewport_enabled = true
-
-[node name="PowderViewport" parent="." instance=ExtResource("6_trtlv")]
-position = Vector2(-3417, -4229)
-scale = Vector2(3.5, 3.5)
 
 [node name="slime_health_layer" type="CanvasLayer" parent="."]
 layer = 10
