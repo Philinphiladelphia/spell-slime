@@ -1,0 +1,20 @@
+{
+	"base_tower": {
+		"max_health": 10000,
+		"primary_projectile_dmg": 10,
+		"primary_firing_velocity": 6000,
+		"primary_max_lifespan": 1,
+		"primary_mass": 4,
+		"primary_post_hit_lifespan": 0.05,
+		"primary_firing_interval": 0.15,
+		"primary_shake": 0.2,
+		"primary_cooldown_max": 8,
+		"primary_cooldown_rate": 3,
+		"secondary_projectile_dmg": 10,
+		"secondary_firing_velocity": 15000,
+		"secondary_max_lifespan": 2,
+		"secondary_post_hit_lifespan": 0.4,
+		"secondary_mass": 5,
+		"secondary_firing_interval": 1.5
+	}
+}

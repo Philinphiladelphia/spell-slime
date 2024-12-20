@@ -106,4 +106,4 @@ func _on_slot_3_pressed() -> void:
 
 
 func _on_round_end_timer_timeout() -> void:
-	SceneLoader.load_scene("res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn")
+	SceneLoader.load_scene("res://levels/moonswept_fields/night/night_lighting.tscn")

@@ -76,6 +76,13 @@ script = ExtResource("8_p7o26")
 position = Vector2(-5966, -2743)
 script = ExtResource("9_a1rvl")
 spawntimer = NodePath("../../slime_spawn_timer")
+slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_fire_slimes.json"
+
+[node name="spawner2" type="Node2D" parent="slime_tracker" node_paths=PackedStringArray("spawntimer")]
+position = Vector2(-740, -2791)
+script = ExtResource("9_a1rvl")
+spawntimer = NodePath("../../slime_spawn_timer")
+slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_water_slimes.json"
 
 [node name="RhythmNotifier" type="Node" parent="." node_paths=PackedStringArray("audio_stream_player")]
 script = ExtResource("10_dq2if")
@@ -100,5 +107,6 @@ scale = Vector2(3, 3.03)
 
 [connection signal="beat" from="RhythmNotifier" to="slime_tracker" method="_on_rhythm_notifier_beat"]
 [connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner1" method="_on_slime_spawn_timer_timeout"]
+[connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner2" method="_on_slime_spawn_timer_timeout"]
 
 [editable path="slime_health_layer/HealthBar"]

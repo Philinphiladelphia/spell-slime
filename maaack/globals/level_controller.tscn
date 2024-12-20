@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://c24heaqwdv2kc"]
+
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/level_list_loader.gd" id="1_20fug"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="2_4634d"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/runtime_logger.gd" id="3_og6co"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/game_level_log.gd" id="4_7hoy1"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/game_log.gd" id="5_7pucp"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/level_loader.gd" id="6_t21up"]
+
+[node name="LevelController" type="Node2D"]
+
+[node name="level_list_manager" type="Node" parent="."]
+
+[node name="list_loader" type="Node" parent="."]
+script = ExtResource("1_20fug")
+
+[node name="scene_lister" type="Node" parent="."]
+script = ExtResource("2_4634d")
+
+[node name="runtime_logger" type="Node" parent="."]
+script = ExtResource("3_og6co")
+
+[node name="game_level_log" type="Node" parent="."]
+script = ExtResource("4_7hoy1")
+
+[node name="game_log" type="Node" parent="."]
+script = ExtResource("5_7pucp")
+
+[node name="level_loader" type="Node" parent="." node_paths=PackedStringArray("level_container")]
+script = ExtResource("6_t21up")
+level_container = NodePath("../level_container")
+current_level_path = "res://levels/moonswept_fields/day/moonrise_level.tscn"
+
+[node name="level_container" type="Node" parent="."]

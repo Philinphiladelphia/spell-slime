@@ -14,3 +14,5 @@ offset_bottom = 164.0
 
 [node name="PanelColor" parent="MenuPanelContainer" index="0"]
 visible = false
+
+[connection signal="continue_pressed" from="." to="." method="_on_continue_pressed"]

@@ -7,7 +7,7 @@ var powder_duration: float = 0.5
 var max_health: float = 1000.0
 var jump_power: float = 8500
 
-var element_numbers: PackedInt32Array = [49, 15, 87]
+var element_numbers: PackedInt32Array = [49, 87]
 # different shaders to show the more dangerous elements
 
 # Called when the node enters the scene tree for the first time.
@@ -29,6 +29,10 @@ func _ready() -> void:
 	$slime_node.set_original_color(get_parent().slime_colors[$slime_node.element])
 	$slime_node.element_circle_size = 4
 	$slime_node.damage = 4
+
+func set_element(element: int) -> void:
+	$slime_node.element = element
+	$slime_node.set_original_color(get_parent().slime_colors[$slime_node.element])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
