@@ -19,11 +19,12 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbh6e"]
 bg_color = Color(0.1863, 0.69, 0.379385, 1)
 
-[node name="NightLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node")]
+[node name="NightLevel" type="Node2D" node_paths=PackedStringArray("spelltowernode", "camera_node", "powderviewport")]
 texture_filter = 1
 script = ExtResource("1_ahstt")
 spelltowernode = NodePath("SpellMachineTower")
-camera_node = NodePath("level_camera")
+camera_node = NodePath("SpellMachineTower/level_camera")
+powderviewport = NodePath("SpellMachineTower/PowderViewport")
 
 [node name="terrain" parent="." instance=ExtResource("2_10nlx")]
 position = Vector2(11194, -862)
@@ -37,30 +38,34 @@ scale = Vector2(0.65, 0.65)
 position = Vector2(-2022, -2025)
 light_energy = 1.1
 
-[node name="level_camera" type="Camera2D" parent="."]
-position = Vector2(-2009, -2678)
+[node name="PowderViewport" parent="SpellMachineTower" instance=ExtResource("9_1x0cq")]
+position = Vector2(-1393, -2213)
+scale = Vector2(3.5, 3.5)
+
+[node name="level_camera" type="Camera2D" parent="SpellMachineTower"]
+position = Vector2(13, -653)
 scale = Vector2(0.25, 0.25)
 zoom = Vector2(0.2, 0.2)
 script = ExtResource("5_4xf7c")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="level_camera"]
+[node name="CanvasLayer" type="CanvasLayer" parent="SpellMachineTower/level_camera"]
 layer = -1
 follow_viewport_enabled = true
 
-[node name="Parallax2D" type="Parallax2D" parent="level_camera"]
+[node name="Parallax2D" type="Parallax2D" parent="SpellMachineTower/level_camera"]
 scale = Vector2(1.5, 1.5)
 scroll_offset = Vector2(-7272, 1120)
 repeat_size = Vector2(5750, 0)
 repeat_times = 5
 
-[node name="Sprite2D" type="Sprite2D" parent="level_camera/Parallax2D"]
+[node name="Sprite2D" type="Sprite2D" parent="SpellMachineTower/level_camera/Parallax2D"]
 z_index = -10
 position = Vector2(120, 464)
 scale = Vector2(60, 60)
 texture = ExtResource("4_586re")
 region_rect = Rect2(0, 0, 1500, 500)
 
-[node name="ColorRect" type="ColorRect" parent="level_camera"]
+[node name="ColorRect" type="ColorRect" parent="SpellMachineTower/level_camera"]
 z_index = -1
 offset_left = -20528.0
 offset_top = -23028.0
@@ -82,10 +87,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_qbh6e")
 [node name="enable_slime_light" type="Node" parent="."]
 script = ExtResource("10_27ni7")
 
-[node name="PowderViewport" parent="." instance=ExtResource("9_1x0cq")]
-position = Vector2(-3415, -4238)
-scale = Vector2(3.5, 3.5)
-
 [node name="slime_spawn_timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
@@ -100,6 +101,7 @@ script = ExtResource("5_5g6k6")
 position = Vector2(-5966, -2743)
 script = ExtResource("7_xdq1o")
 spawntimer = NodePath("../../slime_spawn_timer")
+slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_fire_slimes.json"
 
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("13_y66eb")]
 stream = ExtResource("14_d8b1f")

@@ -13,6 +13,8 @@ script = ExtResource("3_jx17y")
 protoset = ExtResource("2_gr1l2")
 prototype_id = "minimal_item"
 properties = {
+"description": "A pulsing gem filled with energy.",
+"dmg_boost": 3.0,
 "image": "res://item_system/assets/gem_core.png",
 "name": "gem_core"
 }
@@ -22,6 +24,8 @@ script = ExtResource("3_jx17y")
 protoset = ExtResource("2_gr1l2")
 prototype_id = "item1"
 properties = {
+"description": "A fat vat of slime. Good for what ails you.",
+"hp_boost": 500,
 "image": "res://item_system/assets/slime_bucket.png",
 "name": "slime_bucket"
 }
@@ -31,6 +35,8 @@ script = ExtResource("3_jx17y")
 protoset = ExtResource("2_gr1l2")
 prototype_id = "item2"
 properties = {
+"description": "The tin man moved faster when greased. So can you!",
+"fire_rate_boost": 0.3,
 "image": "res://item_system/assets/grease_can.png",
 "name": "grease_can"
 }

@@ -5,7 +5,6 @@ var spellward_health_margin: int = 200
 var spellward_max_health: int = 0
 var spellward_health: int = spellward_max_health
 
-
 var tower_max_health: float = 10000
 var tower_health: float = tower_max_health
 var health_offset: Vector2 = Vector2(-100, -1300)
@@ -22,50 +21,36 @@ var is_dead: bool = false
 
 @onready var level_camera: Node = get_parent().camera_node
 
-var base_stats: Dictionary = {
-	"slime1": {
-		"max_health": 10000,
-		"primary_projectile_dmg": 10,
-		"primary_firing_velocity": 6000,
-		"primary_max_lifespan": 1,
-		"primary_mass": 4,
-		"primary_post_hit_lifespan": 0.05,
-		"primary_firing_interval": 0.15,
-		"primary_shake": 0.2,
-		"primary_cooldown_max": 8,
-		"primary_cooldown_rate": 3,
-		"secondary_projectile_dmg": 10,
-		"secondary_firing_velocity": 15000,
-		"secondary_max_lifespan": 2,
-		"secondary_post_hit_lifespan": 0.4,
-		"secondary_mass": 5,
-		"secondary_firing_interval": 1.5
-	},
-		"slime2": {
-		"max_health": 10000,
-		"primary_projectile_dmg": 100,
-		"primary_firing_velocity": 6000,
-		"primary_max_lifespan": 1,
-		"primary_mass": 4,
-		"primary_post_hit_lifespan": 0.05,
-		"primary_firing_interval": 0.5,
-		"primary_shake": 0.0,
-		"primary_cooldown_max": 4,
-		"primary_cooldown_rate": 1,
-		"secondary_projectile_dmg": 30,
-		"secondary_firing_velocity": 10000,
-		"secondary_max_lifespan": 2,
-		"secondary_post_hit_lifespan": 0.4,
-		"secondary_mass": 10,
-		"secondary_firing_interval": 3
-	},
-	# Add more slimes as needed
-}
+var base_stats: Dictionary = {}
+
+@export var base_stats_file_path: String = "res://base_stats.json"
 
 func _ready() -> void:
-	set_base_stats("slime1")
-	
+	load_base_stats()
+	set_base_stats("base_tower")
 	tower_light.energy = light_energy
+
+	for item in GlobalInventory.get_items():
+		apply_item_effects(item)
+		display_item_properties(item)
+
+func load_base_stats() -> void:
+	var file: FileAccess = FileAccess.open(base_stats_file_path, FileAccess.READ)
+	if file:
+		var json: JSON = JSON.new()
+		var file_text: String = file.get_as_text()
+		json.parse(file_text)
+		base_stats = json.data
+		file.close()
+
+	print("base tower stats loaded")
+
+func save_base_stats() -> void:
+	var file: FileAccess = FileAccess.open(base_stats_file_path, FileAccess.WRITE)
+	if file:
+		var json_string: String = JSON.stringify(base_stats, "\t")
+		file.store_string(json_string)
+		file.close()
 
 func set_base_stats(slime_type: String) -> void:
 	var stats = base_stats.get(slime_type, null)
@@ -94,12 +79,38 @@ func set_base_stats(slime_type: String) -> void:
 		machine_gun_cooldown_bar.init_health(stats.primary_cooldown_max)
 		harpoon_cooldown_bar.init_health(stats.secondary_firing_interval * 100)
 
-func apply_item_effects(item):
-	if item.type == "health_boost":
-		tower_max_health += item.value
+func apply_item_effects(item) -> void:
+	var hp_boost = item.get_property("hp_boost")
+	if hp_boost != null:
+		tower_max_health += hp_boost
 		tower_health = tower_max_health
-	elif item.type == "damage_boost":
-		$spell_machine_tower/main_gun.primary_projectile_dmg += item.value
+
+	var dmg_boost = item.get_property("dmg_boost")
+	if dmg_boost != null:
+		$spell_machine_tower/main_gun.primary_projectile_dmg += dmg_boost
+
+	var fire_rate_boost = item.get_property("fire_rate_boost")
+	if fire_rate_boost != null:
+		$spell_machine_tower/main_gun.primary_firing_interval -= fire_rate_boost
+
+func display_item_properties(item) -> void:
+	var name = item.get_property("name", "Unknown")
+	var description = item.get_property("description", "No description")
+
+	print("Name: ", name)
+	print("Description: ", description)
+
+	var hp_boost = item.get_property("hp_boost")
+	if hp_boost != null:
+		print("Health Boost: ", hp_boost)
+
+	var dmg_boost = item.get_property("dmg_boost")
+	if dmg_boost != null:
+		print("Damage Boost: ", dmg_boost)
+
+	var fire_rate_boost = item.get_property("fire_rate_boost")
+	if fire_rate_boost != null:
+		print("Fire Rate Boost: ", fire_rate_boost)
 
 func add_item_to_queue(item):
 	ItemQueue.append(item)
@@ -120,11 +131,11 @@ func init_spellward_health(amount):
 
 func set_spellward_health(amount):
 	spellward_health_bar._set_health(amount)
-	
+
 	if amount < spellward_health:
 		if not SoundManager.is_playing("explosion2"):
 			SoundManager.play_sfx("explosion2", 0, 1, 1)
-	
+
 	spellward_health = amount
 
 func init_tower_health(max_health):
@@ -134,29 +145,22 @@ func apply_tower_damage(amount: float) -> void:
 	level_camera.apply_shake(amount*10)
 	if not SoundManager.is_playing("metal1"):
 		SoundManager.play_sfx("metal1", 0, 2, pow(amount,0.3))
-	
+
 	tower_health_bar._set_health(tower_health_bar.health - amount)
 	tower_health = tower_health_bar.health - amount
 	$spell_machine_tower.modulate = Color(1, 0.2, 0.2)  # Set the color to red
 	$damage_timer.start()
 
 func _process(delta: float) -> void:
-		#process_mode = PROCESS_MODE_DISABLED
-		
-	#if $spell_machine_tower/main_gun.primary_firing && not $spell_machine_tower/main_gun.is_smoking:
-		#level_camera.apply_shake($spell_machine_tower/main_gun.primary_projectile_dmg)
-	#
-	
 	machine_gun_cooldown_bar._set_health($spell_machine_tower/main_gun.primary_projectiles_fired)
 
 	if $spell_machine_tower/main_gun.secondary_firing:
 		harpoon_cooldown_bar._set_health($spell_machine_tower/main_gun.secondary_firing_interval * 100)
-	
+
 	harpoon_cooldown_bar._set_health(($spell_machine_tower/main_gun.secondary_firing_interval - $spell_machine_tower/main_gun.secondary_firing_timer) * 100)
 
 func _on_damage_timer_timeout() -> void:
 	$spell_machine_tower.modulate = Color(1, 1, 1)  # Reset the color to white
-
 
 func _on_hurt_box_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	if spellward_health <= 0:

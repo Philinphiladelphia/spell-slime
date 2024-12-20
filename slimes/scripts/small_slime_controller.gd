@@ -27,6 +27,11 @@ func _ready() -> void:
 	$slime_node.set_original_color(get_parent().slime_colors[$slime_node.element])
 	$slime_node.element_circle_size = 1
 	$slime_node.damage = 1
+	
+func set_element(element: int) -> void:
+	$slime_node.element = element
+	$slime_node.set_original_color(get_parent().slime_colors[$slime_node.element])
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
