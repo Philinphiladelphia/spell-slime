@@ -177,7 +177,6 @@ fill_to = Vector2(0.106838, 0.897436)
 [node name="SpellMachineTower" type="Node2D" node_paths=PackedStringArray("tower_light")]
 script = ExtResource("1_dsv4g")
 tower_light = NodePath("PointLight2D")
-base_stats_file_path = "res://savedata/tower_stats/base_stats.json"
 
 [node name="stars2" type="RigidBody2D" parent="."]
 position = Vector2(17, -812)

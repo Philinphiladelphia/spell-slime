@@ -139,7 +139,7 @@ func get_color_from_index(index: int) -> Color:
 	if not particle_colors.has(index):
 		# Assign a random color if not found
 		particle_colors[index] = Color(randf(), randf(), randf(), 1)
-		save_colors()
+		#save_colors()
 	return particle_colors[index]
 
 func powder_circle_wrapper(x: int, y: int, type: int, size: int) -> void:
@@ -163,14 +163,14 @@ func load_colors() -> void:
 			particle_colors[int(key)] = str_to_var(data[key])
 		file.close()
 
-func save_colors() -> void:
-	var file: FileAccess = FileAccess.open(colors_file_path, FileAccess.WRITE)
-	if file:
-		var data: Dictionary = {}
-		for key: String in particle_colors.keys():
-			data[str(key)] = var_to_str(particle_colors[key])
-		var json_string: String = JSON.stringify(data, "\t")
-		file.store_string(json_string)
-		file.close()
+#func save_colors() -> void:
+	#var file: FileAccess = FileAccess.open(colors_file_path, FileAccess.WRITE)
+	#if file:
+		#var data: Dictionary = {}
+		#for key: String in particle_colors.keys():
+			#data[str(key)] = var_to_str(particle_colors[key])
+		#var json_string: String = JSON.stringify(data, "\t")
+		#file.store_string(json_string)
+		#file.close()
 
 # I need powder lines
