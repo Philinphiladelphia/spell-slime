@@ -36,6 +36,7 @@ RareItems="*res://item_system/scenes/rare_items.tscn"
 EpicItems="*res://item_system/scenes/epic_items.tscn"
 LegendaryItems="*res://item_system/scenes/legendary_items.tscn"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
+StatsManager="*res://item_system/scripts/stats_manager.gd"
 
 [debug]
 

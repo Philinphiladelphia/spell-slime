@@ -21,18 +21,20 @@ var is_dead: bool = false
 
 @onready var level_camera: Node = get_parent().camera_node
 
-var base_stats: Dictionary = {}
+var stats: Dictionary = {}
 
-@export var base_stats_file_path: String = "res://base_stats.json"
+@export var base_stats_file_path: String = "res://savedata/tower_stats/stats.json"
+@export var temp_stats_file_path: String = "res://savedata/tower_stats/temp_stats.json"
 
 func _ready() -> void:
-	load_base_stats()
-	set_base_stats("base_tower")
-	tower_light.energy = light_energy
-
 	for item in GlobalInventory.get_items():
-		apply_item_effects(item)
-		display_item_properties(item)
+		StatsManager.apply_item_effects(item)
+		#StatsManager.display_item_properties(item)
+		
+	load_base_stats()
+	load_temp_stats()
+	apply_combined_stats()
+	tower_light.energy = light_energy
 
 func load_base_stats() -> void:
 	var file: FileAccess = FileAccess.open(base_stats_file_path, FileAccess.READ)
@@ -40,25 +42,48 @@ func load_base_stats() -> void:
 		var json: JSON = JSON.new()
 		var file_text: String = file.get_as_text()
 		json.parse(file_text)
-		base_stats = json.data
+		stats = json.data
+		file.close()
+	else:
+		print("Base stats file not found: " + base_stats_file_path)
+	print("base tower stats loaded: " + base_stats_file_path)
+
+func load_temp_stats() -> void:
+	var file: FileAccess = FileAccess.open(temp_stats_file_path, FileAccess.READ)
+	if file:
+		var json: JSON = JSON.new()
+		var file_text: String = file.get_as_text()
+		json.parse(file_text)
+		var temp_stats = json.data
 		file.close()
 
-	print("base tower stats loaded")
+		# Combine base stats with temp stats
+		for key in temp_stats.keys():
+			print("temp stats: " + key + ": " + str(temp_stats[key]))
+			if stats.has(key):
+				stats[key] += temp_stats[key]
+				print("combined stats: " + key + ": " + str(stats[key]))
+			else:
+				stats[key] = temp_stats[key]
+				
+		print("temp tower stats added")
 
 func save_base_stats() -> void:
 	var file: FileAccess = FileAccess.open(base_stats_file_path, FileAccess.WRITE)
 	if file:
-		var json_string: String = JSON.stringify(base_stats, "\t")
+		var json_string: String = JSON.stringify(stats, "\t")
 		file.store_string(json_string)
 		file.close()
 
-func set_base_stats(slime_type: String) -> void:
-	var stats = base_stats.get(slime_type, null)
-	if stats:
+func delete_temp_stats_file() -> void:
+	if FileAccess.file_exists(temp_stats_file_path):
+		DirAccess.remove_absolute(temp_stats_file_path)
+
+func apply_combined_stats() -> void:
 		tower_max_health = stats.max_health
 		tower_health = tower_max_health
 		
-		$spell_machine_tower/main_gun.max_rotation_speed = 0.08
+		$spell_machine_tower/main_gun.max_rotation_speed = stats.max_rotation_speed
 		$spell_machine_tower/main_gun.primary_projectile_dmg = stats.primary_projectile_dmg
 		$spell_machine_tower/main_gun.primary_firing_velocity = stats.primary_firing_velocity
 		$spell_machine_tower/main_gun.primary_max_lifespan = stats.primary_max_lifespan
@@ -80,18 +105,22 @@ func set_base_stats(slime_type: String) -> void:
 		harpoon_cooldown_bar.init_health(stats.secondary_firing_interval * 100)
 
 func apply_item_effects(item) -> void:
-	var hp_boost = item.get_property("hp_boost")
-	if hp_boost != null:
-		tower_max_health += hp_boost
+	var hp = item.get_property("hp")
+	if hp != null:
+		tower_max_health += hp
 		tower_health = tower_max_health
 
-	var dmg_boost = item.get_property("dmg_boost")
-	if dmg_boost != null:
-		$spell_machine_tower/main_gun.primary_projectile_dmg += dmg_boost
+	var dmg = item.get_property("dmg")
+	if dmg != null:
+		$spell_machine_tower/main_gun.primary_projectile_dmg += dmg
 
-	var fire_rate_boost = item.get_property("fire_rate_boost")
-	if fire_rate_boost != null:
-		$spell_machine_tower/main_gun.primary_firing_interval -= fire_rate_boost
+	var fire_rate = item.get_property("fire_rate")
+	if fire_rate != null:
+		$spell_machine_tower/main_gun.primary_firing_interval -= fire_rate
+		
+	var cooldown_rate = item.get_property("cooldown_rate")
+	if cooldown_rate != null:
+		$spell_machine_tower/main_gun.primary_cooldown_rate += cooldown_rate
 
 func display_item_properties(item) -> void:
 	var name = item.get_property("name", "Unknown")
@@ -100,17 +129,17 @@ func display_item_properties(item) -> void:
 	print("Name: ", name)
 	print("Description: ", description)
 
-	var hp_boost = item.get_property("hp_boost")
-	if hp_boost != null:
-		print("Health Boost: ", hp_boost)
+	var hp = item.get_property("hp")
+	if hp != null:
+		print("Health Boost: ", hp)
 
-	var dmg_boost = item.get_property("dmg_boost")
-	if dmg_boost != null:
-		print("Damage Boost: ", dmg_boost)
+	var dmg = item.get_property("dmg")
+	if dmg != null:
+		print("Damage Boost: ", dmg)
 
-	var fire_rate_boost = item.get_property("fire_rate_boost")
-	if fire_rate_boost != null:
-		print("Fire Rate Boost: ", fire_rate_boost)
+	var fire_rate = item.get_property("fire_rate")
+	if fire_rate != null:
+		print("Fire Rate Boost: ", fire_rate)
 
 func add_item_to_queue(item):
 	ItemQueue.append(item)
