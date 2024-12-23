@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://bftuxkyk86hgs"]
+
+[ext_resource type="PackedScene" uid="uid://cvsflpqqb732w" path="res://ui/animated_sprite_test.tscn" id="1_bsrgg"]
+[ext_resource type="Texture2D" uid="uid://qvy5ifxtwf0g" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_green_large_A/frame0000.png" id="2_unpl5"]
+[ext_resource type="Texture2D" uid="uid://ib0aiwd3w052" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_green_large_A/frame0001.png" id="3_tbf3m"]
+[ext_resource type="Texture2D" uid="uid://djydnvw753y4h" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_green_large_A/frame0002.png" id="4_ji1cr"]
+[ext_resource type="Texture2D" uid="uid://dgau4askt3gyp" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_green_large_A/frame0003.png" id="5_p78ri"]
+[ext_resource type="Texture2D" uid="uid://dl5k4ae4ebmib" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_green_large_A/frame0004.png" id="6_xitc8"]
+
+[sub_resource type="Gradient" id="Gradient_23m6l"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qlc0h"]
+gradient = SubResource("Gradient_23m6l")
+fill = 1
+fill_from = Vector2(0.495726, 0.487179)
+fill_to = Vector2(0.15812, 0.162393)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7e0hc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_unpl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tbf3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ji1cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p78ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xitc8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NightLight" type="PointLight2D" parent="."]
+position = Vector2(0, 11)
+scale = Vector2(5, 5)
+color = Color(0, 0.94, 0.172333, 1)
+energy = 3.0
+texture = SubResource("GradientTexture2D_qlc0h")
+
+[node name="AnimatedSpriteTest" parent="." instance=ExtResource("1_bsrgg")]
+modulate = Color(1, 1, 1, 0.486275)
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_7e0hc")
+autoplay = "default"
+frame_progress = 0.81488

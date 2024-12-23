@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpxfo7g4i1124"]
+
+[ext_resource type="PackedScene" uid="uid://cvsflpqqb732w" path="res://ui/animated_sprite_test.tscn" id="1_m7ruh"]
+
+[sub_resource type="Gradient" id="Gradient_23m6l"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qlc0h"]
+gradient = SubResource("Gradient_23m6l")
+fill = 1
+fill_from = Vector2(0.495726, 0.487179)
+fill_to = Vector2(0.15812, 0.162393)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="NightLight" type="PointLight2D" parent="."]
+position = Vector2(0, 11)
+scale = Vector2(5, 5)
+color = Color(0.598267, 0.00367623, 0.936645, 1)
+energy = 3.0
+texture = SubResource("GradientTexture2D_qlc0h")
+
+[node name="AnimatedSpriteTest" parent="." instance=ExtResource("1_m7ruh")]
+modulate = Color(1, 1, 1, 0.486275)
+texture_filter = 1
+scale = Vector2(3, 3)
+autoplay = "default"
+frame_progress = 0.410426

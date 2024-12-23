@@ -1,0 +1,301 @@
+{
+	"bg0": {
+		"frame": {
+			"x": 0,
+			"y": 0,
+			"width": 320,
+			"height": 180
+		},
+		"sourceSize": {
+			"width": 320,
+			"height": 180
+		},
+		"rotated": false
+	},
+	"bg1": {
+		"frame": {
+			"x": 0,
+			"y": 182,
+			"width": 320,
+			"height": 180
+		},
+		"sourceSize": {
+			"width": 320,
+			"height": 180
+		},
+		"rotated": false
+	},
+	"bg2": {
+		"frame": {
+			"x": 322,
+			"y": 0,
+			"width": 320,
+			"height": 180
+		},
+		"sourceSize": {
+			"width": 320,
+			"height": 180
+		},
+		"rotated": false
+	},
+	"bg3/frame0000": {
+		"frame": {
+			"x": 0,
+			"y": 364,
+			"width": 320,
+			"height": 180
+		},
+		"sourceSize": {
+			"width": 320,
+			"height": 180
+		},
+		"rotated": false
+	},
+	"bg3/frame0001": {
+		"frame": {
+			"x": 322,
+			"y": 182,
+			"width": 320,
+			"height": 180
+		},
+		"sourceSize": {
+			"width": 320,
+			"height": 180
+		},
+		"rotated": false
+	},
+	"object_spike_down": {
+		"frame": {
+			"x": 374,
+			"y": 424,
+			"width": 8,
+			"height": 16
+		},
+		"sourceSize": {
+			"width": 8,
+			"height": 16
+		},
+		"rotated": false
+	},
+	"object_spike_left": {
+		"frame": {
+			"x": 322,
+			"y": 466,
+			"width": 16,
+			"height": 8
+		},
+		"sourceSize": {
+			"width": 16,
+			"height": 8
+		},
+		"rotated": false
+	},
+	"object_spike_right": {
+		"frame": {
+			"x": 348,
+			"y": 450,
+			"width": 16,
+			"height": 8
+		},
+		"sourceSize": {
+			"width": 16,
+			"height": 8
+		},
+		"rotated": false
+	},
+	"object_spike_up": {
+		"frame": {
+			"x": 400,
+			"y": 408,
+			"width": 8,
+			"height": 16
+		},
+		"sourceSize": {
+			"width": 8,
+			"height": 16
+		},
+		"rotated": false
+	},
+	"terrain_2x2_block": {
+		"frame": {
+			"x": 348,
+			"y": 432,
+			"width": 16,
+			"height": 16
+		},
+		"sourceSize": {
+			"width": 16,
+			"height": 16
+		},
+		"rotated": false
+	},
+	"terrain_3x3_block/frame0000": {
+		"frame": {
+			"x": 374,
+			"y": 398,
+			"width": 24,
+			"height": 24
+		},
+		"sourceSize": {
+			"width": 24,
+			"height": 24
+		},
+		"rotated": false
+	},
+	"terrain_3x3_block/frame0001": {
+		"frame": {
+			"x": 416,
+			"y": 364,
+			"width": 24,
+			"height": 24
+		},
+		"sourceSize": {
+			"width": 24,
+			"height": 24
+		},
+		"rotated": false
+	},
+	"terrain_4x4_block/frame0000": {
+		"frame": {
+			"x": 322,
+			"y": 364,
+			"width": 32,
+			"height": 32
+		},
+		"sourceSize": {
+			"width": 32,
+			"height": 32
+		},
+		"rotated": false
+	},
+	"terrain_4x4_block/frame0001": {
+		"frame": {
+			"x": 356,
+			"y": 364,
+			"width": 32,
+			"height": 32
+		},
+		"sourceSize": {
+			"width": 32,
+			"height": 32
+		},
+		"rotated": false
+	},
+	"terrain_bridge_ceiling": {
+		"frame": {
+			"x": 442,
+			"y": 364,
+			"width": 16,
+			"height": 8
+		},
+		"sourceSize": {
+			"width": 16,
+			"height": 8
+		},
+		"rotated": false
+	},
+	"terrain_bridge_floor": {
+		"frame": {
+			"x": 322,
+			"y": 476,
+			"width": 16,
+			"height": 8
+		},
+		"sourceSize": {
+			"width": 16,
+			"height": 8
+		},
+		"rotated": false
+	},
+	"terrain_pillar_bottom/frame0000": {
+		"frame": {
+			"x": 322,
+			"y": 398,
+			"width": 24,
+			"height": 32
+		},
+		"sourceSize": {
+			"width": 24,
+			"height": 32
+		},
+		"rotated": false
+	},
+	"terrain_pillar_bottom/frame0001": {
+		"frame": {
+			"x": 348,
+			"y": 398,
+			"width": 24,
+			"height": 32
+		},
+		"sourceSize": {
+			"width": 24,
+			"height": 32
+		},
+		"rotated": false
+	},
+	"terrain_pillar_middle": {
+		"frame": {
+			"x": 400,
+			"y": 398,
+			"width": 24,
+			"height": 8
+		},
+		"sourceSize": {
+			"width": 24,
+			"height": 8
+		},
+		"rotated": false
+	},
+	"terrain_pillar_top/frame0000": {
+		"frame": {
+			"x": 390,
+			"y": 364,
+			"width": 24,
+			"height": 32
+		},
+		"sourceSize": {
+			"width": 24,
+			"height": 32
+		},
+		"rotated": false
+	},
+	"terrain_pillar_top/frame0001": {
+		"frame": {
+			"x": 322,
+			"y": 432,
+			"width": 24,
+			"height": 32
+		},
+		"sourceSize": {
+			"width": 24,
+			"height": 32
+		},
+		"rotated": false
+	},
+	"terrain_pipe_A": {
+		"frame": {
+			"x": 348,
+			"y": 460,
+			"width": 16,
+			"height": 8
+		},
+		"sourceSize": {
+			"width": 16,
+			"height": 8
+		},
+		"rotated": false
+	},
+	"terrain_pipe_B": {
+		"frame": {
+			"x": 410,
+			"y": 408,
+			"width": 16,
+			"height": 8
+		},
+		"sourceSize": {
+			"width": 16,
+			"height": 8
+		},
+		"rotated": false
+	}
+}

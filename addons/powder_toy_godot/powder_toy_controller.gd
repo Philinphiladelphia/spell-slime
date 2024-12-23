@@ -133,16 +133,16 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 func clear_outer_area() -> void:
 	var width: int = 120
 	var height: int = 120
-	var border: int = 1
+	var border: int = 2
 	var wall_offset: int = 0
 	var bottom_size: int = 20
 
 	# Clear top border
 	
-	powder_toy.clear_sim_area(wall_offset, wall_offset + bottom_size, width - (wall_offset*2), border)
+	powder_toy.clear_sim_area(wall_offset, wall_offset, width - (wall_offset*2), border)
 	# Clear bottom border
 	#powder_toy.clear_sim_area(wall_offset, height - border - wall_offset, width - (wall_offset*2), border)
 	# Clear left border
-	powder_toy.clear_sim_area(wall_offset, wall_offset + bottom_size, border, height - (wall_offset*2))
+	powder_toy.clear_sim_area(wall_offset, wall_offset , border, height - (wall_offset*2))
 	# Clear right border
 	powder_toy.clear_sim_area(width - border - wall_offset, wall_offset, border, height - (wall_offset*2))

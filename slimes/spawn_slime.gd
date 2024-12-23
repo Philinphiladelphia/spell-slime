@@ -225,7 +225,7 @@ func _input(event: InputEvent) -> void:
 		spawn_med_slime(49)
 		last_spawn_time = current_time
 	elif Input.is_key_pressed(KEY_P) and large_slime_count < max_large_slimes:
-		spawn_large_slime(121)
+		spawn_large_slime(129)
 		last_spawn_time = current_time
 
 

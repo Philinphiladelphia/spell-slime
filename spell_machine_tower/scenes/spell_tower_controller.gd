@@ -27,6 +27,9 @@ var stats: Dictionary = {}
 @export var temp_stats_file_path: String = "res://savedata/tower_stats/temp_stats.json"
 
 func _ready() -> void:
+	StatsManager.clear_temp_stats()
+	StatsManager.load_temp_stats()
+	
 	for item in GlobalInventory.get_items():
 		StatsManager.apply_item_effects(item)
 		#StatsManager.display_item_properties(item)
@@ -49,24 +52,17 @@ func load_base_stats() -> void:
 	print("base tower stats loaded: " + base_stats_file_path)
 
 func load_temp_stats() -> void:
-	var file: FileAccess = FileAccess.open(temp_stats_file_path, FileAccess.READ)
-	if file:
-		var json: JSON = JSON.new()
-		var file_text: String = file.get_as_text()
-		json.parse(file_text)
-		var temp_stats = json.data
-		file.close()
-
-		# Combine base stats with temp stats
-		for key in temp_stats.keys():
-			print("temp stats: " + key + ": " + str(temp_stats[key]))
-			if stats.has(key):
-				stats[key] += temp_stats[key]
-				print("combined stats: " + key + ": " + str(stats[key]))
-			else:
-				stats[key] = temp_stats[key]
-				
-		print("temp tower stats added")
+	# Combine base stats with temp stats
+	var temp_stats = StatsManager.temp_stats
+	for key in temp_stats.keys():
+		print("temp stats: " + key + ": " + str(temp_stats[key]))
+		if stats.has(key):
+			stats[key] += temp_stats[key]
+			print("combined stats: " + key + ": " + str(stats[key]))
+		else:
+			stats[key] = temp_stats[key]
+			
+	print("temp tower stats added")
 
 func save_base_stats() -> void:
 	var file: FileAccess = FileAccess.open(base_stats_file_path, FileAccess.WRITE)
