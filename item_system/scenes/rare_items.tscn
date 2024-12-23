@@ -22,7 +22,7 @@ script = ExtResource("3_rxdhv")
 protoset = ExtResource("2_nla6o")
 prototype_id = "item1"
 properties = {
-"image": "res://item_system/assets/rifled_barrel.png",
+"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/barrel_large_A.png",
 "name": "rifled_barrel"
 }
 
@@ -33,4 +33,14 @@ prototype_id = "item2"
 properties = {
 "image": "res://item_system/assets/full_metal_jacket.png",
 "name": "full_metal_jacket"
+}
+
+[node name="pile_o_cash" type="Node" parent="."]
+script = ExtResource("3_rxdhv")
+protoset = ExtResource("2_nla6o")
+prototype_id = "minimal_item"
+properties = {
+"description": "It's a rich slime's world!",
+"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/coin_pile_large_A.png",
+"name": "pile-o-cash"
 }

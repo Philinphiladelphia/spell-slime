@@ -8,29 +8,15 @@
 script = ExtResource("1_14yse")
 item_protoset = ExtResource("2_sxgvo")
 
-[node name="gem_core" type="Node" parent="."]
-script = ExtResource("3_ss7uf")
-protoset = ExtResource("2_sxgvo")
-prototype_id = "minimal_item"
-properties = {
-"image": "res://item_system/assets/gem_core.png",
-"name": "gem_core"
-}
-
-[node name="slime_bucket" type="Node" parent="."]
-script = ExtResource("3_ss7uf")
-protoset = ExtResource("2_sxgvo")
-prototype_id = "item1"
-properties = {
-"image": "res://item_system/assets/slime_bucket.png",
-"name": "slime_bucket"
-}
-
 [node name="grease_can" type="Node" parent="."]
 script = ExtResource("3_ss7uf")
 protoset = ExtResource("2_sxgvo")
 prototype_id = "item2"
 properties = {
+"description": "The tin man moved faster when greased. So can you!",
 "image": "res://item_system/assets/grease_can.png",
-"name": "grease_can"
+"max_rotation_speed": 0.05,
+"name": "grease_can",
+"primary_cooldown_max": 10.0,
+"primary_firing_interval": -0.05
 }

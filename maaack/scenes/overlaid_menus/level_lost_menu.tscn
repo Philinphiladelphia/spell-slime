@@ -5,6 +5,7 @@
 
 [node name="LevelLostMenu" instance=ExtResource("1_wbmex")]
 script = ExtResource("2_00qkm")
+main_menu_scene = "res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn"
 
 [node name="MenuPanelContainer" parent="." index="1"]
 offset_left = -319.0
@@ -14,3 +15,5 @@ offset_bottom = 175.0
 
 [node name="PanelColor" parent="MenuPanelContainer" index="0"]
 visible = false
+
+[connection signal="main_menu_pressed" from="." to="." method="_on_main_menu_pressed"]

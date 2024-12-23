@@ -5,6 +5,7 @@
 
 [node name="LevelWonMenu" instance=ExtResource("1_grh4e")]
 script = ExtResource("2_ewi2u")
+main_menu_scene = "res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn"
 
 [node name="MenuPanelContainer" parent="." index="1"]
 offset_left = -352.0
@@ -16,3 +17,4 @@ offset_bottom = 164.0
 visible = false
 
 [connection signal="continue_pressed" from="." to="." method="_on_continue_pressed"]
+[connection signal="main_menu_pressed" from="." to="." method="_on_main_menu_pressed"]

@@ -15,8 +15,6 @@ func apply_item_effects(item) -> void:
 			else:
 				temp_stats[key] = value
 
-	save_temp_stats()
-
 func save_temp_stats() -> void:
 	var file: FileAccess = FileAccess.open(temp_stats_file_path, FileAccess.WRITE)
 	if file:
@@ -35,3 +33,20 @@ func display_item_properties(item) -> void:
 		var value = item.get_property(key)
 		if value != null:
 			print(key.capitalize().replace("_", " "), ": ", value)
+
+func clear_temp_stats() -> void:
+	temp_stats.clear()
+	var file: FileAccess = FileAccess.open(temp_stats_file_path, FileAccess.WRITE)
+	if file:
+		file.store_string("{}")
+		file.close()
+
+func load_temp_stats() -> void:
+	var file: FileAccess = FileAccess.open(temp_stats_file_path, FileAccess.READ)
+	if file:
+		var json_string: String = file.get_as_text()
+		var json = JSON.new()
+		var error = json.parse(json_string)
+		if error == OK:
+			temp_stats = json.data
+		file.close()

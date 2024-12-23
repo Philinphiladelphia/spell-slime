@@ -68,6 +68,7 @@ offset_top = 44.0
 offset_right = 1041.0
 offset_bottom = 86.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_28xsr")
+show_percentage = true
 
 [node name="slime_tracker" type="Node" parent="."]
 script = ExtResource("8_p7o26")

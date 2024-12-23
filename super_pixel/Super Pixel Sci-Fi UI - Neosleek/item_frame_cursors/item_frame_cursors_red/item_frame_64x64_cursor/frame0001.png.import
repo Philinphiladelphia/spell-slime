@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://56yc4v1sk263"
+path="res://.godot/imported/frame0001.png-f70b1f80c897d24516cd73392a955b96.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://super_pixel/Super Pixel Sci-Fi UI - Neosleek/item_frame_cursors/item_frame_cursors_red/item_frame_64x64_cursor/frame0001.png"
+dest_files=["res://.godot/imported/frame0001.png-f70b1f80c897d24516cd73392a955b96.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

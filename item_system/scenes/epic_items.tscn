@@ -8,29 +8,52 @@
 script = ExtResource("1_5iif1")
 item_protoset = ExtResource("2_ijlcr")
 
-[node name="gem_core" type="Node" parent="."]
-script = ExtResource("3_l82dl")
-protoset = ExtResource("2_ijlcr")
-prototype_id = "minimal_item"
-properties = {
-"image": "res://item_system/assets/gem_core.png",
-"name": "gem_core"
-}
-
-[node name="slime_bucket" type="Node" parent="."]
-script = ExtResource("3_l82dl")
-protoset = ExtResource("2_ijlcr")
-prototype_id = "item1"
-properties = {
-"image": "res://item_system/assets/slime_bucket.png",
-"name": "slime_bucket"
-}
-
-[node name="grease_can" type="Node" parent="."]
+[node name="blue_lantern" type="Node" parent="."]
 script = ExtResource("3_l82dl")
 protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
-"image": "res://item_system/assets/grease_can.png",
-"name": "grease_can"
+"description": "Light in the darkness",
+"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/lantern_large_blue_inactive.png",
+"name": "blue_lantern"
+}
+
+[node name="slime_knight" type="Node" parent="."]
+script = ExtResource("3_l82dl")
+protoset = ExtResource("2_ijlcr")
+prototype_id = "item2"
+properties = {
+"description": "The Slime Knights protected the innocent in eons past",
+"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_defense_plus_large_green.png",
+"name": "slime_knight"
+}
+
+[node name="slime_gauntlet" type="Node" parent="."]
+script = ExtResource("3_l82dl")
+protoset = ExtResource("2_ijlcr")
+prototype_id = "item2"
+properties = {
+"description": "When one of these is thrown down, things are about to get squishy",
+"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_power_plus_large_green.png",
+"name": "slime_gauntlet"
+}
+
+[node name="slime_skates" type="Node" parent="."]
+script = ExtResource("3_l82dl")
+protoset = ExtResource("2_ijlcr")
+prototype_id = "item2"
+properties = {
+"description": "A rolling slime gathers no moss",
+"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_speed_plus_large_green.png",
+"name": "slime_skates"
+}
+
+[node name="super_slime_capsule" type="Node" parent="."]
+script = ExtResource("3_l82dl")
+protoset = ExtResource("2_ijlcr")
+prototype_id = "item2"
+properties = {
+"description": "In dire need, the chosen slime will awaken the legend",
+"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_speed_plus_large_green.png",
+"name": "super_slime_capsule"
 }

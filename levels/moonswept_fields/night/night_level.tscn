@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bwrpl5k6kodt8"]
+[gd_scene load_steps=19 format=3 uid="uid://bwrpl5k6kodt8"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_ahstt"]
 [ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="2_10nlx"]
@@ -14,6 +14,8 @@
 [ext_resource type="Script" path="res://levels/scripts/mouse_follower_node.gd" id="12_mnotw"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="13_y66eb"]
 [ext_resource type="AudioStream" uid="uid://ch5t5guld8q7v" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 08 Soap On The Dance Floor.mp3" id="14_d8b1f"]
+[ext_resource type="PackedScene" uid="uid://bpxfo7g4i1124" path="res://levels/moonswept_fields/night/night_lights/purple_light.tscn" id="16_1soy6"]
+[ext_resource type="PackedScene" uid="uid://bftuxkyk86hgs" path="res://levels/moonswept_fields/night/night_lights/green_light.tscn" id="17_1utru"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/level_loader.gd" id="21_bkprm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbh6e"]
@@ -83,6 +85,7 @@ offset_top = 44.0
 offset_right = 1041.0
 offset_bottom = 86.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_qbh6e")
+show_percentage = true
 
 [node name="enable_slime_light" type="Node" parent="."]
 script = ExtResource("10_27ni7")
@@ -98,7 +101,7 @@ script = ExtResource("12_mnotw")
 script = ExtResource("5_5g6k6")
 
 [node name="spawner1" type="Node2D" parent="slime_tracker" node_paths=PackedStringArray("spawntimer")]
-position = Vector2(-5966, -2743)
+position = Vector2(-5995, -859)
 script = ExtResource("7_xdq1o")
 spawntimer = NodePath("../../slime_spawn_timer")
 slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_fire_slimes.json"
@@ -110,6 +113,90 @@ bus = &"Master"
 
 [node name="level_loader" type="Node" parent="."]
 script = ExtResource("21_bkprm")
+
+[node name="floating_lights" type="Node2D" parent="."]
+position = Vector2(-2336, -736)
+
+[node name="floating_light" parent="floating_lights" instance=ExtResource("16_1soy6")]
+position = Vector2(-3478, -2713)
+
+[node name="floating_light2" parent="floating_lights" instance=ExtResource("16_1soy6")]
+position = Vector2(-3336, -2786)
+
+[node name="floating_light3" parent="floating_lights" instance=ExtResource("16_1soy6")]
+position = Vector2(-3531, -2865)
+
+[node name="floating_light4" parent="floating_lights" instance=ExtResource("16_1soy6")]
+position = Vector2(-3256, -2639)
+
+[node name="floating_light5" parent="floating_lights" instance=ExtResource("16_1soy6")]
+position = Vector2(-3669, -2716)
+
+[node name="floating_lights2" type="Node2D" parent="."]
+position = Vector2(486, -2180)
+
+[node name="floating_light" parent="floating_lights2" instance=ExtResource("16_1soy6")]
+position = Vector2(-3478, -2713)
+
+[node name="floating_light2" parent="floating_lights2" instance=ExtResource("16_1soy6")]
+position = Vector2(-3336, -2786)
+
+[node name="floating_light3" parent="floating_lights2" instance=ExtResource("16_1soy6")]
+position = Vector2(-3531, -2865)
+
+[node name="floating_light4" parent="floating_lights2" instance=ExtResource("16_1soy6")]
+position = Vector2(-3256, -2639)
+
+[node name="floating_light5" parent="floating_lights2" instance=ExtResource("16_1soy6")]
+position = Vector2(-3669, -2716)
+
+[node name="floating_lights3" type="Node2D" parent="."]
+position = Vector2(2915, -2553)
+
+[node name="floating_light" parent="floating_lights3" instance=ExtResource("16_1soy6")]
+position = Vector2(-3478, -2713)
+
+[node name="floating_light2" parent="floating_lights3" instance=ExtResource("16_1soy6")]
+position = Vector2(-3336, -2786)
+
+[node name="floating_light3" parent="floating_lights3" instance=ExtResource("16_1soy6")]
+position = Vector2(-3531, -2865)
+
+[node name="floating_light4" parent="floating_lights3" instance=ExtResource("16_1soy6")]
+position = Vector2(-3256, -2639)
+
+[node name="floating_light5" parent="floating_lights3" instance=ExtResource("16_1soy6")]
+position = Vector2(-3669, -2716)
+
+[node name="green_lights" type="Node2D" parent="."]
+position = Vector2(-2042, -999)
+
+[node name="green_light" parent="green_lights" instance=ExtResource("17_1utru")]
+position = Vector2(-3111, -3350)
+
+[node name="green_light2" parent="green_lights" instance=ExtResource("17_1utru")]
+position = Vector2(-3232, -3418)
+
+[node name="green_light3" parent="green_lights" instance=ExtResource("17_1utru")]
+position = Vector2(-3074, -3491)
+
+[node name="green_light4" parent="green_lights" instance=ExtResource("17_1utru")]
+position = Vector2(-2933, -3541)
+
+[node name="green_lights2" type="Node2D" parent="."]
+position = Vector2(5433, 385)
+
+[node name="green_light" parent="green_lights2" instance=ExtResource("17_1utru")]
+position = Vector2(-3111, -3350)
+
+[node name="green_light2" parent="green_lights2" instance=ExtResource("17_1utru")]
+position = Vector2(-3232, -3418)
+
+[node name="green_light3" parent="green_lights2" instance=ExtResource("17_1utru")]
+position = Vector2(-3074, -3491)
+
+[node name="green_light4" parent="green_lights2" instance=ExtResource("17_1utru")]
+position = Vector2(-2933, -3541)
 
 [connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner1" method="_on_slime_spawn_timer_timeout"]
 

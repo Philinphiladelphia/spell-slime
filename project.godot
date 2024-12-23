@@ -61,7 +61,7 @@ movie_writer/movie_file="/home/phil/Desktop/movies/steam_video.avi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/cameraregion2d/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
+enabled=PackedStringArray("res://addons/gloot/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
 [gui]
 
@@ -120,6 +120,10 @@ locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/t
 
 disable_plugin_dialogues=true
 copy_path="res://maaack"
+
+[memory]
+
+limits/message_queue/max_size_mb=128
 
 [physics]
 
