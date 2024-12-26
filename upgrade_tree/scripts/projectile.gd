@@ -80,6 +80,7 @@ func on_hit():
 
 	var animation = on_hit_animation.instantiate()
 	animation.position = position
+	animation.rotation = rotation
 	
 	# 2.5d, cube root for explostion size
 	animation.scale = animation.scale * pow(damage, 0.33)

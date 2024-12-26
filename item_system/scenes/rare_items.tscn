@@ -13,7 +13,7 @@ script = ExtResource("3_rxdhv")
 protoset = ExtResource("2_nla6o")
 prototype_id = "minimal_item"
 properties = {
-"image": "res://item_system/assets/steampunk_spirit.png",
+"image": "res://super_pixel/Super Pixel Item Pickups Sci-fi Pack 1/PNG/sp1_bolt_bronze/frame0012.png",
 "name": "steampunk_spirit"
 }
 
@@ -26,13 +26,13 @@ properties = {
 "name": "rifled_barrel"
 }
 
-[node name="full_metal_jacket" type="Node" parent="."]
+[node name="acid_bottle" type="Node" parent="."]
 script = ExtResource("3_rxdhv")
 protoset = ExtResource("2_nla6o")
 prototype_id = "item2"
 properties = {
-"image": "res://item_system/assets/full_metal_jacket.png",
-"name": "full_metal_jacket"
+"image": "res://super_pixel/Super Pixel Objects And Items/PNG/outline_none/potion_A_green_full.png",
+"name": "acid_bottle"
 }
 
 [node name="pile_o_cash" type="Node" parent="."]

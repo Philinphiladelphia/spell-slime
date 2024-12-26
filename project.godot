@@ -65,7 +65,7 @@ enabled=PackedStringArray("res://addons/gloot/plugin.cfg", "res://addons/maaacks
 
 [gui]
 
-theme/custom="res://ui/themes/super_pixel_violet.tres"
+theme/custom="res://super_pixel/ui/themes/super_pixel_violet.tres"
 theme/custom_font="res://fonts/zig/zig_____.ttf"
 
 [input]

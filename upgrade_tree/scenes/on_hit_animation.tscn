@@ -1,30 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvgp6pg1niumu"]
+[gd_scene load_steps=11 format=3 uid="uid://dvgp6pg1niumu"]
 
-[ext_resource type="Texture2D" uid="uid://c0qo6j2822und" path="res://upgrade_tree/assets/weapons/hit1.png" id="1_u4vlg"]
-[ext_resource type="Texture2D" uid="uid://c64n87og613pi" path="res://upgrade_tree/assets/weapons/hit2.png" id="2_h1v0f"]
-[ext_resource type="Texture2D" uid="uid://d0o0j8c6hgn0b" path="res://upgrade_tree/assets/weapons/hit3.png" id="3_2ax71"]
+[ext_resource type="Texture2D" uid="uid://3xv8rs8xgofh" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0000.png" id="1_dkwno"]
+[ext_resource type="Texture2D" uid="uid://4qtvxej6gwgx" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0001.png" id="2_btesg"]
+[ext_resource type="Texture2D" uid="uid://b3e6uiihx5xgg" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0002.png" id="3_seyqh"]
+[ext_resource type="Texture2D" uid="uid://bm86igbqkd4pd" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0003.png" id="4_nxqt3"]
 [ext_resource type="Script" path="res://upgrade_tree/scenes/on_hit_animation.gd" id="4_pvtbb"]
+[ext_resource type="Texture2D" uid="uid://dl7ue5gi0irjs" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0004.png" id="5_17h00"]
+[ext_resource type="Texture2D" uid="uid://hnh8ppdbbbla" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0005.png" id="6_2y1he"]
+[ext_resource type="Texture2D" uid="uid://dcl43lpqv8p8k" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0006.png" id="7_8rqat"]
+[ext_resource type="Texture2D" uid="uid://jv1s5m3tnb6l" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0007.png" id="8_078px"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_08mcc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_u4vlg")
+"texture": ExtResource("1_dkwno")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_h1v0f")
+"texture": ExtResource("2_btesg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_2ax71")
+"texture": ExtResource("3_seyqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nxqt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_17h00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2y1he")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8rqat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_078px")
 }],
 "loop": false,
 "name": &"default",
-"speed": 15.0
+"speed": 20.0
 }]
 
 [node name="OnHitAnimation" type="AnimatedSprite2D"]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_08mcc")
-frame = 2
 frame_progress = 1.0
 script = ExtResource("4_pvtbb")

@@ -35,7 +35,7 @@ var secondary_post_hit_lifespan: float = 0.5
 var secondary_shake: float = 0
 
 # used to align firing location with the barrel
-var barrel_length: int = 350
+var barrel_length: int = 500
 
 # Cooldown parameters
 var primary_projectiles_fired: float = 0.0
@@ -79,7 +79,7 @@ func _process(delta: float) -> void:
 			if not SoundManager.is_playing("machine_gun_fire"):
 				SoundManager.play_sfx("machine_gun_fire", 0, -20, 1)
 				#SoundManager.play_sfx("machine_gun_fire", 0, 0.6, 1)
-			fire_projectile(basic_projectile_scene, primary_projectile_dmg, primary_firing_velocity, primary_max_lifespan, primary_post_hit_lifespan, primary_mass, primary_shake, basic_animation)
+			fire_projectile(basic_projectile_scene, primary_projectile_dmg, primary_firing_velocity, primary_max_lifespan, primary_post_hit_lifespan, primary_mass, primary_shake)
 			primary_firing_timer = primary_firing_interval
 			primary_projectiles_fired += 1.0
 			if primary_projectiles_fired >= primary_cooldown_max:
@@ -94,7 +94,7 @@ func _process(delta: float) -> void:
 		if secondary_firing_timer <= 0:
 			SoundManager.play_sfx("harpoon", 0, -12, 3)
 			get_parent().get_parent().level_camera.apply_shake(50)
-			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake, lightning_animation)
+			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake)
 			secondary_firing_timer = secondary_firing_interval
 
 func reset_primary_cooldown() -> void:
@@ -114,10 +114,9 @@ func handle_rotation() -> void:
 	else:
 		rotation = target_angle
 
-func fire_projectile(projectile_scene: PackedScene, damage: int, velocity: float, max_lifespan: float, post_hit_lifespan: float, mass: float, gun_shake : float, on_hit_animation: PackedScene) -> void:
+func fire_projectile(projectile_scene: PackedScene, damage: int, velocity: float, max_lifespan: float, post_hit_lifespan: float, mass: float, gun_shake : float) -> void:
 	var node_to_fire: Node = projectile_scene.instantiate()
 	apply_firing_velocity(node_to_fire, velocity, gun_shake)
-	node_to_fire.on_hit_animation = on_hit_animation
 	node_to_fire.damage = damage
 	node_to_fire.max_projectile_lifespan = max_lifespan
 	node_to_fire.projectile_mass = mass
