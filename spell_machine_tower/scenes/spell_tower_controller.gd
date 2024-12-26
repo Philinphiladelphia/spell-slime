@@ -32,7 +32,7 @@ func _ready() -> void:
 	
 	for item in GlobalInventory.get_items():
 		StatsManager.apply_item_effects(item)
-		#StatsManager.display_item_properties(item)
+		StatsManager.display_item_properties(item)
 		
 	load_base_stats()
 	load_temp_stats()
@@ -100,46 +100,9 @@ func apply_combined_stats() -> void:
 		machine_gun_cooldown_bar.init_health(stats.primary_cooldown_max)
 		harpoon_cooldown_bar.init_health(stats.secondary_firing_interval * 100)
 
-func apply_item_effects(item) -> void:
-	var hp = item.get_property("hp")
-	if hp != null:
-		tower_max_health += hp
-		tower_health = tower_max_health
-
-	var dmg = item.get_property("dmg")
-	if dmg != null:
-		$spell_machine_tower/main_gun.primary_projectile_dmg += dmg
-
-	var fire_rate = item.get_property("fire_rate")
-	if fire_rate != null:
-		$spell_machine_tower/main_gun.primary_firing_interval -= fire_rate
-		
-	var cooldown_rate = item.get_property("cooldown_rate")
-	if cooldown_rate != null:
-		$spell_machine_tower/main_gun.primary_cooldown_rate += cooldown_rate
-
-func display_item_properties(item) -> void:
-	var name = item.get_property("name", "Unknown")
-	var description = item.get_property("description", "No description")
-
-	print("Name: ", name)
-	print("Description: ", description)
-
-	var hp = item.get_property("hp")
-	if hp != null:
-		print("Health Boost: ", hp)
-
-	var dmg = item.get_property("dmg")
-	if dmg != null:
-		print("Damage Boost: ", dmg)
-
-	var fire_rate = item.get_property("fire_rate")
-	if fire_rate != null:
-		print("Fire Rate Boost: ", fire_rate)
-
 func add_item_to_queue(item):
 	ItemQueue.append(item)
-	apply_item_effects(item)
+	StatsManager.apply_item_effects(item)
 
 func face_left():
 	$Slime.flip_h = true
