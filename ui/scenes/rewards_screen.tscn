@@ -53,27 +53,34 @@ label_settings = SubResource("LabelSettings_bba87")
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 
 [node name="button1" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 keep_pressed_outside = true
 icon = ExtResource("1_soytb")
+expand_icon = true
 
 [node name="button2" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 icon = ExtResource("1_soytb")
+expand_icon = true
 
 [node name="button3" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 icon = ExtResource("1_soytb")
+expand_icon = true
 
 [node name="round_end_timer" type="Timer" parent="."]
 wait_time = 3.0

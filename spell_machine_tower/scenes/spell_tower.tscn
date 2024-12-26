@@ -164,12 +164,12 @@ size = Vector2(400, 500)
 radius = 153.75
 height = 400.0
 
-[sub_resource type="Gradient" id="Gradient_mvcn1"]
+[sub_resource type="Gradient" id="Gradient_put6g"]
 offsets = PackedFloat32Array(0, 0.968127)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_utg3h"]
-gradient = SubResource("Gradient_mvcn1")
+gradient = SubResource("Gradient_put6g")
 fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cd0jbh4metflb" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.tscn" id="1_abli7"]
 [ext_resource type="Script" path="res://maaack/scenes/loading_screen/loading_screen.gd" id="2_irgpf"]
-[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://ui/themes/spellslime_theme.tres" id="3_kw67p"]
+[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://super_pixel/ui/themes/spellslime_theme.tres" id="3_kw67p"]
 
 [node name="LevelLoadingScreen" instance=ExtResource("1_abli7")]
 script = ExtResource("2_irgpf")

@@ -1,7 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://csgifsasipgj"]
+[gd_scene load_steps=21 format=3 uid="uid://csgifsasipgj"]
 
 [ext_resource type="Script" path="res://upgrade_tree/scripts/projectile.gd" id="1_0unes"]
-[ext_resource type="Texture2D" uid="uid://bsn5gm2nqsy42" path="res://spell_machine_tower/assets/gun_pieces/509133326.png" id="2_7djns"]
+[ext_resource type="Texture2D" uid="uid://7ae8775ov1y3" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0001.png" id="3_ki5bu"]
+[ext_resource type="Texture2D" uid="uid://bughbiuvac533" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0002.png" id="4_b5ws7"]
+[ext_resource type="Texture2D" uid="uid://di6s1fxsmvbqd" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0003.png" id="5_5j7fx"]
+[ext_resource type="Texture2D" uid="uid://cxwktevb26spa" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0004.png" id="6_sm71a"]
+[ext_resource type="Texture2D" uid="uid://pa6acdkmoolr" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0005.png" id="7_tu275"]
+[ext_resource type="Texture2D" uid="uid://0de4246gomcu" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0006.png" id="8_el25y"]
+[ext_resource type="Texture2D" uid="uid://bidyocndpjcf1" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0007.png" id="9_xdm1b"]
+[ext_resource type="Texture2D" uid="uid://48n4d1xlxlfv" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0008.png" id="10_uwtog"]
+[ext_resource type="Texture2D" uid="uid://ccmytqcf6wm87" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0009.png" id="11_hsss5"]
+[ext_resource type="Texture2D" uid="uid://bh4dus5kdye8r" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0010.png" id="12_5aok1"]
+[ext_resource type="Texture2D" uid="uid://bwq5jsifvsip6" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0011.png" id="13_pc0id"]
+[ext_resource type="Texture2D" uid="uid://d1tyeg22yj4cw" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0012.png" id="14_asdrs"]
+[ext_resource type="Texture2D" uid="uid://hv5rtnau0uim" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0013.png" id="15_qu0s0"]
+[ext_resource type="Texture2D" uid="uid://ck3rp7frjds6d" path="res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0000.png" id="16_x7kqw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_od1rp"]
 radius = 24.4
@@ -9,7 +22,68 @@ radius = 24.4
 [sub_resource type="CircleShape2D" id="CircleShape2D_o77uf"]
 radius = 50.636
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_mo3jg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_x7kqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ki5bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b5ws7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5j7fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sm71a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tu275")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_el25y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xdm1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uwtog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hsss5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5aok1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pc0id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_asdrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qu0s0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_mvcn1"]
+offsets = PackedFloat32Array(0, 0.968127)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7wycm"]
+gradient = SubResource("Gradient_mvcn1")
+fill = 1
+fill_from = Vector2(0.5, 0.495726)
+fill_to = Vector2(0.106838, 0.897436)
+
 [node name="projectile" type="RigidBody2D"]
+texture_filter = 1
 collision_layer = 4
 collision_mask = 3
 mass = 2.0
@@ -28,12 +102,21 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_o77uf")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7djns")
-region_enabled = true
-region_rect = Rect2(28.2392, 193.259, 71.1503, 71.8298)
-
 [node name="SpellProjectile" type="Node2D" parent="."]
 physics_interpolation_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_mo3jg")
+autoplay = "default"
+frame_progress = 0.673786
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1, 1)
+color = Color(0.425998, 0.784576, 0.31796, 1)
+energy = 0.4
+shadow_color = Color(0, 0, 0, 0.658824)
+texture = SubResource("GradientTexture2D_7wycm")
+texture_scale = 10.0
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
