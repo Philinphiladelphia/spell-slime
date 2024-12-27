@@ -15,7 +15,7 @@ region = Rect2(144, 0, 24, 24)
 
 [resource]
 script = ExtResource("1_0yvu7")
-id = &"small_mp"
+id = &""
 texture = SubResource("AtlasTexture_txrhh")
 color = Color(0.227451, 0.509804, 1, 1)
 name = "Lesser Magic Energy"

@@ -1,29 +1,146 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkel1kiqg7t4e"]
+[gd_scene load_steps=24 format=3 uid="uid://bkel1kiqg7t4e"]
 
 [ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_view.gd" id="1_pr5a4"]
+[ext_resource type="Script" path="res://overworld/scenes/overworld_controller.gd" id="1_vsqc5"]
+[ext_resource type="Texture2D" uid="uid://ikkrj3alay7r" path="res://overworld/green_border.png" id="2_j5y7t"]
 [ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_graph.gd" id="2_kgxnm"]
-[ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_path.gd" id="3_x7quc"]
-[ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_view_item.gd" id="4_xlcjx"]
+[ext_resource type="Texture2D" uid="uid://bw1jeu8mm3eny" path="res://overworld/overworld_map.png" id="2_n1cce"]
+[ext_resource type="Script" path="res://addons/worldmap_builder/resource_types/wordmap_style.gd" id="3_xi3ai"]
+[ext_resource type="Resource" uid="uid://e6te7ouuq3sr" path="res://overworld/level_types/basic_fight.tres" id="3_yq601"]
+[ext_resource type="Resource" uid="uid://4sopq34kxaaj" path="res://overworld/level_types/mystery.tres" id="4_aqxhr"]
+[ext_resource type="Texture2D" uid="uid://qqcrfjcw1xyl" path="res://overworld/tan_border.png" id="5_23qrp"]
+[ext_resource type="Texture2D" uid="uid://cchqs5thb4d5w" path="res://overworld/black_border.png" id="6_tnn5i"]
+[ext_resource type="Resource" uid="uid://b1lxeah5rq8ts" path="res://overworld/level_types/home.tres" id="11_hydtp"]
+[ext_resource type="Resource" uid="uid://chitbs020h0we" path="res://overworld/level_types/special.tres" id="12_ylg8n"]
+[ext_resource type="Resource" uid="uid://bl5i1llu71wxw" path="res://overworld/level_types/treasure.tres" id="13_7rfke"]
+[ext_resource type="Resource" uid="uid://dxcp5ssedtiur" path="res://overworld/level_types/danger.tres" id="14_idn4t"]
+[ext_resource type="Resource" uid="uid://yr4ko708bm6n" path="res://overworld/level_types/food.tres" id="15_3bawa"]
+[ext_resource type="Resource" uid="uid://cxgdwyobl0kn" path="res://overworld/level_types/shop.tres" id="16_paoxm"]
+[ext_resource type="Resource" uid="uid://fjiy8nbgvcpy" path="res://overworld/level_types/heart.tres" id="17_827yn"]
 
-[node name="BaseOverworld" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjvk6"]
+atlas = ExtResource("2_n1cce")
+region = Rect2(0, 80, 288, 8)
+
+[sub_resource type="Resource" id="Resource_r26bo"]
+script = ExtResource("3_xi3ai")
+icon_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([ExtResource("2_j5y7t")])
+straight_tex = SubResource("AtlasTexture_qjvk6")
+straight_tex_region = Rect2(0, 0, 288, 8)
+straight_tex_repeat = true
+priority = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yiu8b"]
+atlas = ExtResource("2_n1cce")
+region = Rect2(0, 64, 288, 8)
+
+[sub_resource type="Resource" id="Resource_sudya"]
+script = ExtResource("3_xi3ai")
+icon_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([ExtResource("5_23qrp")])
+straight_tex = SubResource("AtlasTexture_yiu8b")
+straight_tex_region = Rect2(0, 0, 288, 8)
+straight_tex_repeat = true
+priority = -10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy5wp"]
+atlas = ExtResource("2_n1cce")
+region = Rect2(0, 88, 288, 8)
+
+[sub_resource type="Resource" id="Resource_phbqh"]
+script = ExtResource("3_xi3ai")
+icon_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([ExtResource("6_tnn5i")])
+straight_tex = SubResource("AtlasTexture_gy5wp")
+straight_tex_region = Rect2(0, 0, 288, 8)
+straight_tex_repeat = true
+priority = -10
+
+[node name="BaseOverworld" type="Node2D" node_paths=PackedStringArray("overworld")]
+script = ExtResource("1_vsqc5")
+overworld = NodePath("WorldmapView")
+worldgraph = NodePath("WorldmapView/WorldmapGraph")
 
 [node name="WorldmapView" type="Control" parent="." node_paths=PackedStringArray("initial_item")]
+custom_minimum_size = Vector2(801, 439)
 layout_mode = 3
 anchors_preset = 0
+offset_left = 165.0
+offset_top = 81.0
+offset_right = 966.0
+offset_bottom = 520.0
 script = ExtResource("1_pr5a4")
 initial_item = NodePath("WorldmapGraph")
+initial_node = 2
+style_active = SubResource("Resource_r26bo")
+style_can_activate = SubResource("Resource_sudya")
+style_inactive = SubResource("Resource_phbqh")
 
 [node name="WorldmapGraph" type="Node2D" parent="WorldmapView"]
 script = ExtResource("2_kgxnm")
+connection_min_length = 64.0
 node_grid_snap = 1
-node_count = 0
-connection_count = 0
-
-[node name="WorldmapPath" type="Node2D" parent="WorldmapView/WorldmapGraph"]
-script = ExtResource("3_x7quc")
-handle_2 = Vector2(inf, inf)
-node_grid_snap = 1
-node_count = 0
-
-[node name="WorldmapViewItem" type="Node2D" parent="WorldmapView/WorldmapGraph"]
-script = ExtResource("4_xlcjx")
+node_count = 16
+node_0/data = ExtResource("3_yq601")
+node_0/position = Vector2(193, 135)
+node_1/data = ExtResource("4_aqxhr")
+node_1/position = Vector2(179, 297)
+node_2/data = ExtResource("11_hydtp")
+node_2/position = Vector2(32, 213)
+node_3/data = ExtResource("12_ylg8n")
+node_3/position = Vector2(367, 292)
+node_4/data = ExtResource("13_7rfke")
+node_4/position = Vector2(307, 164)
+node_5/data = ExtResource("4_aqxhr")
+node_5/position = Vector2(362, 49)
+node_6/data = ExtResource("14_idn4t")
+node_6/position = Vector2(313, 404)
+node_7/data = ExtResource("15_3bawa")
+node_7/position = Vector2(458, 159)
+node_8/data = ExtResource("3_yq601")
+node_8/position = Vector2(570, 333)
+node_9/data = ExtResource("3_yq601")
+node_9/position = Vector2(606, 74)
+node_10/data = ExtResource("14_idn4t")
+node_10/position = Vector2(664, 216)
+node_11/data = ExtResource("14_idn4t")
+node_11/position = Vector2(664, 407)
+node_12/data = ExtResource("16_paoxm")
+node_12/position = Vector2(769, 143)
+node_13/data = ExtResource("17_827yn")
+node_13/position = Vector2(757, 318)
+node_14/data = ExtResource("17_827yn")
+node_14/position = Vector2(724, 32)
+node_15/data = null
+node_15/position = Vector2(892, 233)
+connection_count = 23
+connection_0/nodes = Vector2i(2, 0)
+connection_1/nodes = Vector2i(0, 5)
+connection_2/nodes = Vector2i(0, 4)
+connection_3/nodes = Vector2i(4, 7)
+connection_4/nodes = Vector2i(5, 7)
+connection_5/nodes = Vector2i(7, 9)
+connection_6/nodes = Vector2i(9, 12)
+connection_7/nodes = Vector2i(9, 14)
+connection_8/nodes = Vector2i(14, 12)
+connection_9/nodes = Vector2i(12, 15)
+connection_10/nodes = Vector2i(2, 1)
+connection_11/nodes = Vector2i(1, 3)
+connection_12/nodes = Vector2i(1, 6)
+connection_13/nodes = Vector2i(3, 8)
+connection_14/nodes = Vector2i(6, 3)
+connection_15/nodes = Vector2i(8, 10)
+connection_16/nodes = Vector2i(8, 13)
+connection_17/nodes = Vector2i(8, 11)
+connection_18/nodes = Vector2i(11, 13)
+connection_19/nodes = Vector2i(13, 15)
+connection_20/nodes = Vector2i(10, 12)
+connection_21/nodes = Vector2i(7, 10)
+connection_22/nodes = Vector2i(3, 7)

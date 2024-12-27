@@ -86,6 +86,7 @@ func _on_credits_button_pressed():
 
 func _on_exit_button_pressed():
 	get_tree().quit()
+	queue_free()
 
 func _on_credits_end_reached():
 	if sub_menu == credits_scene:

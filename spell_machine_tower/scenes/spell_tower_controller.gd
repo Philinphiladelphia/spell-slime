@@ -86,7 +86,7 @@ func apply_combined_stats() -> void:
 		$spell_machine_tower/main_gun.primary_mass = stats.primary_mass
 		$spell_machine_tower/main_gun.primary_post_hit_lifespan = stats.primary_post_hit_lifespan
 		$spell_machine_tower/main_gun.primary_firing_interval = stats.primary_firing_interval
-		$spell_machine_tower/main_gun.primary_shake = stats.primary_shake
+		$spell_machine_tower/main_gun.primary_shake = max(stats.primary_shake, 0)
 		$spell_machine_tower/main_gun.primary_cooldown_max = stats.primary_cooldown_max
 		$spell_machine_tower/main_gun.primary_cooldown_rate = stats.primary_cooldown_rate
 		

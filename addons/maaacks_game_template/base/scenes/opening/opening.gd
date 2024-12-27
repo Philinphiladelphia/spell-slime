@@ -52,6 +52,7 @@ func _gui_input(event):
 func _transition_out():
 	await get_tree().create_timer(end_delay).timeout
 	_load_next_scene()
+	queue_free()
 
 func _transition_in():
 	await get_tree().create_timer(start_delay).timeout
