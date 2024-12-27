@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://dyw0liic8fs4w"]
-
-[node name="BasicOverworld" type="Control"]
-layout_mode = 3
-anchors_preset = 0

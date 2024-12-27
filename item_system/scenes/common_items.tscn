@@ -16,7 +16,8 @@ properties = {
 "description": "A pulsing gem filled with energy.",
 "dmg": 10.0,
 "image": "res://super_pixel/Super Pixel Objects And Items/PNG/outline_none/gem_A_large_violet/frame0000.png",
-"name": "gem_core"
+"name": "gem_core",
+"secondary_projectile_dmg": 50.0
 }
 
 [node name="slime_heart" type="Node" parent="."]
@@ -25,8 +26,8 @@ protoset = ExtResource("2_gr1l2")
 prototype_id = "item1"
 properties = {
 "description": "Good for what ails you.",
-"hp": 500.0,
 "image": "res://super_pixel/Super Pixel Item Pickups Fantasy Pack 1/PNG/fp1_heart_A_large_green/frame0000.png",
+"max_health": 500.0,
 "name": "slime_heart"
 }
 

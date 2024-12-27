@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://4tmqw8w2u8o5"]
+[gd_scene load_steps=57 format=3 uid="uid://4tmqw8w2u8o5"]
 
 [ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_view.gd" id="1_r7lya"]
 [ext_resource type="Texture2D" uid="uid://dfwrk73ka6j8x" path="res://worldtree_examples/skilltree_borders.png" id="2_i6ceo"]
@@ -29,19 +29,77 @@
 [ext_resource type="Texture2D" uid="uid://iemjk483onmv" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/environment-preview.png" id="27_y2fsw"]
 [ext_resource type="Texture2D" uid="uid://bydak6gkkw46k" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Packs/warped-Caves/PNG/environment/layers/background.png" id="28_u725d"]
 [ext_resource type="Script" path="res://test_folder/generate_world_tree.gd" id="29_dtolf"]
+[ext_resource type="Resource" uid="uid://cxgdwyobl0kn" path="res://overworld/level_types/shop.tres" id="30_ccpu0"]
+[ext_resource type="Resource" uid="uid://dxcp5ssedtiur" path="res://overworld/level_types/danger.tres" id="30_lfpip"]
+[ext_resource type="Resource" uid="uid://chitbs020h0we" path="res://overworld/level_types/special.tres" id="30_m5lug"]
+[ext_resource type="Resource" uid="uid://dwqa06a42hslp" path="res://overworld/level_types/boost.tres" id="31_8ll1o"]
+[ext_resource type="Resource" uid="uid://e6te7ouuq3sr" path="res://overworld/level_types/basic_fight.tres" id="32_0flt8"]
+[ext_resource type="Resource" uid="uid://yr4ko708bm6n" path="res://overworld/level_types/food.tres" id="32_k0jj3"]
+[ext_resource type="Resource" uid="uid://fjiy8nbgvcpy" path="res://overworld/level_types/heart.tres" id="33_mvwdt"]
+[ext_resource type="Resource" uid="uid://b1lxeah5rq8ts" path="res://overworld/level_types/home.tres" id="34_2qxfu"]
+[ext_resource type="Resource" uid="uid://c7c0p4gh352nj" path="res://overworld/level_types/locked.tres" id="35_d7jcg"]
+[ext_resource type="Resource" uid="uid://4sopq34kxaaj" path="res://overworld/level_types/mystery.tres" id="36_q2mxj"]
+[ext_resource type="Resource" uid="uid://bl5i1llu71wxw" path="res://overworld/level_types/treasure.tres" id="38_etui1"]
+[ext_resource type="Resource" uid="uid://diahui3nee0yc" path="res://overworld/level_types/unlocked.tres" id="41_heyfy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kls11"]
+atlas = ExtResource("2_i6ceo")
+region = Rect2(0, 14.9733, 31.9414, 34.7515)
+
+[sub_resource type="Resource" id="Resource_p03uc"]
+script = ExtResource("3_eloir")
+icon_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([SubResource("AtlasTexture_kls11")])
+straight_tex = ExtResource("2_i6ceo")
+straight_tex_region = Rect2(0, 0, 128, 8)
+straight_tex_repeat = false
+priority = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utw31"]
+atlas = ExtResource("2_i6ceo")
+region = Rect2(31.0114, 15.2257, 32.7482, 35.3999)
+
+[sub_resource type="Resource" id="Resource_0k350"]
+script = ExtResource("3_eloir")
+icon_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([SubResource("AtlasTexture_utw31")])
+straight_tex = ExtResource("2_i6ceo")
+straight_tex_region = Rect2(0, 0, 128, 8)
+straight_tex_repeat = false
+priority = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx3sw"]
+atlas = ExtResource("2_i6ceo")
+region = Rect2(62.5574, 15.8075, 33.9979, 33.6474)
+
+[sub_resource type="Resource" id="Resource_8gsnm"]
+script = ExtResource("3_eloir")
+icon_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 1)
+connection_modulate = Color(1, 1, 1, 1)
+icon_borders = Array[Texture2D]([SubResource("AtlasTexture_tx3sw")])
+straight_tex = ExtResource("2_i6ceo")
+straight_tex_region = Rect2(0, 0, 128, 8)
+straight_tex_repeat = false
+priority = 0
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gf7bu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vql2y"]
-atlas = ExtResource("2_i6ceo")
-region = Rect2(32, 16, 32, 32)
+atlas = SubResource("PlaceholderTexture2D_gf7bu")
+filter_clip = true
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w5rdv"]
-load_path = "res://.godot/imported/skilltree_borders.png-b022ab63f57155a8a0a421454feb26f1.ctex"
 
 [sub_resource type="Resource" id="Resource_aa6er"]
 resource_name = "Active"
 script = ExtResource("3_eloir")
 icon_modulate = Color(1, 1, 1, 1)
-icon_border_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 0)
 connection_modulate = Color(1, 1, 1, 1)
 icon_borders = Array[Texture2D]([SubResource("AtlasTexture_vql2y")])
 straight_tex = SubResource("CompressedTexture2D_w5rdv")
@@ -49,44 +107,40 @@ straight_tex_region = Rect2(0, 8, 128, 8)
 straight_tex_repeat = false
 priority = -5
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pr8m7"]
-atlas = ExtResource("2_i6ceo")
-region = Rect2(64, 16, 32, 32)
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vk7ib"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ivhx"]
-load_path = "res://.godot/imported/skilltree_borders.png-b022ab63f57155a8a0a421454feb26f1.ctex"
 
 [sub_resource type="Resource" id="Resource_4xltf"]
 resource_name = "Can Activate"
 script = ExtResource("3_eloir")
 icon_modulate = Color(1, 1, 1, 1)
-icon_border_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 0)
 connection_modulate = Color(1, 1, 1, 1)
-icon_borders = Array[Texture2D]([SubResource("AtlasTexture_pr8m7")])
+icon_borders = Array[Texture2D]([SubResource("PlaceholderTexture2D_vk7ib")])
 straight_tex = SubResource("CompressedTexture2D_6ivhx")
 straight_tex_region = Rect2(0, 8, 128, 8)
 straight_tex_repeat = false
 priority = -3
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wm6gh"]
-atlas = ExtResource("2_i6ceo")
-region = Rect2(0, 16, 32, 32)
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dyg3w"]
 
 [sub_resource type="Resource" id="Resource_2hquj"]
 resource_name = "Inactive"
 script = ExtResource("3_eloir")
 icon_modulate = Color(1, 1, 1, 1)
-icon_border_modulate = Color(1, 1, 1, 1)
+icon_border_modulate = Color(1, 1, 1, 0)
 connection_modulate = Color(1, 1, 1, 1)
-icon_borders = Array[Texture2D]([SubResource("AtlasTexture_wm6gh")])
+icon_borders = Array[Texture2D]([SubResource("PlaceholderTexture2D_dyg3w")])
 straight_tex = ExtResource("2_i6ceo")
-straight_tex_region = Rect2(0, 0, 128, 8)
+straight_tex_region = Rect2(0, 8, 128, 16)
 straight_tex_repeat = false
 priority = 0
 
 [node name="Node" type="Node"]
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
+visible = false
 scale = Vector2(5, 5)
 scroll_offset = Vector2(1121, 304)
 repeat_size = Vector2(240, 0)
@@ -97,6 +151,7 @@ position = Vector2(-1, 7)
 texture = ExtResource("28_u725d")
 
 [node name="Parallax2D2" type="Parallax2D" parent="."]
+visible = false
 scale = Vector2(5, 5)
 scroll_offset = Vector2(-458, 325)
 repeat_size = Vector2(260, 0)
@@ -133,9 +188,9 @@ mouse_filter = 2
 script = ExtResource("1_r7lya")
 initial_item = NodePath("WorldmapGraph")
 initial_node = 6
-style_active = SubResource("Resource_aa6er")
-style_can_activate = SubResource("Resource_4xltf")
-style_inactive = SubResource("Resource_2hquj")
+style_active = SubResource("Resource_p03uc")
+style_can_activate = SubResource("Resource_0k350")
+style_inactive = SubResource("Resource_8gsnm")
 metadata/_edit_lock_ = true
 
 [node name="Path" type="Node2D" parent="MarginContainer/ActualMarginContainer/Map"]
@@ -526,9 +581,71 @@ position = Vector2(-855, 129)
 texture = ExtResource("27_y2fsw")
 script = ExtResource("29_dtolf")
 
+[node name="Map" type="Control" parent="." node_paths=PackedStringArray("initial_item")]
+custom_minimum_size = Vector2(580, 414)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1474.0
+offset_top = -128.0
+offset_right = 2054.0
+offset_bottom = 286.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("1_r7lya")
+initial_item = NodePath("WorldmapGraph")
+initial_node = 0
+style_active = SubResource("Resource_aa6er")
+style_can_activate = SubResource("Resource_4xltf")
+style_inactive = SubResource("Resource_2hquj")
+
+[node name="WorldmapGraph" type="Node2D" parent="Map"]
+script = ExtResource("10_ggibp")
+connection_mode = 1
+connection_min_length = 64.0
+node_grid_snap = 1
+end_connection_nodes = Array[int]([8, 9])
+node_count = 13
+node_0/data = ExtResource("30_lfpip")
+node_0/position = Vector2(111, 304)
+node_1/data = ExtResource("31_8ll1o")
+node_1/position = Vector2(125, 115)
+node_2/data = ExtResource("32_k0jj3")
+node_2/position = Vector2(345, 270)
+node_3/data = ExtResource("33_mvwdt")
+node_3/position = Vector2(32, 218)
+node_4/data = ExtResource("34_2qxfu")
+node_4/position = Vector2(52, 50)
+node_5/data = ExtResource("35_d7jcg")
+node_5/position = Vector2(208.405, 120.569)
+node_6/data = ExtResource("36_q2mxj")
+node_6/position = Vector2(213.995, 271.607)
+node_7/data = ExtResource("30_m5lug")
+node_7/position = Vector2(304.615, 165.807)
+node_8/data = ExtResource("38_etui1")
+node_8/position = Vector2(405, 79)
+node_9/data = ExtResource("30_m5lug")
+node_9/position = Vector2(247, 382)
+node_10/data = ExtResource("30_ccpu0")
+node_10/position = Vector2(468, 174)
+node_11/data = ExtResource("32_0flt8")
+node_11/position = Vector2(548, 261)
+node_12/data = ExtResource("41_heyfy")
+node_12/position = Vector2(289, 32)
+connection_count = 3
+connection_0/nodes = Vector2i(0, 2)
+connection_1/nodes = Vector2i(10, 2)
+connection_2/nodes = Vector2i(10, 7)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1773, 67)
+
 [connection signal="node_gui_input" from="MarginContainer/ActualMarginContainer/Map" to="InputHandler" method="_on_map_node_gui_input"]
 [connection signal="node_mouse_entered" from="MarginContainer/ActualMarginContainer/Map" to="InputHandler" method="_on_map_node_mouse_entered"]
 [connection signal="node_mouse_exited" from="MarginContainer/ActualMarginContainer/Map" to="InputHandler" method="_on_map_node_mouse_exited"]
 [connection signal="pressed" from="InputHandler/Anchors/BottomBox/ResetSkills" to="InputHandler" method="_on_reset_skills_pressed"]
 [connection signal="pressed" from="InputHandler/Anchors/BottomLeftBox/Box/Box/Save" to="InputHandler" method="_on_save_pressed"]
 [connection signal="pressed" from="InputHandler/Anchors/BottomLeftBox/Box/Box/Load" to="InputHandler" method="_on_load_pressed"]
+[connection signal="node_gui_input" from="Map" to="InputHandler" method="_on_map_node_gui_input"]
+[connection signal="node_mouse_entered" from="Map" to="InputHandler" method="_on_map_node_mouse_entered"]
+[connection signal="node_mouse_exited" from="Map" to="InputHandler" method="_on_map_node_mouse_exited"]

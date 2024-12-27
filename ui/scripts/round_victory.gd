@@ -67,16 +67,20 @@ func _select_random_item() -> InventoryItem:
 func _get_random_item_from_pool(rarity: String) -> InventoryItem:
 	match rarity:
 		"common":
-			return CommonItems.get_items()[randi() % CommonItems.get_items().size()] 
+			if CommonItems.get_items().size() > 0:
+				return CommonItems.get_items()[randi() % CommonItems.get_items().size()] 
 		"rare":
-			return RareItems.get_items()[randi() % RareItems.get_items().size()] 
+			if RareItems.get_items().size() > 0:
+				return RareItems.get_items()[randi() % RareItems.get_items().size()]
 		"epic":
-			return EpicItems.get_items()[randi() % EpicItems.get_items().size()] 
+			if EpicItems.get_items().size() > 0:
+				return EpicItems.get_items()[randi() % EpicItems.get_items().size()] 
 		"legendary":
-			return LegendaryItems.get_items()[randi() % LegendaryItems.get_items().size()] 
-		_:
-			# common again
-			return CommonItems.get_items()[randi() % CommonItems.get_items().size()]
+			if LegendaryItems.get_items().size() > 0:
+				return LegendaryItems.get_items()[randi() % LegendaryItems.get_items().size()] 
+
+	# default, common again
+	return CommonItems.get_items()[0]
 
 func _on_slot_1_pressed() -> void:
 	if items_selected >= allowable_items:
@@ -107,3 +111,4 @@ func _on_slot_3_pressed() -> void:
 
 func _on_round_end_timer_timeout() -> void:
 	SceneLoader.load_scene("res://levels/moonswept_fields/night/night_lighting.tscn")
+	get_parent().get_parent().queue_free()
