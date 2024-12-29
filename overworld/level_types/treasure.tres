@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="WorldmapNodeData" load_steps=3 format=3 uid="uid://bl5i1llu71wxw"]
 
 [ext_resource type="Script" path="res://addons/worldmap_builder/resource_types/worldmap_node_data.gd" id="1_tccsb"]
-[ext_resource type="Texture2D" uid="uid://dy3g4mderu8rx" path="res://overworld/overworld_icons/jewel.png" id="2_d0cus"]
+[ext_resource type="Texture2D" uid="uid://r4oi8hm7cak3" path="res://overworld/overworld_icons/multicolor/jewel.png" id="2_an6m4"]
 
 [resource]
 script = ExtResource("1_tccsb")
 id = &"treasure"
-texture = ExtResource("2_d0cus")
+texture = ExtResource("2_an6m4")
 color = Color(1, 1, 1, 1)
 name = "treasure"
 desc = "treasure"

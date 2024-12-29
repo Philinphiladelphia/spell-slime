@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://46cjgouftjll"]
+[gd_scene load_steps=5 format=3 uid="uid://46cjgouftjll"]
 
 [ext_resource type="Texture2D" uid="uid://bobun5wip4t3q" path="res://icon.svg" id="1_soytb"]
 [ext_resource type="Script" path="res://ui/scripts/round_victory.gd" id="2_l1kfq"]
+[ext_resource type="Script" path="res://ui/scripts/item_controller.gd" id="3_21txd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bba87"]
 font_size = 43
@@ -58,7 +59,10 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 
-[node name="button1" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="button1" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" node_paths=PackedStringArray("name_label", "description_label")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
@@ -67,20 +71,74 @@ size_flags_vertical = 4
 keep_pressed_outside = true
 icon = ExtResource("1_soytb")
 expand_icon = true
+script = ExtResource("3_21txd")
+name_label = NodePath("../name_label")
+description_label = NodePath("../description_label")
 
-[node name="button2" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="name_label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "item name"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="description_label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "item description"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="button2" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" node_paths=PackedStringArray("name_label", "description_label")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 icon = ExtResource("1_soytb")
 expand_icon = true
+script = ExtResource("3_21txd")
+name_label = NodePath("../name_label")
+description_label = NodePath("../description_label")
 
-[node name="button3" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="name_label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "item name"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="description_label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "item description"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="button3" type="Button" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3" node_paths=PackedStringArray("name_label", "description_label")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 icon = ExtResource("1_soytb")
 expand_icon = true
+script = ExtResource("3_21txd")
+name_label = NodePath("../name_label")
+description_label = NodePath("../description_label")
+
+[node name="name_label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "item name"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="description_label" type="Label" parent="HBoxContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "item description"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="round_end_timer" type="Timer" parent="."]
 wait_time = 3.0

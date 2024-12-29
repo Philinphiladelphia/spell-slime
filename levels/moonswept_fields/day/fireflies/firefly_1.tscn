@@ -1,0 +1,64 @@
+[gd_scene load_steps=14 format=3 uid="uid://b3h10qjq6e2ex"]
+
+[ext_resource type="Texture2D" uid="uid://cpljg4ql6n2cf" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0000.png" id="1_wlw13"]
+[ext_resource type="Texture2D" uid="uid://7itwr8hpy02s" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0001.png" id="2_als02"]
+[ext_resource type="Texture2D" uid="uid://opnoi744vmef" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0002.png" id="3_fmf0i"]
+[ext_resource type="Texture2D" uid="uid://c337d7wqc2my5" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0003.png" id="4_13xgm"]
+[ext_resource type="Texture2D" uid="uid://c4mb8ks4plnri" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0004.png" id="5_613h6"]
+[ext_resource type="Texture2D" uid="uid://dt5upmdrhgbmo" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0005.png" id="6_wxsiu"]
+[ext_resource type="Texture2D" uid="uid://cjgbakfe0uvcq" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0006.png" id="7_wcpci"]
+[ext_resource type="Texture2D" uid="uid://c1bgqx8ax6sc6" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0007.png" id="8_0vvvi"]
+[ext_resource type="Texture2D" uid="uid://ce547o1y11ryp" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0008.png" id="9_0ucd7"]
+[ext_resource type="Texture2D" uid="uid://difjkuueppbnn" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0009.png" id="10_7wj7m"]
+[ext_resource type="Texture2D" uid="uid://cmivo51n8q84i" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0010.png" id="11_rpeab"]
+[ext_resource type="Texture2D" uid="uid://dc1r43e0k8e77" path="res://super_pixel/super_pixel_meadow/fireflies/firefly_basic/frame0011.png" id="12_hvyp2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e12ko"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wlw13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_als02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fmf0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_13xgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_613h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wxsiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wcpci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0vvvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0ucd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7wj7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rpeab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hvyp2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Firefly1" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_e12ko")
+autoplay = "default"
+frame_progress = 0.177749

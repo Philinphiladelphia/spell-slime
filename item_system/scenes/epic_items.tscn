@@ -15,7 +15,8 @@ prototype_id = "item2"
 properties = {
 "description": "Light in the darkness",
 "image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/lantern_large_blue_inactive.png",
-"name": "blue_lantern"
+"name": "blue_lantern",
+"rarity": "epic"
 }
 
 [node name="slime_knight" type="Node" parent="."]
@@ -25,7 +26,8 @@ prototype_id = "item2"
 properties = {
 "description": "The Slime Knights protected the innocent in eons past",
 "image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_defense_plus_large_green.png",
-"name": "slime_knight"
+"name": "slime_knight",
+"rarity": "epic"
 }
 
 [node name="slime_gauntlet" type="Node" parent="."]
@@ -35,7 +37,8 @@ prototype_id = "item2"
 properties = {
 "description": "When one of these is thrown down, things are about to get squishy",
 "image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_power_plus_large_green.png",
-"name": "slime_gauntlet"
+"name": "slime_gauntlet",
+"rarity": "epic"
 }
 
 [node name="slime_skates" type="Node" parent="."]
@@ -45,7 +48,8 @@ prototype_id = "item2"
 properties = {
 "description": "A rolling slime gathers no moss",
 "image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_speed_plus_large_green.png",
-"name": "slime_skates"
+"name": "slime_skates",
+"rarity": "epic"
 }
 
 [node name="super_slime_capsule" type="Node" parent="."]
@@ -54,6 +58,7 @@ protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
 "description": "In dire need, the chosen slime will awaken the legend",
-"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_speed_plus_large_green.png",
-"name": "super_slime_capsule"
+"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/relic_green_large_B/frame0000.png",
+"name": "super_slime_capsule",
+"rarity": "epic"
 }

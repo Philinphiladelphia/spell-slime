@@ -1,0 +1,57 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://d222l8xrvtw"]
+
+[ext_resource type="Texture2D" uid="uid://cxgre2nr3mv4t" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_yellow/button_disabled.png" id="1_oomma"]
+[ext_resource type="Texture2D" uid="uid://cyx03utexdleo" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_yellow/button_hovered.png" id="2_ymg6v"]
+[ext_resource type="Texture2D" uid="uid://dja6ufihii46m" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_yellow/button_default.png" id="3_jrcmf"]
+[ext_resource type="Texture2D" uid="uid://r1mlqn0pfifg" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_yellow/button_pressed.png" id="4_8gtbu"]
+[ext_resource type="FontFile" uid="uid://byu80w2u2k8ie" path="res://fonts/zig/zig_____.ttf" id="5_rmajv"]
+[ext_resource type="Texture2D" uid="uid://jf0p3x60ampw" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/message_box_B.png" id="6_ihesq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wicgl"]
+texture = ExtResource("1_oomma")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elaeu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q55q4"]
+texture = ExtResource("2_ymg6v")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72jc5"]
+texture = ExtResource("3_jrcmf")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kk4p8"]
+texture = ExtResource("4_8gtbu")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rs1av"]
+texture = ExtResource("6_ihesq")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[resource]
+default_font = ExtResource("5_rmajv")
+default_font_size = 24
+Button/styles/disabled = SubResource("StyleBoxTexture_wicgl")
+Button/styles/focus = SubResource("StyleBoxEmpty_elaeu")
+Button/styles/hover = SubResource("StyleBoxTexture_q55q4")
+Button/styles/normal = SubResource("StyleBoxTexture_72jc5")
+Button/styles/pressed = SubResource("StyleBoxTexture_kk4p8")
+Label/fonts/font = ExtResource("5_rmajv")
+Label/styles/normal = null
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_rs1av")

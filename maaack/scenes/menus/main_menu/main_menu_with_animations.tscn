@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bccavc2gq6x18"]
+[gd_scene load_steps=46 format=3 uid="uid://bccavc2gq6x18"]
 
 [ext_resource type="PackedScene" uid="uid://iatpne3a4rwl" path="res://maaack/scenes/menus/main_menu/main_menu.tscn" id="1_umbo3"]
 [ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_xtkjf"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://dtfky5e0npbxs" path="res://kenney_sfx/kenney_interface_sounds/glass_006.wav" id="13_xemy0"]
 [ext_resource type="AudioStream" uid="uid://2m8p0v7ckmmv" path="res://kenney_sfx/kenney_interface_sounds/bong_001.wav" id="14_qxt3k"]
 [ext_resource type="AudioStream" uid="uid://ccvno5vqbda2k" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 07 Slurp.mp3" id="16_de6p3"]
+[ext_resource type="Texture2D" uid="uid://058saqmbygkh" path="res://level_up_again/assets/rounded_rect.png" id="17_2vbjr"]
 [ext_resource type="Texture2D" uid="uid://cyn4gilxsc58" path="res://common_assets/branding/SpS_elements-04.png" id="17_c0cx2"]
 [ext_resource type="FontFile" uid="uid://fhes64g5term" path="res://fonts/the-bomb-sound/The Bomb Sound.otf" id="18_ewea3"]
 [ext_resource type="PackedScene" uid="uid://bw67w52g4rasi" path="res://cutscenes/cutscene_small_slime.tscn" id="19_mstru"]
@@ -367,6 +368,32 @@ states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
 graph_offset = Vector2(-180.277, 49)
 
+[sub_resource type="Gradient" id="Gradient_bonb6"]
+offsets = PackedFloat32Array(0, 0.233449, 0.756098, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.541176, 1, 1, 1, 0.627451, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_neuxr"]
+gradient = SubResource("Gradient_bonb6")
+
+[sub_resource type="Curve" id="Curve_xplvu"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.487421, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_cuuos"]
+curve = SubResource("Curve_xplvu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hwgd4"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(960, 540, 1)
+angle_min = -720.0
+angle_max = 720.0
+gravity = Vector3(0, -15, 0)
+scale_min = 0.1
+scale_max = 0.25
+scale_curve = SubResource("CurveTexture_cuuos")
+color_ramp = SubResource("GradientTexture1D_neuxr")
+
 [sub_resource type="LabelSettings" id="LabelSettings_pu5s1"]
 font_size = 71
 
@@ -381,7 +408,7 @@ radius = 17.21
 
 [node name="MainMenu" instance=ExtResource("1_umbo3")]
 script = ExtResource("2_xtkjf")
-game_scene_path = "res://ui/scenes/start_new_run.tscn"
+game_scene_path = "res://savedata/load_save.tscn"
 
 [node name="UISoundController" parent="." index="0"]
 button_hovered = ExtResource("4_oxs2l")
@@ -414,6 +441,14 @@ volume_db = -1.363
 [node name="BackgroundTextureRect" parent="." index="4"]
 texture = ExtResource("17_c0cx2")
 expand_mode = 4
+
+[node name="BackgroundParticles" type="GPUParticles2D" parent="." index="5"]
+position = Vector2(628, 409)
+amount = 31
+process_material = SubResource("ParticleProcessMaterial_hwgd4")
+texture = ExtResource("17_2vbjr")
+lifetime = 4.5
+randomness = 0.36
 
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
@@ -487,24 +522,24 @@ modulate = Color(1, 1, 1, 0)
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
 lock = true
 
-[node name="FlowControlContainer" parent="." index="9"]
+[node name="FlowControlContainer" parent="." index="10"]
 layout_mode = 1
 anchors_preset = 15
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="10"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="11"]
 position = Vector2(-8, -106)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2(659, 1031)
 shape = SubResource("RectangleShape2D_1x5nm")
 
-[node name="rhythm_node" type="Node" parent="." index="11" node_paths=PackedStringArray("audio_stream_player")]
+[node name="rhythm_node" type="Node" parent="." index="12" node_paths=PackedStringArray("audio_stream_player")]
 script = ExtResource("21_78qqv")
 audio_stream_player = NodePath("../BackgroundMusicPlayer")
 
-[node name="play_slimes" type="Node2D" parent="." index="12"]
+[node name="play_slimes" type="Node2D" parent="." index="13"]
 script = ExtResource("20_fr6r1")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="play_slimes" index="0"]
