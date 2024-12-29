@@ -1,10 +1,11 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://s2e3i3nj8yre"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://s2e3i3nj8yre"]
 
 [ext_resource type="Texture2D" uid="uid://lu7uw2sqxbnr" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/button_disabled.png" id="1_c5n2c"]
 [ext_resource type="Texture2D" uid="uid://dipyqu8u6b0eb" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/button_default.png" id="1_noeox"]
 [ext_resource type="FontFile" uid="uid://byu80w2u2k8ie" path="res://fonts/zig/zig_____.ttf" id="1_t5tvk"]
 [ext_resource type="Texture2D" uid="uid://b8ie5l8c0l1oj" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/button_hovered.png" id="2_u4pv5"]
 [ext_resource type="Texture2D" uid="uid://bnty4b2hq16la" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/button_pressed.png" id="3_ct847"]
+[ext_resource type="Texture2D" uid="uid://bxjqretpenqa8" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_default.png" id="6_7xnkp"]
 [ext_resource type="Texture2D" uid="uid://jf0p3x60ampw" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/message_box_B.png" id="6_n5sg6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wicgl"]
@@ -37,6 +38,9 @@ texture_margin_top = 10.0
 texture_margin_right = 20.0
 texture_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mt1cg"]
+texture = ExtResource("6_7xnkp")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rs1av"]
 texture = ExtResource("6_n5sg6")
 texture_margin_left = 30.0
@@ -54,4 +58,6 @@ Button/styles/normal = SubResource("StyleBoxTexture_72jc5")
 Button/styles/pressed = SubResource("StyleBoxTexture_kk4p8")
 Label/fonts/font = ExtResource("1_t5tvk")
 Label/styles/normal = null
+LegendaryButton/base_type = &"Button"
+LegendaryButton/styles/normal = SubResource("StyleBoxTexture_mt1cg")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_rs1av")

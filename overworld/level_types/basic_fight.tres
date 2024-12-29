@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="WorldmapNodeData" load_steps=3 format=3 uid="uid://e6te7ouuq3sr"]
 
 [ext_resource type="Script" path="res://addons/worldmap_builder/resource_types/worldmap_node_data.gd" id="1_pungx"]
-[ext_resource type="Texture2D" uid="uid://cak1yit2ql5ay" path="res://overworld/overworld_icons/sword.png" id="2_fdt1e"]
+[ext_resource type="Texture2D" uid="uid://bcuq2a7yohuge" path="res://overworld/overworld_icons/multicolor/sword.png" id="2_3c1uv"]
 
 [resource]
 script = ExtResource("1_pungx")
 id = &"sword"
-texture = ExtResource("2_fdt1e")
+texture = ExtResource("2_3c1uv")
 color = Color(1, 1, 1, 1)
 name = "sword_node"
 desc = "sword

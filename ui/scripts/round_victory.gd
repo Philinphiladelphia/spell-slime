@@ -12,6 +12,11 @@ extends Control
 # to use items, I need an item interpreter that takes key-value pairs from the inventory list
 # and applies them to my tower abilities.
 
+var common_theme: Theme = load("res://ui/themes/super_pixel_white.tres") 
+var rare_theme: Theme = load("res://ui/themes/super_pixel_blue.tres") 
+var epic_theme: Theme = load("res://ui/themes/super_pixel_orange.tres") 
+var legendary_theme: Theme = load("res://ui/themes/super_pixel_yellow.tres") 
+
 var items_selected = 0
 var allowable_items = 1
 
@@ -34,6 +39,9 @@ var selected_items = []
 
 var round_ending = false
 
+var random_retry: int = 0
+var random_retry_max = 3
+
 func _process(delta: float) -> void:
 	if items_selected >= allowable_items && not round_ending:
 		round_ending = true
@@ -50,10 +58,28 @@ func _select_items_for_slots() -> void:
 	selected_items.clear()
 	while selected_items.size() < 3:
 		var item = _select_random_item()
-		if item not in selected_items:
+		if item not in selected_items or random_retry >= random_retry_max:
+			random_retry = 0
 			selected_items.append(item)
-			var item_texture = load(selected_items[selected_items.size()-1].get_property("image"))
-			buttons[selected_items.size()-1].icon = item_texture
+			var item_texture = load(item.get_property("image"))
+			
+			# display attributes
+			var current_button: Button = buttons[selected_items.size()-1]
+			current_button.icon = item_texture
+			current_button.name_label.text = item.get_property("name").capitalize()
+			current_button.description_label.text = item.get_property("description")
+			
+			if item.get_property("rarity") == "common":
+				current_button.theme = common_theme
+			if item.get_property("rarity") == "rare":
+				current_button.theme = rare_theme
+			if item.get_property("rarity") == "epic":
+				current_button.theme = epic_theme
+			if item.get_property("rarity") == "legendary":
+				current_button.theme = legendary_theme
+			
+		else:
+			random_retry = random_retry + 1
 
 func _select_random_item() -> InventoryItem:
 	var rand = randf()
@@ -80,7 +106,7 @@ func _get_random_item_from_pool(rarity: String) -> InventoryItem:
 				return LegendaryItems.get_items()[randi() % LegendaryItems.get_items().size()] 
 
 	# default, common again
-	return CommonItems.get_items()[0]
+	return CommonItems.get_item_by_id("item1")
 
 func _on_slot_1_pressed() -> void:
 	if items_selected >= allowable_items:
@@ -110,5 +136,5 @@ func _on_slot_3_pressed() -> void:
 
 
 func _on_round_end_timer_timeout() -> void:
-	SceneLoader.load_scene("res://levels/moonswept_fields/night/night_lighting.tscn")
+	SceneLoader.load_scene("res://overworld/scenes/base_overworld.tscn")
 	get_parent().get_parent().queue_free()

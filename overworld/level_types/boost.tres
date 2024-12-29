@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="WorldmapNodeData" load_steps=3 format=3 uid="uid://dwqa06a42hslp"]
 
 [ext_resource type="Script" path="res://addons/worldmap_builder/resource_types/worldmap_node_data.gd" id="1_g48rl"]
-[ext_resource type="Texture2D" uid="uid://c22lif48tkdwg" path="res://overworld/overworld_icons/unlocked.png" id="2_4gc3a"]
+[ext_resource type="Texture2D" uid="uid://ccucronipkywh" path="res://overworld/overworld_icons/green/update.png" id="2_1jqpd"]
 
 [resource]
 script = ExtResource("1_g48rl")
-id = &"unlocked"
-texture = ExtResource("2_4gc3a")
+id = &"boost"
+texture = ExtResource("2_1jqpd")
 color = Color(1, 1, 1, 1)
-name = "unlocked"
+name = "boost"
 desc = "unlocked"
 size_tier = 0
 cost = 1
