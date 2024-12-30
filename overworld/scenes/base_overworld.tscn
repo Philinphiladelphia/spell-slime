@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bkel1kiqg7t4e"]
+[gd_scene load_steps=30 format=4 uid="uid://bkel1kiqg7t4e"]
 
 [ext_resource type="Script" path="res://addons/worldmap_builder/nodes/worldmap_view.gd" id="1_pr5a4"]
 [ext_resource type="Script" path="res://overworld/scenes/overworld_controller.gd" id="1_vsqc5"]
@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://d1tw35rpg3xve" path="res://overworld/level_types/boss.tres" id="18_afjxb"]
 [ext_resource type="Script" path="res://overworld/scripts/input_handler.gd" id="18_gyih2"]
 [ext_resource type="AudioStream" uid="uid://bgvjs2rjcapum" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 02 Forest Full Of Magic.mp3" id="19_skcck"]
+[ext_resource type="PackedScene" uid="uid://2fmv1jgr31nx" path="res://spell_machine_base/scenes/spell_vehicle.tscn" id="21_ftsbj"]
 [ext_resource type="Texture2D" uid="uid://bobun5wip4t3q" path="res://icon.svg" id="21_qomta"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwcfh"]
@@ -580,7 +581,7 @@ connection_19/nodes = Vector2i(6, 8)
 script = ExtResource("18_gyih2")
 worldgraph = NodePath("../WorldmapView")
 danger_box = NodePath("../ColorRect")
-player_sprite = NodePath("../player_sprite")
+player_sprite = NodePath("../SpellVehicle")
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
@@ -595,6 +596,10 @@ offset_right = -34.0
 offset_bottom = 818.0
 mouse_filter = 2
 color = Color(1, 0.18, 0.18, 0.419608)
+
+[node name="SpellVehicle" parent="." instance=ExtResource("21_ftsbj")]
+position = Vector2(-72, -49)
+scale = Vector2(0.1, 0.1)
 
 [node name="player_sprite" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.278431)
