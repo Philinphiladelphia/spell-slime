@@ -4,7 +4,8 @@ extends Node
 @export var worldgraph : WorldmapView
 @export var danger_box: ColorRect
 @export var player_sprite: Node2D
-@export var revisitable_nodes = ["home"]
+@export var revisitable_nodes = ["home", "shop"]
+@export var player_movement_time = 2
 
 @onready var inactive_node = preload("res://overworld/level_types/inactive.tres")
 
@@ -14,6 +15,7 @@ var current_node_path: NodePath
 var current_node: int
 
 var player_tween: Tween
+var danger_box_tween: Tween
 
 var input_disabled: bool = false
 
@@ -68,8 +70,9 @@ func load_progress() -> void:
 			print(state)
 			if state == inactive_state:
 				worldgraph.get_node(current_node_path).change_node(i, inactive_node) 
-			
 			i += 1
+			
+		danger_box.position = saved_progress[3]
 		
 		file.close()
 	else:
@@ -98,31 +101,46 @@ func move_player(path: NodePath, node_in_path: int, global_node_pos: Vector2):
 	current_node_path = path
 	current_node = node_in_path
 	
-	save_progress()
-	
 	player_tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_SINE)
 	#player_tween.tween_property($Sprite, "modulate", Color.RED, 1)
 	#player_tween.tween_property($Sprite, "scale", Vector2(), 1)
 	#player_tween.tween_callback($Sprite.queue_free)
+	danger_box_tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_ELASTIC)
 	#
 	# Animate the player's movement
-	player_tween.tween_property(player_sprite, "global_position", global_node_pos, 2)
+	player_tween.tween_property(player_sprite, "global_position", global_node_pos, player_movement_time)
 	player_tween.finished.connect(visit_graph_node)
+	
+	danger_box_tween.tween_property(danger_box, "position", danger_box.position + Vector2(100,0), player_movement_time*0.8)
+	danger_box_tween.finished.connect(end_danger_box_movement)
 
 func visit_graph_node():
+	var danger_rect: Rect2 = danger_box.get_global_rect()
+	
+	var worldgraph_pos: Vector2 = worldgraph.get_screen_position()
+	var global_node_pos: Vector2 = worldgraph.get_node(current_node_path).get_node_position(current_node) + worldgraph_pos
+	
+	if danger_rect.has_point(global_node_pos):
+		print("DANGER")
+	
 	var node_data = worldgraph.get_node_data(current_node_path, current_node)
 	
-	#var scene = node_data.data[0]
-	#SceneLoader._loaded_resource = scene
-	#SceneLoader.change_scene_to_resource()
+	if len(node_data.data) > 0:
+		var scene = node_data.data[0]
+		SceneLoader._loaded_resource = scene
+		SceneLoader.change_scene_to_resource()
 	
 	input_disabled = false
+	
+func end_danger_box_movement():
+	save_progress()
 	
 func save_progress():
 	var graph_string = var_to_str([
 		current_node_path,
 		current_node,
 		worldgraph.get_state(),
+		danger_box.position
 	])
 	
 	var file: FileAccess = FileAccess.open(savedata_file, FileAccess.WRITE)
@@ -141,13 +159,6 @@ func _on_worldmap_view_node_gui_input(event: InputEvent, path: NodePath, node_in
 				# need to add graph coords
 				var worldgraph_pos: Vector2 = worldgraph.get_screen_position()
 				var global_node_pos: Vector2 = worldgraph.get_node(path).get_node_position(node_in_path) + worldgraph_pos
-				
-				var danger_rect: Rect2 = danger_box.get_global_rect()
-				
-				if danger_rect.has_point(global_node_pos):
-					print("DANGER")
-				else:
-					pass
 				
 				var nodes_adjacent = worldgraph.get_node(path).connection_exists(current_node, node_in_path)
 				var is_active = worldgraph.get_node_state(path, node_in_path) > 0 
