@@ -4,8 +4,11 @@ extends Node
 @export var worldgraph : WorldmapView
 @export var danger_box: ColorRect
 @export var player_sprite: Node2D
+@export var revisitable_nodes = ["home"]
 
 @onready var inactive_node = preload("res://overworld/level_types/inactive.tres")
+
+var savedata_file = "res://savedata/overworld_progress/progress.txt"
 
 var current_node_path: NodePath
 var current_node: int
@@ -14,13 +17,18 @@ var player_tween: Tween
 
 var input_disabled: bool = false
 
+var inactive_state: int = 10
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
 	# load map state along with current node
 	
-	current_node_path = worldgraph.initial_item.get_path()
-	current_node = worldgraph.initial_node
+	if not FileAccess.file_exists(savedata_file):
+		current_node_path = worldgraph.initial_item.get_path()
+		current_node = worldgraph.initial_node
+	else:
+		load_progress() 
 	
 	# need to add graph coords
 	var worldgraph_pos: Vector2 = worldgraph.get_screen_position()
@@ -42,21 +50,55 @@ func _process(delta: float) -> void:
 var scene1 = "res://levels/moonswept_fields/day/moonrise_lighting.tscn"
 var scene2 = "res://levels/moonswept_fields/night/night_lighting.tscn"
 
-func _on_load_pressed():
-	var varr = str_to_var($"Anchors/BottomLeftBox/Box/Box2/SaveData".text)
-	if !varr is Array || varr.size() < 2: return
-	if !varr[0] is int: return
-	if !varr[1] is Dictionary: return
+func load_progress() -> void:
+	var file: FileAccess = FileAccess.open(savedata_file, FileAccess.READ)
+	if file:
+		var file_text: String = file.get_as_text()
+		var saved_progress: Array = str_to_var(file_text)
+		print(saved_progress[0])
+		current_node_path = saved_progress[0]
+		current_node = saved_progress[1]
+		
+		var node_states = saved_progress[2]
+		
+		worldgraph.load_state(node_states)
+		
+		var i: int = 0
+		for state in node_states[node_states.keys()[0]]:
+			print(state)
+			if state == inactive_state:
+				worldgraph.get_node(current_node_path).change_node(i, inactive_node) 
+			
+			i += 1
+		
+		file.close()
+	else:
+		print("overworld data not found: " + savedata_file)
+	print("overworld data loaded: " + savedata_file)
 
-	worldgraph.max_unlock_cost = varr[0]
-	worldgraph.load_state(varr[1])
+
+#func load_progress():
+	#var varr = str_to_var($"Anchors/BottomLeftBox/Box/Box2/SaveData".text)
+	#if !varr is Array || varr.size() < 2: return
+	#if !varr[0] is int: return
+	#if !varr[1] is Dictionary: return
+#
+	#worldgraph.max_unlock_cost = varr[0]
+	#worldgraph.load_state(varr[1])
 
 func move_player(path: NodePath, node_in_path: int, global_node_pos: Vector2):
 	input_disabled = true
-	worldgraph.get_node(path).change_node(current_node, inactive_node) 
+	
+	var node_id = worldgraph.get_node_data(current_node_path, current_node).id
+	
+	if node_id not in revisitable_nodes:
+		worldgraph.get_node(current_node_path).change_node(current_node, inactive_node) 
+		worldgraph.set_node_state(current_node_path, current_node, inactive_state)
 	
 	current_node_path = path
 	current_node = node_in_path
+	
+	save_progress()
 	
 	player_tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_SINE)
 	#player_tween.tween_property($Sprite, "modulate", Color.RED, 1)
@@ -69,14 +111,24 @@ func move_player(path: NodePath, node_in_path: int, global_node_pos: Vector2):
 
 func visit_graph_node():
 	var node_data = worldgraph.get_node_data(current_node_path, current_node)
-	var scene = node_data.data[0]
-	SceneLoader._loaded_resource = scene
-	#SceneLoader.load_scene(scenepath)
-	#print(scenepath)
 	
-	#var selected_scene = scene1 if randf_range(0, 2) < 1 else scene2
-	SceneLoader.change_scene_to_resource()
+	#var scene = node_data.data[0]
+	#SceneLoader._loaded_resource = scene
+	#SceneLoader.change_scene_to_resource()
+	
 	input_disabled = false
+	
+func save_progress():
+	var graph_string = var_to_str([
+		current_node_path,
+		current_node,
+		worldgraph.get_state(),
+	])
+	
+	var file: FileAccess = FileAccess.open(savedata_file, FileAccess.WRITE)
+	if file:
+		file.store_string(graph_string)
+		file.close()
 
 func _on_worldmap_view_node_gui_input(event: InputEvent, path: NodePath, node_in_path: int, resource: WorldmapNodeData) -> void:
 	
