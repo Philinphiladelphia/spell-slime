@@ -5,11 +5,11 @@
 
 [resource]
 script = ExtResource("1_mwuoj")
-id = &"heart"
+id = &"home"
 texture = ExtResource("2_pw1yk")
 color = Color(1, 1, 1, 1)
-name = "heart"
-desc = "heart"
+name = "home"
+desc = "home"
 size_tier = 0
 cost = 1
 tags = Array[StringName]([])
