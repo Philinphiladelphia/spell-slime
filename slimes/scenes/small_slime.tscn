@@ -114,6 +114,7 @@ fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)
 
 [node name="slime_controller" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_uitv3")
 
 [node name="slime_node" type="Node2D" parent="."]

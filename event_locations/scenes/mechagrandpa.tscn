@@ -1,0 +1,159 @@
+[gd_scene load_steps=13 format=3 uid="uid://c6qlh2ewu1v33"]
+
+[ext_resource type="Texture2D" uid="uid://bdolcfmrxwxi6" path="res://event_locations/assets/414859421.png" id="1_wr6l3"]
+[ext_resource type="Texture2D" uid="uid://uej2eva7c7ml" path="res://event_locations/assets/737838320.png" id="2_bcog5"]
+[ext_resource type="Texture2D" uid="uid://bye8lql1gt4jl" path="res://event_locations/assets/1084723334.png" id="3_p6x87"]
+[ext_resource type="Texture2D" uid="uid://cy8q7c06vfi3c" path="res://event_locations/assets/1115297640.png" id="4_o23fi"]
+[ext_resource type="Texture2D" uid="uid://dtk6vnwkkywn" path="res://event_locations/assets/1158019312.png" id="5_enex7"]
+[ext_resource type="Texture2D" uid="uid://bay01mf8px8qg" path="res://event_locations/assets/1596217554.png" id="6_wci7e"]
+[ext_resource type="Texture2D" uid="uid://dp21vlicr4ehb" path="res://event_locations/assets/1832021080.png" id="7_gnwxv"]
+[ext_resource type="Texture2D" uid="uid://d4gt7temncco1" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/gems/spritesheets/gems-spritesheet.png" id="8_lllxk"]
+[ext_resource type="Texture2D" uid="uid://c5v4ens0j213u" path="res://event_locations/assets/1942730696.png" id="8_vnsdv"]
+[ext_resource type="Texture2D" uid="uid://bci2gvu1m5tuo" path="res://event_locations/assets/1894676385.png" id="9_wpqj1"]
+[ext_resource type="Texture2D" uid="uid://bli4fokxrxvle" path="res://event_locations/assets/1283428105.png" id="10_ncgkq"]
+[ext_resource type="Texture2D" uid="uid://cd10nrcidub1l" path="res://event_locations/assets/1303441306.png" id="11_2jj3i"]
+
+[node name="Mechagrandpa" type="Node2D"]
+
+[node name="414859421" type="Sprite2D" parent="."]
+position = Vector2(-413, -576)
+texture = ExtResource("1_wr6l3")
+region_enabled = true
+region_rect = Rect2(13.9903, 5.58503, 155.727, 194.326)
+
+[node name="737838320" type="Sprite2D" parent="."]
+position = Vector2(-42, 903)
+texture = ExtResource("2_bcog5")
+region_rect = Rect2(184.126, 206.753, 268.862, 224.939)
+
+[node name="1084723334" type="Sprite2D" parent="."]
+position = Vector2(-148, -496)
+texture = ExtResource("3_p6x87")
+region_enabled = true
+region_rect = Rect2(17.041, 302.821, 215.38, 203.28)
+
+[node name="1115297640" type="Sprite2D" parent="."]
+position = Vector2(-1497, 298)
+texture = ExtResource("4_o23fi")
+
+[node name="1158019312" type="Sprite2D" parent="."]
+position = Vector2(-942, 329)
+texture = ExtResource("5_enex7")
+
+[node name="1596217554" type="Sprite2D" parent="."]
+position = Vector2(-396, 339)
+texture = ExtResource("6_wci7e")
+region_enabled = true
+region_rect = Rect2(170.756, 366.946, 102.452, 127.724)
+
+[node name="1832021080" type="Sprite2D" parent="."]
+position = Vector2(-243, -651)
+texture = ExtResource("7_gnwxv")
+region_enabled = true
+region_rect = Rect2(192.662, 95.4452, 146.41, 114.466)
+
+[node name="1596217555" type="Sprite2D" parent="."]
+position = Vector2(-166, 159)
+texture = ExtResource("6_wci7e")
+region_enabled = true
+region_rect = Rect2(371.999, 351.31, 129.226, 151.766)
+
+[node name="1596217556" type="Sprite2D" parent="."]
+position = Vector2(-144, 452)
+texture = ExtResource("6_wci7e")
+region_enabled = true
+region_rect = Rect2(162.862, 302.852, 119.104, 47.9803)
+
+[node name="1596217557" type="Sprite2D" parent="."]
+position = Vector2(-397, 444)
+texture = ExtResource("6_wci7e")
+region_enabled = true
+region_rect = Rect2(6.68559, 326.391, 158.053, 48.5448)
+
+[node name="1596217558" type="Sprite2D" parent="."]
+position = Vector2(-409, 217)
+texture = ExtResource("6_wci7e")
+region_enabled = true
+region_rect = Rect2(269.66, 198.013, 122.942, 68.915)
+
+[node name="1596217559" type="Sprite2D" parent="."]
+position = Vector2(-270, 422)
+texture = ExtResource("6_wci7e")
+region_enabled = true
+region_rect = Rect2(190.98, 9.30301, 89.1771, 165.044)
+
+[node name="1596217560" type="Sprite2D" parent="."]
+position = Vector2(-164, 322)
+texture = ExtResource("6_wci7e")
+region_enabled = true
+region_rect = Rect2(283.129, 19.5657, 97.6709, 160.781)
+
+[node name="1596217561" type="Sprite2D" parent="."]
+position = Vector2(-285, 267)
+texture = ExtResource("6_wci7e")
+region_enabled = true
+region_rect = Rect2(383.008, 18.578, 115.797, 123.783)
+
+[node name="414859422" type="Sprite2D" parent="."]
+position = Vector2(387, 115)
+texture = ExtResource("1_wr6l3")
+region_enabled = true
+region_rect = Rect2(181, 169, 158, 148)
+
+[node name="414859423" type="Sprite2D" parent="."]
+position = Vector2(261, 497)
+texture = ExtResource("1_wr6l3")
+region_enabled = true
+region_rect = Rect2(13.9903, 5.58503, 155.727, 194.326)
+
+[node name="414859424" type="Sprite2D" parent="."]
+position = Vector2(133, 368)
+texture = ExtResource("1_wr6l3")
+region_enabled = true
+region_rect = Rect2(13.9903, 5.58503, 155.727, 194.326)
+
+[node name="414859425" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(-899, -454)
+scale = Vector2(3, 3)
+texture = ExtResource("8_lllxk")
+region_enabled = true
+region_rect = Rect2(799.556, 31.051, 16.8634, 17.7568)
+
+[node name="414859426" type="Sprite2D" parent="."]
+position = Vector2(-411, -487)
+texture = ExtResource("1_wr6l3")
+region_enabled = true
+region_rect = Rect2(4.92643, 210.88, 172.729, 139.99)
+
+[node name="414859427" type="Sprite2D" parent="."]
+modulate = Color(0.681509, 0.3518, 0.254188, 1)
+position = Vector2(-865, -477)
+scale = Vector2(2, 2)
+texture = ExtResource("1_wr6l3")
+region_enabled = true
+region_rect = Rect2(13.9903, 5.58503, 155.727, 194.326)
+
+[node name="1942730696" type="Sprite2D" parent="."]
+position = Vector2(659, 598)
+texture = ExtResource("8_vnsdv")
+
+[node name="1894676385" type="Sprite2D" parent="."]
+position = Vector2(-851, -331)
+texture = ExtResource("9_wpqj1")
+
+[node name="1283428105" type="Sprite2D" parent="."]
+position = Vector2(-198, 47)
+texture = ExtResource("10_ncgkq")
+
+[node name="1303441306" type="Sprite2D" parent="."]
+position = Vector2(1210, 461)
+texture = ExtResource("11_2jj3i")
+
+[node name="414859428" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(-824, -455)
+scale = Vector2(3, 3)
+texture = ExtResource("8_lllxk")
+region_enabled = true
+region_rect = Rect2(288.613, 32.9785, 15.8276, 14.5686)

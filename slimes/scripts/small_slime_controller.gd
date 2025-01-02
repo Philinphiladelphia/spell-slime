@@ -8,6 +8,7 @@ var max_health: float = 200.0
 var jump_power: float = 600
 var element_numbers: PackedInt32Array = [21, 3, 4, 6, 7]
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SoundManager.play_sfx("slime1", 0, -12, 3)

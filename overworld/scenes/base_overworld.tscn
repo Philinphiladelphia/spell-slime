@@ -19,7 +19,7 @@
 [ext_resource type="Resource" uid="uid://d1tw35rpg3xve" path="res://overworld/level_types/boss.tres" id="18_afjxb"]
 [ext_resource type="Script" path="res://overworld/scripts/input_handler.gd" id="18_gyih2"]
 [ext_resource type="AudioStream" uid="uid://bgvjs2rjcapum" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 02 Forest Full Of Magic.mp3" id="19_skcck"]
-[ext_resource type="PackedScene" uid="uid://2fmv1jgr31nx" path="res://spell_machine_base/scenes/spell_vehicle.tscn" id="21_ftsbj"]
+[ext_resource type="PackedScene" uid="uid://2fmv1jgr31nx" path="res://event_locations/scenes/spell_vehicle.tscn" id="21_ftsbj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwcfh"]
 texture = ExtResource("18_3ubsm")

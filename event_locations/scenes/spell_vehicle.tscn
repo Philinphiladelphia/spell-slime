@@ -1,0 +1,368 @@
+[gd_scene load_steps=21 format=3 uid="uid://2fmv1jgr31nx"]
+
+[ext_resource type="Shader" path="res://shaders/scripts/pixelate.gdshader" id="1_l4wj2"]
+[ext_resource type="Texture2D" uid="uid://dkxnnxp8mv4t4" path="res://spell_machine_tower/assets/gears/510281256.png" id="1_y5ewo"]
+[ext_resource type="Script" path="res://event_locations/scripts/rotate.gd" id="2_785ri"]
+[ext_resource type="Texture2D" uid="uid://bwixg3xek1fs7" path="res://spell_machine_tower/assets/gears/1459653689.png" id="2_uu88w"]
+[ext_resource type="Texture2D" uid="uid://ca2ixsdhdp7xd" path="res://spell_machine_tower/assets/gears/656772755.png" id="3_hfrdb"]
+[ext_resource type="Texture2D" uid="uid://dv0jkhq2tsp5n" path="res://spell_machine_tower/assets/pipes/779125992.png" id="30_5k88k"]
+[ext_resource type="Texture2D" uid="uid://ieifcvw162l1" path="res://spell_machine_tower/assets/pipes/1030608527.png" id="34_killn"]
+[ext_resource type="Texture2D" uid="uid://du0u5u1n53m8c" path="res://spell_machine_tower/assets/pipes/1323920611.png" id="44_p0awr"]
+[ext_resource type="Texture2D" uid="uid://brxbrjc5y7dem" path="res://spell_machine_tower/assets/useful_parts/365265507.png" id="52_qg2lf"]
+[ext_resource type="Texture2D" uid="uid://lecre010pu7y" path="res://spell_machine_tower/assets/useful_parts/1837649480.png" id="74_4q4p4"]
+[ext_resource type="Texture2D" uid="uid://deqynrtg8b57u" path="res://spell_machine_tower/assets/pipes/541219343.png" id="77_ayhff"]
+[ext_resource type="Texture2D" uid="uid://bsn5gm2nqsy42" path="res://spell_machine_tower/assets/gun_pieces/509133326.png" id="78_b0b7i"]
+[ext_resource type="Texture2D" uid="uid://o7wu6lbag6x6" path="res://spell_machine_tower/assets/gears/big_gear.png" id="79_fog6g"]
+[ext_resource type="Texture2D" uid="uid://dohq4kov27g8y" path="res://spell_machine_tower/assets/stained_glass/1504497872.png" id="80_vo7b6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jkgrr"]
+shader = ExtResource("1_l4wj2")
+shader_parameter/pixel_count = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1x10"]
+size = Vector2(500, 300)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xlkej"]
+radius = 60.1332
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7v6qa"]
+radius = 46.6154
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7arax"]
+radius = 36.2215
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kk0q5"]
+size = Vector2(3000, 400)
+
+[node name="SpellVehicle" type="Node2D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_jkgrr")
+offset_left = -668.0
+offset_top = -619.0
+offset_right = 412.0
+offset_bottom = 461.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1080, 1080)
+render_target_update_mode = 4
+
+[node name="vehicle_body" type="Node2D" parent="SubViewportContainer/SubViewport"]
+position = Vector2(718, 400)
+
+[node name="vehicle_body_rigid" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+position = Vector2(-57, 118)
+shape = SubResource("RectangleShape2D_y1x10")
+
+[node name="gun" type="Node2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+z_index = -5
+position = Vector2(-46, -81)
+rotation = -1.16698
+script = ExtResource("2_785ri")
+
+[node name="Sprite2D67" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun"]
+z_index = 1
+position = Vector2(2, 240)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("77_ayhff")
+region_enabled = true
+region_rect = Rect2(16.1581, 2.30527, 122.984, 294.284)
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun"]
+z_index = 1
+position = Vector2(-0.599976, -2.59998)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("78_b0b7i")
+region_enabled = true
+region_rect = Rect2(249.888, 71.6183, 148.214, 140.701)
+
+[node name="Sprite2D2" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun"]
+position = Vector2(4.40002, 108.4)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("78_b0b7i")
+region_enabled = true
+region_rect = Rect2(406.143, 106.089, 93.9143, 130.729)
+
+[node name="big_gear" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun"]
+position = Vector2(-3.59998, 5.40002)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("79_fog6g")
+
+[node name="stained_glass3" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun"]
+z_index = -1
+position = Vector2(-0.599976, -5.59998)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("80_vo7b6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun"]
+position = Vector2(1, 137)
+rotation = 3.14159
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("78_b0b7i")
+region_enabled = true
+region_rect = Rect2(127.273, 271, 106.364, 127.273)
+
+[node name="Sprite2D5" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun"]
+position = Vector2(-46, 98)
+rotation = -1.13948
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("78_b0b7i")
+region_enabled = true
+region_rect = Rect2(334.65, 351.59, 70.1801, 146.41)
+
+[node name="Sprite2D7" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun"]
+position = Vector2(50, 102)
+rotation = -2.01288
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("78_b0b7i")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(334.65, 351.59, 70.1801, 146.41)
+
+[node name="fill" type="Node2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/fill"]
+position = Vector2(-49, 123)
+rotation = 1.5674
+texture = ExtResource("44_p0awr")
+region_enabled = true
+region_rect = Rect2(152.182, 5.77197, 179.685, 497.794)
+
+[node name="Sprite2D5" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/fill"]
+position = Vector2(-54, 229)
+rotation = 1.58016
+texture = ExtResource("44_p0awr")
+region_enabled = true
+region_rect = Rect2(152.182, 5.77197, 179.685, 497.794)
+
+[node name="body" type="Node2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+
+[node name="Sprite2D101" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-127.805, -77.7349)
+rotation = -0.791576
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_5k88k")
+region_enabled = true
+region_rect = Rect2(267.273, 0, 62.8099, 512)
+
+[node name="Sprite2D102" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-267.805, -53.7349)
+rotation = 0.186969
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_5k88k")
+region_enabled = true
+region_rect = Rect2(267.273, 0, 62.8099, 512)
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-197.805, -53.7349)
+rotation = -0.253941
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("74_4q4p4")
+region_enabled = true
+region_rect = Rect2(121.912, 0, 278.135, 520.337)
+
+[node name="Sprite2D11" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-89.8053, 68.2651)
+rotation = -1.91068
+texture = ExtResource("52_qg2lf")
+region_enabled = true
+region_rect = Rect2(0, 0, 275.549, 512)
+
+[node name="Sprite2D99" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-177.805, -74.7349)
+rotation = -0.591448
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_5k88k")
+region_enabled = true
+region_rect = Rect2(267.273, 0, 62.8099, 512)
+
+[node name="Sprite2D100" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-236.805, -55.7349)
+rotation = 0.0914189
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_5k88k")
+region_enabled = true
+region_rect = Rect2(267.273, 0, 62.8099, 512)
+
+[node name="Sprite2D112" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-355, 154)
+rotation = -1.41803
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("34_killn")
+region_enabled = true
+region_rect = Rect2(0, 269.925, 89.7047, 242.075)
+
+[node name="Sprite2D110" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-338, 94)
+rotation = -0.796605
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("34_killn")
+region_enabled = true
+region_rect = Rect2(0, 269.925, 89.7047, 242.075)
+
+[node name="Sprite2D111" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
+position = Vector2(-353, 121)
+rotation = -1.09825
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("34_killn")
+region_enabled = true
+region_rect = Rect2(0, 269.925, 89.7047, 242.075)
+
+[node name="wheels" type="Node2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+
+[node name="med_gear_4" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
+position = Vector2(-241, 241)
+collision_mask = 4
+mass = 0.125
+gravity_scale = 0.0
+
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_4"]
+position = Vector2(-1.5, -0.5)
+node_a = NodePath("..")
+node_b = NodePath("../../..")
+motor_enabled = true
+motor_target_velocity = -0.511905
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_4"]
+position = Vector2(-2.5, -1.5)
+shape = SubResource("CircleShape2D_xlkej")
+
+[node name="Sprite2D13" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_4"]
+position = Vector2(-4.5, -0.5)
+texture = ExtResource("1_y5ewo")
+region_enabled = true
+region_rect = Rect2(18.9939, 161.744, 185.097, 187.829)
+
+[node name="med_gear_5" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
+position = Vector2(-58, 239)
+collision_mask = 4
+mass = 0.125
+gravity_scale = 0.0
+
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_5"]
+position = Vector2(-1.5, -0.5)
+node_a = NodePath("..")
+node_b = NodePath("../../..")
+motor_enabled = true
+motor_target_velocity = -0.523599
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_5"]
+position = Vector2(-2.5, -1.5)
+shape = SubResource("CircleShape2D_xlkej")
+
+[node name="Sprite2D13" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_5"]
+position = Vector2(-4.5, -0.5)
+texture = ExtResource("1_y5ewo")
+region_enabled = true
+region_rect = Rect2(18.9939, 161.744, 185.097, 187.829)
+
+[node name="tiny_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
+position = Vector2(10, 146)
+collision_layer = 0
+collision_mask = 0
+mass = 0.125
+gravity_scale = 0.0
+
+[node name="1459653703" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiny_wheel"]
+position = Vector2(-2, 3)
+texture = ExtResource("2_uu88w")
+region_enabled = true
+region_rect = Rect2(132.858, 379.008, 124.184, 122.322)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiny_wheel"]
+position = Vector2(-2, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../..")
+motor_enabled = true
+motor_target_velocity = 0.511905
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiny_wheel"]
+position = Vector2(-3, 2)
+shape = SubResource("CircleShape2D_7v6qa")
+
+[node name="tiner_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
+position = Vector2(-65, 115)
+collision_layer = 0
+collision_mask = 0
+mass = 0.125
+gravity_scale = 0.0
+
+[node name="Sprite2D17" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel"]
+position = Vector2(-2.5, -4)
+texture = ExtResource("3_hfrdb")
+region_enabled = true
+region_rect = Rect2(372.73, 232.396, 129.152, 130.394)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel"]
+position = Vector2(-0.5, -2)
+node_a = NodePath("..")
+node_b = NodePath("../../..")
+motor_enabled = true
+motor_target_velocity = 0.511905
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel"]
+position = Vector2(-1.5, -3)
+shape = SubResource("CircleShape2D_7arax")
+
+[node name="med_gear_3" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
+position = Vector2(127, 234)
+collision_layer = 0
+collision_mask = 0
+mass = 0.125
+gravity_scale = 0.0
+
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_3"]
+position = Vector2(-1.5, -0.5)
+node_a = NodePath("..")
+node_b = NodePath("../../..")
+motor_enabled = true
+motor_target_velocity = -0.511905
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_3"]
+position = Vector2(-2.5, -1.5)
+shape = SubResource("CircleShape2D_xlkej")
+
+[node name="Sprite2D13" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_3"]
+position = Vector2(-4.5, -0.5)
+texture = ExtResource("1_y5ewo")
+region_enabled = true
+region_rect = Rect2(18.9939, 161.744, 185.097, 187.829)
+
+[node name="central_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
+position = Vector2(93, 110)
+mass = 0.125
+gravity_scale = 0.0
+
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/central_wheel"]
+position = Vector2(-1, -0.5)
+node_a = NodePath("..")
+node_b = NodePath("../../..")
+motor_enabled = true
+motor_target_velocity = -0.511905
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/central_wheel"]
+position = Vector2(-2, -1.5)
+shape = SubResource("CircleShape2D_xlkej")
+
+[node name="Sprite2D16" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/central_wheel"]
+position = Vector2(0, 1.5)
+texture = ExtResource("3_hfrdb")
+region_enabled = true
+region_rect = Rect2(9.13069, 338.14, 170.753, 167.028)
+
+[node name="guntimer" type="Timer" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+wait_time = 3.0
+autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SubViewportContainer/SubViewport"]
+position = Vector2(755, 1000)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/StaticBody2D"]
+position = Vector2(-3, 31)
+shape = SubResource("RectangleShape2D_kk0q5")
+
+[connection signal="timeout" from="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/guntimer" to="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun" method="_on_guntimer_timeout"]

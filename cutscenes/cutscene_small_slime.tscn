@@ -18,140 +18,140 @@ fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_hrk03"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_2uefn"]
 resource_local_to_scene = true
 bone_index = 0
 bone2d_node = NodePath("Bone-0")
 target_nodepath = NodePath("Bone-4")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_xmers"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_uwyrn"]
 resource_local_to_scene = true
 bone_index = 1
 bone2d_node = NodePath("Bone-1")
 target_nodepath = NodePath("Bone-3")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_xu2rt"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_fnftl"]
 resource_local_to_scene = true
 bone_index = 10
 bone2d_node = NodePath("Bone-10")
 target_nodepath = NodePath("Bone-11")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_qs6gq"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_me561"]
 resource_local_to_scene = true
 bone_index = 11
 bone2d_node = NodePath("Bone-11")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_mx55x"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_eleq3"]
 resource_local_to_scene = true
 bone_index = 12
 bone2d_node = NodePath("Bone-12")
 target_nodepath = NodePath("Bone-9")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_cnv1b"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_81s77"]
 resource_local_to_scene = true
 bone_index = 13
 bone2d_node = NodePath("Bone-13")
 target_nodepath = NodePath("Bone-12")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_mlws4"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_uld6r"]
 resource_local_to_scene = true
 bone_index = 14
 bone2d_node = NodePath("Bone-14")
 target_nodepath = NodePath("Bone-12")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_asodu"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_b8yve"]
 resource_local_to_scene = true
 bone_index = 15
 bone2d_node = NodePath("Bone-15")
 target_nodepath = NodePath("Bone-14")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_nnum1"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_kjfo4"]
 resource_local_to_scene = true
 bone_index = 2
 bone2d_node = NodePath("Bone-2")
 target_nodepath = NodePath("Bone-3")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_y7skv"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_ka2ci"]
 resource_local_to_scene = true
 bone_index = 3
 bone2d_node = NodePath("Bone-3")
 target_nodepath = NodePath("Bone-2")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_i7hdm"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_fwwgu"]
 resource_local_to_scene = true
 bone_index = 4
 bone2d_node = NodePath("Bone-4")
 target_nodepath = NodePath("Bone-5")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_b7mdu"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_x87mh"]
 resource_local_to_scene = true
 bone_index = 5
 bone2d_node = NodePath("Bone-5")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_fiisx"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_ygtf4"]
 resource_local_to_scene = true
 bone_index = 6
 bone2d_node = NodePath("Bone-6")
 target_nodepath = NodePath("Bone-7")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_4g35u"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_dsnyi"]
 resource_local_to_scene = true
 bone_index = 7
 bone2d_node = NodePath("Bone-7")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_bwv4v"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_xqptu"]
 resource_local_to_scene = true
 bone_index = 8
 bone2d_node = NodePath("Bone-8")
 target_nodepath = NodePath("Bone-9")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_jlft5"]
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_fxhjq"]
 resource_local_to_scene = true
 bone_index = 9
 bone2d_node = NodePath("Bone-9")
 target_nodepath = NodePath("Bone-8")
 editor/draw_gizmo = false
 
-[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_m8l8g"]
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_nqc5g"]
 resource_local_to_scene = true
 enabled = true
 modification_count = 16
-modifications/0 = SubResource("SkeletonModification2DLookAt_hrk03")
-modifications/1 = SubResource("SkeletonModification2DLookAt_xmers")
-modifications/2 = SubResource("SkeletonModification2DLookAt_nnum1")
-modifications/3 = SubResource("SkeletonModification2DLookAt_y7skv")
-modifications/4 = SubResource("SkeletonModification2DLookAt_i7hdm")
-modifications/5 = SubResource("SkeletonModification2DLookAt_b7mdu")
-modifications/6 = SubResource("SkeletonModification2DLookAt_fiisx")
-modifications/7 = SubResource("SkeletonModification2DLookAt_4g35u")
-modifications/8 = SubResource("SkeletonModification2DLookAt_bwv4v")
-modifications/9 = SubResource("SkeletonModification2DLookAt_jlft5")
-modifications/10 = SubResource("SkeletonModification2DLookAt_xu2rt")
-modifications/11 = SubResource("SkeletonModification2DLookAt_qs6gq")
-modifications/12 = SubResource("SkeletonModification2DLookAt_mx55x")
-modifications/13 = SubResource("SkeletonModification2DLookAt_cnv1b")
-modifications/14 = SubResource("SkeletonModification2DLookAt_mlws4")
-modifications/15 = SubResource("SkeletonModification2DLookAt_asodu")
+modifications/0 = SubResource("SkeletonModification2DLookAt_2uefn")
+modifications/1 = SubResource("SkeletonModification2DLookAt_uwyrn")
+modifications/2 = SubResource("SkeletonModification2DLookAt_kjfo4")
+modifications/3 = SubResource("SkeletonModification2DLookAt_ka2ci")
+modifications/4 = SubResource("SkeletonModification2DLookAt_fwwgu")
+modifications/5 = SubResource("SkeletonModification2DLookAt_x87mh")
+modifications/6 = SubResource("SkeletonModification2DLookAt_ygtf4")
+modifications/7 = SubResource("SkeletonModification2DLookAt_dsnyi")
+modifications/8 = SubResource("SkeletonModification2DLookAt_xqptu")
+modifications/9 = SubResource("SkeletonModification2DLookAt_fxhjq")
+modifications/10 = SubResource("SkeletonModification2DLookAt_fnftl")
+modifications/11 = SubResource("SkeletonModification2DLookAt_me561")
+modifications/12 = SubResource("SkeletonModification2DLookAt_eleq3")
+modifications/13 = SubResource("SkeletonModification2DLookAt_81s77")
+modifications/14 = SubResource("SkeletonModification2DLookAt_uld6r")
+modifications/15 = SubResource("SkeletonModification2DLookAt_b8yve")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hge3d"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbvm5"]
 resource_local_to_scene = true
 size = Vector2(29.6, 29.6)
 
@@ -190,10 +190,9 @@ internal_vertex_count = 277
 script = ExtResource("4_mnb2s")
 show_shapes = true
 vertex_interval = 50
-joint_type = "spring"
 stiffness = 50.0
 damping = 0.11
-softness = 30.0
+softness = 15.9
 radius = 37
 margin_offset_edge = 17.9
 mass = 0.3
@@ -202,7 +201,7 @@ collision_mask = 141
 
 [node name="Skeleton2D" type="Skeleton2D" parent="slime_node/slime_soft_body"]
 visible = false
-modification_stack = SubResource("SkeletonModificationStack2D_m8l8g")
+modification_stack = SubResource("SkeletonModificationStack2D_nqc5g")
 
 [node name="Bone-0" type="Bone2D" parent="slime_node/slime_soft_body/Skeleton2D"]
 position = Vector2(60.7707, 73.543)
@@ -437,7 +436,7 @@ metadata/idx = 0
 metadata/bone_name = &"Bone-0"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-0"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-0"]
 visible = false
@@ -445,45 +444,33 @@ remote_path = NodePath("../../Skeleton2D/Bone-0")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-0-Bone-1" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
+[node name="Joint2D-Bone-0-Bone-1" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
 visible = false
 rotation = -0.00616904
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 31.8161
+softness = 15.9
 
-[node name="Joint2D-Bone-0-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
+[node name="Joint2D-Bone-0-Bone-3" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
 visible = false
 rotation = -1.47469
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 28.2287
+softness = 15.9
 
-[node name="Joint2D-Bone-0-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
+[node name="Joint2D-Bone-0-Bone-4" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
 visible = false
 rotation = -0.78294
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 41.9522
+softness = 15.9
 
-[node name="Joint2D-Bone-0-Bone-2" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
+[node name="Joint2D-Bone-0-Bone-2" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-0"]
 visible = false
 rotation = -2.31606
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-2")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 33.4514
+softness = 15.9
 
 [node name="Bone-1" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(61.016, 113.312)
@@ -494,7 +481,7 @@ metadata/idx = 1
 metadata/bone_name = &"Bone-1"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-1"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-1"]
 visible = false
@@ -502,45 +489,33 @@ remote_path = NodePath("../../Skeleton2D/Bone-1")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-1-Bone-0" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
+[node name="Joint2D-Bone-1-Bone-0" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
 visible = false
 rotation = -3.14776
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-0")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 31.8161
+softness = 15.9
 
-[node name="Joint2D-Bone-1-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
+[node name="Joint2D-Bone-1-Bone-5" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
 visible = false
 rotation = -0.548886
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.9574
+softness = 15.9
 
-[node name="Joint2D-Bone-1-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
+[node name="Joint2D-Bone-1-Bone-3" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
 visible = false
 rotation = -2.37732
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 40.3203
+softness = 15.9
 
-[node name="Joint2D-Bone-1-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
+[node name="Joint2D-Bone-1-Bone-4" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-1"]
 visible = false
 rotation = -1.64137
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 29.4688
+softness = 15.9
 
 [node name="Bone-2" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(91.5004, 45.186)
@@ -551,7 +526,7 @@ metadata/idx = 2
 metadata/bone_name = &"Bone-2"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-2"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-2"]
 visible = false
@@ -559,45 +534,33 @@ remote_path = NodePath("../../Skeleton2D/Bone-2")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-2-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
+[node name="Joint2D-Bone-2-Bone-6" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
 visible = false
 rotation = -1.51426
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 31.2376
+softness = 15.9
 
-[node name="Joint2D-Bone-2-Bone-0" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
+[node name="Joint2D-Bone-2-Bone-0" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
 visible = false
 rotation = 0.825534
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-0")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 33.4514
+softness = 15.9
 
-[node name="Joint2D-Bone-2-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
+[node name="Joint2D-Bone-2-Bone-3" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
 visible = false
 rotation = -0.137527
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 25.6365
+softness = 15.9
 
-[node name="Joint2D-Bone-2-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
+[node name="Joint2D-Bone-2-Bone-7" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-2"]
 visible = false
 rotation = -0.768796
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 44.1647
+softness = 15.9
 
 [node name="Bone-3" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(95.8937, 76.9291)
@@ -608,7 +571,7 @@ metadata/idx = 3
 metadata/bone_name = &"Bone-3"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-3"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-3"]
 visible = false
@@ -616,75 +579,54 @@ remote_path = NodePath("../../Skeleton2D/Bone-3")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-3-Bone-0" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
+[node name="Joint2D-Bone-3-Bone-0" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
 visible = false
 rotation = -4.61628
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-0")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 28.2287
+softness = 15.9
 
-[node name="Joint2D-Bone-3-Bone-1" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
+[node name="Joint2D-Bone-3-Bone-1" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
 visible = false
 rotation = 0.764273
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 40.3203
+softness = 15.9
 
-[node name="Joint2D-Bone-3-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
+[node name="Joint2D-Bone-3-Bone-4" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
 visible = false
 rotation = -0.0551918
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.0698
+softness = 15.9
 
-[node name="Joint2D-Bone-3-Bone-2" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
+[node name="Joint2D-Bone-3-Bone-2" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
 visible = false
 rotation = -3.27912
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-2")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 25.6365
+softness = 15.9
 
-[node name="Joint2D-Bone-3-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
+[node name="Joint2D-Bone-3-Bone-6" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
 visible = false
 rotation = -2.27753
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 36.3888
+softness = 15.9
 
-[node name="Joint2D-Bone-3-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
+[node name="Joint2D-Bone-3-Bone-7" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
 visible = false
 rotation = -1.34142
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.9231
+softness = 15.9
 
-[node name="Joint2D-Bone-3-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
+[node name="Joint2D-Bone-3-Bone-8" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-3"]
 visible = false
 rotation = -0.978751
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 31.9398
+softness = 15.9
 
 [node name="Bone-4" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(97.7603, 110.715)
@@ -695,7 +637,7 @@ metadata/idx = 4
 metadata/bone_name = &"Bone-4"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-4"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-4"]
 visible = false
@@ -703,75 +645,54 @@ remote_path = NodePath("../../Skeleton2D/Bone-4")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-4-Bone-0" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
+[node name="Joint2D-Bone-4-Bone-0" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
 visible = false
 rotation = -3.92453
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-0")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 41.9522
+softness = 15.9
 
-[node name="Joint2D-Bone-4-Bone-1" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
+[node name="Joint2D-Bone-4-Bone-1" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
 visible = false
 rotation = 1.50022
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 29.4688
+softness = 15.9
 
-[node name="Joint2D-Bone-4-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
+[node name="Joint2D-Bone-4-Bone-3" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
 visible = false
 rotation = -3.19678
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.0698
+softness = 15.9
 
-[node name="Joint2D-Bone-4-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
+[node name="Joint2D-Bone-4-Bone-5" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
 visible = false
 rotation = 0.384004
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.5658
+softness = 15.9
 
-[node name="Joint2D-Bone-4-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
+[node name="Joint2D-Bone-4-Bone-7" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
 visible = false
 rotation = -2.2484
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.9859
+softness = 15.9
 
-[node name="Joint2D-Bone-4-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
+[node name="Joint2D-Bone-4-Bone-8" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
 visible = false
 rotation = -1.92343
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 26.6503
+softness = 15.9
 
-[node name="Joint2D-Bone-4-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
+[node name="Joint2D-Bone-4-Bone-9" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-4"]
 visible = false
 rotation = -0.781935
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 37.0874
+softness = 15.9
 
 [node name="Bone-5" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(82.5099, 148.458)
@@ -782,7 +703,7 @@ metadata/idx = 5
 metadata/bone_name = &"Bone-5"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-5"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-5"]
 visible = false
@@ -790,45 +711,33 @@ remote_path = NodePath("../../Skeleton2D/Bone-5")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-5-Bone-1" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
+[node name="Joint2D-Bone-5-Bone-1" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
 visible = false
 rotation = -3.69048
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-1")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.9574
+softness = 15.9
 
-[node name="Joint2D-Bone-5-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
+[node name="Joint2D-Bone-5-Bone-4" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
 visible = false
 rotation = -2.75759
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.5658
+softness = 15.9
 
-[node name="Joint2D-Bone-5-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
+[node name="Joint2D-Bone-5-Bone-8" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
 visible = false
 rotation = -2.38474
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 54.193
+softness = 15.9
 
-[node name="Joint2D-Bone-5-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
+[node name="Joint2D-Bone-5-Bone-9" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-5"]
 visible = false
 rotation = -1.67164
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 38.5298
+softness = 15.9
 
 [node name="Bone-6" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(130.485, 47.3926)
@@ -839,7 +748,7 @@ metadata/idx = 6
 metadata/bone_name = &"Bone-6"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-6"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-6"]
 visible = false
@@ -847,55 +756,40 @@ remote_path = NodePath("../../Skeleton2D/Bone-6")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-6-Bone-2" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
+[node name="Joint2D-Bone-6-Bone-2" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
 visible = false
 rotation = -4.65585
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-2")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 31.2376
+softness = 15.9
 
-[node name="Joint2D-Bone-6-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
+[node name="Joint2D-Bone-6-Bone-3" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
 visible = false
 rotation = 0.86406
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 36.3888
+softness = 15.9
 
-[node name="Joint2D-Bone-6-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
+[node name="Joint2D-Bone-6-Bone-7" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
 visible = false
 rotation = 0.0160553
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 29.9819
+softness = 15.9
 
-[node name="Joint2D-Bone-6-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
+[node name="Joint2D-Bone-6-Bone-10" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
 visible = false
 rotation = -1.6506
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 31.902
+softness = 15.9
 
-[node name="Joint2D-Bone-6-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
+[node name="Joint2D-Bone-6-Bone-11" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-6"]
 visible = false
 rotation = -0.882841
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 36.5236
+softness = 15.9
 
 [node name="Bone-7" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(129.883, 84.8651)
@@ -906,7 +800,7 @@ metadata/idx = 7
 metadata/bone_name = &"Bone-7"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-7"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
@@ -914,85 +808,61 @@ remote_path = NodePath("../../Skeleton2D/Bone-7")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-7-Bone-2" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
+[node name="Joint2D-Bone-7-Bone-2" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
 rotation = -3.91039
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-2")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 44.1647
+softness = 15.9
 
-[node name="Joint2D-Bone-7-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
+[node name="Joint2D-Bone-7-Bone-3" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
 rotation = -4.48302
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.9231
+softness = 15.9
 
-[node name="Joint2D-Bone-7-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
+[node name="Joint2D-Bone-7-Bone-6" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
 rotation = -3.12554
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 29.9819
+softness = 15.9
 
-[node name="Joint2D-Bone-7-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
+[node name="Joint2D-Bone-7-Bone-4" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
 rotation = 0.893191
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.9859
+softness = 15.9
 
-[node name="Joint2D-Bone-7-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
+[node name="Joint2D-Bone-7-Bone-8" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
 rotation = 0.0598929
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 11.4961
+softness = 15.9
 
-[node name="Joint2D-Bone-7-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
+[node name="Joint2D-Bone-7-Bone-10" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
 rotation = -2.35989
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 45.823
+softness = 15.9
 
-[node name="Joint2D-Bone-7-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
+[node name="Joint2D-Bone-7-Bone-11" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
 rotation = -1.80303
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 29.4892
+softness = 15.9
 
-[node name="Joint2D-Bone-7-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
+[node name="Joint2D-Bone-7-Bone-12" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-7"]
 visible = false
 rotation = -0.915636
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 34.5054
+softness = 15.9
 
 [node name="Bone-8" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(129.023, 99.2095)
@@ -1003,7 +873,7 @@ metadata/idx = 8
 metadata/bone_name = &"Bone-8"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-8"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
@@ -1011,85 +881,61 @@ remote_path = NodePath("../../Skeleton2D/Bone-8")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-8-Bone-3" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
+[node name="Joint2D-Bone-8-Bone-3" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
 rotation = -4.12034
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-3")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 31.9398
+softness = 15.9
 
-[node name="Joint2D-Bone-8-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
+[node name="Joint2D-Bone-8-Bone-4" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
 rotation = 1.21816
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 26.6503
+softness = 15.9
 
-[node name="Joint2D-Bone-8-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
+[node name="Joint2D-Bone-8-Bone-7" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
 rotation = -3.0817
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 11.4961
+softness = 15.9
 
-[node name="Joint2D-Bone-8-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
+[node name="Joint2D-Bone-8-Bone-5" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
 rotation = 0.756849
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 54.193
+softness = 15.9
 
-[node name="Joint2D-Bone-8-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
+[node name="Joint2D-Bone-8-Bone-9" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
 rotation = -0.0316163
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 35.5375
+softness = 15.9
 
-[node name="Joint2D-Bone-8-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
+[node name="Joint2D-Bone-8-Bone-11" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
 rotation = -2.12686
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 34.5982
+softness = 15.9
 
-[node name="Joint2D-Bone-8-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
+[node name="Joint2D-Bone-8-Bone-12" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
 rotation = -1.24269
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 29.6298
+softness = 15.9
 
-[node name="Joint2D-Bone-8-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
+[node name="Joint2D-Bone-8-Bone-13" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-8"]
 visible = false
 rotation = -0.758249
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 53.7393
+softness = 15.9
 
 [node name="Bone-9" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(130.427, 143.609)
@@ -1100,7 +946,7 @@ metadata/idx = 9
 metadata/bone_name = &"Bone-9"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-9"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-9"]
 visible = false
@@ -1108,55 +954,40 @@ remote_path = NodePath("../../Skeleton2D/Bone-9")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-9-Bone-4" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
+[node name="Joint2D-Bone-9-Bone-4" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
 visible = false
 rotation = -3.92353
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-4")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 37.0874
+softness = 15.9
 
-[node name="Joint2D-Bone-9-Bone-5" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
+[node name="Joint2D-Bone-9-Bone-5" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
 visible = false
 rotation = 1.46996
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-5")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 38.5298
+softness = 15.9
 
-[node name="Joint2D-Bone-9-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
+[node name="Joint2D-Bone-9-Bone-8" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
 visible = false
 rotation = -3.17321
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 35.5375
+softness = 15.9
 
-[node name="Joint2D-Bone-9-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
+[node name="Joint2D-Bone-9-Bone-12" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
 visible = false
 rotation = -2.33816
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 37.4102
+softness = 15.9
 
-[node name="Joint2D-Bone-9-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
+[node name="Joint2D-Bone-9-Bone-13" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-9"]
 visible = false
 rotation = -1.4735
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 36.0008
+softness = 15.9
 
 [node name="Bone-10" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(170.236, 44.2135)
@@ -1167,7 +998,7 @@ metadata/idx = 10
 metadata/bone_name = &"Bone-10"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-10"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-10"]
 visible = false
@@ -1175,45 +1006,33 @@ remote_path = NodePath("../../Skeleton2D/Bone-10")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-10-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
+[node name="Joint2D-Bone-10-Bone-6" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
 visible = false
 rotation = 1.49099
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 31.902
+softness = 15.9
 
-[node name="Joint2D-Bone-10-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
+[node name="Joint2D-Bone-10-Bone-7" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
 visible = false
 rotation = 0.781702
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 45.823
+softness = 15.9
 
-[node name="Joint2D-Bone-10-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
+[node name="Joint2D-Bone-10-Bone-11" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
 visible = false
 rotation = 0.13839
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 25.9827
+softness = 15.9
 
-[node name="Joint2D-Bone-10-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
+[node name="Joint2D-Bone-10-Bone-14" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-10"]
 visible = false
 rotation = -0.811746
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.5553
+softness = 15.9
 
 [node name="Bone-11" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(165.755, 76.3813)
@@ -1224,7 +1043,7 @@ metadata/idx = 11
 metadata/bone_name = &"Bone-11"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-11"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-11"]
 visible = false
@@ -1232,75 +1051,54 @@ remote_path = NodePath("../../Skeleton2D/Bone-11")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-11-Bone-6" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
+[node name="Joint2D-Bone-11-Bone-6" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
 visible = false
 rotation = -4.02443
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-6")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 36.5236
+softness = 15.9
 
-[node name="Joint2D-Bone-11-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
+[node name="Joint2D-Bone-11-Bone-7" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
 visible = false
 rotation = 1.33856
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 29.4892
+softness = 15.9
 
-[node name="Joint2D-Bone-11-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
+[node name="Joint2D-Bone-11-Bone-10" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
 visible = false
 rotation = -3.0032
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 25.9827
+softness = 15.9
 
-[node name="Joint2D-Bone-11-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
+[node name="Joint2D-Bone-11-Bone-8" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
 visible = false
 rotation = 1.01473
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 34.5982
+softness = 15.9
 
-[node name="Joint2D-Bone-11-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
+[node name="Joint2D-Bone-11-Bone-12" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
 visible = false
 rotation = 0.0480183
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.8428
+softness = 15.9
 
-[node name="Joint2D-Bone-11-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
+[node name="Joint2D-Bone-11-Bone-14" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
 visible = false
 rotation = -1.69256
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.4057
+softness = 15.9
 
-[node name="Joint2D-Bone-11-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
+[node name="Joint2D-Bone-11-Bone-15" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-11"]
 visible = false
 rotation = -0.731337
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 39.7826
+softness = 15.9
 
 [node name="Bone-12" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(164.085, 111.145)
@@ -1311,7 +1109,7 @@ metadata/idx = 12
 metadata/bone_name = &"Bone-12"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-12"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-12"]
 visible = false
@@ -1319,75 +1117,54 @@ remote_path = NodePath("../../Skeleton2D/Bone-12")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-12-Bone-7" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
+[node name="Joint2D-Bone-12-Bone-7" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
 visible = false
 rotation = -4.05723
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-7")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 34.5054
+softness = 15.9
 
-[node name="Joint2D-Bone-12-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
+[node name="Joint2D-Bone-12-Bone-8" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
 visible = false
 rotation = -4.38428
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 29.6298
+softness = 15.9
 
-[node name="Joint2D-Bone-12-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
+[node name="Joint2D-Bone-12-Bone-11" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
 visible = false
 rotation = -3.09357
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.8428
+softness = 15.9
 
-[node name="Joint2D-Bone-12-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
+[node name="Joint2D-Bone-12-Bone-9" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
 visible = false
 rotation = 0.803436
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 37.4102
+softness = 15.9
 
-[node name="Joint2D-Bone-12-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
+[node name="Joint2D-Bone-12-Bone-13" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
 visible = false
 rotation = -0.29345
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 30.7847
+softness = 15.9
 
-[node name="Joint2D-Bone-12-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
+[node name="Joint2D-Bone-12-Bone-14" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
 visible = false
 rotation = -2.39974
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 42.2392
+softness = 15.9
 
-[node name="Joint2D-Bone-12-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
+[node name="Joint2D-Bone-12-Bone-15" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-12"]
 visible = false
 rotation = -1.50643
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.9638
+softness = 15.9
 
 [node name="Bone-13" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(175.216, 147.981)
@@ -1398,7 +1175,7 @@ metadata/idx = 13
 metadata/bone_name = &"Bone-13"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-13"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-13"]
 visible = false
@@ -1406,45 +1183,33 @@ remote_path = NodePath("../../Skeleton2D/Bone-13")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-13-Bone-8" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
+[node name="Joint2D-Bone-13-Bone-8" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
 visible = false
 rotation = -3.89984
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-8")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 53.7393
+softness = 15.9
 
-[node name="Joint2D-Bone-13-Bone-9" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
+[node name="Joint2D-Bone-13-Bone-9" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
 visible = false
 rotation = -4.61509
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-9")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 36.0008
+softness = 15.9
 
-[node name="Joint2D-Bone-13-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
+[node name="Joint2D-Bone-13-Bone-12" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
 visible = false
 rotation = -3.43504
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 30.7847
+softness = 15.9
 
-[node name="Joint2D-Bone-13-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
+[node name="Joint2D-Bone-13-Bone-15" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-13"]
 visible = false
 rotation = -2.53984
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 33.5659
+softness = 15.9
 
 [node name="Bone-14" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(199.759, 72.2205)
@@ -1455,7 +1220,7 @@ metadata/idx = 14
 metadata/bone_name = &"Bone-14"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-14"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-14"]
 visible = false
@@ -1463,45 +1228,33 @@ remote_path = NodePath("../../Skeleton2D/Bone-14")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-14-Bone-10" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
+[node name="Joint2D-Bone-14-Bone-10" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
 visible = false
 rotation = -3.95334
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-10")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.5553
+softness = 15.9
 
-[node name="Joint2D-Bone-14-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
+[node name="Joint2D-Bone-14-Bone-11" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
 visible = false
 rotation = 1.44904
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.4057
+softness = 15.9
 
-[node name="Joint2D-Bone-14-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
+[node name="Joint2D-Bone-14-Bone-12" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
 visible = false
 rotation = 0.741857
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 42.2392
+softness = 15.9
 
-[node name="Joint2D-Bone-14-Bone-15" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
+[node name="Joint2D-Bone-14-Bone-15" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-14"]
 visible = false
 rotation = 0.0192264
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-15")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.9443
+softness = 15.9
 
 [node name="Bone-15" type="RigidBody2D" parent="slime_node/slime_soft_body"]
 position = Vector2(198.967, 113.393)
@@ -1512,7 +1265,7 @@ metadata/idx = 15
 metadata/bone_name = &"Bone-15"
 
 [node name="RectangleShape2D" type="CollisionShape2D" parent="slime_node/slime_soft_body/Bone-15"]
-shape = SubResource("RectangleShape2D_hge3d")
+shape = SubResource("RectangleShape2D_fbvm5")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="slime_node/slime_soft_body/Bone-15"]
 visible = false
@@ -1520,45 +1273,33 @@ remote_path = NodePath("../../Skeleton2D/Bone-15")
 update_rotation = false
 update_scale = false
 
-[node name="Joint2D-Bone-15-Bone-11" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
+[node name="Joint2D-Bone-15-Bone-11" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
 visible = false
 rotation = -3.87293
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-11")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 39.7826
+softness = 15.9
 
-[node name="Joint2D-Bone-15-Bone-12" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
+[node name="Joint2D-Bone-15-Bone-12" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
 visible = false
 rotation = -4.64802
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-12")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 27.9638
+softness = 15.9
 
-[node name="Joint2D-Bone-15-Bone-14" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
+[node name="Joint2D-Bone-15-Bone-14" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
 visible = false
 rotation = -3.12237
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-14")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 32.9443
+softness = 15.9
 
-[node name="Joint2D-Bone-15-Bone-13" type="DampedSpringJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
+[node name="Joint2D-Bone-15-Bone-13" type="PinJoint2D" parent="slime_node/slime_soft_body/Bone-15"]
 visible = false
 rotation = 0.601751
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-13")
-length = 0.0
-stiffness = 50.0
-damping = 0.11
-metadata/joint_distance = 33.5659
+softness = 15.9
 
 [connection signal="area_entered" from="slime_node/slime_hitbox" to="slime_node" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="slime_node/slime_hitbox" to="slime_node" method="_on_area_2d_area_exited"]
