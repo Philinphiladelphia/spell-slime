@@ -125,11 +125,11 @@
 [ext_resource type="Texture2D" uid="uid://k6xs63xgw8xx" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_slope_right_2A.png" id="124_1sijv"]
 [ext_resource type="Texture2D" uid="uid://drq2mrkpnrah5" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_slope_right_2A_full.png" id="125_o4l7l"]
 [ext_resource type="Texture2D" uid="uid://bla1msnh7je6a" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_slope_right_2B.png" id="126_5j7yh"]
-[ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="127_ipij3"]
 [ext_resource type="Texture2D" uid="uid://cn6vxyct1k47m" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_slope_right_2B_full.png" id="127_nncal"]
 [ext_resource type="Texture2D" uid="uid://dkpdetaukoyrh" path="res://event_locations/assets/beard.png" id="128_7w8so"]
 [ext_resource type="PackedScene" uid="uid://cr40nhm4sybj4" path="res://player_slime/scenes/jumping_slime.tscn" id="128_75w3n"]
 [ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://event_locations/assets/hair.png" id="130_k3rwp"]
+[ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="130_ksg3h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uxhj"]
 texture = ExtResource("21_51lk4")
@@ -2432,7 +2432,7 @@ texture_filter = 1
 position = Vector2(126, 55)
 zoom = Vector2(2, 2)
 script = ExtResource("1_vg5sg")
-slime_to_follow = NodePath("../player_slime")
+slime_to_follow = NodePath("../controller")
 
 [node name="sky" type="Sprite2D" parent="Camera2D"]
 z_index = -1
@@ -2695,12 +2695,6 @@ tile_set = SubResource("TileSet_pubc8")
 tile_map_data = PackedByteArray("AACsAAsABAAAAAAAAACsAAwABAAAAAEAAACsAA0ABAAAAAIAAACtAAsAAgAAAAEAAACtAAwABAABAAEAAACtAA0ABAABAAIAAACuAAwAAgAAAAAAAACuAA0AAgAAAAEAAACvAAwAAgABAAAAAACvAA0AAgABAAEAAACtAAoAAgAAAAAAAACuAAoAAgABAAAAAACuAAsAAgABAAEAAACwAAwAAgAAAAAAAACwAA0AAgAAAAEAAACxAAwAAgABAAAAAACxAA0AAgABAAEAAACvAAoAAgAAAAAAAACvAAsAAgAAAAEAAACwAAoAAgABAAAAAACwAAsAAgABAAEAAACXAAsAAAAAAAAAAACXAAwAAAAAAAEAAACXAA0AAAAAAAIAAACYAAsAAAABAAAAAACYAAwAAAABAAEAAACYAA0AAAABAAIAAACUAAwAAgAAAAAAAACUAA0AAgAAAAEAAACVAAwAAgABAAAAAACVAA0AAgABAAEAAAA=")
 tile_set = SubResource("TileSet_78vye")
 
-[node name="player_slime" parent="." instance=ExtResource("127_ipij3")]
-position = Vector2(-265, 72)
-max_jump_power = 250.0
-charge_rate = 100.0
-min_jump_interval = 1.0
-
 [node name="grandpa" parent="." node_paths=PackedStringArray("decorations") instance=ExtResource("128_75w3n")]
 modulate = Color(0.44, 1, 0.496, 1)
 position = Vector2(-192, 81)
@@ -2720,3 +2714,9 @@ modulate = Color(1, 1, 1, 0.615686)
 position = Vector2(-161, 112)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("130_k3rwp")
+
+[node name="controller" parent="." instance=ExtResource("130_ksg3h")]
+position = Vector2(-385, 25)
+max_jump_power = 250.0
+charge_rate = 100.0
+min_jump_interval = 1.0
