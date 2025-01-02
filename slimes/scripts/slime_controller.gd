@@ -24,6 +24,8 @@ var jump_interval: float = 2.5
 var powder_interval: float = 6
 var powder_duration: float = 1
 
+var upright_torque: float = 10000
+
 var powder_warning_time: float = 1
 
 var damage: float = 0
@@ -158,6 +160,10 @@ func _process(delta: float) -> void:
 	slime_position = $slime_soft_body.get_bones_center_position()
 
 	$slime_hitbox.global_position = slime_position
+
+	var rigidbody = $slime_soft_body.get_rigid_bodies()[0].rigidbody
+	var angle_difference = wrapf(-rigidbody.rotation, -PI, PI)
+	$slime_soft_body.constant_torque = angle_difference * upright_torque  # Adjust the multiplier as needed
 
 	var offset: Vector2 = health_offset
 	$health_bar.health_bar_offset = offset

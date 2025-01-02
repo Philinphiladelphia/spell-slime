@@ -34,6 +34,7 @@ func _ready() -> void:
 	$slime_node.jump_power = jump_power
 	$slime_node.local_move_direction = Vector2(-1, -1).normalized()
 	
+	$slime_node.upright_torque = 200000
 	$slime_node.jump_interval = jump_interval
 	$slime_node.powder_interval = powder_interval
 	$slime_node.powder_duration = powder_duration
