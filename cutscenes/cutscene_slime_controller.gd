@@ -2,6 +2,8 @@ extends Node2D
 
 var jump_power = 800
 
+var jump_enabled: bool = false
+
 var slime_position: Vector2
 var garbage_collect = false
 var local_move_direction = Vector2(1, -1)
@@ -70,9 +72,7 @@ func _ready() -> void:
 
 # Called when the jump timer times out
 func _on_jump_timer_timeout() -> void:
-	if touching_something:
-		var random_offset = randf_range(-jump_interval/5.0, jump_interval/5.0)
-		jump_timer.wait_time = jump_interval + random_offset
+		jump_timer.wait_time = jump_interval
 		
 		var jump_direction : Vector2
 		if go_right:
@@ -82,9 +82,6 @@ func _on_jump_timer_timeout() -> void:
 			
 		jump_direction.y = local_move_direction.y
 		jump(jump_direction)
-		touching_something = false
-	else:
-		jump_timer.wait_time = jump_interval/2
 	
 	# Called when the jump timer times out
 func _on_powdering_timeout() -> void:
@@ -101,8 +98,8 @@ func _disable_powdering():
 
 
 func jump(jump_direction):
-	pass
-	#get_child(0).apply_impulse(jump_direction * jump_power)
+	if jump_enabled:
+		get_child(1).apply_impulse(jump_direction * jump_power)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
