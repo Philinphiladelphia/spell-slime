@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var camera_node: Camera2D
 @export var dialogue_layer: CanvasLayer
 @export var tutorial_layer: CanvasLayer
 

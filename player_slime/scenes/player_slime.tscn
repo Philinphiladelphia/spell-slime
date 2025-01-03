@@ -1,7 +1,10 @@
-[gd_scene load_steps=31 format=3 uid="uid://chhnrbkrbyki8"]
+[gd_scene load_steps=34 format=3 uid="uid://chhnrbkrbyki8"]
 
 [ext_resource type="Texture2D" uid="uid://kftevsx25ln2" path="res://common_assets/slimes/slime-8th_mouthless.png" id="2_djuya"]
 [ext_resource type="Script" path="res://player_slime/scripts/player_slime_controller.gd" id="3_huhpb"]
+[ext_resource type="Texture2D" uid="uid://yjfpq0gxl6px" path="res://event_locations/assets/player_eyes.png" id="4_6i3ux"]
+[ext_resource type="Texture2D" uid="uid://dxuu5p3jcri3b" path="res://event_locations/assets/player_mouth.png" id="5_cfeg0"]
+[ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="6_vrjke"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="11_to14e"]
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_l41uw"]
@@ -213,11 +216,12 @@ modifications/24 = SubResource("SkeletonModification2DLookAt_2nu04")
 resource_local_to_scene = true
 size = Vector2(8, 8)
 
-[node name="controller" type="Node2D" node_paths=PackedStringArray("softbody")]
+[node name="controller" type="Node2D" node_paths=PackedStringArray("softbody", "decorations")]
 physics_interpolation_mode = 2
 texture_filter = 1
 script = ExtResource("3_huhpb")
 softbody = NodePath("SoftBody2D")
+decorations = [NodePath("decorations/player_eyes"), NodePath("decorations/player_mouth")]
 max_jump_power = 60.0
 charge_rate = 30.0
 
@@ -311,6 +315,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-5" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16.239, 40.3262)
 rotation = -1.37996
+scale = Vector2(1, 1)
 rest = Transform2D(0.18968, -0.981846, 0.981846, 0.18968, 16.239, 40.3262)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -338,7 +343,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-7" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(26.4921, 14.8706)
 rotation = -1.59423
-scale = Vector2(1, 1)
 rest = Transform2D(-0.0234328, -0.999725, 0.999725, -0.0234328, 26.4921, 14.8706)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -378,6 +382,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-10" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(26.1439, 40.3309)
 rotation = -1.50856
+scale = Vector2(1, 1)
 rest = Transform2D(0.062193, -0.998064, 0.998064, 0.062193, 26.1439, 40.3309)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -391,7 +396,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-11" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.8643, 8.24075)
 rotation = 1.58218
-scale = Vector2(1, 1)
 rest = Transform2D(-0.0113866, 0.999935, -0.999935, -0.0113866, 34.8643, 8.24075)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -405,6 +409,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-12" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.7876, 14.9772)
 rotation = 1.6274
+scale = Vector2(1, 1)
 rest = Transform2D(-0.0565738, 0.998398, -0.998398, -0.0565738, 34.7876, 14.9772)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -418,6 +423,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-13" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.2929, 23.7071)
 rotation = 1.52353
+scale = Vector2(1, 1)
 rest = Transform2D(0.0472503, 0.998883, -0.998883, 0.0472503, 34.2929, 23.7071)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -431,7 +437,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-14" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.641, 31.0667)
 rotation = 1.54843
-scale = Vector2(1, 1)
 rest = Transform2D(0.0223626, 0.99975, -0.99975, 0.0223626, 34.641, 31.0667)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -445,7 +450,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-15" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.8405, 39.9834)
 rotation = -1.59316
-scale = Vector2(1, 1)
 rest = Transform2D(-0.0223626, -0.99975, 0.99975, -0.0223626, 34.8405, 39.9834)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -472,7 +476,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(43.2929, 14.7071)
 rotation = 2.35619
-scale = Vector2(1, 1)
 rest = Transform2D(-0.707107, 0.707107, -0.707107, -0.707107, 43.2929, 14.7071)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -499,6 +502,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-19" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(43.1294, 31.5079)
 rotation = 1.53901
+scale = Vector2(1, 1)
 rest = Transform2D(0.0317796, 0.999495, -0.999495, 0.0317796, 43.1294, 31.5079)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -2021,3 +2025,25 @@ rotation = -3.02195
 node_a = NodePath("..")
 node_b = NodePath("../../Bone-23")
 softness = 1.0
+
+[node name="decorations" type="Node" parent="."]
+
+[node name="player_eyes" type="Sprite2D" parent="decorations"]
+modulate = Color(1, 1, 1, 0.670588)
+position = Vector2(33, 29)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_6i3ux")
+
+[node name="player_mouth" type="Sprite2D" parent="decorations"]
+modulate = Color(1, 1, 1, 0.670588)
+position = Vector2(33, 27)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_cfeg0")
+
+[node name="camera" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="camera" node_paths=PackedStringArray("slime_to_follow")]
+position = Vector2(33, 60)
+zoom = Vector2(2, 2)
+script = ExtResource("6_vrjke")
+slime_to_follow = NodePath("../..")
