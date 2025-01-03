@@ -2,6 +2,7 @@ extends Node2D
 
 @export var camera_node: Camera2D
 @export var dialogue_layer: CanvasLayer
+@export var tutorial_layer: CanvasLayer
 
 @export var grandpa: Node2D
 @export var player: Node2D
@@ -43,6 +44,9 @@ func activate_scene():
 		
 	if second_dialogue_spawned:
 		door_active = true
+		tutorial_layer.set_tutorial_text("go to the door and press " + door_glyph.displayed_key + " to enter")
+	else:
+		tutorial_layer.set_tutorial_text("hold and release left mouse to jump")
 		
 	is_active = true
 	cursor_radials.show()
