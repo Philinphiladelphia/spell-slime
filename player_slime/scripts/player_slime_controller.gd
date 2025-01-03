@@ -17,7 +17,7 @@ var time_since_last_jump: float = 0.0
 
 var slime_position: Vector2
 
-var is_active: bool = false
+@export var is_active: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

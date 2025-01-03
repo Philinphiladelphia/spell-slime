@@ -17,6 +17,9 @@ var _external_persistence = {}
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("interact"):
+		_get_next_dialogue_line()
+	
 	if get_global_rect().has_point(get_global_mouse_position()):
 		MouseGlobal.set_mouse_owned(true)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
