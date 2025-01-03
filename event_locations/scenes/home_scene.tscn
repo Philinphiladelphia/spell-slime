@@ -129,7 +129,7 @@
 [ext_resource type="Texture2D" uid="uid://dkpdetaukoyrh" path="res://event_locations/assets/beard.png" id="128_7w8so"]
 [ext_resource type="PackedScene" uid="uid://cr40nhm4sybj4" path="res://player_slime/scenes/jumping_slime.tscn" id="128_75w3n"]
 [ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://event_locations/assets/hair.png" id="130_k3rwp"]
-[ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="130_ksg3h"]
+[ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="134_6e3ea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uxhj"]
 texture = ExtResource("21_51lk4")
@@ -2701,7 +2701,7 @@ position = Vector2(-192, 81)
 decorations = [NodePath("../beard"), NodePath("../hair")]
 direction = Vector2(0.2, -1)
 jump_interval = 4.0
-jump_power = 50.0
+jump_power = 150.0
 
 [node name="beard" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.615686)
@@ -2715,8 +2715,8 @@ position = Vector2(-161, 112)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("130_k3rwp")
 
-[node name="controller" parent="." instance=ExtResource("130_ksg3h")]
-position = Vector2(-385, 25)
-max_jump_power = 250.0
+[node name="controller" parent="." instance=ExtResource("134_6e3ea")]
+position = Vector2(-300, 81)
+max_jump_power = 200.0
 charge_rate = 100.0
-min_jump_interval = 1.0
+min_jump_interval = 0.75
