@@ -12,7 +12,7 @@ extends Node2D
 @export var door_area: Area2D
 @export var door_glyph: Node2D
 
-var home_dialogue = preload("res://clyde/base_dialogue.tscn")
+var base_dialogue = preload("res://clyde/base_dialogue.tscn")
 
 var is_active: bool = false
 
@@ -28,7 +28,8 @@ var door_active: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	current_dialogue = home_dialogue.instantiate()
+	current_dialogue = base_dialogue.instantiate()
+	current_dialogue.set_dialogue_path("grandpa_1")
 	
 	current_dialogue.get_child(0).on_dialogue_end.connect(dialogue_end)
 	dialogue_layer.add_child(current_dialogue)
@@ -74,7 +75,9 @@ func _process(delta: float) -> void:
 	if not second_dialogue_spawned and player_collision_area.has_overlapping_bodies() and gpa_collision_area.has_overlapping_bodies():
 		deactivate_scene()
 		
-		current_dialogue = home_dialogue.instantiate()
+		current_dialogue = base_dialogue.instantiate()
+		current_dialogue.set_dialogue_path("grandpa_2")
+	
 		current_dialogue.get_child(0).on_dialogue_end.connect(dialogue_end)
 		dialogue_layer.add_child(current_dialogue)
 		
@@ -83,6 +86,6 @@ func _process(delta: float) -> void:
 	if door_area.has_overlapping_bodies() and door_active:
 		door_glyph.show()
 		if Input.is_action_pressed("interact"):
-			print("GO_INSIDE")
+			SceneLoader.load_scene("res://event_locations/scenes/home/home_inside.tscn")
 	else:
 		door_glyph.hide()

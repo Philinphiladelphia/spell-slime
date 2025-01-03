@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://clb15tt0fftpi"
+path="res://.godot/imported/grandpa_2.clyde-171a8495a371ea3b31a7467becd4694e.res"
+
+[deps]
+
+source_file="res://clyde/examples/dialogues/grandpa_2.clyde"
+dest_files=["res://.godot/imported/grandpa_2.clyde-171a8495a371ea3b31a7467becd4694e.res"]
+
+[params]
+

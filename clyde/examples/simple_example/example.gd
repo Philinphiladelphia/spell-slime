@@ -11,6 +11,8 @@ signal on_dialogue_end
 
 var _dialogue
 
+var dialogue_path = 'pulp_with_blocks'
+
 var _external_persistence = {}
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,7 +26,7 @@ func _process(delta: float) -> void:
 
 func _ready():
 	_dialogue = ClydeDialogue.new()
-	_dialogue.load_dialogue('pulp_with_blocks')
+	_dialogue.load_dialogue(dialogue_path)
 
 	_dialogue.event_triggered.connect(_on_event_triggered)
 	_dialogue.variable_changed.connect(_on_variable_changed)

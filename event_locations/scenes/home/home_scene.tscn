@@ -1,7 +1,7 @@
 [gd_scene load_steps=319 format=4 uid="uid://dmj3p8g46opwx"]
 
 [ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="1_i7vbu"]
-[ext_resource type="Script" path="res://event_locations/scenes/home_controller.gd" id="1_qc7mf"]
+[ext_resource type="Script" path="res://event_locations/scenes/home/home_controller.gd" id="1_qc7mf"]
 [ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="1_vg5sg"]
 [ext_resource type="Texture2D" uid="uid://lmo50n6ivye0" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_clouds_far.png" id="2_hnk03"]
 [ext_resource type="Texture2D" uid="uid://cekxm4faltkg8" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_mountains_far.png" id="2_t1bsq"]
