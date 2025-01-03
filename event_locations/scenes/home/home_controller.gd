@@ -41,20 +41,26 @@ func _process(delta: float) -> void:
 		
 		if not gpa_collision_area.has_overlapping_bodies():
 			grandpa.is_active = true
+		else:
+			grandpa.is_active = false
 	
 		if dialogue_layer.dialogue_index == 1:
 			tutorial_layer.set_tutorial_text("hold and release left mouse to jump")
+			
+			if player_collision_area.has_overlapping_bodies() and gpa_collision_area.has_overlapping_bodies():	
+				dialogue_layer.play_next_dialogue()
+				
 		elif dialogue_layer.dialogue_index == 2:
-			door_active = true
 			tutorial_layer.set_tutorial_text("go to the door and press " + door_glyph.displayed_key + " to enter")
 			
-	if not door_active and player_collision_area.has_overlapping_bodies() and gpa_collision_area.has_overlapping_bodies():	
+			if door_area.has_overlapping_bodies() and door_active:
+				door_glyph.show()
+				if Input.is_action_pressed("interact"):
+					SceneLoader.load_scene("res://event_locations/scenes/home/home_inside.tscn")
+			else:
+				door_glyph.hide()
+
+
+func _on_dialogue_layer_dialogue_ended() -> void:
+	if dialogue_layer.dialogue_index == 2:
 		door_active = true
-		dialogue_layer.play_next_dialogue()
-			
-	if door_area.has_overlapping_bodies() and door_active:
-		door_glyph.show()
-		if Input.is_action_pressed("interact"):
-			SceneLoader.load_scene("res://event_locations/scenes/home/home_inside.tscn")
-	else:
-		door_glyph.hide()

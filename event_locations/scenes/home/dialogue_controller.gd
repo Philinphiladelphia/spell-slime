@@ -5,6 +5,8 @@ var has_active_dialogue: bool = false
 @export var dialogues: Array[String]
 var dialogue_index = 0
 
+signal dialogue_ended
+
 var base_dialogue = preload("res://clyde/base_dialogue.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -21,6 +23,8 @@ func play_next_dialogue():
 	dialogue_index += 1
 
 func clear_dialogue():
+	dialogue_ended.emit()
+	
 	for child in get_children():
 		child.queue_free()
 

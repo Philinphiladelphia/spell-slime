@@ -2847,5 +2847,6 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 
+[connection signal="dialogue_ended" from="dialogue_layer" to="." method="_on_dialogue_layer_dialogue_ended"]
 [connection signal="body_entered" from="gpa_collider" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="player_collider" to="." method="_on_area_2d_2_body_entered"]
