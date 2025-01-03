@@ -12,7 +12,7 @@ extends Node2D
 
 var time_since_last_jump: float = 0.0
 
-var is_active: bool = false
+@export var is_active: bool = false
 
 var slime_position: Vector2
 
