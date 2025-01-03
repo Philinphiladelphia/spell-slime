@@ -13,80 +13,45 @@ extends Node2D
 @export var door_area: Area2D
 @export var door_glyph: Node2D
 
-var base_dialogue = preload("res://clyde/base_dialogue.tscn")
-
-var is_active: bool = false
-
-var current_dialogue
-
-var second_dialogue_spawned: bool = false
-
-var player_collided: bool = false
-
 var door_active: bool = false
 
 @onready var pause_screen: PackedScene = preload("res://maaack/scenes/overlaid_menus/pause_menu.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	current_dialogue = base_dialogue.instantiate()
-	current_dialogue.set_dialogue_path("grandpa_1")
-	
-	current_dialogue.get_child(0).on_dialogue_end.connect(dialogue_end)
-	dialogue_layer.add_child(current_dialogue)
-	pass # Replace with function body.
-
-func activate_scene():
-	player.is_active = true
-	
-	if not second_dialogue_spawned:
-		grandpa.is_active = true
-		
-	if second_dialogue_spawned:
-		door_active = true
-		tutorial_layer.set_tutorial_text("go to the door and press " + door_glyph.displayed_key + " to enter")
-	else:
-		tutorial_layer.set_tutorial_text("hold and release left mouse to jump")
-		
-	is_active = true
-	cursor_radials.show()
-	
-func deactivate_scene():
-	player.is_active = false
-	grandpa.is_active = false
-	is_active = false
-	cursor_radials.hide()
-
-func dialogue_end():
-	activate_scene()
-	
-	for child in dialogue_layer.get_children():
-		child.queue_free()
+	dialogue_layer.play_next_dialogue()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not MouseGlobal.get_mouse_owned() and is_active:
-		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	
 	if Input.is_action_pressed("pause"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		var pause: Node = pause_screen.instantiate()
 		dialogue_layer.add_child(pause)
 		
-	if gpa_collision_area.has_overlapping_bodies():
+	if dialogue_layer.has_active_dialogue:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		cursor_radials.hide()
+		tutorial_layer.set_tutorial_text("")
+		player.is_active = false
 		grandpa.is_active = false
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+		cursor_radials.show()
+		player.is_active = true
 		
-	if not second_dialogue_spawned and player_collision_area.has_overlapping_bodies() and gpa_collision_area.has_overlapping_bodies():
-		deactivate_scene()
-		
-		current_dialogue = base_dialogue.instantiate()
-		current_dialogue.set_dialogue_path("grandpa_2")
+		if not gpa_collision_area.has_overlapping_bodies():
+			grandpa.is_active = true
 	
-		current_dialogue.get_child(0).on_dialogue_end.connect(dialogue_end)
-		dialogue_layer.add_child(current_dialogue)
-		
-		second_dialogue_spawned = true
-		
+		if dialogue_layer.dialogue_index == 1:
+			tutorial_layer.set_tutorial_text("hold and release left mouse to jump")
+		elif dialogue_layer.dialogue_index == 2:
+			door_active = true
+			tutorial_layer.set_tutorial_text("go to the door and press " + door_glyph.displayed_key + " to enter")
+			
+	if not door_active and player_collision_area.has_overlapping_bodies() and gpa_collision_area.has_overlapping_bodies():	
+		door_active = true
+		dialogue_layer.play_next_dialogue()
+			
 	if door_area.has_overlapping_bodies() and door_active:
 		door_glyph.show()
 		if Input.is_action_pressed("interact"):

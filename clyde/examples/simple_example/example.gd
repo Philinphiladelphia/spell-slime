@@ -15,16 +15,21 @@ var dialogue_path = 'pulp_with_blocks'
 
 var _external_persistence = {}
 
+var ended: bool = false
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		_get_next_dialogue_line()
 	
-	if get_global_rect().has_point(get_global_mouse_position()):
-		MouseGlobal.set_mouse_owned(true)
+	if not ended:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	else:
-		MouseGlobal.set_mouse_owned(false)
+	
+	#if get_global_rect().has_point(get_global_mouse_position()):
+		#MouseGlobal.set_mouse_owned(true)
+		#
+	#else:
+		#MouseGlobal.set_mouse_owned(false)
 
 
 func _ready():
@@ -46,6 +51,8 @@ func _get_next_dialogue_line():
 		_line_container.hide()
 		_options_container.hide()
 		_end_container.show()
+		ended = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		MouseGlobal.set_mouse_owned(false)
 		on_dialogue_end.emit()
 
