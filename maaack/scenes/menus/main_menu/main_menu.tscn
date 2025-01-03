@@ -10,3 +10,6 @@ script = ExtResource("2_x7ag5")
 game_scene_path = "res://maaack/scenes/game_scene/game_ui.tscn"
 options_packed_scene = ExtResource("3_e82kk")
 credits_packed_scene = ExtResource("4_q7aji")
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0"]
+text = "v0.1.0"

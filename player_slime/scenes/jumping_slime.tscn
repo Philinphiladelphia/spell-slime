@@ -232,6 +232,7 @@ vertex_interval = 9
 softness = 4.0
 radius = 8
 margin_offset_edge = 1.0
+mass = 0.3
 
 [node name="Skeleton2D" type="Skeleton2D" parent="SoftBody2D"]
 visible = false
@@ -305,6 +306,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-5" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(16.239, 40.3262)
 rotation = -1.37996
+scale = Vector2(1, 1)
 rest = Transform2D(0.18968, -0.981846, 0.981846, 0.18968, 16.239, 40.3262)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -332,7 +334,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-7" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(26.4921, 14.8706)
 rotation = -1.59423
-scale = Vector2(1, 1)
 rest = Transform2D(-0.0234328, -0.999725, 0.999725, -0.0234328, 26.4921, 14.8706)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -372,6 +373,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-10" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(26.1439, 40.3309)
 rotation = -1.50856
+scale = Vector2(1, 1)
 rest = Transform2D(0.062193, -0.998064, 0.998064, 0.062193, 26.1439, 40.3309)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -385,7 +387,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-11" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.8643, 8.24075)
 rotation = 1.58218
-scale = Vector2(1, 1)
 rest = Transform2D(-0.0113866, 0.999935, -0.999935, -0.0113866, 34.8643, 8.24075)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -399,6 +400,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-12" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.7876, 14.9772)
 rotation = 1.6274
+scale = Vector2(1, 1)
 rest = Transform2D(-0.0565738, 0.998398, -0.998398, -0.0565738, 34.7876, 14.9772)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -412,6 +414,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-13" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.2929, 23.7071)
 rotation = 1.52353
+scale = Vector2(1, 1)
 rest = Transform2D(0.0472503, 0.998883, -0.998883, 0.0472503, 34.2929, 23.7071)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -425,7 +428,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-14" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.641, 31.0667)
 rotation = 1.54843
-scale = Vector2(1, 1)
 rest = Transform2D(0.0223626, 0.99975, -0.99975, 0.0223626, 34.641, 31.0667)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -439,7 +441,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-15" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(34.8405, 39.9834)
 rotation = -1.59316
-scale = Vector2(1, 1)
 rest = Transform2D(-0.0223626, -0.99975, 0.99975, -0.0223626, 34.8405, 39.9834)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -466,7 +467,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-17" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(43.2929, 14.7071)
 rotation = 2.35619
-scale = Vector2(1, 1)
 rest = Transform2D(-0.707107, 0.707107, -0.707107, -0.707107, 43.2929, 14.7071)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -493,6 +493,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-19" type="Bone2D" parent="SoftBody2D/Skeleton2D"]
 position = Vector2(43.1294, 31.5079)
 rotation = 1.53901
+scale = Vector2(1, 1)
 rest = Transform2D(0.0317796, 0.999495, -0.999495, 0.0317796, 43.1294, 31.5079)
 auto_calculate_length_and_angle = false
 length = 9.0
@@ -571,7 +572,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-0" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(11.2437, 23.1117)
-mass = 0.1
+mass = 0.3
 metadata/idx = 0
 metadata/bone_name = &"Bone-0"
 
@@ -615,7 +616,7 @@ softness = 4.0
 
 [node name="Bone-1" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(11.2099, 31.7196)
-mass = 0.1
+mass = 0.3
 metadata/idx = 1
 metadata/bone_name = &"Bone-1"
 
@@ -659,7 +660,7 @@ softness = 4.0
 
 [node name="Bone-2" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(16.394, 12.8672)
-mass = 0.1
+mass = 0.3
 metadata/idx = 2
 metadata/bone_name = &"Bone-2"
 
@@ -710,7 +711,7 @@ softness = 4.0
 
 [node name="Bone-3" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(17.9872, 23.1592)
-mass = 0.1
+mass = 0.3
 metadata/idx = 3
 metadata/bone_name = &"Bone-3"
 
@@ -775,7 +776,7 @@ softness = 4.0
 
 [node name="Bone-4" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(17.9222, 31.6133)
-mass = 0.1
+mass = 0.3
 metadata/idx = 4
 metadata/bone_name = &"Bone-4"
 
@@ -840,7 +841,7 @@ softness = 4.0
 
 [node name="Bone-5" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(16.239, 40.3262)
-mass = 0.1
+mass = 0.3
 metadata/idx = 5
 metadata/bone_name = &"Bone-5"
 
@@ -884,7 +885,7 @@ softness = 4.0
 
 [node name="Bone-6" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(26.3355, 8.19203)
-mass = 0.1
+mass = 0.3
 metadata/idx = 6
 metadata/bone_name = &"Bone-6"
 
@@ -928,7 +929,7 @@ softness = 4.0
 
 [node name="Bone-7" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(26.4921, 14.8706)
-mass = 0.1
+mass = 0.3
 metadata/idx = 7
 metadata/bone_name = &"Bone-7"
 
@@ -993,7 +994,7 @@ softness = 4.0
 
 [node name="Bone-8" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(26.9333, 23.359)
-mass = 0.1
+mass = 0.3
 metadata/idx = 8
 metadata/bone_name = &"Bone-8"
 
@@ -1065,7 +1066,7 @@ softness = 4.0
 
 [node name="Bone-9" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(26.7071, 31.2929)
-mass = 0.1
+mass = 0.3
 metadata/idx = 9
 metadata/bone_name = &"Bone-9"
 
@@ -1137,7 +1138,7 @@ softness = 4.0
 
 [node name="Bone-10" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(26.1439, 40.3309)
-mass = 0.1
+mass = 0.3
 metadata/idx = 10
 metadata/bone_name = &"Bone-10"
 
@@ -1188,7 +1189,7 @@ softness = 4.0
 
 [node name="Bone-11" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(34.8643, 8.24075)
-mass = 0.1
+mass = 0.3
 metadata/idx = 11
 metadata/bone_name = &"Bone-11"
 
@@ -1239,7 +1240,7 @@ softness = 4.0
 
 [node name="Bone-12" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(34.7876, 14.9772)
-mass = 0.1
+mass = 0.3
 metadata/idx = 12
 metadata/bone_name = &"Bone-12"
 
@@ -1311,7 +1312,7 @@ softness = 4.0
 
 [node name="Bone-13" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(34.2929, 23.7071)
-mass = 0.1
+mass = 0.3
 metadata/idx = 13
 metadata/bone_name = &"Bone-13"
 
@@ -1383,7 +1384,7 @@ softness = 4.0
 
 [node name="Bone-14" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(34.641, 31.0667)
-mass = 0.1
+mass = 0.3
 metadata/idx = 14
 metadata/bone_name = &"Bone-14"
 
@@ -1455,7 +1456,7 @@ softness = 4.0
 
 [node name="Bone-15" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(34.8405, 39.9834)
-mass = 0.1
+mass = 0.3
 metadata/idx = 15
 metadata/bone_name = &"Bone-15"
 
@@ -1506,7 +1507,7 @@ softness = 4.0
 
 [node name="Bone-16" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(44.4349, 8.07503)
-mass = 0.1
+mass = 0.3
 metadata/idx = 16
 metadata/bone_name = &"Bone-16"
 
@@ -1550,7 +1551,7 @@ softness = 4.0
 
 [node name="Bone-17" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(43.2929, 14.7071)
-mass = 0.1
+mass = 0.3
 metadata/idx = 17
 metadata/bone_name = &"Bone-17"
 
@@ -1615,7 +1616,7 @@ softness = 4.0
 
 [node name="Bone-18" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(43.0228, 23.2124)
-mass = 0.1
+mass = 0.3
 metadata/idx = 18
 metadata/bone_name = &"Bone-18"
 
@@ -1687,7 +1688,7 @@ softness = 4.0
 
 [node name="Bone-19" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(43.1294, 31.5079)
-mass = 0.1
+mass = 0.3
 metadata/idx = 19
 metadata/bone_name = &"Bone-19"
 
@@ -1759,7 +1760,7 @@ softness = 4.0
 
 [node name="Bone-20" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(43.3979, 39.9516)
-mass = 0.1
+mass = 0.3
 metadata/idx = 20
 metadata/bone_name = &"Bone-20"
 
@@ -1810,7 +1811,7 @@ softness = 4.0
 
 [node name="Bone-21" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(51.3858, 14.5032)
-mass = 0.1
+mass = 0.3
 metadata/idx = 21
 metadata/bone_name = &"Bone-21"
 
@@ -1854,7 +1855,7 @@ softness = 4.0
 
 [node name="Bone-22" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(51.644, 23.1232)
-mass = 0.1
+mass = 0.3
 metadata/idx = 22
 metadata/bone_name = &"Bone-22"
 
@@ -1905,7 +1906,7 @@ softness = 4.0
 
 [node name="Bone-23" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(51.7978, 31.6944)
-mass = 0.1
+mass = 0.3
 metadata/idx = 23
 metadata/bone_name = &"Bone-23"
 
@@ -1956,7 +1957,7 @@ softness = 4.0
 
 [node name="Bone-24" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(50.8135, 39.8824)
-mass = 0.1
+mass = 0.3
 metadata/idx = 24
 metadata/bone_name = &"Bone-24"
 
