@@ -1,4 +1,4 @@
-[gd_scene load_steps=320 format=4 uid="uid://dmj3p8g46opwx"]
+[gd_scene load_steps=321 format=4 uid="uid://dmj3p8g46opwx"]
 
 [ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="1_i7vbu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/home_controller.gd" id="1_qc7mf"]
@@ -132,6 +132,7 @@
 [ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://event_locations/assets/hair.png" id="130_k3rwp"]
 [ext_resource type="Texture2D" uid="uid://yep7lw2tq7mf" path="res://event_locations/assets/eyes.png" id="131_355gv"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="132_evyiw"]
+[ext_resource type="Script" path="res://event_locations/scenes/home/dialogue_controller.gd" id="133_b1qht"]
 [ext_resource type="AudioStream" uid="uid://csrbj67lgficj" path="res://music/assets/Stevia Sphere - green ideas/Stevia Sphere - green ideas - 11 birds singing - acoustic demo (bonus track).mp3" id="133_u6doc"]
 [ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="133_w8vil"]
 [ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="134_6e3ea"]
@@ -2748,6 +2749,8 @@ visible = false
 position = Vector2(-465, -111)
 
 [node name="dialogue_layer" type="CanvasLayer" parent="."]
+script = ExtResource("133_b1qht")
+dialogues = Array[String](["grandpa_1", "grandpa_2"])
 
 [node name="gpa_collider" type="Area2D" parent="."]
 position = Vector2(-45, 72)
