@@ -1,6 +1,7 @@
-[gd_scene load_steps=309 format=4 uid="uid://dmj3p8g46opwx"]
+[gd_scene load_steps=319 format=4 uid="uid://dmj3p8g46opwx"]
 
 [ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="1_i7vbu"]
+[ext_resource type="Script" path="res://event_locations/scenes/home_controller.gd" id="1_qc7mf"]
 [ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="1_vg5sg"]
 [ext_resource type="Texture2D" uid="uid://lmo50n6ivye0" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_clouds_far.png" id="2_hnk03"]
 [ext_resource type="Texture2D" uid="uid://cekxm4faltkg8" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_mountains_far.png" id="2_t1bsq"]
@@ -129,7 +130,14 @@
 [ext_resource type="Texture2D" uid="uid://dkpdetaukoyrh" path="res://event_locations/assets/beard.png" id="128_7w8so"]
 [ext_resource type="PackedScene" uid="uid://cr40nhm4sybj4" path="res://player_slime/scenes/jumping_slime.tscn" id="128_75w3n"]
 [ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://event_locations/assets/hair.png" id="130_k3rwp"]
+[ext_resource type="Texture2D" uid="uid://yep7lw2tq7mf" path="res://event_locations/assets/eyes.png" id="131_355gv"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="132_evyiw"]
+[ext_resource type="AudioStream" uid="uid://csrbj67lgficj" path="res://music/assets/Stevia Sphere - green ideas/Stevia Sphere - green ideas - 11 birds singing - acoustic demo (bonus track).mp3" id="133_u6doc"]
+[ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="133_w8vil"]
 [ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="134_6e3ea"]
+[ext_resource type="PackedScene" uid="uid://duksl7grt8udr" path="res://ui/scenes/input_glyph.tscn" id="136_vhimu"]
+[ext_resource type="Texture2D" uid="uid://dxuu5p3jcri3b" path="res://event_locations/assets/player_mouth.png" id="137_5i8xi"]
+[ext_resource type="Texture2D" uid="uid://yjfpq0gxl6px" path="res://event_locations/assets/player_eyes.png" id="137_q42be"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uxhj"]
 texture = ExtResource("21_51lk4")
@@ -2425,14 +2433,30 @@ sources/3 = SubResource("TileSetAtlasSource_csape")
 sources/4 = SubResource("TileSetAtlasSource_rsqe3")
 sources/5 = SubResource("TileSetAtlasSource_77wki")
 
-[node name="HomeScene" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6ohl"]
+size = Vector2(2000, 2000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xxvg"]
+size = Vector2(38, 64)
+
+[node name="HomeScene" type="Node2D" node_paths=PackedStringArray("camera_node", "dialogue_layer", "grandpa", "player", "cursor_radials", "gpa_collision_area", "player_collision_area", "door_area", "door_glyph")]
 texture_filter = 1
+script = ExtResource("1_qc7mf")
+camera_node = NodePath("Camera2D")
+dialogue_layer = NodePath("dialogue_layer")
+grandpa = NodePath("grandpa")
+player = NodePath("player")
+cursor_radials = NodePath("CursorRadials")
+gpa_collision_area = NodePath("gpa_collider")
+player_collision_area = NodePath("player_collider")
+door_area = NodePath("door_collider")
+door_glyph = NodePath("InputGlyph")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("slime_to_follow")]
 position = Vector2(126, 55)
 zoom = Vector2(2, 2)
 script = ExtResource("1_vg5sg")
-slime_to_follow = NodePath("../controller")
+slime_to_follow = NodePath("../player")
 
 [node name="sky" type="Sprite2D" parent="Camera2D"]
 z_index = -1
@@ -2698,25 +2722,94 @@ tile_set = SubResource("TileSet_78vye")
 [node name="grandpa" parent="." node_paths=PackedStringArray("decorations") instance=ExtResource("128_75w3n")]
 modulate = Color(0.44, 1, 0.496, 1)
 position = Vector2(-192, 81)
-decorations = [NodePath("../beard"), NodePath("../hair")]
-direction = Vector2(0.2, -1)
+decorations = [NodePath("../decorations/beard"), NodePath("../decorations/hair"), NodePath("../decorations/eyes")]
+direction = Vector2(0.4, -1)
 jump_interval = 4.0
 jump_power = 150.0
 
-[node name="beard" type="Sprite2D" parent="."]
+[node name="player" parent="." node_paths=PackedStringArray("decorations", "cursor_radials") instance=ExtResource("134_6e3ea")]
+position = Vector2(-300, 81)
+decorations = [NodePath("../decorations/player_eyes"), NodePath("../decorations/player_mouth")]
+max_jump_power = 200.0
+charge_rate = 100.0
+min_jump_interval = 0.75
+cursor_radials = NodePath("../CursorRadials")
+upright_force = 1000
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("132_evyiw")]
+stream = ExtResource("133_u6doc")
+volume_db = -18.586
+bus = &"Master"
+
+[node name="CursorRadials" parent="." instance=ExtResource("133_w8vil")]
+visible = false
+position = Vector2(-465, -111)
+
+[node name="dialogue_layer" type="CanvasLayer" parent="."]
+
+[node name="gpa_collider" type="Area2D" parent="."]
+position = Vector2(-45, 72)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gpa_collider"]
+position = Vector2(3411, -347)
+shape = SubResource("RectangleShape2D_t6ohl")
+
+[node name="player_collider" type="Area2D" parent="."]
+position = Vector2(-45, 72)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_collider"]
+position = Vector2(3411, -347)
+shape = SubResource("RectangleShape2D_t6ohl")
+
+[node name="door_collider" type="Area2D" parent="."]
+position = Vector2(-45, 72)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door_collider"]
+position = Vector2(2467, 82)
+shape = SubResource("RectangleShape2D_2xxvg")
+
+[node name="InputGlyph" parent="." instance=ExtResource("136_vhimu")]
+visible = false
+position = Vector2(2422, 107)
+scale = Vector2(0.4, 0.4)
+
+[node name="decorations" type="Node" parent="."]
+
+[node name="beard" type="Sprite2D" parent="decorations"]
 modulate = Color(1, 1, 1, 0.615686)
 position = Vector2(-161, 112)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("128_7w8so")
 
-[node name="hair" type="Sprite2D" parent="."]
+[node name="hair" type="Sprite2D" parent="decorations"]
 modulate = Color(1, 1, 1, 0.615686)
 position = Vector2(-161, 112)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("130_k3rwp")
 
-[node name="controller" parent="." instance=ExtResource("134_6e3ea")]
-position = Vector2(-300, 81)
-max_jump_power = 200.0
-charge_rate = 100.0
-min_jump_interval = 0.75
+[node name="eyes" type="Sprite2D" parent="decorations"]
+modulate = Color(1, 1, 1, 0.670588)
+position = Vector2(-161, 112)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("131_355gv")
+
+[node name="player_eyes" type="Sprite2D" parent="decorations"]
+modulate = Color(1, 1, 1, 0.670588)
+position = Vector2(-267, 110)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("137_q42be")
+
+[node name="player_mouth" type="Sprite2D" parent="decorations"]
+modulate = Color(1, 1, 1, 0.670588)
+position = Vector2(-267, 108)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("137_5i8xi")
+
+[connection signal="body_entered" from="gpa_collider" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="player_collider" to="." method="_on_area_2d_2_body_entered"]

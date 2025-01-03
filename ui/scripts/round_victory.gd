@@ -43,11 +43,14 @@ var random_retry: int = 0
 var random_retry_max = 3
 
 func _process(delta: float) -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
 	if items_selected >= allowable_items && not round_ending:
 		round_ending = true
 		$round_end_timer.start()
 
 func _ready() -> void:
+	
 	# seed should be
 	btn_slot_1.pressed.connect(_on_slot_1_pressed)
 	btn_slot_2.pressed.connect(_on_slot_2_pressed)

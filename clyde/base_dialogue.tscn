@@ -11,12 +11,14 @@ theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
-script = ExtResource("1_c83km")
 
 [node name="Panel" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0.486275)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+mouse_filter = 1
+script = ExtResource("1_c83km")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 2
@@ -66,4 +68,4 @@ text = "Dialogue ended
 layout_mode = 2
 text = "Restart"
 
-[connection signal="pressed" from="Panel/MarginContainer/dialogue_ended/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/dialogue_ended/restart" to="Panel" method="_on_restart_pressed"]

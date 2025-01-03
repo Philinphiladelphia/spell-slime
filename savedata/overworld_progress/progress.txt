@@ -1,3 +1,3 @@
-[NodePath("WorldmapGraph"), 1, {
-NodePath("WorldmapGraph"): [10, 1, 1, 10, 10, 10, 0, 10, 0, 10, 0, 0, 0, 0, 0, 0]
-}, Vector2(-1634, -182)]
+[NodePath("WorldmapGraph"), 10, {
+NodePath("WorldmapGraph"): [10, 10, 1, 10, 10, 10, 0, 10, 10, 10, 1, 0, 0, 0, 0, 0]
+}, Vector2(-1134, -182)]

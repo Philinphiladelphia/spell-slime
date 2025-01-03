@@ -47,6 +47,8 @@ func load_scene(scene_path : String) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	
 	var tower_element: int = 114 # plant
 	
 	powderviewport.powder_instance.health_element = 20

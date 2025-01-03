@@ -1,15 +1,26 @@
-extends MarginContainer
+extends PanelContainer
 
 # This is a simple example using the ClydeDialogue class.
 # No helpers required.
 
-@onready var _line_container = $Panel/MarginContainer/line
-@onready var _options_container = $Panel/MarginContainer/options
-@onready var _end_container = $Panel/MarginContainer/dialogue_ended
+@onready var _line_container = $MarginContainer/line
+@onready var _options_container = $MarginContainer/options
+@onready var _end_container = $MarginContainer/dialogue_ended
+
+signal on_dialogue_end
 
 var _dialogue
 
 var _external_persistence = {}
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if get_global_rect().has_point(get_global_mouse_position()):
+		MouseGlobal.set_mouse_owned(true)
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		MouseGlobal.set_mouse_owned(false)
+
 
 func _ready():
 	_dialogue = ClydeDialogue.new()
@@ -21,14 +32,14 @@ func _ready():
 	_dialogue.on_external_variable_fetch(_on_external_variable_fetch)
 	_dialogue.on_external_variable_update(_on_external_variable_update)
 
-
 func _get_next_dialogue_line():
 	var content = _dialogue.get_content()
 	if content.type == "end":
 		_line_container.hide()
 		_options_container.hide()
 		_end_container.show()
-		return
+		MouseGlobal.set_mouse_owned(false)
+		on_dialogue_end.emit()
 
 	if content.type == 'line':
 		_set_up_line(content)
@@ -45,7 +56,7 @@ func _set_up_line(content):
 	_line_container.get_node("text").text = content.text
 
 
-func _set_up_options(options):
+func _set_up_options(options: Dictionary):
 	for c in _options_container.get_node("items").get_children():
 		c.queue_free()
 
@@ -54,6 +65,8 @@ func _set_up_options(options):
 	_options_container.get_node("speaker").visible = _options_container.get_node("speaker").text != ""
 
 	var index = 0
+	if options["type"] == "end":
+		return
 	for option in options.options:
 		var btn = Button.new()
 		btn.text = option.label
