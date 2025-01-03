@@ -1,4 +1,4 @@
-[gd_scene load_steps=319 format=4 uid="uid://dmj3p8g46opwx"]
+[gd_scene load_steps=320 format=4 uid="uid://dmj3p8g46opwx"]
 
 [ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="1_i7vbu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/home_controller.gd" id="1_qc7mf"]
@@ -138,6 +138,7 @@
 [ext_resource type="PackedScene" uid="uid://duksl7grt8udr" path="res://ui/scenes/input_glyph.tscn" id="136_vhimu"]
 [ext_resource type="Texture2D" uid="uid://dxuu5p3jcri3b" path="res://event_locations/assets/player_mouth.png" id="137_5i8xi"]
 [ext_resource type="Texture2D" uid="uid://yjfpq0gxl6px" path="res://event_locations/assets/player_eyes.png" id="137_q42be"]
+[ext_resource type="Script" path="res://event_locations/scenes/home/tutorial_text.gd" id="139_maqv3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uxhj"]
 texture = ExtResource("21_51lk4")
@@ -2439,11 +2440,12 @@ size = Vector2(2000, 2000)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xxvg"]
 size = Vector2(38, 64)
 
-[node name="HomeScene" type="Node2D" node_paths=PackedStringArray("camera_node", "dialogue_layer", "grandpa", "player", "cursor_radials", "gpa_collision_area", "player_collision_area", "door_area", "door_glyph")]
+[node name="HomeScene" type="Node2D" node_paths=PackedStringArray("camera_node", "dialogue_layer", "tutorial_layer", "grandpa", "player", "cursor_radials", "gpa_collision_area", "player_collision_area", "door_area", "door_glyph")]
 texture_filter = 1
 script = ExtResource("1_qc7mf")
 camera_node = NodePath("Camera2D")
 dialogue_layer = NodePath("dialogue_layer")
+tutorial_layer = NodePath("tutorial_layer")
 grandpa = NodePath("grandpa")
 player = NodePath("player")
 cursor_radials = NodePath("CursorRadials")
@@ -2810,6 +2812,37 @@ modulate = Color(1, 1, 1, 0.670588)
 position = Vector2(-267, 108)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("137_5i8xi")
+
+[node name="tutorial_layer" type="CanvasLayer" parent="."]
+script = ExtResource("139_maqv3")
+
+[node name="Control" type="Control" parent="tutorial_layer"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="tutorial_layer/Control"]
+modulate = Color(1, 1, 1, 0.666667)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.5
+offset_top = -25.0
+offset_right = 105.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="gpa_collider" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="player_collider" to="." method="_on_area_2d_2_body_entered"]

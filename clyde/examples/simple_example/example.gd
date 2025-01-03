@@ -33,6 +33,9 @@ func _ready():
 
 	_dialogue.on_external_variable_fetch(_on_external_variable_fetch)
 	_dialogue.on_external_variable_update(_on_external_variable_update)
+	
+	# skip default text
+	_get_next_dialogue_line()
 
 func _get_next_dialogue_line():
 	var content = _dialogue.get_content()
