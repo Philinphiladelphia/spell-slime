@@ -1,29 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqs3x24f0ntpj"]
+[gd_scene load_steps=3 format=3 uid="uid://dqs3x24f0ntpj"]
 
 [ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_game_template/base/scenes/credits/credits.tscn" id="1_3worg"]
-[ext_resource type="Theme" uid="uid://baaib8wk3l0l1" path="res://super_pixel/ui/themes/spellslime_theme.tres" id="2_iilgx"]
 [ext_resource type="Script" path="res://maaack/scenes/credits/credits.gd" id="2_veaf0"]
 
 [node name="Credits" instance=ExtResource("1_3worg")]
-theme = ExtResource("2_iilgx")
 script = ExtResource("2_veaf0")
 attribution_file_path = "res://maaack/ATTRIBUTION.md"
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
-text = "[center][font_size=48]Collaborators[/font_size]
+text = "[center]
+[font_size=32]Game Design and Programming[/font_size]
+Philip Jones
 
-[font_size=32]Role[/font_size]
-Person 1  
-Person 2  
-[url=]Person w/ Link[/url]  
+[font_size=48]Collaborators[/font_size]
 
+[font_size=32]Branding[/font_size]
+Michelle Mendez Glasson
 
 [font_size=48]Sourced / Unaffiliated[/font_size]
-[font_size=32]Asset Type[/font_size]
-[font_size=24]Use Case[/font_size]
-Author: [url=]Name[/url]  
-Source: [url=]Domain : webpage.html[/url]  
-License: [url=]License[/url]
+[font_size=32]Music[/font_size]
+[font_size=24]Opening Theme[/font_size]
+Song: The Elements
+Author: Tom Lehrer
+Source: [url=https://tomlehrersongs.com/]tomlehrersongs.com[/url]  
+License: [url=https://tomlehrersongs.com/disclaimer/]Public Domain[/url]
+
+[font_size=24]Gameplay[/font_size]
+Author: Stevia Sphere
+Source: [url=https://steviasphere.bandcamp.com/]steviasphere.bandcamp.com[/url]  
+License: [url=https://steviasphere.bandcamp.com/]Creative Commons Attribution[/url]
+
+[font_size=32]Art[/font_size]
+Author: (UnTied Games)[https://untiedgames.itch.io/]
+Source: [url=https://untiedgames.itch.io/]untiedgames.itch.io[/url]  
+License: [url=http://untiedgames.com/files/license.txt]Public License[/url]
 
 
 [font_size=48]Tools[/font_size]
@@ -37,8 +47,13 @@ Author: [url=https://github.com/torvalds]Linus Torvalds[/url]
 Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
 License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
 
+[font_size=24]The Powder Toy[/font_size]
+Author: [url=https://github.com/torvalds]Stanislaw K Skowronek[/url]  
+Source: [url=https://github.com/The-Powder-Toy/The-Powder-Toy]The Powder Toy[/url]  
+License: [url=https://opensource.org/licenses/GPL-2.0
+
 [font_size=24]Godot Game Template[/font_size]
-Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
+Author: [Marek Belski and contributors](https://github.com/Maaack/Godot-Game-Template/graphs/contributors]GNU General Public License[/url]  
 Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
 License: [url=LICENSE.txt]MIT License[/url]  
 [/center]"

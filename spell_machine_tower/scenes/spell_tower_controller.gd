@@ -14,6 +14,8 @@ var is_dead: bool = false
 @export var tower_light: PointLight2D
 @export var light_energy = 0.6
 
+@export var cursor_radials: Node2D
+
 @onready var spellward_health_bar: Node = $CanvasLayer/SpellwardHealthBar
 @onready var tower_health_bar: Node = $CanvasLayer/TowerHealthBar
 @onready var machine_gun_cooldown_bar: Node = $CanvasLayer/MachineGunCooldown
@@ -97,6 +99,7 @@ func apply_combined_stats() -> void:
 		$spell_machine_tower/main_gun.secondary_mass = stats.secondary_mass
 		$spell_machine_tower/main_gun.secondary_firing_interval = stats.secondary_firing_interval
 		
+		cursor_radials.set_rad_1_min_max(0, stats.primary_cooldown_max)
 		machine_gun_cooldown_bar.init_health(stats.primary_cooldown_max)
 		harpoon_cooldown_bar.init_health(stats.secondary_firing_interval * 100)
 
@@ -141,6 +144,8 @@ func apply_tower_damage(amount: float) -> void:
 
 func _process(delta: float) -> void:
 	machine_gun_cooldown_bar._set_health($spell_machine_tower/main_gun.primary_projectiles_fired)
+	cursor_radials.set_rad_1_value($spell_machine_tower/main_gun.primary_projectiles_fired)
+
 
 	if $spell_machine_tower/main_gun.secondary_firing:
 		harpoon_cooldown_bar._set_health($spell_machine_tower/main_gun.secondary_firing_interval * 100)

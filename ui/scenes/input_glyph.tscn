@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://duksl7grt8udr"]
+
+[ext_resource type="Script" path="res://ui/scripts/input_glyph.gd" id="1_du7af"]
+[ext_resource type="Texture2D" uid="uid://ivjxbbcublcj" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/notification/notification_empty.png" id="2_f756v"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_53pi2"]
+action = &"interact"
+
+[node name="InputGlyph" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_du7af")
+input = SubResource("InputEventAction_53pi2")
+
+[node name="NotificationEmpty" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("2_f756v")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -8.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 13.0
+text = "E"

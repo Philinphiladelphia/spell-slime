@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dkmnhwrbi6fme"]
+[gd_scene load_steps=23 format=3 uid="uid://dkmnhwrbi6fme"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_pru1i"]
 [ext_resource type="PackedScene" uid="uid://e6og876glwxo" path="res://background/scenes/parallaxes/sunrise_maxxfield_parrish.tscn" id="2_wvtds"]
@@ -9,18 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="7_awnss"]
 [ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="8_p7o26"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="9_a1rvl"]
-[ext_resource type="Script" path="res://addons/rhythm_notifier/rhythm_notifier.gd" id="10_dq2if"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="11_wqyd6"]
 [ext_resource type="AudioStream" uid="uid://y4gp0h428vu1" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 05 Synth Gunk.mp3" id="12_suvrm"]
 [ext_resource type="PackedScene" uid="uid://b3h10qjq6e2ex" path="res://levels/moonswept_fields/day/fireflies/firefly_1.tscn" id="15_ugamj"]
 [ext_resource type="PackedScene" uid="uid://u8yw78ho6f4q" path="res://levels/moonswept_fields/day/fireflies/firefly_2.tscn" id="16_1o0qb"]
 [ext_resource type="PackedScene" uid="uid://4ckixkubpfc" path="res://levels/moonswept_fields/day/fireflies/firefly_3.tscn" id="17_w0ofe"]
-[ext_resource type="Script" path="res://levels/scripts/mouse_follower_node.gd" id="18_7sjpc"]
 [ext_resource type="PackedScene" uid="uid://cjt34jc6gjopc" path="res://levels/moonswept_fields/day/fireflies/firefly_4.tscn" id="18_unfp7"]
 [ext_resource type="PackedScene" uid="uid://ckj06wijqcgb0" path="res://levels/moonswept_fields/day/fireflies/firefly_5.tscn" id="19_0gng6"]
 [ext_resource type="PackedScene" uid="uid://chufmtlsuka0f" path="res://slimes/environment/foreground/branding_platform.tscn" id="19_jy6e1"]
 [ext_resource type="PackedScene" uid="uid://178vxq4glcg1" path="res://levels/moonswept_fields/day/fireflies/firefly_6.tscn" id="20_0rs8i"]
 [ext_resource type="PackedScene" uid="uid://ckmc8fj2h55tl" path="res://levels/moonswept_fields/day/fireflies/firefly_7.tscn" id="21_foddv"]
+[ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="21_n0wid"]
 [ext_resource type="PackedScene" uid="uid://v6ksqa48mrxp" path="res://levels/moonswept_fields/day/fireflies/firefly_8.tscn" id="22_43mgr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28xsr"]
@@ -37,8 +36,9 @@ powderviewport = NodePath("SpellMachineTower/PowderViewport")
 z_index = -5
 position = Vector2(75, -4193)
 
-[node name="SpellMachineTower" parent="." instance=ExtResource("3_nn054")]
+[node name="SpellMachineTower" parent="." node_paths=PackedStringArray("cursor_radials") instance=ExtResource("3_nn054")]
 position = Vector2(-3216, -2504)
+cursor_radials = NodePath("../CursorRadials")
 
 [node name="PowderViewport" parent="SpellMachineTower" instance=ExtResource("6_trtlv")]
 position = Vector2(-1379, -2196)
@@ -93,19 +93,10 @@ script = ExtResource("9_a1rvl")
 spawntimer = NodePath("../../slime_spawn_timer")
 slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_water_slimes.json"
 
-[node name="RhythmNotifier" type="Node" parent="." node_paths=PackedStringArray("audio_stream_player")]
-script = ExtResource("10_dq2if")
-bpm = 114.0
-beat_length = 0.526316
-audio_stream_player = NodePath("../BackgroundMusicPlayer")
-
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("11_wqyd6")]
 stream = ExtResource("12_suvrm")
 volume_db = -18.586
 bus = &"Master"
-
-[node name="mouse_follower_node" type="Node2D" parent="."]
-script = ExtResource("18_7sjpc")
 
 [node name="slime_spawn_timer" type="Timer" parent="."]
 one_shot = true
@@ -114,39 +105,44 @@ one_shot = true
 position = Vector2(288.001, -615)
 scale = Vector2(3, 3.03)
 
-[node name="Firefly1" parent="." instance=ExtResource("15_ugamj")]
+[node name="fireflies" type="Node2D" parent="."]
+
+[node name="Firefly1" parent="fireflies" instance=ExtResource("15_ugamj")]
 position = Vector2(-6040, -2523)
 scale = Vector2(4, 4)
 
-[node name="Firefly2" parent="." instance=ExtResource("16_1o0qb")]
+[node name="Firefly2" parent="fireflies" instance=ExtResource("16_1o0qb")]
 position = Vector2(-5503, -2723)
 scale = Vector2(4, 4)
 
-[node name="Firefly3" parent="." instance=ExtResource("17_w0ofe")]
+[node name="Firefly3" parent="fireflies" instance=ExtResource("17_w0ofe")]
 position = Vector2(-6307, -2945)
 scale = Vector2(4, 4)
 
-[node name="Firefly4" parent="." instance=ExtResource("18_unfp7")]
+[node name="Firefly4" parent="fireflies" instance=ExtResource("18_unfp7")]
 position = Vector2(-197, -3015)
 scale = Vector2(4, 4)
 
-[node name="Firefly5" parent="." instance=ExtResource("19_0gng6")]
+[node name="Firefly5" parent="fireflies" instance=ExtResource("19_0gng6")]
 position = Vector2(-1191, -3096)
 scale = Vector2(4, 4)
 
-[node name="Firefly6" parent="." instance=ExtResource("20_0rs8i")]
+[node name="Firefly6" parent="fireflies" instance=ExtResource("20_0rs8i")]
 position = Vector2(-1066, -2399)
 scale = Vector2(4, 4)
 
-[node name="Firefly7" parent="." instance=ExtResource("21_foddv")]
+[node name="Firefly7" parent="fireflies" instance=ExtResource("21_foddv")]
 position = Vector2(236, -2538)
 scale = Vector2(4, 4)
 
-[node name="Firefly8" parent="." instance=ExtResource("22_43mgr")]
+[node name="Firefly8" parent="fireflies" instance=ExtResource("22_43mgr")]
 position = Vector2(-442, -2805)
 scale = Vector2(4, 4)
 
-[connection signal="beat" from="RhythmNotifier" to="slime_tracker" method="_on_rhythm_notifier_beat"]
+[node name="CursorRadials" parent="." instance=ExtResource("21_n0wid")]
+position = Vector2(-6113, -4573)
+scale = Vector2(10, 10)
+
 [connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner1" method="_on_slime_spawn_timer_timeout"]
 [connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner2" method="_on_slime_spawn_timer_timeout"]
 

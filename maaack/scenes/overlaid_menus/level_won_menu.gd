@@ -3,6 +3,9 @@ extends LevelWonMenu
 @onready var rewards_screen = preload("res://ui/scenes/rewards_screen.tscn")
 @export_file("*.tscn") var main_menu_scene : String
 
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 func _on_continue_pressed() -> void:
 	var rewards: Node = rewards_screen.instantiate()
 	#rewards.global_position = camera_node.global_position
