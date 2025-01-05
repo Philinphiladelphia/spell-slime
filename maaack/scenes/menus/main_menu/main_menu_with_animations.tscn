@@ -372,14 +372,14 @@ graph_offset = Vector2(-180.277, 49)
 offsets = PackedFloat32Array(0, 0.233449, 0.756098, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.541176, 1, 1, 1, 0.627451, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_neuxr"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ilqux"]
 gradient = SubResource("Gradient_bonb6")
 
 [sub_resource type="Curve" id="Curve_xplvu"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.487421, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_cuuos"]
+[sub_resource type="CurveTexture" id="CurveTexture_7ytbn"]
 curve = SubResource("Curve_xplvu")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hwgd4"]
@@ -391,8 +391,8 @@ angle_max = 720.0
 gravity = Vector3(0, -15, 0)
 scale_min = 0.1
 scale_max = 0.25
-scale_curve = SubResource("CurveTexture_cuuos")
-color_ramp = SubResource("GradientTexture1D_neuxr")
+scale_curve = SubResource("CurveTexture_7ytbn")
+color_ramp = SubResource("GradientTexture1D_ilqux")
 
 [sub_resource type="LabelSettings" id="LabelSettings_pu5s1"]
 font_size = 71

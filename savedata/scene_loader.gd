@@ -6,7 +6,7 @@ func _ready() -> void:
 	pass
 	
 func load_overworld():
-	SceneLoader.load_scene("res://overworld/scenes/base_overworld.tscn")
+	SceneLoader.load_scene("res://event_locations/scenes/home/home_scene.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

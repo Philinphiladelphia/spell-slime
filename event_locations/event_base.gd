@@ -13,22 +13,17 @@ func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("pause"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		var pause: Node = pause_screen.instantiate()
-		dialogue_layer.add_child(pause)
-		
+func _process(delta: float) -> void:		
 	if dialogue_layer.has_active_dialogue:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		cursor_radials.hide()
-		tutorial_layer.set_tutorial_text("")
 		player.is_active = false
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		cursor_radials.show()
 		player.is_active = true
-
-
-func _on_dialogue_layer_dialogue_ended() -> void:
-	pass
+		
+	if Input.is_action_pressed("pause"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		var pause: Node = pause_screen.instantiate()
+		dialogue_layer.add_child(pause)

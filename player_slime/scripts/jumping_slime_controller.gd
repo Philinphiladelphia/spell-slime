@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var softbody: SoftBody2D
-@export var decorations: Array[Sprite2D]
+@export var decorations: Array[Node2D]
 
 @export var direction: Vector2 = Vector2(1,1)
 @export var jump_interval: float = 2.0
