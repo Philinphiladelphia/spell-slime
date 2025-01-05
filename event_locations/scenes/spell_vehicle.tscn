@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://2fmv1jgr31nx"]
+[gd_scene load_steps=22 format=3 uid="uid://2fmv1jgr31nx"]
 
+[ext_resource type="Script" path="res://event_locations/scenes/spell_vehicle.gd" id="1_dblmh"]
 [ext_resource type="Shader" path="res://shaders/scripts/pixelate.gdshader" id="1_l4wj2"]
 [ext_resource type="Texture2D" uid="uid://dkxnnxp8mv4t4" path="res://spell_machine_tower/assets/gears/510281256.png" id="1_y5ewo"]
 [ext_resource type="Script" path="res://event_locations/scripts/rotate.gd" id="2_785ri"]
@@ -34,7 +35,10 @@ radius = 36.2215
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kk0q5"]
 size = Vector2(3000, 400)
 
-[node name="SpellVehicle" type="Node2D"]
+[node name="SpellVehicle" type="Node2D" node_paths=PackedStringArray("gears", "gun")]
+script = ExtResource("1_dblmh")
+gears = [NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_4/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_5/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiny_wheel/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_3/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/central_wheel/PinJoint2D")]
+gun = NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 material = SubResource("ShaderMaterial_jkgrr")

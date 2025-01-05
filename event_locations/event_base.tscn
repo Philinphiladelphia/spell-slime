@@ -225,11 +225,10 @@ size = Vector2(8, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rb5sy"]
 size = Vector2(2000, 100)
 
-[node name="EventBase" type="Node2D" node_paths=PackedStringArray("dialogue_layer", "tutorial_layer", "grandpa", "player", "cursor_radials")]
+[node name="EventBase" type="Node2D" node_paths=PackedStringArray("dialogue_layer", "tutorial_layer", "player", "cursor_radials")]
 script = ExtResource("1_xkyxi")
 dialogue_layer = NodePath("dialogue_layer")
 tutorial_layer = NodePath("tutorial_layer")
-grandpa = NodePath("grandpa")
 player = NodePath("player")
 cursor_radials = NodePath("CursorRadials")
 

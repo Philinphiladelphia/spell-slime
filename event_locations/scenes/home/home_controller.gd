@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 			grandpa.is_active = false
 	
 		if dialogue_layer.dialogue_index == 1:
-			tutorial_layer.set_tutorial_text("hold and release left mouse to jump")
+			tutorial_layer.set_tutorial_text("hold and release left mouse to jump\nhelp grandpa get home")
 			
 			if player_collision_area.has_overlapping_bodies() and gpa_collision_area.has_overlapping_bodies():	
 				dialogue_layer.play_next_dialogue()

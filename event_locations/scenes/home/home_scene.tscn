@@ -1,4 +1,4 @@
-[gd_scene load_steps=346 format=4 uid="uid://dmj3p8g46opwx"]
+[gd_scene load_steps=391 format=4 uid="uid://dmj3p8g46opwx"]
 
 [ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="1_i7vbu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/home_controller.gd" id="1_qc7mf"]
@@ -83,24 +83,39 @@
 [ext_resource type="Texture2D" uid="uid://3ali2qifxdaf" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_top_center_B_full.png" id="81_hbtjb"]
 [ext_resource type="Texture2D" uid="uid://cb3ve807gkxo" path="res://super_pixel/medieval_village_full/medieval_village/pieces/wood_platform_center.png" id="82_6ekdt"]
 [ext_resource type="Texture2D" uid="uid://cc6cxukneeg3a" path="res://super_pixel/medieval_village_full/medieval_village/pieces/wood_platform_left.png" id="83_iulb4"]
+[ext_resource type="Texture2D" uid="uid://cjynmxm2p3go3" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left (2).png" id="84_n18o7"]
 [ext_resource type="Texture2D" uid="uid://canfdts6mr50q" path="res://super_pixel/medieval_village_full/medieval_village/pieces/wood_platform_right.png" id="84_tki06"]
 [ext_resource type="Texture2D" uid="uid://btt70fvgmftv0" path="res://super_pixel/medieval_village_full/medieval_village/pieces/bg_building_near.png" id="85_kfp4b"]
+[ext_resource type="Texture2D" uid="uid://db1m70cbxhjqq" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left_damage_high (2).png" id="85_p6t01"]
 [ext_resource type="Texture2D" uid="uid://wa10867tu4kc" path="res://super_pixel/medieval_village_full/medieval_village/pieces/bg_mountains_and_sky.png" id="86_dr4rw"]
 [ext_resource type="Texture2D" uid="uid://c7lou2w5of2n2" path="res://super_pixel/medieval_village_full/medieval_village/pieces/bg_sky_top.png" id="87_cchk0"]
+[ext_resource type="Texture2D" uid="uid://dtr8uj3d0pv3c" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left_damage_med (2).png" id="87_ko1op"]
+[ext_resource type="Texture2D" uid="uid://dyxngswftcc32" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right (2).png" id="88_28l6a"]
 [ext_resource type="Texture2D" uid="uid://bhtpmq41xa3in" path="res://super_pixel/medieval_village_full/medieval_village/pieces/barrel_B.png" id="88_rgmu8"]
+[ext_resource type="Texture2D" uid="uid://bvuyeadsnpadc" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right_damage_high (2).png" id="89_08gps"]
 [ext_resource type="Texture2D" uid="uid://5bflnyn6gfno" path="res://super_pixel/medieval_village_full/medieval_village/pieces/barrel_B_damaged.png" id="89_w1brh"]
 [ext_resource type="Texture2D" uid="uid://3s5jif0dg08m" path="res://super_pixel/medieval_village_full/medieval_village/pieces/barrel_C.png" id="90_41uf6"]
+[ext_resource type="Texture2D" uid="uid://h53xg2ovxx36" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right_damage_med (2).png" id="90_cfxqu"]
+[ext_resource type="Texture2D" uid="uid://x3krjqslau8m" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left (2).png" id="91_5u88i"]
 [ext_resource type="Texture2D" uid="uid://cqg0dbc8s4qtr" path="res://super_pixel/medieval_village_full/medieval_village/pieces/barrel_C_damaged.png" id="91_xmb8p"]
 [ext_resource type="Texture2D" uid="uid://cg12q7covey7w" path="res://super_pixel/medieval_village_full/medieval_village/pieces/barrel_D.png" id="92_nck7n"]
+[ext_resource type="Texture2D" uid="uid://cag6eqrnkw3ll" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left_damage_high (2).png" id="93_5b48k"]
 [ext_resource type="Texture2D" uid="uid://daoo476d0lntw" path="res://super_pixel/medieval_village_full/medieval_village/pieces/debris_A.png" id="93_5sge7"]
 [ext_resource type="Texture2D" uid="uid://lcpkmwpo240y" path="res://super_pixel/medieval_village_full/medieval_village/pieces/debris_B.png" id="94_a3alk"]
+[ext_resource type="Texture2D" uid="uid://ddcko584vgmnc" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left_damage_med (2).png" id="94_i3ump"]
+[ext_resource type="Texture2D" uid="uid://do7cfbkgm0u0h" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right (2).png" id="95_6r5t2"]
 [ext_resource type="Texture2D" uid="uid://v2uqx2r5np3k" path="res://super_pixel/medieval_village_full/medieval_village/pieces/barrel_D_damaged.png" id="95_m12jy"]
 [ext_resource type="Texture2D" uid="uid://d4j6ca3illiwd" path="res://super_pixel/medieval_village_full/medieval_village/pieces/debris_C.png" id="96_1alfr"]
+[ext_resource type="Texture2D" uid="uid://bwyumun2emjds" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right_damage_high (2).png" id="96_oyvov"]
 [ext_resource type="Texture2D" uid="uid://0sf7plai6mip" path="res://super_pixel/medieval_village_full/medieval_village/pieces/debris_D.png" id="97_30cib"]
+[ext_resource type="Texture2D" uid="uid://ic2x81sn46x2" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right_damage_med (2).png" id="97_aa1yg"]
 [ext_resource type="Texture2D" uid="uid://sqcyysmci0m7" path="res://super_pixel/medieval_village_full/medieval_village/pieces/debris_E.png" id="98_rd8nf"]
 [ext_resource type="Texture2D" uid="uid://cttuemdg2fcu2" path="res://super_pixel/medieval_village_full/medieval_village/pieces/debris_F.png" id="99_jpv31"]
+[ext_resource type="Texture2D" uid="uid://dtrvklrsk7p0d" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_bottom_left (2).png" id="99_uwatm"]
 [ext_resource type="Texture2D" uid="uid://k8ulgwe118or" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_bg1_center.png" id="100_oqsu1"]
+[ext_resource type="Texture2D" uid="uid://1rnxlre7o5ff" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_bottom_right (2).png" id="100_vto3c"]
 [ext_resource type="Texture2D" uid="uid://b7kwlolvmhioo" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_bg1_slope_left_1.png" id="101_ivqwk"]
+[ext_resource type="Texture2D" uid="uid://cpnns23ldeql2" path="res://super_pixel/medieval_village_full/medieval_village/pieces/building_roof_top (2).png" id="101_x7akl"]
 [ext_resource type="Texture2D" uid="uid://4mbr6urta3bl" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_bg1_slope_left_2.png" id="102_sod22"]
 [ext_resource type="Texture2D" uid="uid://dilv740ar2w7w" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_bg1_slope_right_1.png" id="103_tqhkq"]
 [ext_resource type="Texture2D" uid="uid://dexxt8ltvcro7" path="res://super_pixel/medieval_village_full/medieval_village/pieces/terrain_bg1_slope_right_2.png" id="104_aalyf"]
@@ -1033,6 +1048,42 @@ texture = ExtResource("83_iulb4")
 texture = ExtResource("84_tki06")
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhpq1"]
+texture = ExtResource("84_n18o7")
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4x8o"]
+texture = ExtResource("54_jqimh")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1eerj"]
+texture = ExtResource("85_p6t01")
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6puoq"]
 texture = ExtResource("85_kfp4b")
 3:0/0 = 0
@@ -1166,6 +1217,122 @@ texture = ExtResource("85_kfp4b")
 7:14/0 = 0
 8:14/0 = 0
 9:14/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4fpr6"]
+texture = ExtResource("55_gk6ek")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u8m8h"]
+texture = ExtResource("87_ko1op")
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_voc1w"]
+texture = ExtResource("56_fgxot")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_63cqr"]
+texture = ExtResource("88_28l6a")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dsb1d"]
+texture = ExtResource("57_lprym")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5j85"]
+texture = ExtResource("89_08gps")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4kce7"]
+texture = ExtResource("58_k0ufn")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jvam8"]
+texture = ExtResource("90_cfxqu")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jg58q"]
+texture = ExtResource("59_wf3rt")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1tnjv"]
+texture = ExtResource("91_5u88i")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yeybc"]
 texture = ExtResource("86_dr4rw")
@@ -1354,6 +1521,86 @@ texture = ExtResource("86_dr4rw")
 6:22/0 = 0
 7:22/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2meih"]
+texture = ExtResource("60_yuige")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qrhpw"]
+texture = ExtResource("93_5b48k")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tm1nt"]
+texture = ExtResource("61_7v21t")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wd7sm"]
+texture = ExtResource("94_i3ump")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1t1yw"]
+texture = ExtResource("63_187bg")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7g8h"]
+texture = ExtResource("95_6r5t2")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ok7o"]
+texture = ExtResource("64_3mhgw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uv6cu"]
+texture = ExtResource("96_oyvov")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bsp0"]
+texture = ExtResource("65_ywcfe")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rpjs2"]
+texture = ExtResource("97_aa1yg")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0yn3"]
 texture = ExtResource("87_cchk0")
 0:0/0 = 0
@@ -1420,6 +1667,40 @@ texture = ExtResource("87_cchk0")
 5:7/0 = 0
 6:7/0 = 0
 7:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_14lxv"]
+texture = ExtResource("66_m5bqk")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y41ls"]
+texture = ExtResource("99_uwatm")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxigu"]
+texture = ExtResource("52_4o781")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s6h7x"]
+texture = ExtResource("100_vto3c")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uh1h"]
+texture = ExtResource("53_tabfo")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8r3nh"]
+texture = ExtResource("101_x7akl")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o3kiy"]
+texture = ExtResource("67_jrb2v")
+0:0/0 = 0
+1:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lcr1p"]
 texture = ExtResource("28_ul7w3")
@@ -2374,6 +2655,36 @@ sources/103 = SubResource("TileSetAtlasSource_qul1s")
 sources/104 = SubResource("TileSetAtlasSource_2shmt")
 sources/105 = SubResource("TileSetAtlasSource_dq2yg")
 sources/106 = SubResource("TileSetAtlasSource_spykx")
+sources/107 = SubResource("TileSetAtlasSource_rhpq1")
+sources/108 = SubResource("TileSetAtlasSource_q4x8o")
+sources/109 = SubResource("TileSetAtlasSource_1eerj")
+sources/110 = SubResource("TileSetAtlasSource_4fpr6")
+sources/111 = SubResource("TileSetAtlasSource_u8m8h")
+sources/112 = SubResource("TileSetAtlasSource_voc1w")
+sources/113 = SubResource("TileSetAtlasSource_63cqr")
+sources/114 = SubResource("TileSetAtlasSource_dsb1d")
+sources/115 = SubResource("TileSetAtlasSource_j5j85")
+sources/116 = SubResource("TileSetAtlasSource_4kce7")
+sources/117 = SubResource("TileSetAtlasSource_jvam8")
+sources/118 = SubResource("TileSetAtlasSource_jg58q")
+sources/119 = SubResource("TileSetAtlasSource_1tnjv")
+sources/120 = SubResource("TileSetAtlasSource_2meih")
+sources/121 = SubResource("TileSetAtlasSource_qrhpw")
+sources/122 = SubResource("TileSetAtlasSource_tm1nt")
+sources/123 = SubResource("TileSetAtlasSource_wd7sm")
+sources/124 = SubResource("TileSetAtlasSource_1t1yw")
+sources/125 = SubResource("TileSetAtlasSource_b7g8h")
+sources/126 = SubResource("TileSetAtlasSource_3ok7o")
+sources/127 = SubResource("TileSetAtlasSource_uv6cu")
+sources/128 = SubResource("TileSetAtlasSource_7bsp0")
+sources/129 = SubResource("TileSetAtlasSource_rpjs2")
+sources/130 = SubResource("TileSetAtlasSource_14lxv")
+sources/131 = SubResource("TileSetAtlasSource_y41ls")
+sources/132 = SubResource("TileSetAtlasSource_bxigu")
+sources/133 = SubResource("TileSetAtlasSource_s6h7x")
+sources/134 = SubResource("TileSetAtlasSource_5uh1h")
+sources/135 = SubResource("TileSetAtlasSource_8r3nh")
+sources/136 = SubResource("TileSetAtlasSource_o3kiy")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_otyau"]
 texture = ExtResource("88_rgmu8")
@@ -2911,7 +3222,7 @@ tile_set = SubResource("TileSet_r8u2t")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="house"]
 position = Vector2(111, 9)
-tile_map_data = PackedByteArray("AACbAAkADgAAAAAAAACbAAoADgAAAAEAAACbAAsADgAAAAIAAACbAAwADgAAAAMAAACcAAkADgABAAAAAACcAAoADgABAAEAAACcAAsADgABAAIAAACcAAwADgABAAMAAACZAAkAIwADAAAAAACZAAoAIwADAAEAAACZAAsAIwADAAIAAACZAAwAIwADAAMAAACaAAkAIwADAAAAAACaAAoAIwADAAEAAACaAAsAIwADAAIAAACaAAwAIwADAAMAAACdAAkAIwAAAAAAAACdAAoAIwAAAAEAAACdAAsAIwAAAAIAAACdAAwAIwAAAAMAAACeAAkAIwAAAAAAAACeAAoAIwAAAAEAAACeAAsAIwAAAAIAAACeAAwAIwAAAAMAAACXAAkAIwABAAAAAACXAAoAQgAAAAAAAACXAAsAQgAAAAEAAACXAAwAIwABAAMAAACYAAkAIwACAAAAAACYAAoAQgABAAAAAACYAAsAQgABAAEAAACYAAwAIwACAAMAAACfAAkAIwABAAAAAACfAAoAQgAAAAAAAACfAAsAQgAAAAEAAACfAAwAIwABAAMAAACgAAkAIwACAAAAAACgAAoAQgABAAAAAACgAAsAQgABAAEAAACgAAwAIwACAAMAAACVAAkAHQABAAAAAACVAAoAHQABAAEAAACVAAsAHQABAAIAAACVAAwAHQABAAMAAACWAAkAIwAAAAAAAACWAAoAIwAAAAEAAACWAAsAIwAAAAIAAACWAAwAIwAAAAMAAAChAAkAIwADAAAAAAChAAoAIwADAAEAAAChAAsAIwADAAIAAAChAAwAIwADAAMAAACiAAkAHQAAAAAAAACiAAoAHQAAAAEAAACiAAsAHQAAAAIAAACiAAwAHQAAAAMAAACjAAkAHQABAAAAAACjAAoAHQABAAEAAACjAAsAHQABAAIAAACjAAwAHQABAAMAAACUAAkAHQAAAAAAAACUAAoAHQAAAAEAAACUAAsAHQAAAAIAAACUAAwAHQAAAAMAAACTAAkALAAAAAAAAACkAAkALQAAAAAAAACTAAgALgAAAAIAAACUAAcALgABAAEAAACUAAgALgABAAIAAACVAAYALgACAAAAAACVAAcALgACAAEAAACVAAgALgACAAIAAACWAAYALgADAAAAAACWAAcALgADAAEAAACWAAgALgADAAIAAAChAAYAMQAAAAAAAAChAAcAMQAAAAEAAAChAAgAMQAAAAIAAACiAAYAMQABAAAAAACiAAcAMQABAAEAAACiAAgAMQABAAIAAACjAAcAMQACAAEAAACjAAgAMQACAAIAAACkAAgAMQADAAIAAACWAAUALgAAAAIAAAChAAUAMQADAAIAAACXAAYAQgAAAAAAAACXAAcAQgAAAAEAAACYAAYAQgABAAAAAACYAAcAQgABAAEAAACfAAYAQgAAAAAAAACfAAcAQgAAAAEAAACgAAYAQgABAAAAAACgAAcAQgABAAEAAACbAAQAQgAAAAAAAACbAAUAQgAAAAEAAACcAAQAQgABAAAAAACcAAUAQgABAAEAAACmAAwATwAAAAAAAAClAA4AUAAAAAAAAACjAA4AUAAAAAAAAACdAA0AUAAAAAAAAACYAA4AUAAAAAAAAACUAA4AUAAAAAAAAACgAA4AUQAAAAAAAACpAAwAUQAAAAAAAACpAA4AUQAAAAAAAACnAA0AUQAAAAAAAACgAA0AUQAAAAAAAACiAA0AUQAAAAAAAACYAAIANAAAAAAAAACbAAAAOgAAAAAAAACcAAAAOgABAAAAAACXAAQALgABAAEAAACXAAUALgABAAIAAACYAAMALgAAAAIAAACYAAQALgACAAEAAACYAAUALgACAAIAAACZAAMALgABAAIAAACZAAQALgADAAEAAACZAAUALgADAAIAAACZAAIALgABAAEAAACaAAEALgACAAAAAACaAAIALgACAAEAAACaAAMALgACAAIAAACbAAEALgADAAAAAACbAAIALgADAAEAAACbAAMALgADAAIAAACeAAMAMQACAAIAAACeAAQAMQAAAAEAAACeAAUAMQAAAAIAAACfAAMAMQADAAIAAACfAAQAMQABAAEAAACfAAUAMQABAAIAAACgAAQAMQACAAEAAACgAAUAMQACAAIAAACcAAEAMQAAAAAAAACcAAIAMQAAAAEAAACcAAMAMQAAAAIAAACdAAEAMQABAAAAAACdAAIAMQABAAEAAACdAAMAMQABAAIAAACeAAIAMQACAAEAAACaAAcAEQAAAAAAAACaAAgAEQAAAAEAAACbAAcAEQABAAAAAACbAAgAEQABAAEAAACcAAcAEQAAAAAAAACcAAgAEQAAAAEAAACdAAcAEQABAAAAAACdAAgAEQABAAEAAAA=")
+tile_map_data = PackedByteArray("AACbAAkADgAAAAAAAACbAAoADgAAAAEAAACbAAsADgAAAAIAAACbAAwADgAAAAMAAACcAAkADgABAAAAAACcAAoADgABAAEAAACcAAsADgABAAIAAACcAAwADgABAAMAAACZAAkAIwADAAAAAACZAAoAIwADAAEAAACZAAsAIwADAAIAAACZAAwAIwADAAMAAACaAAkAIwADAAAAAACaAAoAIwADAAEAAACaAAsAIwADAAIAAACaAAwAIwADAAMAAACdAAkAIwAAAAAAAACdAAoAIwAAAAEAAACdAAsAIwAAAAIAAACdAAwAIwAAAAMAAACeAAkAIwAAAAAAAACeAAoAIwAAAAEAAACeAAsAIwAAAAIAAACeAAwAIwAAAAMAAACXAAkAIwABAAAAAACXAAoAQgAAAAAAAACXAAsAQgAAAAEAAACXAAwAIwABAAMAAACYAAkAIwACAAAAAACYAAoAQgABAAAAAACYAAsAQgABAAEAAACYAAwAIwACAAMAAACfAAkAIwABAAAAAACfAAoAQgAAAAAAAACfAAsAQgAAAAEAAACfAAwAIwABAAMAAACgAAkAIwACAAAAAACgAAoAQgABAAAAAACgAAsAQgABAAEAAACgAAwAIwACAAMAAACVAAkAHQABAAAAAACVAAoAHQABAAEAAACVAAsAHQABAAIAAACVAAwAHQABAAMAAACWAAkAIwAAAAAAAACWAAoAIwAAAAEAAACWAAsAIwAAAAIAAACWAAwAIwAAAAMAAAChAAkAIwADAAAAAAChAAoAIwADAAEAAAChAAsAIwADAAIAAAChAAwAIwADAAMAAACiAAkAHQAAAAAAAACiAAoAHQAAAAEAAACiAAsAHQAAAAIAAACiAAwAHQAAAAMAAACjAAkAHQABAAAAAACjAAoAHQABAAEAAACjAAsAHQABAAIAAACjAAwAHQABAAMAAACUAAkAHQAAAAAAAACUAAoAHQAAAAEAAACUAAsAHQAAAAIAAACUAAwAHQAAAAMAAACTAAkAgwAAAAAAAACkAAkAhQAAAAAAAACTAAgAawAAAAIAAACUAAcAawABAAEAAACUAAgAawABAAIAAACVAAYAawACAAAAAACVAAcAawACAAEAAACVAAgAawACAAIAAACWAAYAawADAAAAAACWAAcAawADAAEAAACWAAgAawADAAIAAAChAAYAcQAAAAAAAAChAAcAcQAAAAEAAAChAAgAcQAAAAIAAACiAAYAcQABAAAAAACiAAcAcQABAAEAAACiAAgAcQABAAIAAACjAAcAcQACAAEAAACjAAgAcQACAAIAAACkAAgAcQADAAIAAACWAAUAawAAAAIAAAChAAUAcQADAAIAAACXAAYAQgAAAAAAAACXAAcAQgAAAAEAAACYAAYAQgABAAAAAACYAAcAQgABAAEAAACfAAYAQgAAAAAAAACfAAcAQgAAAAEAAACgAAYAQgABAAAAAACgAAcAQgABAAEAAACbAAQAQgAAAAAAAACbAAUAQgAAAAEAAACcAAQAQgABAAAAAACcAAUAQgABAAEAAACmAAwATwAAAAAAAAClAA4AUAAAAAAAAACjAA4AUAAAAAAAAACdAA0AUAAAAAAAAACYAA4AUAAAAAAAAACUAA4AUAAAAAAAAACgAA4AUQAAAAAAAACpAAwAUQAAAAAAAACpAA4AUQAAAAAAAACnAA0AUQAAAAAAAACgAA0AUQAAAAAAAACiAA0AUQAAAAAAAACbAAAAhwAAAAAAAACcAAAAhwABAAAAAACXAAQAawABAAEAAACXAAUAawABAAIAAACYAAMAawAAAAIAAACYAAQAawACAAEAAACYAAUAawACAAIAAACZAAMAawABAAIAAACZAAQAawADAAEAAACZAAUAawADAAIAAACZAAIAawABAAEAAACaAAEAawACAAAAAACaAAIAawACAAEAAACaAAMAawACAAIAAACbAAEAawADAAAAAACbAAIAawADAAEAAACbAAMAawADAAIAAACeAAMAcQACAAIAAACeAAQAcQAAAAEAAACeAAUAcQAAAAIAAACfAAMAcQADAAIAAACfAAQAcQABAAEAAACfAAUAcQABAAIAAACgAAQAcQACAAEAAACgAAUAcQACAAIAAACcAAEAcQAAAAAAAACcAAIAcQAAAAEAAACcAAMAcQAAAAIAAACdAAEAcQABAAAAAACdAAIAcQABAAEAAACdAAMAcQABAAIAAACeAAIAcQACAAEAAACaAAcAEQAAAAAAAACaAAgAEQAAAAEAAACbAAcAEQABAAAAAACbAAgAEQABAAEAAACcAAcAEQAAAAAAAACcAAgAEQAAAAEAAACdAAcAEQABAAAAAACdAAgAEQABAAEAAAA=")
 tile_set = SubResource("TileSet_pubc8")
 
 [node name="TileMapLayer5" type="TileMapLayer" parent="house"]
@@ -2922,8 +3233,9 @@ tile_set = SubResource("TileSet_78vye")
 modulate = Color(0.44, 1, 0.496, 1)
 position = Vector2(-192, 81)
 decorations = [NodePath("decorations/beard"), NodePath("decorations/hair"), NodePath("decorations/eyes")]
+direction = Vector2(0.3, -1)
 jump_interval = 4.0
-jump_power = 80.0
+jump_power = 150.0
 upright_force = 1000
 
 [node name="decorations" type="Node" parent="grandpa"]
@@ -2950,7 +3262,6 @@ texture = ExtResource("131_355gv")
 position = Vector2(-300, 81)
 max_jump_power = 200.0
 charge_rate = 100.0
-min_jump_interval = 0.75
 cursor_radials = NodePath("../CursorRadials")
 upright_force = 600
 
@@ -2958,86 +3269,88 @@ upright_force = 600
 modification_stack = SubResource("SkeletonModificationStack2D_v041w")
 
 [node name="Bone-0" parent="player/SoftBody2D/Skeleton2D" index="0"]
-position = Vector2(11.2437, 23.1117)
+position = Vector2(13.1319, 23.3238)
 
 [node name="Bone-1" parent="player/SoftBody2D/Skeleton2D" index="1"]
-position = Vector2(11.2099, 31.7196)
+position = Vector2(13.0336, 31.1868)
 
 [node name="Bone-2" parent="player/SoftBody2D/Skeleton2D" index="2"]
-position = Vector2(16.394, 12.8672)
+position = Vector2(17.889, 14.0398)
 
 [node name="Bone-3" parent="player/SoftBody2D/Skeleton2D" index="3"]
-position = Vector2(17.9872, 23.1592)
+position = Vector2(19.863, 23.4618)
 
 [node name="Bone-4" parent="player/SoftBody2D/Skeleton2D" index="4"]
-position = Vector2(17.9222, 31.6133)
+position = Vector2(19.6744, 30.8785)
 
 [node name="Bone-5" parent="player/SoftBody2D/Skeleton2D" index="5"]
-position = Vector2(16.239, 40.3262)
+position = Vector2(17.6273, 39.2791)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-6" parent="player/SoftBody2D/Skeleton2D" index="6"]
-position = Vector2(26.3355, 8.19203)
+position = Vector2(26.973, 9.9819)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-7" parent="player/SoftBody2D/Skeleton2D" index="7"]
-position = Vector2(26.4921, 14.8706)
+position = Vector2(27.427, 16.5246)
 
 [node name="Bone-8" parent="player/SoftBody2D/Skeleton2D" index="8"]
-position = Vector2(26.9333, 23.359)
+position = Vector2(28.7067, 24.041)
 
 [node name="Bone-9" parent="player/SoftBody2D/Skeleton2D" index="9"]
-position = Vector2(26.7071, 31.2929)
+position = Vector2(28.0506, 29.9494)
 
 [node name="Bone-10" parent="player/SoftBody2D/Skeleton2D" index="10"]
-position = Vector2(26.1439, 40.3309)
-scale = Vector2(1, 1)
+position = Vector2(27.1072, 38.555)
 
 [node name="Bone-11" parent="player/SoftBody2D/Skeleton2D" index="11"]
-position = Vector2(34.8643, 8.24075)
+position = Vector2(34.6064, 10.1232)
+scale = Vector2(1, 1)
 
 [node name="Bone-12" parent="player/SoftBody2D/Skeleton2D" index="12"]
-position = Vector2(34.7876, 14.9772)
+position = Vector2(34.384, 16.8338)
 scale = Vector2(1, 1)
 
 [node name="Bone-13" parent="player/SoftBody2D/Skeleton2D" index="13"]
-position = Vector2(34.2929, 23.7071)
+position = Vector2(32.9494, 25.0506)
 scale = Vector2(1, 1)
 
 [node name="Bone-14" parent="player/SoftBody2D/Skeleton2D" index="14"]
-position = Vector2(34.641, 31.0667)
+position = Vector2(33.959, 29.2933)
 
 [node name="Bone-15" parent="player/SoftBody2D/Skeleton2D" index="15"]
-position = Vector2(34.8405, 39.9834)
+position = Vector2(34.5374, 38.1077)
 
 [node name="Bone-16" parent="player/SoftBody2D/Skeleton2D" index="16"]
-position = Vector2(44.4349, 8.07503)
+position = Vector2(43.3612, 9.64259)
+scale = Vector2(1, 1)
 
 [node name="Bone-17" parent="player/SoftBody2D/Skeleton2D" index="17"]
-position = Vector2(43.2929, 14.7071)
+position = Vector2(41.9494, 16.0506)
 
 [node name="Bone-18" parent="player/SoftBody2D/Skeleton2D" index="18"]
-position = Vector2(43.0228, 23.2124)
+position = Vector2(41.1662, 23.616)
 
 [node name="Bone-19" parent="player/SoftBody2D/Skeleton2D" index="19"]
-position = Vector2(43.1294, 31.5079)
-scale = Vector2(0.999999, 0.999999)
+position = Vector2(41.4754, 30.573)
+scale = Vector2(1, 1)
 
 [node name="Bone-20" parent="player/SoftBody2D/Skeleton2D" index="20"]
-position = Vector2(43.3979, 39.9516)
+position = Vector2(42.2539, 38.4346)
+scale = Vector2(1, 1)
 
 [node name="Bone-21" parent="player/SoftBody2D/Skeleton2D" index="21"]
-position = Vector2(51.3858, 14.5032)
+position = Vector2(49.7439, 15.4593)
+scale = Vector2(1, 1)
 
 [node name="Bone-22" parent="player/SoftBody2D/Skeleton2D" index="22"]
-position = Vector2(51.644, 23.1232)
+scale = Vector2(1, 1)
 
 [node name="Bone-23" parent="player/SoftBody2D/Skeleton2D" index="23"]
-position = Vector2(51.7978, 31.6944)
 scale = Vector2(1, 1)
 
 [node name="Bone-24" parent="player/SoftBody2D/Skeleton2D" index="24"]
-position = Vector2(50.8135, 39.8824)
+position = Vector2(49.3193, 38.7088)
 
 [node name="RectangleShape2D" parent="player/SoftBody2D/Bone-0" index="0"]
 shape = SubResource("RectangleShape2D_6ebds")
@@ -3114,6 +3427,9 @@ shape = SubResource("RectangleShape2D_6ebds")
 [node name="RectangleShape2D" parent="player/SoftBody2D/Bone-24" index="0"]
 shape = SubResource("RectangleShape2D_6ebds")
 
+[node name="Camera2D" parent="player/camera" index="0"]
+move_y = false
+
 [node name="sky" type="Sprite2D" parent="player/camera/Camera2D" index="0"]
 z_index = -1
 scale = Vector2(4, 4)
@@ -3133,6 +3449,7 @@ script = ExtResource("133_b1qht")
 dialogues = Array[String](["grandpa_1", "grandpa_2"])
 
 [node name="gpa_collider" type="Area2D" parent="."]
+visible = false
 position = Vector2(-45, 72)
 collision_layer = 8
 collision_mask = 8
@@ -3142,6 +3459,7 @@ position = Vector2(3411, -347)
 shape = SubResource("RectangleShape2D_t6ohl")
 
 [node name="player_collider" type="Area2D" parent="."]
+visible = false
 position = Vector2(-45, 72)
 collision_layer = 4
 collision_mask = 4
