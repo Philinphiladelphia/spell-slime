@@ -21,12 +21,7 @@ func _ready() -> void:
 	dialogue_layer.play_next_dialogue()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("pause"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		var pause: Node = pause_screen.instantiate()
-		dialogue_layer.add_child(pause)
-		
+func _process(delta: float) -> void:		
 	if dialogue_layer.has_active_dialogue:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		cursor_radials.hide()
@@ -37,7 +32,7 @@ func _process(delta: float) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		cursor_radials.show()
 		player.is_active = true
-		
+				
 		if not gpa_collision_area.has_overlapping_bodies():
 			grandpa.is_active = true
 		else:
@@ -55,9 +50,15 @@ func _process(delta: float) -> void:
 			if door_area.has_overlapping_bodies() and door_active:
 				door_glyph.show()
 				if Input.is_action_pressed("interact"):
+					$BackgroundMusicPlayer.stop()
 					SceneLoader.load_scene("res://event_locations/scenes/home/home_inside.tscn")
 			else:
 				door_glyph.hide()
+				
+	if Input.is_action_pressed("pause"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		var pause: Node = pause_screen.instantiate()
+		dialogue_layer.add_child(pause)
 
 
 func _on_dialogue_layer_dialogue_ended() -> void:

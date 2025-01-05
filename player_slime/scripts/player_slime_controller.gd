@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var softbody: SoftBody2D
-@export var decorations: Array[Sprite2D]
+@export var decorations: Array[Node2D]
 
 @export var max_jump_power: float = 100.0
 @export var charge_rate: float = 60.0

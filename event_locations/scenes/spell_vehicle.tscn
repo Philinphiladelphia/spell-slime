@@ -37,7 +37,7 @@ size = Vector2(3000, 400)
 
 [node name="SpellVehicle" type="Node2D" node_paths=PackedStringArray("gears", "gun")]
 script = ExtResource("1_dblmh")
-gears = [NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_4/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_5/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiny_wheel/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_3/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/central_wheel/PinJoint2D")]
+gears = [NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_4/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_5/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_3/PinJoint2D")]
 gun = NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
@@ -306,7 +306,7 @@ position = Vector2(-0.5, -2)
 node_a = NodePath("..")
 node_b = NodePath("../../..")
 motor_enabled = true
-motor_target_velocity = 0.511905
+motor_target_velocity = -0.523599
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel"]
 position = Vector2(-1.5, -3)

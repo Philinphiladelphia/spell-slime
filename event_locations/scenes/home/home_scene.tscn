@@ -1,4 +1,4 @@
-[gd_scene load_steps=391 format=4 uid="uid://dmj3p8g46opwx"]
+[gd_scene load_steps=392 format=4 uid="uid://dmj3p8g46opwx"]
 
 [ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="1_i7vbu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/home_controller.gd" id="1_qc7mf"]
@@ -153,6 +153,7 @@
 [ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="134_6e3ea"]
 [ext_resource type="PackedScene" uid="uid://duksl7grt8udr" path="res://ui/scenes/input_glyph.tscn" id="136_vhimu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/tutorial_text.gd" id="139_maqv3"]
+[ext_resource type="Script" path="res://event_locations/scenes/home/camera.gd" id="147_263tt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uxhj"]
 texture = ExtResource("21_51lk4")
@@ -3269,88 +3270,85 @@ upright_force = 600
 modification_stack = SubResource("SkeletonModificationStack2D_v041w")
 
 [node name="Bone-0" parent="player/SoftBody2D/Skeleton2D" index="0"]
-position = Vector2(13.1319, 23.3238)
+position = Vector2(12.2375, 23.2233)
 
 [node name="Bone-1" parent="player/SoftBody2D/Skeleton2D" index="1"]
-position = Vector2(13.0336, 31.1868)
+position = Vector2(12.1698, 31.4392)
 
 [node name="Bone-2" parent="player/SoftBody2D/Skeleton2D" index="2"]
-position = Vector2(17.889, 14.0398)
+position = Vector2(17.1808, 13.4843)
+scale = Vector2(1, 1)
 
 [node name="Bone-3" parent="player/SoftBody2D/Skeleton2D" index="3"]
-position = Vector2(19.863, 23.4618)
+position = Vector2(18.9745, 23.3185)
 
 [node name="Bone-4" parent="player/SoftBody2D/Skeleton2D" index="4"]
-position = Vector2(19.6744, 30.8785)
+position = Vector2(18.8444, 31.2265)
 
 [node name="Bone-5" parent="player/SoftBody2D/Skeleton2D" index="5"]
-position = Vector2(17.6273, 39.2791)
+position = Vector2(16.9779, 39.6525)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-6" parent="player/SoftBody2D/Skeleton2D" index="6"]
-position = Vector2(26.973, 9.9819)
+position = Vector2(26.671, 9.13407)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-7" parent="player/SoftBody2D/Skeleton2D" index="7"]
-position = Vector2(27.427, 16.5246)
+position = Vector2(26.9841, 15.7411)
 
 [node name="Bone-8" parent="player/SoftBody2D/Skeleton2D" index="8"]
-position = Vector2(28.7067, 24.041)
+position = Vector2(27.8667, 23.718)
+scale = Vector2(1, 1)
 
 [node name="Bone-9" parent="player/SoftBody2D/Skeleton2D" index="9"]
-position = Vector2(28.0506, 29.9494)
+position = Vector2(27.4142, 30.5858)
 
 [node name="Bone-10" parent="player/SoftBody2D/Skeleton2D" index="10"]
-position = Vector2(27.1072, 38.555)
+position = Vector2(26.5378, 39.4117)
 
 [node name="Bone-11" parent="player/SoftBody2D/Skeleton2D" index="11"]
-position = Vector2(34.6064, 10.1232)
+position = Vector2(34.7286, 9.23149)
 scale = Vector2(1, 1)
 
 [node name="Bone-12" parent="player/SoftBody2D/Skeleton2D" index="12"]
-position = Vector2(34.384, 16.8338)
-scale = Vector2(1, 1)
+position = Vector2(34.5751, 15.9544)
 
 [node name="Bone-13" parent="player/SoftBody2D/Skeleton2D" index="13"]
-position = Vector2(32.9494, 25.0506)
-scale = Vector2(1, 1)
+position = Vector2(33.5858, 24.4142)
 
 [node name="Bone-14" parent="player/SoftBody2D/Skeleton2D" index="14"]
-position = Vector2(33.959, 29.2933)
+position = Vector2(34.282, 30.1333)
 
 [node name="Bone-15" parent="player/SoftBody2D/Skeleton2D" index="15"]
-position = Vector2(34.5374, 38.1077)
+position = Vector2(34.6809, 38.9962)
 
 [node name="Bone-16" parent="player/SoftBody2D/Skeleton2D" index="16"]
-position = Vector2(43.3612, 9.64259)
-scale = Vector2(1, 1)
+position = Vector2(43.8698, 8.90006)
 
 [node name="Bone-17" parent="player/SoftBody2D/Skeleton2D" index="17"]
-position = Vector2(41.9494, 16.0506)
+position = Vector2(42.5858, 15.4142)
 
 [node name="Bone-18" parent="player/SoftBody2D/Skeleton2D" index="18"]
-position = Vector2(41.1662, 23.616)
+position = Vector2(42.0456, 23.4249)
 
 [node name="Bone-19" parent="player/SoftBody2D/Skeleton2D" index="19"]
-position = Vector2(41.4754, 30.573)
+position = Vector2(42.2589, 31.0159)
+rotation = 1.4721
 scale = Vector2(1, 1)
 
 [node name="Bone-20" parent="player/SoftBody2D/Skeleton2D" index="20"]
-position = Vector2(42.2539, 38.4346)
-scale = Vector2(1, 1)
+position = Vector2(42.7958, 39.1531)
 
 [node name="Bone-21" parent="player/SoftBody2D/Skeleton2D" index="21"]
-position = Vector2(49.7439, 15.4593)
-scale = Vector2(1, 1)
+position = Vector2(50.5216, 15.0064)
 
 [node name="Bone-22" parent="player/SoftBody2D/Skeleton2D" index="22"]
+position = Vector2(50.6516, 23.2464)
 scale = Vector2(1, 1)
 
 [node name="Bone-23" parent="player/SoftBody2D/Skeleton2D" index="23"]
-scale = Vector2(1, 1)
-
-[node name="Bone-24" parent="player/SoftBody2D/Skeleton2D" index="24"]
-position = Vector2(49.3193, 38.7088)
+position = Vector2(50.8457, 31.3887)
+scale = Vector2(0.999999, 0.999999)
 
 [node name="RectangleShape2D" parent="player/SoftBody2D/Bone-0" index="0"]
 shape = SubResource("RectangleShape2D_6ebds")
@@ -3427,8 +3425,13 @@ shape = SubResource("RectangleShape2D_6ebds")
 [node name="RectangleShape2D" parent="player/SoftBody2D/Bone-24" index="0"]
 shape = SubResource("RectangleShape2D_6ebds")
 
+[node name="camera" parent="player" index="2"]
+script = ExtResource("147_263tt")
+
 [node name="Camera2D" parent="player/camera" index="0"]
-move_y = false
+position = Vector2(-226, -554)
+y_offset = -100
+y_move_speed = 0.5
 
 [node name="sky" type="Sprite2D" parent="player/camera/Camera2D" index="0"]
 z_index = -1

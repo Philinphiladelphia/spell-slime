@@ -1,11 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://cd0jbh4metflb"]
+[gd_scene load_steps=10 format=3 uid="uid://cd0jbh4metflb"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.gd" id="1_gbk34"]
+[ext_resource type="Texture2D" uid="uid://b5nrx64xnlr2q" path="res://common_assets/branding/SpS_elements-06.png" id="2_cd7kv"]
+[ext_resource type="Texture2D" uid="uid://cfui7dpx6iycw" path="res://common_assets/branding/SpS_elements-07.png" id="3_2xrhs"]
+[ext_resource type="Texture2D" uid="uid://058saqmbygkh" path="res://level_up_again/assets/rounded_rect.png" id="4_1e5aa"]
+
+[sub_resource type="Gradient" id="Gradient_hdgak"]
+offsets = PackedFloat32Array(0, 0.233449, 0.756098, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.541176, 1, 1, 1, 0.627451, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_evak0"]
+gradient = SubResource("Gradient_hdgak")
+
+[sub_resource type="Curve" id="Curve_2ad5q"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.487421, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_3g5c6"]
+curve = SubResource("Curve_2ad5q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_128ey"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(960, 540, 1)
+angle_min = -720.0
+angle_max = 720.0
+gravity = Vector3(0, -15, 0)
+scale_min = 0.1
+scale_max = 0.25
+scale_curve = SubResource("CurveTexture_3g5c6")
+color_ramp = SubResource("GradientTexture1D_evak0")
 
 [node name="LoadingScreen" type="CanvasLayer"]
 process_mode = 3
 layer = 20
 script = ExtResource("1_gbk34")
+
+[node name="background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cd7kv")
+expand_mode = 1
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-17, -212)
+repeat_size = Vector2(5000, 0)
+autoscroll = Vector2(-25, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(2111, 331)
+scale = Vector2(1.43921, 0.433145)
+texture = ExtResource("3_2xrhs")
+
+[node name="BackgroundParticles" type="GPUParticles2D" parent="."]
+position = Vector2(628, 409)
+amount = 31
+process_material = SubResource("ParticleProcessMaterial_128ey")
+texture = ExtResource("4_1e5aa")
+lifetime = 4.5
+randomness = 0.36
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -14,21 +70,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="BackPanel" type="Panel" parent="Control"]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="BackgroundColor" type="ColorRect" parent="Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.501961)
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="Control"]
 layout_mode = 1
@@ -41,14 +82,17 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 30.0
-offset_top = -23.0
-offset_right = -30.0
-offset_bottom = 98.0
+offset_left = 19.0
+offset_top = -5.0
+offset_right = -41.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 50
 
 [node name="ProgressLabel" type="Label" parent="Control/VBoxContainer"]
@@ -61,6 +105,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+size_flags_vertical = 8
 max_value = 1.0
 
 [node name="ErrorMessage" type="AcceptDialog" parent="Control"]

@@ -23,10 +23,10 @@ func play_next_dialogue():
 	dialogue_index += 1
 
 func clear_dialogue():
-	dialogue_ended.emit()
-	
 	for child in get_children():
 		child.queue_free()
+
+	dialogue_ended.emit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -8,6 +8,9 @@ extends Camera2D
 @export var x_offset: int = 0
 @export var y_offset: int = 0
 
+@export var x_move_speed: float = 2
+@export var y_move_speed: float = 2
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -16,6 +19,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if move_x:
-		global_position.x = lerp(global_position.x, slime_to_follow.slime_position.x + x_offset, delta*2)
+		global_position.x = lerp(global_position.x, slime_to_follow.slime_position.x + x_offset, delta*x_move_speed)
 	if move_y:
-		global_position.y = lerp(global_position.y, slime_to_follow.slime_position.y + y_offset, delta*2)
+		global_position.y = lerp(global_position.y, slime_to_follow.slime_position.y + y_offset, delta*y_move_speed)
