@@ -2,6 +2,8 @@ extends Node2D
 
 var direction: int = -1
 
+@export var active = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -9,7 +11,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	rotate(0.01 * direction)
+	if active:
+		rotate(0.01 * direction)
 
 
 func _on_guntimer_timeout() -> void:

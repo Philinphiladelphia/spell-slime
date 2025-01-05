@@ -7,6 +7,9 @@ var final_scene: Timer
 
 func _ready() -> void:
 	super()
+	
+	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ADAPTIVE)
+	
 	final_scene = Timer.new()
 	final_scene.wait_time = 3
 	add_child(final_scene)
