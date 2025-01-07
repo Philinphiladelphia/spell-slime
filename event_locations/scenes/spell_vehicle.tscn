@@ -20,6 +20,9 @@
 shader = ExtResource("1_l4wj2")
 shader_parameter/pixel_count = Vector2(128, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kk0q5"]
+size = Vector2(3000, 400)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1x10"]
 size = Vector2(500, 300)
 
@@ -32,13 +35,14 @@ radius = 46.6154
 [sub_resource type="CircleShape2D" id="CircleShape2D_7arax"]
 radius = 36.2215
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kk0q5"]
-size = Vector2(3000, 400)
-
-[node name="SpellVehicle" type="Node2D" node_paths=PackedStringArray("gears", "gun")]
+[node name="SpellVehicle" type="Node2D" node_paths=PackedStringArray("gears_pins", "gun", "turret", "boiler", "gears", "standpipe")]
 script = ExtResource("1_dblmh")
-gears = [NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_4/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_5/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_3/PinJoint2D")]
+gears_pins = [NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_4/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_5/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/med_gear_3/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/tiny_wheel/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/tiner_wheel/PinJoint2D"), NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/central_wheel/PinJoint2D")]
 gun = NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun")
+turret = NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun")
+boiler = NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/boiler")
+gears = NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears")
+standpipe = NodePath("SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/standpipe")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 material = SubResource("ShaderMaterial_jkgrr")
@@ -52,6 +56,13 @@ transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1080, 1080)
 render_target_update_mode = 4
+
+[node name="StaticBody2D" type="StaticBody2D" parent="SubViewportContainer/SubViewport"]
+position = Vector2(755, 1000)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/StaticBody2D"]
+position = Vector2(-3, 31)
+shape = SubResource("RectangleShape2D_kk0q5")
 
 [node name="vehicle_body" type="Node2D" parent="SubViewportContainer/SubViewport"]
 position = Vector2(718, 400)
@@ -145,53 +156,6 @@ region_rect = Rect2(152.182, 5.77197, 179.685, 497.794)
 
 [node name="body" type="Node2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
 
-[node name="Sprite2D101" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
-position = Vector2(-127.805, -77.7349)
-rotation = -0.791576
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("30_5k88k")
-region_enabled = true
-region_rect = Rect2(267.273, 0, 62.8099, 512)
-
-[node name="Sprite2D102" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
-position = Vector2(-267.805, -53.7349)
-rotation = 0.186969
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("30_5k88k")
-region_enabled = true
-region_rect = Rect2(267.273, 0, 62.8099, 512)
-
-[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
-position = Vector2(-197.805, -53.7349)
-rotation = -0.253941
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("74_4q4p4")
-region_enabled = true
-region_rect = Rect2(121.912, 0, 278.135, 520.337)
-
-[node name="Sprite2D11" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
-position = Vector2(-89.8053, 68.2651)
-rotation = -1.91068
-texture = ExtResource("52_qg2lf")
-region_enabled = true
-region_rect = Rect2(0, 0, 275.549, 512)
-
-[node name="Sprite2D99" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
-position = Vector2(-177.805, -74.7349)
-rotation = -0.591448
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("30_5k88k")
-region_enabled = true
-region_rect = Rect2(267.273, 0, 62.8099, 512)
-
-[node name="Sprite2D100" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
-position = Vector2(-236.805, -55.7349)
-rotation = 0.0914189
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("30_5k88k")
-region_enabled = true
-region_rect = Rect2(267.273, 0, 62.8099, 512)
-
 [node name="Sprite2D112" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/body"]
 position = Vector2(-355, 154)
 rotation = -1.41803
@@ -264,54 +228,6 @@ texture = ExtResource("1_y5ewo")
 region_enabled = true
 region_rect = Rect2(18.9939, 161.744, 185.097, 187.829)
 
-[node name="tiny_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
-position = Vector2(10, 146)
-collision_layer = 0
-collision_mask = 0
-mass = 0.125
-gravity_scale = 0.0
-
-[node name="1459653703" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiny_wheel"]
-position = Vector2(-2, 3)
-texture = ExtResource("2_uu88w")
-region_enabled = true
-region_rect = Rect2(132.858, 379.008, 124.184, 122.322)
-
-[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiny_wheel"]
-position = Vector2(-2, 3)
-node_a = NodePath("..")
-node_b = NodePath("../../..")
-motor_enabled = true
-motor_target_velocity = 0.511905
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiny_wheel"]
-position = Vector2(-3, 2)
-shape = SubResource("CircleShape2D_7v6qa")
-
-[node name="tiner_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
-position = Vector2(-65, 115)
-collision_layer = 0
-collision_mask = 0
-mass = 0.125
-gravity_scale = 0.0
-
-[node name="Sprite2D17" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel"]
-position = Vector2(-2.5, -4)
-texture = ExtResource("3_hfrdb")
-region_enabled = true
-region_rect = Rect2(372.73, 232.396, 129.152, 130.394)
-
-[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel"]
-position = Vector2(-0.5, -2)
-node_a = NodePath("..")
-node_b = NodePath("../../..")
-motor_enabled = true
-motor_target_velocity = -0.523599
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/tiner_wheel"]
-position = Vector2(-1.5, -3)
-shape = SubResource("CircleShape2D_7arax")
-
 [node name="med_gear_3" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
 position = Vector2(127, 234)
 collision_layer = 0
@@ -336,37 +252,134 @@ texture = ExtResource("1_y5ewo")
 region_enabled = true
 region_rect = Rect2(18.9939, 161.744, 185.097, 187.829)
 
-[node name="central_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels"]
+[node name="standpipe" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+position = Vector2(-89.8053, 68.2651)
+rotation = -1.91068
+texture = ExtResource("52_qg2lf")
+region_enabled = true
+region_rect = Rect2(0, 0, 275.549, 512)
+
+[node name="boiler" type="Node2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+z_index = -2
+
+[node name="Sprite2D101" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/boiler"]
+z_index = -1
+position = Vector2(-127.805, -77.7349)
+rotation = -0.791576
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_5k88k")
+region_enabled = true
+region_rect = Rect2(267.273, 0, 62.8099, 512)
+
+[node name="Sprite2D102" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/boiler"]
+z_index = -1
+position = Vector2(-267.805, -53.7349)
+rotation = 0.186969
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_5k88k")
+region_enabled = true
+region_rect = Rect2(267.273, 0, 62.8099, 512)
+
+[node name="boiler" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/boiler"]
+position = Vector2(-197.805, -53.7349)
+rotation = -0.253941
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("74_4q4p4")
+region_enabled = true
+region_rect = Rect2(121.912, 0, 278.135, 520.337)
+
+[node name="Sprite2D99" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/boiler"]
+z_index = 2
+position = Vector2(-177.805, -74.7349)
+rotation = -0.591448
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_5k88k")
+region_enabled = true
+region_rect = Rect2(267.273, 0, 62.8099, 512)
+
+[node name="Sprite2D100" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/boiler"]
+z_index = 2
+position = Vector2(-236.805, -55.7349)
+rotation = 0.0914189
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("30_5k88k")
+region_enabled = true
+region_rect = Rect2(267.273, 0, 62.8099, 512)
+
+[node name="guntimer" type="Timer" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+wait_time = 3.0
+autostart = true
+
+[node name="gears" type="Node2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
+
+[node name="tiny_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears"]
+position = Vector2(10, 146)
+collision_layer = 0
+collision_mask = 0
+mass = 0.125
+gravity_scale = 0.0
+
+[node name="1459653703" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/tiny_wheel"]
+position = Vector2(-2, 3)
+texture = ExtResource("2_uu88w")
+region_enabled = true
+region_rect = Rect2(132.858, 379.008, 124.184, 122.322)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/tiny_wheel"]
+position = Vector2(-2, 3)
+node_a = NodePath("..")
+node_b = NodePath("../../..")
+motor_enabled = true
+motor_target_velocity = 0.511905
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/tiny_wheel"]
+position = Vector2(-3, 2)
+shape = SubResource("CircleShape2D_7v6qa")
+
+[node name="tiner_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears"]
+position = Vector2(-65, 115)
+collision_layer = 0
+collision_mask = 0
+mass = 0.125
+gravity_scale = 0.0
+
+[node name="Sprite2D17" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/tiner_wheel"]
+position = Vector2(-2.5, -4)
+texture = ExtResource("3_hfrdb")
+region_enabled = true
+region_rect = Rect2(372.73, 232.396, 129.152, 130.394)
+
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/tiner_wheel"]
+position = Vector2(-0.5, -2)
+node_a = NodePath("..")
+node_b = NodePath("../../..")
+motor_enabled = true
+motor_target_velocity = -0.523599
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/tiner_wheel"]
+position = Vector2(-1.5, -3)
+shape = SubResource("CircleShape2D_7arax")
+
+[node name="central_wheel" type="RigidBody2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears"]
 position = Vector2(93, 110)
 mass = 0.125
 gravity_scale = 0.0
 
-[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/central_wheel"]
+[node name="PinJoint2D" type="PinJoint2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/central_wheel"]
 position = Vector2(-1, -0.5)
 node_a = NodePath("..")
 node_b = NodePath("../../..")
 motor_enabled = true
 motor_target_velocity = -0.511905
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/central_wheel"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/central_wheel"]
 position = Vector2(-2, -1.5)
 shape = SubResource("CircleShape2D_xlkej")
 
-[node name="Sprite2D16" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/wheels/central_wheel"]
+[node name="Sprite2D16" type="Sprite2D" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gears/central_wheel"]
 position = Vector2(0, 1.5)
 texture = ExtResource("3_hfrdb")
 region_enabled = true
 region_rect = Rect2(9.13069, 338.14, 170.753, 167.028)
-
-[node name="guntimer" type="Timer" parent="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid"]
-wait_time = 3.0
-autostart = true
-
-[node name="StaticBody2D" type="StaticBody2D" parent="SubViewportContainer/SubViewport"]
-position = Vector2(755, 1000)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SubViewportContainer/SubViewport/StaticBody2D"]
-position = Vector2(-3, 31)
-shape = SubResource("RectangleShape2D_kk0q5")
 
 [connection signal="timeout" from="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/guntimer" to="SubViewportContainer/SubViewport/vehicle_body/vehicle_body_rigid/gun" method="_on_guntimer_timeout"]

@@ -1,14 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://bwrpl5k6kodt8"]
+[gd_scene load_steps=18 format=3 uid="uid://bwrpl5k6kodt8"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_ahstt"]
 [ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="2_10nlx"]
 [ext_resource type="PackedScene" uid="uid://c58iyoi4wlpjr" path="res://background/scenes/parallaxes/night.tscn" id="3_ej0ht"]
 [ext_resource type="Texture2D" uid="uid://d240bm81yewd" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/night-town-background-files/layers/night-town-background-sky.png" id="4_586re"]
 [ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="4_ybr3v"]
-[ext_resource type="Script" path="res://levels/scripts/move_level_camera.gd" id="5_4xf7c"]
 [ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="5_5g6k6"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="7_xdq1o"]
-[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="9_1x0cq"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="9_4kvi6"]
 [ext_resource type="Script" path="res://levels/scripts/disable_slime_lights.gd" id="10_27ni7"]
 [ext_resource type="Script" path="res://levels/scripts/mouse_follower_node.gd" id="12_mnotw"]
@@ -16,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://ch5t5guld8q7v" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 08 Soap On The Dance Floor.mp3" id="14_d8b1f"]
 [ext_resource type="PackedScene" uid="uid://bpxfo7g4i1124" path="res://levels/moonswept_fields/night/night_lights/purple_light.tscn" id="16_1soy6"]
 [ext_resource type="PackedScene" uid="uid://bftuxkyk86hgs" path="res://levels/moonswept_fields/night/night_lights/green_light.tscn" id="17_1utru"]
+[ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="18_bncdi"]
 [ext_resource type="Script" path="res://addons/maaacks_game_template/extras/scripts/level_loader.gd" id="21_bkprm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbh6e"]
@@ -36,25 +35,19 @@ scale = Vector2(4, 2)
 position = Vector2(-473, -2857)
 scale = Vector2(0.65, 0.65)
 
-[node name="SpellMachineTower" parent="." instance=ExtResource("4_ybr3v")]
+[node name="SpellMachineTower" parent="." node_paths=PackedStringArray("cursor_radials") instance=ExtResource("4_ybr3v")]
 position = Vector2(-2022, -2025)
 light_energy = 1.1
+cursor_radials = NodePath("../CursorRadials")
 
-[node name="PowderViewport" parent="SpellMachineTower" instance=ExtResource("9_1x0cq")]
-position = Vector2(-1393, -2213)
-scale = Vector2(3.5, 3.5)
+[node name="main_gun" parent="SpellMachineTower/spell_machine_tower" index="0" node_paths=PackedStringArray("level_camera")]
+level_camera = NodePath("../../level_camera")
 
-[node name="level_camera" type="Camera2D" parent="SpellMachineTower"]
-position = Vector2(13, -653)
-scale = Vector2(0.25, 0.25)
-zoom = Vector2(0.2, 0.2)
-script = ExtResource("5_4xf7c")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="SpellMachineTower/level_camera"]
+[node name="CanvasLayer" type="CanvasLayer" parent="SpellMachineTower/level_camera" index="0"]
 layer = -1
 follow_viewport_enabled = true
 
-[node name="Parallax2D" type="Parallax2D" parent="SpellMachineTower/level_camera"]
+[node name="Parallax2D" type="Parallax2D" parent="SpellMachineTower/level_camera" index="1"]
 scale = Vector2(1.5, 1.5)
 scroll_offset = Vector2(-7272, 1120)
 repeat_size = Vector2(5750, 0)
@@ -67,7 +60,7 @@ scale = Vector2(60, 60)
 texture = ExtResource("4_586re")
 region_rect = Rect2(0, 0, 1500, 500)
 
-[node name="ColorRect" type="ColorRect" parent="SpellMachineTower/level_camera"]
+[node name="ColorRect" type="ColorRect" parent="SpellMachineTower/level_camera" index="2"]
 z_index = -1
 offset_left = -20528.0
 offset_top = -23028.0
@@ -109,7 +102,6 @@ slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_fir
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("13_y66eb")]
 stream = ExtResource("14_d8b1f")
 volume_db = -12.0
-bus = &"Master"
 
 [node name="level_loader" type="Node" parent="."]
 script = ExtResource("21_bkprm")
@@ -198,6 +190,12 @@ position = Vector2(-3074, -3491)
 [node name="green_light4" parent="green_lights2" instance=ExtResource("17_1utru")]
 position = Vector2(-2933, -3541)
 
+[node name="CursorRadials" parent="." instance=ExtResource("18_bncdi")]
+position = Vector2(-6113, -4573)
+scale = Vector2(10, 10)
+
 [connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner1" method="_on_slime_spawn_timer_timeout"]
 
+[editable path="SpellMachineTower"]
+[editable path="SpellMachineTower/CanvasLayer/MachineGunCooldown"]
 [editable path="slime_health_layer/HealthBar"]

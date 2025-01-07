@@ -59,6 +59,7 @@ mouse_cursor/custom_image_hotspot=Vector2(10, 10)
 
 [editor]
 
+movie_writer/mjpeg_quality=0.5
 movie_writer/movie_file="/home/phil/Desktop/movies/steam_video.avi"
 
 [editor_plugins]

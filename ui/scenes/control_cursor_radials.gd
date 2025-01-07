@@ -31,3 +31,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var mouse_position = get_global_mouse_position()
 	global_position = mouse_position
+	
+	if is_visible_in_tree():
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

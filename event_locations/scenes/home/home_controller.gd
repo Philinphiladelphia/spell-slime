@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 			if door_area.has_overlapping_bodies() and door_active:
 				door_glyph.show()
 				if Input.is_action_pressed("interact"):
-					$BackgroundMusicPlayer.stop()
+					$BackgroundMusicPlayer.queue_free()
 					SceneLoader.load_scene("res://event_locations/scenes/home/home_inside.tscn")
 			else:
 				door_glyph.hide()

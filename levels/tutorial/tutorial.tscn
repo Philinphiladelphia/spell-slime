@@ -1,0 +1,95 @@
+[gd_scene load_steps=16 format=3 uid="uid://bcds2tboe5186"]
+
+[ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="1_33ewk"]
+[ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="4_vkekc"]
+[ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="5_usd3t"]
+[ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="6_wywu0"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="7_i7b0q"]
+[ext_resource type="AudioStream" uid="uid://y4gp0h428vu1" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 05 Synth Gunk.mp3" id="8_kgdae"]
+[ext_resource type="PackedScene" uid="uid://b3h10qjq6e2ex" path="res://levels/moonswept_fields/day/fireflies/firefly_1.tscn" id="9_3rxwi"]
+[ext_resource type="PackedScene" uid="uid://u8yw78ho6f4q" path="res://levels/moonswept_fields/day/fireflies/firefly_2.tscn" id="10_45dwa"]
+[ext_resource type="PackedScene" uid="uid://4ckixkubpfc" path="res://levels/moonswept_fields/day/fireflies/firefly_3.tscn" id="11_h84km"]
+[ext_resource type="PackedScene" uid="uid://cjt34jc6gjopc" path="res://levels/moonswept_fields/day/fireflies/firefly_4.tscn" id="12_itn3i"]
+[ext_resource type="PackedScene" uid="uid://ckj06wijqcgb0" path="res://levels/moonswept_fields/day/fireflies/firefly_5.tscn" id="13_jpeer"]
+[ext_resource type="PackedScene" uid="uid://178vxq4glcg1" path="res://levels/moonswept_fields/day/fireflies/firefly_6.tscn" id="14_s3yqd"]
+[ext_resource type="PackedScene" uid="uid://ckmc8fj2h55tl" path="res://levels/moonswept_fields/day/fireflies/firefly_7.tscn" id="15_q4hgy"]
+[ext_resource type="PackedScene" uid="uid://v6ksqa48mrxp" path="res://levels/moonswept_fields/day/fireflies/firefly_8.tscn" id="16_lc054"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4edxp"]
+bg_color = Color(0.1863, 0.69, 0.379385, 1)
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="SpellMachineTower" parent="." instance=ExtResource("1_33ewk")]
+position = Vector2(-3216, -2504)
+
+[node name="main_gun" parent="SpellMachineTower/spell_machine_tower" index="0" node_paths=PackedStringArray("level_camera")]
+level_camera = NodePath("../../level_camera")
+
+[node name="slime_health_layer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="HealthBar" parent="slime_health_layer" instance=ExtResource("4_vkekc")]
+z_index = 10
+offset_left = 222.0
+offset_top = 44.0
+offset_right = 1041.0
+offset_bottom = 86.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_4edxp")
+show_percentage = true
+metadata/_edit_use_anchors_ = true
+
+[node name="slime_tracker" type="Node" parent="."]
+script = ExtResource("5_usd3t")
+
+[node name="spawner1" type="Node2D" parent="slime_tracker"]
+position = Vector2(-5966, -2743)
+script = ExtResource("6_wywu0")
+slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_fire_slimes.json"
+
+[node name="spawner2" type="Node2D" parent="slime_tracker"]
+position = Vector2(-740, -2791)
+script = ExtResource("6_wywu0")
+slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_water_slimes.json"
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("7_i7b0q")]
+stream = ExtResource("8_kgdae")
+volume_db = -18.586
+
+[node name="fireflies" type="Node2D" parent="."]
+
+[node name="Firefly1" parent="fireflies" instance=ExtResource("9_3rxwi")]
+position = Vector2(-6040, -2523)
+scale = Vector2(4, 4)
+
+[node name="Firefly2" parent="fireflies" instance=ExtResource("10_45dwa")]
+position = Vector2(-5503, -2723)
+scale = Vector2(4, 4)
+
+[node name="Firefly3" parent="fireflies" instance=ExtResource("11_h84km")]
+position = Vector2(-6307, -2945)
+scale = Vector2(4, 4)
+
+[node name="Firefly4" parent="fireflies" instance=ExtResource("12_itn3i")]
+position = Vector2(-197, -3015)
+scale = Vector2(4, 4)
+
+[node name="Firefly5" parent="fireflies" instance=ExtResource("13_jpeer")]
+position = Vector2(-1191, -3096)
+scale = Vector2(4, 4)
+
+[node name="Firefly6" parent="fireflies" instance=ExtResource("14_s3yqd")]
+position = Vector2(-1066, -2399)
+scale = Vector2(4, 4)
+
+[node name="Firefly7" parent="fireflies" instance=ExtResource("15_q4hgy")]
+position = Vector2(236, -2538)
+scale = Vector2(4, 4)
+
+[node name="Firefly8" parent="fireflies" instance=ExtResource("16_lc054")]
+position = Vector2(-442, -2805)
+scale = Vector2(4, 4)
+
+[editable path="SpellMachineTower"]
+[editable path="SpellMachineTower/CanvasLayer/MachineGunCooldown"]
+[editable path="slime_health_layer/HealthBar"]

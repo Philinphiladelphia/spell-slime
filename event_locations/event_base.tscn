@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://event_locations/event_base.gd" id="1_xkyxi"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/dialogue_controller.gd" id="2_r3mv8"]
 [ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="3_jrden"]
-[ext_resource type="AudioStream" uid="uid://csrbj67lgficj" path="res://music/assets/Stevia Sphere - green ideas/Stevia Sphere - green ideas - 11 birds singing - acoustic demo (bonus track).mp3" id="4_b63vl"]
 [ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="5_v5xn4"]
 [ext_resource type="PhysicsMaterial" uid="uid://ck8mykk0eyseq" path="res://event_locations/slime_physics_material.tres" id="6_el8i8"]
 [ext_resource type="PackedScene" uid="uid://cr40nhm4sybj4" path="res://player_slime/scenes/jumping_slime.tscn" id="7_3gnpt"]
@@ -12,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://yep7lw2tq7mf" path="res://event_locations/assets/eyes.png" id="10_8drd0"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/tutorial_text.gd" id="11_x1t5n"]
 [ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="12_nwgtl"]
+[ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="13_crivy"]
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_bygj0"]
 resource_local_to_scene = true
@@ -237,8 +237,8 @@ script = ExtResource("2_r3mv8")
 dialogues = Array[String](["grandpa_1", "grandpa_2"])
 
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("3_jrden")]
-stream = ExtResource("4_b63vl")
 volume_db = -18.586
+autoplay = false
 bus = &"Master"
 
 [node name="player" parent="." node_paths=PackedStringArray("cursor_radials") instance=ExtResource("5_v5xn4")]
@@ -253,93 +253,89 @@ upright_force = 600
 modification_stack = SubResource("SkeletonModificationStack2D_m58bw")
 
 [node name="Bone-0" parent="player/SoftBody2D/Skeleton2D" index="0"]
-position = Vector2(11.2437, 23.1117)
+position = Vector2(12.2375, 23.2233)
 
 [node name="Bone-1" parent="player/SoftBody2D/Skeleton2D" index="1"]
-position = Vector2(11.2099, 31.7196)
+position = Vector2(12.1698, 31.4392)
 
 [node name="Bone-2" parent="player/SoftBody2D/Skeleton2D" index="2"]
-position = Vector2(16.394, 12.8672)
+position = Vector2(17.1808, 13.4843)
+scale = Vector2(1, 1)
 
 [node name="Bone-3" parent="player/SoftBody2D/Skeleton2D" index="3"]
-position = Vector2(17.9872, 23.1592)
+position = Vector2(18.9745, 23.3185)
 
 [node name="Bone-4" parent="player/SoftBody2D/Skeleton2D" index="4"]
-position = Vector2(17.9222, 31.6133)
+position = Vector2(18.8444, 31.2265)
 scale = Vector2(0.999998, 0.999998)
 
 [node name="Bone-5" parent="player/SoftBody2D/Skeleton2D" index="5"]
-position = Vector2(16.239, 40.3262)
+position = Vector2(16.9779, 39.6525)
 scale = Vector2(0.999998, 0.999998)
 
 [node name="Bone-6" parent="player/SoftBody2D/Skeleton2D" index="6"]
-position = Vector2(26.3355, 8.19203)
+position = Vector2(26.671, 9.13407)
 scale = Vector2(0.999844, 0.999844)
 
 [node name="Bone-7" parent="player/SoftBody2D/Skeleton2D" index="7"]
-position = Vector2(26.4921, 14.8706)
+position = Vector2(26.9841, 15.7411)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-8" parent="player/SoftBody2D/Skeleton2D" index="8"]
-position = Vector2(26.9333, 23.359)
+position = Vector2(27.8667, 23.718)
+scale = Vector2(1, 1)
 
 [node name="Bone-9" parent="player/SoftBody2D/Skeleton2D" index="9"]
-position = Vector2(26.7071, 31.2929)
 scale = Vector2(0.999991, 0.999991)
 
 [node name="Bone-10" parent="player/SoftBody2D/Skeleton2D" index="10"]
-position = Vector2(26.1439, 40.3309)
+position = Vector2(26.5378, 39.4117)
 scale = Vector2(0.999989, 0.999989)
 
 [node name="Bone-11" parent="player/SoftBody2D/Skeleton2D" index="11"]
-position = Vector2(34.8643, 8.24075)
+position = Vector2(34.7286, 9.23149)
 scale = Vector2(0.999995, 0.999995)
 
 [node name="Bone-12" parent="player/SoftBody2D/Skeleton2D" index="12"]
-position = Vector2(34.7876, 14.9772)
+position = Vector2(34.5751, 15.9544)
 scale = Vector2(0.999997, 0.999997)
 
 [node name="Bone-13" parent="player/SoftBody2D/Skeleton2D" index="13"]
-position = Vector2(34.2929, 23.7071)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-14" parent="player/SoftBody2D/Skeleton2D" index="14"]
-position = Vector2(34.641, 31.0667)
+position = Vector2(34.282, 30.1333)
 scale = Vector2(0.999995, 0.999995)
 
 [node name="Bone-15" parent="player/SoftBody2D/Skeleton2D" index="15"]
+position = Vector2(34.6809, 38.9962)
 scale = Vector2(0.999998, 0.999998)
 
 [node name="Bone-16" parent="player/SoftBody2D/Skeleton2D" index="16"]
-position = Vector2(44.4349, 8.07503)
-
-[node name="Bone-17" parent="player/SoftBody2D/Skeleton2D" index="17"]
-position = Vector2(43.2929, 14.7071)
+position = Vector2(43.8698, 8.90006)
 
 [node name="Bone-18" parent="player/SoftBody2D/Skeleton2D" index="18"]
-position = Vector2(43.0228, 23.2124)
+position = Vector2(42.0456, 23.4249)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-19" parent="player/SoftBody2D/Skeleton2D" index="19"]
-position = Vector2(43.1294, 31.5079)
+position = Vector2(42.2589, 31.0159)
 scale = Vector2(0.999987, 0.999987)
 
 [node name="Bone-20" parent="player/SoftBody2D/Skeleton2D" index="20"]
-position = Vector2(43.3979, 39.9516)
+position = Vector2(42.7958, 39.1531)
 
 [node name="Bone-21" parent="player/SoftBody2D/Skeleton2D" index="21"]
-position = Vector2(51.3858, 14.5032)
+position = Vector2(50.5216, 15.0064)
 scale = Vector2(0.999997, 0.999997)
 
 [node name="Bone-22" parent="player/SoftBody2D/Skeleton2D" index="22"]
-position = Vector2(51.644, 23.1232)
+position = Vector2(50.6516, 23.2464)
+scale = Vector2(1, 1)
 
 [node name="Bone-23" parent="player/SoftBody2D/Skeleton2D" index="23"]
-position = Vector2(51.7978, 31.6944)
+position = Vector2(50.8457, 31.3887)
 scale = Vector2(0.999996, 0.999996)
-
-[node name="Bone-24" parent="player/SoftBody2D/Skeleton2D" index="24"]
-position = Vector2(50.8135, 39.8824)
 
 [node name="RectangleShape2D" parent="player/SoftBody2D/Bone-0" index="0"]
 shape = SubResource("RectangleShape2D_5g16p")
@@ -485,6 +481,12 @@ horizontal_alignment = 1
 [node name="CursorRadials" parent="." instance=ExtResource("12_nwgtl")]
 visible = false
 position = Vector2(-465, -111)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("slime_to_follow")]
+position = Vector2(33, 60)
+zoom = Vector2(2, 2)
+script = ExtResource("13_crivy")
+slime_to_follow = NodePath("../player")
 
 [connection signal="dialogue_ended" from="dialogue_layer" to="." method="_on_dialogue_layer_dialogue_ended"]
 

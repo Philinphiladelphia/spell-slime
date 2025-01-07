@@ -21,7 +21,7 @@ var is_dead: bool = false
 @onready var machine_gun_cooldown_bar: Node = $CanvasLayer/MachineGunCooldown
 @onready var harpoon_cooldown_bar: Node = $CanvasLayer/HarpoonCooldown
 
-@onready var level_camera: Node = get_parent().camera_node
+@export var level_camera: Camera2D
 
 var stats: Dictionary = {}
 
