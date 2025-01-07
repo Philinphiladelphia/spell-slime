@@ -1,4 +1,4 @@
-[gd_scene load_steps=392 format=4 uid="uid://dmj3p8g46opwx"]
+[gd_scene load_steps=393 format=4 uid="uid://dmj3p8g46opwx"]
 
 [ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="1_i7vbu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/home_controller.gd" id="1_qc7mf"]
@@ -154,6 +154,7 @@
 [ext_resource type="PackedScene" uid="uid://duksl7grt8udr" path="res://ui/scenes/input_glyph.tscn" id="136_vhimu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/tutorial_text.gd" id="139_maqv3"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/camera.gd" id="147_263tt"]
+[ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="155_12anc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uxhj"]
 texture = ExtResource("21_51lk4")
@@ -3333,8 +3334,6 @@ position = Vector2(42.0456, 23.4249)
 
 [node name="Bone-19" parent="player/SoftBody2D/Skeleton2D" index="19"]
 position = Vector2(42.2589, 31.0159)
-rotation = 1.4721
-scale = Vector2(1, 1)
 
 [node name="Bone-20" parent="player/SoftBody2D/Skeleton2D" index="20"]
 position = Vector2(42.7958, 39.1531)
@@ -3425,23 +3424,10 @@ shape = SubResource("RectangleShape2D_6ebds")
 [node name="RectangleShape2D" parent="player/SoftBody2D/Bone-24" index="0"]
 shape = SubResource("RectangleShape2D_6ebds")
 
-[node name="camera" parent="player" index="2"]
-script = ExtResource("147_263tt")
-
-[node name="Camera2D" parent="player/camera" index="0"]
-position = Vector2(-226, -554)
-y_offset = -100
-y_move_speed = 0.5
-
-[node name="sky" type="Sprite2D" parent="player/camera/Camera2D" index="0"]
-z_index = -1
-scale = Vector2(4, 4)
-texture = ExtResource("1_i7vbu")
-
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("132_evyiw")]
 stream = ExtResource("133_u6doc")
 volume_db = -18.586
-bus = &"Master"
+playback_type = 1
 
 [node name="CursorRadials" parent="." instance=ExtResource("133_w8vil")]
 visible = false
@@ -3515,6 +3501,23 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("147_263tt")
+
+[node name="Camera2D" type="Camera2D" parent="Node" node_paths=PackedStringArray("slime_to_follow")]
+position = Vector2(-215, -540)
+zoom = Vector2(2, 2)
+script = ExtResource("155_12anc")
+slime_to_follow = NodePath("../../player")
+y_offset = -100
+y_move_speed = 0.5
+
+[node name="sky" type="Sprite2D" parent="Node/Camera2D"]
+z_index = -1
+position = Vector2(-7, -18)
+scale = Vector2(4, 4)
+texture = ExtResource("1_i7vbu")
 
 [connection signal="dialogue_ended" from="dialogue_layer" to="." method="_on_dialogue_layer_dialogue_ended"]
 [connection signal="body_entered" from="gpa_collider" to="." method="_on_area_2d_body_entered"]

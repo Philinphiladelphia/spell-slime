@@ -45,6 +45,8 @@ var primary_cooldown_rate: float = 5.0 # 5 projectiles per second
 var lightning_animation: PackedScene
 var basic_animation: PackedScene
 
+@export var level_camera: Camera2D
+
 # gem system
 # slimes scan for particle damage, json dict to determine how much
 
@@ -93,7 +95,7 @@ func _process(delta: float) -> void:
 	if secondary_firing:
 		if secondary_firing_timer <= 0:
 			SoundManager.play_sfx("harpoon", 0, -12, 3)
-			get_parent().get_parent().level_camera.apply_shake(50)
+			level_camera.apply_shake(50)
 			fire_projectile(missile_projectile_scene, secondary_projectile_dmg, secondary_firing_velocity, secondary_max_lifespan, secondary_post_hit_lifespan, secondary_mass, secondary_shake)
 			secondary_firing_timer = secondary_firing_interval
 

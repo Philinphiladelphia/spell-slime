@@ -1,11 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://dkmnhwrbi6fme"]
+[gd_scene load_steps=20 format=3 uid="uid://dkmnhwrbi6fme"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_pru1i"]
 [ext_resource type="PackedScene" uid="uid://e6og876glwxo" path="res://background/scenes/parallaxes/sunrise_maxxfield_parrish.tscn" id="2_wvtds"]
 [ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="3_nn054"]
-[ext_resource type="Script" path="res://levels/scripts/move_level_camera.gd" id="4_bdupt"]
 [ext_resource type="Texture2D" uid="uid://6iq70kpx3kie" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version A/Layers/sky.png" id="5_na1dl"]
-[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="6_trtlv"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="7_awnss"]
 [ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="8_p7o26"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="9_a1rvl"]
@@ -19,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://chufmtlsuka0f" path="res://slimes/environment/foreground/branding_platform.tscn" id="19_jy6e1"]
 [ext_resource type="PackedScene" uid="uid://178vxq4glcg1" path="res://levels/moonswept_fields/day/fireflies/firefly_6.tscn" id="20_0rs8i"]
 [ext_resource type="PackedScene" uid="uid://ckmc8fj2h55tl" path="res://levels/moonswept_fields/day/fireflies/firefly_7.tscn" id="21_foddv"]
-[ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="21_n0wid"]
 [ext_resource type="PackedScene" uid="uid://v6ksqa48mrxp" path="res://levels/moonswept_fields/day/fireflies/firefly_8.tscn" id="22_43mgr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28xsr"]
@@ -36,35 +33,19 @@ powderviewport = NodePath("SpellMachineTower/PowderViewport")
 z_index = -5
 position = Vector2(75, -4193)
 
-[node name="SpellMachineTower" parent="." node_paths=PackedStringArray("cursor_radials") instance=ExtResource("3_nn054")]
+[node name="SpellMachineTower" parent="." instance=ExtResource("3_nn054")]
 position = Vector2(-3216, -2504)
-cursor_radials = NodePath("../CursorRadials")
 
-[node name="PowderViewport" parent="SpellMachineTower" instance=ExtResource("6_trtlv")]
-position = Vector2(-1379, -2196)
-scale = Vector2(3.5, 3.5)
+[node name="main_gun" parent="SpellMachineTower/spell_machine_tower" index="0" node_paths=PackedStringArray("level_camera")]
+level_camera = NodePath("../../level_camera")
 
-[node name="level_camera" type="Camera2D" parent="SpellMachineTower"]
-position = Vector2(7, -506)
-scale = Vector2(0.25, 0.25)
-zoom = Vector2(0.2, 0.2)
-script = ExtResource("4_bdupt")
-max_distance_x = 1000.0
-max_distance_y = 500.0
-deadzone_size_x = 10000.0
-deadzone_size_y = 5000.0
-
-[node name="Sprite2D" type="Sprite2D" parent="SpellMachineTower/level_camera"]
+[node name="Sprite2D" type="Sprite2D" parent="SpellMachineTower/level_camera" index="0"]
 physics_interpolation_mode = 1
 z_index = -10
 position = Vector2(76, 2092)
 scale = Vector2(85, 85)
 texture = ExtResource("5_na1dl")
 region_rect = Rect2(0, 0, 1500, 500)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="SpellMachineTower/level_camera"]
-layer = -1
-follow_viewport_enabled = true
 
 [node name="slime_health_layer" type="CanvasLayer" parent="."]
 layer = 10
@@ -77,6 +58,10 @@ offset_right = 1041.0
 offset_bottom = 86.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_28xsr")
 show_percentage = true
+metadata/_edit_use_anchors_ = true
+
+[node name="DamageBar" parent="slime_health_layer/HealthBar" index="0"]
+metadata/_edit_use_anchors_ = true
 
 [node name="slime_tracker" type="Node" parent="."]
 script = ExtResource("8_p7o26")
@@ -96,7 +81,6 @@ slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_wat
 [node name="BackgroundMusicPlayer" parent="." instance=ExtResource("11_wqyd6")]
 stream = ExtResource("12_suvrm")
 volume_db = -18.586
-bus = &"Master"
 
 [node name="slime_spawn_timer" type="Timer" parent="."]
 one_shot = true
@@ -139,11 +123,9 @@ scale = Vector2(4, 4)
 position = Vector2(-442, -2805)
 scale = Vector2(4, 4)
 
-[node name="CursorRadials" parent="." instance=ExtResource("21_n0wid")]
-position = Vector2(-6113, -4573)
-scale = Vector2(10, 10)
-
 [connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner1" method="_on_slime_spawn_timer_timeout"]
 [connection signal="timeout" from="slime_spawn_timer" to="slime_tracker/spawner2" method="_on_slime_spawn_timer_timeout"]
 
+[editable path="SpellMachineTower"]
+[editable path="SpellMachineTower/CanvasLayer/MachineGunCooldown"]
 [editable path="slime_health_layer/HealthBar"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=500 format=4 uid="uid://ccmbggkgir6a2"]
+[gd_scene load_steps=501 format=4 uid="uid://ccmbggkgir6a2"]
 
 [ext_resource type="Script" path="res://event_locations/scenes/home/home_inside.gd" id="1_3olva"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/dialogue_controller.gd" id="2_r3mv8"]
@@ -346,6 +346,7 @@
 [ext_resource type="Texture2D" uid="uid://clivpo3djtwvt" path="res://super_pixel/wills_magic_pixel_particle_effects/majestic_spiral/frames/frame0117.png" id="343_ghxel"]
 [ext_resource type="Texture2D" uid="uid://d23vj3bg3oxww" path="res://super_pixel/wills_magic_pixel_particle_effects/majestic_spiral/frames/frame0118.png" id="344_dmhcs"]
 [ext_resource type="Texture2D" uid="uid://b3pg4culnc7nw" path="res://super_pixel/wills_magic_pixel_particle_effects/majestic_spiral/frames/frame0119.png" id="345_53mi2"]
+[ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="347_od8m7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sxnq"]
 texture = ExtResource("23_wbjwq")
@@ -3268,7 +3269,7 @@ scale = Vector2(0.999996, 0.999996)
 
 [node name="Bone-3" parent="characters/player/SoftBody2D/Skeleton2D" index="3"]
 position = Vector2(18.9745, 23.3185)
-scale = Vector2(0.999999, 0.999999)
+scale = Vector2(0.999998, 0.999998)
 
 [node name="Bone-4" parent="characters/player/SoftBody2D/Skeleton2D" index="4"]
 position = Vector2(18.8444, 31.2265)
@@ -3280,22 +3281,22 @@ scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-6" parent="characters/player/SoftBody2D/Skeleton2D" index="6"]
 position = Vector2(26.671, 9.13406)
-scale = Vector2(0.999837, 0.999837)
+scale = Vector2(0.999838, 0.999838)
 
 [node name="Bone-7" parent="characters/player/SoftBody2D/Skeleton2D" index="7"]
 position = Vector2(26.9841, 15.7411)
-scale = Vector2(0.999976, 0.999976)
+scale = Vector2(0.999973, 0.999973)
 
 [node name="Bone-8" parent="characters/player/SoftBody2D/Skeleton2D" index="8"]
 position = Vector2(27.8667, 23.718)
 scale = Vector2(0.999998, 0.999998)
 
 [node name="Bone-9" parent="characters/player/SoftBody2D/Skeleton2D" index="9"]
-scale = Vector2(0.999985, 0.999985)
+scale = Vector2(0.999983, 0.999983)
 
 [node name="Bone-10" parent="characters/player/SoftBody2D/Skeleton2D" index="10"]
 position = Vector2(26.5378, 39.4117)
-scale = Vector2(0.999985, 0.999985)
+scale = Vector2(0.999984, 0.999984)
 
 [node name="Bone-11" parent="characters/player/SoftBody2D/Skeleton2D" index="11"]
 position = Vector2(34.7286, 9.23149)
@@ -3309,7 +3310,7 @@ scale = Vector2(0.999996, 0.999996)
 scale = Vector2(0.999994, 0.999994)
 
 [node name="Bone-14" parent="characters/player/SoftBody2D/Skeleton2D" index="14"]
-scale = Vector2(0.999986, 0.999986)
+scale = Vector2(0.999987, 0.999987)
 
 [node name="Bone-15" parent="characters/player/SoftBody2D/Skeleton2D" index="15"]
 scale = Vector2(0.999986, 0.999986)
@@ -3322,7 +3323,7 @@ position = Vector2(42.0456, 23.4249)
 scale = Vector2(0.999994, 0.999994)
 
 [node name="Bone-19" parent="characters/player/SoftBody2D/Skeleton2D" index="19"]
-scale = Vector2(0.999987, 0.999987)
+scale = Vector2(0.999986, 0.999986)
 
 [node name="Bone-20" parent="characters/player/SoftBody2D/Skeleton2D" index="20"]
 position = Vector2(42.7958, 39.1531)
@@ -3448,9 +3449,6 @@ position = Vector2(34, 29)
 
 [node name="player_mouth" parent="characters/player/decorations" index="1"]
 position = Vector2(34, 27)
-
-[node name="Camera2D" parent="characters/player/camera" index="0"]
-y_offset = -100
 
 [node name="grandpa" parent="characters" node_paths=PackedStringArray("decorations") instance=ExtResource("7_3gnpt")]
 modulate = Color(0.44, 1, 0.496, 1)
@@ -3703,6 +3701,7 @@ pitch_scale = 0.8
 autoplay = true
 max_distance = 3000.0
 attenuation = 2.2974
+bus = &"Music"
 parameters/looping = true
 
 [node name="dialogue_collider" type="Area2D" parent="."]
@@ -3715,6 +3714,13 @@ shape = SubResource("RectangleShape2D_i7ceb")
 
 [node name="gpa_second_location" type="Node2D" parent="."]
 position = Vector2(-80, 401)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("slime_to_follow")]
+position = Vector2(33, 60)
+zoom = Vector2(2, 2)
+script = ExtResource("347_od8m7")
+slime_to_follow = NodePath("../characters/player")
+y_offset = -100
 
 [connection signal="dialogue_ended" from="dialogue_layer" to="." method="_on_dialogue_layer_dialogue_ended"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://dd32qqj6y33t2"]
+[gd_scene load_steps=106 format=3 uid="uid://dd32qqj6y33t2"]
 
 [ext_resource type="Script" path="res://spell_machine_tower/scenes/spell_tower_controller.gd" id="1_dsv4g"]
 [ext_resource type="Shader" path="res://spell_machine_tower/scenes/spell_tower.gdshader" id="2_218il"]
@@ -89,6 +89,9 @@
 [ext_resource type="PackedScene" uid="uid://cxrgxrgnybiuw" path="res://spell_machine_tower/scenes/vertical_bar.tscn" id="87_3sada"]
 [ext_resource type="Texture2D" uid="uid://c5gv2bpsap7wy" path="res://spell_machine_tower/assets/slime_dome/slime_dome.png" id="87_83o1c"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="91_4cj31"]
+[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="91_vn7rc"]
+[ext_resource type="Script" path="res://levels/scripts/move_level_camera.gd" id="92_ntg0b"]
+[ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="93_ljmwh"]
 [ext_resource type="Texture2D" uid="uid://xy3euqv5p8q3" path="res://common_assets/slimes/slime.png" id="96_ssyy0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3uabp"]
@@ -174,9 +177,11 @@ fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)
 
-[node name="SpellMachineTower" type="Node2D" node_paths=PackedStringArray("tower_light")]
+[node name="SpellMachineTower" type="Node2D" node_paths=PackedStringArray("tower_light", "cursor_radials", "level_camera")]
 script = ExtResource("1_dsv4g")
 tower_light = NodePath("PointLight2D")
+cursor_radials = NodePath("CursorRadials")
+level_camera = NodePath("level_camera")
 
 [node name="stars2" type="RigidBody2D" parent="."]
 position = Vector2(17, -812)
@@ -2158,6 +2163,24 @@ energy = 0.6
 shadow_color = Color(0, 0, 0, 0.658824)
 texture = SubResource("GradientTexture2D_utg3h")
 texture_scale = 50.0
+
+[node name="PowderViewport" parent="." instance=ExtResource("91_vn7rc")]
+position = Vector2(-1379, -2196)
+scale = Vector2(3.5, 3.5)
+
+[node name="level_camera" type="Camera2D" parent="."]
+position = Vector2(7, -506)
+scale = Vector2(0.25, 0.25)
+zoom = Vector2(0.2, 0.2)
+script = ExtResource("92_ntg0b")
+max_distance_x = 1000.0
+max_distance_y = 500.0
+deadzone_size_x = 10000.0
+deadzone_size_y = 5000.0
+
+[node name="CursorRadials" parent="." instance=ExtResource("93_ljmwh")]
+position = Vector2(-6113, -4573)
+scale = Vector2(10, 10)
 
 [connection signal="timeout" from="damage_timer" to="." method="_on_damage_timer_timeout"]
 [connection signal="body_shape_entered" from="hurt_box" to="." method="_on_hurt_box_body_shape_entered"]
