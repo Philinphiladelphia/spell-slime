@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwy8rh1loal5y"]
 
-[ext_resource type="FontFile" uid="uid://fhes64g5term" path="res://fonts/the-bomb-sound/The Bomb Sound.otf" id="1_3jdhg"]
+[ext_resource type="FontFile" uid="uid://fhes64g5term" path="res://art/fonts/the-bomb-sound/The Bomb Sound.otf" id="1_3jdhg"]
 [ext_resource type="Script" path="res://ui/scripts/start_new_run.gd" id="1_x35ea"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bjpst"]

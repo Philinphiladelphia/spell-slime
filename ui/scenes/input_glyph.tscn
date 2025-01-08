@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://duksl7grt8udr"]
 
 [ext_resource type="Script" path="res://ui/scripts/input_glyph.gd" id="1_du7af"]
-[ext_resource type="Texture2D" uid="uid://ivjxbbcublcj" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/notification/notification_empty.png" id="2_f756v"]
+[ext_resource type="Texture2D" uid="uid://ivjxbbcublcj" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/notification/notification_empty.png" id="2_f756v"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_53pi2"]
 action = &"interact"

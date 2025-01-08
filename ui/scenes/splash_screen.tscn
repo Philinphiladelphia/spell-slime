@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdhajovi05pu7"]
 
-[ext_resource type="Texture2D" uid="uid://b75qpe64vvqli" path="res://common_assets/branding/SpS_elements_Mesa de trabajo 1.png" id="1_pnhqg"]
+[ext_resource type="Texture2D" uid="uid://b75qpe64vvqli" path="res://art/branding/SpS_elements_Mesa de trabajo 1.png" id="1_pnhqg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tay8n"]
 font_size = 40

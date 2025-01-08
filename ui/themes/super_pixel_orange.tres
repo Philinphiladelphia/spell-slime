@@ -1,11 +1,11 @@
 [gd_resource type="Theme" load_steps=13 format=3 uid="uid://fkgqxt1uaav4"]
 
-[ext_resource type="Texture2D" uid="uid://drfnhfinj5h32" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_disabled.png" id="1_3et5b"]
-[ext_resource type="Texture2D" uid="uid://jqbtc4f1olbm" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_hovered.png" id="2_ewq4w"]
-[ext_resource type="Texture2D" uid="uid://buo77kv2el7nl" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_pressed.png" id="4_arj0b"]
-[ext_resource type="FontFile" uid="uid://byu80w2u2k8ie" path="res://fonts/zig/zig_____.ttf" id="5_nriff"]
-[ext_resource type="Texture2D" uid="uid://bxjqretpenqa8" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_default.png" id="6_w6ibp"]
-[ext_resource type="Texture2D" uid="uid://jf0p3x60ampw" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/message_box_B.png" id="7_ig0kf"]
+[ext_resource type="Texture2D" uid="uid://drfnhfinj5h32" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_disabled.png" id="1_3et5b"]
+[ext_resource type="Texture2D" uid="uid://jqbtc4f1olbm" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_hovered.png" id="2_ewq4w"]
+[ext_resource type="Texture2D" uid="uid://buo77kv2el7nl" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_pressed.png" id="4_arj0b"]
+[ext_resource type="FontFile" uid="uid://byu80w2u2k8ie" path="res://art/fonts/zig/zig_____.ttf" id="5_nriff"]
+[ext_resource type="Texture2D" uid="uid://bxjqretpenqa8" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_orange/button_default.png" id="6_w6ibp"]
+[ext_resource type="Texture2D" uid="uid://jf0p3x60ampw" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/message_box_B.png" id="7_ig0kf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wicgl"]
 texture = ExtResource("1_3et5b")

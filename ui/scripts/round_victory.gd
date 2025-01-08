@@ -139,5 +139,6 @@ func _on_slot_3_pressed() -> void:
 
 
 func _on_round_end_timer_timeout() -> void:
+	SoundManager.stop_all()
 	SceneLoader.load_scene("res://overworld/scenes/base_overworld.tscn")
 	get_parent().get_parent().queue_free()

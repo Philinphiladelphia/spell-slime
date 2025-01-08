@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://05cjdapg4ek5"]
 
-[ext_resource type="Texture2D" uid="uid://xy3euqv5p8q3" path="res://common_assets/slimes/slime.png" id="1_3bq4f"]
+[ext_resource type="Texture2D" uid="uid://xy3euqv5p8q3" path="res://art/slimes/slime.png" id="1_3bq4f"]
 [ext_resource type="Script" path="res://slimes/scripts/slime_controller.gd" id="1_abkxf"]
 [ext_resource type="Script" path="res://slimes/scripts/med_slime_controller.gd" id="1_i33h1"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_wpnhm"]

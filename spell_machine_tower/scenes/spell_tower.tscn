@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bwixg3xek1fs7" path="res://spell_machine_tower/assets/gears/1459653689.png" id="20_42ycw"]
 [ext_resource type="Texture2D" uid="uid://ca2ixsdhdp7xd" path="res://spell_machine_tower/assets/gears/656772755.png" id="21_mxo8u"]
 [ext_resource type="Texture2D" uid="uid://ieifcvw162l1" path="res://spell_machine_tower/assets/pipes/1030608527.png" id="22_v2qah"]
-[ext_resource type="LabelSettings" uid="uid://c34qgwo4ca7bk" path="res://upgrade_tree/assets/major_font.tres" id="23_d8mca"]
+[ext_resource type="LabelSettings" uid="uid://c34qgwo4ca7bk" path="res://art/upgrade_tree/assets/major_font.tres" id="23_d8mca"]
 [ext_resource type="Texture2D" uid="uid://c3y86pckldj6i" path="res://spell_machine_tower/assets/pipes/1908131986.png" id="24_5rc72"]
 [ext_resource type="Texture2D" uid="uid://8colgcp2yij4" path="res://spell_machine_tower/assets/pipes/102427822.png" id="25_wck7x"]
 [ext_resource type="Texture2D" uid="uid://beo6fc2ce2ony" path="res://spell_machine_tower/assets/pipes/30959994.png" id="26_kehbx"]
@@ -84,7 +84,7 @@
 [ext_resource type="Texture2D" uid="uid://c6ifxmiygd8dt" path="res://spell_machine_tower/assets/stone/1332578388.png" id="83_0uane"]
 [ext_resource type="Texture2D" uid="uid://bxf1k7uftknxg" path="res://spell_machine_tower/assets/stone/1980309027.png" id="84_a6w0n"]
 [ext_resource type="Texture2D" uid="uid://glmrvfj57ug5" path="res://spell_machine_tower/assets/stone/2047141881.png" id="85_6fhdw"]
-[ext_resource type="LabelSettings" uid="uid://8338ay754mqw" path="res://upgrade_tree/assets/minor_font.tres" id="86_13ju7"]
+[ext_resource type="LabelSettings" uid="uid://8338ay754mqw" path="res://art/upgrade_tree/assets/minor_font.tres" id="86_13ju7"]
 [ext_resource type="Texture2D" uid="uid://dgggahwa6cgi1" path="res://spell_machine_tower/assets/stone/2064920276.png" id="86_c75nb"]
 [ext_resource type="PackedScene" uid="uid://cxrgxrgnybiuw" path="res://spell_machine_tower/scenes/vertical_bar.tscn" id="87_3sada"]
 [ext_resource type="Texture2D" uid="uid://c5gv2bpsap7wy" path="res://spell_machine_tower/assets/slime_dome/slime_dome.png" id="87_83o1c"]
@@ -92,7 +92,7 @@
 [ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="91_vn7rc"]
 [ext_resource type="Script" path="res://levels/scripts/move_level_camera.gd" id="92_ntg0b"]
 [ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="93_ljmwh"]
-[ext_resource type="Texture2D" uid="uid://xy3euqv5p8q3" path="res://common_assets/slimes/slime.png" id="96_ssyy0"]
+[ext_resource type="Texture2D" uid="uid://jkd437xuhdfq" path="res://art/slimes/slime.png" id="96_ssyy0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3uabp"]
 radius = 60.1332

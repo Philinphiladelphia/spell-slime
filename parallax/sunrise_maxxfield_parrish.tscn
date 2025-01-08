@@ -1,0 +1,151 @@
+[gd_scene load_steps=6 format=3 uid="uid://e6og876glwxo"]
+
+[ext_resource type="Texture2D" uid="uid://cx68w7i5rdmyj" path="res://art/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version A/Layers/near-clouds.png" id="2_ftden"]
+[ext_resource type="Texture2D" uid="uid://cavthi507ux23" path="res://art/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version A/Layers/far-clouds.png" id="3_hytxk"]
+[ext_resource type="Texture2D" uid="uid://644fsrpwdn27" path="res://art/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version A/Layers/mountains.png" id="4_7vxu2"]
+[ext_resource type="Texture2D" uid="uid://11774c5h1stx" path="res://art/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version A/Layers/far-mountains.png" id="5_utw4a"]
+[ext_resource type="Texture2D" uid="uid://bw3louoe4u65m" path="res://art/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version A/Layers/trees.png" id="6_7juys"]
+
+[node name="ParallaxTest" type="Node2D"]
+position = Vector2(-30, -135)
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-179, 927)
+repeat_size = Vector2(1200, 0)
+autoscroll = Vector2(40, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D5"]
+position = Vector2(673, 291)
+scale = Vector2(10, 10)
+texture = ExtResource("3_hytxk")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 1)
+scroll_offset = Vector2(-1138, 1102)
+repeat_size = Vector2(1420, 0)
+autoscroll = Vector2(60, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(-159, 79)
+scale = Vector2(10, 10)
+texture = ExtResource("2_ftden")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D11" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.25, 1)
+scroll_offset = Vector2(-1319, 394)
+repeat_size = Vector2(2400, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D11"]
+position = Vector2(501, 835)
+scale = Vector2(15, 15)
+texture = ExtResource("5_utw4a")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D10" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 1)
+scroll_offset = Vector2(-3750, 1312)
+repeat_size = Vector2(3200, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D10"]
+position = Vector2(462, -31)
+scale = Vector2(12, 12)
+texture = ExtResource("4_7vxu2")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D6" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 1)
+scroll_offset = Vector2(-2592, 1447)
+repeat_size = Vector2(3200, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D6"]
+position = Vector2(453, -76)
+scale = Vector2(10, 10)
+texture = ExtResource("4_7vxu2")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 1)
+scroll_offset = Vector2(-7, 1059)
+repeat_size = Vector2(1600, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D4"]
+position = Vector2(321, 377)
+scale = Vector2(10, 10)
+texture = ExtResource("5_utw4a")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3695.0
+offset_top = 2082.0
+offset_right = 6305.0
+offset_bottom = 4082.0
+color = Color(0.172549, 0.145098, 0.27451, 1)
+
+[node name="Parallax2D14" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 1)
+scroll_offset = Vector2(-1684, -2087)
+repeat_size = Vector2(1900, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D14"]
+position = Vector2(1218, 3337)
+scale = Vector2(8, 8)
+texture = ExtResource("6_7juys")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D13" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 1)
+scroll_offset = Vector2(-879, -2180)
+repeat_size = Vector2(1900, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D13"]
+position = Vector2(1218, 3337)
+scale = Vector2(8, 8)
+texture = ExtResource("6_7juys")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D9" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 1)
+scroll_offset = Vector2(-1032, -1100)
+repeat_size = Vector2(1900, 0)
+repeat_times = 30
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D9"]
+position = Vector2(815, 2131)
+scale = Vector2(8, 8)
+texture = ExtResource("6_7juys")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D7" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 1)
+scroll_offset = Vector2(-179, 730)
+repeat_size = Vector2(2400, 0)
+repeat_times = 30
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D7"]
+position = Vector2(1018, 607)
+scale = Vector2(10, 10)
+texture = ExtResource("6_7juys")
+region_rect = Rect2(0, 0, 1500, 500)
+
+[node name="Parallax2D8" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 1)
+scroll_offset = Vector2(-1309, 638)
+repeat_size = Vector2(3120, 0)
+repeat_times = 30
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D8"]
+position = Vector2(1018, 607)
+scale = Vector2(13, 13)
+texture = ExtResource("6_7juys")
+region_rect = Rect2(0, 0, 1500, 500)

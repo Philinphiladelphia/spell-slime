@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dtk6vnwkkywn" path="res://event_locations/assets/1158019312.png" id="5_enex7"]
 [ext_resource type="Texture2D" uid="uid://bay01mf8px8qg" path="res://event_locations/assets/1596217554.png" id="6_wci7e"]
 [ext_resource type="Texture2D" uid="uid://dp21vlicr4ehb" path="res://event_locations/assets/1832021080.png" id="7_gnwxv"]
-[ext_resource type="Texture2D" uid="uid://d4gt7temncco1" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/gems/spritesheets/gems-spritesheet.png" id="8_lllxk"]
+[ext_resource type="Texture2D" uid="uid://d4gt7temncco1" path="res://art/Legacy Collection/Legacy Collection/Assets/Misc/gems/spritesheets/gems-spritesheet.png" id="8_lllxk"]
 [ext_resource type="Texture2D" uid="uid://c5v4ens0j213u" path="res://event_locations/assets/1942730696.png" id="8_vnsdv"]
 [ext_resource type="Texture2D" uid="uid://bci2gvu1m5tuo" path="res://event_locations/assets/1894676385.png" id="9_wpqj1"]
 [ext_resource type="Texture2D" uid="uid://bli4fokxrxvle" path="res://event_locations/assets/1283428105.png" id="10_ncgkq"]

@@ -1,10 +1,6 @@
 *.rar
 *.so
 *.tpz
-music/
-kenney_sfx/
-assets/
-Models/
-background/
-test_folder/
+art/
+audio/
 .godot/

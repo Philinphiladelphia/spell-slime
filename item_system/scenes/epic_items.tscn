@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2al8arcul7s1"]
 
 [ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_5iif1"]
-[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://tests/data/item_definitions_basic.tres" id="2_ijlcr"]
+[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://gloot/tests/data/item_definitions_basic.tres" id="2_ijlcr"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="3_l82dl"]
 
 [node name="epic_items" type="Node"]
@@ -14,7 +14,7 @@ protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
 "description": "Light in the darkness",
-"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/lantern_large_blue_inactive.png",
+"image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/lantern_large_blue_inactive.png",
 "name": "blue_lantern",
 "rarity": "epic"
 }
@@ -25,7 +25,7 @@ protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
 "description": "The Slime Knights protected the innocent in eons past",
-"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_defense_plus_large_green.png",
+"image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_defense_plus_large_green.png",
 "name": "slime_knight",
 "rarity": "epic"
 }
@@ -36,7 +36,7 @@ protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
 "description": "When one of these is thrown down, things are about to get squishy",
-"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_power_plus_large_green.png",
+"image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_power_plus_large_green.png",
 "name": "slime_gauntlet",
 "rarity": "epic"
 }
@@ -47,7 +47,7 @@ protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
 "description": "A rolling slime gathers no moss",
-"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_speed_plus_large_green.png",
+"image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_speed_plus_large_green.png",
 "name": "slime_skates",
 "rarity": "epic"
 }
@@ -58,7 +58,7 @@ protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
 "description": "In dire need, the chosen slime will awaken the legend",
-"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/relic_green_large_B/frame0000.png",
+"image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/relic_green_large_B/frame0000.png",
 "name": "super_slime_capsule",
 "rarity": "epic"
 }

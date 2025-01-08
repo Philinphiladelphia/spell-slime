@@ -1,17 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://bwrpl5k6kodt8"]
+[gd_scene load_steps=16 format=3 uid="uid://bwrpl5k6kodt8"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_ahstt"]
 [ext_resource type="PackedScene" uid="uid://82i5w8p42hu" path="res://slimes/environment/foreground/basic_platform.tscn" id="2_10nlx"]
-[ext_resource type="PackedScene" uid="uid://c58iyoi4wlpjr" path="res://background/scenes/parallaxes/night.tscn" id="3_ej0ht"]
-[ext_resource type="Texture2D" uid="uid://d240bm81yewd" path="res://background/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/night-town-background-files/layers/night-town-background-sky.png" id="4_586re"]
+[ext_resource type="PackedScene" uid="uid://c58iyoi4wlpjr" path="res://parallax/night.tscn" id="3_ej0ht"]
+[ext_resource type="Texture2D" uid="uid://d240bm81yewd" path="res://art/parallax_backgrounds/Legacy Collection/Legacy Collection/Assets/Environments/night-town-background-files/layers/night-town-background-sky.png" id="4_586re"]
 [ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="4_ybr3v"]
 [ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="5_5g6k6"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="7_xdq1o"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="9_4kvi6"]
 [ext_resource type="Script" path="res://levels/scripts/disable_slime_lights.gd" id="10_27ni7"]
 [ext_resource type="Script" path="res://levels/scripts/mouse_follower_node.gd" id="12_mnotw"]
-[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="13_y66eb"]
-[ext_resource type="AudioStream" uid="uid://ch5t5guld8q7v" path="res://music/assets/music_for_slime_creatures/Stevia Sphere - Music For Slime Creatures - 08 Soap On The Dance Floor.mp3" id="14_d8b1f"]
 [ext_resource type="PackedScene" uid="uid://bpxfo7g4i1124" path="res://levels/moonswept_fields/night/night_lights/purple_light.tscn" id="16_1soy6"]
 [ext_resource type="PackedScene" uid="uid://bftuxkyk86hgs" path="res://levels/moonswept_fields/night/night_lights/green_light.tscn" id="17_1utru"]
 [ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="18_bncdi"]
@@ -26,6 +24,7 @@ script = ExtResource("1_ahstt")
 spelltowernode = NodePath("SpellMachineTower")
 camera_node = NodePath("SpellMachineTower/level_camera")
 powderviewport = NodePath("SpellMachineTower/PowderViewport")
+music_name = "soap_on_the_dance_floor"
 
 [node name="terrain" parent="." instance=ExtResource("2_10nlx")]
 position = Vector2(11194, -862)
@@ -98,10 +97,6 @@ position = Vector2(-5995, -859)
 script = ExtResource("7_xdq1o")
 spawntimer = NodePath("../../slime_spawn_timer")
 slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_fire_slimes.json"
-
-[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("13_y66eb")]
-stream = ExtResource("14_d8b1f")
-volume_db = -12.0
 
 [node name="level_loader" type="Node" parent="."]
 script = ExtResource("21_bkprm")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi0oy2if357sn"]
 
 [ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_stuct"]
-[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://tests/data/item_definitions_basic.tres" id="2_gr1l2"]
+[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://gloot/tests/data/item_definitions_basic.tres" id="2_gr1l2"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="3_jx17y"]
 
 [node name="common_items" type="Node"]
@@ -15,7 +15,7 @@ prototype_id = "minimal_item"
 properties = {
 "description": "It gently pulses with energy",
 "dmg": 10.0,
-"image": "res://super_pixel/Super Pixel Objects And Items/PNG/outline_none/gem_A_large_violet/frame0000.png",
+"image": "res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/gem_A_large_violet/frame0000.png",
 "name": "gem_core",
 "rarity": "common",
 "secondary_projectile_dmg": 50.0
@@ -27,7 +27,7 @@ protoset = ExtResource("2_gr1l2")
 prototype_id = "item1"
 properties = {
 "description": "Good for what ails you",
-"image": "res://super_pixel/Super Pixel Item Pickups Fantasy Pack 1/PNG/fp1_heart_A_large_green/frame0000.png",
+"image": "res://art/super_pixel/Super Pixel Item Pickups Fantasy Pack 1/PNG/fp1_heart_A_large_green/frame0000.png",
 "max_health": 500.0,
 "name": "slime_heart",
 "rarity": "common"
@@ -39,7 +39,7 @@ protoset = ExtResource("2_gr1l2")
 prototype_id = "item2"
 properties = {
 "description": "Feel the power!",
-"image": "res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/relic_green_large_C/frame0000.png",
+"image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/relic_green_large_C/frame0000.png",
 "max_rotation_speed": 0.05,
 "name": "slime_crystal",
 "primary_cooldown_max": 10.0,
