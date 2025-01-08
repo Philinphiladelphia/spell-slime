@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8r123ffs5ala"]
 
 [ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_o3uec"]
-[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://tests/data/item_definitions_basic.tres" id="2_2x17w"]
+[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://example_projects/inventory_examples/data/item_definitions_basic.tres" id="2_2x17w"]
 
 [node name="GlobalInventory" type="Node"]
 script = ExtResource("1_o3uec")

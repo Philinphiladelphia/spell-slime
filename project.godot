@@ -26,8 +26,8 @@ ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoload
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
 Dialogue="*res://addons/clyde/helpers/dialogue_manager.gd"
 ItemQueue="*res://item_system/scripts/item_queue.gd"
-GameData="*res://savedata/scripts/GameData.gd"
-GlobalTools="*res://savedata/scripts/GlobalTools.gd"
+GameData="res://savedata/scripts/GameData.gd"
+GlobalTools="res://savedata/scripts/GlobalTools.gd"
 EffectsManager="*res://savedata/scripts/EffectsManager.gd"
 AudioManager="*res://savedata/scripts/AudioManager.gd"
 SignalManager="*res://savedata/scripts/SignalManager.gd"
@@ -54,7 +54,7 @@ enable_helpers=true
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-mouse_cursor/custom_image="res://common_assets/slimes/slime-cursor-slime-export.png"
+mouse_cursor/custom_image="res://art/slimes/slime-cursor-slime-export.png"
 mouse_cursor/custom_image_hotspot=Vector2(10, 10)
 
 [editor]
@@ -69,7 +69,7 @@ enabled=PackedStringArray("res://addons/clyde/plugin.cfg", "res://addons/gloot/p
 [gui]
 
 theme/custom="res://ui/themes/super_pixel_violet.tres"
-theme/custom_font="res://fonts/zig/zig_____.ttf"
+theme/custom_font="res://art/fonts/zig/zig_____.ttf"
 
 [input]
 

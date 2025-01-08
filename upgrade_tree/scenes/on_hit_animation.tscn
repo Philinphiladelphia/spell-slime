@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://dvgp6pg1niumu"]
 
-[ext_resource type="Texture2D" uid="uid://3xv8rs8xgofh" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0000.png" id="1_dkwno"]
-[ext_resource type="Texture2D" uid="uid://4qtvxej6gwgx" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0001.png" id="2_btesg"]
-[ext_resource type="Texture2D" uid="uid://b3e6uiihx5xgg" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0002.png" id="3_seyqh"]
-[ext_resource type="Texture2D" uid="uid://bm86igbqkd4pd" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0003.png" id="4_nxqt3"]
+[ext_resource type="Texture2D" uid="uid://3xv8rs8xgofh" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0000.png" id="1_dkwno"]
+[ext_resource type="Texture2D" uid="uid://4qtvxej6gwgx" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0001.png" id="2_btesg"]
+[ext_resource type="Texture2D" uid="uid://b3e6uiihx5xgg" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0002.png" id="3_seyqh"]
+[ext_resource type="Texture2D" uid="uid://bm86igbqkd4pd" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0003.png" id="4_nxqt3"]
 [ext_resource type="Script" path="res://upgrade_tree/scenes/on_hit_animation.gd" id="4_pvtbb"]
-[ext_resource type="Texture2D" uid="uid://dl7ue5gi0irjs" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0004.png" id="5_17h00"]
-[ext_resource type="Texture2D" uid="uid://hnh8ppdbbbla" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0005.png" id="6_2y1he"]
-[ext_resource type="Texture2D" uid="uid://dcl43lpqv8p8k" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0006.png" id="7_8rqat"]
-[ext_resource type="Texture2D" uid="uid://jv1s5m3tnb6l" path="res://super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0007.png" id="8_078px"]
+[ext_resource type="Texture2D" uid="uid://dl7ue5gi0irjs" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0004.png" id="5_17h00"]
+[ext_resource type="Texture2D" uid="uid://hnh8ppdbbbla" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0005.png" id="6_2y1he"]
+[ext_resource type="Texture2D" uid="uid://dcl43lpqv8p8k" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0006.png" id="7_8rqat"]
+[ext_resource type="Texture2D" uid="uid://jv1s5m3tnb6l" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_impact_hit_small_blue/frame0007.png" id="8_078px"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_08mcc"]
 animations = [{

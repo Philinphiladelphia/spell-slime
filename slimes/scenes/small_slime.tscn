@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://slimes/scripts/slime_controller.gd" id="1_iidph"]
 [ext_resource type="Script" path="res://slimes/scripts/small_slime_controller.gd" id="1_uitv3"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_qy4b6"]
-[ext_resource type="Texture2D" uid="uid://dgeavlqxk7310" path="res://common_assets/slimes/slime-half.png" id="3_k5ff0"]
+[ext_resource type="Texture2D" uid="uid://dgeavlqxk7310" path="res://art/slimes/slime-half.png" id="3_k5ff0"]
 [ext_resource type="Texture2D" uid="uid://cfkm8h8yxc1wt" path="res://slimes/assets/damage_indicatior.png" id="3_kfkl5"]
 [ext_resource type="Script" path="res://slimes/scripts/slime_damage_bar.gd" id="4_lvu3f"]
 [ext_resource type="Texture2D" uid="uid://ddn3y0pkkg5q1" path="res://slimes/assets/black_frame.png" id="5_c7xqs"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://cldt4adoc1cio"]
 
 [ext_resource type="Script" path="res://levels/scripts/destroy_tilesets.gd" id="1_mt00v"]
-[ext_resource type="Texture2D" uid="uid://d4gt7temncco1" path="res://common_assets/Legacy Collection/Legacy Collection/Assets/Misc/gems/spritesheets/gems-spritesheet.png" id="2_7j0e6"]
+[ext_resource type="Texture2D" uid="uid://d4gt7temncco1" path="res://art/Legacy Collection/Legacy Collection/Assets/Misc/gems/spritesheets/gems-spritesheet.png" id="2_7j0e6"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_hlytk"]
 tile_data = PackedInt32Array(65536, 0, 4, 262144, 0, 4, 327680, 393216, 2, 393216, 0, 4, 458752, 0, 4, 524288, 0, 4, 589824, 0, 4, 655360, 0, 4, 720896, 0, 4, 786432, 0, 4, 65537, 0, 4, 262145, 0, 4, 327681, 0, 4, 393217, 393216, 2, 458753, 393216, 2, 524289, 393216, 2, 589825, 0, 4, 655361, 3276800, 4, 720897, 393216, 2, 786433, 393216, 2, 2, 0, 4, 65538, 0, 4, 131074, 0, 4, 196610, 0, 4, 262146, 0, 4, 327682, 0, 4, 524290, 393216, 2, 589826, 0, 4, 655362, 393216, 2, 3, 0, 4, 131075, 0, 4, 327683, 0, 4, 524291, 3276800, 4, 655363, 0, 4, 786435, 3276800, 4, 4, 0, 4, 131076, 0, 4, 196612, 0, 4, 393220, 0, 4, 458756, 3276800, 4, 655364, 0, 4, 720900, 3276800, 4, 5, 0, 4, 65541, 3276800, 4, 131077, 3276800, 4, 196613, 0, 4, 262149, 0, 4, 327685, 3276800, 4, 393221, 0, 4, 458757, 0, 4, 589829, 3276800, 4, 655365, 3276800, 4, 720901, 0, 4)

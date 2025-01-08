@@ -1,58 +1,59 @@
-[gd_scene load_steps=95 format=4 uid="uid://dj7ftalc7elqo"]
+[gd_scene load_steps=96 format=4 uid="uid://dj7ftalc7elqo"]
 
-[ext_resource type="Texture2D" uid="uid://drrc5o7qll86q" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_sky.png" id="1_pcuev"]
-[ext_resource type="Texture2D" uid="uid://dhyeprjwt4t5t" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_A_f1.png" id="2_1bch5"]
-[ext_resource type="Texture2D" uid="uid://b5dswlyfhllcp" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_A_f2.png" id="3_whwua"]
-[ext_resource type="Texture2D" uid="uid://bmf6ylk0nj6yx" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_B.png" id="4_tbs56"]
-[ext_resource type="Texture2D" uid="uid://cgedy4dr56j2q" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_C_f1.png" id="5_04nv3"]
-[ext_resource type="Texture2D" uid="uid://dvo3ay1oxmuad" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_C_f2.png" id="6_6nkbe"]
-[ext_resource type="Texture2D" uid="uid://c1kso6ltitta1" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_D_f1.png" id="7_mbod1"]
-[ext_resource type="Texture2D" uid="uid://sm74e6okk5x5" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_D_f2.png" id="8_x07wn"]
-[ext_resource type="Texture2D" uid="uid://bor21vxcfiwb2" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_D_f3.png" id="9_sg7r7"]
-[ext_resource type="Texture2D" uid="uid://cvejdk8v7cf2r" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_E.png" id="10_fsuc6"]
-[ext_resource type="Texture2D" uid="uid://cvhyf5ccgxe85" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_F_f1.png" id="11_0twvn"]
-[ext_resource type="Texture2D" uid="uid://dh5gv6lgm3fwy" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_F_f2.png" id="12_flrb1"]
-[ext_resource type="Texture2D" uid="uid://djc3mnorgcww8" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_G_f1.png" id="13_4usyg"]
-[ext_resource type="Texture2D" uid="uid://b7kxua1yb8jwt" path="res://super_pixel/kasakasa_desert/pieces/frozen/stars_G_f2.png" id="14_t7oik"]
-[ext_resource type="Texture2D" uid="uid://c0it8y0es0gy2" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_ground.png" id="15_s844y"]
-[ext_resource type="Texture2D" uid="uid://ba4iwcg10inkc" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_8.png" id="16_27ifc"]
-[ext_resource type="Texture2D" uid="uid://b5ter5yj8dvkw" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_7.png" id="17_su35k"]
-[ext_resource type="Texture2D" uid="uid://brgdxfyj30pvm" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_6.png" id="18_jhmuf"]
-[ext_resource type="Texture2D" uid="uid://du5kdahb0yw20" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_5.png" id="19_rkb1j"]
-[ext_resource type="Texture2D" uid="uid://7dghf8njblv2" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_4.png" id="20_oj3cm"]
-[ext_resource type="Texture2D" uid="uid://d226ypaclnjuv" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_D.png" id="21_sdoa3"]
-[ext_resource type="Texture2D" uid="uid://gekpyq0eo8h3" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_C.png" id="22_a7voo"]
-[ext_resource type="Texture2D" uid="uid://ph5ocwn6mwgp" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_3.png" id="23_10akj"]
-[ext_resource type="Texture2D" uid="uid://dynkvgnaxaqa" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_short_B.png" id="24_1qrmu"]
-[ext_resource type="Texture2D" uid="uid://ccdeq48yhbbwp" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_short_A.png" id="25_xgpe0"]
-[ext_resource type="Texture2D" uid="uid://be8qsd474qqv0" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_2.png" id="26_8e3ok"]
-[ext_resource type="Texture2D" uid="uid://duskw02n371hf" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_B.png" id="27_u0saj"]
-[ext_resource type="Texture2D" uid="uid://5cee0nwf81a4" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_A.png" id="28_a357y"]
-[ext_resource type="Texture2D" uid="uid://xhno0e7sbibi" path="res://super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_1.png" id="29_uayvv"]
-[ext_resource type="Texture2D" uid="uid://c6gyhnydbscms" path="res://super_pixel/kasakasa_desert/pieces/frozen/palm_tree_A.png" id="30_nsx2t"]
-[ext_resource type="Texture2D" uid="uid://dj6brltmk02sp" path="res://super_pixel/kasakasa_desert/pieces/frozen/palm_tree_B.png" id="31_1jy0h"]
-[ext_resource type="Texture2D" uid="uid://b25tcyeasq487" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_short_A.png" id="32_8lhnk"]
-[ext_resource type="Texture2D" uid="uid://b6w11klsp7lsa" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_C.png" id="33_3x45u"]
-[ext_resource type="Texture2D" uid="uid://bgnlg8ehn5vag" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_B.png" id="34_62bgd"]
-[ext_resource type="Texture2D" uid="uid://bwas1swfxrq8b" path="res://super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_A.png" id="35_ppdb6"]
+[ext_resource type="Texture2D" uid="uid://drrc5o7qll86q" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_sky.png" id="1_pcuev"]
+[ext_resource type="Texture2D" uid="uid://dhyeprjwt4t5t" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_A_f1.png" id="2_1bch5"]
+[ext_resource type="Texture2D" uid="uid://b5dswlyfhllcp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_A_f2.png" id="3_whwua"]
+[ext_resource type="Texture2D" uid="uid://bmf6ylk0nj6yx" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_B.png" id="4_tbs56"]
+[ext_resource type="Texture2D" uid="uid://cgedy4dr56j2q" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_C_f1.png" id="5_04nv3"]
+[ext_resource type="Texture2D" uid="uid://dvo3ay1oxmuad" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_C_f2.png" id="6_6nkbe"]
+[ext_resource type="Texture2D" uid="uid://c1kso6ltitta1" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f1.png" id="7_mbod1"]
+[ext_resource type="Texture2D" uid="uid://sm74e6okk5x5" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f2.png" id="8_x07wn"]
+[ext_resource type="Texture2D" uid="uid://bor21vxcfiwb2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f3.png" id="9_sg7r7"]
+[ext_resource type="Texture2D" uid="uid://cvejdk8v7cf2r" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_E.png" id="10_fsuc6"]
+[ext_resource type="Texture2D" uid="uid://cvhyf5ccgxe85" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_F_f1.png" id="11_0twvn"]
+[ext_resource type="Texture2D" uid="uid://dh5gv6lgm3fwy" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_F_f2.png" id="12_flrb1"]
+[ext_resource type="Texture2D" uid="uid://djc3mnorgcww8" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_G_f1.png" id="13_4usyg"]
+[ext_resource type="Texture2D" uid="uid://b7kxua1yb8jwt" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_G_f2.png" id="14_t7oik"]
+[ext_resource type="Texture2D" uid="uid://c0it8y0es0gy2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_ground.png" id="15_s844y"]
+[ext_resource type="Texture2D" uid="uid://ba4iwcg10inkc" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_8.png" id="16_27ifc"]
+[ext_resource type="Texture2D" uid="uid://b5ter5yj8dvkw" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_7.png" id="17_su35k"]
+[ext_resource type="Texture2D" uid="uid://brgdxfyj30pvm" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_6.png" id="18_jhmuf"]
+[ext_resource type="Texture2D" uid="uid://du5kdahb0yw20" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_5.png" id="19_rkb1j"]
+[ext_resource type="Texture2D" uid="uid://7dghf8njblv2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_4.png" id="20_oj3cm"]
+[ext_resource type="Texture2D" uid="uid://d226ypaclnjuv" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_D.png" id="21_sdoa3"]
+[ext_resource type="Texture2D" uid="uid://gekpyq0eo8h3" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_C.png" id="22_a7voo"]
+[ext_resource type="Texture2D" uid="uid://ph5ocwn6mwgp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_3.png" id="23_10akj"]
+[ext_resource type="Texture2D" uid="uid://dynkvgnaxaqa" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_short_B.png" id="24_1qrmu"]
+[ext_resource type="Texture2D" uid="uid://ccdeq48yhbbwp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_short_A.png" id="25_xgpe0"]
+[ext_resource type="Texture2D" uid="uid://be8qsd474qqv0" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_2.png" id="26_8e3ok"]
+[ext_resource type="Texture2D" uid="uid://duskw02n371hf" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_B.png" id="27_u0saj"]
+[ext_resource type="Texture2D" uid="uid://5cee0nwf81a4" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_A.png" id="28_a357y"]
+[ext_resource type="Texture2D" uid="uid://xhno0e7sbibi" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_1.png" id="29_uayvv"]
+[ext_resource type="Texture2D" uid="uid://c6gyhnydbscms" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/palm_tree_A.png" id="30_nsx2t"]
+[ext_resource type="Texture2D" uid="uid://dj6brltmk02sp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/palm_tree_B.png" id="31_1jy0h"]
+[ext_resource type="Texture2D" uid="uid://b25tcyeasq487" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_short_A.png" id="32_8lhnk"]
+[ext_resource type="Texture2D" uid="uid://b6w11klsp7lsa" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_C.png" id="33_3x45u"]
+[ext_resource type="Texture2D" uid="uid://bgnlg8ehn5vag" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_B.png" id="34_62bgd"]
+[ext_resource type="Texture2D" uid="uid://bwas1swfxrq8b" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_A.png" id="35_ppdb6"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/camera.gd" id="36_o3lc3"]
 [ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="37_38x5w"]
-[ext_resource type="Texture2D" uid="uid://dl4vhwi1n1ip1" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_fill.png" id="38_faanc"]
-[ext_resource type="Texture2D" uid="uid://c2t0psku15ixa" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_flat.png" id="39_a24qi"]
+[ext_resource type="Texture2D" uid="uid://dl4vhwi1n1ip1" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_fill.png" id="38_faanc"]
+[ext_resource type="Texture2D" uid="uid://c2t0psku15ixa" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_flat.png" id="39_a24qi"]
 [ext_resource type="Texture2D" uid="uid://86covl51pnwi" path="res://spell_machine_tower/assets/useful_parts/265614735.png" id="39_f00vf"]
-[ext_resource type="Texture2D" uid="uid://ddqr13n2a8nma" path="res://super_pixel/kasakasa_desert/pieces/frozen/water_B.png" id="40_25urp"]
-[ext_resource type="Texture2D" uid="uid://yc8uo7ugsxps" path="res://super_pixel/kasakasa_desert/pieces/frozen/water_left.png" id="41_urq88"]
-[ext_resource type="Texture2D" uid="uid://d0avotnlymtxb" path="res://super_pixel/kasakasa_desert/pieces/frozen/water_right.png" id="42_jonw2"]
-[ext_resource type="Texture2D" uid="uid://elb1ieb8ih20" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_flat_for_water.png" id="43_86pfm"]
-[ext_resource type="Texture2D" uid="uid://c118ob5rhw4d3" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_A_left.png" id="44_2sbpa"]
-[ext_resource type="Texture2D" uid="uid://dpubw5wsdyniv" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_A_left_for_water.png" id="45_kq4ee"]
-[ext_resource type="Texture2D" uid="uid://d02pllwcpapu" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_A_right.png" id="46_vpi87"]
-[ext_resource type="Texture2D" uid="uid://bmw0p2eruajov" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_A_right_for_water.png" id="47_rh26j"]
-[ext_resource type="Texture2D" uid="uid://cxmtn2dllevws" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_B_left.png" id="48_15inf"]
-[ext_resource type="Texture2D" uid="uid://cy6govwbrk74s" path="res://super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_B_right.png" id="49_ante3"]
-[ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://player_slime/scenes/player_slime.tscn" id="49_h7rnb"]
+[ext_resource type="Texture2D" uid="uid://ddqr13n2a8nma" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/water_B.png" id="40_25urp"]
+[ext_resource type="Script" path="res://levels/tutorial/turret.gd" id="40_sil3c"]
+[ext_resource type="Texture2D" uid="uid://yc8uo7ugsxps" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/water_left.png" id="41_urq88"]
+[ext_resource type="Texture2D" uid="uid://d0avotnlymtxb" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/water_right.png" id="42_jonw2"]
+[ext_resource type="Texture2D" uid="uid://elb1ieb8ih20" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_flat_for_water.png" id="43_86pfm"]
+[ext_resource type="Texture2D" uid="uid://c118ob5rhw4d3" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_A_left.png" id="44_2sbpa"]
+[ext_resource type="Texture2D" uid="uid://dpubw5wsdyniv" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_A_left_for_water.png" id="45_kq4ee"]
+[ext_resource type="Texture2D" uid="uid://d02pllwcpapu" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_A_right.png" id="46_vpi87"]
+[ext_resource type="Texture2D" uid="uid://bmw0p2eruajov" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_A_right_for_water.png" id="47_rh26j"]
+[ext_resource type="Texture2D" uid="uid://cxmtn2dllevws" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_B_left.png" id="48_15inf"]
+[ext_resource type="Texture2D" uid="uid://cy6govwbrk74s" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_slope_B_right.png" id="49_ante3"]
+[ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://slimes/player_slime/scenes/player_slime.tscn" id="49_h7rnb"]
 [ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="50_5cfde"]
-[ext_resource type="Texture2D" uid="uid://po61fxc67o1e" path="res://super_pixel/kasakasa_desert/pieces/frozen/water_A.png" id="50_wpima"]
+[ext_resource type="Texture2D" uid="uid://po61fxc67o1e" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/water_A.png" id="50_wpima"]
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_cvcly"]
 resource_local_to_scene = true
@@ -654,8 +655,8 @@ margin_offset_edge = 1.0
 [node name="Skeleton2D" parent="player/SoftBody2D" index="0"]
 modification_stack = SubResource("SkeletonModificationStack2D_57g4k")
 
-[node name="Bone-1" parent="player/SoftBody2D/Skeleton2D" index="1"]
-scale = Vector2(1, 1)
+[node name="Bone-0" parent="player/SoftBody2D/Skeleton2D" index="0"]
+position = Vector2(12.2375, 23.2233)
 
 [node name="Bone-2" parent="player/SoftBody2D/Skeleton2D" index="2"]
 scale = Vector2(0.999994, 0.999994)
@@ -699,12 +700,6 @@ scale = Vector2(0.999987, 0.999987)
 [node name="Bone-15" parent="player/SoftBody2D/Skeleton2D" index="15"]
 scale = Vector2(0.999986, 0.999986)
 
-[node name="Bone-16" parent="player/SoftBody2D/Skeleton2D" index="16"]
-scale = Vector2(1, 1)
-
-[node name="Bone-17" parent="player/SoftBody2D/Skeleton2D" index="17"]
-scale = Vector2(1, 1)
-
 [node name="Bone-18" parent="player/SoftBody2D/Skeleton2D" index="18"]
 scale = Vector2(0.999994, 0.999994)
 
@@ -722,9 +717,6 @@ scale = Vector2(0.999974, 0.999974)
 
 [node name="Bone-23" parent="player/SoftBody2D/Skeleton2D" index="23"]
 scale = Vector2(0.999985, 0.999985)
-
-[node name="Bone-24" parent="player/SoftBody2D/Skeleton2D" index="24"]
-scale = Vector2(1, 1)
 
 [node name="RectangleShape2D" parent="player/SoftBody2D/Bone-0" index="0"]
 visible = false
@@ -836,6 +828,7 @@ position = Vector2(34, 27)
 position = Vector2(93, 93)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("39_f00vf")
+script = ExtResource("40_sil3c")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(7, -36)

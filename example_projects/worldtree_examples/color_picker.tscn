@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://6c13bofv0ara"]
+
+[ext_resource type="Script" path="res://example_projects/worldtree_examples/color_picker.gd" id="1_61u86"]
+
+[node name="ColorPicker" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_61u86")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 152.0
+offset_right = 454.0
+offset_bottom = 192.0
+
+[node name="ColorRect" type="ColorRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect2" type="ColorRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

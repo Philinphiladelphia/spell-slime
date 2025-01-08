@@ -1,7 +1,7 @@
 [gd_scene load_steps=53 format=3 uid="uid://bkyor7h4rlicl"]
 
 [ext_resource type="Script" path="res://slimes/scripts/slime_controller.gd" id="1_8ufnd"]
-[ext_resource type="Texture2D" uid="uid://d3wtooav4aw20" path="res://common_assets/slimes/slime-200.png" id="1_habbu"]
+[ext_resource type="Texture2D" uid="uid://d3wtooav4aw20" path="res://art/slimes/slime-200.png" id="1_habbu"]
 [ext_resource type="Script" path="res://slimes/scripts/large_slime_controller.gd" id="1_x2a66"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_0b5j0"]
 [ext_resource type="Texture2D" uid="uid://cfkm8h8yxc1wt" path="res://slimes/assets/damage_indicatior.png" id="3_cpbt6"]

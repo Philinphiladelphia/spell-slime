@@ -1,3 +1,0 @@
-VisualShader
-Theme
-Shader

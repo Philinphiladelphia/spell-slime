@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://tdbpn26eu2ca"]
 
 [ext_resource type="Script" path="res://upgrade_tree/scripts/static_obstacle.gd" id="1_u11dc"]
-[ext_resource type="Texture2D" uid="uid://d1snijpt3fy63" path="res://upgrade_tree/assets/305010425.png" id="2_31s48"]
+[ext_resource type="Texture2D" uid="uid://d1snijpt3fy63" path="res://art/upgrade_tree/assets/305010425.png" id="2_31s48"]
 
 [node name="static_obstacle" type="RigidBody2D"]
 collision_layer = 15

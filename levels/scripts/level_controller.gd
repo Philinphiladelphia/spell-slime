@@ -25,6 +25,8 @@ var tower_health: int = 1000
 @export var camera_node : Camera2D
 @export var powderviewport: Node
 
+@export var music_name: String
+
 @onready var pause_screen: PackedScene = preload("res://maaack/scenes/overlaid_menus/pause_menu.tscn")
 
 @onready var level_win_screen: PackedScene = preload("res://maaack/scenes/overlaid_menus/level_won_menu.tscn")
@@ -48,6 +50,8 @@ func load_scene(scene_path : String) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	
+	SoundManager.play_bgm(music_name)
 	
 	var tower_element: int = 114 # plant
 	
@@ -104,6 +108,7 @@ func _process(delta: float) -> void:
 	if slime_positions.size() == 0 and $slime_tracker.spawns_done && not won:
 		won = true
 		var win: Node = level_win_screen.instantiate()
+		spelltowernode.cursor_radials.hide()
 		#rewards.global_position = camera_node.global_position
 		$slime_health_layer.add_child(win)
 		#SceneLoader.load_scene("res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn")

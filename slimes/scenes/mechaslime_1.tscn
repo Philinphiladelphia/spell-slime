@@ -75,7 +75,7 @@
 [ext_resource type="Texture2D" uid="uid://dgggahwa6cgi1" path="res://spell_machine_tower/assets/stone/2064920276.png" id="75_vu6dw"]
 [ext_resource type="Texture2D" uid="uid://lecre010pu7y" path="res://spell_machine_tower/assets/useful_parts/1837649480.png" id="76_1y62j"]
 [ext_resource type="Texture2D" uid="uid://xw57coijn0k4" path="res://spell_machine_tower/assets/pipes/374220477.png" id="77_d73dj"]
-[ext_resource type="LabelSettings" uid="uid://c34qgwo4ca7bk" path="res://upgrade_tree/assets/major_font.tres" id="78_fiw80"]
+[ext_resource type="LabelSettings" uid="uid://c34qgwo4ca7bk" path="res://art/upgrade_tree/assets/major_font.tres" id="78_fiw80"]
 [ext_resource type="Texture2D" uid="uid://bobun5wip4t3q" path="res://icon.svg" id="79_r51wl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxao3"]

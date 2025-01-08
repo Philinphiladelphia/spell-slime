@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cd0jbh4metflb"]
 
 [ext_resource type="Script" path="res://addons/maaacks_game_template/base/scenes/loading_screen/loading_screen.gd" id="1_gbk34"]
-[ext_resource type="Texture2D" uid="uid://b5nrx64xnlr2q" path="res://common_assets/branding/SpS_elements-06.png" id="2_cd7kv"]
-[ext_resource type="Texture2D" uid="uid://cfui7dpx6iycw" path="res://common_assets/branding/SpS_elements-07.png" id="3_2xrhs"]
-[ext_resource type="Texture2D" uid="uid://058saqmbygkh" path="res://level_up_again/assets/rounded_rect.png" id="4_1e5aa"]
+[ext_resource type="Texture2D" uid="uid://b5nrx64xnlr2q" path="res://art/branding/SpS_elements-06.png" id="2_cd7kv"]
+[ext_resource type="Texture2D" uid="uid://cfui7dpx6iycw" path="res://art/branding/SpS_elements-07.png" id="3_2xrhs"]
+[ext_resource type="Texture2D" uid="uid://058saqmbygkh" path="res://example_projects/animation_examples/assets/rounded_rect.png" id="4_1e5aa"]
 
 [sub_resource type="Gradient" id="Gradient_hdgak"]
 offsets = PackedFloat32Array(0, 0.233449, 0.756098, 1)

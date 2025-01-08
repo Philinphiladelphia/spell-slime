@@ -57,7 +57,7 @@ func _ready() -> void:
 	slime_scene = preload("res://slimes/scenes/small_slime.tscn")
 	
 	basic_animation = preload("res://upgrade_tree/scenes/on_hit_animation.tscn")
-	lightning_animation = preload("res://upgrade_tree/assets/sprite_animations/lightning_animation.tscn")
+	lightning_animation = preload("res://art/upgrade_tree/assets/sprite_animations/lightning_animation.tscn")
 	
 	
 	cooldown_timer = Timer.new()

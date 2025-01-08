@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cvsflpqqb732w"]
 
-[ext_resource type="Texture2D" uid="uid://doew5vyav8gve" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0000.png" id="1_f4cb1"]
-[ext_resource type="Texture2D" uid="uid://b8gx218clgs5n" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0001.png" id="2_kfw3f"]
-[ext_resource type="Texture2D" uid="uid://debogeifytusr" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0002.png" id="3_jnssd"]
-[ext_resource type="Texture2D" uid="uid://c5bnv3ue2d41b" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0003.png" id="4_vqdqb"]
-[ext_resource type="Texture2D" uid="uid://2sjau8l3bvw3" path="res://super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0004.png" id="5_eh7fs"]
+[ext_resource type="Texture2D" uid="uid://doew5vyav8gve" path="res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0000.png" id="1_f4cb1"]
+[ext_resource type="Texture2D" uid="uid://b8gx218clgs5n" path="res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0001.png" id="2_kfw3f"]
+[ext_resource type="Texture2D" uid="uid://debogeifytusr" path="res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0002.png" id="3_jnssd"]
+[ext_resource type="Texture2D" uid="uid://c5bnv3ue2d41b" path="res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0003.png" id="4_vqdqb"]
+[ext_resource type="Texture2D" uid="uid://2sjau8l3bvw3" path="res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/spirit_orb_violet_large_A/frame0004.png" id="5_eh7fs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_co586"]
 animations = [{

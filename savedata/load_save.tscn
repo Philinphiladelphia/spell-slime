@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://c45k1cki2cdf0"]
 
-[ext_resource type="Texture2D" uid="uid://b5nrx64xnlr2q" path="res://common_assets/branding/SpS_elements-06.png" id="1_7bueb"]
-[ext_resource type="Texture2D" uid="uid://058saqmbygkh" path="res://level_up_again/assets/rounded_rect.png" id="2_h8pgy"]
-[ext_resource type="Texture2D" uid="uid://cfui7dpx6iycw" path="res://common_assets/branding/SpS_elements-07.png" id="3_j0lrv"]
-[ext_resource type="Texture2D" uid="uid://dwv0q3fx03pf4" path="res://super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/message_box_A.png" id="4_vldtf"]
+[ext_resource type="Texture2D" uid="uid://b5nrx64xnlr2q" path="res://art/branding/SpS_elements-06.png" id="1_7bueb"]
+[ext_resource type="Texture2D" uid="uid://058saqmbygkh" path="res://example_projects/animation_examples/assets/rounded_rect.png" id="2_h8pgy"]
+[ext_resource type="Texture2D" uid="uid://cfui7dpx6iycw" path="res://art/branding/SpS_elements-07.png" id="3_j0lrv"]
+[ext_resource type="Texture2D" uid="uid://dwv0q3fx03pf4" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/message_box_A.png" id="4_vldtf"]
 [ext_resource type="Texture2D" uid="uid://dswe3ucc0txqp" path="res://savedata/save.png" id="5_c2ssl"]
 [ext_resource type="Script" path="res://savedata/scene_loader.gd" id="6_fkcmt"]
 

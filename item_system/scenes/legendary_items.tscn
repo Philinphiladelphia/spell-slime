@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b5cqnjhlqviy7"]
 
 [ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_14yse"]
-[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://tests/data/item_definitions_basic.tres" id="2_sxgvo"]
+[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://gloot/tests/data/item_definitions_basic.tres" id="2_sxgvo"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="3_ss7uf"]
 
 [node name="legendary_items" type="Node"]
@@ -14,7 +14,7 @@ protoset = ExtResource("2_sxgvo")
 prototype_id = "item2"
 properties = {
 "description": "Face the fallout",
-"image": "res://super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_scifi_missile_large_red/frame0001.png",
+"image": "res://art/super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_scifi_missile_large_red/frame0001.png",
 "max_rotation_speed": 0.05,
 "name": "nuclear_deterrent",
 "primary_cooldown_max": 10.0,
