@@ -18,6 +18,7 @@ var door_active: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SoundManager.play_bgm("birds_singing")
 	dialogue_layer.play_next_dialogue()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -50,7 +51,6 @@ func _process(delta: float) -> void:
 			if door_area.has_overlapping_bodies() and door_active:
 				door_glyph.show()
 				if Input.is_action_pressed("interact"):
-					$BackgroundMusicPlayer.queue_free()
 					SceneLoader.load_scene("res://event_locations/scenes/home/home_inside.tscn")
 			else:
 				door_glyph.hide()

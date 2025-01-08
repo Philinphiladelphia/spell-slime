@@ -1,14 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://kphq3kn2asve"]
+[gd_scene load_steps=17 format=3 uid="uid://kphq3kn2asve"]
 
 [ext_resource type="PackedScene" uid="uid://b5cd6sa8qq4vc" path="res://addons/maaacks_game_template/base/scenes/overlaid_menu/menus/pause_menu.tscn" id="1_ag0m2"]
 [ext_resource type="Script" path="res://maaack/scenes/overlaid_menus/pause_menu.gd" id="2_lo555"]
 [ext_resource type="PackedScene" uid="uid://bx8a7anqepy4c" path="res://maaack/scenes/overlaid_menus/mini_options_overlaid_menu.tscn" id="3_114vy"]
+[ext_resource type="Script" path="res://addons/maaacks_game_template/base/scripts/ui_sound_controller.gd" id="4_kjqku"]
+[ext_resource type="AudioStream" uid="uid://b5xosksiflobw" path="res://audio/sfx/kenney_interface_sounds/glass_005.wav" id="5_18yne"]
+[ext_resource type="AudioStream" uid="uid://ciuxh1xvkpu8" path="res://audio/sfx/kenney_interface_sounds/click_001.wav" id="6_i2xhg"]
+[ext_resource type="AudioStream" uid="uid://bhbfvq0huxxkp" path="res://audio/sfx/kenney_interface_sounds/drop_001.wav" id="7_hvxap"]
+[ext_resource type="AudioStream" uid="uid://bv5dc1gnir2ky" path="res://audio/sfx/kenney_interface_sounds/click_002.wav" id="8_vhf53"]
+[ext_resource type="AudioStream" uid="uid://hv6jpwu3kkd5" path="res://audio/sfx/kenney_interface_sounds/drop_002.wav" id="9_lbqv6"]
+[ext_resource type="AudioStream" uid="uid://dwk72jm2fe6gp" path="res://audio/sfx/kenney_interface_sounds/tick_002.wav" id="10_bflth"]
+[ext_resource type="AudioStream" uid="uid://d051w7kvic51f" path="res://audio/sfx/kenney_interface_sounds/click_004.wav" id="11_6kj5q"]
+[ext_resource type="AudioStream" uid="uid://cbcdtsu8ab2bg" path="res://audio/sfx/kenney_interface_sounds/click_005.wav" id="12_vbh5w"]
+[ext_resource type="AudioStream" uid="uid://dtfky5e0npbxs" path="res://audio/sfx/kenney_interface_sounds/glass_006.wav" id="13_h8bmu"]
+[ext_resource type="AudioStream" uid="uid://2m8p0v7ckmmv" path="res://audio/sfx/kenney_interface_sounds/bong_001.wav" id="14_8bjf6"]
+[ext_resource type="AudioStream" uid="uid://chvgthligmggi" path="res://audio/sfx/kenney_interface_sounds/confirmation_001.wav" id="15_qfvf6"]
+[ext_resource type="AudioStream" uid="uid://cye7r82qyqavk" path="res://audio/sfx/kenney_interface_sounds/error_004.wav" id="16_amawo"]
 
 [node name="PauseMenu" instance=ExtResource("1_ag0m2")]
 script = ExtResource("2_lo555")
 options_packed_scene = ExtResource("3_114vy")
 main_menu_scene = "res://maaack/scenes/menus/main_menu/main_menu_with_animations.tscn"
 pauses_game = true
+
+[node name="UISoundController" type="Node" parent="." index="0"]
+script = ExtResource("4_kjqku")
+button_hovered = ExtResource("5_18yne")
+button_focused = ExtResource("6_i2xhg")
+button_pressed = ExtResource("7_hvxap")
+tab_hovered = ExtResource("8_vhf53")
+tab_selected = ExtResource("9_lbqv6")
+slider_focused = ExtResource("10_bflth")
+slider_drag_started = ExtResource("11_6kj5q")
+slider_drag_ended = ExtResource("12_vbh5w")
+line_focused = ExtResource("13_h8bmu")
+line_text_changed = ExtResource("14_8bjf6")
+line_text_submitted = ExtResource("15_qfvf6")
+line_text_change_rejected = ExtResource("16_amawo")
 
 [node name="PanelColor" parent="MenuPanelContainer" index="0"]
 visible = false

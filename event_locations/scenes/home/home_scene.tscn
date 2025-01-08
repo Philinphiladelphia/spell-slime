@@ -1,4 +1,4 @@
-[gd_scene load_steps=393 format=4 uid="uid://dmj3p8g46opwx"]
+[gd_scene load_steps=391 format=4 uid="uid://dmj3p8g46opwx"]
 
 [ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="1_i7vbu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/home_controller.gd" id="1_qc7mf"]
@@ -146,9 +146,7 @@
 [ext_resource type="PackedScene" uid="uid://cr40nhm4sybj4" path="res://slimes/player_slime/scenes/jumping_slime.tscn" id="128_75w3n"]
 [ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://event_locations/assets/hair.png" id="130_k3rwp"]
 [ext_resource type="Texture2D" uid="uid://yep7lw2tq7mf" path="res://event_locations/assets/eyes.png" id="131_355gv"]
-[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_game_template/base/scenes/music_players/background_music_player.tscn" id="132_evyiw"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/dialogue_controller.gd" id="133_b1qht"]
-[ext_resource type="AudioStream" uid="uid://csrbj67lgficj" path="res://audio/music/Stevia Sphere - green ideas/Stevia Sphere - green ideas - 11 birds singing - acoustic demo (bonus track).mp3" id="133_u6doc"]
 [ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="133_w8vil"]
 [ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://slimes/player_slime/scenes/player_slime.tscn" id="134_6e3ea"]
 [ext_resource type="PackedScene" uid="uid://duksl7grt8udr" path="res://ui/scenes/input_glyph.tscn" id="136_vhimu"]
@@ -3423,11 +3421,6 @@ shape = SubResource("RectangleShape2D_6ebds")
 
 [node name="RectangleShape2D" parent="player/SoftBody2D/Bone-24" index="0"]
 shape = SubResource("RectangleShape2D_6ebds")
-
-[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("132_evyiw")]
-stream = ExtResource("133_u6doc")
-volume_db = -18.586
-playback_type = 1
 
 [node name="CursorRadials" parent="." instance=ExtResource("133_w8vil")]
 visible = false
