@@ -47,6 +47,8 @@ func _ready():
 		%ExitButton.hide()
 	_setup_options()
 	_setup_main_menu()
+	
+	SoundManager.play_bgm("sustainability")
 
 func _on_restart_button_pressed():
 	%ConfirmRestart.popup_centered()

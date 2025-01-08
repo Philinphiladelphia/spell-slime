@@ -47,9 +47,9 @@ var _se_playing : Array = [ "SFX0" ]
 var _me_playing : Array = [ "MFX0" ]
 
 var _Audio_Busses : Dictionary = {
-	"BGM" : "Master",
+	"BGM" : "Music",
 	"BGS" : "Master",
-	"SFX" : "Master",
+	"SFX" : "SFX",
 	"MFX" : "Master",
 }
 
