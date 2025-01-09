@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cr40nhm4sybj4" path="res://slimes/player_slime/scenes/jumping_slime.tscn" id="7_3gnpt"]
 [ext_resource type="Texture2D" uid="uid://b3yiv47gbex1j" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_clouds_near.png" id="7_tprr5"]
 [ext_resource type="Texture2D" uid="uid://cekxm4faltkg8" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_mountains_far.png" id="8_bmvf7"]
-[ext_resource type="Texture2D" uid="uid://dkpdetaukoyrh" path="res://event_locations/assets/beard.png" id="8_y3y0f"]
+[ext_resource type="Texture2D" uid="uid://dkpdetaukoyrh" path="res://event_locations/decorations/beard.png" id="8_y3y0f"]
 [ext_resource type="Texture2D" uid="uid://rmg6ng5jtghd" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_mountains_near.png" id="9_5e6hy"]
-[ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://event_locations/assets/hair.png" id="9_rr305"]
-[ext_resource type="Texture2D" uid="uid://yep7lw2tq7mf" path="res://event_locations/assets/eyes.png" id="10_8drd0"]
+[ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://event_locations/decorations/hair.png" id="9_rr305"]
+[ext_resource type="Texture2D" uid="uid://yep7lw2tq7mf" path="res://event_locations/decorations/eyes.png" id="10_8drd0"]
 [ext_resource type="Texture2D" uid="uid://dqk8by22pisvs" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_grass_far.png" id="10_xhhmo"]
 [ext_resource type="Texture2D" uid="uid://bujl7ks2f5x51" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_flower_A.png" id="11_og0e2"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/tutorial_text.gd" id="11_x1t5n"]
@@ -3292,7 +3292,7 @@ position = Vector2(27.8667, 23.718)
 scale = Vector2(0.999998, 0.999998)
 
 [node name="Bone-9" parent="characters/player/SoftBody2D/Skeleton2D" index="9"]
-scale = Vector2(0.999983, 0.999983)
+scale = Vector2(0.999982, 0.999982)
 
 [node name="Bone-10" parent="characters/player/SoftBody2D/Skeleton2D" index="10"]
 position = Vector2(26.5378, 39.4117)
@@ -3310,7 +3310,7 @@ scale = Vector2(0.999996, 0.999996)
 scale = Vector2(0.999994, 0.999994)
 
 [node name="Bone-14" parent="characters/player/SoftBody2D/Skeleton2D" index="14"]
-scale = Vector2(0.999987, 0.999987)
+scale = Vector2(0.999988, 0.999988)
 
 [node name="Bone-15" parent="characters/player/SoftBody2D/Skeleton2D" index="15"]
 scale = Vector2(0.999986, 0.999986)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yjfpq0gxl6px"
-path="res://.godot/imported/player_eyes.png-d9fe525abec8d01cccc44615efad1a81.ctex"
+uid="uid://6pt0tp35snum"
+path="res://.godot/imported/hair.png-c3ce7ce0fe1487292fdeeada0cdb59a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://event_locations/assets/player_eyes.png"
-dest_files=["res://.godot/imported/player_eyes.png-d9fe525abec8d01cccc44615efad1a81.ctex"]
+source_file="res://event_locations/decorations/hair.png"
+dest_files=["res://.godot/imported/hair.png-c3ce7ce0fe1487292fdeeada0cdb59a8.ctex"]
 
 [params]
 

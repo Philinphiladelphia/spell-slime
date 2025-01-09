@@ -65,16 +65,14 @@ metadata/_edit_use_anchors_ = true
 [node name="slime_tracker" type="Node" parent="."]
 script = ExtResource("8_p7o26")
 
-[node name="spawner1" type="Node2D" parent="slime_tracker" node_paths=PackedStringArray("spawntimer")]
+[node name="spawner1" type="Node2D" parent="slime_tracker"]
 position = Vector2(-5966, -2743)
 script = ExtResource("9_a1rvl")
-spawntimer = NodePath("../../slime_spawn_timer")
 slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_fire_slimes.json"
 
-[node name="spawner2" type="Node2D" parent="slime_tracker" node_paths=PackedStringArray("spawntimer")]
+[node name="spawner2" type="Node2D" parent="slime_tracker"]
 position = Vector2(-740, -2791)
 script = ExtResource("9_a1rvl")
-spawntimer = NodePath("../../slime_spawn_timer")
 slime_data_file_path = "res://levels/moonswept_fields/day/spawner_json/small_water_slimes.json"
 
 [node name="slime_spawn_timer" type="Timer" parent="."]

@@ -15,7 +15,7 @@ constexpr float M_GRAV = 6.67300e-1f;
 
 
 constexpr int CELL = 4;
-constexpr Vec2<int> CELLS = Vec2(30, 30);
+constexpr Vec2<int> CELLS = Vec2(50,50);
 constexpr Vec2<int> RES = CELLS * CELL;
 
 constexpr int XCELLS = CELLS.X;
