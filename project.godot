@@ -26,11 +26,6 @@ ProjectMusicController="*res://addons/maaacks_game_template/base/scenes/autoload
 ProjectUISoundController="*res://addons/maaacks_game_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
 Dialogue="*res://addons/clyde/helpers/dialogue_manager.gd"
 ItemQueue="*res://item_system/scripts/item_queue.gd"
-GameData="res://savedata/scripts/GameData.gd"
-GlobalTools="res://savedata/scripts/GlobalTools.gd"
-EffectsManager="*res://savedata/scripts/EffectsManager.gd"
-AudioManager="*res://savedata/scripts/AudioManager.gd"
-SignalManager="*res://savedata/scripts/SignalManager.gd"
 GlobalInventory="*res://item_system/scenes/global_inventory.tscn"
 CommonItems="*res://item_system/scenes/common_items.tscn"
 RareItems="*res://item_system/scenes/rare_items.tscn"
@@ -39,6 +34,8 @@ LegendaryItems="*res://item_system/scenes/legendary_items.tscn"
 StatsManager="*res://item_system/scripts/stats_manager.gd"
 MouseGlobal="*res://maaack/globals/mouse_global.gd"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
+DecorationsMap="*res://autoloads/DecorationsMap.tscn"
+GunUtils="*res://autoloads/GunUtils.tscn"
 
 [debug]
 
@@ -64,7 +61,7 @@ movie_writer/movie_file="/home/phil/Desktop/movies/steam_video.avi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/clyde/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg", "res://addons/softbody2d/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
+enabled=PackedStringArray("res://addons/clyde/plugin.cfg", "res://addons/gloot/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg", "res://addons/powder_toy_godot/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg", "res://addons/softbody2d/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/worldmap_builder/plugin.cfg")
 
 [gui]
 

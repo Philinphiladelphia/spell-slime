@@ -85,9 +85,15 @@ public:
     void SetSimFramerate(int framerate);
     void SetSimDrawingFrequency(int frequency);
     void RunSimFrame();
-
+    void SetParticles(const int* particles);
     void GetWalls(int* walls);
     void GetParticles(int* particles);
+
+    void ScrollParticlesUp();
+    void ScrollParticlesDown();
+    void ScrollParticlesLeft();
+    void ScrollParticlesRight();
+    
     void GetParticleColors(int* particle_colors);
 
     void collide_slimes(const std::vector<std::pair<int, int>>& positions, const std::vector<int>& sizes, const std::vector<int>& ignore_elements, std::vector<std::vector<int>>& collidable_particles);

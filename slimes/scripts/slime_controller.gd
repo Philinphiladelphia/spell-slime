@@ -45,6 +45,8 @@ var is_dead: bool = false
 
 var original_color: Color = Color(1, 1, 1, 1)
 
+@export var decorations: Array[Node2D]
+
 # slimes should be able to jump over the tower and reverse course.
 
 func set_go_right(value: bool)-> void:
@@ -60,6 +62,9 @@ func set_original_color(color: Color) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
+	for sprite in decorations:
+		add_child(sprite)
+	
 	$health_bar.bone_number = bone_number
 	$damage_bar.bone_number = bone_number
 	
@@ -147,16 +152,6 @@ func apply_damage(amount: float, projectile_position: Vector2) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#if powder_timer.time_left < powder_warning_time && is_powdering == 0:
-		#var current_color = $slime_soft_body.modulate
-		#var warning_color = Color(1, 1, 1, 1)
-		#$slime_soft_body.modulate = lerp(current_color, warning_color, 0.03)
-	#elif is_powdering == 1:
-		#var current_color = $slime_soft_body.modulate
-		#$slime_soft_body.modulate = lerp(current_color, original_color, 0.08)
-	#else:
-		#$slime_soft_body.modulate = original_color
-
 	slime_position = $slime_soft_body.get_bones_center_position()
 
 	$slime_hitbox.global_position = slime_position
@@ -165,9 +160,15 @@ func _process(delta: float) -> void:
 	var angle_difference = wrapf(-rigidbody.rotation, -PI, PI)
 	$slime_soft_body.constant_torque = angle_difference * upright_torque  # Adjust the multiplier as needed
 
+	if len(decorations) > 0:
+		for decoration in decorations:
+			decoration.global_position = slime_position
+			decoration.rotation = rigidbody.rotation
+
 	var offset: Vector2 = health_offset
 	$health_bar.health_bar_offset = offset
 	$damage_bar.health_bar_offset = offset
+	
 	if (health <= 0):
 		var current_color: Color = get_modulate()
 		var transparent: Color = Color(current_color.r, current_color.g, current_color.b, 0)

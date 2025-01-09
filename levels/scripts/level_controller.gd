@@ -61,7 +61,7 @@ func _ready() -> void:
 	powderviewport.powder_instance.powder_toy.powder_box(40, 120, 80, 75, tower_element)
 	
 	
-	$slime_tracker.set_tower_midpoint(spelltowernode.global_position.x)
+	$slime_tracker.set_slime_goal_position(spelltowernode.global_position)
 	
 	powderviewport.powder_instance.powder_toy.flood_powder(60, 60, 28, 0) # diamond
 	

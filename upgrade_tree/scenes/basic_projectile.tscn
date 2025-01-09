@@ -17,10 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://ck3rp7frjds6d" path="res://art/super_pixel/Super Pixel Projectiles Pack 1/PNG/pj1_blob_large_red/frame0000.png" id="16_x7kqw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_od1rp"]
-radius = 24.4
+radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o77uf"]
-radius = 50.636
+radius = 8.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mo3jg"]
 animations = [{
@@ -87,7 +87,7 @@ texture_filter = 1
 collision_layer = 4
 collision_mask = 3
 mass = 2.0
-continuous_cd = 1
+continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 5
 script = ExtResource("1_0unes")
@@ -106,7 +106,7 @@ shape = SubResource("CircleShape2D_o77uf")
 physics_interpolation_mode = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_mo3jg")
 autoplay = "default"
 frame_progress = 0.673786
@@ -117,6 +117,5 @@ color = Color(0.425998, 0.784576, 0.31796, 1)
 energy = 0.4
 shadow_color = Color(0, 0, 0, 0.658824)
 texture = SubResource("GradientTexture2D_7wycm")
-texture_scale = 10.0
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

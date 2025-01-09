@@ -1,20 +1,23 @@
 extends Node2D
 
-var jump_interval: float = 3
+var jump_interval: float = 1.5
 var powder_interval: float = 2
 var powder_duration: float = 0.2
 
 var max_health: float = 200.0
-var jump_power: float = 600
+var jump_power: float = 150
 var element_numbers: PackedInt32Array = [21, 3, 4, 6, 7]
 
+var decorations: Array[Sprite2D]
+
 @export var slime_node: Node2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SoundManager.play_sfx("slime1", 0, -12, 3)
 	
-	$slime_node.health_offset = Vector2(-150, -250)
+	$slime_node.health_offset = $slime_node/health_bar.position
 	
 	# must be done in this order
 	$slime_node.set_max_health(max_health)
@@ -22,7 +25,7 @@ func _ready() -> void:
 	$slime_node.jump_power = jump_power
 	$slime_node.local_move_direction = Vector2(-0.5, -1).normalized()
 	
-	$slime_node.upright_torque = 20000
+	$slime_node.upright_torque = 2000
 	$slime_node.jump_interval = jump_interval
 	$slime_node.powder_interval = powder_interval
 	$slime_node.powder_duration = powder_duration

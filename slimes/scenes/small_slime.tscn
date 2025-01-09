@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://slimes/scripts/slime_controller.gd" id="1_iidph"]
 [ext_resource type="Script" path="res://slimes/scripts/small_slime_controller.gd" id="1_uitv3"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="2_qy4b6"]
-[ext_resource type="Texture2D" uid="uid://dgeavlqxk7310" path="res://art/slimes/slime-half.png" id="3_k5ff0"]
+[ext_resource type="Texture2D" uid="uid://bssbmgy281kk7" path="res://art/slimes/slime-half.png" id="3_k5ff0"]
 [ext_resource type="Texture2D" uid="uid://cfkm8h8yxc1wt" path="res://slimes/assets/damage_indicatior.png" id="3_kfkl5"]
 [ext_resource type="Script" path="res://slimes/scripts/slime_damage_bar.gd" id="4_lvu3f"]
 [ext_resource type="Texture2D" uid="uid://ddn3y0pkkg5q1" path="res://slimes/assets/black_frame.png" id="5_c7xqs"]
@@ -103,19 +103,20 @@ radius = 22.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_b0po8"]
 radius = 128.92
 
-[sub_resource type="Gradient" id="Gradient_mxs2o"]
+[sub_resource type="Gradient" id="Gradient_g5f37"]
 offsets = PackedFloat32Array(0, 0.968127)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_rm5ro"]
-gradient = SubResource("Gradient_mxs2o")
+gradient = SubResource("Gradient_g5f37")
 fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)
 
-[node name="slime_controller" type="Node2D"]
+[node name="slime_controller" type="Node2D" node_paths=PackedStringArray("slime_node")]
 texture_filter = 1
 script = ExtResource("1_uitv3")
+slime_node = NodePath("slime_node")
 
 [node name="slime_node" type="Node2D" parent="."]
 process_physics_priority = 10

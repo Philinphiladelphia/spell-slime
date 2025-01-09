@@ -21,7 +21,8 @@ func _process(delta: float) -> void:
 	#tutorial_layer.set_tutorial_text("scatman")
 	
 	if second_dialogue_collider.has_overlapping_bodies() and dialogue_layer.dialogue_index == 1:
-		grandpa.global_position = gpa_second_location.global_position
+		grandpa.position = gpa_second_location.position
+		#grandpa.global_position = gpa_second_location.global_position
 		gpa_teleport_animation.play()
 		SoundManager.play_sfx("harpoon", 0, -12, 1)
 		tutorial_layer.set_tutorial_text("")

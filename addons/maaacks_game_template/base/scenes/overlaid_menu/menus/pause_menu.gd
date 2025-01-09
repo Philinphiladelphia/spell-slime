@@ -4,7 +4,13 @@ extends OverlaidMenu
 @export var options_packed_scene : PackedScene
 @export_file("*.tscn") var main_menu_scene : String
 
+var pause_music = "sustainability"
+
 var popup_open
+
+func close():
+	super.close()
+	SoundManager.stop(pause_music)
 
 func close_popup():
 	if popup_open != null:
@@ -48,7 +54,7 @@ func _ready():
 	_setup_options()
 	_setup_main_menu()
 	
-	SoundManager.play_bgm("sustainability")
+	SoundManager.play_bgm(pause_music)
 
 func _on_restart_button_pressed():
 	%ConfirmRestart.popup_centered()

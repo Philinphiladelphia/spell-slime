@@ -21,13 +21,14 @@ func _ready() -> void:
 	powder_toy.set_edge_mode(0)
 	powder_toy.set_grav_mode(0)
 	
-	#powder_toy.wall(80,80,15,1)
-	#powder_toy.wall_line(10, 80, 150, 80, 5, 129)
 	
+	circle(Vector2(60,50), 5, 87)
+	#powder_toy.wall(80,80,15,1)
+
 	#powder_toy.wall_box(5,5,150,150, 1)
 
 	#powder_toy.flood_powder(80, 65, 2, 0)
-	#circle(Vector2(80,80), 20, 114)
+	#circle(Vector2(80,80), 20, 4)
 
 
 	# Add a Timer node and set it to call the clear_outer_area function every 5 seconds
@@ -42,11 +43,11 @@ func get_health() -> int:
 
 
 func _physics_process(delta: float) -> void:
-	pass
-	#circle(Vector2(60,110), 5, 4)
-	#print(get_health())
+	for i in range(100):
+		powder_toy.scroll_particles_left()
+	
 	#polygon(Vector2(80,80), 10.0, 8, 1, 4)
-	# drawing codes
+
 	#if is_drawing:
 		#if is_right_click:
 			## 21 is acid
@@ -131,8 +132,8 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 # this function makes it possible for the powder toy to have void edges while maintaining air pressure.
 func clear_outer_area() -> void:
-	var width: int = 120
-	var height: int = 120
+	var width: int = 200
+	var height: int = 200
 	var border: int = 2
 	var wall_offset: int = 0
 	var bottom_size: int = 20

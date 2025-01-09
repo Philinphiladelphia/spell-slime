@@ -11,9 +11,15 @@ var slime_damages: PackedInt32Array
 var current_max_slime_health: float = 0.0
 var current_slime_health: float = 0.0
 
-var tower_midpoint: float = 0.0
+var slime_goal_position: Vector2 = Vector2(0,0)
 
 var spawns_done: bool = false
+
+var ratio = 650.0/200.0
+
+@export var managed_spawners: Array[Node2D]
+@export var powderviewport: Node2D
+@export var cam: Camera2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,7 +39,7 @@ func _process(delta: float) -> void:
 	current_max_slime_health = 0.0
 	
 	var all_depleted: bool = true
-	for slime_spawner in get_children():
+	for slime_spawner in managed_spawners:
 		collected_slime_positions.append_array(slime_spawner.slime_positions)
 		powder_activated_bitmap.append_array(slime_spawner.powder_activated_bitmap)
 		slime_elements.append_array(slime_spawner.slime_elements)
@@ -47,15 +53,25 @@ func _process(delta: float) -> void:
 		
 	if all_depleted:
 		spawns_done = true
+		
+	for i in range(len(collected_slime_positions)):
+		if powder_activated_bitmap[i] != 1:
+			continue
+		
+		var position: Vector2 = collected_slime_positions[i]
+		var slime_circle_size: int = slime_circle_sizes[i]
+		var element: int = slime_elements[i]
+		
+		powderviewport.spawn_powder(position, slime_circle_size, element)
 
 func enable_slime_lights() -> void:
-	for slime_spawner in get_children():
+	for slime_spawner in managed_spawners:
 		slime_spawner.enable_light = true
 
-func set_tower_midpoint(value: float) -> void:
-	tower_midpoint = value
-	for slime_spawner in get_children():
-		slime_spawner.set_tower_midpoint(value)
+func set_slime_goal_position(value: Vector2) -> void:
+	slime_goal_position = value
+	for slime_spawner in managed_spawners:
+		slime_spawner.set_slime_goal_position(value)
 	
 
 func _on_body_entered(body: Node2D) -> void:

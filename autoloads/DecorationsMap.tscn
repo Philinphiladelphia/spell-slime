@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cna7a7p6nbtr4"]
+
+[ext_resource type="Script" path="res://autoloads/decorations_map.gd" id="1_pwow5"]
+
+[node name="DecorationsMap" type="Node2D"]
+script = ExtResource("1_pwow5")

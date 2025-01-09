@@ -5,7 +5,7 @@ var sim_speed: float = 60.0 # fps
 var accumulated_fractional_frame: float = 0.0
 
 # Define configurable display scale
-var display_scale: float = 2
+var display_scale: float = 1
 
 var draw_rect_size_boost: float = 0.1
 

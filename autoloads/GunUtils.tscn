@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cklh7wutb6w3e"]
+
+[ext_resource type="Script" path="res://autoloads/gun_utils.gd" id="1_pyyg3"]
+
+[node name="GunUtils" type="Node2D"]
+script = ExtResource("1_pyyg3")

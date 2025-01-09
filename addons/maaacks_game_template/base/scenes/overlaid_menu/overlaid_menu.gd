@@ -17,8 +17,6 @@ var _initial_focus_control
 var _scene_tree : SceneTree 
 
 func close():
-	SoundManager.stop_all()
-	
 	_scene_tree.paused = _initial_pause_state
 	Input.set_mouse_mode(_initial_mouse_mode)
 	if is_instance_valid(_initial_focus_control) and _initial_focus_control.is_inside_tree():
