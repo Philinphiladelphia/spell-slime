@@ -149,7 +149,7 @@
 [ext_resource type="Script" path="res://event_locations/scenes/home/dialogue_controller.gd" id="133_b1qht"]
 [ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="133_w8vil"]
 [ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://slimes/player_slime/scenes/player_slime.tscn" id="134_6e3ea"]
-[ext_resource type="PackedScene" uid="uid://duksl7grt8udr" path="res://ui/scenes/input_glyph.tscn" id="136_vhimu"]
+[ext_resource type="PackedScene" uid="uid://duksl7grt8udr" path="res://ui/scenes/symbols/input_glyph.tscn" id="136_vhimu"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/tutorial_text.gd" id="139_maqv3"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/camera.gd" id="147_263tt"]
 [ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="155_12anc"]

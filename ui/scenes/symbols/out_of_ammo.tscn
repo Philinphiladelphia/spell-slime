@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd5s8vhocx4yl"]
+
+[ext_resource type="Script" path="res://ui/scenes/symbols/out_of_ammo.gd" id="1_2ximk"]
+[ext_resource type="Texture2D" uid="uid://8p8r74trembd" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/icons/outlined/red/no.png" id="2_cbu4q"]
+
+[node name="OutOfAmmo" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_2ximk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cbu4q")

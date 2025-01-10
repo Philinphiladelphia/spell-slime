@@ -1,3 +1,4 @@
+class_name InputGlyph
 extends Node2D
 
 @export var input: InputEventAction

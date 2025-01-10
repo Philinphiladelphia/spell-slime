@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://jr861lwypc3m"]
+[gd_scene load_steps=41 format=3 uid="uid://cl0vuxa3ioelw"]
 
 [ext_resource type="Script" path="res://slimes/scripts/super_small_slime.gd" id="1_hxxp5"]
 [ext_resource type="Script" path="res://slimes/scripts/slime_controller.gd" id="1_xjvlk"]

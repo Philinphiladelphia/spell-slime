@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://besjoot0py6gs"]
+
+[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="1_f4gru"]
+[ext_resource type="Script" path="res://addons/powder_toy_godot/tests/powder_target.gd" id="2_jr85q"]
+
+[node name="TestLimits" type="Node2D"]
+texture_filter = 1
+
+[node name="PowderViewport" parent="." instance=ExtResource("1_f4gru")]
+position = Vector2(379, 21)
+scale = Vector2(4, 4)
+
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("powder_viewport")]
+position = Vector2(661, 543)
+script = ExtResource("2_jr85q")
+powder_viewport = NodePath("../PowderViewport")
+
+[node name="Node2D2" type="Node2D" parent="." node_paths=PackedStringArray("powder_viewport")]
+position = Vector2(507, 178)
+script = ExtResource("2_jr85q")
+powder_viewport = NodePath("../PowderViewport")

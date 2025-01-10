@@ -1,0 +1,240 @@
+[gd_scene load_steps=36 format=3 uid="uid://dw5ygteiex2s3"]
+
+[ext_resource type="Script" path="res://levels/tutorial/turret/turret_controller.gd" id="1_4hk61"]
+[ext_resource type="Texture2D" uid="uid://86covl51pnwi" path="res://spell_machine_tower/assets/useful_parts/265614735.png" id="1_sfkh1"]
+[ext_resource type="Script" path="res://levels/tutorial/turret/turret.gd" id="2_irpk5"]
+[ext_resource type="Resource" uid="uid://c3t2e08fblchp" path="res://levels/tutorial/turret/firing_strategies/firing_strategy.tres" id="2_wp1e3"]
+[ext_resource type="Resource" uid="uid://dgv7h6lfdgd74" path="res://levels/tutorial/turret/projectile_data/projectile_data.tres" id="3_57sd3"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/StateMachinePlayer.gd" id="3_fhmfd"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/states/StateMachine.gd" id="4_sr2od"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/states/State.gd" id="5_b8mwj"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/transitions/Transition.gd" id="6_oga7w"]
+[ext_resource type="PackedScene" uid="uid://5qv6seiq3sor" path="res://ui/scenes/symbols/input_glyph.tscn" id="8_devp7"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/conditions/Condition.gd" id="8_hlddf"]
+[ext_resource type="PackedScene" uid="uid://bd5s8vhocx4yl" path="res://ui/scenes/symbols/out_of_ammo.tscn" id="10_6o2ov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq0aq"]
+size = Vector2(76, 34)
+
+[sub_resource type="Resource" id="Resource_rx627"]
+script = ExtResource("5_b8mwj")
+name = "Entry"
+metadata/graph_offset = Vector2(425, 222)
+
+[sub_resource type="Resource" id="Resource_yw2fm"]
+script = ExtResource("5_b8mwj")
+name = "activatable"
+metadata/graph_offset = Vector2(649.5, 222)
+
+[sub_resource type="Resource" id="Resource_3br5a"]
+script = ExtResource("5_b8mwj")
+name = "active"
+metadata/graph_offset = Vector2(825, 222)
+
+[sub_resource type="Resource" id="Resource_hkscl"]
+script = ExtResource("5_b8mwj")
+name = "firing"
+metadata/graph_offset = Vector2(965, 222)
+
+[sub_resource type="Resource" id="Resource_5pl6g"]
+script = ExtResource("5_b8mwj")
+name = "inactive"
+metadata/graph_offset = Vector2(520.5, 222)
+
+[sub_resource type="Resource" id="Resource_0jegd"]
+script = ExtResource("5_b8mwj")
+name = "out_of_ammo"
+metadata/graph_offset = Vector2(1081, 222)
+
+[sub_resource type="Resource" id="Resource_w33wn"]
+script = ExtResource("6_oga7w")
+from = "Entry"
+to = "inactive"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_7gt3e"]
+script = ExtResource("8_hlddf")
+name = "activated"
+
+[sub_resource type="Resource" id="Resource_4ffoo"]
+script = ExtResource("6_oga7w")
+from = "activatable"
+to = "active"
+conditions = {
+"activated": SubResource("Resource_7gt3e")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_4jarb"]
+script = ExtResource("8_hlddf")
+name = "player_gone"
+
+[sub_resource type="Resource" id="Resource_62764"]
+script = ExtResource("6_oga7w")
+from = "activatable"
+to = "inactive"
+conditions = {
+"player_gone": SubResource("Resource_4jarb")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_rg6qk"]
+script = ExtResource("8_hlddf")
+name = "fire"
+
+[sub_resource type="Resource" id="Resource_dyy1s"]
+script = ExtResource("6_oga7w")
+from = "active"
+to = "firing"
+conditions = {
+"fire": SubResource("Resource_rg6qk")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_0uuei"]
+script = ExtResource("8_hlddf")
+name = "deactivated"
+
+[sub_resource type="Resource" id="Resource_wxc1w"]
+script = ExtResource("6_oga7w")
+from = "active"
+to = "activatable"
+conditions = {
+"deactivated": SubResource("Resource_0uuei")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_g21hh"]
+script = ExtResource("8_hlddf")
+name = "end_firing"
+
+[sub_resource type="Resource" id="Resource_sppqh"]
+script = ExtResource("6_oga7w")
+from = "firing"
+to = "active"
+conditions = {
+"end_firing": SubResource("Resource_g21hh")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_2tus3"]
+script = ExtResource("8_hlddf")
+name = "out_of_ammo"
+
+[sub_resource type="Resource" id="Resource_17nxv"]
+script = ExtResource("6_oga7w")
+from = "firing"
+to = "out_of_ammo"
+conditions = {
+"out_of_ammo": SubResource("Resource_2tus3")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_pabx7"]
+script = ExtResource("8_hlddf")
+name = "player_contact"
+
+[sub_resource type="Resource" id="Resource_wjcqp"]
+script = ExtResource("6_oga7w")
+from = "inactive"
+to = "activatable"
+conditions = {
+"player_contact": SubResource("Resource_pabx7")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_xxsfb"]
+script = ExtResource("4_sr2od")
+states = {
+"Entry": SubResource("Resource_rx627"),
+"activatable": SubResource("Resource_yw2fm"),
+"active": SubResource("Resource_3br5a"),
+"firing": SubResource("Resource_hkscl"),
+"inactive": SubResource("Resource_5pl6g"),
+"out_of_ammo": SubResource("Resource_0jegd")
+}
+transitions = {
+"Entry": {
+"inactive": SubResource("Resource_w33wn")
+},
+"activatable": {
+"active": SubResource("Resource_4ffoo"),
+"inactive": SubResource("Resource_62764")
+},
+"active": {
+"activatable": SubResource("Resource_wxc1w"),
+"firing": SubResource("Resource_dyy1s")
+},
+"firing": {
+"active": SubResource("Resource_sppqh"),
+"out_of_ammo": SubResource("Resource_17nxv")
+},
+"inactive": {
+"activatable": SubResource("Resource_wjcqp")
+}
+}
+name = ""
+
+[node name="Turret" type="Node2D" node_paths=PackedStringArray("input_glyph", "out_of_ammo", "collision_area", "hurtbox", "turret_barrel", "firing_position")]
+script = ExtResource("1_4hk61")
+input_glyph = NodePath("InputGlyph")
+out_of_ammo = NodePath("OutOfAmmo")
+collision_area = NodePath("turret_collider")
+hurtbox = NodePath("turret_hurtbox")
+turret_barrel = NodePath("turret_barrel")
+firing_position = NodePath("turret_barrel/firing_position")
+firing_strategy = ExtResource("2_wp1e3")
+projectile_data = ExtResource("3_57sd3")
+
+[node name="turret_barrel" type="Sprite2D" parent="."]
+position = Vector2(1, 2.00001)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_sfkh1")
+region_enabled = true
+region_rect = Rect2(19.2542, 69.9864, 471.88, 177.156)
+script = ExtResource("2_irpk5")
+
+[node name="firing_position" type="Node2D" parent="turret_barrel"]
+position = Vector2(245, 0)
+
+[node name="turret_collider" type="Area2D" parent="."]
+position = Vector2(-1, 0)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="turret_collider"]
+position = Vector2(-7, 3)
+shape = SubResource("RectangleShape2D_mq0aq")
+
+[node name="turret_hurtbox" type="Area2D" parent="."]
+position = Vector2(-1, 0)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="turret_hurtbox"]
+position = Vector2(-7, 3)
+shape = SubResource("RectangleShape2D_mq0aq")
+
+[node name="turret_state" type="Node" parent="."]
+script = ExtResource("3_fhmfd")
+state_machine = SubResource("Resource_xxsfb")
+
+[node name="turret_base" type="Sprite2D" parent="."]
+position = Vector2(-1.99999, 16)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_sfkh1")
+region_enabled = true
+region_rect = Rect2(114.425, 335.975, 248.019, 115.957)
+
+[node name="InputGlyph" parent="." instance=ExtResource("8_devp7")]
+position = Vector2(-2.99999, -33)
+scale = Vector2(0.4, 0.4)
+
+[node name="OutOfAmmo" parent="." instance=ExtResource("10_6o2ov")]
+visible = false
+position = Vector2(-2, -33)
+
+[connection signal="area_entered" from="turret_hurtbox" to="." method="_on_turret_hurtbox_area_entered"]
+[connection signal="transited" from="turret_state" to="." method="_on_turret_state_transited"]
+[connection signal="updated" from="turret_state" to="." method="_on_turret_state_updated"]
