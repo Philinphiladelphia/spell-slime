@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MovementStats" load_steps=2 format=3 uid="uid://bpf8tvkjpdpkk"]
+
+[ext_resource type="Script" path="res://slimes/player_slime/scripts/movement_stats/movement_stats.gd" id="1_luxxd"]
+
+[resource]
+script = ExtResource("1_luxxd")
+max_jump_power = 200.0
+charge_rate = 60.0
+min_jump = 60.0
+min_jump_interval = 0.5
+upright_force = 200

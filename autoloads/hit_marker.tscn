@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c37forvwpvy1k"]
+
+[ext_resource type="Script" path="res://autoloads/hit_marker.gd" id="1_vxiin"]
+
+[node name="Label" type="Label"]
+modulate = Color(1, 0, 0, 1)
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 25.0
+text = "hi"
+script = ExtResource("1_vxiin")

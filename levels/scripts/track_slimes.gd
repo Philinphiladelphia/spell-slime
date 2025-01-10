@@ -62,7 +62,7 @@ func _process(delta: float) -> void:
 		var slime_circle_size: int = slime_circle_sizes[i]
 		var element: int = slime_elements[i]
 		
-		powderviewport.spawn_powder(position, slime_circle_size, element)
+		powderviewport.circle(position, slime_circle_size, element)
 
 func enable_slime_lights() -> void:
 	for slime_spawner in managed_spawners:

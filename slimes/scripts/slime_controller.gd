@@ -141,7 +141,7 @@ func set_health(amount: float) -> void:
 	else:
 		print("Slime health is above health max")
 
-func apply_damage(amount: float, projectile_position: Vector2) -> void:
+func apply_damage(amount: float) -> void:
 	health -= amount
 	$health_bar.current_health = health
 	$health_bar.show()

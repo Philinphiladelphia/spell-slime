@@ -1,9 +1,16 @@
-[gd_scene load_steps=33 format=3 uid="uid://chhnrbkrbyki8"]
+[gd_scene load_steps=50 format=3 uid="uid://chhnrbkrbyki8"]
 
 [ext_resource type="Texture2D" uid="uid://kftevsx25ln2" path="res://art/slimes/slime-8th_mouthless.png" id="2_djuya"]
+[ext_resource type="Resource" uid="uid://bpf8tvkjpdpkk" path="res://slimes/player_slime/scripts/movement_stats/base_movement_stats.tres" id="2_g85qg"]
 [ext_resource type="Script" path="res://slimes/player_slime/scripts/player_slime_controller.gd" id="3_huhpb"]
 [ext_resource type="Texture2D" uid="uid://yjfpq0gxl6px" path="res://event_locations/decorations/player_eyes.png" id="4_6i3ux"]
 [ext_resource type="Texture2D" uid="uid://dxuu5p3jcri3b" path="res://event_locations/decorations/player_mouth.png" id="5_cfeg0"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/StateMachinePlayer.gd" id="6_l0ojx"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/states/StateMachine.gd" id="7_0lg1a"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/states/State.gd" id="8_quk8h"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/transitions/Transition.gd" id="9_wwxss"]
+[ext_resource type="PackedScene" uid="uid://p7dbpv7oplon" path="res://ui/scenes/cursor_radials.tscn" id="10_heor7"]
+[ext_resource type="Script" path="res://addons/imjp94.yafsm/src/conditions/Condition.gd" id="11_c2rr6"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="11_to14e"]
 
 [sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_m1grn"]
@@ -215,14 +222,87 @@ modifications/24 = SubResource("SkeletonModification2DLookAt_q2os4")
 resource_local_to_scene = true
 size = Vector2(8, 8)
 
-[node name="controller" type="Node2D" node_paths=PackedStringArray("softbody", "decorations")]
+[sub_resource type="Resource" id="Resource_r1786"]
+script = ExtResource("8_quk8h")
+name = "Entry"
+metadata/graph_offset = Vector2(325, 242)
+
+[sub_resource type="Resource" id="Resource_qrgjw"]
+script = ExtResource("8_quk8h")
+name = "jump_active"
+metadata/graph_offset = Vector2(526, 242)
+
+[sub_resource type="Resource" id="Resource_qtape"]
+script = ExtResource("8_quk8h")
+name = "jump_inactive"
+metadata/graph_offset = Vector2(719.5, 242)
+
+[sub_resource type="Resource" id="Resource_nte1n"]
+script = ExtResource("9_wwxss")
+from = "Entry"
+to = "jump_active"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_nrv7l"]
+script = ExtResource("11_c2rr6")
+name = "deactivate"
+
+[sub_resource type="Resource" id="Resource_loopj"]
+script = ExtResource("9_wwxss")
+from = "jump_active"
+to = "jump_inactive"
+conditions = {
+"deactivate": SubResource("Resource_nrv7l")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_gf6cf"]
+script = ExtResource("11_c2rr6")
+name = "activate"
+
+[sub_resource type="Resource" id="Resource_b5lx7"]
+script = ExtResource("9_wwxss")
+from = "jump_inactive"
+to = "jump_active"
+conditions = {
+"activate": SubResource("Resource_gf6cf")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_ycdjk"]
+script = ExtResource("7_0lg1a")
+states = {
+"Entry": SubResource("Resource_r1786"),
+"jump_active": SubResource("Resource_qrgjw"),
+"jump_inactive": SubResource("Resource_qtape")
+}
+transitions = {
+"Entry": {
+"jump_active": SubResource("Resource_nte1n")
+},
+"jump_active": {
+"jump_inactive": SubResource("Resource_loopj")
+},
+"jump_inactive": {
+"jump_active": SubResource("Resource_b5lx7")
+}
+}
+name = ""
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jk8vh"]
+radius = 23.0
+height = 58.0
+
+[node name="controller" type="Node2D" node_paths=PackedStringArray("softbody", "decorations", "cursor_radials", "hurtbox")]
 physics_interpolation_mode = 2
 texture_filter = 1
 script = ExtResource("3_huhpb")
 softbody = NodePath("SoftBody2D")
 decorations = [NodePath("decorations/player_eyes"), NodePath("decorations/player_mouth"), NodePath("decorations/AudioListener2D")]
-max_jump_power = 60.0
-charge_rate = 30.0
+movement_stats = ExtResource("2_g85qg")
+cursor_radials = NodePath("CursorRadials")
+hurtbox = NodePath("hurtbox")
 
 [node name="SoftBody2D" type="Polygon2D" parent="."]
 color = Color(0, 1, 0.2, 1)
@@ -2039,3 +2119,23 @@ texture = ExtResource("5_cfeg0")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="decorations"]
 current = true
+
+[node name="player_state" type="Node" parent="."]
+script = ExtResource("6_l0ojx")
+state_machine = SubResource("Resource_ycdjk")
+
+[node name="CursorRadials" parent="." instance=ExtResource("10_heor7")]
+position = Vector2(-465, -111)
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(33, 26)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_jk8vh")
+
+[connection signal="transited" from="player_state" to="." method="_on_player_state_transited"]
+[connection signal="updated" from="player_state" to="." method="_on_player_state_updated"]
+[connection signal="area_entered" from="hurtbox" to="." method="_on_area_2d_area_entered"]

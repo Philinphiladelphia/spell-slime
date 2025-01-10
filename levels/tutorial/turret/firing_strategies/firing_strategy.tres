@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FiringStrategy" load_steps=2 format=3 uid="uid://c3t2e08fblchp"]
+
+[ext_resource type="Script" path="res://levels/tutorial/turret/firing_strategies/base_firing_strategy.gd" id="1_qlwhn"]
+
+[resource]
+script = ExtResource("1_qlwhn")
+firing_interval = 0.1
+ammo = 50
+velocity = 2000.0
+shake = 0.03

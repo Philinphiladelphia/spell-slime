@@ -56,12 +56,7 @@ func _process(delta: float) -> void:
 	while accumulated_time >= 1.0:
 		run_powder_toy_frame()
 		accumulated_time -= 1.0
-
-	# Process buffered powder manifestation requests
-	for request: Dictionary in powder_manifestation_buffer:
-		powder_circle_wrapper(request.x, request.y, request.type, request.size)
-	powder_manifestation_buffer.clear()
-
+	
 	get_particles_from_powder_toy()
 	#get_walls_from_powder_toy()
 	queue_redraw()
@@ -141,16 +136,6 @@ func get_color_from_index(index: int) -> Color:
 		particle_colors[index] = Color(randf(), randf(), randf(), 1)
 		#save_colors()
 	return particle_colors[index]
-
-func powder_circle_wrapper(x: int, y: int, type: int, size: int) -> void:
-	# Translate coordinates from [0, x_resolution] to [0, x_resolution - 1]
-	var translated_x: int = x
-	var translated_y: int = y
-	# this might be busted
-	create_powder_circle(translated_x, translated_y, type, size)
-
-func create_powder_circle(x: int, y: int, type: int, size: int) -> void:
-	powder_manifestation_buffer.append({"x": x, "y": y, "type": type, "size": size}) # Example: different type and size
 
 func load_colors() -> void:
 	var file: FileAccess = FileAccess.open(colors_file_path, FileAccess.READ)
