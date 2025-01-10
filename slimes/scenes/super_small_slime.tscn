@@ -221,7 +221,7 @@ resource_local_to_scene = true
 size = Vector2(8, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ws4c0"]
-radius = 24.91
+radius = 30.0167
 
 [sub_resource type="Gradient" id="Gradient_mxs2o"]
 offsets = PackedFloat32Array(0, 0.968127)

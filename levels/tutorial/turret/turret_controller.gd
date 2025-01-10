@@ -43,6 +43,7 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 				input_glyph.hide()
 				GunUtils.active_turret = self
 				camera.x_offset += camera_offset.x
+				powderviewport.circle(global_position, 10, 114)
 				
 				smp.set_trigger("activated")
 		"active":
@@ -91,7 +92,7 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 
 
 func _on_powder_viewport_ready() -> void:
-	powderviewport.circle(global_position, 10, 17)
+	pass
 
 
 func _on_turret_hurtbox_area_entered(area: Area2D) -> void:

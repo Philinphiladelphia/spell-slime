@@ -922,7 +922,7 @@ camera = NodePath("../Node/Camera2D")
 powderviewport = NodePath("../PowderViewport")
 
 [node name="PowderViewport" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("58_1qeca")]
-position = Vector2(-205, -110)
+position = Vector2(-159, -206)
 scale = Vector2(3, 3)
 cam = NodePath("../Node/Camera2D")
 
