@@ -33,9 +33,9 @@ EpicItems="*res://item_system/scenes/epic_items.tscn"
 LegendaryItems="*res://item_system/scenes/legendary_items.tscn"
 StatsManager="*res://item_system/scripts/stats_manager.gd"
 MouseGlobal="*res://maaack/globals/mouse_global.gd"
-SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
 DecorationsMap="*res://autoloads/DecorationsMap.tscn"
 GunUtils="*res://autoloads/GunUtils.tscn"
+SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
 
 [debug]
 

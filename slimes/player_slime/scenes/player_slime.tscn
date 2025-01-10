@@ -291,8 +291,8 @@ transitions = {
 name = ""
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jk8vh"]
-radius = 23.0
-height = 58.0
+radius = 30.0
+height = 74.0
 
 [node name="controller" type="Node2D" node_paths=PackedStringArray("softbody", "decorations", "cursor_radials", "hurtbox")]
 physics_interpolation_mode = 2
@@ -2138,4 +2138,3 @@ shape = SubResource("CapsuleShape2D_jk8vh")
 
 [connection signal="transited" from="player_state" to="." method="_on_player_state_transited"]
 [connection signal="updated" from="player_state" to="." method="_on_player_state_updated"]
-[connection signal="area_entered" from="hurtbox" to="." method="_on_area_2d_area_entered"]

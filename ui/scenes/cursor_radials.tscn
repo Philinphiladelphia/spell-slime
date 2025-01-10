@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://p7dbpv7oplon"]
+[gd_scene load_steps=6 format=3 uid="uid://p7dbpv7oplon"]
 
-[ext_resource type="Texture2D" uid="uid://ddn3y0pkkg5q1" path="res://slimes/assets/black_frame.png" id="1_088cm"]
 [ext_resource type="Script" path="res://ui/scenes/control_cursor_radials.gd" id="1_231t1"]
-[ext_resource type="Texture2D" uid="uid://3mxc54vah3ta" path="res://slimes/assets/big_frame.png" id="2_xyuyo"]
+[ext_resource type="Texture2D" uid="uid://bme4lx7e14hht" path="res://slimes/assets/trigger.png" id="2_cttno"]
 [ext_resource type="Texture2D" uid="uid://bm72vamyf10gk" path="res://slimes/assets/cursor_radial.png" id="3_o87g6"]
 [ext_resource type="Texture2D" uid="uid://7uuwexqkbxgp" path="res://slimes/assets/big_red_health.png" id="3_r0067"]
 [ext_resource type="Script" path="res://ui/scenes/radial_bar.gd" id="4_3w7fh"]
@@ -10,33 +9,29 @@
 [node name="CursorRadials" type="Node2D" node_paths=PackedStringArray("radial_1", "radial_2")]
 top_level = true
 texture_filter = 1
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_231t1")
 radial_1 = NodePath("radial_bar1")
 radial_2 = NodePath("radial_bar2")
 
-[node name="radial_bar1" type="TextureProgressBar" parent="."]
-offset_left = -13.0
-offset_top = -13.0
-offset_right = 115.0
-offset_bottom = 115.0
-scale = Vector2(0.2, 0.2)
+[node name="radial_bar2" type="TextureProgressBar" parent="."]
+offset_left = -30.0
+offset_top = -29.0
+offset_right = 98.0
+offset_bottom = 99.0
+scale = Vector2(0.45, 0.45)
 step = 0.0
 fill_mode = 4
-texture_under = ExtResource("1_088cm")
-texture_progress = ExtResource("3_o87g6")
+texture_progress = ExtResource("3_r0067")
 script = ExtResource("4_3w7fh")
 
-[node name="radial_bar2" type="TextureProgressBar" parent="."]
-visible = false
-offset_left = -38.0
-offset_top = -39.0
-offset_right = 90.0
-offset_bottom = 89.0
-scale = Vector2(0.6, 0.604)
+[node name="radial_bar1" type="TextureProgressBar" parent="."]
+offset_left = -65.0
+offset_top = -65.0
+offset_right = 63.0
+offset_bottom = 63.0
 step = 0.0
-value = 100.0
 fill_mode = 4
-texture_under = ExtResource("1_088cm")
-texture_over = ExtResource("2_xyuyo")
-texture_progress = ExtResource("3_r0067")
+texture_over = ExtResource("2_cttno")
+texture_progress = ExtResource("3_o87g6")
 script = ExtResource("4_3w7fh")

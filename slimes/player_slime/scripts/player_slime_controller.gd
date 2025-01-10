@@ -10,6 +10,8 @@ extends Node2D
 @export var cursor_radials : Node2D
 
 @export var hurtbox: Area2D
+@export var i_frame_time = 0.5
+var last_hit: int = 0
 
 var jump_power: float
 var time_since_last_jump: float = 0.0
@@ -29,7 +31,12 @@ func _process(delta: float) -> void:
 	time_since_last_jump += delta
 	slime_position = softbody.get_bones_center_position()
 	
+	if cursor_radials and not Input.is_action_pressed("primary_fire"):
+		cursor_radials.set_rad_1_value(cursor_radials.radial_1.value - ((movement_stats.max_jump_power/movement_stats.min_jump_interval) * delta))
+	
+	#process slime hits
 	hurtbox.global_position = slime_position
+	handle_hits()
 	
 	var rigidbody = softbody.get_rigid_bodies()[0].rigidbody
 	var angle_difference = wrapf(-rigidbody.rotation, -PI, PI)
@@ -44,6 +51,24 @@ func _process(delta: float) -> void:
 		smp.set_trigger("deactivate")
 	else:
 		smp.set_trigger("activate")
+
+func handle_hits():
+	if hurtbox.has_overlapping_bodies():
+		var body: RigidBody2D = hurtbox.get_overlapping_bodies()[0]
+		var time:int = Time.get_ticks_msec()
+		
+		if (time - last_hit) < (i_frame_time*1000):
+			return
+			
+		last_hit = time
+		
+		var random_int = randi() % 9 + 1
+		SoundManager.play_sfx("slime_impact_" + str(random_int), 0, -6, 1)
+		
+		var hit_marker: HitMarker = GunUtils.hit_marker_scene.instantiate()
+		hit_marker.set_damage(body.get_parent().get_parent().damage)
+		hit_marker.global_position = slime_position + Vector2(0,-10)
+		get_tree().root.add_child(hit_marker)
 
 func jump(jump_direction: Vector2, jump_power: float) -> void:
 	SoundManager.play_sfx("drop1", 0, -6, 1)
@@ -73,15 +98,6 @@ func _on_player_state_updated(state: Variant, delta: Variant) -> void:
 				jump_power = movement_stats.min_jump
 				time_since_last_jump = 0.0  # Reset time since last jump
 				return
-			else:
-				if cursor_radials:
-					cursor_radials.set_rad_1_value(cursor_radials.radial_1.value - ((movement_stats.max_jump_power/movement_stats.min_jump_interval) * delta))
-				
+
 		"jump_inactive":
 			pass
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	var hit_marker: HitMarker = GunUtils.hit_marker_scene.instantiate()
-	hit_marker.set_damage(area.get_parent().damage)
-	hit_marker.global_position = slime_position
-	
