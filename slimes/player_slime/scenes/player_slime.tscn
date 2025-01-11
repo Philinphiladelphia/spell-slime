@@ -2125,6 +2125,7 @@ script = ExtResource("6_l0ojx")
 state_machine = SubResource("Resource_ycdjk")
 
 [node name="CursorRadials" parent="." instance=ExtResource("10_heor7")]
+z_index = 10
 position = Vector2(-465, -111)
 
 [node name="hurtbox" type="Area2D" parent="."]

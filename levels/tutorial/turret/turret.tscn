@@ -79,19 +79,6 @@ conditions = {
 }
 priority = 0
 
-[sub_resource type="Resource" id="Resource_rg6qk"]
-script = ExtResource("8_hlddf")
-name = "fire"
-
-[sub_resource type="Resource" id="Resource_dyy1s"]
-script = ExtResource("6_oga7w")
-from = "active"
-to = "firing"
-conditions = {
-"fire": SubResource("Resource_rg6qk")
-}
-priority = 0
-
 [sub_resource type="Resource" id="Resource_0uuei"]
 script = ExtResource("8_hlddf")
 name = "deactivated"
@@ -102,6 +89,19 @@ from = "active"
 to = "activatable"
 conditions = {
 "deactivated": SubResource("Resource_0uuei")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_rg6qk"]
+script = ExtResource("8_hlddf")
+name = "fire"
+
+[sub_resource type="Resource" id="Resource_dyy1s"]
+script = ExtResource("6_oga7w")
+from = "active"
+to = "firing"
+conditions = {
+"fire": SubResource("Resource_rg6qk")
 }
 priority = 0
 
@@ -227,9 +227,10 @@ texture = ExtResource("1_sfkh1")
 region_enabled = true
 region_rect = Rect2(114.425, 335.975, 248.019, 115.957)
 
-[node name="InputGlyph" parent="." instance=ExtResource("8_devp7")]
+[node name="InputGlyph" parent="." node_paths=PackedStringArray("collider") instance=ExtResource("8_devp7")]
 position = Vector2(-2.99999, -33)
 scale = Vector2(0.4, 0.4)
+collider = NodePath("../turret_collider")
 
 [node name="OutOfAmmo" parent="." instance=ExtResource("10_6o2ov")]
 visible = false

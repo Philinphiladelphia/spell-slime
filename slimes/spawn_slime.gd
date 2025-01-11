@@ -49,6 +49,7 @@ var _elements: Array[float] = []
 var _decorations: Array = []
 
 var spawner_depleted: bool = false
+var spawn_active : bool = false
 
 var colors_file_path: String = "res://addons/powder_toy_godot/colors.json"
 @export var slime_data_file_path: String = "res://levels/moonswept_fields/day/spawner_json/slime_data.json"
@@ -82,13 +83,13 @@ func load_slime_data() -> void:
 			_decorations.append(entry["decorations"])
 		file.close()
 
+func start_spawns():
+	spawn_active = true
+	
 func _ready() -> void:
 	randomize()
 	load_colors()
 	load_slime_data()
-	
-	spawn_slimes_with_delay(_slime_types, _delays, _elements)
-	_on_slime_spawn_timer_timeout()
 
 func _on_slime_spawn_timer_timeout() -> void:
 	if _slime_types.size() == 0:
@@ -134,6 +135,9 @@ func _process(delta: float) -> void:
 		if not slime.is_dead:
 			current_slime_health += slime.health
 			current_max_slime_health += slime.max_health
+
+	if not spawn_active:
+		return
 
 	# Check if it's time to spawn the next slime
 	if Time.get_ticks_msec() >= next_spawn_time:

@@ -19,7 +19,6 @@ var ratio = 650.0/200.0
 
 @export var managed_spawners: Array[Node2D]
 @export var powderviewport: Node2D
-@export var cam: Camera2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

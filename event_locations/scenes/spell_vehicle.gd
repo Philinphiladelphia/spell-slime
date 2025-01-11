@@ -1,3 +1,4 @@
+class_name SpellVehicle
 extends Node2D
 
 @export var gears_pins: Array[PinJoint2D]

@@ -25,14 +25,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:		
 	if dialogue_layer.has_active_dialogue:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		cursor_radials.hide()
+		player.cursor_radials.show()
 		tutorial_layer.set_tutorial_text("")
-		player.is_active = false
+		player.smp.set_trigger("deactivate")
 		grandpa.is_active = false
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-		cursor_radials.show()
-		player.is_active = true
+		player.cursor_radials.show()
+		player.smp.set_trigger("activate")
 				
 		if not gpa_collision_area.has_overlapping_bodies():
 			grandpa.is_active = true
@@ -47,13 +47,6 @@ func _process(delta: float) -> void:
 				
 		elif dialogue_layer.dialogue_index == 2:
 			tutorial_layer.set_tutorial_text("go to the door and press " + door_glyph.displayed_key + " to enter")
-			
-			if door_area.has_overlapping_bodies() and door_active:
-				door_glyph.show()
-				if Input.is_action_pressed("interact"):
-					SceneLoader.load_scene("res://event_locations/scenes/home/home_inside.tscn")
-			else:
-				door_glyph.hide()
 				
 	if Input.is_action_pressed("pause"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -64,3 +57,7 @@ func _process(delta: float) -> void:
 func _on_dialogue_layer_dialogue_ended() -> void:
 	if dialogue_layer.dialogue_index == 2:
 		door_active = true
+
+
+func _on_input_glyph_activated() -> void:
+	SceneLoader.load_scene("res://event_locations/scenes/home/home_inside.tscn")

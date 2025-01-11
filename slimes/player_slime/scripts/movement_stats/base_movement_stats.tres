@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_luxxd")
 max_jump_power = 200.0
-charge_rate = 60.0
+charge_rate = 100.0
 min_jump = 60.0
 min_jump_interval = 0.5
 upright_force = 200

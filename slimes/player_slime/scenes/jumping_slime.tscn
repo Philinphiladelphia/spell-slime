@@ -234,6 +234,8 @@ softness = 4.0
 radius = 8
 margin_offset_edge = 5.1
 mass = 0.3
+collision_layer = 33
+collision_mask = 33
 
 [node name="Skeleton2D" type="Skeleton2D" parent="SoftBody2D"]
 visible = false
@@ -574,6 +576,8 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-0" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(15.3181, 23.5695)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 0
 metadata/bone_name = &"Bone-0"
@@ -617,6 +621,8 @@ softness = 4.0
 
 [node name="Bone-1" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(15.1454, 30.5699)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 1
 metadata/bone_name = &"Bone-1"
@@ -660,6 +666,8 @@ softness = 4.0
 
 [node name="Bone-2" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(19.62, 15.3975)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 2
 metadata/bone_name = &"Bone-2"
@@ -710,6 +718,8 @@ softness = 4.0
 
 [node name="Bone-3" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(22.0349, 23.8121)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 3
 metadata/bone_name = &"Bone-3"
@@ -774,6 +784,8 @@ softness = 4.0
 
 [node name="Bone-4" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(21.7032, 30.0277)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 4
 metadata/bone_name = &"Bone-4"
@@ -838,6 +850,8 @@ softness = 4.0
 
 [node name="Bone-5" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(19.2412, 37.7839)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 5
 metadata/bone_name = &"Bone-5"
@@ -881,6 +895,8 @@ softness = 4.0
 
 [node name="Bone-6" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(27.7111, 12.0544)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 6
 metadata/bone_name = &"Bone-6"
@@ -924,6 +940,8 @@ softness = 4.0
 
 [node name="Bone-7" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(28.5095, 18.4399)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 7
 metadata/bone_name = &"Bone-7"
@@ -988,6 +1006,8 @@ softness = 4.0
 
 [node name="Bone-8" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(30.7601, 24.8308)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 8
 metadata/bone_name = &"Bone-8"
@@ -1059,6 +1079,8 @@ softness = 4.0
 
 [node name="Bone-9" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(29.6062, 28.3938)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 9
 metadata/bone_name = &"Bone-9"
@@ -1130,6 +1152,8 @@ softness = 4.0
 
 [node name="Bone-10" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(27.9471, 36.5216)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 10
 metadata/bone_name = &"Bone-10"
@@ -1180,6 +1204,8 @@ softness = 4.0
 
 [node name="Bone-11" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(34.3078, 12.3028)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 11
 metadata/bone_name = &"Bone-11"
@@ -1230,6 +1256,8 @@ softness = 4.0
 
 [node name="Bone-12" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(33.9166, 18.9836)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 12
 metadata/bone_name = &"Bone-12"
@@ -1301,6 +1329,8 @@ softness = 4.0
 
 [node name="Bone-13" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(32.5, 25.5)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 13
 metadata/bone_name = &"Bone-13"
@@ -1372,6 +1402,8 @@ softness = 4.0
 
 [node name="Bone-14" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(33.1692, 27.2399)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 14
 metadata/bone_name = &"Bone-14"
@@ -1443,6 +1475,8 @@ softness = 4.0
 
 [node name="Bone-15" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(34.1864, 35.9359)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 15
 metadata/bone_name = &"Bone-15"
@@ -1493,6 +1527,8 @@ softness = 4.0
 
 [node name="Bone-16" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(42.118, 11.4577)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 16
 metadata/bone_name = &"Bone-16"
@@ -1536,6 +1572,8 @@ softness = 4.0
 
 [node name="Bone-17" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(40.3938, 17.6062)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 17
 metadata/bone_name = &"Bone-17"
@@ -1600,6 +1638,8 @@ softness = 4.0
 
 [node name="Bone-18" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(39.0164, 24.0834)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 18
 metadata/bone_name = &"Bone-18"
@@ -1671,6 +1711,8 @@ softness = 4.0
 
 [node name="Bone-19" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(39.5601, 29.4905)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 19
 metadata/bone_name = &"Bone-19"
@@ -1742,6 +1784,8 @@ softness = 4.0
 
 [node name="Bone-20" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(40.9293, 36.678)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 20
 metadata/bone_name = &"Bone-20"
@@ -1792,6 +1836,8 @@ softness = 4.0
 
 [node name="Bone-21" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(47.8427, 16.5663)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 21
 metadata/bone_name = &"Bone-21"
@@ -1835,6 +1881,8 @@ softness = 4.0
 
 [node name="Bone-22" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(47.5752, 23.6284)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 22
 metadata/bone_name = &"Bone-22"
@@ -1885,6 +1933,8 @@ softness = 4.0
 
 [node name="Bone-23" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(47.894, 30.4413)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 23
 metadata/bone_name = &"Bone-23"
@@ -1935,6 +1985,8 @@ softness = 4.0
 
 [node name="Bone-24" type="RigidBody2D" parent="SoftBody2D"]
 position = Vector2(47.589, 37.35)
+collision_layer = 33
+collision_mask = 33
 mass = 0.3
 metadata/idx = 24
 metadata/bone_name = &"Bone-24"
