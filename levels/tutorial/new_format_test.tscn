@@ -901,11 +901,10 @@ position = Vector2(34, 29)
 [node name="player_mouth" parent="player/decorations" index="1"]
 position = Vector2(34, 27)
 
-[node name="slime_tracker" type="Node" parent="." node_paths=PackedStringArray("managed_spawners", "powderviewport", "cam")]
+[node name="slime_tracker" type="Node" parent="." node_paths=PackedStringArray("managed_spawners", "powderviewport")]
 script = ExtResource("55_t6ug3")
 managed_spawners = [NodePath("../spawner1")]
 powderviewport = NodePath("../PowderViewport")
-cam = NodePath("../Node/Camera2D")
 
 [node name="Turret" parent="." node_paths=PackedStringArray("camera", "powderviewport") instance=ExtResource("56_jn7d6")]
 position = Vector2(63, 122)

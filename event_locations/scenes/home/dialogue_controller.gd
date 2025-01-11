@@ -32,5 +32,7 @@ func clear_dialogue():
 func _process(delta: float) -> void:
 	if len(get_children()) > 0:
 		has_active_dialogue = true
+		DialogueController.active = true
 	else:
 		has_active_dialogue = false
+		DialogueController.active = false

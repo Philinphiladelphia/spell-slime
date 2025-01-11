@@ -11,6 +11,9 @@ extends Node2D
 
 @export var hurtbox: Area2D
 @export var i_frame_time = 0.5
+
+@export var can_jump: bool = true
+
 var last_hit: int = 0
 
 var jump_power: float
@@ -71,8 +74,9 @@ func handle_hits():
 		get_tree().root.add_child(hit_marker)
 
 func jump(jump_direction: Vector2, jump_power: float) -> void:
-	SoundManager.play_sfx("drop1", 0, -6, 1)
-	softbody.apply_impulse(jump_direction * jump_power)
+	if can_jump:
+		SoundManager.play_sfx("drop1", 0, -6, 1)
+		softbody.apply_impulse(jump_direction * jump_power)
 
 
 func _on_player_state_transited(from: Variant, to: Variant) -> void:
@@ -80,6 +84,12 @@ func _on_player_state_transited(from: Variant, to: Variant) -> void:
 
 
 func _on_player_state_updated(state: Variant, delta: Variant) -> void:
+	if DialogueController.active:
+		cursor_radials.hide()
+		return
+	else:
+		cursor_radials.show()
+	
 	match state:
 		"jump_active":
 			if time_since_last_jump < movement_stats.min_jump_interval:

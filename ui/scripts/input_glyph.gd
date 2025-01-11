@@ -1,7 +1,12 @@
 class_name InputGlyph
 extends Node2D
 
+signal activated
+
 @export var input: InputEventAction
+@export var collider: Area2D
+
+var _activated: bool = false
 
 var displayed_key: String
 
@@ -15,4 +20,14 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if _activated:
+		hide()
+		return
+	
+	if collider.has_overlapping_bodies():
+		show()
+		if Input.is_action_just_pressed(input.action):
+			activated.emit()
+			_activated = true
+	else:
+		hide()

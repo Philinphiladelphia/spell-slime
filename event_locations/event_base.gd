@@ -16,12 +16,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:		
 	if dialogue_layer.has_active_dialogue:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		cursor_radials.hide()
-		player.is_active = false
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-		cursor_radials.show()
-		player.is_active = true
 		
 	if Input.is_action_pressed("pause"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

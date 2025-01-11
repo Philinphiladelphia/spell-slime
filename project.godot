@@ -36,6 +36,7 @@ MouseGlobal="*res://maaack/globals/mouse_global.gd"
 DecorationsMap="*res://autoloads/DecorationsMap.tscn"
 GunUtils="*res://autoloads/GunUtils.tscn"
 SoundManager="*res://addons/sound_manager/module/SoundManager.tscn"
+DialogueController="*res://autoloads/dialogue_controller.tscn"
 
 [debug]
 
