@@ -1,11 +1,13 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://bo6vf5r5vtiyf"]
+[gd_resource type="Theme" load_steps=17 format=3 uid="uid://bo6vf5r5vtiyf"]
 
 [ext_resource type="Texture2D" uid="uid://b323ls8737a07" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_blue/button_disabled.png" id="1_sgkmw"]
 [ext_resource type="Texture2D" uid="uid://2m7kp0cigg2p" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_blue/button_hovered.png" id="2_8hx5s"]
 [ext_resource type="Texture2D" uid="uid://cvqrbt8qjuorr" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_blue/button_default.png" id="3_dij01"]
 [ext_resource type="Texture2D" uid="uid://l26soev8caam" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_blue/button_pressed.png" id="4_is5py"]
 [ext_resource type="FontFile" uid="uid://byu80w2u2k8ie" path="res://art/fonts/zig/zig_____.ttf" id="5_8ovvw"]
-[ext_resource type="Texture2D" uid="uid://jf0p3x60ampw" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_violet/message_box_B.png" id="6_pncu6"]
+[ext_resource type="Texture2D" uid="uid://cgpmstcgkbdn4" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/window_theme/window_theme_blue/message_box_B.png" id="6_qwhvl"]
+[ext_resource type="Texture2D" uid="uid://dhwp4imbkj5tq" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/meter/meter_blue/meter_complete.png" id="7_mi6qp"]
+[ext_resource type="Texture2D" uid="uid://d4gc2a05ncslv" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/meter/meter_pellet_red.png" id="8_empgv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wicgl"]
 texture = ExtResource("1_sgkmw")
@@ -38,11 +40,29 @@ texture_margin_right = 20.0
 texture_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rs1av"]
-texture = ExtResource("6_pncu6")
+texture = ExtResource("6_qwhvl")
 texture_margin_left = 30.0
 texture_margin_top = 30.0
 texture_margin_right = 30.0
 texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qcxuy"]
+texture = ExtResource("7_mi6qp")
+texture_margin_left = 64.0
+texture_margin_top = 4.0
+texture_margin_right = 32.0
+texture_margin_bottom = 4.0
+expand_margin_right = 4.0
+region_rect = Rect2(0, 0, 112, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghl6w"]
+content_margin_top = 20.0
+texture = ExtResource("8_empgv")
+texture_margin_left = 8.0
+texture_margin_top = 12.0
+texture_margin_right = 8.0
+texture_margin_bottom = 12.0
+region_rect = Rect2(0, 0, 16, 24)
 
 [resource]
 default_font = ExtResource("5_8ovvw")
@@ -55,3 +75,5 @@ Button/styles/pressed = SubResource("StyleBoxTexture_kk4p8")
 Label/fonts/font = ExtResource("5_8ovvw")
 Label/styles/normal = null
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_rs1av")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_qcxuy")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_ghl6w")

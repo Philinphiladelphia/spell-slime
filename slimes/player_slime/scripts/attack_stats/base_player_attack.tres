@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlayerAttackStats" load_steps=2 format=3 uid="uid://b235orn8xp7ma"]
+
+[ext_resource type="Script" path="res://slimes/player_slime/scripts/attack_stats/base_attack_stats.gd" id="1_skcs0"]
+
+[resource]
+script = ExtResource("1_skcs0")
+max_mana = 100
+mana_recharge_rate = 60.0
+fire_rate = 0.5
+damage = 2
+projectile_type = "res://upgrade_tree/scenes/harpoon_projectile.tscn"
+melee_damage = 3
+melee_radius = 20.0
+melee_knockback = 300.0

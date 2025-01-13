@@ -1,46 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://1aogrhbfhv37"]
+[gd_scene load_steps=2 format=3 uid="uid://1aogrhbfhv37"]
 
 [ext_resource type="Script" path="res://spell_machine_tower/scenes/new_health_bar.gd" id="1_jwdx1"]
-[ext_resource type="Script" path="res://spell_machine_tower/scenes/new_damage_bar.gd" id="2_8t250"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nt72o"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hds2l"]
-bg_color = Color(0.302629, 0.551093, 0.81497, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xl225"]
-bg_color = Color(0.201527, 0.201527, 0.201526, 1)
-expand_margin_left = 1.0
-expand_margin_top = 1.0
-expand_margin_right = 1.0
-expand_margin_bottom = 1.0
-shadow_color = Color(0, 0, 0, 0.27451)
-shadow_size = 10
-shadow_offset = Vector2(0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oir8y"]
-bg_color = Color(1, 1, 1, 1)
 
 [node name="HealthBar" type="ProgressBar"]
 z_index = 1
+texture_filter = 1
 offset_right = 240.0
 offset_bottom = 10.0
-theme_override_styles/background = SubResource("StyleBoxEmpty_nt72o")
-theme_override_styles/fill = SubResource("StyleBoxFlat_hds2l")
 value = 80.0
 show_percentage = false
 script = ExtResource("1_jwdx1")
-
-[node name="DamageBar" type="ProgressBar" parent="."]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_xl225")
-theme_override_styles/fill = SubResource("StyleBoxFlat_oir8y")
-value = 90.0
-show_percentage = false
-script = ExtResource("2_8t250")

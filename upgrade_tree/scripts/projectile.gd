@@ -79,13 +79,13 @@ func on_hit():
 		SoundManager.play_sfx("slime_impact_" + str(random_int), 0, -12, 1.5)
 
 	var animation = on_hit_animation.instantiate()
-	animation.position = position
-	animation.rotation = rotation
+	animation.global_position = global_position
+	animation.rotation = rotation + (PI/2.0)
 	
 	# 2.5d, cube root for explostion size
 	animation.scale = animation.scale * pow(damage, 0.33)
 
-	get_parent().add_child(animation)
+	get_tree().root.add_child(animation)
 # how to move the powder viewport	
 
 #var viewport = get_node("../../../PowderViewport")

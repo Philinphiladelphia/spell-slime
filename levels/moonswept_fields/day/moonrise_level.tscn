@@ -59,9 +59,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_28xsr")
 show_percentage = true
 metadata/_edit_use_anchors_ = true
 
-[node name="DamageBar" parent="slime_health_layer/HealthBar" index="0"]
-metadata/_edit_use_anchors_ = true
-
 [node name="slime_tracker" type="Node" parent="."]
 script = ExtResource("8_p7o26")
 

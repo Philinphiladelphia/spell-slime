@@ -3902,91 +3902,90 @@ show_shapes = false
 modification_stack = SubResource("SkeletonModificationStack2D_m58bw")
 
 [node name="Bone-0" parent="characters/player/SoftBody2D/Skeleton2D" index="0"]
-position = Vector2(12.2375, 23.2233)
+position = Vector2(15.3181, 23.5695)
 
 [node name="Bone-1" parent="characters/player/SoftBody2D/Skeleton2D" index="1"]
-position = Vector2(12.1698, 31.4392)
+position = Vector2(15.1454, 30.5699)
 
 [node name="Bone-2" parent="characters/player/SoftBody2D/Skeleton2D" index="2"]
-position = Vector2(17.1808, 13.4843)
+position = Vector2(19.62, 15.3975)
 scale = Vector2(0.999996, 0.999996)
 
 [node name="Bone-3" parent="characters/player/SoftBody2D/Skeleton2D" index="3"]
-position = Vector2(18.9745, 23.3185)
+position = Vector2(22.0349, 23.8121)
 scale = Vector2(0.999998, 0.999998)
 
 [node name="Bone-4" parent="characters/player/SoftBody2D/Skeleton2D" index="4"]
-position = Vector2(18.8444, 31.2265)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-5" parent="characters/player/SoftBody2D/Skeleton2D" index="5"]
-position = Vector2(16.9779, 39.6525)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-6" parent="characters/player/SoftBody2D/Skeleton2D" index="6"]
-position = Vector2(26.671, 9.13406)
-scale = Vector2(0.999838, 0.999838)
+position = Vector2(27.7111, 12.0544)
+scale = Vector2(0.999839, 0.999839)
 
 [node name="Bone-7" parent="characters/player/SoftBody2D/Skeleton2D" index="7"]
-position = Vector2(26.9841, 15.7411)
+position = Vector2(28.5095, 18.4399)
 scale = Vector2(0.999973, 0.999973)
 
 [node name="Bone-8" parent="characters/player/SoftBody2D/Skeleton2D" index="8"]
-position = Vector2(27.8667, 23.718)
+position = Vector2(30.7601, 24.8308)
 scale = Vector2(0.999995, 0.999995)
 
 [node name="Bone-9" parent="characters/player/SoftBody2D/Skeleton2D" index="9"]
+position = Vector2(29.6062, 28.3938)
 scale = Vector2(0.999982, 0.999982)
 
 [node name="Bone-10" parent="characters/player/SoftBody2D/Skeleton2D" index="10"]
-position = Vector2(26.5378, 39.4117)
-scale = Vector2(0.999982, 0.999982)
+position = Vector2(27.9471, 36.5216)
+scale = Vector2(0.999981, 0.999981)
 
 [node name="Bone-11" parent="characters/player/SoftBody2D/Skeleton2D" index="11"]
-position = Vector2(34.7286, 9.23149)
-scale = Vector2(0.999984, 0.999984)
+position = Vector2(34.3078, 12.3028)
+scale = Vector2(0.999983, 0.999983)
 
 [node name="Bone-12" parent="characters/player/SoftBody2D/Skeleton2D" index="12"]
-position = Vector2(34.5751, 15.9544)
+position = Vector2(33.9166, 18.9836)
 scale = Vector2(0.999996, 0.999996)
 
 [node name="Bone-13" parent="characters/player/SoftBody2D/Skeleton2D" index="13"]
 scale = Vector2(0.999994, 0.999994)
 
 [node name="Bone-14" parent="characters/player/SoftBody2D/Skeleton2D" index="14"]
+position = Vector2(33.1692, 27.2399)
 scale = Vector2(0.99999, 0.99999)
 
 [node name="Bone-15" parent="characters/player/SoftBody2D/Skeleton2D" index="15"]
 scale = Vector2(0.999986, 0.999986)
 
 [node name="Bone-16" parent="characters/player/SoftBody2D/Skeleton2D" index="16"]
-position = Vector2(43.8698, 8.90005)
+position = Vector2(42.118, 11.4577)
+
+[node name="Bone-17" parent="characters/player/SoftBody2D/Skeleton2D" index="17"]
+position = Vector2(40.3938, 17.6062)
 
 [node name="Bone-18" parent="characters/player/SoftBody2D/Skeleton2D" index="18"]
-position = Vector2(42.0456, 23.4249)
+position = Vector2(39.0164, 24.0834)
 scale = Vector2(0.999994, 0.999994)
 
 [node name="Bone-19" parent="characters/player/SoftBody2D/Skeleton2D" index="19"]
 scale = Vector2(0.999986, 0.999986)
 
 [node name="Bone-20" parent="characters/player/SoftBody2D/Skeleton2D" index="20"]
-position = Vector2(42.7958, 39.1531)
 scale = Vector2(0.999999, 0.999999)
 
 [node name="Bone-21" parent="characters/player/SoftBody2D/Skeleton2D" index="21"]
-position = Vector2(50.5216, 15.0064)
+position = Vector2(47.8427, 16.5663)
 scale = Vector2(0.99999, 0.99999)
 
 [node name="Bone-22" parent="characters/player/SoftBody2D/Skeleton2D" index="22"]
-position = Vector2(50.6516, 23.2464)
+position = Vector2(47.5752, 23.6284)
 scale = Vector2(0.999992, 0.999992)
 
 [node name="Bone-23" parent="characters/player/SoftBody2D/Skeleton2D" index="23"]
-position = Vector2(50.8457, 31.3887)
+position = Vector2(47.894, 30.4413)
 scale = Vector2(0.999984, 0.999984)
-
-[node name="Bone-24" parent="characters/player/SoftBody2D/Skeleton2D" index="24"]
-position = Vector2(50.0271, 39.2647)
 
 [node name="RectangleShape2D" parent="characters/player/SoftBody2D/Bone-0" index="0"]
 visible = false

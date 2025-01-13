@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Spell" load_steps=2 format=3 uid="uid://c7rqum86aw0ou"]
+
+[ext_resource type="Script" path="res://slimes/player_slime/scripts/spells/base_spell.gd" id="1_8g7au"]
+
+[resource]
+script = ExtResource("1_8g7au")
+fire_rate = 0.5
+min_cast_cost = 5.0
+damage = 2
+per_second_mana_consumption = 10
+projectile_type = "res://upgrade_tree/scenes/harpoon_projectile.tscn"

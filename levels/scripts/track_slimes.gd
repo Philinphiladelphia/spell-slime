@@ -1,3 +1,4 @@
+class_name SlimeTracker
 extends Node
 
 var collected_slime_positions: PackedVector2Array
@@ -10,6 +11,8 @@ var slime_damages: PackedInt32Array
 
 var current_max_slime_health: float = 0.0
 var current_slime_health: float = 0.0
+
+var max_health_seen: float = 0
 
 var slime_goal_position: Vector2 = Vector2(0,0)
 
@@ -52,6 +55,9 @@ func _process(delta: float) -> void:
 		
 	if all_depleted:
 		spawns_done = true
+		
+	if current_max_slime_health > max_health_seen:
+		max_health_seen = current_max_slime_health
 		
 	for i in range(len(collected_slime_positions)):
 		if powder_activated_bitmap[i] != 1:

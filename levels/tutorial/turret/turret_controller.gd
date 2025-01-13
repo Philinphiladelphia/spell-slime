@@ -21,11 +21,17 @@ extends Node2D
 
 @export var face_left: bool = false
 
+var ammo = 0
+
+signal activated(turret: Turret)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if face_left:
 		turret_barrel.flip_v = true
 		turret_barrel.rotation = PI
+		
+	ammo = firing_strategy.ammo
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -49,6 +55,7 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 				camera.x_offset += camera_offset.x
 				powderviewport.circle(global_position, 10, 114)
 				
+				activated.emit(self)
 				smp.set_trigger("activated")
 		"active":
 			if Input.is_action_just_pressed("interact"):
@@ -66,7 +73,7 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 				
 			turret_barrel.handle_rotation()
 				
-			if firing_strategy.ammo <= 0:
+			if ammo <= 0:
 				smp.set_trigger("out_of_ammo")
 			
 			if not firing_strategy.off_cooldown(self):
@@ -86,7 +93,8 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 				
 			if not SoundManager.is_playing(projectile_data.sound):
 				SoundManager.play_sfx(projectile_data.sound, 0, projectile_data.sound_db, 1)
-				
+			
+			ammo -= 1
 			firing_strategy.register_shot_fired(self)
 		"out_of_ammo":
 			out_of_ammo.active = true
