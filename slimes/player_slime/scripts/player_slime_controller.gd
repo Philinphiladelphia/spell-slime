@@ -178,7 +178,7 @@ func freeze():
 func unfreeze():
 	var bodies = softbody.get_rigid_bodies()
 	var centerish_body = bodies[len(bodies)/2].rigidbody
-	centerish_body.freeze = true
+	centerish_body.freeze = false
 
 func _on_player_state_updated(state: Variant, delta: Variant) -> void:
 	if DialogueController.active:
