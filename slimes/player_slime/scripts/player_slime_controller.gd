@@ -16,6 +16,7 @@ extends Node2D
 @export var i_frame_time = 0.5
 
 @export var can_jump: bool = true
+@export var can_cast: bool = true
 
 @export var max_health = 100
 @export var health = 100
@@ -118,7 +119,12 @@ func jump(jump_direction: Vector2, jump_power: float) -> void:
 
 
 func _on_player_state_transited(from: Variant, to: Variant) -> void:
-	pass # Replace with function body.
+	if from == "jump_active" and to == "jump_inactive":
+		freeze()
+		
+		
+	if from == "jump_inactive" and to == "jump_active":
+		unfreeze()
 
 func handle_cast(delta:float):
 	if time_since_last_cast < spell.fire_rate:
@@ -164,6 +170,16 @@ func handle_jump(delta:float):
 		time_since_last_jump = 0.0  # Reset time since last jump
 		return
 
+func freeze():
+	var bodies = softbody.get_rigid_bodies()
+	var centerish_body = bodies[len(bodies)/2].rigidbody
+	centerish_body.freeze = true
+	
+func unfreeze():
+	var bodies = softbody.get_rigid_bodies()
+	var centerish_body = bodies[len(bodies)/2].rigidbody
+	centerish_body.freeze = true
+
 func _on_player_state_updated(state: Variant, delta: Variant) -> void:
 	if DialogueController.active:
 		cursor_radials.hide()
@@ -173,9 +189,11 @@ func _on_player_state_updated(state: Variant, delta: Variant) -> void:
 	
 	match state:
 		"jump_active":
-			handle_jump(delta)
+			if can_jump:
+				handle_jump(delta)
 			
-			handle_cast(delta)
+			if can_cast:
+				handle_cast(delta)
 
 		"jump_inactive":
 			pass

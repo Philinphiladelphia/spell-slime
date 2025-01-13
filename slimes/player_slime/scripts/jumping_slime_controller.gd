@@ -1,3 +1,4 @@
+class_name JumpingSlime
 extends Node2D
 
 @export var softbody: SoftBody2D
