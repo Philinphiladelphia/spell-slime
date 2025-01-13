@@ -43,8 +43,10 @@ animations = [{
 }]
 
 [node name="OnHitAnimation" type="AnimatedSprite2D"]
-scale = Vector2(2, 2)
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_u6wm7")
 autoplay = "default"
-frame_progress = 0.958539
+frame = 7
+frame_progress = 1.0
 script = ExtResource("4_uxo4g")

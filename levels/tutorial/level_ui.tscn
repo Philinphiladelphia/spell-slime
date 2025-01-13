@@ -1,0 +1,206 @@
+[gd_scene load_steps=15 format=3 uid="uid://dbkh866uwj432"]
+
+[ext_resource type="Script" path="res://levels/tutorial/level_ui_controller.gd" id="1_hjtyc"]
+[ext_resource type="Texture2D" uid="uid://68jhgoli1ida" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/meter_icons/hp_green.png" id="1_ktvh1"]
+[ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="2_3mkw2"]
+[ext_resource type="LabelSettings" uid="uid://c34qgwo4ca7bk" path="res://art/upgrade_tree/assets/major_font.tres" id="3_d1ck5"]
+[ext_resource type="Texture2D" uid="uid://dfqffrbc8rmja" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/meter_icons/ammo_A_yellow.png" id="4_h52pw"]
+[ext_resource type="Theme" uid="uid://dfnop4o7ahyue" path="res://ui/themes/super_pixel_dark_grey.tres" id="5_evmxu"]
+[ext_resource type="Texture2D" uid="uid://dmfs1din5pmn5" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/meter_icons/energy_blue.png" id="6_jkmwh"]
+[ext_resource type="Theme" uid="uid://d222l8xrvtw" path="res://ui/themes/super_pixel_yellow.tres" id="7_224wc"]
+[ext_resource type="Texture2D" uid="uid://ddcu7gbhmclv7" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/meter_icons/skull.png" id="8_23cav"]
+[ext_resource type="Theme" uid="uid://fkgqxt1uaav4" path="res://ui/themes/super_pixel_orange.tres" id="9_1dthp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rfjs"]
+atlas = ExtResource("1_ktvh1")
+region = Rect2(3.58818, 0, 19.6242, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ktif"]
+atlas = ExtResource("4_h52pw")
+region = Rect2(3.90214, 2.99324, 19.4849, 17.8312)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyd47"]
+atlas = ExtResource("6_jkmwh")
+region = Rect2(4.35096, 0, 18.168, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m53pp"]
+atlas = ExtResource("8_23cav")
+region = Rect2(4.07358, 0, 18.792, 24)
+
+[node name="level_ui" type="CanvasLayer" node_paths=PackedStringArray("hp_bar", "ammo_bar", "mana_bar", "enemy_hp_bar")]
+script = ExtResource("1_hjtyc")
+hp_bar = NodePath("Control/MarginContainer/VBoxContainer/HBoxContainer/SpellwardHealthBar")
+ammo_bar = NodePath("Control/MarginContainer/VBoxContainer/HBoxContainer2/SpellwardHealthBar2")
+mana_bar = NodePath("Control/MarginContainer/VBoxContainer/HBoxContainer3/SpellwardHealthBar2")
+enemy_hp_bar = NodePath("Control/MarginContainer2/VBoxContainer/HBoxContainer/SpellwardHealthBar")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 0
+offset_right = 219.0
+offset_bottom = 88.0
+scale = Vector2(2, 2)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_7rfjs")
+stretch_mode = 3
+
+[node name="SpellwardHealthBar" parent="Control/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_3mkw2")]
+z_index = 10
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/SpellwardHealthBar"]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -32.0
+offset_right = 212.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Spellward Health"
+label_settings = ExtResource("3_d1ck5")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_4ktif")
+stretch_mode = 3
+
+[node name="SpellwardHealthBar2" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_3mkw2")]
+z_index = 10
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_evmxu")
+theme_override_font_sizes/font_size = 40
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer2/SpellwardHealthBar2"]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -32.0
+offset_right = 212.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Spellward Health"
+label_settings = ExtResource("3_d1ck5")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer3"]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_tyd47")
+stretch_mode = 3
+
+[node name="SpellwardHealthBar2" parent="Control/MarginContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_3mkw2")]
+z_index = 10
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_224wc")
+theme_override_font_sizes/font_size = 40
+
+[node name="Label2" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer3/SpellwardHealthBar2"]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -32.0
+offset_right = 212.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Spellward Health"
+label_settings = ExtResource("3_d1ck5")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -88.0
+offset_right = 623.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_m53pp")
+stretch_mode = 3
+
+[node name="SpellwardHealthBar" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer" instance=ExtResource("2_3mkw2")]
+z_index = 10
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("9_1dthp")
+theme_override_font_sizes/font_size = 40
+
+[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer/SpellwardHealthBar"]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -32.0
+offset_right = 212.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Spellward Health"
+label_settings = ExtResource("3_d1ck5")

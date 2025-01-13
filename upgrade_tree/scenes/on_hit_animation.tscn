@@ -44,7 +44,8 @@ animations = [{
 
 [node name="OnHitAnimation" type="AnimatedSprite2D"]
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
+rotation = 4.71239
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_08mcc")
 frame_progress = 1.0
 script = ExtResource("4_pvtbb")

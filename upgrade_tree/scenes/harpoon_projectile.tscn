@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://brqki6a6mcmul"]
+[gd_scene load_steps=12 format=3 uid="uid://brqki6a6mcmul"]
 
 [ext_resource type="Script" path="res://upgrade_tree/scripts/projectile.gd" id="1_rma2u"]
 [ext_resource type="PackedScene" uid="uid://iss8glnahkin" path="res://upgrade_tree/scenes/on_hit_animation_2.tscn" id="2_evg65"]
-[ext_resource type="Texture2D" uid="uid://d1snijpt3fy63" path="res://art/upgrade_tree/assets/305010425.png" id="2_m7y3y"]
 [ext_resource type="Texture2D" uid="uid://gob0dqjvtfgk" path="res://art/super_pixel/Super Pixel Projectiles Pack 2/PNG/pj2_ice_spike_large_white/frame0000.png" id="3_qe71e"]
 [ext_resource type="Texture2D" uid="uid://ctnh7wa0ot5ue" path="res://art/super_pixel/Super Pixel Projectiles Pack 2/PNG/pj2_ice_spike_large_white/frame0001.png" id="4_m8hmx"]
 [ext_resource type="Texture2D" uid="uid://bhe0fl6cr7qbe" path="res://art/super_pixel/Super Pixel Projectiles Pack 2/PNG/pj2_ice_spike_large_white/frame0002.png" id="5_2im3v"]
@@ -55,35 +54,30 @@ script = ExtResource("1_rma2u")
 on_hit_animation = ExtResource("2_evg65")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(4.41933, 60.72)
+position = Vector2(-5, -1)
+rotation = 4.71239
 collision_layer = 9
 collision_mask = 8
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-scale = Vector2(1.5, 1.5)
+position = Vector2(-5.96046e-08, 16)
+scale = Vector2(0.15, 0.15)
 polygon = PackedVector2Array(-36, -25, -28, 10, -25, 49, -15, 90, -1, 104, 17, 87, 21, 55, 29, 6, 37, -27, 35, -61, 15, -88, -7, -97, -38, -71)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(7, 92)
-rotation = -0.785398
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_m7y3y")
-region_rect = Rect2(398, 239, 105, 268)
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(4.41933, 60.72)
-scale = Vector2(3, 3)
+position = Vector2(9, -0.999999)
+rotation = 4.71239
+scale = Vector2(0.2, 0.2)
 polygon = PackedVector2Array(-8.20967, -40.7, -11.7097, -36.36, -16.7097, -31.86, -18.8064, -17.24, -17.4731, -13.5733, -9.47311, 35.0933, -6.47311, 52.76, -1.47311, 83.0933, 3.86022, 53.76, 12.5269, -3.24, 14.8602, -12.24, 14.8602, -17.24, 14.8602, -23.24, 13.2903, -34.36, 9.79033, -37.36)
 
 [node name="SpellProjectile" type="Node2D" parent="."]
 physics_interpolation_mode = 2
-position = Vector2(4.41933, 60.72)
+position = Vector2(-3, -2)
+rotation = 4.71239
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 97)
-rotation = 1.5708
-scale = Vector2(6, 4)
+position = Vector2(11, -1)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_5u3m0")
 autoplay = "default"
 frame_progress = 0.735715

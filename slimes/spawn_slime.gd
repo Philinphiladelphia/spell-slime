@@ -1,3 +1,4 @@
+class_name Spawner
 extends Node2D
 
 var rainbow_shader: ShaderMaterial = preload("res://shaders/scenes/rainbow_shader.tres")
