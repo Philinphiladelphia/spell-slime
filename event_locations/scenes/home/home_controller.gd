@@ -27,12 +27,10 @@ func _process(delta: float) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		player.cursor_radials.show()
 		tutorial_layer.set_tutorial_text("")
-		player.smp.set_trigger("deactivate")
 		grandpa.is_active = false
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		player.cursor_radials.show()
-		player.smp.set_trigger("activate")
 				
 		if not gpa_collision_area.has_overlapping_bodies():
 			grandpa.is_active = true

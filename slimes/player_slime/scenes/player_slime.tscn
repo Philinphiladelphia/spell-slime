@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://chhnrbkrbyki8"]
+[gd_scene load_steps=42 format=3 uid="uid://chhnrbkrbyki8"]
 
 [ext_resource type="Texture2D" uid="uid://kftevsx25ln2" path="res://art/slimes/slime-8th_mouthless.png" id="2_djuya"]
 [ext_resource type="Resource" uid="uid://bpf8tvkjpdpkk" path="res://slimes/player_slime/scripts/movement_stats/base_movement_stats.tres" id="2_g85qg"]
@@ -110,20 +110,30 @@ script = ExtResource("8_quk8h")
 name = "Entry"
 metadata/graph_offset = Vector2(325, 242)
 
+[sub_resource type="Resource" id="Resource_23bk0"]
+script = ExtResource("8_quk8h")
+name = "dashing"
+metadata/graph_offset = Vector2(460.5, 142)
+
+[sub_resource type="Resource" id="Resource_urcs5"]
+script = ExtResource("8_quk8h")
+name = "casting"
+metadata/graph_offset = Vector2(603, 142)
+
 [sub_resource type="Resource" id="Resource_qrgjw"]
 script = ExtResource("8_quk8h")
-name = "jump_active"
-metadata/graph_offset = Vector2(526, 242)
+name = "active"
+metadata/graph_offset = Vector2(525, 242)
 
 [sub_resource type="Resource" id="Resource_qtape"]
 script = ExtResource("8_quk8h")
-name = "jump_inactive"
-metadata/graph_offset = Vector2(719.5, 242)
+name = "inactive"
+metadata/graph_offset = Vector2(800.5, 242)
 
 [sub_resource type="Resource" id="Resource_nte1n"]
 script = ExtResource("9_wwxss")
 from = "Entry"
-to = "jump_active"
+to = "active"
 conditions = {}
 priority = 0
 
@@ -133,8 +143,8 @@ name = "deactivate"
 
 [sub_resource type="Resource" id="Resource_loopj"]
 script = ExtResource("9_wwxss")
-from = "jump_active"
-to = "jump_inactive"
+from = "active"
+to = "inactive"
 conditions = {
 "deactivate": SubResource("Resource_nrv7l")
 }
@@ -146,29 +156,51 @@ name = "activate"
 
 [sub_resource type="Resource" id="Resource_b5lx7"]
 script = ExtResource("9_wwxss")
-from = "jump_inactive"
-to = "jump_active"
+from = "inactive"
+to = "active"
 conditions = {
 "activate": SubResource("Resource_gf6cf")
 }
+priority = 0
+
+[sub_resource type="Resource" id="Resource_sruyr"]
+script = ExtResource("9_wwxss")
+from = "dashing"
+to = "active"
+conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_w7qyo"]
+script = ExtResource("9_wwxss")
+from = "casting"
+to = "active"
+conditions = {}
 priority = 0
 
 [sub_resource type="Resource" id="Resource_ycdjk"]
 script = ExtResource("7_0lg1a")
 states = {
 "Entry": SubResource("Resource_r1786"),
-"jump_active": SubResource("Resource_qrgjw"),
-"jump_inactive": SubResource("Resource_qtape")
+"active": SubResource("Resource_qrgjw"),
+"casting": SubResource("Resource_urcs5"),
+"dashing": SubResource("Resource_23bk0"),
+"inactive": SubResource("Resource_qtape")
 }
 transitions = {
 "Entry": {
-"jump_active": SubResource("Resource_nte1n")
+"active": SubResource("Resource_nte1n")
 },
-"jump_active": {
-"jump_inactive": SubResource("Resource_loopj")
+"active": {
+"inactive": SubResource("Resource_loopj")
 },
-"jump_inactive": {
-"jump_active": SubResource("Resource_b5lx7")
+"casting": {
+"active": SubResource("Resource_w7qyo")
+},
+"dashing": {
+"active": SubResource("Resource_sruyr")
+},
+"inactive": {
+"active": SubResource("Resource_b5lx7")
 }
 }
 name = ""
@@ -182,7 +214,7 @@ physics_interpolation_mode = 2
 texture_filter = 1
 script = ExtResource("3_huhpb")
 softbody = NodePath("slime_soft_body")
-decorations = [NodePath("decorations/player_eyes"), NodePath("decorations/player_mouth"), NodePath("decorations/AudioListener2D")]
+decorations = [NodePath("decorations/player_eyes"), NodePath("decorations/player_mouth"), NodePath("decorations/AudioListener2D"), NodePath("decorations/Node2D")]
 movement_stats = ExtResource("2_g85qg")
 player_attack_stats = ExtResource("3_lidf5")
 spell = ExtResource("4_0rt85")
@@ -213,7 +245,7 @@ modification_stack = SubResource("SkeletonModificationStack2D_nxeuy")
 
 [node name="Bone-0" type="Bone2D" parent="slime_soft_body/Skeleton2D"]
 position = Vector2(18.3022, 20.813)
-rotation = 0.86174
+rotation = 0.861743
 rest = Transform2D(0.651118, 0.758976, -0.758976, 0.651118, 18.3022, 20.813)
 auto_calculate_length_and_angle = false
 length = 15.0
@@ -239,7 +271,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-2" type="Bone2D" parent="slime_soft_body/Skeleton2D"]
 position = Vector2(26.404, 14.7519)
-rotation = 0.0585732
+rotation = 0.0585665
 scale = Vector2(1, 1)
 rest = Transform2D(0.998285, 0.0585398, -0.0585398, 0.998285, 26.404, 14.7519)
 auto_calculate_length_and_angle = false
@@ -305,7 +337,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-7" type="Bone2D" parent="slime_soft_body/Skeleton2D"]
 position = Vector2(34.9076, 30.3023)
-rotation = -1.88904
+rotation = -1.88903
 rest = Transform2D(-0.312896, -0.949787, 0.949787, -0.312896, 34.9076, 30.3023)
 auto_calculate_length_and_angle = false
 length = 15.0
@@ -319,6 +351,7 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-8" type="Bone2D" parent="slime_soft_body/Skeleton2D"]
 position = Vector2(44.8585, 19.8633)
 rotation = 2.33226
+scale = Vector2(1, 1)
 rest = Transform2D(-0.689981, 0.723827, -0.723827, -0.689981, 44.8585, 19.8633)
 auto_calculate_length_and_angle = false
 length = 15.0
@@ -331,7 +364,7 @@ metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone-9" type="Bone2D" parent="slime_soft_body/Skeleton2D"]
 position = Vector2(45.264, 32.8181)
-rotation = -2.9033
+rotation = -2.90329
 scale = Vector2(1, 1)
 rest = Transform2D(-0.971741, -0.236048, 0.236048, -0.971741, 45.264, 32.8181)
 auto_calculate_length_and_angle = false
@@ -836,6 +869,12 @@ node_b = NodePath("../../Bone-8")
 softness = 3.0
 
 [node name="decorations" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="decorations"]
+
+[node name="Label" type="Label" parent="decorations/Node2D"]
+offset_right = 40.0
+offset_bottom = 25.0
 
 [node name="player_eyes" type="Sprite2D" parent="decorations"]
 modulate = Color(1, 1, 1, 0.670588)

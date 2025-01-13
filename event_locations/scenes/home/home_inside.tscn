@@ -870,6 +870,374 @@ texture = ExtResource("122_1cjy7")
 [sub_resource type="TileSet" id="TileSet_3ra4m"]
 sources/0 = SubResource("TileSetAtlasSource_yb23x")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_roq8y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("226_q2qi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_g2hnm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_8q13f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_b7cui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_k7gfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_nspek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_f203g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_bkjw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_vdjoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_hlnnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_a3kl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_efm20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_2pudk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_2txl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_62b83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_tqjqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_3ca32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_shiov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_s227m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_8rdn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_xf28v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_7eptc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_pld4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_holtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_lgy8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_urucx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_xduj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_kuiyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_kv6dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_hojww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_ir34h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("257_pwj0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_lbm66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_6aexw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_7jbsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_0b1p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_i7f3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_ofawp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_5bbqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_yo3em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("266_qbwwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_1e84d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_rm0hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_2v22q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_wbp3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_wlivm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_yu8sc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_0n2g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_23bme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_06oe8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_qes0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_vr41l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_wqfkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_lt7pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_jeq8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_jmn7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_bbden")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_yfsm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_ir5it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_o07j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_3pjp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_hwfao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_cc6ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_nnuxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_dcuyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_vxsjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_n3132")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_gy0lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_60blg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_q80d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_3yqcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_st0qf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_kvlv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_gs5tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_mutse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_6tdhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_7bs55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_2tnv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_g2epj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_3oker")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_ps5fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_74t03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_jrneq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_rrr22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_tb2oe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_f18se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_r0fev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_sravf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_xbbtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("315_djoxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_w7nqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_a2pp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_k2lsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_xdodn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_ql24j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_mmto5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("322_2oavg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_kmbqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_lwwdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("325_hcnnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("326_as0vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("327_km8hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_dlpin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_umom4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_30plk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_pmks3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_d6iah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_q8uj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_nffxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("335_cu83r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_ava3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_famon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_sgh5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_cwvho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_46p6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_roihr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_j3agq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_ghxel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_dmhcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_53mi2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 60.0
+}]
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3nthq"]
 texture = ExtResource("123_qj5hx")
 0:0/0 = 0
@@ -2166,374 +2534,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_roq8y"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("226_q2qi1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("227_g2hnm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("228_8q13f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("229_b7cui")
-}, {
-"duration": 1.0,
-"texture": ExtResource("230_k7gfa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("231_nspek")
-}, {
-"duration": 1.0,
-"texture": ExtResource("232_f203g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("233_bkjw6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("234_vdjoy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("235_hlnnn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("236_a3kl3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("237_efm20")
-}, {
-"duration": 1.0,
-"texture": ExtResource("238_2pudk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("239_2txl5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("240_62b83")
-}, {
-"duration": 1.0,
-"texture": ExtResource("241_tqjqo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("242_3ca32")
-}, {
-"duration": 1.0,
-"texture": ExtResource("243_shiov")
-}, {
-"duration": 1.0,
-"texture": ExtResource("244_s227m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("245_8rdn3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("246_xf28v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("247_7eptc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("248_pld4i")
-}, {
-"duration": 1.0,
-"texture": ExtResource("249_holtm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("250_lgy8r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("251_urucx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("252_xduj2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("253_kuiyb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("254_kv6dh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("255_hojww")
-}, {
-"duration": 1.0,
-"texture": ExtResource("256_ir34h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("257_pwj0n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("258_lbm66")
-}, {
-"duration": 1.0,
-"texture": ExtResource("259_6aexw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("260_7jbsu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("261_0b1p3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("262_i7f3o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("263_ofawp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("264_5bbqj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("265_yo3em")
-}, {
-"duration": 1.0,
-"texture": ExtResource("266_qbwwm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("267_1e84d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("268_rm0hv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("269_2v22q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("270_wbp3s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("271_wlivm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("272_yu8sc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("273_0n2g6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("274_23bme")
-}, {
-"duration": 1.0,
-"texture": ExtResource("275_06oe8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("276_qes0o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("277_vr41l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("278_wqfkv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("279_lt7pd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("280_jeq8s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("281_jmn7d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("282_bbden")
-}, {
-"duration": 1.0,
-"texture": ExtResource("283_yfsm8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("284_ir5it")
-}, {
-"duration": 1.0,
-"texture": ExtResource("285_o07j6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("286_3pjp2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("287_hwfao")
-}, {
-"duration": 1.0,
-"texture": ExtResource("288_cc6ux")
-}, {
-"duration": 1.0,
-"texture": ExtResource("289_nnuxy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("290_dcuyq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("291_vxsjk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("292_n3132")
-}, {
-"duration": 1.0,
-"texture": ExtResource("293_gy0lc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("294_60blg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("295_q80d7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("296_3yqcx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("297_st0qf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("298_kvlv6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("299_gs5tv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("300_mutse")
-}, {
-"duration": 1.0,
-"texture": ExtResource("301_6tdhx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("302_7bs55")
-}, {
-"duration": 1.0,
-"texture": ExtResource("303_2tnv6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("304_g2epj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("305_3oker")
-}, {
-"duration": 1.0,
-"texture": ExtResource("306_ps5fq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("307_74t03")
-}, {
-"duration": 1.0,
-"texture": ExtResource("308_jrneq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("309_rrr22")
-}, {
-"duration": 1.0,
-"texture": ExtResource("310_tb2oe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("311_f18se")
-}, {
-"duration": 1.0,
-"texture": ExtResource("312_r0fev")
-}, {
-"duration": 1.0,
-"texture": ExtResource("313_sravf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("314_xbbtx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("315_djoxu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("316_w7nqh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("317_a2pp4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("318_k2lsd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("319_xdodn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("320_ql24j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("321_mmto5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("322_2oavg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("323_kmbqk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("324_lwwdr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("325_hcnnn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("326_as0vx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("327_km8hi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("328_dlpin")
-}, {
-"duration": 1.0,
-"texture": ExtResource("329_umom4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("330_30plk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("331_pmks3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("332_d6iah")
-}, {
-"duration": 1.0,
-"texture": ExtResource("333_q8uj6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("334_nffxr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("335_cu83r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("336_ava3m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("337_famon")
-}, {
-"duration": 1.0,
-"texture": ExtResource("338_sgh5x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("339_cwvho")
-}, {
-"duration": 1.0,
-"texture": ExtResource("340_46p6j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("341_roihr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("342_j3agq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("343_ghxel")
-}, {
-"duration": 1.0,
-"texture": ExtResource("344_dmhcs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("345_53mi2")
-}],
-"loop": false,
-"name": &"default",
-"speed": 60.0
-}]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_pib54"]
 radius = 8.0
 
@@ -3090,6 +3090,46 @@ tile_set = SubResource("TileSet_ybo4g")
 [node name="background_dec" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAABAAkAAAAAAAAAAAABAAoAAAAAAAEAAAABAAsAAAAAAAIAAAABAAwAAAAAAAMAAAACAAkAAAABAAAAAAACAAoAAAABAAEAAAACAAsAAAABAAIAAAACAAwAAAABAAMAAAA=")
 tile_set = SubResource("TileSet_3ra4m")
+
+[node name="characters" type="Node2D" parent="."]
+
+[node name="grandpa" parent="characters" node_paths=PackedStringArray("decorations") instance=ExtResource("7_3gnpt")]
+modulate = Color(0.44, 1, 0.496, 1)
+position = Vector2(-69, 155)
+decorations = [NodePath("../decorations/beard"), NodePath("../decorations/hair"), NodePath("../decorations/eyes"), NodePath("../decorations/AnimatedSprite2D")]
+jump_interval = 4.0
+jump_power = 80.0
+upright_force = 1000
+
+[node name="player" parent="characters" instance=ExtResource("5_v5xn4")]
+position = Vector2(24, 155)
+
+[node name="decorations" type="Node2D" parent="characters"]
+
+[node name="beard" type="Sprite2D" parent="characters/decorations"]
+modulate = Color(1, 1, 1, 0.615686)
+position = Vector2(-38, 186)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("8_y3y0f")
+
+[node name="hair" type="Sprite2D" parent="characters/decorations"]
+modulate = Color(1, 1, 1, 0.615686)
+position = Vector2(-38, 186)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_rr305")
+
+[node name="eyes" type="Sprite2D" parent="characters/decorations"]
+modulate = Color(1, 1, 1, 0.670588)
+position = Vector2(-38, 186)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("10_8drd0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="characters/decorations"]
+position = Vector2(-37, 180)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_roq8y")
+frame = 119
+frame_progress = 1.0
 
 [node name="floor" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AADu/w0AAQAAAAAAAADu/w4AAQABAAAAAADv/w0AAQABAAAAAADv/w4AAQAAAAAAAADw/w0AAQAAAAAAAADw/w4AAQABAAAAAADx/w0AAQABAAAAAADx/w4AAQAAAAAAAADy/w0AAQAAAAAAAADy/w4AAQABAAAAAADz/w0AAQABAAAAAADz/w4AAQAAAAAAAAD0/w0AAQAAAAAAAAD0/w4AAQABAAAAAAD1/w0AAQABAAAAAAD1/w4AAQAAAAAAAAD2/w0AAQAAAAAAAAD2/w4AAQABAAAAAAD3/w0AAQABAAAAAAD3/w4AAQAAAAAAAAD4/w0AAQAAAAAAAAD4/w4AAQABAAAAAAD5/w0AAQABAAAAAAD5/w4AAQAAAAAAAAD6/w0AAQAAAAAAAAD6/w4AAQABAAAAAAD7/w0AAQABAAAAAAD7/w4AAQAAAAAAAAD8/w0AAQAAAAAAAAD8/w4AAQABAAAAAAD9/w0AAQABAAAAAAD9/w4AAQAAAAAAAAD+/w0AAQAAAAAAAAD+/w4AAQABAAAAAAD//w0AAQABAAAAAAD//w4AAQAAAAAAAAAAAA0AAQAAAAAAAAAAAA4AAQABAAAAAAABAA0AAQABAAAAAAABAA4AAQAAAAAAAAACAA0AAQAAAAAAAAACAA4AAQABAAAAAAADAA0AAQABAAAAAAADAA4AAQAAAAAAAAAEAA0AAQAAAAAAAAAEAA4AAQABAAAAAAAFAA0AAQABAAAAAAAFAA4AAQAAAAAAAAAGAA0AAQAAAAAAAAAGAA4AAQABAAAAAAAHAA0AAQABAAAAAAAHAA4AAQAAAAAAAAAIAA0AAQAAAAAAAAAIAA4AAQABAAAAAAAJAA0AAQABAAAAAAAJAA4AAQAAAAAAAAAKAA0AAQAAAAAAAAAKAA4AAQABAAAAAAALAA0AAQABAAAAAAALAA4AAQAAAAAAAAAMAA0AAQAAAAAAAAAMAA4AAQABAAAAAAANAA0AAQABAAAAAAANAA4AAQAAAAAAAAAOAA0AAQAAAAAAAAAOAA4AAQABAAAAAAAPAA0AAQABAAAAAAAPAA4AAQAAAAAAAAAQAA0AAQAAAAAAAAAQAA4AAQABAAAAAAARAA0AAQABAAAAAAARAA4AAQAAAAAAAAASAA0AAQAAAAAAAAASAA4AAQABAAAAAAATAA0AAQABAAAAAAATAA4AAQAAAAAAAAAUAA0AAQAAAAAAAAAUAA4AAQABAAAAAAAVAA0AAQABAAAAAAAVAA4AAQAAAAAAAAATAA8AAQAAAAEAAAAUAA8AAQABAAEAAAARAA8AAQAAAAEAAAASAA8AAQABAAEAAAAPAA8AAQAAAAEAAAAQAA8AAQABAAEAAAANAA8AAQAAAAEAAAAOAA8AAQABAAEAAAALAA8AAQAAAAEAAAAMAA8AAQABAAEAAAAJAA8AAQAAAAEAAAAKAA8AAQABAAEAAAAHAA8AAQAAAAEAAAAIAA8AAQABAAEAAAAFAA8AAQAAAAEAAAAGAA8AAQABAAEAAAADAA8AAQAAAAEAAAAEAA8AAQABAAEAAAABAA8AAQAAAAEAAAACAA8AAQABAAEAAAD//w8AAQAAAAEAAAAAAA8AAQABAAEAAAD9/w8AAQAAAAEAAAD+/w8AAQABAAEAAAD7/w8AAQAAAAEAAAD8/w8AAQABAAEAAAD5/w8AAQAAAAEAAAD6/w8AAQABAAEAAAD3/w8AAQAAAAEAAAD4/w8AAQABAAEAAAD1/w8AAQAAAAEAAAD2/w8AAQABAAEAAADz/w8AAQAAAAEAAAD0/w8AAQABAAEAAADx/w8AAQAAAAEAAADy/w8AAQABAAEAAADv/w8AAQAAAAEAAADw/w8AAQABAAEAAADt/w4AAQAAAAAAAADt/w8AAQAAAAEAAADu/w8AAQABAAEAAAAVAA8AAQAAAAEAAAAWAA4AAQABAAAAAAAWAA8AAQABAAEAAAAXABAAAQAAAAAAAAAXABEAAQAAAAEAAAAYABAAAQABAAAAAAAYABEAAQABAAEAAAAZABAAAQAAAAAAAAAZABEAAQAAAAEAAAAaABAAAQABAAAAAAAaABEAAQABAAEAAAAbABIAAQAAAAAAAAAbABMAAQAAAAEAAAAcABIAAQABAAAAAAAcABMAAQABAAEAAAAdABIAAQAAAAAAAAAdABMAAQAAAAEAAAAeABIAAQABAAAAAAAeABMAAQABAAEAAAAfABQAAQAAAAAAAAAfABUAAQAAAAEAAAAgABQAAQABAAAAAAAgABUAAQABAAEAAAAhABQAAQAAAAAAAAAhABUAAQAAAAEAAAAiABQAAQABAAAAAAAiABUAAQABAAEAAAAqABQAAQAAAAAAAAAqABUAAQAAAAEAAAAqABYAAQAAAAAAAAAqABcAAQAAAAEAAAArABYAAQABAAAAAAArABcAAQABAAEAAAAqABgAAQAAAAAAAAAqABkAAQAAAAEAAAArABgAAQABAAAAAAArABkAAQABAAEAAAAqABoAAQAAAAAAAAAqABsAAQAAAAEAAAArABoAAQABAAAAAAArABsAAQABAAEAAAAqABwAAQAAAAAAAAAqAB0AAQAAAAEAAAArABwAAQABAAAAAAArAB0AAQABAAEAAAAqAB4AAQAAAAAAAAAqAB8AAQAAAAEAAAArAB4AAQABAAAAAAArAB8AAQABAAEAAAAoABoAAQAAAAAAAAAoABsAAQAAAAEAAAApABoAAQABAAAAAAApABsAAQABAAEAAAAmABoAAQAAAAAAAAAmABsAAQAAAAEAAAAnABoAAQABAAAAAAAnABsAAQABAAEAAAAkABwAAQAAAAAAAAAkAB0AAQAAAAEAAAAlABwAAQABAAAAAAAlAB0AAQABAAEAAAAiABwAAQAAAAAAAAAiAB0AAQAAAAEAAAAjABwAAQABAAAAAAAjAB0AAQABAAEAAAAgAB4AAQAAAAAAAAAgAB8AAQAAAAEAAAAhAB4AAQABAAAAAAAhAB8AAQABAAEAAAAeAB4AAQAAAAAAAAAeAB8AAQAAAAEAAAAfAB4AAQABAAAAAAAfAB8AAQABAAEAAAAVABAAAQAAAAAAAAAVABEAAQAAAAEAAAAWABAAAQABAAAAAAAWABEAAQABAAEAAAAVABIAAQAAAAAAAAAVABMAAQAAAAEAAAAWABIAAQABAAAAAAAWABMAAQABAAEAAAAVABQAAQAAAAAAAAAVABUAAQAAAAEAAAAWABQAAQABAAAAAAAWABUAAQABAAEAAAAVABYAAQAAAAAAAAAVABcAAQAAAAEAAAAWABYAAQABAAAAAAAWABcAAQABAAEAAAAVABgAAQAAAAAAAAAVABkAAQAAAAEAAAAWABgAAQABAAAAAAAWABkAAQABAAEAAAAVABoAAQAAAAAAAAAVABsAAQAAAAEAAAAWABoAAQABAAAAAAAWABsAAQABAAEAAAAVABwAAQAAAAAAAAAVAB0AAQAAAAEAAAAWABwAAQABAAAAAAAWAB0AAQABAAEAAAAVAB4AAQAAAAAAAAAVAB8AAQAAAAEAAAAWAB4AAQABAAAAAAAWAB8AAQABAAEAAAAVACAAAQAAAAAAAAAVACEAAQAAAAEAAAAWACAAAQABAAAAAAAWACEAAQABAAEAAAAVACIAAQAAAAAAAAAVACMAAQAAAAEAAAAWACIAAQABAAAAAAAWACMAAQABAAEAAAAVACQAAQAAAAAAAAAVACUAAQAAAAEAAAAWACQAAQABAAAAAAAWACUAAQABAAEAAAAVACYAAQAAAAAAAAAVACcAAQAAAAEAAAAWACYAAQABAAAAAAAWACcAAQABAAEAAAAVACgAAQAAAAAAAAAVACkAAQAAAAEAAAAWACgAAQABAAAAAAAWACkAAQABAAEAAAAVACoAAQAAAAAAAAAVACsAAQAAAAEAAAAWACoAAQABAAAAAAAWACsAAQABAAEAAAAVACwAAQAAAAAAAAAVAC0AAQAAAAEAAAAWACwAAQABAAAAAAAWAC0AAQABAAEAAAAVAC4AAQAAAAAAAAAVAC8AAQAAAAEAAAAWAC4AAQABAAAAAAAWAC8AAQABAAEAAAAXACQAAQAAAAAAAAAXACUAAQAAAAEAAAAYACQAAQABAAAAAAAYACUAAQABAAEAAAAZACQAAQAAAAAAAAAZACUAAQAAAAEAAAAaACQAAQABAAAAAAAaACUAAQABAAEAAAAbACYAAQAAAAAAAAAbACcAAQAAAAEAAAAcACYAAQABAAAAAAAcACcAAQABAAEAAAAdACYAAQAAAAAAAAAdACcAAQAAAAEAAAAeACYAAQABAAAAAAAeACcAAQABAAEAAAAfACgAAQAAAAAAAAAfACkAAQAAAAEAAAAgACgAAQABAAAAAAAgACkAAQABAAEAAAAhACgAAQAAAAAAAAAhACkAAQAAAAEAAAAiACgAAQABAAAAAAAiACkAAQABAAEAAAAqACAAAQAAAAAAAAAqACEAAQAAAAEAAAArACAAAQABAAAAAAArACEAAQABAAEAAAAqACIAAQAAAAAAAAAqACMAAQAAAAEAAAArACIAAQABAAAAAAArACMAAQABAAEAAAAqACQAAQAAAAAAAAAqACUAAQAAAAEAAAArACQAAQABAAAAAAArACUAAQABAAEAAAAqACYAAQAAAAAAAAAqACcAAQAAAAEAAAArACYAAQABAAAAAAArACcAAQABAAEAAAAqACgAAQAAAAAAAAAqACkAAQAAAAEAAAArACgAAQABAAAAAAArACkAAQABAAEAAAAqACoAAQAAAAAAAAAqACsAAQAAAAEAAAArACoAAQABAAAAAAArACsAAQABAAEAAAAqACwAAQAAAAAAAAAqAC0AAQAAAAEAAAArACwAAQABAAAAAAArAC0AAQABAAEAAAAqAC4AAQAAAAAAAAAqAC8AAQAAAAEAAAArAC4AAQABAAAAAAArAC8AAQABAAEAAAAqADAAAQAAAAAAAAAqADEAAQAAAAEAAAArADAAAQABAAAAAAArADEAAQABAAEAAAAqADIAAQAAAAAAAAAqADMAAQAAAAEAAAArADIAAQABAAAAAAArADMAAQABAAEAAAAqADQAAQAAAAAAAAAqADUAAQAAAAEAAAArADQAAQABAAAAAAArADUAAQABAAEAAAAqADYAAQAAAAAAAAAqADcAAQAAAAEAAAArADYAAQABAAAAAAArADcAAQABAAEAAAAoADAAAQAAAAAAAAAoADEAAQAAAAEAAAApADAAAQABAAAAAAApADEAAQABAAEAAAAmADAAAQAAAAAAAAAmADEAAQAAAAEAAAAnADAAAQABAAAAAAAnADEAAQABAAEAAAAkADIAAQAAAAAAAAAkADMAAQAAAAEAAAAlADIAAQABAAAAAAAlADMAAQABAAEAAAAiADIAAQAAAAAAAAAiADMAAQAAAAEAAAAjADIAAQABAAAAAAAjADMAAQABAAEAAAAgADQAAQAAAAAAAAAgADUAAQAAAAEAAAAhADQAAQABAAAAAAAhADUAAQABAAEAAAAeADQAAQAAAAAAAAAeADUAAQAAAAEAAAAfADQAAQABAAAAAAAfADUAAQABAAEAAAAqADgAAQAAAAAAAAAqADkAAQAAAAEAAAArADgAAQABAAAAAAArADkAAQABAAEAAAAoADgAAQAAAAAAAAAoADkAAQAAAAEAAAApADgAAQABAAAAAAApADkAAQABAAEAAAAmADgAAQAAAAAAAAAmADkAAQAAAAEAAAAnADgAAQABAAAAAAAnADkAAQABAAEAAAAkADgAAQAAAAAAAAAkADkAAQAAAAEAAAAlADgAAQABAAAAAAAlADkAAQABAAEAAAAiADgAAQAAAAAAAAAiADkAAQAAAAEAAAAjADgAAQABAAAAAAAjADkAAQABAAEAAAAgADgAAQAAAAAAAAAgADkAAQAAAAEAAAAhADgAAQABAAAAAAAhADkAAQABAAEAAAAeADgAAQAAAAAAAAAeADkAAQAAAAEAAAAfADgAAQABAAAAAAAfADkAAQABAAEAAAAcADgAAQAAAAAAAAAcADkAAQAAAAEAAAAdADgAAQABAAAAAAAdADkAAQABAAEAAAAaADgAAQAAAAAAAAAaADkAAQAAAAEAAAAbADgAAQABAAAAAAAbADkAAQABAAEAAAAYADgAAQAAAAAAAAAYADkAAQAAAAEAAAAZADgAAQABAAAAAAAZADkAAQABAAEAAAAWADgAAQAAAAAAAAAWADkAAQAAAAEAAAAXADgAAQABAAAAAAAXADkAAQABAAEAAAAUADgAAQAAAAAAAAAUADkAAQAAAAEAAAAVADgAAQABAAAAAAAVADkAAQABAAEAAAASADgAAQAAAAAAAAASADkAAQAAAAEAAAATADgAAQABAAAAAAATADkAAQABAAEAAAAQADgAAQAAAAAAAAAQADkAAQAAAAEAAAARADgAAQABAAAAAAARADkAAQABAAEAAAAOADgAAQAAAAAAAAAOADkAAQAAAAEAAAAPADgAAQABAAAAAAAPADkAAQABAAEAAAAMADgAAQAAAAAAAAAMADkAAQAAAAEAAAANADgAAQABAAAAAAANADkAAQABAAEAAAAKADgAAQAAAAAAAAAKADkAAQAAAAEAAAALADgAAQABAAAAAAALADkAAQABAAEAAAAIADgAAQAAAAAAAAAIADkAAQAAAAEAAAAJADgAAQABAAAAAAAJADkAAQABAAEAAAAGADgAAQAAAAAAAAAGADkAAQAAAAEAAAAHADgAAQABAAAAAAAHADkAAQABAAEAAAAEADgAAQAAAAAAAAAEADkAAQAAAAEAAAAFADgAAQABAAAAAAAFADkAAQABAAEAAAACADgAAQAAAAAAAAACADkAAQAAAAEAAAADADgAAQABAAAAAAADADkAAQABAAEAAAAAADgAAQAAAAAAAAAAADkAAQAAAAEAAAABADgAAQABAAAAAAABADkAAQABAAEAAAD+/zgAAQAAAAAAAAD+/zkAAQAAAAEAAAD//zgAAQABAAAAAAD//zkAAQABAAEAAAD8/zgAAQAAAAAAAAD8/zkAAQAAAAEAAAD9/zgAAQABAAAAAAD9/zkAAQABAAEAAAD6/zgAAQAAAAAAAAD6/zkAAQAAAAEAAAD7/zgAAQABAAAAAAD7/zkAAQABAAEAAAD4/zgAAQAAAAAAAAD4/zkAAQAAAAEAAAD5/zgAAQABAAAAAAD5/zkAAQABAAEAAAAcADYAAQAAAAAAAAAcADcAAQAAAAEAAAAdADYAAQABAAAAAAAdADcAAQABAAEAAAAaADYAAQAAAAAAAAAaADcAAQAAAAEAAAAbADYAAQABAAAAAAAbADcAAQABAAEAAAD2/zgAAQAAAAAAAAD2/zkAAQAAAAEAAAD3/zgAAQABAAAAAAD3/zkAAQABAAEAAAD2/zYAAQAAAAAAAAD2/zcAAQAAAAEAAAD3/zYAAQABAAAAAAD3/zcAAQABAAEAAAD2/zQAAQAAAAAAAAD2/zUAAQAAAAEAAAD3/zQAAQABAAAAAAD3/zUAAQABAAEAAAD2/zIAAQAAAAAAAAD2/zMAAQAAAAEAAAD3/zIAAQABAAAAAAD3/zMAAQABAAEAAAD2/zAAAQAAAAAAAAD2/zEAAQAAAAEAAAD3/zAAAQABAAAAAAD3/zEAAQABAAEAAAD2/y4AAQAAAAAAAAD2/y8AAQAAAAEAAAD3/y4AAQABAAAAAAD3/y8AAQABAAEAAAD2/ywAAQAAAAAAAAD2/y0AAQAAAAEAAAD3/ywAAQABAAAAAAD3/y0AAQABAAEAAAD0/ywAAAAAAAAAAAD0/y0AAAAAAAEAAAD1/ywAAAABAAAAAAD1/y0AAAABAAEAAADy/ywAAAAAAAAAAADy/y0AAAAAAAEAAADz/ywAAAABAAAAAADz/y0AAAABAAEAAADw/ywAAAAAAAAAAADw/y0AAAAAAAEAAADx/ywAAAABAAAAAADx/y0AAAABAAEAAADu/ywAAAAAAAAAAADu/y0AAAAAAAEAAADv/ywAAAABAAAAAADv/y0AAAABAAEAAADs/ywAAAAAAAAAAADs/y0AAAAAAAEAAADt/ywAAAABAAAAAADt/y0AAAABAAEAAADq/ywAAAAAAAAAAADq/y0AAAAAAAEAAADr/ywAAAABAAAAAADr/y0AAAABAAEAAADo/ywAAAAAAAAAAADo/y0AAAAAAAEAAADp/ywAAAABAAAAAADp/y0AAAABAAEAAADm/ywAAAAAAAAAAADm/y0AAAAAAAEAAADn/ywAAAABAAAAAADn/y0AAAABAAEAAADk/ywAAAAAAAAAAADk/y0AAAAAAAEAAADl/ywAAAABAAAAAADl/y0AAAABAAEAAADi/ywAAAAAAAAAAADi/y0AAAAAAAEAAADj/ywAAAABAAAAAADj/y0AAAABAAEAAADg/ywAAAAAAAAAAADg/y0AAAAAAAEAAADh/ywAAAABAAAAAADh/y0AAAABAAEAAADe/ywAAAAAAAAAAADe/y0AAAAAAAEAAADf/ywAAAABAAAAAADf/y0AAAABAAEAAADc/ywAAAAAAAAAAADc/y0AAAAAAAEAAADd/ywAAAABAAAAAADd/y0AAAABAAEAAADa/ywAAAAAAAAAAADa/y0AAAAAAAEAAADb/ywAAAABAAAAAADb/y0AAAABAAEAAADY/ywAAAAAAAAAAADY/y0AAAAAAAEAAADZ/ywAAAABAAAAAADZ/y0AAAABAAEAAADW/ywAAAAAAAAAAADW/y0AAAAAAAEAAADX/ywAAAABAAAAAADX/y0AAAABAAEAAADU/ywAAAAAAAAAAADU/y0AAAAAAAEAAADV/ywAAAABAAAAAADV/y0AAAABAAEAAADS/ywAAAAAAAAAAADS/y0AAAAAAAEAAADT/ywAAAABAAAAAADT/y0AAAABAAEAAADQ/ywAAAAAAAAAAADQ/y0AAAAAAAEAAADR/ywAAAABAAAAAADR/y0AAAABAAEAAADO/ywAAAAAAAAAAADO/y0AAAAAAAEAAADP/ywAAAABAAAAAADP/y0AAAABAAEAAADO/yoAAAAAAAAAAADO/ysAAAAAAAEAAADP/yoAAAABAAAAAADP/ysAAAABAAEAAADO/ygAAAAAAAAAAADO/ykAAAAAAAEAAADP/ygAAAABAAAAAADP/ykAAAABAAEAAADO/yYAAAAAAAAAAADO/ycAAAAAAAEAAADP/yYAAAABAAAAAADP/ycAAAABAAEAAADO/yQAAAAAAAAAAADO/yUAAAAAAAEAAADP/yQAAAABAAAAAADP/yUAAAABAAEAAADO/yIAAAAAAAAAAADO/yMAAAAAAAEAAADP/yIAAAABAAAAAADP/yMAAAABAAEAAADO/yAAAAAAAAAAAADO/yEAAAAAAAEAAADP/yAAAAABAAAAAADP/yEAAAABAAEAAADO/x4AAAAAAAAAAADO/x8AAAAAAAEAAADP/x4AAAABAAAAAADP/x8AAAABAAEAAADO/xwAAAAAAAAAAADO/x0AAAAAAAEAAADP/xwAAAABAAAAAADP/x0AAAABAAEAAADO/xoAAAAAAAAAAADO/xsAAAAAAAEAAADP/xoAAAABAAAAAADP/xsAAAABAAEAAADO/xgAAAAAAAAAAADO/xkAAAAAAAEAAADP/xgAAAABAAAAAADP/xkAAAABAAEAAADO/xYAAAAAAAAAAADO/xcAAAAAAAEAAADP/xYAAAABAAAAAADP/xcAAAABAAEAAADO/xQAAAAAAAAAAADO/xUAAAAAAAEAAADP/xQAAAABAAAAAADP/xUAAAABAAEAAADO/xIAAAAAAAAAAADO/xMAAAAAAAEAAADP/xIAAAABAAAAAADP/xMAAAABAAEAAADO/xAAAAAAAAAAAADO/xEAAAAAAAEAAADP/xAAAAABAAAAAADP/xEAAAABAAEAAADO/w4AAAAAAAAAAADO/w8AAAAAAAEAAADP/w4AAAABAAAAAADP/w8AAAABAAEAAADQ/w4AAAAAAAAAAADQ/w8AAAAAAAEAAADR/w4AAAABAAAAAADR/w8AAAABAAEAAADS/w4AAAAAAAAAAADS/w8AAAAAAAEAAADT/w4AAAABAAAAAADT/w8AAAABAAEAAADU/w4AAAAAAAAAAADU/w8AAAAAAAEAAADV/w4AAAABAAAAAADV/w8AAAABAAEAAADW/w4AAAAAAAAAAADW/w8AAAAAAAEAAADX/w4AAAABAAAAAADX/w8AAAABAAEAAADY/w4AAAAAAAAAAADY/w8AAAAAAAEAAADZ/w4AAAABAAAAAADZ/w8AAAABAAEAAADa/w4AAAAAAAAAAADa/w8AAAAAAAEAAADb/w4AAAABAAAAAADb/w8AAAABAAEAAADc/w4AAAAAAAAAAADc/w8AAAAAAAEAAADd/w4AAAABAAAAAADd/w8AAAABAAEAAADe/w4AAAAAAAAAAADe/w8AAAAAAAEAAADf/w4AAAABAAAAAADf/w8AAAABAAEAAADg/w4AAAAAAAAAAADg/w8AAAAAAAEAAADh/w4AAAABAAAAAADh/w8AAAABAAEAAADi/w4AAAAAAAAAAADi/w8AAAAAAAEAAADj/w4AAAABAAAAAADj/w8AAAABAAEAAADk/w4AAAAAAAAAAADk/w8AAAAAAAEAAADl/w4AAAABAAAAAADl/w8AAAABAAEAAADm/w4AAAAAAAAAAADm/w8AAAAAAAEAAADn/w4AAAABAAAAAADn/w8AAAABAAEAAADo/w4AAAAAAAAAAADo/w8AAAAAAAEAAADp/w4AAAABAAAAAADp/w8AAAABAAEAAADq/w4AAAAAAAAAAADq/w8AAAAAAAEAAADr/w4AAAABAAAAAADr/w8AAAABAAEAAAD4/y4AAQAAAAAAAAD4/y8AAQAAAAEAAAD5/y4AAQABAAAAAAD5/y8AAQABAAEAAAD6/y4AAQAAAAAAAAD6/y8AAQAAAAEAAAD7/y4AAQABAAAAAAD7/y8AAQABAAEAAAD8/zAAAQAAAAAAAAD8/zEAAQAAAAEAAAD9/zAAAQABAAAAAAD9/zEAAQABAAEAAAD+/zAAAQAAAAAAAAD+/zEAAQAAAAEAAAD//zAAAQABAAAAAAD//zEAAQABAAEAAAAAADIAAQAAAAAAAAAAADMAAQAAAAEAAAABADIAAQABAAAAAAABADMAAQABAAEAAAACADIAAQAAAAAAAAACADMAAQAAAAEAAAADADIAAQABAAAAAAADADMAAQABAAEAAAAEADQAAQAAAAAAAAAEADUAAQAAAAEAAAAFADQAAQABAAAAAAAFADUAAQABAAEAAAAGADQAAQAAAAAAAAAGADUAAQAAAAEAAAAHADQAAQABAAAAAAAHADUAAQABAAEAAAAIADYAAQAAAAAAAAAIADcAAQAAAAEAAAAJADYAAQABAAAAAAAJADcAAQABAAEAAAAKADYAAQAAAAAAAAAKADcAAQAAAAEAAAALADYAAQABAAAAAAALADcAAQABAAEAAAD4/zAAAQAAAAAAAAD4/zEAAQAAAAEAAAD5/zAAAQABAAAAAAD5/zEAAQABAAEAAAD6/zAAAQAAAAAAAAD6/zEAAQAAAAEAAAD7/zAAAQABAAAAAAD7/zEAAQABAAEAAAD4/zIAAQAAAAAAAAD4/zMAAQAAAAEAAAD5/zIAAQABAAAAAAD5/zMAAQABAAEAAAD6/zIAAQAAAAAAAAD6/zMAAQAAAAEAAAD7/zIAAQABAAAAAAD7/zMAAQABAAEAAAD8/zIAAQAAAAAAAAD8/zMAAQAAAAEAAAD9/zIAAQABAAAAAAD9/zMAAQABAAEAAAD+/zIAAQAAAAAAAAD+/zMAAQAAAAEAAAD//zIAAQABAAAAAAD//zMAAQABAAEAAAD4/zQAAQAAAAAAAAD4/zUAAQAAAAEAAAD5/zQAAQABAAAAAAD5/zUAAQABAAEAAAD6/zQAAQAAAAAAAAD6/zUAAQAAAAEAAAD7/zQAAQABAAAAAAD7/zUAAQABAAEAAAD8/zQAAQAAAAAAAAD8/zUAAQAAAAEAAAD9/zQAAQABAAAAAAD9/zUAAQABAAEAAAD+/zQAAQAAAAAAAAD+/zUAAQAAAAEAAAD//zQAAQABAAAAAAD//zUAAQABAAEAAAAAADQAAQAAAAAAAAAAADUAAQAAAAEAAAABADQAAQABAAAAAAABADUAAQABAAEAAAACADQAAQAAAAAAAAACADUAAQAAAAEAAAADADQAAQABAAAAAAADADUAAQABAAEAAAD4/zYAAQAAAAAAAAD4/zcAAQAAAAEAAAD5/zYAAQABAAAAAAD5/zcAAQABAAEAAAD6/zYAAQAAAAAAAAD6/zcAAQAAAAEAAAD7/zYAAQABAAAAAAD7/zcAAQABAAEAAAD8/zYAAQAAAAAAAAD8/zcAAQAAAAEAAAD9/zYAAQABAAAAAAD9/zcAAQABAAEAAAD+/zYAAQAAAAAAAAD+/zcAAQAAAAEAAAD//zYAAQABAAAAAAD//zcAAQABAAEAAAAAADYAAQAAAAAAAAAAADcAAQAAAAEAAAABADYAAQABAAAAAAABADcAAQABAAEAAAACADYAAQAAAAAAAAACADcAAQAAAAEAAAADADYAAQABAAAAAAADADcAAQABAAEAAAAEADYAAQAAAAAAAAAEADcAAQAAAAEAAAAFADYAAQABAAAAAAAFADcAAQABAAEAAAAGADYAAQAAAAAAAAAGADcAAQAAAAEAAAAHADYAAQABAAAAAAAHADcAAQABAAEAAAAeACkABAAAAAAAAAAdACkABAAAAAAAAAAcACkABAAAAAAAAAAbACkABAAAAAAAAAAaACkABAAAAAAAAAAZACkABAAAAAAAAAAYACkABAAAAAAAAAAXACkABAAAAAAAAAAiAB8ABAAAAAAAAAAjAB8ABAAAAAAAAAAkAB8ABAAAAAAAAAAlAB8ABAAAAAAAAAAmAB8ABAAAAAAAAAAnAB8ABAAAAAAAAAAoAB8ABAAAAAAAAAApAB8ABAAAAAAAAAAeABUABAAAAAAAAAAdABUABAAAAAAAAAAcABUABAAAAAAAAAAbABUABAAAAAAAAAAaABUABAAAAAAAAAAZABUABAAAAAAAAAAYABUABAAAAAAAAAAXABUABAAAAAAAAADj/ysAAgAAAAAAAADk/ysAAgAAAAAAAADl/ysAAgAAAAAAAADm/ysAAgAAAAAAAADn/ysAAgAAAAAAAADo/ysAAgAAAAAAAADp/ysAAgAAAAAAAADq/ysAAgAAAAAAAADr/ysAAgAAAAAAAADs/ysAAgAAAAAAAADt/ysAAgAAAAAAAADu/ysAAgAAAAAAAADv/ysAAgAAAAAAAADw/ysAAgAAAAAAAADx/ysAAgAAAAAAAADy/ysAAgAAAAAAAADz/ysAAgAAAAAAAAD0/ysAAgAAAAAAAAArABQAAQABAAAAAAArABUAAQABAAEAAADs/w4AAwAAAAAAAADs/w8AAwAAAAAAAAA=")
@@ -3709,46 +3749,6 @@ scale = Vector2(3, 3)
 script = ExtResource("211_nj5bc")
 duration = 10.0
 powderviewport = NodePath("..")
-
-[node name="characters" type="Node2D" parent="."]
-
-[node name="grandpa" parent="characters" node_paths=PackedStringArray("decorations") instance=ExtResource("7_3gnpt")]
-modulate = Color(0.44, 1, 0.496, 1)
-position = Vector2(-69, 155)
-decorations = [NodePath("../decorations/beard"), NodePath("../decorations/hair"), NodePath("../decorations/eyes"), NodePath("../decorations/AnimatedSprite2D")]
-jump_interval = 4.0
-jump_power = 80.0
-upright_force = 1000
-
-[node name="player" parent="characters" instance=ExtResource("5_v5xn4")]
-position = Vector2(24, 155)
-
-[node name="decorations" type="Node2D" parent="characters"]
-
-[node name="beard" type="Sprite2D" parent="characters/decorations"]
-modulate = Color(1, 1, 1, 0.615686)
-position = Vector2(-38, 186)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("8_y3y0f")
-
-[node name="hair" type="Sprite2D" parent="characters/decorations"]
-modulate = Color(1, 1, 1, 0.615686)
-position = Vector2(-38, 186)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("9_rr305")
-
-[node name="eyes" type="Sprite2D" parent="characters/decorations"]
-modulate = Color(1, 1, 1, 0.670588)
-position = Vector2(-38, 186)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("10_8drd0")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="characters/decorations"]
-position = Vector2(-37, 180)
-scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_roq8y")
-frame = 119
-frame_progress = 1.0
 
 [node name="physics_objects" type="Node2D" parent="."]
 
