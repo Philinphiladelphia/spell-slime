@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_qlwhn")
 firing_interval = 0.1
-ammo = 50
+ammo = 100
 velocity = 2000.0
 shake = 0.03

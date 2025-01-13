@@ -3,6 +3,7 @@ extends "res://event_locations/event_base.gd"
 @export var spell_vehicle: SpellVehicle
 @export var grandpa: Node2D
 @export var gpa_second_location: Node2D
+@export var gpa_third_location: Node2D
 @export var gpa_teleport_animation: AnimatedSprite2D
 @export var powder_viewport: PowderViewport
 @export var sustain_powder: SustainPowder
@@ -19,6 +20,7 @@ extends "res://event_locations/event_base.gd"
 @export var turret: Turret
 @export var spawner: Node2D
 @export var slime_tracker: Node
+@export var level_ui: LevelUIController
 
 @export var front_door: TileMapLayer
 
@@ -31,6 +33,8 @@ func _ready() -> void:
 	spell_vehicle.set_vehicle_state(false)
 	
 	dialogue_layer.play_next_dialogue()
+	
+	level_ui.init_level_ui(slime_tracker, player)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -47,13 +51,14 @@ func _on_dialogue_layer_dialogue_ended() -> void:
 		tutorial_layer.set_tutorial_text("explore the house")
 		
 	if dialogue_layer.dialogue_index == 2:
-		tutorial_layer.set_tutorial_text("activate the spell machine")
+		tutorial_layer.set_tutorial_text("get upstairs, defend the house")
 
 func set_color(color: Color):
 	stage_lighting.color = color
 
 func _on_input_glyph_activated() -> void:
 	SoundManager.play_sfx("bell1", 0, 0, 1)
+	tutorial_layer.set_tutorial_text("")
 	
 	player.can_jump = false
 	
@@ -61,15 +66,7 @@ func _on_input_glyph_activated() -> void:
 	stop_audio()
 	
 	await get_tree().create_timer(5.0).timeout
-	
-	tutorial_layer.set_tutorial_text("")
-	
-	day_env.hide()
-	evil_env.show()
-	
-	day_sky.hide()
-	evil_sky.show()
-	
+
 	turret.show()
 		
 	front_door.queue_free()
@@ -77,7 +74,7 @@ func _on_input_glyph_activated() -> void:
 	tween.tween_method(set_color, stage_lighting.color, Color(0.4, 0.4, 0.4, 1), 3)
 
 	await get_tree().create_timer(1.0).timeout
-	SoundManager.play_sfx("bell1", 0, 0, 0.7)
+	SoundManager.play_sfx("bell4", 0, 0, 0.7)
 	spell_vehicle.turret.hide()
 	await get_tree().create_timer(1.0).timeout
 	SoundManager.play_sfx("bell2", 0, 0, 0.7)
@@ -86,17 +83,24 @@ func _on_input_glyph_activated() -> void:
 	SoundManager.play_sfx("bell3", 0, 0, 0.7)
 	spell_vehicle.gears.hide()
 	await get_tree().create_timer(1.0).timeout
-	SoundManager.play_sfx("bell4", 0, 0, 0.7)
+	SoundManager.play_sfx("bell1", 0, 0, 1.2)
 	spell_vehicle.standpipe.hide()
 	
 	await get_tree().create_timer(3.0).timeout
 	
-	SoundManager.play_sfx("click", 0, 0, 0.7)
+	SoundManager.play_sfx("click", 0, 5, 0.7)
 	stage_lighting.color = Color(0.4, 0.4, 0.4, 1)
+	
+	day_env.hide()
+	evil_env.show()
+	
+	day_sky.hide()
+	evil_sky.show()
+	
 	
 	await get_tree().create_timer(5.0).timeout
 	
-	SoundManager.play_bgm("candle_flame",0, 0, 0.8)
+	SoundManager.play_bgm("candle_flame",0, -6, 0.8)
 
 func _on_node_end() -> void:
 	await get_tree().create_timer(8).timeout
@@ -104,8 +108,8 @@ func _on_node_end() -> void:
 	player.can_jump = true
 	powder_viewport.global_position = powder_second_location.global_position
 	
-	grandpa.position = gpa_second_location.position
-	#grandpa.global_position = gpa_second_location.global_position
+	#grandpa.position = gpa_second_location.position
+	grandpa.global_position = gpa_second_location.global_position
 	gpa_teleport_animation.play()
 	SoundManager.play_sfx("harpoon", 0, -12, 1)
 	tutorial_layer.set_tutorial_text("")
@@ -115,3 +119,11 @@ func _on_node_end() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	spawner.start_spawns()
+	level_ui.show()
+
+
+func _on_dialogue_collider_body_entered(body: Node2D) -> void:
+	if dialogue_layer.dialogue_index == 2:
+		grandpa.global_position = gpa_third_location.global_position
+		gpa_teleport_animation.play()
+		dialogue_layer.play_next_dialogue()

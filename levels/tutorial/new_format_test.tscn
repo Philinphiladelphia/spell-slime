@@ -1,41 +1,7 @@
-[gd_scene load_steps=101 format=4 uid="uid://dj7ftalc7elqo"]
+[gd_scene load_steps=67 format=4 uid="uid://dj7ftalc7elqo"]
 
 [ext_resource type="Script" path="res://levels/tutorial/new_format_controller.gd" id="1_bujsy"]
-[ext_resource type="Texture2D" uid="uid://drrc5o7qll86q" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_sky.png" id="1_pcuev"]
-[ext_resource type="Texture2D" uid="uid://dhyeprjwt4t5t" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_A_f1.png" id="2_1bch5"]
-[ext_resource type="Texture2D" uid="uid://b5dswlyfhllcp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_A_f2.png" id="3_whwua"]
-[ext_resource type="Texture2D" uid="uid://bmf6ylk0nj6yx" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_B.png" id="4_tbs56"]
-[ext_resource type="Texture2D" uid="uid://cgedy4dr56j2q" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_C_f1.png" id="5_04nv3"]
-[ext_resource type="Texture2D" uid="uid://dvo3ay1oxmuad" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_C_f2.png" id="6_6nkbe"]
-[ext_resource type="Texture2D" uid="uid://c1kso6ltitta1" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f1.png" id="7_mbod1"]
-[ext_resource type="Texture2D" uid="uid://sm74e6okk5x5" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f2.png" id="8_x07wn"]
-[ext_resource type="Texture2D" uid="uid://bor21vxcfiwb2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f3.png" id="9_sg7r7"]
-[ext_resource type="Texture2D" uid="uid://cvejdk8v7cf2r" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_E.png" id="10_fsuc6"]
-[ext_resource type="Texture2D" uid="uid://cvhyf5ccgxe85" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_F_f1.png" id="11_0twvn"]
-[ext_resource type="Texture2D" uid="uid://dh5gv6lgm3fwy" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_F_f2.png" id="12_flrb1"]
-[ext_resource type="Texture2D" uid="uid://djc3mnorgcww8" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_G_f1.png" id="13_4usyg"]
-[ext_resource type="Texture2D" uid="uid://b7kxua1yb8jwt" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_G_f2.png" id="14_t7oik"]
-[ext_resource type="Texture2D" uid="uid://c0it8y0es0gy2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_ground.png" id="15_s844y"]
-[ext_resource type="Texture2D" uid="uid://ba4iwcg10inkc" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_8.png" id="16_27ifc"]
-[ext_resource type="Texture2D" uid="uid://b5ter5yj8dvkw" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_7.png" id="17_su35k"]
-[ext_resource type="Texture2D" uid="uid://brgdxfyj30pvm" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_6.png" id="18_jhmuf"]
-[ext_resource type="Texture2D" uid="uid://du5kdahb0yw20" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_5.png" id="19_rkb1j"]
-[ext_resource type="Texture2D" uid="uid://7dghf8njblv2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_4.png" id="20_oj3cm"]
-[ext_resource type="Texture2D" uid="uid://d226ypaclnjuv" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_D.png" id="21_sdoa3"]
-[ext_resource type="Texture2D" uid="uid://gekpyq0eo8h3" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_C.png" id="22_a7voo"]
-[ext_resource type="Texture2D" uid="uid://ph5ocwn6mwgp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_3.png" id="23_10akj"]
-[ext_resource type="Texture2D" uid="uid://dynkvgnaxaqa" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_short_B.png" id="24_1qrmu"]
-[ext_resource type="Texture2D" uid="uid://ccdeq48yhbbwp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_short_A.png" id="25_xgpe0"]
-[ext_resource type="Texture2D" uid="uid://be8qsd474qqv0" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_2.png" id="26_8e3ok"]
-[ext_resource type="Texture2D" uid="uid://duskw02n371hf" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_B.png" id="27_u0saj"]
-[ext_resource type="Texture2D" uid="uid://5cee0nwf81a4" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_A.png" id="28_a357y"]
-[ext_resource type="Texture2D" uid="uid://xhno0e7sbibi" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_1.png" id="29_uayvv"]
-[ext_resource type="Texture2D" uid="uid://c6gyhnydbscms" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/palm_tree_A.png" id="30_nsx2t"]
-[ext_resource type="Texture2D" uid="uid://dj6brltmk02sp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/palm_tree_B.png" id="31_1jy0h"]
-[ext_resource type="Texture2D" uid="uid://b25tcyeasq487" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_short_A.png" id="32_8lhnk"]
-[ext_resource type="Texture2D" uid="uid://b6w11klsp7lsa" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_C.png" id="33_3x45u"]
-[ext_resource type="Texture2D" uid="uid://bgnlg8ehn5vag" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_B.png" id="34_62bgd"]
-[ext_resource type="Texture2D" uid="uid://bwas1swfxrq8b" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_A.png" id="35_ppdb6"]
+[ext_resource type="PackedScene" uid="uid://jlapgjyjth5c" path="res://parallax/night_desert.tscn" id="4_hvlg6"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/camera.gd" id="36_o3lc3"]
 [ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="37_38x5w"]
 [ext_resource type="Texture2D" uid="uid://dl4vhwi1n1ip1" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_fill.png" id="38_faanc"]
@@ -496,202 +462,7 @@ offset_right = 2358.0
 offset_bottom = 1429.0
 color = Color(0.180392, 0.145098, 0.184314, 1)
 
-[node name="parrallax" type="Node2D" parent="."]
-position = Vector2(-113, -15)
-
-[node name="Parallax2D" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.1, 1)
-scroll_offset = Vector2(-86, -116)
-repeat_size = Vector2(128, 0)
-repeat_times = 30
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D"]
-texture = ExtResource("1_pcuev")
-
-[node name="StarsAF1" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-229, -38)
-texture = ExtResource("2_1bch5")
-
-[node name="StarsAF2" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-179, -48)
-texture = ExtResource("3_whwua")
-
-[node name="StarsB" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-193, -23)
-texture = ExtResource("4_tbs56")
-
-[node name="StarsCF1" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-216, -63)
-texture = ExtResource("5_04nv3")
-
-[node name="StarsCF2" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-256, -29)
-texture = ExtResource("6_6nkbe")
-
-[node name="StarsDF1" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-277, -53)
-texture = ExtResource("7_mbod1")
-
-[node name="StarsDF2" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-284, -26)
-texture = ExtResource("8_x07wn")
-
-[node name="StarsDF3" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-251, -63)
-texture = ExtResource("9_sg7r7")
-
-[node name="StarsE" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-269, -11)
-texture = ExtResource("10_fsuc6")
-
-[node name="StarsFF1" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-289, 17)
-texture = ExtResource("11_0twvn")
-
-[node name="StarsFF2" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-198, -25)
-texture = ExtResource("12_flrb1")
-
-[node name="StarsGF1" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-231, -51)
-texture = ExtResource("13_4usyg")
-
-[node name="StarsGF2" type="Sprite2D" parent="parrallax/Parallax2D"]
-position = Vector2(-209, 5)
-texture = ExtResource("14_t7oik")
-
-[node name="Parallax2D2" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.1, 1)
-scroll_offset = Vector2(19, 313)
-repeat_size = Vector2(128, 0)
-repeat_times = 30
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D2"]
-position = Vector2(90, -249)
-texture = ExtResource("15_s844y")
-
-[node name="Parallax2D3" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.2, 1)
-scroll_offset = Vector2(-622, -18)
-repeat_size = Vector2(624, 0)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D3"]
-texture = ExtResource("16_27ifc")
-
-[node name="Parallax2D4" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.3, 1)
-scroll_offset = Vector2(0, -6)
-repeat_size = Vector2(576, 0)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D4"]
-texture = ExtResource("17_su35k")
-
-[node name="Parallax2D5" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.4, 1)
-scroll_offset = Vector2(-605, 10)
-repeat_size = Vector2(624, 0)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D5"]
-texture = ExtResource("18_jhmuf")
-
-[node name="Parallax2D6" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.5, 1)
-scroll_offset = Vector2(4, 26)
-repeat_size = Vector2(640, 0)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D6"]
-texture = ExtResource("19_rkb1j")
-
-[node name="Parallax2D7" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.6, 1)
-scroll_offset = Vector2(10, 45)
-repeat_size = Vector2(640, 0)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D7"]
-texture = ExtResource("20_oj3cm")
-
-[node name="CactusBgD" type="Sprite2D" parent="parrallax/Parallax2D7"]
-position = Vector2(792, 6)
-texture = ExtResource("21_sdoa3")
-
-[node name="CactusBgC" type="Sprite2D" parent="parrallax/Parallax2D7"]
-position = Vector2(1030, -12)
-texture = ExtResource("22_a7voo")
-
-[node name="Parallax2D8" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.7, 1)
-scroll_offset = Vector2(0, 67)
-repeat_size = Vector2(640, 0)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D8"]
-texture = ExtResource("23_10akj")
-
-[node name="CactusBgShortB" type="Sprite2D" parent="parrallax/Parallax2D8"]
-position = Vector2(51, 29)
-texture = ExtResource("24_1qrmu")
-
-[node name="CactusBgShortA" type="Sprite2D" parent="parrallax/Parallax2D8"]
-position = Vector2(258, 17)
-texture = ExtResource("25_xgpe0")
-
-[node name="Parallax2D9" type="Parallax2D" parent="parrallax"]
-scroll_scale = Vector2(0.8, 1)
-scroll_offset = Vector2(7, 88)
-repeat_size = Vector2(640, 0)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D9"]
-texture = ExtResource("26_8e3ok")
-
-[node name="CactusBgB" type="Sprite2D" parent="parrallax/Parallax2D9"]
-position = Vector2(707, 4)
-texture = ExtResource("27_u0saj")
-
-[node name="CactusBgA" type="Sprite2D" parent="parrallax/Parallax2D9"]
-position = Vector2(590, -11)
-texture = ExtResource("28_a357y")
-
-[node name="Parallax2D10" type="Parallax2D" parent="parrallax"]
-scroll_offset = Vector2(3, 108)
-repeat_size = Vector2(640, 0)
-repeat_times = 15
-
-[node name="Sprite2D" type="Sprite2D" parent="parrallax/Parallax2D10"]
-texture = ExtResource("29_uayvv")
-
-[node name="PalmTreeA" type="Sprite2D" parent="parrallax/Parallax2D10"]
-position = Vector2(489, -14)
-texture = ExtResource("30_nsx2t")
-
-[node name="PalmTreeB" type="Sprite2D" parent="parrallax/Parallax2D10"]
-position = Vector2(503, -19)
-texture = ExtResource("31_1jy0h")
-
-[node name="PalmTreeA2" type="Sprite2D" parent="parrallax/Parallax2D10"]
-position = Vector2(969, -12)
-texture = ExtResource("30_nsx2t")
-
-[node name="CactusFgShortA" type="Sprite2D" parent="parrallax/Parallax2D10"]
-position = Vector2(683, 25)
-texture = ExtResource("32_8lhnk")
-
-[node name="CactusFgC" type="Sprite2D" parent="parrallax/Parallax2D10"]
-position = Vector2(779, -1)
-texture = ExtResource("33_3x45u")
-
-[node name="CactusFgB" type="Sprite2D" parent="parrallax/Parallax2D10"]
-position = Vector2(808, 1)
-texture = ExtResource("34_62bgd")
-
-[node name="CactusFgA" type="Sprite2D" parent="parrallax/Parallax2D10"]
-position = Vector2(848, 6)
-texture = ExtResource("35_ppdb6")
+[node name="parrallax" parent="." instance=ExtResource("4_hvlg6")]
 
 [node name="spawner1" type="Node2D" parent="."]
 position = Vector2(724, -67)
@@ -723,29 +494,31 @@ position = Vector2(18.8444, 31.2265)
 position = Vector2(16.9779, 39.6525)
 
 [node name="Bone-6" parent="player/slime_soft_body/Skeleton2D" index="6"]
-position = Vector2(26.671, 9.13406)
+position = Vector2(26.671, 9.13407)
 
 [node name="Bone-7" parent="player/slime_soft_body/Skeleton2D" index="7"]
 position = Vector2(26.9841, 15.7411)
+scale = Vector2(0.999989, 0.999989)
 
 [node name="Bone-8" parent="player/slime_soft_body/Skeleton2D" index="8"]
 position = Vector2(27.8667, 23.718)
 
-[node name="Bone-9" parent="player/slime_soft_body/Skeleton2D" index="9"]
-position = Vector2(27.4142, 30.5858)
-
 [node name="Bone-10" parent="player/slime_soft_body/Skeleton2D" index="10"]
 position = Vector2(26.5378, 39.4117)
-scale = Vector2(1, 1)
 
 [node name="Bone-11" parent="player/slime_soft_body/Skeleton2D" index="11"]
 position = Vector2(34.7286, 9.23149)
+rotation = 1.59363
 
 [node name="Bone-12" parent="player/slime_soft_body/Skeleton2D" index="12"]
 position = Vector2(34.5751, 15.9544)
+scale = Vector2(0.999996, 0.999996)
 
 [node name="Bone-13" parent="player/slime_soft_body/Skeleton2D" index="13"]
-position = Vector2(33.5858, 24.4142)
+scale = Vector2(0.999998, 0.999998)
+
+[node name="Bone-14" parent="player/slime_soft_body/Skeleton2D" index="14"]
+position = Vector2(34.282, 30.1333)
 
 [node name="Bone-15" parent="player/slime_soft_body/Skeleton2D" index="15"]
 position = Vector2(34.6809, 38.9962)
@@ -753,30 +526,25 @@ position = Vector2(34.6809, 38.9962)
 [node name="Bone-16" parent="player/slime_soft_body/Skeleton2D" index="16"]
 position = Vector2(43.8698, 8.90006)
 
-[node name="Bone-17" parent="player/slime_soft_body/Skeleton2D" index="17"]
-position = Vector2(42.5858, 15.4142)
-
 [node name="Bone-18" parent="player/slime_soft_body/Skeleton2D" index="18"]
-position = Vector2(42.0457, 23.4249)
+position = Vector2(42.0456, 23.4249)
 
 [node name="Bone-19" parent="player/slime_soft_body/Skeleton2D" index="19"]
 position = Vector2(42.2589, 31.0159)
 
 [node name="Bone-20" parent="player/slime_soft_body/Skeleton2D" index="20"]
-position = Vector2(42.7958, 39.1532)
+position = Vector2(42.7958, 39.1531)
 
 [node name="Bone-21" parent="player/slime_soft_body/Skeleton2D" index="21"]
-position = Vector2(50.5217, 15.0064)
+position = Vector2(50.5216, 15.0064)
 scale = Vector2(0.999992, 0.999992)
 
 [node name="Bone-22" parent="player/slime_soft_body/Skeleton2D" index="22"]
 position = Vector2(50.6516, 23.2464)
+scale = Vector2(0.999998, 0.999998)
 
 [node name="Bone-23" parent="player/slime_soft_body/Skeleton2D" index="23"]
 position = Vector2(50.8457, 31.3887)
-
-[node name="Bone-24" parent="player/slime_soft_body/Skeleton2D" index="24"]
-position = Vector2(50.0271, 39.2647)
 
 [node name="RectangleShape2D" parent="player/slime_soft_body/Bone-0" index="0"]
 shape = SubResource("RectangleShape2D_ctxu7")

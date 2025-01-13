@@ -1,4 +1,31 @@
-Grandpa:   Hello sonny boy.
-Slimey:    Hello grandpa.
-Grandpa:   Be a good squirt and help grandpa back to the house.
-Slimey:    Fiiiiine.
+( once 
+	- Grandpa:   ... young slimes these days, always jumping at the first thing they see. Be patient! I'll tell you when you're older.
+	{ set slimey_complaints = 0 }
+)
+
+-> slimey_complains
+
+== slimey_complains
+Slimey:    but grandpa... 
+	* I am older!
+		Grandpa: When your beard is as long as mine, then you'll be older. Right now you're still a squirt.
+		Slimey: That's what you've been saying for years!
+		Grandpa: You'd better get used to it, it's not changing anytime soon.
+		Slimey: My sixteenth slimeday was last week... I'm never getting this out of him.
+		{ set slimey_complaints += 1}
+		-> slimey_complains
+	* How scary can the story be, anyway?
+		Grandpa: Scary.
+		Grandpa: Too scary for a wobbly little squirt like you! Why don't you massage my back instead.
+		{ set slimey_complaints += 1}
+		-> slimey_complains
+	* I'm bored. Let's go back already!
+		Grandpa: I'm still sunning. At my age, you come to appreciate the little things in life. That's why I like you! Heh heh.
+		{ set slimey_complaints += 1}
+		-> slimey_complains
+	+ Tell me something, or I'm sitting in this field all day. { slimey_complaints > 2  }
+		-> grandpa_explains
+		
+== grandpa_explains
+Grandpa: The slimelord stole my tech which I created to rule the world. oopsie
+Grandpa: Now be a good squirt and help me get back home. The sun will bleach me white if I stay out any longer.
