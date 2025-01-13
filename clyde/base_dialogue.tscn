@@ -44,7 +44,6 @@ text = "Click to start
 autowrap_mode = 2
 
 [node name="options" type="VBoxContainer" parent="Panel/MarginContainer"]
-visible = false
 layout_mode = 2
 
 [node name="speaker" type="Label" parent="Panel/MarginContainer/options"]

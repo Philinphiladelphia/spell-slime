@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dkmnhwrbi6fme"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_controller.gd" id="1_pru1i"]
-[ext_resource type="PackedScene" uid="uid://e6og876glwxo" path="res://parallax/sunrise_maxxfield_parrish.tscn" id="2_wvtds"]
+[ext_resource type="PackedScene" uid="uid://e6og876glwxo" path="res://parallax/forest.tscn" id="2_wvtds"]
 [ext_resource type="PackedScene" uid="uid://dd32qqj6y33t2" path="res://spell_machine_tower/scenes/spell_tower.tscn" id="3_nn054"]
 [ext_resource type="Texture2D" uid="uid://6iq70kpx3kie" path="res://art/Legacy Collection/Legacy Collection/Assets/Environments/Mountain Dusk/version A/Layers/sky.png" id="5_na1dl"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="7_awnss"]

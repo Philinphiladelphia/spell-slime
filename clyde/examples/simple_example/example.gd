@@ -7,6 +7,12 @@ extends PanelContainer
 @onready var _options_container = $MarginContainer/options
 @onready var _end_container = $MarginContainer/dialogue_ended
 
+@export var speaker_themes: Dictionary = {
+	"grandpa": preload("res://ui/themes/super_pixel_dark_grey.tres"),
+	"slimey": preload("res://ui/themes/super_pixel_violet.tres"),
+	"default_theme": preload("res://ui/themes/super_pixel_light_grey.tres")
+}
+
 signal on_dialogue_end
 
 var _dialogue
@@ -65,19 +71,32 @@ func _get_next_dialogue_line():
 		_options_container.show()
 		_line_container.hide()
 
+func set_speaker_theme(speaker: String):
+	speaker = speaker.to_lower()
+	if speaker_themes.has(speaker):
+		theme = speaker_themes[speaker]
+	else:
+		theme = speaker_themes["default_theme"]
 
 func _set_up_line(content):
-	_line_container.get_node("speaker").text = content.get('speaker') if content.get('speaker') != null else ''
+	var speaker: String = content.get('speaker') if content.get('speaker') != null else ''
+	_line_container.get_node("speaker").text = speaker
 	_line_container.get_node("text").text = content.text
+	
+	set_speaker_theme(speaker)
 
 
 func _set_up_options(options: Dictionary):
 	for c in _options_container.get_node("items").get_children():
 		c.queue_free()
+		
+	var speaker: String = options.get('speaker') if options.get('speaker') != null else ''
 
 	_options_container.get_node("name").text = options.get('name') if options.get('name') != null else ''
-	_options_container.get_node("speaker").text = options.get('speaker') if options.get('speaker') != null else ''
+	_options_container.get_node("speaker").text = speaker
 	_options_container.get_node("speaker").visible = _options_container.get_node("speaker").text != ""
+	
+	set_speaker_theme(speaker)
 
 	var index = 0
 	if options["type"] == "end":
@@ -85,6 +104,8 @@ func _set_up_options(options: Dictionary):
 	for option in options.options:
 		var btn = Button.new()
 		btn.text = option.label
+		btn.custom_minimum_size = Vector2(600, 50)
+		#btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		btn.connect("button_down",Callable(self,"_on_option_selected").bind(index))
 		_options_container.get_node("items").add_child(btn)
 		index += 1

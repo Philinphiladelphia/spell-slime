@@ -1,0 +1,234 @@
+[gd_scene load_steps=36 format=3 uid="uid://jlapgjyjth5c"]
+
+[ext_resource type="Texture2D" uid="uid://drrc5o7qll86q" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_sky.png" id="1_llu5s"]
+[ext_resource type="Texture2D" uid="uid://dhyeprjwt4t5t" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_A_f1.png" id="2_5knw7"]
+[ext_resource type="Texture2D" uid="uid://b5dswlyfhllcp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_A_f2.png" id="3_iex8g"]
+[ext_resource type="Texture2D" uid="uid://bmf6ylk0nj6yx" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_B.png" id="4_kg3o8"]
+[ext_resource type="Texture2D" uid="uid://cgedy4dr56j2q" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_C_f1.png" id="5_aecw2"]
+[ext_resource type="Texture2D" uid="uid://dvo3ay1oxmuad" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_C_f2.png" id="6_e6muo"]
+[ext_resource type="Texture2D" uid="uid://c1kso6ltitta1" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f1.png" id="7_ciowc"]
+[ext_resource type="Texture2D" uid="uid://sm74e6okk5x5" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f2.png" id="8_0de26"]
+[ext_resource type="Texture2D" uid="uid://bor21vxcfiwb2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_D_f3.png" id="9_esdpu"]
+[ext_resource type="Texture2D" uid="uid://cvejdk8v7cf2r" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_E.png" id="10_he141"]
+[ext_resource type="Texture2D" uid="uid://cvhyf5ccgxe85" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_F_f1.png" id="11_7ryee"]
+[ext_resource type="Texture2D" uid="uid://dh5gv6lgm3fwy" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_F_f2.png" id="12_ky30e"]
+[ext_resource type="Texture2D" uid="uid://djc3mnorgcww8" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_G_f1.png" id="13_1kc4c"]
+[ext_resource type="Texture2D" uid="uid://b7kxua1yb8jwt" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/stars_G_f2.png" id="14_dfaxk"]
+[ext_resource type="Texture2D" uid="uid://c0it8y0es0gy2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_ground.png" id="15_rpoxf"]
+[ext_resource type="Texture2D" uid="uid://ba4iwcg10inkc" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_8.png" id="16_llsrq"]
+[ext_resource type="Texture2D" uid="uid://b5ter5yj8dvkw" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_7.png" id="17_id1tx"]
+[ext_resource type="Texture2D" uid="uid://brgdxfyj30pvm" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_6.png" id="18_4xlef"]
+[ext_resource type="Texture2D" uid="uid://du5kdahb0yw20" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_5.png" id="19_8qwqs"]
+[ext_resource type="Texture2D" uid="uid://7dghf8njblv2" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_4.png" id="20_dw4tq"]
+[ext_resource type="Texture2D" uid="uid://d226ypaclnjuv" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_D.png" id="21_aa5gs"]
+[ext_resource type="Texture2D" uid="uid://gekpyq0eo8h3" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_C.png" id="22_lbq6q"]
+[ext_resource type="Texture2D" uid="uid://ph5ocwn6mwgp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_3.png" id="23_fl1ap"]
+[ext_resource type="Texture2D" uid="uid://dynkvgnaxaqa" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_short_B.png" id="24_qj8kr"]
+[ext_resource type="Texture2D" uid="uid://ccdeq48yhbbwp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_short_A.png" id="25_xbggf"]
+[ext_resource type="Texture2D" uid="uid://be8qsd474qqv0" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_2.png" id="26_cnsle"]
+[ext_resource type="Texture2D" uid="uid://duskw02n371hf" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_B.png" id="27_0pvk3"]
+[ext_resource type="Texture2D" uid="uid://5cee0nwf81a4" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_bg_A.png" id="28_pa54i"]
+[ext_resource type="Texture2D" uid="uid://xhno0e7sbibi" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/bg_dunes_1.png" id="29_blh1r"]
+[ext_resource type="Texture2D" uid="uid://c6gyhnydbscms" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/palm_tree_A.png" id="30_pkyw2"]
+[ext_resource type="Texture2D" uid="uid://dj6brltmk02sp" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/palm_tree_B.png" id="31_b1chj"]
+[ext_resource type="Texture2D" uid="uid://b25tcyeasq487" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_short_A.png" id="32_6qudv"]
+[ext_resource type="Texture2D" uid="uid://b6w11klsp7lsa" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_C.png" id="33_318so"]
+[ext_resource type="Texture2D" uid="uid://bgnlg8ehn5vag" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_B.png" id="34_qafv7"]
+[ext_resource type="Texture2D" uid="uid://bwas1swfxrq8b" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/cactus_fg_A.png" id="35_8ci0s"]
+
+[node name="parrallax" type="Node2D"]
+position = Vector2(-113, -15)
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-86, -116)
+repeat_size = Vector2(128, 0)
+repeat_times = 30
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("1_llu5s")
+
+[node name="StarsAF1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-229, -38)
+texture = ExtResource("2_5knw7")
+
+[node name="StarsAF2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-179, -48)
+texture = ExtResource("3_iex8g")
+
+[node name="StarsB" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-193, -23)
+texture = ExtResource("4_kg3o8")
+
+[node name="StarsCF1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-216, -63)
+texture = ExtResource("5_aecw2")
+
+[node name="StarsCF2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-256, -29)
+texture = ExtResource("6_e6muo")
+
+[node name="StarsDF1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-277, -53)
+texture = ExtResource("7_ciowc")
+
+[node name="StarsDF2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-284, -26)
+texture = ExtResource("8_0de26")
+
+[node name="StarsDF3" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-251, -63)
+texture = ExtResource("9_esdpu")
+
+[node name="StarsE" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-269, -11)
+texture = ExtResource("10_he141")
+
+[node name="StarsFF1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-289, 17)
+texture = ExtResource("11_7ryee")
+
+[node name="StarsFF2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-198, -25)
+texture = ExtResource("12_ky30e")
+
+[node name="StarsGF1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-231, -51)
+texture = ExtResource("13_1kc4c")
+
+[node name="StarsGF2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-209, 5)
+texture = ExtResource("14_dfaxk")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(19, 313)
+repeat_size = Vector2(128, 0)
+repeat_times = 30
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(90, -249)
+texture = ExtResource("15_rpoxf")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 1)
+scroll_offset = Vector2(-622, -18)
+repeat_size = Vector2(624, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3"]
+texture = ExtResource("16_llsrq")
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 1)
+scroll_offset = Vector2(0, -6)
+repeat_size = Vector2(576, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D4"]
+texture = ExtResource("17_id1tx")
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 1)
+scroll_offset = Vector2(-605, 10)
+repeat_size = Vector2(624, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D5"]
+texture = ExtResource("18_4xlef")
+
+[node name="Parallax2D6" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 1)
+scroll_offset = Vector2(4, 26)
+repeat_size = Vector2(640, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D6"]
+texture = ExtResource("19_8qwqs")
+
+[node name="Parallax2D7" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 1)
+scroll_offset = Vector2(10, 45)
+repeat_size = Vector2(640, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D7"]
+texture = ExtResource("20_dw4tq")
+
+[node name="CactusBgD" type="Sprite2D" parent="Parallax2D7"]
+position = Vector2(792, 6)
+texture = ExtResource("21_aa5gs")
+
+[node name="CactusBgC" type="Sprite2D" parent="Parallax2D7"]
+position = Vector2(1030, -12)
+texture = ExtResource("22_lbq6q")
+
+[node name="Parallax2D8" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 1)
+scroll_offset = Vector2(0, 67)
+repeat_size = Vector2(640, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D8"]
+texture = ExtResource("23_fl1ap")
+
+[node name="CactusBgShortB" type="Sprite2D" parent="Parallax2D8"]
+position = Vector2(51, 29)
+texture = ExtResource("24_qj8kr")
+
+[node name="CactusBgShortA" type="Sprite2D" parent="Parallax2D8"]
+position = Vector2(258, 17)
+texture = ExtResource("25_xbggf")
+
+[node name="Parallax2D9" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 1)
+scroll_offset = Vector2(7, 88)
+repeat_size = Vector2(640, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D9"]
+texture = ExtResource("26_cnsle")
+
+[node name="CactusBgB" type="Sprite2D" parent="Parallax2D9"]
+position = Vector2(707, 4)
+texture = ExtResource("27_0pvk3")
+
+[node name="CactusBgA" type="Sprite2D" parent="Parallax2D9"]
+position = Vector2(590, -11)
+texture = ExtResource("28_pa54i")
+
+[node name="Parallax2D10" type="Parallax2D" parent="."]
+scroll_offset = Vector2(3, 108)
+repeat_size = Vector2(640, 0)
+repeat_times = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D10"]
+texture = ExtResource("29_blh1r")
+
+[node name="PalmTreeA" type="Sprite2D" parent="Parallax2D10"]
+position = Vector2(489, -14)
+texture = ExtResource("30_pkyw2")
+
+[node name="PalmTreeB" type="Sprite2D" parent="Parallax2D10"]
+position = Vector2(503, -19)
+texture = ExtResource("31_b1chj")
+
+[node name="PalmTreeA2" type="Sprite2D" parent="Parallax2D10"]
+position = Vector2(969, -12)
+texture = ExtResource("30_pkyw2")
+
+[node name="CactusFgShortA" type="Sprite2D" parent="Parallax2D10"]
+position = Vector2(683, 25)
+texture = ExtResource("32_6qudv")
+
+[node name="CactusFgC" type="Sprite2D" parent="Parallax2D10"]
+position = Vector2(779, -1)
+texture = ExtResource("33_318so")
+
+[node name="CactusFgB" type="Sprite2D" parent="Parallax2D10"]
+position = Vector2(808, 1)
+texture = ExtResource("34_qafv7")
+
+[node name="CactusFgA" type="Sprite2D" parent="Parallax2D10"]
+position = Vector2(848, 6)
+texture = ExtResource("35_8ci0s")
