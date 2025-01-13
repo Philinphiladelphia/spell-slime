@@ -1,4 +1,4 @@
-[gd_scene load_steps=599 format=4 uid="uid://ccmbggkgir6a2"]
+[gd_scene load_steps=572 format=4 uid="uid://ccmbggkgir6a2"]
 
 [ext_resource type="Script" path="res://event_locations/scenes/home/home_inside.gd" id="1_3olva"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/dialogue_controller.gd" id="2_r3mv8"]
@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cr40nhm4sybj4" path="res://slimes/player_slime/scenes/jumping_slime.tscn" id="7_3gnpt"]
 [ext_resource type="Texture2D" uid="uid://b3yiv47gbex1j" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_clouds_near.png" id="7_tprr5"]
 [ext_resource type="Texture2D" uid="uid://cekxm4faltkg8" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_mountains_far.png" id="8_bmvf7"]
-[ext_resource type="Texture2D" uid="uid://dkpdetaukoyrh" path="res://event_locations/decorations/beard.png" id="8_y3y0f"]
+[ext_resource type="Texture2D" uid="uid://dkpdetaukoyrh" path="res://art/decorations/beard.png" id="8_y3y0f"]
 [ext_resource type="Texture2D" uid="uid://rmg6ng5jtghd" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_mountains_near.png" id="9_5e6hy"]
-[ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://event_locations/decorations/hair.png" id="9_rr305"]
-[ext_resource type="Texture2D" uid="uid://yep7lw2tq7mf" path="res://event_locations/decorations/eyes.png" id="10_8drd0"]
+[ext_resource type="Texture2D" uid="uid://6pt0tp35snum" path="res://art/decorations/hair.png" id="9_rr305"]
+[ext_resource type="Texture2D" uid="uid://yep7lw2tq7mf" path="res://art/decorations/eyes.png" id="10_8drd0"]
 [ext_resource type="Texture2D" uid="uid://dqk8by22pisvs" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_grass_far.png" id="10_xhhmo"]
 [ext_resource type="Texture2D" uid="uid://bujl7ks2f5x51" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_flower_A.png" id="11_og0e2"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/tutorial_text.gd" id="11_x1t5n"]
@@ -2166,215 +2166,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_85edw"]
-resource_local_to_scene = true
-bone_index = 0
-bone2d_node = NodePath("Bone-0")
-target_nodepath = NodePath("Bone-4")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_r56xa"]
-resource_local_to_scene = true
-bone_index = 1
-bone2d_node = NodePath("Bone-1")
-target_nodepath = NodePath("Bone-3")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_15hgx"]
-resource_local_to_scene = true
-bone_index = 10
-bone2d_node = NodePath("Bone-10")
-target_nodepath = NodePath("Bone-9")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_sf3hg"]
-resource_local_to_scene = true
-bone_index = 11
-bone2d_node = NodePath("Bone-11")
-target_nodepath = NodePath("Bone-12")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_7ckdd"]
-resource_local_to_scene = true
-bone_index = 12
-bone2d_node = NodePath("Bone-12")
-target_nodepath = NodePath("Bone-13")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_gnsj5"]
-resource_local_to_scene = true
-bone_index = 13
-bone2d_node = NodePath("Bone-13")
-target_nodepath = NodePath("Bone-14")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_f16w0"]
-resource_local_to_scene = true
-bone_index = 14
-bone2d_node = NodePath("Bone-14")
-target_nodepath = NodePath("Bone-15")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_lnj3s"]
-resource_local_to_scene = true
-bone_index = 15
-bone2d_node = NodePath("Bone-15")
-target_nodepath = NodePath("Bone-14")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_388pv"]
-resource_local_to_scene = true
-bone_index = 16
-bone2d_node = NodePath("Bone-16")
-target_nodepath = NodePath("Bone-12")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_re08p"]
-resource_local_to_scene = true
-bone_index = 17
-bone2d_node = NodePath("Bone-17")
-target_nodepath = NodePath("Bone-13")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_fego7"]
-resource_local_to_scene = true
-bone_index = 18
-bone2d_node = NodePath("Bone-18")
-target_nodepath = NodePath("Bone-19")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_72ij4"]
-resource_local_to_scene = true
-bone_index = 19
-bone2d_node = NodePath("Bone-19")
-target_nodepath = NodePath("Bone-20")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_0x0j0"]
-resource_local_to_scene = true
-bone_index = 2
-bone2d_node = NodePath("Bone-2")
-target_nodepath = NodePath("Bone-3")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_a3wma"]
-resource_local_to_scene = true
-bone_index = 20
-bone2d_node = NodePath("Bone-20")
-target_nodepath = NodePath("Bone-15")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_xqrew"]
-resource_local_to_scene = true
-bone_index = 21
-bone2d_node = NodePath("Bone-21")
-target_nodepath = NodePath("Bone-17")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_77xyx"]
-resource_local_to_scene = true
-bone_index = 22
-bone2d_node = NodePath("Bone-22")
-target_nodepath = NodePath("Bone-18")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_8x83t"]
-resource_local_to_scene = true
-bone_index = 23
-bone2d_node = NodePath("Bone-23")
-target_nodepath = NodePath("Bone-22")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_a0vgs"]
-resource_local_to_scene = true
-bone_index = 24
-bone2d_node = NodePath("Bone-24")
-target_nodepath = NodePath("Bone-19")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_22fqs"]
-resource_local_to_scene = true
-bone_index = 3
-bone2d_node = NodePath("Bone-3")
-target_nodepath = NodePath("Bone-2")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_euteo"]
-resource_local_to_scene = true
-bone_index = 4
-bone2d_node = NodePath("Bone-4")
-target_nodepath = NodePath("Bone-5")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_vl6pk"]
-resource_local_to_scene = true
-bone_index = 5
-bone2d_node = NodePath("Bone-5")
-target_nodepath = NodePath("Bone-4")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_gjekm"]
-resource_local_to_scene = true
-bone_index = 6
-bone2d_node = NodePath("Bone-6")
-target_nodepath = NodePath("Bone-11")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_d8df0"]
-resource_local_to_scene = true
-bone_index = 7
-bone2d_node = NodePath("Bone-7")
-target_nodepath = NodePath("Bone-6")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_cikda"]
-resource_local_to_scene = true
-bone_index = 8
-bone2d_node = NodePath("Bone-8")
-target_nodepath = NodePath("Bone-9")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_fck2a"]
-resource_local_to_scene = true
-bone_index = 9
-bone2d_node = NodePath("Bone-9")
-target_nodepath = NodePath("Bone-10")
-editor/draw_gizmo = false
-
-[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_121x0"]
-resource_local_to_scene = true
-enabled = true
-modification_count = 25
-modifications/0 = SubResource("SkeletonModification2DLookAt_85edw")
-modifications/1 = SubResource("SkeletonModification2DLookAt_r56xa")
-modifications/2 = SubResource("SkeletonModification2DLookAt_0x0j0")
-modifications/3 = SubResource("SkeletonModification2DLookAt_22fqs")
-modifications/4 = SubResource("SkeletonModification2DLookAt_euteo")
-modifications/5 = SubResource("SkeletonModification2DLookAt_vl6pk")
-modifications/6 = SubResource("SkeletonModification2DLookAt_gjekm")
-modifications/7 = SubResource("SkeletonModification2DLookAt_d8df0")
-modifications/8 = SubResource("SkeletonModification2DLookAt_cikda")
-modifications/9 = SubResource("SkeletonModification2DLookAt_fck2a")
-modifications/10 = SubResource("SkeletonModification2DLookAt_15hgx")
-modifications/11 = SubResource("SkeletonModification2DLookAt_sf3hg")
-modifications/12 = SubResource("SkeletonModification2DLookAt_7ckdd")
-modifications/13 = SubResource("SkeletonModification2DLookAt_gnsj5")
-modifications/14 = SubResource("SkeletonModification2DLookAt_f16w0")
-modifications/15 = SubResource("SkeletonModification2DLookAt_lnj3s")
-modifications/16 = SubResource("SkeletonModification2DLookAt_388pv")
-modifications/17 = SubResource("SkeletonModification2DLookAt_re08p")
-modifications/18 = SubResource("SkeletonModification2DLookAt_fego7")
-modifications/19 = SubResource("SkeletonModification2DLookAt_72ij4")
-modifications/20 = SubResource("SkeletonModification2DLookAt_a3wma")
-modifications/21 = SubResource("SkeletonModification2DLookAt_xqrew")
-modifications/22 = SubResource("SkeletonModification2DLookAt_77xyx")
-modifications/23 = SubResource("SkeletonModification2DLookAt_8x83t")
-modifications/24 = SubResource("SkeletonModification2DLookAt_a0vgs")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy7ki"]
-resource_local_to_scene = true
-size = Vector2(8, 8)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_roq8y"]
 animations = [{
 "frames": [{
@@ -3921,155 +3712,6 @@ powderviewport = NodePath("..")
 
 [node name="characters" type="Node2D" parent="."]
 
-[node name="player" parent="characters" instance=ExtResource("5_v5xn4")]
-position = Vector2(-2, 154)
-
-[node name="Skeleton2D" parent="characters/player/slime_soft_body" index="0"]
-modification_stack = SubResource("SkeletonModificationStack2D_121x0")
-
-[node name="Bone-0" parent="characters/player/slime_soft_body/Skeleton2D" index="0"]
-position = Vector2(12.2375, 23.2233)
-
-[node name="Bone-1" parent="characters/player/slime_soft_body/Skeleton2D" index="1"]
-position = Vector2(12.1698, 31.4392)
-
-[node name="Bone-2" parent="characters/player/slime_soft_body/Skeleton2D" index="2"]
-position = Vector2(17.1808, 13.4843)
-
-[node name="Bone-3" parent="characters/player/slime_soft_body/Skeleton2D" index="3"]
-position = Vector2(18.9745, 23.3185)
-
-[node name="Bone-4" parent="characters/player/slime_soft_body/Skeleton2D" index="4"]
-position = Vector2(18.8444, 31.2265)
-
-[node name="Bone-5" parent="characters/player/slime_soft_body/Skeleton2D" index="5"]
-position = Vector2(16.9779, 39.6525)
-
-[node name="Bone-6" parent="characters/player/slime_soft_body/Skeleton2D" index="6"]
-position = Vector2(26.671, 9.13406)
-
-[node name="Bone-7" parent="characters/player/slime_soft_body/Skeleton2D" index="7"]
-position = Vector2(26.9841, 15.7411)
-scale = Vector2(0.999989, 0.999989)
-
-[node name="Bone-8" parent="characters/player/slime_soft_body/Skeleton2D" index="8"]
-position = Vector2(27.8667, 23.718)
-
-[node name="Bone-10" parent="characters/player/slime_soft_body/Skeleton2D" index="10"]
-position = Vector2(26.5378, 39.4117)
-
-[node name="Bone-11" parent="characters/player/slime_soft_body/Skeleton2D" index="11"]
-position = Vector2(34.7286, 9.23149)
-scale = Vector2(1, 1)
-
-[node name="Bone-12" parent="characters/player/slime_soft_body/Skeleton2D" index="12"]
-position = Vector2(34.5751, 15.9544)
-scale = Vector2(0.999996, 0.999996)
-
-[node name="Bone-16" parent="characters/player/slime_soft_body/Skeleton2D" index="16"]
-position = Vector2(43.8698, 8.90005)
-
-[node name="Bone-18" parent="characters/player/slime_soft_body/Skeleton2D" index="18"]
-position = Vector2(42.0456, 23.4249)
-
-[node name="Bone-20" parent="characters/player/slime_soft_body/Skeleton2D" index="20"]
-position = Vector2(42.7958, 39.1531)
-
-[node name="Bone-21" parent="characters/player/slime_soft_body/Skeleton2D" index="21"]
-position = Vector2(50.5216, 15.0064)
-scale = Vector2(0.999992, 0.999992)
-
-[node name="Bone-22" parent="characters/player/slime_soft_body/Skeleton2D" index="22"]
-position = Vector2(50.6516, 23.2464)
-scale = Vector2(0.999998, 0.999998)
-
-[node name="Bone-23" parent="characters/player/slime_soft_body/Skeleton2D" index="23"]
-position = Vector2(50.8457, 31.3887)
-
-[node name="Bone-24" parent="characters/player/slime_soft_body/Skeleton2D" index="24"]
-position = Vector2(50.0271, 39.2647)
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-0" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-1" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-2" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-3" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-4" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-5" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-6" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-7" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-8" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-9" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-10" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-11" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-12" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-13" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-14" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-15" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-16" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-17" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-18" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-19" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-20" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-21" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-22" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-23" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="RectangleShape2D" parent="characters/player/slime_soft_body/Bone-24" index="0"]
-shape = SubResource("RectangleShape2D_hy7ki")
-
-[node name="player_eyes" parent="characters/player/decorations" index="0"]
-position = Vector2(34, 29)
-
-[node name="player_mouth" parent="characters/player/decorations" index="1"]
-position = Vector2(34, 27)
-
 [node name="grandpa" parent="characters" node_paths=PackedStringArray("decorations") instance=ExtResource("7_3gnpt")]
 modulate = Color(0.44, 1, 0.496, 1)
 position = Vector2(-69, 155)
@@ -4077,6 +3719,9 @@ decorations = [NodePath("../decorations/beard"), NodePath("../decorations/hair")
 jump_interval = 4.0
 jump_power = 80.0
 upright_force = 1000
+
+[node name="player" parent="characters" instance=ExtResource("5_v5xn4")]
+position = Vector2(24, 155)
 
 [node name="decorations" type="Node2D" parent="characters"]
 
@@ -4418,4 +4063,3 @@ visible = false
 
 [editable path="SpellVehicle"]
 [editable path="PowderViewport"]
-[editable path="characters/player"]

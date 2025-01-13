@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://slimes/player_slime/scripts/player_slime_controller.gd" id="3_huhpb"]
 [ext_resource type="Resource" uid="uid://b235orn8xp7ma" path="res://slimes/player_slime/scripts/attack_stats/base_player_attack.tres" id="3_lidf5"]
 [ext_resource type="Resource" uid="uid://c7rqum86aw0ou" path="res://slimes/player_slime/scripts/spells/base_spell.tres" id="4_0rt85"]
-[ext_resource type="Texture2D" uid="uid://yjfpq0gxl6px" path="res://event_locations/decorations/player_eyes.png" id="4_6i3ux"]
-[ext_resource type="Texture2D" uid="uid://dxuu5p3jcri3b" path="res://event_locations/decorations/player_mouth.png" id="5_cfeg0"]
+[ext_resource type="Texture2D" uid="uid://yjfpq0gxl6px" path="res://art/decorations/player_eyes.png" id="4_6i3ux"]
+[ext_resource type="Texture2D" uid="uid://dxuu5p3jcri3b" path="res://art/decorations/player_mouth.png" id="5_cfeg0"]
 [ext_resource type="Script" path="res://addons/imjp94.yafsm/src/StateMachinePlayer.gd" id="6_l0ojx"]
 [ext_resource type="Script" path="res://addons/imjp94.yafsm/src/states/StateMachine.gd" id="7_0lg1a"]
 [ext_resource type="Script" path="res://addons/imjp94.yafsm/src/states/State.gd" id="8_quk8h"]
@@ -280,7 +280,6 @@ metadata/_local_pose_override_enabled_ = true
 [node name="Bone-5" type="Bone2D" parent="slime_soft_body/Skeleton2D"]
 position = Vector2(35.8474, 15.3056)
 rotation = 1.84824
-scale = Vector2(1, 1)
 rest = Transform2D(-0.273902, 0.961758, -0.961758, -0.273902, 35.8474, 15.3056)
 auto_calculate_length_and_angle = false
 length = 15.0

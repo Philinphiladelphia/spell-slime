@@ -3775,59 +3775,59 @@ position = Vector2(-59, 256)
 texture = ExtResource("430_6mrpn")
 
 [node name="GoldSackLargeA" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-255, 339)
 texture = ExtResource("431_v0jf0")
 
 [node name="GoldSackLargeB" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-223, 406)
 texture = ExtResource("432_iphaw")
 
 [node name="GoldSackLargeC" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-238, 374)
 texture = ExtResource("433_uhqgg")
 
 [node name="GoldSackLargeD" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-217, 317)
 texture = ExtResource("434_4fom5")
 
 [node name="GoldSackSmallA" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-177, 385)
 texture = ExtResource("435_57si1")
 
 [node name="GoldSackSmallB" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-149, 373)
 texture = ExtResource("436_7rq5d")
 
 [node name="GoldSackSmallC" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-214, 370)
 texture = ExtResource("437_jnwax")
 
 [node name="GoldSackSmallD" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-222, 347)
 texture = ExtResource("438_jwi4w")
 
 [node name="IngotsLargeA" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-179, 356)
 texture = ExtResource("439_5x3eh")
 
 [node name="IngotsLargeB" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-26, 305)
 texture = ExtResource("440_m52aj")
 
 [node name="IngotsLargeC" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-60, 310)
 texture = ExtResource("441_yqqj2")
 
 [node name="IngotsSmallA" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-115, 334)
 texture = ExtResource("442_syone")
 
 [node name="IngotsSmallB" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-95, 316)
 texture = ExtResource("443_nlu8d")
 
 [node name="IngotsSmallC" type="Sprite2D" parent="homey_objects"]
-position = Vector2(-119, 305)
+position = Vector2(-97, 288)
 texture = ExtResource("444_dj6ul")
 
 [node name="CoinPileLargeA" type="Sprite2D" parent="homey_objects"]
