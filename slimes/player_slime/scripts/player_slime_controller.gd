@@ -10,13 +10,12 @@ extends Node2D
 @export var player_attack_stats: PlayerAttackStats
 @export var spell: Spell
 
+@export var cast_disabled: bool = false
+
 @export var cursor_radials : Node2D
 
 @export var hurtbox: Area2D
 @export var i_frame_time = 0.5
-
-@export var can_jump: bool = true
-@export var can_cast: bool = true
 
 @export var max_health = 100
 @export var health = 100
@@ -54,6 +53,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:	
 	time_since_last_jump += delta
 	time_since_last_cast += delta
+	
+	$decorations/Node2D/Label.text = smp.get_current()
 	
 	slime_position = softbody.get_bones_center_position()
 	
@@ -113,17 +114,16 @@ func handle_hits():
 		health -= damage_amount
 
 func jump(jump_direction: Vector2, jump_power: float) -> void:
-	if can_jump:
-		SoundManager.play_sfx("drop1", 0, -6, 1)
-		softbody.apply_impulse(jump_direction * jump_power)
+	SoundManager.play_sfx("drop1", 0, -6, 1)
+	softbody.apply_impulse(jump_direction * jump_power)
 
 
 func _on_player_state_transited(from: Variant, to: Variant) -> void:
-	if from == "jump_active" and to == "jump_inactive":
+	if from == "active" and to == "inactive":
 		freeze()
 		
 		
-	if from == "jump_inactive" and to == "jump_active":
+	if from == "inactive" and to == "active":
 		unfreeze()
 
 func handle_cast(delta:float):
@@ -150,7 +150,7 @@ func cast_spell(cast_power:int):
 	var cast_direction = (get_global_mouse_position() - slime_position).normalized()
 	var cast_location = slime_position + (cast_direction) * cast_radius			
 	
-	GunUtils.fire_projectile(spell.projectile_type, cast_location, spell.damage, cast_direction.angle(), 2000, 5, 0.5, 5, 0.03)
+	GunUtils.fire_projectile(spell.projectile_type, cast_location, spell.damage, cast_direction.angle(), spell.velocity, spell.max_lifespan, spell.post_hit_lifespan, spell.mass, spell.shake)
 
 func handle_jump(delta:float):
 	if time_since_last_jump < movement_stats.min_jump_interval:
@@ -170,6 +170,9 @@ func handle_jump(delta:float):
 		time_since_last_jump = 0.0  # Reset time since last jump
 		return
 
+func handle_dash(delta: float):
+	pass
+
 func freeze():
 	var bodies = softbody.get_rigid_bodies()
 	var centerish_body = bodies[len(bodies)/2].rigidbody
@@ -183,17 +186,19 @@ func unfreeze():
 func _on_player_state_updated(state: Variant, delta: Variant) -> void:
 	if DialogueController.active:
 		cursor_radials.hide()
-		return
 	else:
 		cursor_radials.show()
 	
 	match state:
-		"jump_active":
-			if can_jump:
-				handle_jump(delta)
+		"active":
+			handle_jump(delta)
 			
-			if can_cast:
+		"casting":
+			if not cast_disabled:
 				handle_cast(delta)
+			
+		"dashing":
+			handle_dash(delta)
 
-		"jump_inactive":
+		"inactive":
 			pass
