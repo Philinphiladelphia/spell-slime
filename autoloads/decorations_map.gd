@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var decorations : Dictionary = {
-	"beard" : "res://event_locations/decorations/beard.png",
-	"eyes" : "res://event_locations/decorations/eyes.png",
-	"horns" : "res://event_locations/decorations/horns.png",
+	"beard" : "res://art/decorations/beard.png",
+	"eyes" : "res://art/decorations/eyes.png",
+	"horns" : "res://art/decorations/horns.png",
 }
