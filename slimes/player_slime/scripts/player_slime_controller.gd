@@ -38,6 +38,8 @@ var original_modulate: Color
 
 var slime_position: Vector2
 
+var soft_body_scene: PackedScene = preload("res://slimes/player_slime/scenes/slime_soft_body.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	original_modulate = softbody.modulate
@@ -90,6 +92,9 @@ func _process(delta: float) -> void:
 		smp.set_trigger("deactivate")
 	else:
 		smp.set_trigger("activate")
+		
+	if Input.is_action_just_released("dash"):
+		smp.set_trigger("dash")
 
 func handle_hits():
 	if hurtbox.has_overlapping_bodies():
@@ -121,7 +126,6 @@ func jump(jump_direction: Vector2, jump_power: float) -> void:
 func _on_player_state_transited(from: Variant, to: Variant) -> void:
 	if from == "active" and to == "inactive":
 		freeze()
-		
 		
 	if from == "inactive" and to == "active":
 		unfreeze()
@@ -171,7 +175,28 @@ func handle_jump(delta:float):
 		return
 
 func handle_dash(delta: float):
-	pass
+	var velocities: Array[Vector2]
+	var positions: Array[Vector2]
+	
+	var dash_direction = (get_global_mouse_position() - slime_position).normalized()
+	var dash_location = slime_position + (dash_direction) * movement_stats.dash_distance	
+	
+	for child in softbody.get_children():
+		if child is RigidBody2D:
+			velocities.append(child.linear_velocity)
+	
+	var new_body: SoftBody2D = soft_body_scene.instantiate()
+	
+	for child in new_body.get_children():
+		if child is RigidBody2D:
+			child.linear_velocity = velocities.pop_back()
+	
+	softbody.queue_free()
+	add_child(new_body)
+	move_child(new_body, 0)
+	softbody = new_body
+	new_body.global_position = dash_location
+	
 
 func freeze():
 	var bodies = softbody.get_rigid_bodies()
