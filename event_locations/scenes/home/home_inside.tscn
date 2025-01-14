@@ -3103,6 +3103,8 @@ upright_force = 1000
 
 [node name="player" parent="characters" instance=ExtResource("5_v5xn4")]
 position = Vector2(24, 155)
+cast_disabled = true
+dash_disabled = true
 
 [node name="decorations" type="Node2D" parent="characters"]
 
