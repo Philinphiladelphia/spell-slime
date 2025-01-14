@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://ui/scenes/control_cursor_radials.gd" id="1_231t1"]
 [ext_resource type="Texture2D" uid="uid://bme4lx7e14hht" path="res://slimes/assets/trigger.png" id="2_cttno"]
+[ext_resource type="Texture2D" uid="uid://b00nayaxiwp1g" path="res://slimes/assets/big_red_health_red.png" id="2_yfojw"]
 [ext_resource type="Texture2D" uid="uid://bm72vamyf10gk" path="res://slimes/assets/cursor_radial.png" id="3_o87g6"]
-[ext_resource type="Texture2D" uid="uid://7uuwexqkbxgp" path="res://slimes/assets/big_red_health.png" id="3_r0067"]
 [ext_resource type="Script" path="res://ui/scenes/radial_bar.gd" id="4_3w7fh"]
 
 [node name="CursorRadials" type="Node2D" node_paths=PackedStringArray("radial_1", "radial_2")]
@@ -21,8 +21,9 @@ offset_right = 98.0
 offset_bottom = 99.0
 scale = Vector2(0.45, 0.45)
 step = 0.0
+value = 100.0
 fill_mode = 4
-texture_progress = ExtResource("3_r0067")
+texture_progress = ExtResource("2_yfojw")
 script = ExtResource("4_3w7fh")
 
 [node name="radial_bar1" type="TextureProgressBar" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://chhnrbkrbyki8"]
+[gd_scene load_steps=80 format=3 uid="uid://chhnrbkrbyki8"]
 
 [ext_resource type="Resource" uid="uid://bpf8tvkjpdpkk" path="res://slimes/player_slime/scripts/movement_stats/base_movement_stats.tres" id="2_g85qg"]
 [ext_resource type="Script" path="res://slimes/player_slime/scripts/player_slime_controller.gd" id="3_huhpb"]
@@ -40,20 +40,20 @@ script = ExtResource("8_quk8h")
 name = "Entry"
 metadata/graph_offset = Vector2(325, 242)
 
-[sub_resource type="Resource" id="Resource_23bk0"]
-script = ExtResource("8_quk8h")
-name = "dashing"
-metadata/graph_offset = Vector2(460.5, 142)
-
-[sub_resource type="Resource" id="Resource_urcs5"]
-script = ExtResource("8_quk8h")
-name = "casting"
-metadata/graph_offset = Vector2(603, 142)
-
 [sub_resource type="Resource" id="Resource_qrgjw"]
 script = ExtResource("8_quk8h")
 name = "active"
 metadata/graph_offset = Vector2(525, 242)
+
+[sub_resource type="Resource" id="Resource_urcs5"]
+script = ExtResource("8_quk8h")
+name = "casting"
+metadata/graph_offset = Vector2(643, 102)
+
+[sub_resource type="Resource" id="Resource_23bk0"]
+script = ExtResource("8_quk8h")
+name = "dashing"
+metadata/graph_offset = Vector2(440.5, 102)
 
 [sub_resource type="Resource" id="Resource_qtape"]
 script = ExtResource("8_quk8h")
@@ -65,19 +65,6 @@ script = ExtResource("9_wwxss")
 from = "Entry"
 to = "active"
 conditions = {}
-priority = 0
-
-[sub_resource type="Resource" id="Resource_nrv7l"]
-script = ExtResource("11_c2rr6")
-name = "deactivate"
-
-[sub_resource type="Resource" id="Resource_loopj"]
-script = ExtResource("9_wwxss")
-from = "active"
-to = "inactive"
-conditions = {
-"deactivate": SubResource("Resource_nrv7l")
-}
 priority = 0
 
 [sub_resource type="Resource" id="Resource_8bf4x"]
@@ -93,6 +80,65 @@ conditions = {
 }
 priority = 0
 
+[sub_resource type="Resource" id="Resource_nrv7l"]
+script = ExtResource("11_c2rr6")
+name = "deactivate"
+
+[sub_resource type="Resource" id="Resource_loopj"]
+script = ExtResource("9_wwxss")
+from = "active"
+to = "inactive"
+conditions = {
+"deactivate": SubResource("Resource_nrv7l")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_8w7mx"]
+script = ExtResource("11_c2rr6")
+name = "cast"
+
+[sub_resource type="Resource" id="Resource_n5ijs"]
+script = ExtResource("9_wwxss")
+from = "active"
+to = "casting"
+conditions = {
+"cast": SubResource("Resource_8w7mx")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_5g3gq"]
+script = ExtResource("11_c2rr6")
+name = "cast_done"
+
+[sub_resource type="Resource" id="Resource_w7qyo"]
+script = ExtResource("9_wwxss")
+from = "casting"
+to = "active"
+conditions = {
+"cast_done": SubResource("Resource_5g3gq")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_sgs2c"]
+script = ExtResource("11_c2rr6")
+name = "dash"
+
+[sub_resource type="Resource" id="Resource_lontk"]
+script = ExtResource("9_wwxss")
+from = "casting"
+to = "dashing"
+conditions = {
+"dash": SubResource("Resource_sgs2c")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_sruyr"]
+script = ExtResource("9_wwxss")
+from = "dashing"
+to = "active"
+conditions = {}
+priority = 0
+
 [sub_resource type="Resource" id="Resource_gf6cf"]
 script = ExtResource("11_c2rr6")
 name = "activate"
@@ -104,20 +150,6 @@ to = "active"
 conditions = {
 "activate": SubResource("Resource_gf6cf")
 }
-priority = 0
-
-[sub_resource type="Resource" id="Resource_sruyr"]
-script = ExtResource("9_wwxss")
-from = "dashing"
-to = "active"
-conditions = {}
-priority = 0
-
-[sub_resource type="Resource" id="Resource_w7qyo"]
-script = ExtResource("9_wwxss")
-from = "casting"
-to = "active"
-conditions = {}
 priority = 0
 
 [sub_resource type="Resource" id="Resource_ycdjk"]
@@ -134,11 +166,13 @@ transitions = {
 "active": SubResource("Resource_nte1n")
 },
 "active": {
+"casting": SubResource("Resource_n5ijs"),
 "dashing": SubResource("Resource_rduvx"),
 "inactive": SubResource("Resource_loopj")
 },
 "casting": {
-"active": SubResource("Resource_w7qyo")
+"active": SubResource("Resource_w7qyo"),
+"dashing": SubResource("Resource_lontk")
 },
 "dashing": {
 "active": SubResource("Resource_sruyr")
@@ -249,6 +283,11 @@ script = ExtResource("8_quk8h")
 name = "Entry"
 metadata/graph_offset = Vector2(985, 302)
 
+[sub_resource type="Resource" id="Resource_3aln2"]
+script = ExtResource("8_quk8h")
+name = "blocked"
+metadata/graph_offset = Vector2(821, 182)
+
 [sub_resource type="Resource" id="Resource_ju5va"]
 script = ExtResource("8_quk8h")
 name = "cooldown"
@@ -259,16 +298,63 @@ script = ExtResource("8_quk8h")
 name = "ready"
 metadata/graph_offset = Vector2(820.31, 309.595)
 
-[sub_resource type="Resource" id="Resource_3aln2"]
-script = ExtResource("8_quk8h")
-name = "blocked"
-metadata/graph_offset = Vector2(821, 182)
-
 [sub_resource type="Resource" id="Resource_rw5on"]
 script = ExtResource("9_wwxss")
 from = "Entry"
 to = "ready"
 conditions = {}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_0ig35"]
+script = ExtResource("11_c2rr6")
+name = "ready"
+
+[sub_resource type="Resource" id="Resource_xlrb2"]
+script = ExtResource("9_wwxss")
+from = "blocked"
+to = "ready"
+conditions = {
+"ready": SubResource("Resource_0ig35")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_4b1bb"]
+script = ExtResource("11_c2rr6")
+name = "cooldown"
+
+[sub_resource type="Resource" id="Resource_wsci7"]
+script = ExtResource("9_wwxss")
+from = "blocked"
+to = "cooldown"
+conditions = {
+"cooldown": SubResource("Resource_4b1bb")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_mjbff"]
+script = ExtResource("11_c2rr6")
+name = "ready"
+
+[sub_resource type="Resource" id="Resource_wp55r"]
+script = ExtResource("9_wwxss")
+from = "cooldown"
+to = "ready"
+conditions = {
+"ready": SubResource("Resource_mjbff")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_bsyyy"]
+script = ExtResource("11_c2rr6")
+name = "blocked"
+
+[sub_resource type="Resource" id="Resource_osvqt"]
+script = ExtResource("9_wwxss")
+from = "cooldown"
+to = "blocked"
+conditions = {
+"blocked": SubResource("Resource_bsyyy")
+}
 priority = 0
 
 [sub_resource type="Resource" id="Resource_vy2vx"]
@@ -297,32 +383,6 @@ conditions = {
 }
 priority = 0
 
-[sub_resource type="Resource" id="Resource_0ig35"]
-script = ExtResource("11_c2rr6")
-name = "ready"
-
-[sub_resource type="Resource" id="Resource_xlrb2"]
-script = ExtResource("9_wwxss")
-from = "blocked"
-to = "ready"
-conditions = {
-"ready": SubResource("Resource_0ig35")
-}
-priority = 0
-
-[sub_resource type="Resource" id="Resource_mjbff"]
-script = ExtResource("11_c2rr6")
-name = "ready"
-
-[sub_resource type="Resource" id="Resource_wp55r"]
-script = ExtResource("9_wwxss")
-from = "cooldown"
-to = "ready"
-conditions = {
-"ready": SubResource("Resource_mjbff")
-}
-priority = 0
-
 [sub_resource type="Resource" id="Resource_ltr0e"]
 script = ExtResource("7_0lg1a")
 states = {
@@ -336,9 +396,11 @@ transitions = {
 "ready": SubResource("Resource_rw5on")
 },
 "blocked": {
+"cooldown": SubResource("Resource_wsci7"),
 "ready": SubResource("Resource_xlrb2")
 },
 "cooldown": {
+"blocked": SubResource("Resource_osvqt"),
 "ready": SubResource("Resource_wp55r")
 },
 "ready": {

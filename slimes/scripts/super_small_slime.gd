@@ -31,8 +31,8 @@ func _ready() -> void:
 	$slime_node.powder_duration = powder_duration
 	$slime_node.element = element_numbers[randi() % element_numbers.size()]
 	$slime_node.set_original_color(get_parent().slime_colors[$slime_node.element])
-	$slime_node.element_circle_size = 1
-	$slime_node.damage = 1
+	$slime_node.element_circle_size = 2
+	$slime_node.damage = 5
 	
 func set_element(element: int) -> void:
 	$slime_node.element = element

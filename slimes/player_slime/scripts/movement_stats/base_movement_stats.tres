@@ -9,3 +9,5 @@ charge_rate = 100.0
 min_jump = 60.0
 min_jump_interval = 0.5
 upright_force = 200
+dash_distance = 80
+dash_cooldown = 2.0

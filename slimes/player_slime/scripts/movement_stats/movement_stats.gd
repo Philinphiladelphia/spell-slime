@@ -8,3 +8,5 @@ extends Resource
 @export var upright_force: int = 200
 @export var dash_distance = 80
 @export var dash_cooldown: float = 2.0
+
+@export var dash_mana_cost: float = 20

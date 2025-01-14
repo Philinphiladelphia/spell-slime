@@ -5,10 +5,7 @@
 [resource]
 script = ExtResource("1_skcs0")
 max_mana = 100
-mana_recharge_rate = 60.0
-fire_rate = 0.5
-damage = 2
-projectile_type = "res://upgrade_tree/scenes/harpoon_projectile.tscn"
+mana_recharge_rate = 5.0
 melee_damage = 3
 melee_radius = 20.0
 melee_knockback = 300.0
