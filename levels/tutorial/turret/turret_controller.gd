@@ -88,7 +88,8 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 			 projectile_data.max_lifespan,
 			 projectile_data.post_hit_lifespan,
 			 projectile_data.mass,
-			 firing_strategy.shake
+			 firing_strategy.shake,
+			 0
 			)
 				
 			if not SoundManager.is_playing(projectile_data.sound):

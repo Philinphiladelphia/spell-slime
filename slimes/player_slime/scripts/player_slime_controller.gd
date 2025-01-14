@@ -25,6 +25,8 @@ extends Node2D
 
 @export var dash_collider: Area2D
 
+var state: String
+
 var mana: float = 0
 
 var last_hit: int = 0
@@ -34,7 +36,6 @@ var time_since_last_jump: float = 0.0
 
 var cast_power: float
 var time_since_last_cast: float = 0.0
-var casting: bool = false
 @export var cast_radius: float = 30
 
 @export var time_since_last_dash: float = 0.0
@@ -44,6 +45,8 @@ var original_modulate: Color
 var slime_position: Vector2
 
 var soft_body_scene: PackedScene = preload("res://slimes/player_slime/scenes/slime_soft_body.tscn")
+
+@export var teleport_animation: PackedScene = preload("res://slimes/player_slime/scenes/teleport_animation.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -64,9 +67,11 @@ func _process(delta: float) -> void:
 	
 	slime_position = softbody.get_bones_center_position()
 	
+	state = smp.get_current()
+	
 	# regen mana
-	if not casting:
-		mana = min(mana + player_attack_stats.mana_recharge_rate * delta, player_attack_stats.max_mana)
+	if state == "active":
+		mana = min(mana + (player_attack_stats.mana_recharge_rate * delta), player_attack_stats.max_mana)
 	
 	if time_since_last_jump < movement_stats.min_jump_interval:
 		cursor_radials.set_rad_1_value(cursor_radials.radial_1.value - ((movement_stats.max_jump_power/movement_stats.min_jump_interval) * delta))
@@ -98,6 +103,7 @@ func _process(delta: float) -> void:
 		smp.set_trigger("activate")
 		
 	prepare_dash()
+	prepare_cast(delta)
 		
 	
 func prepare_dash():
@@ -119,14 +125,42 @@ func prepare_dash():
 	if time_since_last_dash >= movement_stats.dash_cooldown:
 		dash_collider.smp.set_trigger("ready")
 	else:
+		dash_collider.smp.set_trigger("cooldown")
 		return
 		
 	if Input.is_action_pressed("dash"):
+		
+		if mana < movement_stats.dash_mana_cost:
+			return
+			
+		mana -= movement_stats.dash_mana_cost
+		
 		smp.set_trigger("dash")
-		dash_collider.smp.set_trigger("cooldown")
 		time_since_last_dash = 0.0
 		cursor_radials.set_rad_2_value(movement_stats.dash_cooldown)
 
+func prepare_cast(delta: float):
+	if cast_disabled:
+		return
+	
+	if Input.is_action_pressed("secondary_fire"):
+		if mana < spell.min_cast_cost:
+			return
+			
+		if not time_since_last_cast >= spell.fire_rate:
+			return
+		
+		if state != "casting":
+			mana -= spell.min_cast_cost
+		
+		smp.set_trigger("cast")
+	elif Input.is_action_just_released("secondary_fire"):
+		cast_spell(cast_power)
+		
+		SoundManager.play_sfx(spell.sound)
+		smp.set_trigger("cast_done")
+		cast_power = 0
+		time_since_last_cast = 0.0
 
 func handle_hits():
 	if hurtbox.has_overlapping_bodies():
@@ -161,32 +195,30 @@ func _on_player_state_transited(from: Variant, to: Variant) -> void:
 		
 	if from == "inactive" and to == "active":
 		unfreeze()
+		
+	if from == "casting" and to == "dashing":
+		cancel_cast()
 
 func handle_cast(delta:float):
-	if time_since_last_cast < spell.fire_rate:
+	if mana <= 0:
 		return
-		
-	if Input.is_action_pressed("secondary_fire"):
-		casting = true
-		if mana <= 0:
-			return
-		
-		cast_power = min(cast_power + (spell.per_second_mana_consumption * delta), player_attack_stats.max_mana)
-		mana -= spell.per_second_mana_consumption * delta
-		if cursor_radials:
-			cursor_radials.set_rad_2_value(cast_power)
-	elif Input.is_action_just_released("secondary_fire"):
-		cast_spell(cast_power)
-		
-		casting = false
-		cast_power = 0
-		time_since_last_cast = 0.0
-		
+	
+	cast_power = cast_power + (spell.per_second_mana_consumption * delta)
+	mana -= spell.per_second_mana_consumption * delta
+
+func cancel_cast():
+	cast_power = 0
+
 func cast_spell(cast_power:int):
+	var damage: int = spell.damage + (spell.damage_scaling * cast_power)
+	var mass: float = spell.mass + (spell.mass_scaling * cast_power)
+	var velocity: float = spell.velocity + (spell.velocity_scaling * cast_power)
+	var size_addition: float = spell.size_scaling * cast_power
+	
 	var cast_direction = (get_global_mouse_position() - slime_position).normalized()
 	var cast_location = slime_position + (cast_direction) * cast_radius			
 	
-	GunUtils.fire_projectile(spell.projectile_type, cast_location, spell.damage, cast_direction.angle(), spell.velocity, spell.max_lifespan, spell.post_hit_lifespan, spell.mass, spell.shake)
+	GunUtils.fire_projectile(spell.projectile_type, cast_location, damage, cast_direction.angle(), velocity, spell.max_lifespan, spell.post_hit_lifespan, mass, spell.shake, size_addition)
 
 func handle_jump(delta:float):
 	if time_since_last_jump < movement_stats.min_jump_interval:
@@ -232,6 +264,9 @@ func handle_dash(delta: float):
 	softbody = new_body
 	new_body.global_position = dash_collider.global_position
 	
+	var teleport: AnimatedSprite2D = teleport_animation.instantiate()
+	teleport.global_position = dash_collider.global_position
+	get_tree().root.add_child(teleport)
 
 func freeze():
 	var bodies = softbody.get_rigid_bodies()
