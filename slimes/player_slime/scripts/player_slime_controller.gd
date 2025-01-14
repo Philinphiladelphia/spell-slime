@@ -11,6 +11,7 @@ extends Node2D
 @export var spell: Spell
 
 @export var cast_disabled: bool = false
+@export var dash_disabled: bool = false
 
 @export var cursor_radials : Node2D
 
@@ -61,8 +62,6 @@ func _process(delta: float) -> void:
 	time_since_last_cast += delta
 	time_since_last_dash += delta
 	
-	$decorations/Node2D/Label.text = smp.get_current()
-	
 	slime_position = softbody.get_bones_center_position()
 	
 	# regen mana
@@ -98,6 +97,16 @@ func _process(delta: float) -> void:
 	else:
 		smp.set_trigger("activate")
 		
+	prepare_dash()
+		
+	
+func prepare_dash():
+	if dash_disabled:
+		dash_collider.hide()
+		return
+	else:
+		dash_collider.show()	
+	
 	# dash code
 	var dash_direction = (get_global_mouse_position() - slime_position).normalized()
 	var dash_location = slime_position + (dash_direction) * movement_stats.dash_distance	
@@ -117,6 +126,7 @@ func _process(delta: float) -> void:
 		dash_collider.smp.set_trigger("cooldown")
 		time_since_last_dash = 0.0
 		cursor_radials.set_rad_2_value(movement_stats.dash_cooldown)
+
 
 func handle_hits():
 	if hurtbox.has_overlapping_bodies():
@@ -248,7 +258,8 @@ func _on_player_state_updated(state: Variant, delta: Variant) -> void:
 				handle_cast(delta)
 			
 		"dashing":
-			handle_dash(delta)
+			if not dash_disabled:
+				handle_dash(delta)
 
 		"inactive":
 			pass

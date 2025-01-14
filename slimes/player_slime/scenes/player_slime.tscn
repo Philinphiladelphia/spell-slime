@@ -353,7 +353,7 @@ physics_interpolation_mode = 2
 texture_filter = 1
 script = ExtResource("3_huhpb")
 softbody = NodePath("slime_soft_body")
-decorations = [NodePath("decorations/player_eyes"), NodePath("decorations/player_mouth"), NodePath("decorations/AudioListener2D"), NodePath("decorations/Node2D")]
+decorations = [NodePath("decorations/player_eyes"), NodePath("decorations/player_mouth"), NodePath("decorations/AudioListener2D")]
 movement_stats = ExtResource("2_g85qg")
 player_attack_stats = ExtResource("3_lidf5")
 spell = ExtResource("4_0rt85")
@@ -364,12 +364,6 @@ dash_collider = NodePath("dash_collider")
 [node name="slime_soft_body" parent="." instance=ExtResource("5_srknk")]
 
 [node name="decorations" type="Node2D" parent="."]
-
-[node name="Node2D" type="Node2D" parent="decorations"]
-
-[node name="Label" type="Label" parent="decorations/Node2D"]
-offset_right = 40.0
-offset_bottom = 25.0
 
 [node name="player_eyes" type="Sprite2D" parent="decorations"]
 modulate = Color(1, 1, 1, 0.670588)
