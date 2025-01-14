@@ -22,6 +22,8 @@ extends Node2D
 
 @export var damage_duration = 0.2
 
+@export var dash_collider: Area2D
+
 var mana: float = 0
 
 var last_hit: int = 0
@@ -33,6 +35,8 @@ var cast_power: float
 var time_since_last_cast: float = 0.0
 var casting: bool = false
 @export var cast_radius: float = 30
+
+@export var time_since_last_dash: float = 0.0
 
 var original_modulate: Color
 
@@ -49,12 +53,13 @@ func _ready() -> void:
 	
 	if cursor_radials:
 		cursor_radials.set_rad_1_min_max(movement_stats.min_jump, movement_stats.max_jump_power)
-		cursor_radials.set_rad_2_min_max(0, player_attack_stats.max_mana)
+		cursor_radials.set_rad_2_min_max(0, movement_stats.dash_cooldown)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	
 	time_since_last_jump += delta
 	time_since_last_cast += delta
+	time_since_last_dash += delta
 	
 	$decorations/Node2D/Label.text = smp.get_current()
 	
@@ -64,11 +69,11 @@ func _process(delta: float) -> void:
 	if not casting:
 		mana = min(mana + player_attack_stats.mana_recharge_rate * delta, player_attack_stats.max_mana)
 	
-	if cursor_radials and time_since_last_jump < movement_stats.min_jump_interval:
+	if time_since_last_jump < movement_stats.min_jump_interval:
 		cursor_radials.set_rad_1_value(cursor_radials.radial_1.value - ((movement_stats.max_jump_power/movement_stats.min_jump_interval) * delta))
 	
-	if cursor_radials and time_since_last_cast < spell.fire_rate and not casting:
-		cursor_radials.set_rad_2_value(cursor_radials.radial_2.value - ((player_attack_stats.max_mana/spell.fire_rate) * delta))
+	if cursor_radials.radial_2.value > 0:
+		cursor_radials.set_rad_2_value(movement_stats.dash_cooldown - time_since_last_dash)
 	
 	if Time.get_ticks_msec() - last_hit < damage_duration*1000:
 		softbody.modulate = Color(1, 0.5, 0.5, 1)
@@ -93,8 +98,25 @@ func _process(delta: float) -> void:
 	else:
 		smp.set_trigger("activate")
 		
-	if Input.is_action_just_released("dash"):
+	# dash code
+	var dash_direction = (get_global_mouse_position() - slime_position).normalized()
+	var dash_location = slime_position + (dash_direction) * movement_stats.dash_distance	
+	dash_collider.global_position = dash_location
+	
+	if dash_collider.has_overlapping_bodies():
+		dash_collider.smp.set_trigger("blocked")
+		return
+	
+	if time_since_last_dash >= movement_stats.dash_cooldown:
+		dash_collider.smp.set_trigger("ready")
+	else:
+		return
+		
+	if Input.is_action_pressed("dash"):
 		smp.set_trigger("dash")
+		dash_collider.smp.set_trigger("cooldown")
+		time_since_last_dash = 0.0
+		cursor_radials.set_rad_2_value(movement_stats.dash_cooldown)
 
 func handle_hits():
 	if hurtbox.has_overlapping_bodies():
@@ -178,24 +200,27 @@ func handle_dash(delta: float):
 	var velocities: Array[Vector2]
 	var positions: Array[Vector2]
 	
-	var dash_direction = (get_global_mouse_position() - slime_position).normalized()
-	var dash_location = slime_position + (dash_direction) * movement_stats.dash_distance	
+	if dash_collider.has_overlapping_bodies():
+		return
 	
-	for child in softbody.get_children():
-		if child is RigidBody2D:
-			velocities.append(child.linear_velocity)
-	
+	# code to presserve linear velocity
+	#for child in softbody.get_children():
+		#if child is RigidBody2D:
+			#velocities.append(child.linear_velocity)
+	#
 	var new_body: SoftBody2D = soft_body_scene.instantiate()
 	
-	for child in new_body.get_children():
-		if child is RigidBody2D:
-			child.linear_velocity = velocities.pop_back()
-	
+	#for child in new_body.get_children():
+		#if child is RigidBody2D:
+			#child.linear_velocity = velocities.pop_back()
+	#
 	softbody.queue_free()
 	add_child(new_body)
 	move_child(new_body, 0)
+	var dash_direction = (get_global_mouse_position() - slime_position).normalized()
+	new_body.apply_impulse(dash_direction * movement_stats.max_jump_power * 2)
 	softbody = new_body
-	new_body.global_position = dash_location
+	new_body.global_position = dash_collider.global_position
 	
 
 func freeze():

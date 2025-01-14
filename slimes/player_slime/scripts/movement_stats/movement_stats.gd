@@ -7,3 +7,4 @@ extends Resource
 @export var min_jump_interval: float = 0.5  # Minimum time interval between jumps in seconds
 @export var upright_force: int = 200
 @export var dash_distance = 80
+@export var dash_cooldown: float = 2.0
