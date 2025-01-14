@@ -2180,12 +2180,12 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_put6g"]
+[sub_resource type="Gradient" id="Gradient_t55pw"]
 offsets = PackedFloat32Array(0, 0.968127)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_aai5i"]
-gradient = SubResource("Gradient_put6g")
+gradient = SubResource("Gradient_t55pw")
 fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)
