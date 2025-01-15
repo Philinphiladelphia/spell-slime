@@ -51,15 +51,15 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 			input_glyph.show()
 			if Input.is_action_just_pressed("interact") and not GunUtils.active_turret:
 				input_glyph.hide()
-				GunUtils.active_turret = self
+				GunUtils.set_active_turret(self)
 				camera.x_offset += camera_offset.x
 				powderviewport.circle(global_position, 10, 114)
 				
-				activated.emit(self)
+				GunUtils.set_active_turret(self)
 				smp.set_trigger("activated")
 		"active":
 			if Input.is_action_just_pressed("interact"):
-				GunUtils.active_turret = null
+				GunUtils.remove_active_turret()
 				smp.set_trigger("deactivated")
 				camera.x_offset -= camera_offset.x
 				
@@ -75,6 +75,8 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 				
 			if ammo <= 0:
 				smp.set_trigger("out_of_ammo")
+				GunUtils.remove_active_turret()
+				camera.x_offset -= camera_offset.x
 			
 			if not firing_strategy.off_cooldown(self):
 				return

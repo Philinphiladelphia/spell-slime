@@ -1,11 +1,11 @@
 extends Node2D
 
-var jump_interval: float = 1.5
+var jump_interval: float = 2.5
 var powder_interval: float = 2
-var powder_duration: float = 0.2
+var powder_duration: float = 0.5
 
 var max_health: float = 200.0
-var jump_power: float = 150
+var jump_power: float = 100
 var element_numbers: PackedInt32Array = [21, 3, 4, 6, 7]
 
 var decorations: Array[Sprite2D]
@@ -32,7 +32,7 @@ func _ready() -> void:
 	$slime_node.element = element_numbers[randi() % element_numbers.size()]
 	$slime_node.set_original_color(get_parent().slime_colors[$slime_node.element])
 	$slime_node.element_circle_size = 2
-	$slime_node.damage = 5
+	$slime_node.damage = 2
 	
 func set_element(element: int) -> void:
 	$slime_node.element = element

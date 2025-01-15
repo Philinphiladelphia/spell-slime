@@ -4,9 +4,9 @@ extends "res://event_locations/event_base.gd"
 @export var grandpa: Node2D
 @export var gpa_second_location: Node2D
 @export var gpa_third_location: Node2D
-@export var gpa_teleport_animation: AnimatedSprite2D
 @export var powder_viewport: PowderViewport
 @export var sustain_powder: SustainPowder
+@export var sustain_powder2: SustainPowder
 
 @export var stage_lighting: CanvasModulate
 
@@ -18,11 +18,17 @@ extends "res://event_locations/event_base.gd"
 @export var powder_second_location: Node2D
 
 @export var turret: Turret
-@export var spawner: Node2D
+
+@export var spawner1: Spawner
+@export var spawner2: Spawner
+@export var spawner3: Spawner
+
 @export var slime_tracker: Node
 @export var level_ui: LevelUIController
 
 @export var front_door: TileMapLayer
+
+@export var teleport_animation: PackedScene = preload("res://slimes/player_slime/scenes/teleport_animation.tscn")
 
 @onready var tween: Tween = get_tree().create_tween().bind_node(self).set_trans(Tween.TRANS_BOUNCE)
 
@@ -52,6 +58,13 @@ func _on_dialogue_layer_dialogue_ended() -> void:
 		
 	if dialogue_layer.dialogue_index == 2:
 		tutorial_layer.set_tutorial_text("get upstairs, defend the house")
+		
+	if dialogue_layer.dialogue_index == 3:
+		tutorial_layer.set_tutorial_text("defeat the enemy slime with the dash orb")
+		
+	if dialogue_layer.dialogue_index == 4:
+		level_ui.show()
+		spawner2.start_spawns()
 
 func set_color(color: Color):
 	stage_lighting.color = color
@@ -60,9 +73,10 @@ func _on_input_glyph_activated() -> void:
 	SoundManager.play_sfx("bell1", 0, 0, 1)
 	tutorial_layer.set_tutorial_text("")
 	
-	player.can_jump = false
+	player.smp.set_trigger("deactivate")
 	
-	sustain_powder.sustain_powder(spell_vehicle.global_position, 20, 49)
+	sustain_powder2.sustain_powder(spell_vehicle.global_position + Vector2(0, -50), 2, 129)
+	sustain_powder.sustain_powder(spell_vehicle.global_position, 10, 49)
 	stop_audio()
 	
 	await get_tree().create_timer(5.0).timeout
@@ -105,25 +119,47 @@ func _on_input_glyph_activated() -> void:
 func _on_node_end() -> void:
 	await get_tree().create_timer(8).timeout
 	
-	player.can_jump = true
 	powder_viewport.global_position = powder_second_location.global_position
 	
-	#grandpa.position = gpa_second_location.position
-	grandpa.global_position = gpa_second_location.global_position
-	gpa_teleport_animation.play()
-	SoundManager.play_sfx("harpoon", 0, -12, 1)
+	teleport_grandpa(gpa_second_location.global_position)
+	
 	tutorial_layer.set_tutorial_text("")
 	dialogue_layer.play_next_dialogue()
-	
+
+func teleport_grandpa(pos: Vector2):
+	grandpa.reset()
+	grandpa.global_position = pos
+	var teleport: AnimatedSprite2D = teleport_animation.instantiate()
+	teleport.global_position = grandpa.global_position
+	get_tree().root.add_child(teleport)
+	SoundManager.play_sfx("harpoon", 0, -12, 1)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	spawner.start_spawns()
-	level_ui.show()
+	spawner1.start_spawns()
+	if dialogue_layer.dialogue_index == 3:
+		level_ui.show()
 
 
 func _on_dialogue_collider_body_entered(body: Node2D) -> void:
 	if dialogue_layer.dialogue_index == 2:
-		grandpa.global_position = gpa_third_location.global_position
-		gpa_teleport_animation.play()
+		tutorial_layer.set_tutorial_text("")
+		teleport_grandpa(gpa_third_location.global_position)
 		dialogue_layer.play_next_dialogue()
+		player.dash_disabled = false
+
+
+func _on_spawner_1_depleted() -> void:
+	level_ui.hide()
+	teleport_grandpa(player.slime_position + Vector2(0, -20))
+	tutorial_layer.set_tutorial_text("")
+	dialogue_layer.play_next_dialogue()
+	player.cast_disabled = false
+
+
+func _on_spawner_2_depleted() -> void:
+	pass # Replace with function body.
+
+
+func _on_spawner_3_depleted() -> void:
+	pass # Replace with function body.

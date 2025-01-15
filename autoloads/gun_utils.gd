@@ -4,12 +4,24 @@ extends Node2D
 # hacky semaphore to communicate state
 var active_turret: Turret
 
+signal turret_activated
+signal turret_deactivated
+
 var hit_marker_scene: PackedScene = preload("res://autoloads/hit_marker.tscn")
+var gold_color: Color = Color(0.832, 0.787, 0.116)
+
+func set_active_turret(turret: Turret):
+	active_turret = turret
+	turret_activated.emit()
+	
+func remove_active_turret():
+	active_turret = null
+	turret_deactivated.emit()
 
 func fire_projectile(projectile_scene: String, firing_position: Vector2, damage: int, rot: float, velocity: float, max_lifespan: float, post_hit_lifespan: float, mass: float, gun_shake : float, size_addition: float) -> void:
 	var node_to_fire: Node = load(projectile_scene).instantiate()
 	
-	node_to_fire.scale = node_to_fire.scale + Vector2(size_addition, size_addition)
+	#node_to_fire.scale = node_to_fire.scale + Vector2(size_addition, size_addition)
 	
 	node_to_fire.damage = damage
 	node_to_fire.max_projectile_lifespan = max_lifespan

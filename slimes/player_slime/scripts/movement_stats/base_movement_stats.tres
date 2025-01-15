@@ -11,3 +11,4 @@ min_jump_interval = 0.5
 upright_force = 200
 dash_distance = 80
 dash_cooldown = 2.0
+dash_mana_cost = 20.0

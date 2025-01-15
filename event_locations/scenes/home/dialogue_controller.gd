@@ -30,9 +30,9 @@ func clear_dialogue():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if len(get_children()) > 0:
+	if len(get_children()) > 0 and has_active_dialogue == false:
 		has_active_dialogue = true
-		DialogueController.active = true
-	else:
+		DialogueController.activated.emit()
+	elif len(get_children()) == 0 and has_active_dialogue == true:
 		has_active_dialogue = false
-		DialogueController.active = false
+		DialogueController.deactivated.emit()

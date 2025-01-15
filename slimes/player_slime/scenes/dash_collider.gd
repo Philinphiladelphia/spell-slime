@@ -1,3 +1,4 @@
+class_name DashCollider
 extends Area2D
 
 @onready var smp = $StateMachinePlayer
@@ -5,6 +6,8 @@ extends Area2D
 @export var ready_indicator: AnimatedSprite2D
 @export var blocked_indicator: AnimatedSprite2D
 @export var cooldown_indicator: AnimatedSprite2D
+
+@export var dash_hitbox: Area2D
 
 var current_state: String = ""
 
