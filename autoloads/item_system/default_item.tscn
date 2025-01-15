@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhv7j7wwvude4"]
+
+[ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="1_wkpn5"]
+[ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://gloot/tests/data/item_definitions_basic.tres" id="2_y60ba"]
+
+[node name="slime_heart" type="Node"]
+script = ExtResource("1_wkpn5")
+protoset = ExtResource("2_y60ba")
+prototype_id = "item1"
+properties = {
+"cost": 20,
+"description": "Good for what ails you",
+"image": "res://art/super_pixel/Super Pixel Item Pickups Fantasy Pack 1/PNG/fp1_heart_A_large_green/frame0000.png",
+"max_health": 500.0,
+"name": "slime_heart",
+"rarity": "common"
+}

@@ -15,6 +15,15 @@ var item_colors = {
 	"legendary": Color(0.93, 0.483, 0.121)
 }
 
+var inventory_types = {
+	"common": CommonItems,
+	"rare": RareItems,
+	"epic": EpicItems,
+	"legendary": LegendaryItems
+}
+
+var default_item: InventoryItem = preload("res://autoloads/item_system/default_item.tscn").instantiate()
+
 func select_random_item() -> InventoryItem:
 	var rand = randf()
 	var cumulative = 0.0
@@ -25,19 +34,11 @@ func select_random_item() -> InventoryItem:
 	return get_random_item_from_pool("common")
 
 func get_random_item_from_pool(rarity: String) -> InventoryItem:
-	match rarity:
-		"common":
-			if CommonItems.get_items().size() > 0:
-				return CommonItems.get_items()[randi() % CommonItems.get_items().size()] 
-		"rare":
-			if RareItems.get_items().size() > 0:
-				return RareItems.get_items()[randi() % RareItems.get_items().size()]
-		"epic":
-			if EpicItems.get_items().size() > 0:
-				return EpicItems.get_items()[randi() % EpicItems.get_items().size()] 
-		"legendary":
-			if LegendaryItems.get_items().size() > 0:
-				return LegendaryItems.get_items()[randi() % LegendaryItems.get_items().size()] 
+	var inventory_type = inventory_types[rarity]
+	
+	if inventory_type.get_items().size() > 0:
+		var item: InventoryItem = inventory_type.get_items()[randi() % inventory_type.get_items().size()] 
+		inventory_type.remove_item(item)
+		return item
 
-	# default, common again
-	return CommonItems.get_item_by_id("item1")
+	return default_item

@@ -42,7 +42,7 @@ func _ready() -> void:
 	
 	dialogue_layer.play_next_dialogue()
 	
-	level_ui.init_level_ui(slime_tracker, player)
+	level_ui.init_level_ui(slime_tracker)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

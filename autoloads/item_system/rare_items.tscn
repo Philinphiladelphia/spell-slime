@@ -13,6 +13,7 @@ script = ExtResource("3_rxdhv")
 protoset = ExtResource("2_nla6o")
 prototype_id = "minimal_item"
 properties = {
+"cost": 100,
 "description": "Steampunk never goes out of fashion",
 "image": "res://art/super_pixel/Super Pixel Item Pickups Sci-fi Pack 1/PNG/sp1_bolt_bronze/frame0012.png",
 "max_rotation_speed": 1.0,
@@ -26,6 +27,7 @@ script = ExtResource("3_rxdhv")
 protoset = ExtResource("2_nla6o")
 prototype_id = "item1"
 properties = {
+"cost": 70,
 "description": "It works, don't ask why",
 "image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/barrel_large_A.png",
 "name": "rifled_barrel",
@@ -38,6 +40,7 @@ script = ExtResource("3_rxdhv")
 protoset = ExtResource("2_nla6o")
 prototype_id = "item2"
 properties = {
+"cost": 100,
 "description": "Rebalance your enemy's PH",
 "image": "res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/potion_A_green_full.png",
 "name": "acid_bottle",
@@ -50,6 +53,7 @@ script = ExtResource("3_rxdhv")
 protoset = ExtResource("2_nla6o")
 prototype_id = "minimal_item"
 properties = {
+"cost": 100,
 "description": "It's a rich slime's world!",
 "image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/coin_pile_large_A.png",
 "name": "pile o cash",

@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://ca3twx7xqwrka"]
+
+[ext_resource type="Script" path="res://slimes/scenes/crystals/crystal.gd" id="1_kqna0"]
+[ext_resource type="Texture2D" uid="uid://dif60wvjhvoco" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_dark/gem_C_small_blue/frame0000.png" id="2_o55jx"]
+[ext_resource type="Texture2D" uid="uid://c6ho6eve5pimt" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_dark/gem_C_small_blue/frame0001.png" id="3_2issu"]
+[ext_resource type="Texture2D" uid="uid://d4an31dtatbth" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_dark/gem_C_small_blue/frame0002.png" id="4_whrcj"]
+[ext_resource type="Texture2D" uid="uid://bohv47olgrtbp" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_dark/gem_C_small_blue/frame0003.png" id="5_0vf7w"]
+[ext_resource type="Texture2D" uid="uid://bl0gosprdstdq" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_dark/gem_C_small_blue/frame0004.png" id="6_1564f"]
+[ext_resource type="Texture2D" uid="uid://dg4g63jom83fj" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_dark/gem_C_small_blue/frame0005.png" id="7_bu6es"]
+[ext_resource type="Texture2D" uid="uid://bemlpr2tgryuy" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_dark/gem_C_small_blue/frame0006.png" id="8_1ne1t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_brsj0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_o55jx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2issu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_whrcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0vf7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1564f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bu6es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1ne1t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t1a8m"]
+
+[node name="crystal" type="RigidBody2D"]
+texture_filter = 1
+script = ExtResource("1_kqna0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -8, 8, 0, 0, 8, -8, 0)
+
+[node name="blue_crystal" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_brsj0")
+autoplay = "default"
+frame_progress = 0.988306
+
+[node name="player_area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_area"]
+shape = SubResource("CircleShape2D_t1a8m")

@@ -15,4 +15,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	slime_tracker.set_slime_goal_position(player.slime_position)
 	
-	level_ui.init_level_ui(slime_tracker, player)
+	level_ui.init_level_ui(slime_tracker)

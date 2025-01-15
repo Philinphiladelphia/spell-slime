@@ -283,7 +283,7 @@
 [ext_resource type="PackedScene" uid="uid://dw5ygteiex2s3" path="res://levels/tutorial/turret/turret.tscn" id="401_6m6so"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="402_dtjme"]
 [ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="403_mru5j"]
-[ext_resource type="PackedScene" uid="uid://dbkh866uwj432" path="res://levels/tutorial/level_ui.tscn" id="404_cf2d0"]
+[ext_resource type="PackedScene" uid="uid://dbkh866uwj432" path="res://ui/scenes/level_ui.tscn" id="404_cf2d0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sxnq"]
 texture = ExtResource("23_wbjwq")
@@ -2134,6 +2134,7 @@ spawner3 = NodePath("spawner3")
 slime_tracker = NodePath("slime_tracker")
 level_ui = NodePath("level_ui")
 front_door = NodePath("front_door")
+teleport_animation = null
 dialogue_layer = NodePath("dialogue_layer")
 tutorial_layer = NodePath("tutorial_layer")
 player = NodePath("characters/player")
