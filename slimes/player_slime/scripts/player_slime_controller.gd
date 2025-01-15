@@ -23,7 +23,11 @@ extends Node2D
 
 @export var damage_duration = 0.2
 
-@export var dash_collider: Area2D
+@export var dash_collider: DashCollider
+
+@export var cast_light: PointLight2D
+
+@export var powderviewport: PowderViewport
 
 var state: String
 
@@ -54,6 +58,12 @@ func _ready() -> void:
 	mana = player_attack_stats.max_mana
 	jump_power = movement_stats.min_jump
 	slime_position = softbody.get_bones_center_position()
+	
+	GunUtils.turret_activated.connect(deactivate_with_freeze)
+	GunUtils.turret_deactivated.connect(activate_with_freeze)
+	
+	DialogueController.activated.connect(deactivate_with_radials)
+	DialogueController.deactivated.connect(activate_with_radials)
 	
 	if cursor_radials:
 		cursor_radials.set_rad_1_min_max(movement_stats.min_jump, movement_stats.max_jump_power)
@@ -97,14 +107,32 @@ func _process(delta: float) -> void:
 			decoration.global_position = slime_position
 			decoration.rotation = rigidbody.rotation
 			
-	if GunUtils.active_turret:
-		smp.set_trigger("deactivate")
+	#cast light indicator
+	if cast_power > 0:
+		cast_light.enabled = true
+		cast_light.energy = 1 + (cast_power/player_attack_stats.max_mana) * 2
+		cast_light.texture_scale = 1 + (cast_power/player_attack_stats.max_mana) * 2
 	else:
-		smp.set_trigger("activate")
-		
+		cast_light.enabled = false
+	
 	prepare_dash()
 	prepare_cast(delta)
-		
+
+func activate_with_freeze():
+	smp.set_trigger("activate")
+	unfreeze()
+	
+func deactivate_with_freeze():
+	smp.set_trigger("deactivate")
+	freeze()
+	
+func activate_with_radials():
+	smp.set_trigger("activate")
+	cursor_radials.show()
+	
+func deactivate_with_radials():
+	smp.set_trigger("deactivate")
+	cursor_radials.hide()
 	
 func prepare_dash():
 	if dash_disabled:
@@ -152,9 +180,9 @@ func prepare_cast(delta: float):
 		
 		if state != "casting":
 			mana -= spell.min_cast_cost
-		
-		smp.set_trigger("cast")
-	elif Input.is_action_just_released("secondary_fire"):
+			smp.set_trigger("cast")
+			
+	elif Input.is_action_just_released("secondary_fire") and state == "casting":
 		cast_spell(cast_power)
 		
 		SoundManager.play_sfx(spell.sound)
@@ -189,20 +217,11 @@ func jump(jump_direction: Vector2, jump_power: float) -> void:
 	softbody.apply_impulse(jump_direction * jump_power)
 
 
-func _on_player_state_transited(from: Variant, to: Variant) -> void:
-	if from == "active" and to == "inactive":
-		freeze()
-		
-	if from == "inactive" and to == "active":
-		unfreeze()
-		
+func _on_player_state_transited(from: Variant, to: Variant) -> void:		
 	if from == "casting" and to == "dashing":
 		cancel_cast()
 
-func handle_cast(delta:float):
-	if mana <= 0:
-		return
-	
+func handle_cast(delta:float):	
 	cast_power = cast_power + (spell.per_second_mana_consumption * delta)
 	mana -= spell.per_second_mana_consumption * delta
 
@@ -210,6 +229,8 @@ func cancel_cast():
 	cast_power = 0
 
 func cast_spell(cast_power:int):
+	time_since_last_cast = 0.0
+	
 	var damage: int = spell.damage + (spell.damage_scaling * cast_power)
 	var mass: float = spell.mass + (spell.mass_scaling * cast_power)
 	var velocity: float = spell.velocity + (spell.velocity_scaling * cast_power)
@@ -266,6 +287,21 @@ func handle_dash(delta: float):
 	
 	var teleport: AnimatedSprite2D = teleport_animation.instantiate()
 	teleport.global_position = dash_collider.global_position
+	
+	
+	var enemy_dict :Dictionary = {}
+	# damage enemies on dash
+	for body in dash_collider.dash_hitbox.get_overlapping_bodies():
+		var slime_body = body.get_parent().get_parent()
+		
+		if enemy_dict.has(slime_body):
+			continue
+		else:
+			enemy_dict[slime_body] = 1
+		
+		body.get_parent().get_parent().apply_damage(player_attack_stats.dash_damage)
+	
+	SoundManager.play_sfx("force_field")
 	get_tree().root.add_child(teleport)
 
 func freeze():
@@ -278,12 +314,7 @@ func unfreeze():
 	var centerish_body = bodies[len(bodies)/2].rigidbody
 	centerish_body.freeze = false
 
-func _on_player_state_updated(state: Variant, delta: Variant) -> void:
-	if DialogueController.active:
-		cursor_radials.hide()
-	else:
-		cursor_radials.show()
-	
+func _on_player_state_updated(state: Variant, delta: Variant) -> void:	
 	match state:
 		"active":
 			handle_jump(delta)

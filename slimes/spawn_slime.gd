@@ -50,6 +50,9 @@ var _elements: Array[float] = []
 var _decorations: Array = []
 
 var spawner_depleted: bool = false
+
+signal depleted
+
 var spawn_active : bool = false
 
 var colors_file_path: String = "res://addons/powder_toy_godot/colors.json"
@@ -94,7 +97,9 @@ func _ready() -> void:
 
 func _on_slime_spawn_timer_timeout() -> void:
 	if _slime_types.size() == 0:
-		spawner_depleted = true
+		if len(get_children()) == 0:
+			spawner_depleted = true
+			depleted.emit()
 		return
 	
 	var next_slime_type: int = _slime_types.pop_front()
@@ -141,7 +146,7 @@ func _process(delta: float) -> void:
 		return
 
 	# Check if it's time to spawn the next slime
-	if Time.get_ticks_msec() >= next_spawn_time:
+	if Time.get_ticks_msec() >= next_spawn_time and not spawner_depleted:
 		_on_slime_spawn_timer_timeout()
 
 func set_slime_goal_position(value: Vector2) -> void:
@@ -161,9 +166,6 @@ func spawn_slimes_with_delay(slime_types: Array[float], delays: Array[float] = [
 	spawn_slime_helper()
 		
 func spawn_slime_helper() -> void:
-	if _delays.size() == 0:
-		spawner_depleted = true
-		return
 	next_spawn_time = Time.get_ticks_msec() + int(_delays.pop_front() * 1000)
 
 func spawn_slime(slime_type: int, element: int, decorations: Array):

@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://dvsvdttvvg4tl"
+path="res://.godot/imported/cast_tutorial.clyde-c55983a9edfe518b861cd049e56536d5.res"
+
+[deps]
+
+source_file="res://clyde/examples/dialogues/cast_tutorial.clyde"
+dest_files=["res://.godot/imported/cast_tutorial.clyde-c55983a9edfe518b861cd049e56536d5.res"]
+
+[params]
+

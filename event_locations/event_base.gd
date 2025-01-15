@@ -3,8 +3,7 @@ extends Node2D
 @export var dialogue_layer: CanvasLayer
 @export var tutorial_layer: CanvasLayer
 
-@export var player: Node2D
-@export var cursor_radials: Node2D
+@export var player: PlayerController
 
 @onready var pause_screen: PackedScene = preload("res://maaack/scenes/overlaid_menus/pause_menu.tscn")
 

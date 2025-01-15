@@ -63,21 +63,17 @@ func _process(delta: float) -> void:
 		set_modulate(lerp(get_modulate(), Color(1,1,1,0), delta+fade_speed))
 
 func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	body.get_parent().get_parent().apply_damage(damage)
 	
 	# only once per slime hit
 	var id = body.get_parent().get_parent().get_instance_id()
 	if not slimes_hit.keys().has(id):
 		on_hit()
+		body.get_parent().get_parent().apply_damage(damage)
 		slimes_hit.get_or_add(id)
 
 	fade_timer.start()
 	
 func on_hit():
-	if randomize_impact_sound:
-		var random_int = randi() % 9 + 1
-		SoundManager.play_sfx("slime_impact_" + str(random_int), 0, -12, 1.5)
-
 	var animation = on_hit_animation.instantiate()
 	animation.global_position = global_position
 	animation.rotation = rotation + (PI/2.0)

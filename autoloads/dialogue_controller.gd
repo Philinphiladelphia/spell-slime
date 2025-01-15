@@ -1,3 +1,4 @@
 extends Node2D
 
-var active = false
+signal activated
+signal deactivated

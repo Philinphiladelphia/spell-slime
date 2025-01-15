@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://chhnrbkrbyki8"]
+[gd_scene load_steps=83 format=3 uid="uid://chhnrbkrbyki8"]
 
 [ext_resource type="Resource" uid="uid://bpf8tvkjpdpkk" path="res://slimes/player_slime/scripts/movement_stats/base_movement_stats.tres" id="2_g85qg"]
 [ext_resource type="Script" path="res://slimes/player_slime/scripts/player_slime_controller.gd" id="3_huhpb"]
@@ -67,6 +67,19 @@ to = "active"
 conditions = {}
 priority = 0
 
+[sub_resource type="Resource" id="Resource_8w7mx"]
+script = ExtResource("11_c2rr6")
+name = "cast"
+
+[sub_resource type="Resource" id="Resource_n5ijs"]
+script = ExtResource("9_wwxss")
+from = "active"
+to = "casting"
+conditions = {
+"cast": SubResource("Resource_8w7mx")
+}
+priority = 0
+
 [sub_resource type="Resource" id="Resource_8bf4x"]
 script = ExtResource("11_c2rr6")
 name = "dash"
@@ -90,19 +103,6 @@ from = "active"
 to = "inactive"
 conditions = {
 "deactivate": SubResource("Resource_nrv7l")
-}
-priority = 0
-
-[sub_resource type="Resource" id="Resource_8w7mx"]
-script = ExtResource("11_c2rr6")
-name = "cast"
-
-[sub_resource type="Resource" id="Resource_n5ijs"]
-script = ExtResource("9_wwxss")
-from = "active"
-to = "casting"
-conditions = {
-"cast": SubResource("Resource_8w7mx")
 }
 priority = 0
 
@@ -186,6 +186,16 @@ name = ""
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jk8vh"]
 radius = 30.0
 height = 74.0
+
+[sub_resource type="Gradient" id="Gradient_mxs2o"]
+offsets = PackedFloat32Array(0, 0.968127)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cotux"]
+gradient = SubResource("Gradient_mxs2o")
+fill = 1
+fill_from = Vector2(0.5, 0.495726)
+fill_to = Vector2(0.106838, 0.897436)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5vltf"]
 radius = 21.0238
@@ -305,19 +315,6 @@ to = "ready"
 conditions = {}
 priority = 0
 
-[sub_resource type="Resource" id="Resource_0ig35"]
-script = ExtResource("11_c2rr6")
-name = "ready"
-
-[sub_resource type="Resource" id="Resource_xlrb2"]
-script = ExtResource("9_wwxss")
-from = "blocked"
-to = "ready"
-conditions = {
-"ready": SubResource("Resource_0ig35")
-}
-priority = 0
-
 [sub_resource type="Resource" id="Resource_4b1bb"]
 script = ExtResource("11_c2rr6")
 name = "cooldown"
@@ -331,16 +328,16 @@ conditions = {
 }
 priority = 0
 
-[sub_resource type="Resource" id="Resource_mjbff"]
+[sub_resource type="Resource" id="Resource_0ig35"]
 script = ExtResource("11_c2rr6")
 name = "ready"
 
-[sub_resource type="Resource" id="Resource_wp55r"]
+[sub_resource type="Resource" id="Resource_xlrb2"]
 script = ExtResource("9_wwxss")
-from = "cooldown"
+from = "blocked"
 to = "ready"
 conditions = {
-"ready": SubResource("Resource_mjbff")
+"ready": SubResource("Resource_0ig35")
 }
 priority = 0
 
@@ -354,6 +351,19 @@ from = "cooldown"
 to = "blocked"
 conditions = {
 "blocked": SubResource("Resource_bsyyy")
+}
+priority = 0
+
+[sub_resource type="Resource" id="Resource_mjbff"]
+script = ExtResource("11_c2rr6")
+name = "ready"
+
+[sub_resource type="Resource" id="Resource_wp55r"]
+script = ExtResource("9_wwxss")
+from = "cooldown"
+to = "ready"
+conditions = {
+"ready": SubResource("Resource_mjbff")
 }
 priority = 0
 
@@ -410,7 +420,10 @@ transitions = {
 }
 name = ""
 
-[node name="player" type="Node2D" node_paths=PackedStringArray("softbody", "decorations", "cursor_radials", "hurtbox", "dash_collider")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_u7su2"]
+radius = 54.0093
+
+[node name="player" type="Node2D" node_paths=PackedStringArray("softbody", "decorations", "cursor_radials", "hurtbox", "dash_collider", "cast_light", "powderviewport")]
 physics_interpolation_mode = 2
 texture_filter = 1
 script = ExtResource("3_huhpb")
@@ -422,6 +435,8 @@ spell = ExtResource("4_0rt85")
 cursor_radials = NodePath("CursorRadials")
 hurtbox = NodePath("hurtbox")
 dash_collider = NodePath("dash_collider")
+cast_light = NodePath("hurtbox/PointLight2D")
+powderviewport = NodePath("")
 
 [node name="slime_soft_body" parent="." instance=ExtResource("5_srknk")]
 
@@ -458,14 +473,20 @@ collision_mask = 128
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_jk8vh")
 
+[node name="PointLight2D" type="PointLight2D" parent="hurtbox"]
+position = Vector2(-9.53674e-07, -3)
+color = Color(0.725578, 0.379836, 0.966135, 1)
+texture = SubResource("GradientTexture2D_cotux")
+
 [node name="health_manager" type="Node" parent="."]
 script = ExtResource("13_ewdvp")
 
-[node name="dash_collider" type="Area2D" parent="." node_paths=PackedStringArray("ready_indicator", "blocked_indicator", "cooldown_indicator")]
+[node name="dash_collider" type="Area2D" parent="." node_paths=PackedStringArray("ready_indicator", "blocked_indicator", "cooldown_indicator", "dash_hitbox")]
 script = ExtResource("15_d5r7u")
 ready_indicator = NodePath("small_violet_orb")
 blocked_indicator = NodePath("small_red_orb2")
 cooldown_indicator = NodePath("small_yellow_orb")
+dash_hitbox = NodePath("dash_hitbox")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dash_collider"]
 rotation = 1.5708
@@ -513,6 +534,13 @@ texture_scale = 2.0
 [node name="StateMachinePlayer" type="Node" parent="dash_collider"]
 script = ExtResource("6_l0ojx")
 state_machine = SubResource("Resource_ltr0e")
+
+[node name="dash_hitbox" type="Area2D" parent="dash_collider"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dash_collider/dash_hitbox"]
+shape = SubResource("CircleShape2D_u7su2")
 
 [connection signal="transited" from="player_state" to="." method="_on_player_state_transited"]
 [connection signal="updated" from="player_state" to="." method="_on_player_state_updated"]

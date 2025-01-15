@@ -1,7 +1,9 @@
-[gd_scene load_steps=40 format=4 uid="uid://dj7ftalc7elqo"]
+[gd_scene load_steps=41 format=4 uid="uid://dj7ftalc7elqo"]
 
 [ext_resource type="Script" path="res://levels/tutorial/new_format_controller.gd" id="1_bujsy"]
 [ext_resource type="PackedScene" uid="uid://jlapgjyjth5c" path="res://parallax/night_desert.tscn" id="4_hvlg6"]
+[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="25_gbg2g"]
+[ext_resource type="Script" path="res://addons/powder_toy_godot/sustained_powder.gd" id="26_562ti"]
 [ext_resource type="Script" path="res://event_locations/scenes/home/camera.gd" id="36_o3lc3"]
 [ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="37_38x5w"]
 [ext_resource type="Texture2D" uid="uid://dl4vhwi1n1ip1" path="res://art/super_pixel/kasakasa_desert/pieces/frozen/terrain_fill.png" id="38_faanc"]
@@ -23,7 +25,6 @@
 [ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="55_t6ug3"]
 [ext_resource type="PackedScene" uid="uid://dw5ygteiex2s3" path="res://levels/tutorial/turret/turret.tscn" id="56_jn7d6"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="56_rjwxo"]
-[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="58_1qeca"]
 [ext_resource type="PackedScene" uid="uid://dbkh866uwj432" path="res://levels/tutorial/level_ui.tscn" id="59_1xqvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_im3y5"]
@@ -279,13 +280,17 @@ camera_offset = Vector2(200, 0)
 camera = NodePath("../Node/Camera2D")
 powderviewport = NodePath("../PowderViewport")
 
-[node name="PowderViewport" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("58_1qeca")]
-position = Vector2(-159, -206)
-scale = Vector2(3, 3)
-cam = NodePath("../Node/Camera2D")
-
 [node name="player" parent="." instance=ExtResource("49_h7rnb")]
 position = Vector2(-171, 63)
+
+[node name="PowderViewport" parent="." instance=ExtResource("25_gbg2g")]
+position = Vector2(-145, -212)
+scale = Vector2(3, 3)
+
+[node name="Node" type="Node" parent="PowderViewport" node_paths=PackedStringArray("powderviewport")]
+script = ExtResource("26_562ti")
+duration = 10.0
+powderviewport = NodePath("..")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(6, -8)
@@ -296,5 +301,5 @@ tile_set = SubResource("TileSet_0ryh5")
 
 [connection signal="activated" from="Turret" to="." method="_on_turret_activated"]
 [connection signal="activated" from="Turret2" to="." method="_on_turret_activated"]
-[connection signal="ready" from="PowderViewport" to="Turret" method="_on_powder_viewport_ready"]
-[connection signal="ready" from="PowderViewport" to="Turret2" method="_on_powder_viewport_ready"]
+
+[editable path="PowderViewport"]

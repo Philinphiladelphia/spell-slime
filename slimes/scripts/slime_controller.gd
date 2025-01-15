@@ -143,6 +143,17 @@ func set_health(amount: float) -> void:
 
 func apply_damage(amount: float) -> void:
 	health -= amount
+	
+	var random_int = randi() % 9 + 1
+	SoundManager.play_sfx("slime_impact_" + str(random_int), 0, 0, 1.5)
+
+
+	var hit_marker: HitMarker = GunUtils.hit_marker_scene.instantiate()
+	hit_marker.set_damage(amount)
+	hit_marker.modulate = GunUtils.gold_color
+	hit_marker.global_position = slime_position + Vector2(0,-10)
+	get_tree().root.add_child(hit_marker)
+	
 	$health_bar.current_health = health
 	$health_bar.show()
 	

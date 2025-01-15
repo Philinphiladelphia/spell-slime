@@ -1,0 +1,9 @@
+[
+	{"type": 0, "element": 129, "delay": 4, "decorations": ["horns", "eyes"]},
+	{"type": 0, "element": 4, "delay": 1, "decorations": ["beard", "eyes"]},
+	{"type": 0, "element": 10, "delay": 1, "decorations": ["beard", "eyes"]},
+	{"type": 0, "element": 21, "delay": 1, "decorations": ["beard", "eyes"]},
+	{"type": 0, "element": 10, "delay": 1, "decorations": ["beard", "eyes"]},
+	{"type": 0, "element": 129, "delay": 1, "decorations": ["beard", "eyes"]},
+	{"type": 0, "element": 87, "delay": 1, "decorations": ["beard", "eyes"]}
+]

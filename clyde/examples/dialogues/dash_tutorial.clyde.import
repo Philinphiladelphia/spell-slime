@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://dw78oclo041"
+path="res://.godot/imported/dash_tutorial.clyde-f6b7587569b0b185225cd0bf9c104638.res"
+
+[deps]
+
+source_file="res://clyde/examples/dialogues/dash_tutorial.clyde"
+dest_files=["res://.godot/imported/dash_tutorial.clyde-f6b7587569b0b185225cd0bf9c104638.res"]
+
+[params]
+
