@@ -1,10 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://yx00ajwnhbkv"]
+[gd_scene load_steps=10 format=3 uid="uid://yx00ajwnhbkv"]
 
 [ext_resource type="Texture2D" uid="uid://dskih2irpi8ut" path="res://art/super_pixel/Super Pixel Sewer/style_A/PNG/object_2x2_D.png" id="1_x3kkc"]
+[ext_resource type="Script" path="res://event_locations/scenes/shop/item_pedestal.gd" id="2_nave8"]
+[ext_resource type="Texture2D" uid="uid://bk6iqna4r5yp" path="res://art/super_pixel/Super Pixel Objects And Items 2(1)/Super Pixel Objects And Items 2/PNG/outline_dark/collectible_star_large_violet/frame0000.png" id="3_p8xho"]
+[ext_resource type="Script" path="res://event_locations/scenes/shop/sprite_hover.gd" id="4_hb4f5"]
+[ext_resource type="Script" path="res://event_locations/scenes/shop/item_collider.gd" id="5_icene"]
+[ext_resource type="PackedScene" uid="uid://5qv6seiq3sor" path="res://ui/scenes/symbols/input_glyph.tscn" id="6_nwlsp"]
 
-[node name="ItemPedestal" type="Node2D"]
+[sub_resource type="Gradient" id="Gradient_e5ksh"]
+offsets = PackedFloat32Array(0, 0.968127)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w2xwf"]
+gradient = SubResource("Gradient_e5ksh")
+fill = 1
+fill_from = Vector2(0.5, 0.495726)
+fill_to = Vector2(0.106838, 0.897436)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cs5p"]
+size = Vector2(29, 66)
+
+[node name="item_pedestal" type="Sprite2D"]
 texture_filter = 1
-
-[node name="Object2x2D" type="Sprite2D" parent="."]
-position = Vector2(15, 23)
 texture = ExtResource("1_x3kkc")
+script = ExtResource("2_nave8")
+
+[node name="item_sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -40)
+texture = ExtResource("3_p8xho")
+script = ExtResource("4_hb4f5")
+
+[node name="PointLight2D" type="PointLight2D" parent="item_sprite"]
+position = Vector2(-9.53674e-07, -3)
+texture = SubResource("GradientTexture2D_w2xwf")
+
+[node name="item_collider" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_icene")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="item_collider"]
+position = Vector2(-0.5, -18)
+shape = SubResource("RectangleShape2D_4cs5p")
+
+[node name="InputGlyph" parent="item_collider" node_paths=PackedStringArray("collider") instance=ExtResource("6_nwlsp")]
+scale = Vector2(0.2, 0.2)
+collider = NodePath("..")
+
+[connection signal="activated" from="item_collider/InputGlyph" to="." method="_on_input_glyph_activated" flags=6]
