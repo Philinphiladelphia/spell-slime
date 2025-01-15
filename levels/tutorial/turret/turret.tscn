@@ -34,7 +34,7 @@ metadata/graph_offset = Vector2(825, 222)
 [sub_resource type="Resource" id="Resource_hkscl"]
 script = ExtResource("5_b8mwj")
 name = "firing"
-metadata/graph_offset = Vector2(965, 222)
+metadata/graph_offset = Vector2(925, 222)
 
 [sub_resource type="Resource" id="Resource_5pl6g"]
 script = ExtResource("5_b8mwj")

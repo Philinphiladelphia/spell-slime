@@ -187,12 +187,12 @@ name = ""
 radius = 30.0
 height = 74.0
 
-[sub_resource type="Gradient" id="Gradient_mxs2o"]
+[sub_resource type="Gradient" id="Gradient_e5ksh"]
 offsets = PackedFloat32Array(0, 0.968127)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_cotux"]
-gradient = SubResource("Gradient_mxs2o")
+gradient = SubResource("Gradient_e5ksh")
 fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)

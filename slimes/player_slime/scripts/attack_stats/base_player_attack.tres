@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_skcs0")
 max_mana = 100
-mana_recharge_rate = 35.0
+mana_recharge_rate = 20.0
 melee_damage = 3
 melee_radius = 20.0
 melee_knockback = 300.0

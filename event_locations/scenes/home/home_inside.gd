@@ -60,11 +60,22 @@ func _on_dialogue_layer_dialogue_ended() -> void:
 		tutorial_layer.set_tutorial_text("get upstairs, defend the house")
 		
 	if dialogue_layer.dialogue_index == 3:
-		tutorial_layer.set_tutorial_text("defeat the enemy slime with the dash orb")
+		tutorial_layer.set_tutorial_text("defeat the enemy slime with the dash orb (Q)")
+		player.dash_disabled = false
+		spawner1.start_spawns()
+		level_ui.show()
 		
 	if dialogue_layer.dialogue_index == 4:
-		level_ui.show()
+		tutorial_layer.set_tutorial_text("defeat the enemy slimes with spells (right click + charge)")
+		player.cast_disabled = false
 		spawner2.start_spawns()
+		level_ui.show()
+		
+	if dialogue_layer.dialogue_index == 5:
+		tutorial_layer.set_tutorial_text("defeat the slime horde with the turret (e to activate)")
+		spawner3.start_spawns()
+		level_ui.show()
+
 
 func set_color(color: Color):
 	stage_lighting.color = color
@@ -75,9 +86,10 @@ func _on_input_glyph_activated() -> void:
 	
 	player.smp.set_trigger("deactivate")
 	
+	spell_vehicle.set_vehicle_state(true)
+	
 	sustain_powder2.sustain_powder(spell_vehicle.global_position + Vector2(0, -50), 2, 129)
 	sustain_powder.sustain_powder(spell_vehicle.global_position, 10, 49)
-	stop_audio()
 	
 	await get_tree().create_timer(5.0).timeout
 
@@ -101,6 +113,9 @@ func _on_input_glyph_activated() -> void:
 	spell_vehicle.standpipe.hide()
 	
 	await get_tree().create_timer(3.0).timeout
+	
+	spell_vehicle.set_vehicle_state(false)
+	stop_audio()
 	
 	SoundManager.play_sfx("click", 0, 5, 0.7)
 	stage_lighting.color = Color(0.4, 0.4, 0.4, 1)
@@ -134,32 +149,14 @@ func teleport_grandpa(pos: Vector2):
 	get_tree().root.add_child(teleport)
 	SoundManager.play_sfx("harpoon", 0, -12, 1)
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	spawner1.start_spawns()
-	if dialogue_layer.dialogue_index == 3:
-		level_ui.show()
-
-
 func _on_dialogue_collider_body_entered(body: Node2D) -> void:
 	if dialogue_layer.dialogue_index == 2:
 		tutorial_layer.set_tutorial_text("")
 		teleport_grandpa(gpa_third_location.global_position)
 		dialogue_layer.play_next_dialogue()
-		player.dash_disabled = false
 
-
-func _on_spawner_1_depleted() -> void:
+func _on_spawner_depleted() -> void:
 	level_ui.hide()
 	teleport_grandpa(player.slime_position + Vector2(0, -20))
 	tutorial_layer.set_tutorial_text("")
 	dialogue_layer.play_next_dialogue()
-	player.cast_disabled = false
-
-
-func _on_spawner_2_depleted() -> void:
-	pass # Replace with function body.
-
-
-func _on_spawner_3_depleted() -> void:
-	pass # Replace with function body.

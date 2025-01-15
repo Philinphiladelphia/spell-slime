@@ -21,7 +21,7 @@ func remove_active_turret():
 func fire_projectile(projectile_scene: String, firing_position: Vector2, damage: int, rot: float, velocity: float, max_lifespan: float, post_hit_lifespan: float, mass: float, gun_shake : float, size_addition: float) -> void:
 	var node_to_fire: Node = load(projectile_scene).instantiate()
 	
-	#node_to_fire.scale = node_to_fire.scale + Vector2(size_addition, size_addition)
+	#node_to_fire.set_child_scale(Vector2(1+size_addition, 1+size_addition))
 	
 	node_to_fire.damage = damage
 	node_to_fire.max_projectile_lifespan = max_lifespan
