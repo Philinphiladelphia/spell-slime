@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://yx00ajwnhbkv"]
+
+[ext_resource type="Texture2D" uid="uid://dskih2irpi8ut" path="res://art/super_pixel/Super Pixel Sewer/style_A/PNG/object_2x2_D.png" id="1_x3kkc"]
+
+[node name="ItemPedestal" type="Node2D"]
+texture_filter = 1
+
+[node name="Object2x2D" type="Sprite2D" parent="."]
+position = Vector2(15, 23)
+texture = ExtResource("1_x3kkc")
