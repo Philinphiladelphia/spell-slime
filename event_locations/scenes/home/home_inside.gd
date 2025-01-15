@@ -16,6 +16,8 @@ extends "res://event_locations/event_base.gd"
 @export var evil_sky: Node2D
 
 @export var powder_second_location: Node2D
+@export var powder_third_location: Node2D
+@export var powder_fourth_location: Node2D
 
 @export var turret: Turret
 
@@ -68,11 +70,13 @@ func _on_dialogue_layer_dialogue_ended() -> void:
 	if dialogue_layer.dialogue_index == 4:
 		tutorial_layer.set_tutorial_text("defeat the enemy slimes with spells (right click + charge)")
 		player.cast_disabled = false
+		powder_viewport.global_position = powder_third_location.global_position
 		spawner2.start_spawns()
 		level_ui.show()
 		
 	if dialogue_layer.dialogue_index == 5:
 		tutorial_layer.set_tutorial_text("defeat the slime horde with the turret (e to activate)")
+		powder_viewport.global_position = powder_fourth_location.global_position
 		spawner3.start_spawns()
 		level_ui.show()
 
