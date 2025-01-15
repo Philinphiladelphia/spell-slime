@@ -65,6 +65,11 @@ func _ready() -> void:
 	DialogueController.activated.connect(deactivate_with_radials)
 	DialogueController.deactivated.connect(activate_with_radials)
 	
+	PlayerState.max_mana = player_attack_stats.max_mana
+	PlayerState.max_health = max_health
+	
+	PlayerState.initialized.emit()
+	
 	if cursor_radials:
 		cursor_radials.set_rad_1_min_max(movement_stats.min_jump, movement_stats.max_jump_power)
 		cursor_radials.set_rad_2_min_max(0, movement_stats.dash_cooldown)
@@ -76,6 +81,9 @@ func _process(delta: float) -> void:
 	time_since_last_dash += delta
 	
 	slime_position = softbody.get_bones_center_position()
+	PlayerState.player_location = slime_position
+	PlayerState.mana = mana
+	PlayerState.health = health
 	
 	state = smp.get_current()
 	

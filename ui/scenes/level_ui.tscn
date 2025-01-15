@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://dbkh866uwj432"]
 
-[ext_resource type="Script" path="res://levels/tutorial/level_ui_controller.gd" id="1_hjtyc"]
+[ext_resource type="Script" path="res://ui/scenes/level_ui_controller.gd" id="1_hjtyc"]
 [ext_resource type="Texture2D" uid="uid://68jhgoli1ida" path="res://art/super_pixel/Super Pixel Sci-Fi UI - Mechapunk/meter_icons/hp_green.png" id="1_ktvh1"]
 [ext_resource type="PackedScene" uid="uid://1aogrhbfhv37" path="res://spell_machine_tower/scenes/horizontal_bar.tscn" id="2_3mkw2"]
 [ext_resource type="LabelSettings" uid="uid://c34qgwo4ca7bk" path="res://art/upgrade_tree/assets/major_font.tres" id="3_d1ck5"]
@@ -32,7 +32,7 @@ script = ExtResource("1_hjtyc")
 hp_bar = NodePath("Control/MarginContainer/VBoxContainer/HBoxContainer/SpellwardHealthBar")
 ammo_bar = NodePath("Control/MarginContainer/VBoxContainer/HBoxContainer2/SpellwardHealthBar2")
 mana_bar = NodePath("Control/MarginContainer/VBoxContainer/HBoxContainer3/SpellwardHealthBar2")
-enemy_hp_bar = NodePath("Control/MarginContainer2/VBoxContainer/HBoxContainer/SpellwardHealthBar")
+enemy_hp_bar = NodePath("Control/MarginContainer2/VBoxContainer/enemy_hp_container/enemy_health_bar")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -171,23 +171,24 @@ theme_override_constants/margin_top = 10
 layout_mode = 2
 theme_override_constants/separation = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer"]
+[node name="enemy_hp_container" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/enemy_hp_container"]
 texture_filter = 1
 layout_mode = 2
 texture = SubResource("AtlasTexture_m53pp")
 stretch_mode = 3
 
-[node name="SpellwardHealthBar" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer" instance=ExtResource("2_3mkw2")]
+[node name="enemy_health_bar" parent="Control/MarginContainer2/VBoxContainer/enemy_hp_container" instance=ExtResource("2_3mkw2")]
 z_index = 10
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("9_1dthp")
 theme_override_font_sizes/font_size = 40
 
-[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer/SpellwardHealthBar"]
+[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/enemy_hp_container/enemy_health_bar"]
 visible = false
 z_index = 2
 layout_mode = 1

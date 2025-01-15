@@ -25,7 +25,7 @@
 [ext_resource type="Script" path="res://levels/scripts/track_slimes.gd" id="55_t6ug3"]
 [ext_resource type="PackedScene" uid="uid://dw5ygteiex2s3" path="res://levels/tutorial/turret/turret.tscn" id="56_jn7d6"]
 [ext_resource type="Script" path="res://slimes/spawn_slime.gd" id="56_rjwxo"]
-[ext_resource type="PackedScene" uid="uid://dbkh866uwj432" path="res://levels/tutorial/level_ui.tscn" id="59_1xqvj"]
+[ext_resource type="PackedScene" uid="uid://dbkh866uwj432" path="res://ui/scenes/level_ui.tscn" id="59_1xqvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_im3y5"]
 texture = ExtResource("38_faanc")

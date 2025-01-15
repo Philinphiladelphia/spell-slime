@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi0oy2if357sn"]
+[gd_scene load_steps=5 format=3 uid="uid://bi0oy2if357sn"]
 
 [ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_stuct"]
 [ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://gloot/tests/data/item_definitions_basic.tres" id="2_gr1l2"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="3_jx17y"]
+[ext_resource type="PackedScene" uid="uid://dhv7j7wwvude4" path="res://autoloads/item_system/default_item.tscn" id="4_4xgvw"]
 
 [node name="common_items" type="Node"]
 script = ExtResource("1_stuct")
@@ -13,6 +14,7 @@ script = ExtResource("3_jx17y")
 protoset = ExtResource("2_gr1l2")
 prototype_id = "minimal_item"
 properties = {
+"cost": 30,
 "description": "It gently pulses with energy",
 "dmg": 10.0,
 "image": "res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/gem_A_large_violet/frame0000.png",
@@ -21,23 +23,14 @@ properties = {
 "secondary_projectile_dmg": 50.0
 }
 
-[node name="slime_heart" type="Node" parent="."]
-script = ExtResource("3_jx17y")
-protoset = ExtResource("2_gr1l2")
-prototype_id = "item1"
-properties = {
-"description": "Good for what ails you",
-"image": "res://art/super_pixel/Super Pixel Item Pickups Fantasy Pack 1/PNG/fp1_heart_A_large_green/frame0000.png",
-"max_health": 500.0,
-"name": "slime_heart",
-"rarity": "common"
-}
+[node name="slime_heart" parent="." instance=ExtResource("4_4xgvw")]
 
 [node name="slime_crystal" type="Node" parent="."]
 script = ExtResource("3_jx17y")
 protoset = ExtResource("2_gr1l2")
 prototype_id = "item2"
 properties = {
+"cost": 50,
 "description": "Feel the power!",
 "image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/relic_green_large_C/frame0000.png",
 "max_rotation_speed": 0.05,

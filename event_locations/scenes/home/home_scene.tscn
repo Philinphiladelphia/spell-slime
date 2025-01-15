@@ -2815,6 +2815,8 @@ texture = ExtResource("131_355gv")
 
 [node name="player" parent="." instance=ExtResource("134_6e3ea")]
 position = Vector2(-276, 90)
+cast_disabled = true
+dash_disabled = true
 
 [node name="dialogue_layer" type="CanvasLayer" parent="."]
 script = ExtResource("133_b1qht")

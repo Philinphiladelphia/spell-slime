@@ -45,6 +45,8 @@ var is_dead: bool = false
 
 var original_color: Color = Color(1, 1, 1, 1)
 
+var crystal_type = "blue"
+
 @export var decorations: Array[Node2D]
 
 # slimes should be able to jump over the tower and reverse course.
@@ -197,6 +199,8 @@ func kill_slime() -> void:
 	
 	is_powdering = 0
 	is_dead = true
+	
+	CrystalUtils.spawn_crystal(slime_position, crystal_type)
 	
 	garbage_collect_timer.start()
 	powder_timer.stop()

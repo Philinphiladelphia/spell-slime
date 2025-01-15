@@ -4,6 +4,8 @@ var buttonsound = "reward_button"
 var item: InventoryItem
 @onready var light: PointLight2D = $item_sprite/PointLight2D
 
+@export var has_cost: bool = false
+
 #next steps:
 # make pedestals with cost
 # make slimes drop crystals that suck into the player

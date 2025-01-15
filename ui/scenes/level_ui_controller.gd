@@ -6,27 +6,34 @@ extends CanvasLayer
 @export var mana_bar: HealthBar
 @export var enemy_hp_bar: HealthBar
 
+@export var enemy_hp_hidden: bool = false
+
 var _slime_tracker: SlimeTracker
-var _player: PlayerController
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ammo_bar.set_bar(0)
 	
-func init_level_ui(slime_tracker: SlimeTracker, player: PlayerController):
-	hp_bar.init_bar(player.max_health)
-	mana_bar.init_bar(player.player_attack_stats.max_mana)
+	PlayerState.initialized.connect(init_player_bars)
 	
+	if enemy_hp_hidden:
+		%enemy_hp_container.hide()
+	
+func init_player_bars():
+	hp_bar.init_bar(PlayerState.max_health)
+	mana_bar.init_bar(PlayerState.max_mana)
+	
+
+func init_level_ui(slime_tracker: SlimeTracker):
 	_slime_tracker = slime_tracker
-	_player = player
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not (_slime_tracker and _player):
-		return
+	hp_bar.set_bar(PlayerState.health)
+	mana_bar.set_bar(PlayerState.mana)
 	
-	hp_bar.set_bar(_player.health)
-	mana_bar.set_bar(_player.mana)
+	if not (_slime_tracker):
+		return
 	
 	enemy_hp_bar.max_value = _slime_tracker.max_health_seen
 	enemy_hp_bar.set_bar(_slime_tracker.current_slime_health)
