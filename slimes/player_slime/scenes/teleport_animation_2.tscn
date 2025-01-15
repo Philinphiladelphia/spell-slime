@@ -1,0 +1,89 @@
+[gd_scene load_steps=20 format=3 uid="uid://lf00tqq8io3s"]
+
+[ext_resource type="Script" path="res://slimes/player_slime/scripts/teleport_animation.gd" id="121_otydv"]
+[ext_resource type="Texture2D" uid="uid://c37o6eqevmfn4" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0000.png" id="122_n8yv0"]
+[ext_resource type="Texture2D" uid="uid://bdv8pxb34wlfe" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0001.png" id="123_8ean7"]
+[ext_resource type="Texture2D" uid="uid://ce8ptngv2xhrx" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0002.png" id="124_3htbf"]
+[ext_resource type="Texture2D" uid="uid://dkfnrpxbafkbt" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0003.png" id="125_j5o25"]
+[ext_resource type="Texture2D" uid="uid://qjt44a70pd54" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0004.png" id="126_pkqqw"]
+[ext_resource type="Texture2D" uid="uid://du4e131panrma" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0005.png" id="127_3o2dr"]
+[ext_resource type="Texture2D" uid="uid://cb15coytw6mn5" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0006.png" id="128_ej884"]
+[ext_resource type="Texture2D" uid="uid://c8crh5myu37en" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0007.png" id="129_kj26k"]
+[ext_resource type="Texture2D" uid="uid://dpp3synhrvvq0" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0008.png" id="130_1hpyc"]
+[ext_resource type="Texture2D" uid="uid://bt7rlfcuuie20" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0009.png" id="131_pdr3j"]
+[ext_resource type="Texture2D" uid="uid://td4j8jtul6ua" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0010.png" id="132_onynd"]
+[ext_resource type="Texture2D" uid="uid://d3klolluovcld" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0011.png" id="133_8auhh"]
+[ext_resource type="Texture2D" uid="uid://du1uoekl357dk" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0012.png" id="134_7g781"]
+[ext_resource type="Texture2D" uid="uid://fuwuglxdp1y" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0013.png" id="135_mt2wn"]
+[ext_resource type="Texture2D" uid="uid://bxcsbveksbj48" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0014.png" id="136_5ln5j"]
+[ext_resource type="Texture2D" uid="uid://c8plx4ojxxv8b" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0015.png" id="137_j8ux2"]
+[ext_resource type="Texture2D" uid="uid://d2qmhfgl06nb7" path="res://art/super_pixel/Super Pixel Effects Pack 3/PNG/fx3_magic_spawn_large_blue/frame0016.png" id="138_mqxx4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_roq8y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("122_n8yv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_8ean7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_3htbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_j5o25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_pkqqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_3o2dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_ej884")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_kj26k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_1hpyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_pdr3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_onynd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_8auhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_7g781")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_mt2wn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_5ln5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_j8ux2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_mqxx4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 60.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_roq8y")
+frame = 16
+frame_progress = 1.0
+script = ExtResource("121_otydv")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

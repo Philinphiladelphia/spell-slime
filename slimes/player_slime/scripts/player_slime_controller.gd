@@ -50,7 +50,7 @@ var slime_position: Vector2
 
 var soft_body_scene: PackedScene = preload("res://slimes/player_slime/scenes/slime_soft_body.tscn")
 
-@export var teleport_animation: PackedScene = preload("res://slimes/player_slime/scenes/teleport_animation.tscn")
+@export var teleport_animation: PackedScene = preload("res://slimes/player_slime/scenes/teleport_animation_2.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

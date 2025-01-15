@@ -187,12 +187,12 @@ name = ""
 radius = 30.0
 height = 74.0
 
-[sub_resource type="Gradient" id="Gradient_e5ksh"]
+[sub_resource type="Gradient" id="Gradient_raf4t"]
 offsets = PackedFloat32Array(0, 0.968127)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_cotux"]
-gradient = SubResource("Gradient_e5ksh")
+gradient = SubResource("Gradient_raf4t")
 fill = 1
 fill_from = Vector2(0.5, 0.495726)
 fill_to = Vector2(0.106838, 0.897436)
@@ -423,7 +423,7 @@ name = ""
 [sub_resource type="CircleShape2D" id="CircleShape2D_u7su2"]
 radius = 54.0093
 
-[node name="player" type="Node2D" node_paths=PackedStringArray("softbody", "decorations", "cursor_radials", "hurtbox", "dash_collider", "cast_light", "powderviewport")]
+[node name="player" type="Node2D" node_paths=PackedStringArray("softbody", "decorations", "cursor_radials", "hurtbox", "dash_collider", "cast_light")]
 physics_interpolation_mode = 2
 texture_filter = 1
 script = ExtResource("3_huhpb")
@@ -436,7 +436,6 @@ cursor_radials = NodePath("CursorRadials")
 hurtbox = NodePath("hurtbox")
 dash_collider = NodePath("dash_collider")
 cast_light = NodePath("hurtbox/PointLight2D")
-powderviewport = NodePath("")
 
 [node name="slime_soft_body" parent="." instance=ExtResource("5_srknk")]
 
