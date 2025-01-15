@@ -1,3 +1,4 @@
+class_name Projectile
 extends RigidBody2D
 
 signal insert_powder_circle(x: int, y: int, type: int, size: int)
@@ -48,6 +49,10 @@ func _ready() -> void:
 	add_child(fade_timer)
 	fade_timer.connect("timeout", _start_fade)
 	
+func set_child_scale(new_scale: Vector2):
+	for child in get_children():
+		child.scale = new_scale
+
 func _lifespan_end():
 	died_of_old_age = true
 	death_timer.start()

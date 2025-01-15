@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://brqki6a6mcmul"]
+[gd_scene load_steps=14 format=3 uid="uid://brqki6a6mcmul"]
 
 [ext_resource type="Script" path="res://upgrade_tree/scripts/projectile.gd" id="1_rma2u"]
 [ext_resource type="PackedScene" uid="uid://iss8glnahkin" path="res://upgrade_tree/scenes/on_hit_animation_2.tscn" id="2_evg65"]
@@ -43,13 +43,22 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_mxs2o"]
+offsets = PackedFloat32Array(0, 0.968127)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uv2qa"]
+gradient = SubResource("Gradient_mxs2o")
+fill = 1
+fill_from = Vector2(0.5, 0.495726)
+fill_to = Vector2(0.106838, 0.897436)
+
 [node name="projectile" type="RigidBody2D"]
 texture_filter = 1
 position = Vector2(3, 2)
 scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 3
-continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 5
 script = ExtResource("1_rma2u")
@@ -83,5 +92,11 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_5u3m0")
 autoplay = "default"
 frame_progress = 0.735715
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(11.5, -1.5)
+color = Color(0.725578, 0.379836, 0.966135, 1)
+texture = SubResource("GradientTexture2D_uv2qa")
+texture_scale = 0.5
 
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

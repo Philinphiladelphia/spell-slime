@@ -5,7 +5,7 @@ var powder_interval: float = 2
 var powder_duration: float = 0.5
 
 var max_health: float = 200.0
-var jump_power: float = 100
+var jump_power: float = 150
 var element_numbers: PackedInt32Array = [21, 3, 4, 6, 7]
 
 var decorations: Array[Sprite2D]

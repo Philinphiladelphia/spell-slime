@@ -18,6 +18,7 @@ extends Resource
 
 @export var mass_scaling: float = 0.2
 @export var velocity_scaling: float = 30.0
+@export var cast_radius_scaling = 0.5
 
 @export var projectile_type: String = "res://upgrade_tree/scenes/harpoon_projectile.tscn"
 @export var sound: String = "harpoon"

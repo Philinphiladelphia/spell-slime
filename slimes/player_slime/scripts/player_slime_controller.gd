@@ -127,7 +127,8 @@ func deactivate_with_freeze():
 	freeze()
 	
 func activate_with_radials():
-	smp.set_trigger("activate")
+	if not GunUtils.active_turret:
+		smp.set_trigger("activate")
 	cursor_radials.show()
 	
 func deactivate_with_radials():
@@ -222,6 +223,8 @@ func _on_player_state_transited(from: Variant, to: Variant) -> void:
 		cancel_cast()
 
 func handle_cast(delta:float):	
+	if mana <= 0:
+		return
 	cast_power = cast_power + (spell.per_second_mana_consumption * delta)
 	mana -= spell.per_second_mana_consumption * delta
 
@@ -234,12 +237,11 @@ func cast_spell(cast_power:int):
 	var damage: int = spell.damage + (spell.damage_scaling * cast_power)
 	var mass: float = spell.mass + (spell.mass_scaling * cast_power)
 	var velocity: float = spell.velocity + (spell.velocity_scaling * cast_power)
-	var size_addition: float = spell.size_scaling * cast_power
-	
+
 	var cast_direction = (get_global_mouse_position() - slime_position).normalized()
-	var cast_location = slime_position + (cast_direction) * cast_radius			
+	var cast_location = slime_position + (cast_direction) * (cast_radius + (cast_power * spell.cast_radius_scaling))			
 	
-	GunUtils.fire_projectile(spell.projectile_type, cast_location, damage, cast_direction.angle(), velocity, spell.max_lifespan, spell.post_hit_lifespan, mass, spell.shake, size_addition)
+	GunUtils.fire_projectile(spell.projectile_type, cast_location, damage, cast_direction.angle(), velocity, spell.max_lifespan, spell.post_hit_lifespan, mass, spell.shake, 0)
 
 func handle_jump(delta:float):
 	if time_since_last_jump < movement_stats.min_jump_interval:
