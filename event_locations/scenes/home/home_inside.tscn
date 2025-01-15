@@ -2109,7 +2109,7 @@ size = Vector2(203, 239.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amqnm"]
 size = Vector2(202, 196)
 
-[node name="EventBase" type="Node2D" node_paths=PackedStringArray("spell_vehicle", "grandpa", "gpa_second_location", "gpa_third_location", "powder_viewport", "sustain_powder", "sustain_powder2", "stage_lighting", "day_env", "evil_env", "day_sky", "evil_sky", "powder_second_location", "turret", "spawner1", "spawner2", "spawner3", "slime_tracker", "level_ui", "front_door", "dialogue_layer", "tutorial_layer", "player")]
+[node name="EventBase" type="Node2D" node_paths=PackedStringArray("spell_vehicle", "grandpa", "gpa_second_location", "gpa_third_location", "powder_viewport", "sustain_powder", "sustain_powder2", "stage_lighting", "day_env", "evil_env", "day_sky", "evil_sky", "powder_second_location", "powder_third_location", "powder_fourth_location", "turret", "spawner1", "spawner2", "spawner3", "slime_tracker", "level_ui", "front_door", "dialogue_layer", "tutorial_layer", "player")]
 texture_filter = 1
 script = ExtResource("1_3olva")
 spell_vehicle = NodePath("SpellVehicle")
@@ -2125,6 +2125,8 @@ evil_env = NodePath("evil_env")
 day_sky = NodePath("Camera2D/day")
 evil_sky = NodePath("Camera2D/evil")
 powder_second_location = NodePath("powder_second_location")
+powder_third_location = NodePath("powder_third_location")
+powder_fourth_location = NodePath("powder_fourth_location")
 turret = NodePath("Turret")
 spawner1 = NodePath("spawner1")
 spawner2 = NodePath("spawner2")
@@ -2636,7 +2638,10 @@ tile_set = SubResource("TileSet_jluf0")
 position = Vector2(-914, -201)
 
 [node name="powder_third_location" type="Node2D" parent="."]
-position = Vector2(-1854, -253)
+position = Vector2(-1460, -231)
+
+[node name="powder_fourth_location" type="Node2D" parent="."]
+position = Vector2(-1460, -231)
 
 [node name="top_home" type="Node2D" parent="."]
 
