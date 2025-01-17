@@ -115,6 +115,15 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseMotion and is_drawing:
 		mouse_pos = event.position
 
+func draw_lines_between_points(points: Array, radius: float, element: int) -> void:
+	if points.size() < 2:
+		return # Need at least two points to draw a line
+
+	for i in range(points.size() - 1):
+		var start: Vector2 = transform_position(points[i])
+		var end: Vector2 = transform_position(points[i + 1])
+		powder_instance.powder_line(start.x, start.y, end.x, end.y, radius, element)
+
 func _on_clear_edges_timer_timeout() -> void:
 	clear_outer_area()
 

@@ -1,6 +1,6 @@
 extends Node
 
-var crystals: int = 0
+var crystals: int = 100
 
 var max_health: int = 100
 var health: int = 100

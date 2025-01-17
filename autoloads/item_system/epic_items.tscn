@@ -13,6 +13,7 @@ script = ExtResource("3_l82dl")
 protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
+"cost": 200,
 "description": "Light in the darkness",
 "image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/lantern_large_blue_inactive.png",
 "name": "blue_lantern",
@@ -24,6 +25,7 @@ script = ExtResource("3_l82dl")
 protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
+"cost": 250,
 "description": "The Slime Knights protected the innocent in eons past",
 "image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_defense_plus_large_green.png",
 "name": "slime_knight",
@@ -35,6 +37,7 @@ script = ExtResource("3_l82dl")
 protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
+"cost": 250,
 "description": "When one of these is thrown down, things are about to get squishy",
 "image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_power_plus_large_green.png",
 "name": "slime_gauntlet",
@@ -46,6 +49,7 @@ script = ExtResource("3_l82dl")
 protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
+"cost": 200,
 "description": "A rolling slime gathers no moss",
 "image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/powerup_speed_plus_large_green.png",
 "name": "slime_skates",
@@ -57,6 +61,7 @@ script = ExtResource("3_l82dl")
 protoset = ExtResource("2_ijlcr")
 prototype_id = "item2"
 properties = {
+"cost": 300,
 "description": "In dire need, the chosen slime will awaken the legend",
 "image": "res://art/super_pixel/Super Pixel Objects And Items 2/PNG/outline_none/relic_green_large_B/frame0000.png",
 "name": "super_slime_capsule",

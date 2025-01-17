@@ -49,11 +49,10 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	slime_tracker.set_slime_goal_position(player.slime_position)
 	
-func stop_audio():
-	for child in get_children():
-		if child is AudioStreamPlayer2D:
-			child.stop()
-
+	if dialogue_layer.dialogue_index >= 6:
+		$Camera2D.apply_shake(2)
+		$exit_portal.show()
+	
 func _on_dialogue_layer_dialogue_ended() -> void:
 	if dialogue_layer.dialogue_index == 1:
 		tutorial_layer.set_tutorial_text("explore the house")
@@ -76,15 +75,23 @@ func _on_dialogue_layer_dialogue_ended() -> void:
 		
 	if dialogue_layer.dialogue_index == 5:
 		tutorial_layer.set_tutorial_text("defeat the slime horde with the turret (e to activate)")
+		turret.disabled = false
 		powder_viewport.global_position = powder_fourth_location.global_position
 		spawner3.start_spawns()
 		level_ui.show()
+		
+	if dialogue_layer.dialogue_index == 6:
+		level_ui.hide()
+		$exit_portal.activated = true
+		$exit_portal.suck_slime = true
 
 
 func set_color(color: Color):
 	stage_lighting.color = color
 
 func _on_input_glyph_activated() -> void:
+	$InputGlyph.disabled = true
+	
 	SoundManager.play_sfx("bell1", 0, 0, 1)
 	tutorial_layer.set_tutorial_text("")
 	
@@ -92,11 +99,15 @@ func _on_input_glyph_activated() -> void:
 	
 	spell_vehicle.set_vehicle_state(true)
 	
+	$music.stop()
+	
+	$Camera2D.apply_shake(10)
 	sustain_powder2.sustain_powder(spell_vehicle.global_position + Vector2(0, -50), 2, 129)
 	sustain_powder.sustain_powder(spell_vehicle.global_position, 10, 49)
 	
 	await get_tree().create_timer(5.0).timeout
-
+	$Camera2D.apply_shake(10)
+	SoundManager.play_sfx("harpoon", 0, -5, 1)
 	turret.show()
 		
 	front_door.queue_free()
@@ -105,21 +116,31 @@ func _on_input_glyph_activated() -> void:
 
 	await get_tree().create_timer(1.0).timeout
 	SoundManager.play_sfx("bell4", 0, 0, 0.7)
+	SoundManager.play_sfx("harpoon", 0, -5, 1)
+	$Camera2D.apply_shake(10)
 	spell_vehicle.turret.hide()
 	await get_tree().create_timer(1.0).timeout
 	SoundManager.play_sfx("bell2", 0, 0, 0.7)
+	SoundManager.play_sfx("harpoon", 0, -5, 1)
+	$Camera2D.apply_shake(10)
 	spell_vehicle.boiler.hide()
 	await get_tree().create_timer(1.0).timeout
 	SoundManager.play_sfx("bell3", 0, 0, 0.7)
+	SoundManager.play_sfx("harpoon", 0, -5, 1)
+	$Camera2D.apply_shake(10)
 	spell_vehicle.gears.hide()
 	await get_tree().create_timer(1.0).timeout
 	SoundManager.play_sfx("bell1", 0, 0, 1.2)
+	SoundManager.play_sfx("harpoon", 0, -5, 1)
+	$Camera2D.apply_shake(10)
 	spell_vehicle.standpipe.hide()
+	
+	for child in $ticking.get_children():
+		child.stop()
 	
 	await get_tree().create_timer(3.0).timeout
 	
 	spell_vehicle.set_vehicle_state(false)
-	stop_audio()
 	
 	SoundManager.play_sfx("click", 0, 5, 0.7)
 	stage_lighting.color = Color(0.4, 0.4, 0.4, 1)
@@ -164,3 +185,7 @@ func _on_spawner_depleted() -> void:
 	teleport_grandpa(player.slime_position + Vector2(0, -20))
 	tutorial_layer.set_tutorial_text("")
 	dialogue_layer.play_next_dialogue()
+
+func _on_exit_portal_portal_entered() -> void:
+	SoundManager.stop_all()
+	SceneLoader.load_scene("res://overworld/scenes/base_overworld.tscn")

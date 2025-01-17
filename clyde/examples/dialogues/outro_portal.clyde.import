@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://bonkjqkvo5v1p"
+path="res://.godot/imported/outro_portal.clyde-d9436973ac9bac3ecf7768d69da27187.res"
+
+[deps]
+
+source_file="res://clyde/examples/dialogues/outro_portal.clyde"
+dest_files=["res://.godot/imported/outro_portal.clyde-d9436973ac9bac3ecf7768d69da27187.res"]
+
+[params]
+

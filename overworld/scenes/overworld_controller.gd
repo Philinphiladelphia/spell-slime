@@ -8,7 +8,8 @@ func _ready() -> void:
 	overworld.set_node_state(worldgraph, 0, 1)
 	overworld.recalculate_map()
 	print(overworld.get_node_state(worldgraph, 0))
-
+	
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
