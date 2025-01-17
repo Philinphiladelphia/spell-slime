@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="WorldmapNodeData" load_steps=3 format=3 uid="uid://fjiy8nbgvcpy"]
+[gd_resource type="Resource" script_class="WorldmapNodeData" load_steps=4 format=3 uid="uid://fjiy8nbgvcpy"]
 
 [ext_resource type="Script" path="res://addons/worldmap_builder/resource_types/worldmap_node_data.gd" id="1_8ruw2"]
+[ext_resource type="PackedScene" uid="uid://b63ixs6crwuwt" path="res://event_locations/scenes/healing_fountain/healing_fountain_scene.tscn" id="1_85nea"]
 [ext_resource type="Texture2D" uid="uid://ds15a630gfmie" path="res://overworld/overworld_icons/multicolor/heart.png" id="2_j5cfb"]
 
 [resource]
@@ -13,4 +14,4 @@ desc = "heart"
 size_tier = 0
 cost = 1
 tags = Array[StringName]([])
-data = Array[Resource]([])
+data = Array[Resource]([ExtResource("1_85nea")])

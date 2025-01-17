@@ -39,6 +39,9 @@ func _ready() -> void:
 
 func get_health() -> int:
 	return powder_instance.count_element(health_element)
+	
+func count_element(element: int):
+	return powder_instance.count_element(element)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -126,6 +129,14 @@ func draw_lines_between_points(points: Array, radius: float, element: int) -> vo
 
 func _on_clear_edges_timer_timeout() -> void:
 	clear_outer_area()
+
+func draw_graph(graph: WorldmapGraph, radius: int, element:int):
+	var points : Array[Vector2] = []
+	
+	for i in len(graph.node_datas):
+		var rel_pos: Vector2 = graph.get_node_position(i)
+		points.append(rel_pos + graph.global_position)
+		draw_lines_between_points(points, radius, element)
 
 func clear_outer_area() -> void:
 	var width: int = 200

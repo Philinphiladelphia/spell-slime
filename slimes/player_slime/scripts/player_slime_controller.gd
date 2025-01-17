@@ -199,6 +199,20 @@ func prepare_cast(delta: float):
 		cast_power = 0
 		time_since_last_cast = 0.0
 
+func heal(amount: int):
+	if health >= max_health:
+		return
+		
+	var modified_amount: int = min(amount, max_health-health)
+	
+	health += modified_amount
+	
+	var heal = GunUtils.hit_marker_scene.instantiate()
+	heal.set_damage(modified_amount)
+	heal.modulate = GunUtils.green_color
+	heal.global_position = slime_position + Vector2(0,-10)
+	get_tree().root.add_child(heal)
+
 func handle_hits():
 	if hurtbox.has_overlapping_bodies():
 		var body: RigidBody2D = hurtbox.get_overlapping_bodies()[0]
