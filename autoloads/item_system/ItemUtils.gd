@@ -41,4 +41,4 @@ func get_random_item_from_pool(rarity: String) -> InventoryItem:
 		inventory_type.remove_item(item)
 		return item
 
-	return default_item
+	return default_item.duplicate()

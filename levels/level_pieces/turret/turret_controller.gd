@@ -21,6 +21,8 @@ extends Node2D
 
 @export var face_left: bool = false
 
+@export var disabled: bool = false
+
 var ammo = 0
 
 signal activated(turret: Turret)
@@ -35,6 +37,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if disabled:
+		input_glyph.disabled = true
+		return
+	else:
+		input_glyph.disabled = false
+	
 	if collision_area.has_overlapping_bodies():
 		smp.set_trigger("player_contact")
 	else:
@@ -44,6 +52,9 @@ func _on_turret_state_transited(from: Variant, to: Variant) -> void:
 	pass # Replace with function body.
 
 func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
+	if disabled:
+		return
+	
 	match state:
 		"inactive":
 			input_glyph.hide()

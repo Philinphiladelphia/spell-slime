@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://1bt0epycwmuy"
+path="res://.godot/imported/turret_tutorial.clyde-6a1d0c7a004d9c575d18aec25e673b87.res"
+
+[deps]
+
+source_file="res://clyde/examples/dialogues/turret_tutorial.clyde"
+dest_files=["res://.godot/imported/turret_tutorial.clyde-6a1d0c7a004d9c575d18aec25e673b87.res"]
+
+[params]
+

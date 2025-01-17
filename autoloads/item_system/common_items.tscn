@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi0oy2if357sn"]
+[gd_scene load_steps=4 format=3 uid="uid://bi0oy2if357sn"]
 
 [ext_resource type="Script" path="res://addons/gloot/core/inventory.gd" id="1_stuct"]
 [ext_resource type="Resource" uid="uid://nnxjxxu47mtj" path="res://gloot/tests/data/item_definitions_basic.tres" id="2_gr1l2"]
 [ext_resource type="Script" path="res://addons/gloot/core/inventory_item.gd" id="3_jx17y"]
-[ext_resource type="PackedScene" uid="uid://dhv7j7wwvude4" path="res://autoloads/item_system/default_item.tscn" id="4_4xgvw"]
 
 [node name="common_items" type="Node"]
 script = ExtResource("1_stuct")
@@ -22,8 +21,6 @@ properties = {
 "rarity": "common",
 "secondary_projectile_dmg": 50.0
 }
-
-[node name="slime_heart" parent="." instance=ExtResource("4_4xgvw")]
 
 [node name="slime_crystal" type="Node" parent="."]
 script = ExtResource("3_jx17y")

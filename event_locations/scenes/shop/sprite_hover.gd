@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 var original_texture_scale: float
 var random_offset: float

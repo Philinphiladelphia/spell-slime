@@ -51,7 +51,7 @@ polygon = PackedVector2Array(0, -8, 8, 0, 0, 8, -8, 0)
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_brsj0")
 autoplay = "default"
-frame_progress = 0.988306
+frame_progress = 0.934394
 
 [node name="player_area" type="Area2D" parent="."]
 collision_layer = 4

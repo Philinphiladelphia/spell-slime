@@ -16,9 +16,20 @@ func _ready() -> void:
 	
 	PlayerState.initialized.connect(init_player_bars)
 	
+	GunUtils.turret_activated.connect(show_ammo)
+	GunUtils.turret_deactivated.connect(hide_ammo)
+	
 	if enemy_hp_hidden:
 		%enemy_hp_container.hide()
+		
+	%crystal_number.text = str(PlayerState.crystals)
 	
+func hide_ammo():	
+	%ammo_container.hide()
+	
+func show_ammo():	
+	%ammo_container.show()
+
 func init_player_bars():
 	hp_bar.init_bar(PlayerState.max_health)
 	mana_bar.init_bar(PlayerState.max_mana)
@@ -31,6 +42,8 @@ func init_level_ui(slime_tracker: SlimeTracker):
 func _process(delta: float) -> void:
 	hp_bar.set_bar(PlayerState.health)
 	mana_bar.set_bar(PlayerState.mana)
+	
+	%crystal_number.text = str(PlayerState.crystals)
 	
 	if not (_slime_tracker):
 		return
