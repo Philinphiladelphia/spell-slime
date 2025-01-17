@@ -446,7 +446,7 @@ texture = ExtResource("18_3ubsm")
 [sub_resource type="TileSet" id="TileSet_mw2xu"]
 sources/0 = SubResource("TileSetAtlasSource_fwcfh")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qjvk6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt17x"]
 atlas = ExtResource("2_n1cce")
 region = Rect2(0, 88, 288, 8)
 
@@ -456,12 +456,12 @@ icon_modulate = Color(0.28, 0.28, 0.28, 0.388235)
 icon_border_modulate = Color(1, 1, 1, 1)
 connection_modulate = Color(1, 1, 1, 1)
 icon_borders = Array[Texture2D]([ExtResource("4_kr3f6")])
-straight_tex = SubResource("AtlasTexture_qjvk6")
+straight_tex = SubResource("AtlasTexture_qt17x")
 straight_tex_region = Rect2(0, 0, 288, 8)
 straight_tex_repeat = true
 priority = 0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yiu8b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hbhu"]
 atlas = ExtResource("2_n1cce")
 region = Rect2(0, 100, 288, 8)
 
@@ -471,12 +471,12 @@ icon_modulate = Color(1, 1, 1, 1)
 icon_border_modulate = Color(1, 1, 1, 1)
 connection_modulate = Color(1, 1, 1, 1)
 icon_borders = Array[Texture2D]([ExtResource("4_kr3f6")])
-straight_tex = SubResource("AtlasTexture_yiu8b")
+straight_tex = SubResource("AtlasTexture_1hbhu")
 straight_tex_region = Rect2(0, 0, 288, 8)
 straight_tex_repeat = true
 priority = -10
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gy5wp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhhl4"]
 atlas = ExtResource("2_n1cce")
 region = Rect2(0, 100, 288, 8)
 
@@ -486,7 +486,7 @@ icon_modulate = Color(1, 1, 1, 1)
 icon_border_modulate = Color(1, 1, 1, 1)
 connection_modulate = Color(1, 1, 1, 1)
 icon_borders = Array[Texture2D]([ExtResource("4_kr3f6")])
-straight_tex = SubResource("AtlasTexture_gy5wp")
+straight_tex = SubResource("AtlasTexture_fhhl4")
 straight_tex_region = Rect2(0, 0, 288, 8)
 straight_tex_repeat = true
 priority = -10

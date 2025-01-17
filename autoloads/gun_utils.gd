@@ -9,6 +9,7 @@ signal turret_deactivated
 
 var hit_marker_scene: PackedScene = preload("res://autoloads/hit_marker.tscn")
 var gold_color: Color = Color(0.832, 0.787, 0.116)
+var green_color: Color = Color(0.242, 0.782, 0.018)
 
 func set_active_turret(turret: Turret):
 	active_turret = turret

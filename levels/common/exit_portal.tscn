@@ -331,7 +331,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_du760"]
-radius = 18.0278
+radius = 4.80885
 
 [node name="exit_portal" type="AnimatedSprite2D"]
 texture_filter = 1
