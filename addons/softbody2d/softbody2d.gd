@@ -395,6 +395,11 @@ const MAX_REGIONS := 200
 
 #region CreateSoftbody
 
+func get_centerish_body():
+	var bodies = get_rigid_bodies()
+	var centerish_body = bodies[len(bodies)/2].rigidbody
+	return centerish_body
+
 ## Create debug regions. Good to visualize how softbody regions will look in the end
 func create_regions():
 	var voronoi_regions = _create_polygon2d()
@@ -857,6 +862,10 @@ func _create_rigid_body(skeleton: Skeleton2D, bone: Bone2D, mass, is_center: boo
 	collision_shape.shape = shape
 	collision_shape.name = shape_type + "Shape2D"
 	collision_shape.visible = show_shapes
+	
+	rigid_body.custom_integrator = true
+	rigid_body.continuous_cd = RigidBody2D.CCD_MODE_CAST_SHAPE
+	
 	rigid_body.mass = mass
 	rigid_body.gravity_scale = gravity_scale
 	rigid_body.constant_torque = constant_torque

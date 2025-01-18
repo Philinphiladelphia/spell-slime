@@ -226,7 +226,11 @@ func handle_hits():
 		var random_int = randi() % 9 + 1
 		SoundManager.play_sfx("slime_impact_" + str(random_int), 0, -6, 1)
 		
-		var damage_amount: int = body.get_parent().get_parent().damage
+		var damage_amount: int = 0
+		if body.get_parent() is SoftBody2D:
+			damage_amount = body.get_parent().get_parent().damage
+		else:
+			damage_amount = body.damage
 		
 		var hit_marker: HitMarker = GunUtils.hit_marker_scene.instantiate()
 		hit_marker.set_damage(damage_amount)
@@ -286,6 +290,9 @@ func handle_jump(delta:float):
 func handle_dash(delta: float):
 	var velocities: Array[Vector2]
 	var positions: Array[Vector2]
+	
+	# dash has 0.5 seconds of iframes
+	last_hit = Time.get_ticks_msec()
 	
 	if dash_collider.has_overlapping_bodies():
 		return
