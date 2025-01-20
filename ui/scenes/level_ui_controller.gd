@@ -8,7 +8,7 @@ extends CanvasLayer
 
 @export var enemy_hp_hidden: bool = false
 
-var _slime_tracker: SlimeTracker
+@export var _slime_tracker: SlimeTracker
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

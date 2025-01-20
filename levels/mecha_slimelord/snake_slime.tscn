@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=3 uid="uid://bx68gn03cvtwj"]
+[gd_scene load_steps=105 format=3 uid="uid://bx68gn03cvtwj"]
 
 [ext_resource type="Script" path="res://levels/mecha_slimelord/snake_slime.gd" id="1_1s8hh"]
 [ext_resource type="Texture2D" uid="uid://kftevsx25ln2" path="res://art/slimes/slime-8th_mouthless.png" id="1_hnkn3"]
@@ -511,6 +511,11 @@ script = ExtResource("27_7qefx")
 name = "strike"
 metadata/graph_offset = Vector2(685, 142)
 
+[sub_resource type="Resource" id="Resource_o5sn0"]
+script = ExtResource("27_7qefx")
+name = "telegraph"
+metadata/graph_offset = Vector2(565, 42)
+
 [sub_resource type="Resource" id="Resource_s08pl"]
 script = ExtResource("29_xmluj")
 from = "Entry"
@@ -518,16 +523,16 @@ to = "raised"
 conditions = {}
 priority = 0
 
-[sub_resource type="Resource" id="Resource_ks6d5"]
+[sub_resource type="Resource" id="Resource_duyu4"]
 script = ExtResource("28_qwnvo")
-name = "strike"
+name = "telegraph"
 
-[sub_resource type="Resource" id="Resource_cmtke"]
+[sub_resource type="Resource" id="Resource_fsl1g"]
 script = ExtResource("29_xmluj")
 from = "raised"
-to = "strike"
+to = "telegraph"
 conditions = {
-"strike": SubResource("Resource_ks6d5")
+"telegraph": SubResource("Resource_duyu4")
 }
 priority = 0
 
@@ -544,29 +549,47 @@ conditions = {
 }
 priority = 0
 
+[sub_resource type="Resource" id="Resource_v3ijs"]
+script = ExtResource("28_qwnvo")
+name = "strike"
+
+[sub_resource type="Resource" id="Resource_7q53d"]
+script = ExtResource("29_xmluj")
+from = "telegraph"
+to = "strike"
+conditions = {
+"strike": SubResource("Resource_v3ijs")
+}
+priority = 0
+
 [sub_resource type="Resource" id="Resource_hjb7m"]
 script = ExtResource("26_7jcvu")
 states = {
 "Entry": SubResource("Resource_bo5ky"),
 "raised": SubResource("Resource_iaadg"),
-"strike": SubResource("Resource_6bfwn")
+"strike": SubResource("Resource_6bfwn"),
+"telegraph": SubResource("Resource_o5sn0")
 }
 transitions = {
 "Entry": {
 "raised": SubResource("Resource_s08pl")
 },
 "raised": {
-"strike": SubResource("Resource_cmtke")
+"telegraph": SubResource("Resource_fsl1g")
 },
 "strike": {
 "raised": SubResource("Resource_svoxr")
+},
+"telegraph": {
+"strike": SubResource("Resource_7q53d")
 }
 }
 name = ""
 
-[node name="SnakeSlime" type="Node2D" node_paths=PackedStringArray("snake_head", "snake_tail")]
+[node name="SnakeSlime" type="Node2D" node_paths=PackedStringArray("snake_segments", "snake_head", "snake_tail")]
 texture_filter = 1
 script = ExtResource("1_1s8hh")
+snake_segments = [NodePath("SoftBody2D"), NodePath("SoftBody2D2"), NodePath("SoftBody2D3"), NodePath("SoftBody2D4"), NodePath("SoftBody2D5"), NodePath("SoftBody2D6"), NodePath("SoftBody2D7")]
 snake_head = NodePath("SoftBody2D")
 snake_tail = NodePath("SoftBody2D7")
 

@@ -37,6 +37,8 @@ func _process(delta: float) -> void:
 	
 	slime_damages.clear()
 	
+	slime_goal_position = PlayerState.player_location
+	
 	current_slime_health = 0.0
 	current_max_slime_health = 0.0
 	
