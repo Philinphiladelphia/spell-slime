@@ -57,6 +57,7 @@ var spawn_active : bool = false
 
 var colors_file_path: String = "res://addons/powder_toy_godot/colors.json"
 @export var slime_data_file_path: String = "res://levels/moonswept_fields/day/spawner_json/slime_data.json"
+@export var player_collider: Area2D
 
 var slime_colors: Dictionary = {}
 
@@ -118,6 +119,9 @@ func _process(delta: float) -> void:
 	slime_damages.clear()
 	current_slime_health = 0.0
 	current_max_slime_health = 0.0
+	
+	if spawn_active == false and player_collider.has_overlapping_bodies():
+		start_spawns()
 	
 	for child in get_children():
 		var slime: Node = child.get_child(0)

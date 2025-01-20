@@ -13,21 +13,21 @@
 [ext_resource type="PackedScene" uid="uid://ctmaek0pla3rx" path="res://levels/moonswept_fields/day/moonrise_lighting.tscn" id="10_ylylp"]
 [ext_resource type="PackedScene" uid="uid://dbkh866uwj432" path="res://ui/scenes/level_ui.tscn" id="11_k2l0e"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rs465"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_470sm"]
 texture = ExtResource("4_gqmb8")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0ixi"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2lsad"]
 texture = ExtResource("5_2jn15")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixa28"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u164l"]
 texture = ExtResource("6_6w1yh")
 0:0/0 = 0
 1:0/0 = 0
@@ -42,11 +42,11 @@ texture = ExtResource("6_6w1yh")
 
 [sub_resource type="TileSet" id="TileSet_rof6x"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_rs465")
-sources/1 = SubResource("TileSetAtlasSource_c0ixi")
-sources/2 = SubResource("TileSetAtlasSource_ixa28")
+sources/0 = SubResource("TileSetAtlasSource_470sm")
+sources/1 = SubResource("TileSetAtlasSource_2lsad")
+sources/2 = SubResource("TileSetAtlasSource_u164l")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8syae"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h52oe"]
 texture = ExtResource("7_1sgoj")
 0:0/0 = 0
 1:0/0 = 0
@@ -61,7 +61,7 @@ texture = ExtResource("7_1sgoj")
 
 [sub_resource type="TileSet" id="TileSet_beutg"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_8syae")
+sources/0 = SubResource("TileSetAtlasSource_h52oe")
 
 [node name="HealingFountainScene" type="Node2D"]
 script = ExtResource("1_3ym4a")

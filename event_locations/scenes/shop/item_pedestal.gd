@@ -1,3 +1,4 @@
+class_name ItemPedestal
 extends Sprite2D
 
 var buttonsound = "reward_button"
@@ -6,6 +7,8 @@ var item: InventoryItem
 
 @export var has_cost: bool = false
 var cost: int = 0
+
+signal item_taken
 
 #next steps:
 # make pedestals with cost
@@ -38,6 +41,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func destroy_item():
+	for child in get_children():
+		child.queue_free()
+
 
 func _on_input_glyph_activated() -> void:
 	if has_cost:
@@ -52,6 +60,6 @@ func _on_input_glyph_activated() -> void:
 	
 	SoundManager.play_sfx(buttonsound, 0, -6, 1)
 	GlobalInventory.add_item(item)
+	item_taken.emit()
 	
-	for child in get_children():
-		child.queue_free()
+	destroy_item()

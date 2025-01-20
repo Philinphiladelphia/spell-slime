@@ -40,6 +40,7 @@ DialogueController="*res://autoloads/dialogue_controller.tscn"
 ItemUtils="*res://autoloads/item_system/ItemUtils.gd"
 CrystalUtils="*res://autoloads/item_system/crystal_utils.gd"
 PlayerState="*res://autoloads/player_state/player_state.gd"
+LevelPieces="*res://autoloads/procedural_generation/LevelPiecesDict.gd"
 
 [debug]
 

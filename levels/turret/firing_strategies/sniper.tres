@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="FiringStrategy" load_steps=2 format=3 uid="uid://da1l2xfh5vqi0"]
 
-[ext_resource type="Script" path="res://levels/level_pieces/turret/firing_strategies/base_firing_strategy.gd" id="1_7nmxy"]
+[ext_resource type="Script" path="res://levels/turret/firing_strategies/base_firing_strategy.gd" id="1_7nmxy"]
 
 [resource]
 script = ExtResource("1_7nmxy")
