@@ -1,3 +1,4 @@
+class_name EnemyController
 extends Node2D
 
 var max_health: float = 0.0
@@ -47,6 +48,8 @@ var original_color: Color = Color(1, 1, 1, 1)
 
 var crystal_type = "blue"
 
+var uuid
+
 @export var decorations: Array[Node2D]
 
 # slimes should be able to jump over the tower and reverse course.
@@ -66,6 +69,8 @@ func set_original_color(color: Color) -> void:
 func _ready() -> void:	
 	for sprite in decorations:
 		add_child(sprite)
+		
+	uuid = EnemyState.add_enemy_to_state(self)
 	
 	$health_bar.bone_number = bone_number
 	$damage_bar.bone_number = bone_number
@@ -109,7 +114,7 @@ func _on_jump_timer_timeout() -> void:
 		jump_direction.x = -local_move_direction.x
 		
 	jump_direction.y = local_move_direction.y
-	jump(jump_direction)
+	jump(jump_direction, 1)
 	touching_something = false
 	
 	# Called when the jump timer times out
@@ -126,9 +131,9 @@ func _disable_powdering() -> void:
 	is_powdering = 0
 
 
-func jump(jump_direction: Vector2)-> void:
+func jump(jump_direction: Vector2, power_ratio: float)-> void:
 	SoundManager.play_sfx("drop1", 0, -6, 1)
-	get_child(0).apply_impulse(jump_direction * jump_power)
+	get_child(0).apply_impulse(jump_direction * jump_power * power_ratio)
 
 func set_max_health(amount: float) -> void:
 	max_health = amount
@@ -166,7 +171,7 @@ func apply_damage(amount: float) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	slime_position = $slime_soft_body.get_bones_center_position()
-
+	
 	$slime_hitbox.global_position = slime_position
 
 	var rigidbody = $slime_soft_body.get_rigid_bodies()[0].rigidbody
@@ -196,6 +201,8 @@ func enable_light() -> void:
 
 func kill_slime() -> void:
 	SoundManager.play_sfx("enemy_down", 0, -12, 0.5)
+	
+	EnemyState.remove_enemy_from_state(uuid)
 	
 	is_powdering = 0
 	is_dead = true

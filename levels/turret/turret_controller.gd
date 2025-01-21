@@ -15,9 +15,8 @@ extends Node2D
 @export var projectile_data: ProjectileData
 
 @export var camera_offset: Vector2
-@export var camera: Camera2D
 
-@export var powderviewport: PowderViewport
+var powderviewport: PowderViewport
 
 @export var face_left: bool = false
 
@@ -37,6 +36,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if not powderviewport:
+		powderviewport = PowderController.powder_toy
+		return
+	
 	if disabled:
 		input_glyph.disabled = true
 		return
@@ -63,7 +66,8 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 			if Input.is_action_just_pressed("interact") and not GunUtils.active_turret:
 				input_glyph.hide()
 				GunUtils.set_active_turret(self)
-				camera.x_offset += camera_offset.x
+				PlayerState.active_cam.x_offset += camera_offset.x
+				PlayerState.active_cam.y_offset += camera_offset.y
 				powderviewport.circle(global_position, 10, 114)
 				
 				GunUtils.set_active_turret(self)
@@ -72,25 +76,28 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 			if Input.is_action_just_pressed("interact"):
 				GunUtils.remove_active_turret()
 				smp.set_trigger("deactivated")
-				camera.x_offset -= camera_offset.x
+				PlayerState.active_cam.x_offset -= camera_offset.x
+				PlayerState.active_cam.y_offset -= camera_offset.y
 				
 			turret_barrel.handle_rotation()
 			
 			if Input.is_action_pressed("primary_fire"):
 				smp.set_trigger("fire")
-		"firing":
-			if not Input.is_action_pressed("primary_fire"):
-				smp.set_trigger("end_firing")
-				
+		"firing":				
 			turret_barrel.handle_rotation()
 				
 			if ammo <= 0:
 				smp.set_trigger("out_of_ammo")
 				GunUtils.remove_active_turret()
-				camera.x_offset -= camera_offset.x
+				PlayerState.active_cam.x_offset -= camera_offset.x
+				PlayerState.active_cam.y_offset -= camera_offset.y
+				return
 			
 			if not firing_strategy.off_cooldown(self):
 				return
+				
+			if not Input.is_action_pressed("primary_fire"):
+				smp.set_trigger("end_firing")
 				
 			GunUtils.fire_projectile(
 			 projectile_data.projectile_scene_path,
@@ -114,7 +121,8 @@ func _on_turret_state_updated(state: Variant, delta: Variant) -> void:
 			out_of_ammo.active = true
 			if GunUtils.active_turret == self:
 				GunUtils.active_turret = null
-				camera.x_offset -= camera_offset.x
+				PlayerState.active_cam.x_offset -= camera_offset.x
+				PlayerState.active_cam.y_offset -= camera_offset.y
 
 
 func _on_powder_viewport_ready() -> void:

@@ -20,17 +20,27 @@ var current_slime_health: float = 0.0
 var current_max_slime_health: float = 0.0
 
 var super_small_slime: PackedScene = preload("res://slimes/scenes/super_small_slime.tscn")
+var super_med_slime: PackedScene = preload("res://slimes/scenes/super_med_slime.tscn")
 var small_slime: PackedScene = preload("res://slimes/scenes/small_slime.tscn")
 var med_slime: PackedScene = preload("res://slimes/scenes/med_slime.tscn")
 var large_slime: PackedScene = preload("res://slimes/scenes/large_slime.tscn")
 
-enum SlimeType { SUPER_SMALL, SMALL, MEDIUM, LARGE }
+enum SlimeType { SUPER_SMALL, SUPER_MED, SMALL, MEDIUM, LARGE }
 
 var slime_types: Dictionary = {
 	SlimeType.SUPER_SMALL: super_small_slime,
+	SlimeType.SUPER_MED: super_med_slime,
 	SlimeType.SMALL: small_slime,
 	SlimeType.MEDIUM: med_slime,
 	SlimeType.LARGE: large_slime,
+}
+
+var default_delays: Dictionary = {
+	SlimeType.SUPER_SMALL: 1.0,
+	SlimeType.SUPER_MED: 2.0,
+	SlimeType.SMALL: 1.0,
+	SlimeType.MEDIUM: 2.0,
+	SlimeType.LARGE: 3.0
 }
 
 var max_small_slimes: int = 100
@@ -51,28 +61,17 @@ var _decorations: Array = []
 
 var spawner_depleted: bool = false
 
+signal active
 signal depleted
 
 var spawn_active : bool = false
 
-var colors_file_path: String = "res://addons/powder_toy_godot/colors.json"
 @export var slime_data_file_path: String = "res://levels/moonswept_fields/day/spawner_json/slime_data.json"
 @export var player_collider: Area2D
 
-var slime_colors: Dictionary = {}
-
 var next_spawn_time: float = 0.0
 
-func load_colors() -> void:
-	var file: FileAccess = FileAccess.open(colors_file_path, FileAccess.READ)
-	if file:
-		var json: JSON = JSON.new()
-		var file_text: String = file.get_as_text()
-		json.parse(file_text)
-		var data: Dictionary = json.data
-		for key: String in data.keys():
-			slime_colors[int(key)] = str_to_var(data[key])
-		file.close()
+
 
 func load_slime_data() -> void:
 	var file: FileAccess = FileAccess.open(slime_data_file_path, FileAccess.READ)
@@ -93,7 +92,6 @@ func start_spawns():
 	
 func _ready() -> void:
 	randomize()
-	load_colors()
 	load_slime_data()
 
 func _on_slime_spawn_timer_timeout() -> void:
@@ -120,8 +118,10 @@ func _process(delta: float) -> void:
 	current_slime_health = 0.0
 	current_max_slime_health = 0.0
 	
-	if spawn_active == false and player_collider.has_overlapping_bodies():
-		start_spawns()
+	if player_collider:
+		if spawn_active == false and player_collider.has_overlapping_bodies():
+			active.emit()
+			start_spawns()
 	
 	for child in get_children():
 		var slime: Node = child.get_child(0)
@@ -156,13 +156,6 @@ func _process(delta: float) -> void:
 func set_slime_goal_position(value: Vector2) -> void:
 	slime_goal_position = value
 
-var default_delays: Dictionary = {
-	SlimeType.SUPER_SMALL: 1.0,
-	SlimeType.SMALL: 1.0,
-	SlimeType.MEDIUM: 2.0,
-	SlimeType.LARGE: 3.0
-}
-
 func spawn_slimes_with_delay(slime_types: Array[float], delays: Array[float] = [], elements: Array[float] = []) -> void:
 	_slime_types = slime_types
 	_delays = delays
@@ -190,7 +183,11 @@ func spawn_slime(slime_type: int, element: int, decorations: Array):
 	instance.get_child(0).slime_powder_shader = shine_shader
 	if enable_light:
 		instance.get_child(0).enable_light()
-		
+	
+	# apply random impulse
+	var random_vector = Vector2.UP.rotated(randf_range(0, 2*PI))
+	instance.slime_node.jump(random_vector, 0.2)
+	
 	add_child(instance)
 	instance.set_element(element)
 

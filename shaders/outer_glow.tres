@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://ttp88kdc2k6"]
 
-[ext_resource type="Script" uid="uid://cxxtuhammanqx" path="res://addons/shaderV/rgba/glow/outerGlow.gd" id="1_rrs0w"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/glow/outerGlow.gd" id="1_rrs0w"]
 
 [sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_v366n"]
 default_input_values = [2, -1.0, 3, 1.0, 4, 1.0, 5, Vector3(1, 1, 1), 6, 1.0]

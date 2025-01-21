@@ -24,6 +24,7 @@ var clear_edges_timer : Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	PowderController.set_powder_toy(self)
 	powder_instance = powder_toy.instantiate()
 	powder_instance.sim_speed = sim_speed
 	$SubViewportContainer/SubViewport.add_child(powder_instance)

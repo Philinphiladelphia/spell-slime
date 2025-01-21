@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c2p2qpr16k7tf"]
+
+[node name="GainFollower" type="Node2D"]

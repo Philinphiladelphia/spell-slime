@@ -18,7 +18,7 @@ var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	PlayerState.active_cam = self
 
 func apply_shake(amount):
 	shake_strength = amount

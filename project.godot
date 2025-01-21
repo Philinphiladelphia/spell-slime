@@ -41,6 +41,8 @@ ItemUtils="*res://autoloads/item_system/ItemUtils.gd"
 CrystalUtils="*res://autoloads/item_system/crystal_utils.gd"
 PlayerState="*res://autoloads/player_state/player_state.gd"
 LevelPieces="*res://autoloads/procedural_generation/LevelPiecesDict.gd"
+PowderController="*res://autoloads/powder_toy/PowderController.gd"
+EnemyState="*res://autoloads/enemy_state/EnemyState.gd"
 
 [debug]
 

@@ -14,4 +14,6 @@ var movement_stats: MovementStats
 
 var player_location: Vector2 = Vector2(0,0)
 
+var active_cam: Camera2D
+
 signal initialized

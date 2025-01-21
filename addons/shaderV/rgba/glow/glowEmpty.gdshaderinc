@@ -5,7 +5,7 @@ vec4 _inoutGlowEmptyFunc(sampler2D _samp_inglowEmpt, vec2 _uv_inglowEmpt, float 
 	vec4 _color_orig_glow = vec4(0.0);
 	float _alpha_glow_inv = 0.0;
 	float _alpha_glow_blured = 0.0;
-	int glow_amount = 3;
+	int glow_amount = 1;
 	
 	if (_lod_glowEmpt < 0.0)
 		_color_orig_glow = texture(_samp_inglowEmpt, _uv_inglowEmpt);
