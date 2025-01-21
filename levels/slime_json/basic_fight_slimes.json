@@ -1,0 +1,8 @@
+[
+	{"type": 0, "element": 4, "delay": 4, "decorations": ["horns", "eyes"]},
+	{"type": 0, "element": 2, "delay": 4, "decorations": ["beard", "eyes"]},
+	{"type": 0, "element": 7, "delay": 1, "decorations": ["horns", "eyes"]},
+	{"type": 1, "element": 21, "delay": 4, "decorations": ["horns", "eyes"]},
+	{"type": 1, "element": 129, "delay": 4, "decorations": ["horns", "eyes"]},
+	
+]

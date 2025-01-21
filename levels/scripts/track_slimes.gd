@@ -21,14 +21,18 @@ var spawns_done: bool = false
 var ratio = 650.0/200.0
 
 @export var managed_spawners: Array[Node2D]
-@export var powderviewport: PowderViewport
+var powderviewport: PowderViewport
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if not powderviewport:
+		powderviewport = PowderController.powder_toy
+		return
+	
 	collected_slime_positions.clear()
 	powder_activated_bitmap.clear()
 	

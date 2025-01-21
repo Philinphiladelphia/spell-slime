@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="SlimeDescriptor" load_steps=2 format=3 uid="uid://bowxftwvop5rx"]
+
+[ext_resource type="Script" path="res://slimes/slime_resources/slime_descriptor.gd" id="1_2bp4r"]
+
+[resource]
+script = ExtResource("1_2bp4r")

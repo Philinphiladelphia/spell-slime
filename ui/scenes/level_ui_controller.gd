@@ -45,6 +45,12 @@ func _process(delta: float) -> void:
 	
 	%crystal_number.text = str(PlayerState.crystals)
 	
+	# hide enemy hp if it's 0
+	if enemy_hp_bar.bar_value <= 0:
+		%enemy_hp_container.hide()
+	elif enemy_hp_bar.bar_value > 0:
+		%enemy_hp_container.show()
+	
 	if not (_slime_tracker):
 		return
 	

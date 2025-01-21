@@ -1,98 +1,98 @@
-[gd_scene load_steps=714 format=3 uid="uid://c0y4dh3a6qrur"]
+[gd_scene load_steps=717 format=3 uid="uid://c0y4dh3a6qrur"]
 
 [ext_resource type="Texture2D" uid="uid://dukgbairam5vc" path="res://addons/shaderV/shaderV_icon.png" id="1"]
-[ext_resource type="Script" uid="uid://bqh77vh01yxe4" path="res://addons/shaderV/uv/tilingNoffset.gd" id="2"]
-[ext_resource type="Script" uid="uid://bfdwykweobt8f" path="res://addons/shaderV/uv/pixelate.gd" id="3"]
-[ext_resource type="Script" uid="uid://1786a583tasj" path="res://addons/shaderV/uv/lensDistortion.gd" id="4"]
-[ext_resource type="Script" uid="uid://gjw2aj5wubms" path="res://addons/shaderV/uv/flipUV.gd" id="5"]
-[ext_resource type="Script" uid="uid://dgekb6kael84c" path="res://addons/shaderV/uv/distortionUV.gd" id="6"]
-[ext_resource type="Script" uid="uid://b50mbdyd2q7aw" path="res://addons/shaderV/uv/scaleUV.gd" id="7"]
-[ext_resource type="Script" uid="uid://d08aisyllcu6f" path="res://addons/shaderV/uv/sphericalUV.gd" id="8"]
-[ext_resource type="Script" uid="uid://d0g67v5suxhm2" path="res://addons/shaderV/uv/rotate.gd" id="9"]
-[ext_resource type="Script" uid="uid://bo72vgn6p8hnb" path="res://addons/shaderV/uv/tileUV.gd" id="10"]
-[ext_resource type="Script" uid="uid://dwhucnpn4fi1v" path="res://addons/shaderV/uv/transformUV.gd" id="11"]
-[ext_resource type="Script" uid="uid://eqioj56jh7mx" path="res://addons/shaderV/uv/twirl.gd" id="12"]
-[ext_resource type="Script" uid="uid://dnxgf8t1tsa8f" path="res://addons/shaderV/uv/animated/distortionUVAnimated.gd" id="13"]
-[ext_resource type="Script" uid="uid://ccggy5sdoqay7" path="res://addons/shaderV/uv/animated/doodleUV.gd" id="14"]
-[ext_resource type="Script" uid="uid://b603kxkcpn4ye" path="res://addons/shaderV/uv/animated/tilingNoffsetAnimated.gd" id="15"]
-[ext_resource type="Script" uid="uid://bdk4ni4qg7adj" path="res://addons/shaderV/tools/sinTime.gd" id="16"]
-[ext_resource type="Script" uid="uid://pal4bery3rv" path="res://addons/shaderV/uv/animated/rotateAnimated.gd" id="17"]
-[ext_resource type="Script" uid="uid://d3jhe55nu32b3" path="res://addons/shaderV/tools/random/hash1d.gd" id="18"]
-[ext_resource type="Script" uid="uid://buqis0nmffe52" path="res://addons/shaderV/uv/animated/swirlUV.gd" id="19"]
-[ext_resource type="Script" uid="uid://c0gt170fy2w75" path="res://addons/shaderV/tools/random/hash2d.gd" id="20"]
-[ext_resource type="Script" uid="uid://dnff8v8p3myfa" path="res://addons/shaderV/tools/random/hash2dvector.gd" id="21"]
-[ext_resource type="Script" uid="uid://c0e08m1vk0xyf" path="res://addons/shaderV/tools/random/randomFloat.gd" id="22"]
-[ext_resource type="Script" uid="uid://bp0ledln3d51p" path="res://addons/shaderV/rgba/BCSAdjustment.gd" id="23"]
-[ext_resource type="Script" uid="uid://dcl36dksv0bbk" path="res://addons/shaderV/tools/random/randomFloat4D.gd" id="23_ldokg"]
-[ext_resource type="Script" uid="uid://c7qn5k5jofcq6" path="res://addons/shaderV/tools/random/randomGoldNoiseFloat.gd" id="24"]
-[ext_resource type="Script" uid="uid://bny0tug3s886n" path="res://addons/shaderV/tools/vec2Compose.gd" id="25"]
-[ext_resource type="Script" uid="uid://bgcnypamtk7vd" path="res://addons/shaderV/tools/remap.gd" id="26"]
-[ext_resource type="Script" uid="uid://dnq7m4868q12p" path="res://addons/shaderV/rgba/blur/blur9sample.gd" id="27"]
-[ext_resource type="Script" uid="uid://bfdkj4x2k7mka" path="res://addons/shaderV/rgba/blur/blurCustom.gd" id="28"]
-[ext_resource type="Script" uid="uid://pdu4hoxt7aiy" path="res://addons/shaderV/rgba/blur/zoomBlur.gd" id="29"]
-[ext_resource type="Script" uid="uid://bcvbmxoxh61fk" path="res://addons/shaderV/rgba/glow/innerGlow.gd" id="30"]
-[ext_resource type="Script" uid="uid://bvc2rl1h23tse" path="res://addons/shaderV/rgba/glow/glowEmpty.gd" id="31"]
-[ext_resource type="Script" uid="uid://uwlhhk5et12q" path="res://addons/shaderV/rgba/glow/innerGlowEmpty.gd" id="32"]
-[ext_resource type="Script" uid="uid://cxxtuhammanqx" path="res://addons/shaderV/rgba/glow/outerGlow.gd" id="33"]
-[ext_resource type="Script" uid="uid://elrxr1nvkgxr" path="res://addons/shaderV/rgba/glow/outerGlowEmpty.gd" id="34"]
-[ext_resource type="Script" uid="uid://cgg7cgyfcbn30" path="res://addons/shaderV/rgba/generate_shapes/chekerboardPattern.gd" id="35"]
-[ext_resource type="Script" uid="uid://oe1a2s0gqspm" path="res://addons/shaderV/rgba/generate_shapes/generateCircle2.gd" id="36"]
-[ext_resource type="Script" uid="uid://bnr5bgxw35h2j" path="res://addons/shaderV/rgba/generate_shapes/generateCircle.gd" id="37"]
-[ext_resource type="Script" uid="uid://chgtgtbl5nwyl" path="res://addons/shaderV/rgba/generate_shapes/generateRegularNgon.gd" id="39"]
-[ext_resource type="Script" uid="uid://crjp5sgts1fh3" path="res://addons/shaderV/rgba/generate_shapes/generateSpiral.gd" id="40"]
-[ext_resource type="Script" uid="uid://duevj0sje0aw2" path="res://addons/shaderV/rgba/generate_shapes/scanLinesSharp.gd" id="41"]
-[ext_resource type="Script" uid="uid://bsoaxwq656u66" path="res://addons/shaderV/rgba/generate_shapes/stripesRandom.gd" id="42"]
-[ext_resource type="Script" uid="uid://bb1jajnsdo2cu" path="res://addons/shaderV/rgba/noise/generic2d.gd" id="43"]
-[ext_resource type="Script" uid="uid://kykj6xn8vav0" path="res://addons/shaderV/rgba/noise/perlin2d.gd" id="44"]
-[ext_resource type="Script" uid="uid://bjwqpamhenjpx" path="res://addons/shaderV/rgba/noise/perlin3d.gd" id="45"]
-[ext_resource type="Script" uid="uid://bka3eei00nx8x" path="res://addons/shaderV/rgba/noise/perlinPeriodic3d.gd" id="46"]
-[ext_resource type="Script" uid="uid://cde700mqhnnn4" path="res://addons/shaderV/rgba/noise/perlin4d.gd" id="47"]
-[ext_resource type="Script" uid="uid://bdv317xpmu313" path="res://addons/shaderV/rgba/noise/simplex2d.gd" id="48"]
-[ext_resource type="Script" uid="uid://ndoujqo7rc5w" path="res://addons/shaderV/rgba/noise/simplex3d.gd" id="49"]
-[ext_resource type="Script" uid="uid://cjw5tu5rnmh0m" path="res://addons/shaderV/rgba/noise/simplex4d.gd" id="50"]
-[ext_resource type="Script" uid="uid://c6h1h77bhdyfa" path="res://addons/shaderV/rgba/noise/worley2d.gd" id="51"]
-[ext_resource type="Script" uid="uid://duoa54clthqjp" path="res://addons/shaderV/rgba/noise/worley2x2.gd" id="52"]
-[ext_resource type="Script" uid="uid://ddi0vvrmfd8b7" path="res://addons/shaderV/rgba/noise/worley2x2x2.gd" id="53"]
-[ext_resource type="Script" uid="uid://lwvkdem310ns" path="res://addons/shaderV/rgba/noise/worley3d.gd" id="54"]
-[ext_resource type="Script" uid="uid://c2a4elqa28git" path="res://addons/shaderV/rgba/blackNwhite.gd" id="56"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/tilingNoffset.gd" id="2"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/pixelate.gd" id="3"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/lensDistortion.gd" id="4"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/flipUV.gd" id="5"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/distortionUV.gd" id="6"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/scaleUV.gd" id="7"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/sphericalUV.gd" id="8"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/rotate.gd" id="9"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/tileUV.gd" id="10"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/transformUV.gd" id="11"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/twirl.gd" id="12"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/animated/distortionUVAnimated.gd" id="13"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/animated/doodleUV.gd" id="14"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/animated/tilingNoffsetAnimated.gd" id="15"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/sinTime.gd" id="16"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/animated/rotateAnimated.gd" id="17"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/random/hash1d.gd" id="18"]
+[ext_resource type="Script" path="res://addons/shaderV/uv/animated/swirlUV.gd" id="19"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/random/hash2d.gd" id="20"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/random/hash2dvector.gd" id="21"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/random/randomFloat.gd" id="22"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/BCSAdjustment.gd" id="23"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/random/randomFloat4D.gd" id="23_ldokg"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/random/randomGoldNoiseFloat.gd" id="24"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/vec2Compose.gd" id="25"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/remap.gd" id="26"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/blur/blur9sample.gd" id="27"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/blur/blurCustom.gd" id="28"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/blur/zoomBlur.gd" id="29"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/glow/innerGlow.gd" id="30"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/glow/glowEmpty.gd" id="31"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/glow/innerGlowEmpty.gd" id="32"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/glow/outerGlow.gd" id="33"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/glow/outerGlowEmpty.gd" id="34"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/generate_shapes/chekerboardPattern.gd" id="35"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/generate_shapes/generateCircle2.gd" id="36"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/generate_shapes/generateCircle.gd" id="37"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/generate_shapes/generateRegularNgon.gd" id="39"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/generate_shapes/generateSpiral.gd" id="40"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/generate_shapes/scanLinesSharp.gd" id="41"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/generate_shapes/stripesRandom.gd" id="42"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/generic2d.gd" id="43"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/perlin2d.gd" id="44"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/perlin3d.gd" id="45"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/perlinPeriodic3d.gd" id="46"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/perlin4d.gd" id="47"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/simplex2d.gd" id="48"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/simplex3d.gd" id="49"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/simplex4d.gd" id="50"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/worley2d.gd" id="51"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/worley2x2.gd" id="52"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/worley2x2x2.gd" id="53"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/worley3d.gd" id="54"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/blackNwhite.gd" id="56"]
 [ext_resource type="Texture2D" uid="uid://ds4rnuhypjs8a" path="res://addons/shaderV/examples/godot_logo.png" id="57"]
-[ext_resource type="Script" uid="uid://d1m0wabmxc5p" path="res://addons/shaderV/rgba/blendAwithB.gd" id="58"]
-[ext_resource type="Script" uid="uid://cqt17hnvsjhlm" path="res://addons/shaderV/rgba/bloom.gd" id="59"]
-[ext_resource type="Script" uid="uid://dg1p8jos6vhxk" path="res://addons/shaderV/rgba/chromaticAberration.gd" id="60"]
-[ext_resource type="Script" uid="uid://yosxb8hbd5s0" path="res://addons/shaderV/rgba/clamp.gd" id="61"]
-[ext_resource type="Script" uid="uid://dlj4pfnurerjs" path="res://addons/shaderV/rgba/colorCorrectionAdjustment.gd" id="62"]
-[ext_resource type="Script" uid="uid://dxbkl3ha30ylj" path="res://addons/shaderV/rgba/emboss.gd" id="63"]
-[ext_resource type="Script" uid="uid://byc8twvk6fbso" path="res://addons/shaderV/rgba/fireFX.gd" id="64"]
-[ext_resource type="Script" uid="uid://bhp5b4araxa6q" path="res://addons/shaderV/rgba/gradient4corners.gd" id="65"]
-[ext_resource type="Script" uid="uid://cklwgjb15nw3g" path="res://addons/shaderV/rgba/gradientMapping.gd" id="66"]
-[ext_resource type="Script" uid="uid://bbgy5kep80k3n" path="res://addons/shaderV/rgba/grayscale.gd" id="67"]
-[ext_resource type="Script" uid="uid://duqa23v7taos4" path="res://addons/shaderV/rgba/hue.gd" id="68"]
-[ext_resource type="Script" uid="uid://b3gxfitvu8t64" path="res://addons/shaderV/rgba/inverseColor.gd" id="69"]
-[ext_resource type="Script" uid="uid://l7c2my327u1d" path="res://addons/shaderV/rgba/maskAlpha.gd" id="70"]
-[ext_resource type="Script" uid="uid://pmppgdlquodj" path="res://addons/shaderV/rgba/posterize.gd" id="71"]
-[ext_resource type="Script" uid="uid://c74riom51nrlg" path="res://addons/shaderV/rgba/shiftHSV.gd" id="72"]
-[ext_resource type="Script" uid="uid://c0sk7sdu3s0v4" path="res://addons/shaderV/rgba/shineFX.gd" id="73"]
-[ext_resource type="Script" uid="uid://y01b0p3i7a3k" path="res://addons/shaderV/rgba/tintRGBA.gd" id="74"]
-[ext_resource type="Script" uid="uid://rt3vd4awdp1p" path="res://addons/shaderV/rgba/tonemap.gd" id="75"]
-[ext_resource type="Script" uid="uid://bb0p6a3hidhkv" path="res://addons/shaderV/rgba/turnCGA4Palette.gd" id="76"]
-[ext_resource type="Script" uid="uid://covecmenr8xew" path="res://addons/shaderV/rgba/turnGBPalette.gd" id="77"]
-[ext_resource type="Script" uid="uid://dxf6oadv4qgca" path="res://addons/shaderV/tools/TimeScaled.gd" id="78"]
-[ext_resource type="Script" uid="uid://c8g0eu7vy3kiy" path="res://addons/shaderV/rgba/noise/fractal/generic2d_fractal.gd" id="79"]
-[ext_resource type="Script" uid="uid://dsu5a3xxdivkr" path="res://addons/shaderV/rgba/noise/fractal/perlin2d_fractal.gd" id="80"]
-[ext_resource type="Script" uid="uid://birriymtvdlgc" path="res://addons/shaderV/rgba/noise/fractal/worley2d_fractal.gd" id="81"]
-[ext_resource type="Script" uid="uid://yijh02wrvsbh" path="res://addons/shaderV/rgba/noise/fractal/simplex2d_fractal.gd" id="82"]
-[ext_resource type="Script" uid="uid://jw6hjmdmp0vv" path="res://addons/shaderV/rgba/noise/fractal/worley3d_fractal.gd" id="83"]
-[ext_resource type="Script" uid="uid://smpi4sde2jn3" path="res://addons/shaderV/rgba/noise/fractal/perlin3d_fractal.gd" id="84"]
-[ext_resource type="Script" uid="uid://1y1nt1nffter" path="res://addons/shaderV/rgba/noise/fractal/simplex3d_fractal.gd" id="85"]
-[ext_resource type="Script" uid="uid://m6r7vk4hirt7" path="res://addons/shaderV/rgba/noise/fractal/perlin4d_fractal.gd" id="86"]
-[ext_resource type="Script" uid="uid://daec3dyy0at87" path="res://addons/shaderV/rgba/noise/fractal/simplex4d_fractal.gd" id="87"]
-[ext_resource type="Script" uid="uid://hioslnbhog64" path="res://addons/shaderV/rgba/normalFromHeightmap.gd" id="88"]
-[ext_resource type="Script" uid="uid://dd08vsd12d5qq" path="res://addons/shaderV/tools/transformCoordinates/cartesianToPolar.gd" id="89"]
-[ext_resource type="Script" uid="uid://ctbwe8owh700a" path="res://addons/shaderV/tools/transformCoordinates/sphericalToCartesian.gd" id="90"]
-[ext_resource type="Script" uid="uid://v3dqmnr3ksup" path="res://addons/shaderV/tools/transformCoordinates/cartesianToSpherical.gd" id="91"]
-[ext_resource type="Script" uid="uid://jyfvatnaev2n" path="res://addons/shaderV/tools/transformCoordinates/polarToCartesian.gd" id="92"]
-[ext_resource type="Script" uid="uid://bj8dka2n1advw" path="res://addons/shaderV/rgba/generate_shapes/gridShape.gd" id="93"]
-[ext_resource type="Script" uid="uid://cnf0iogivtjhp" path="res://addons/shaderV/rgba/sobelEdge.gd" id="94"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/blendAwithB.gd" id="58"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/bloom.gd" id="59"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/chromaticAberration.gd" id="60"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/clamp.gd" id="61"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/colorCorrectionAdjustment.gd" id="62"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/emboss.gd" id="63"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/fireFX.gd" id="64"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/gradient4corners.gd" id="65"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/gradientMapping.gd" id="66"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/grayscale.gd" id="67"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/hue.gd" id="68"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/inverseColor.gd" id="69"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/maskAlpha.gd" id="70"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/posterize.gd" id="71"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/shiftHSV.gd" id="72"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/shineFX.gd" id="73"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/tintRGBA.gd" id="74"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/tonemap.gd" id="75"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/turnCGA4Palette.gd" id="76"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/turnGBPalette.gd" id="77"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/TimeScaled.gd" id="78"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/generic2d_fractal.gd" id="79"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/perlin2d_fractal.gd" id="80"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/worley2d_fractal.gd" id="81"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/simplex2d_fractal.gd" id="82"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/worley3d_fractal.gd" id="83"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/perlin3d_fractal.gd" id="84"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/simplex3d_fractal.gd" id="85"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/perlin4d_fractal.gd" id="86"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/noise/fractal/simplex4d_fractal.gd" id="87"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/normalFromHeightmap.gd" id="88"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/transformCoordinates/cartesianToPolar.gd" id="89"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/transformCoordinates/sphericalToCartesian.gd" id="90"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/transformCoordinates/cartesianToSpherical.gd" id="91"]
+[ext_resource type="Script" path="res://addons/shaderV/tools/transformCoordinates/polarToCartesian.gd" id="92"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/generate_shapes/gridShape.gd" id="93"]
+[ext_resource type="Script" path="res://addons/shaderV/rgba/sobelEdge.gd" id="94"]
 
 [sub_resource type="VisualShaderNodeCustom" id="1"]
 default_input_values = [1, 0, 2, 0, 3, 0, 4, 0]
@@ -2240,27 +2240,33 @@ nodes/fragment/connections = PackedInt32Array(6, 0, 11, 1, 12, 0, 9, 1, 9, 0, 11
 [sub_resource type="ShaderMaterial" id="158"]
 shader = SubResource("157")
 
-[sub_resource type="VisualShaderNodeCustom" id="159"]
+[sub_resource type="VisualShaderNodeCustom" id="VisualShaderNodeCustom_58xho"]
 default_input_values = [2, -1.0, 3, 1.0, 4, 1.0, 5, 1.0, 6, Vector3(1, 1, 1), 7, 1.0]
 initialized = true
 script = ExtResource("31")
 
-[sub_resource type="VisualShaderNodeColorConstant" id="160"]
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_2q8hj"]
 constant = Color(1, 0, 0, 1)
 
-[sub_resource type="VisualShaderNodeFloatConstant" id="161"]
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_onu03"]
 constant = -1.0
 
-[sub_resource type="VisualShaderNodeFloatConstant" id="162"]
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_kfflf"]
 constant = 1.0
 
-[sub_resource type="VisualShaderNodeFloatConstant" id="163"]
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_6cser"]
 constant = 1.0
 
-[sub_resource type="VisualShaderNodeFloatConstant" id="164"]
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_870ku"]
 constant = 1.0
 
-[sub_resource type="VisualShader" id="165"]
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_fwqhn"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_jij8l"]
+input_name = "texture"
+
+[sub_resource type="VisualShader" id="VisualShader_ll1ql"]
 code = "shader_type canvas_item;
 render_mode blend_mix;
 
@@ -2315,26 +2321,29 @@ void fragment() {
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(200, 0)
-nodes/fragment/6/node = SubResource("139")
+nodes/fragment/6/node = SubResource("VisualShaderNodeInput_fwqhn")
 nodes/fragment/6/position = Vector2(-420, -100)
-nodes/fragment/7/node = SubResource("140")
+nodes/fragment/7/node = SubResource("VisualShaderNodeInput_jij8l")
 nodes/fragment/7/position = Vector2(-380, -180)
-nodes/fragment/13/node = SubResource("159")
+nodes/fragment/13/node = SubResource("VisualShaderNodeCustom_58xho")
 nodes/fragment/13/position = Vector2(-40, 0)
-nodes/fragment/14/node = SubResource("160")
+nodes/fragment/14/node = SubResource("VisualShaderNodeColorConstant_2q8hj")
 nodes/fragment/14/position = Vector2(-240, 300)
-nodes/fragment/15/node = SubResource("161")
+nodes/fragment/15/node = SubResource("VisualShaderNodeFloatConstant_onu03")
 nodes/fragment/15/position = Vector2(-280, -20)
-nodes/fragment/16/node = SubResource("162")
+nodes/fragment/16/node = SubResource("VisualShaderNodeFloatConstant_kfflf")
 nodes/fragment/16/position = Vector2(-280, 60)
-nodes/fragment/17/node = SubResource("163")
+nodes/fragment/17/node = SubResource("VisualShaderNodeFloatConstant_6cser")
 nodes/fragment/17/position = Vector2(-280, 140)
-nodes/fragment/18/node = SubResource("164")
+nodes/fragment/18/node = SubResource("VisualShaderNodeFloatConstant_870ku")
 nodes/fragment/18/position = Vector2(-280, 220)
 nodes/fragment/connections = PackedInt32Array(13, 1, 0, 1, 7, 0, 13, 0, 6, 0, 13, 1, 14, 0, 13, 6, 15, 0, 13, 2, 16, 0, 13, 3, 17, 0, 13, 4, 18, 0, 13, 5, 13, 0, 0, 0)
 
 [sub_resource type="ShaderMaterial" id="166"]
-shader = SubResource("165")
+shader = SubResource("VisualShader_ll1ql")
+
+[sub_resource type="VisualShaderNodeColorConstant" id="160"]
+constant = Color(0.758807, 0.222246, 0.957932, 1)
 
 [sub_resource type="VisualShaderNodeCustom" id="167"]
 default_input_values = [2, -1.0, 3, 1.0, 4, 1.0, 5, Vector3(1, 1, 1), 6, 1.0]
@@ -2377,7 +2386,7 @@ void fragment() {
 
 
 // ColorConstant:14
-	vec4 n_out14p0 = vec4(1.000000, 0.000000, 0.000000, 1.000000);
+	vec4 n_out14p0 = vec4(0.758807, 0.222246, 0.957932, 1.000000);
 
 
 	vec3 n_out15p0;

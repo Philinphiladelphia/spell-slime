@@ -1,8 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://cl0vuxa3ioelw"]
+[gd_scene load_steps=42 format=3 uid="uid://cl0vuxa3ioelw"]
 
 [ext_resource type="Script" path="res://slimes/scripts/super_small_slime.gd" id="1_hxxp5"]
 [ext_resource type="Script" path="res://slimes/scripts/slime_controller.gd" id="1_xjvlk"]
 [ext_resource type="Texture2D" uid="uid://kftevsx25ln2" path="res://art/slimes/slime-8th_mouthless.png" id="2_qn660"]
+[ext_resource type="Resource" uid="uid://bowxftwvop5rx" path="res://slimes/slime_resources/small_slime_descriptor.tres" id="2_vxnd3"]
 [ext_resource type="Script" path="res://addons/softbody2d/softbody2d.gd" id="3_m8mya"]
 [ext_resource type="Texture2D" uid="uid://cfkm8h8yxc1wt" path="res://slimes/assets/damage_indicatior.png" id="4_lngrl"]
 [ext_resource type="Script" path="res://slimes/scripts/slime_damage_bar.gd" id="5_0enl6"]
@@ -236,6 +237,7 @@ fill_to = Vector2(0.106838, 0.897436)
 [node name="slime_controller" type="Node2D" node_paths=PackedStringArray("slime_node")]
 script = ExtResource("1_hxxp5")
 slime_node = NodePath("slime_node")
+descriptor = ExtResource("2_vxnd3")
 
 [node name="slime_node" type="Node2D" parent="."]
 process_physics_priority = 10

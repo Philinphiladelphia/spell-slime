@@ -25,7 +25,7 @@ var ended: bool = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("interact") or Input.is_action_just_pressed("primary_fire"):
 		_get_next_dialogue_line()
 	
 	if not ended:
@@ -117,8 +117,9 @@ func _on_option_selected(index):
 
 
 func _gui_input(event):
-	if event is InputEventMouseButton and event.is_pressed():
-		_get_next_dialogue_line()
+	pass
+	#if event is InputEventMouseButton and event.is_pressed():
+		#_get_next_dialogue_line()
 
 
 func _on_event_triggered(event_name, parameters):

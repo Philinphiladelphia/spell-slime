@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://c0ssniqx0aap"]
+
+[ext_resource type="Script" path="res://levels/combined_level_test.gd" id="1_02jow"]
+[ext_resource type="PackedScene" uid="uid://dxrmcsxvewv4o" path="res://parallax/meadow.tscn" id="1_oeuhh"]
+[ext_resource type="PackedScene" uid="uid://dbkh866uwj432" path="res://ui/scenes/level_ui.tscn" id="2_10615"]
+[ext_resource type="Script" path="res://event_locations/scenes/camera_controller.gd" id="3_ai4qy"]
+[ext_resource type="Texture2D" uid="uid://b0pkxgmkunsqa" path="res://art/super_pixel/super_pixel_meadow/style_E/PNG/bg_sky.png" id="4_2jsdy"]
+[ext_resource type="Texture2D" uid="uid://bt8mtogpvcvcx" path="res://art/super_pixel/medieval_village_full/haunted_village/pieces/moon.png" id="5_plpt3"]
+[ext_resource type="Texture2D" uid="uid://2v5y4oqtsshy" path="res://art/super_pixel/super_pixel_meadow/style_A/PNG/bg_sky.png" id="6_ymi43"]
+[ext_resource type="PackedScene" uid="uid://chhnrbkrbyki8" path="res://slimes/player_slime/scenes/player_slime.tscn" id="7_6jarq"]
+[ext_resource type="PackedScene" uid="uid://dj7ftalc7elqo" path="res://levels/basic_fight.tscn" id="8_p4wsk"]
+[ext_resource type="PackedScene" uid="uid://dod8ieervu1pf" path="res://addons/powder_toy_godot/powder_viewport.tscn" id="9_ovo4x"]
+[ext_resource type="Script" path="res://addons/powder_toy_godot/sustained_powder.gd" id="10_4eb1d"]
+[ext_resource type="PackedScene" uid="uid://fckoofhiou4w" path="res://levels/common/exit_portal.tscn" id="12_3prc2"]
+
+[node name="CombinedLevelTest" type="Node2D"]
+script = ExtResource("1_02jow")
+
+[node name="parallax" parent="." instance=ExtResource("1_oeuhh")]
+position = Vector2(495, 6)
+
+[node name="level_ui" parent="." instance=ExtResource("2_10615")]
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("slime_to_follow")]
+position = Vector2(-12, 47)
+zoom = Vector2(2, 2)
+script = ExtResource("3_ai4qy")
+slime_to_follow = NodePath("../player")
+y_offset = -100
+
+[node name="evil" type="Node2D" parent="Camera2D"]
+visible = false
+
+[node name="sky2" type="Sprite2D" parent="Camera2D/evil"]
+z_index = -1
+position = Vector2(0, -13)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_2jsdy")
+
+[node name="Moon" type="Sprite2D" parent="Camera2D/evil"]
+z_index = -1
+position = Vector2(-205, -97)
+texture = ExtResource("5_plpt3")
+
+[node name="day" type="Node2D" parent="Camera2D"]
+
+[node name="sky" type="Sprite2D" parent="Camera2D/day"]
+z_index = -1
+position = Vector2(13, -66)
+scale = Vector2(4, 4)
+texture = ExtResource("6_ymi43")
+
+[node name="PowderViewport" parent="." instance=ExtResource("9_ovo4x")]
+texture_filter = 1
+position = Vector2(-739, -240)
+scale = Vector2(3, 3)
+
+[node name="Node" type="Node" parent="PowderViewport" node_paths=PackedStringArray("powderviewport")]
+script = ExtResource("10_4eb1d")
+duration = 10.0
+powderviewport = NodePath("..")
+
+[node name="player" parent="." instance=ExtResource("7_6jarq")]
+position = Vector2(-459, 93)
+
+[node name="base_level_piece" parent="." node_paths=PackedStringArray("player", "level_ui") instance=ExtResource("8_p4wsk")]
+position = Vector2(-999, -36)
+player = NodePath("../player")
+level_ui = NodePath("../level_ui")
+
+[node name="base_level_piece2" parent="." node_paths=PackedStringArray("player", "level_ui") instance=ExtResource("8_p4wsk")]
+position = Vector2(664, -36)
+player = NodePath("../player")
+level_ui = NodePath("../level_ui")
+
+[node name="base_level_piece3" parent="." node_paths=PackedStringArray("player", "level_ui") instance=ExtResource("8_p4wsk")]
+position = Vector2(-2668, -40)
+player = NodePath("../player")
+level_ui = NodePath("../level_ui")
+
+[node name="exit_portal" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_3prc2")]
+position = Vector2(-2781, 9)
+player = NodePath("../player")
+
+[node name="exit_portal2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_3prc2")]
+position = Vector2(1847, -6)
+player = NodePath("../player")
+
+[connection signal="portal_entered" from="exit_portal" to="." method="_on_exit_portal_portal_entered" flags=6]
+[connection signal="portal_entered" from="exit_portal2" to="." method="_on_exit_portal_2_portal_entered" flags=6]
+
+[editable path="PowderViewport"]

@@ -3556,11 +3556,9 @@ shape = SubResource("RectangleShape2D_amqnm")
 position = Vector2(-317, 397)
 collider = NodePath("../spell_machine_collider")
 
-[node name="Turret" parent="." node_paths=PackedStringArray("camera", "powderviewport") instance=ExtResource("401_6m6so")]
+[node name="Turret" parent="." instance=ExtResource("401_6m6so")]
 position = Vector2(-892, 122)
 camera_offset = Vector2(-200, 0)
-camera = NodePath("../Camera2D")
-powderviewport = NodePath("../PowderViewport")
 face_left = true
 disabled = true
 
@@ -3577,12 +3575,11 @@ slime_data_file_path = "res://event_locations/scenes/home/slime_json/three_slime
 [node name="spawner3" type="Node2D" parent="."]
 position = Vector2(-1593, 66)
 script = ExtResource("402_dtjme")
-slime_data_file_path = "res://levels/new_format_slimes.json"
+slime_data_file_path = "res://levels/slime_json/basic_fight_slimes.json"
 
-[node name="slime_tracker" type="Node" parent="." node_paths=PackedStringArray("managed_spawners", "powderviewport")]
+[node name="slime_tracker" type="Node" parent="." node_paths=PackedStringArray("managed_spawners")]
 script = ExtResource("403_mru5j")
 managed_spawners = [NodePath("../spawner1"), NodePath("../spawner2"), NodePath("../spawner3")]
-powderviewport = NodePath("../PowderViewport")
 
 [node name="level_ui" parent="." instance=ExtResource("404_cf2d0")]
 visible = false

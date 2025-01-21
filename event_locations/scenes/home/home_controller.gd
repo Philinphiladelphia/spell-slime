@@ -25,7 +25,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:		
 	if dialogue_layer.has_active_dialogue:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		player.cursor_radials.show()
+		player.cursor_radials.hide()
 		tutorial_layer.set_tutorial_text("")
 		grandpa.is_active = false
 	else:

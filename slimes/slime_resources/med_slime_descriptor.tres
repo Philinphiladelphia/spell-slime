@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SlimeDescriptor" load_steps=2 format=3 uid="uid://btk26dkm7l7jq"]
+
+[ext_resource type="Script" path="res://slimes/slime_resources/slime_descriptor.gd" id="1_fw3ip"]
+
+[resource]
+script = ExtResource("1_fw3ip")
+upright_torque = 1000
+local_move_dir = Vector2(-0.5, -1)
+element_numbers = [21, 3, 4, 6, 7]
+element_circle_size = 5
+spawn_sound = "slime1"
+jump_interval = 2.5
+powder_interval = 1.0
+powder_duration = 1.0
+max_health = 500.0
+jump_power = 500.0
+damage = 5

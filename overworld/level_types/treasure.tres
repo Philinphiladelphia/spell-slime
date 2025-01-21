@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="WorldmapNodeData" load_steps=3 format=3 uid="uid://bl5i1llu71wxw"]
+[gd_resource type="Resource" script_class="WorldmapNodeData" load_steps=4 format=3 uid="uid://bl5i1llu71wxw"]
 
+[ext_resource type="PackedScene" uid="uid://cckhigweyltmv" path="res://event_locations/scenes/treasure_room/treasure_room.tscn" id="1_qdcc8"]
 [ext_resource type="Script" path="res://addons/worldmap_builder/resource_types/worldmap_node_data.gd" id="1_tccsb"]
 [ext_resource type="Texture2D" uid="uid://r4oi8hm7cak3" path="res://overworld/overworld_icons/multicolor/jewel.png" id="2_an6m4"]
 
@@ -13,4 +14,4 @@ desc = "treasure"
 size_tier = 0
 cost = 1
 tags = Array[StringName]([])
-data = Array[Resource]([])
+data = Array[Resource]([ExtResource("1_qdcc8")])
