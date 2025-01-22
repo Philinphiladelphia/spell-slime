@@ -1,3 +1,1231 @@
-[gd_scene format=3 uid="uid://cd0b7bdhn88nb"]
+[gd_scene load_steps=221 format=3 uid="uid://cd0b7bdhn88nb"]
+
+[ext_resource type="Texture2D" uid="uid://ba5dqyxka7phn" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/appetizer_A.png" id="1_x7eyt"]
+[ext_resource type="Texture2D" uid="uid://twuch5txtks4" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/appetizer_B.png" id="2_n2sv3"]
+[ext_resource type="Texture2D" uid="uid://cl5000gmtrb2w" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/apple_A_green_large.png" id="3_psii4"]
+[ext_resource type="Texture2D" uid="uid://dt56mgnup8tu7" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/apple_A_red_large.png" id="4_sr2np"]
+[ext_resource type="Texture2D" uid="uid://bwith5hdluyex" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/apple_B_red_large.png" id="5_t4mae"]
+[ext_resource type="Texture2D" uid="uid://cdyg1nw0k7mth" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/apple_C_green_small.png" id="6_gec4p"]
+[ext_resource type="Texture2D" uid="uid://c7edargcpur0l" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/apple_C_red_small.png" id="7_gljii"]
+[ext_resource type="Texture2D" uid="uid://sttqdke7xehk" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/apple_D_green_small.png" id="8_nbn2t"]
+[ext_resource type="Texture2D" uid="uid://rxahvtuv41ma" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/apple_D_red_small.png" id="9_7ypo1"]
+[ext_resource type="Texture2D" uid="uid://cs1ja7lfmtreb" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/baked_potato.png" id="10_x6ipj"]
+[ext_resource type="Texture2D" uid="uid://condfycspa5pl" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/banana.png" id="11_dr61j"]
+[ext_resource type="Texture2D" uid="uid://bb6h0b4us8f2a" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/banana_bunch.png" id="12_ljtwn"]
+[ext_resource type="Texture2D" uid="uid://1igqdhx35kni" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/booze.png" id="13_gqp6l"]
+[ext_resource type="Texture2D" uid="uid://jbv0djjshofy" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cabbage.png" id="14_yi8pn"]
+[ext_resource type="Texture2D" uid="uid://brisvfe1cojek" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cake_A.png" id="15_4guoc"]
+[ext_resource type="Texture2D" uid="uid://cylr1vrdvf8sg" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cake_B.png" id="16_1gj7p"]
+[ext_resource type="Texture2D" uid="uid://didqolvj08bho" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cake_slice_A.png" id="17_3pqho"]
+[ext_resource type="Texture2D" uid="uid://ctxvliorgp141" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cake_slice_B.png" id="18_g5j08"]
+[ext_resource type="Texture2D" uid="uid://c3o1x3inbapcr" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_A.png" id="19_w07ng"]
+[ext_resource type="Texture2D" uid="uid://do3k06n8ntqsu" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_B.png" id="20_tjdkf"]
+[ext_resource type="Texture2D" uid="uid://7is0tedugcyw" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_bar_A_unwrapped.png" id="21_tqupk"]
+[ext_resource type="Texture2D" uid="uid://b7yfwdxw03n2o" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_bar_A_wrapped.png" id="22_7iim7"]
+[ext_resource type="Texture2D" uid="uid://c52xu2avqt3ao" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_bar_B_unwrapped.png" id="23_p254k"]
+[ext_resource type="Texture2D" uid="uid://bc2y8xmjrg5rl" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_bar_B_wrapped.png" id="24_jm3c2"]
+[ext_resource type="Texture2D" uid="uid://kx1872bbqymq" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_C.png" id="25_f6lj7"]
+[ext_resource type="Texture2D" uid="uid://ckc3ukq620x8" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_cane_A.png" id="26_g2xo8"]
+[ext_resource type="Texture2D" uid="uid://l5pjpbo8su04" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_cane_B.png" id="27_ccqb1"]
+[ext_resource type="Texture2D" uid="uid://cdwg1en4sglm4" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/candy_D.png" id="28_lemxa"]
+[ext_resource type="Texture2D" uid="uid://n2wdhr38roi" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cantaloupe.png" id="29_g0bq2"]
+[ext_resource type="Texture2D" uid="uid://cxvfdykgeuqcc" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cantaloupe_slice.png" id="30_4ng7m"]
+[ext_resource type="Texture2D" uid="uid://cu0sd84y82jwu" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/carrot.png" id="31_n0p5o"]
+[ext_resource type="Texture2D" uid="uid://eonp2keqquww" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/celery.png" id="32_qtbqk"]
+[ext_resource type="Texture2D" uid="uid://c0r3aepaaw6qm" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cherry.png" id="33_rq8t7"]
+[ext_resource type="Texture2D" uid="uid://cg5h4rxk6k7wn" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/chocolate_bar.png" id="34_nnqn5"]
+[ext_resource type="Texture2D" uid="uid://bs2ilpghkurxj" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/chocolate_strawberry.png" id="35_2d6bm"]
+[ext_resource type="Texture2D" uid="uid://dpq646regoy6d" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cookie_A.png" id="36_rnbgj"]
+[ext_resource type="Texture2D" uid="uid://bn7rdbdx1ngj5" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cookie_B.png" id="37_7jcga"]
+[ext_resource type="Texture2D" uid="uid://cmomne3sv02px" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cookie_C.png" id="38_yf1pg"]
+[ext_resource type="Texture2D" uid="uid://cqc1fo1oiov3p" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cookie_D.png" id="39_ykj5f"]
+[ext_resource type="Texture2D" uid="uid://bcxn4tx38acm8" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cookie_sandwich.png" id="40_6i3wr"]
+[ext_resource type="Texture2D" uid="uid://buk882xupi0lp" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/corn.png" id="41_7w061"]
+[ext_resource type="Texture2D" uid="uid://cksed350wk0n6" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cotton_candy_A.png" id="42_id4dp"]
+[ext_resource type="Texture2D" uid="uid://dbrulbs300rj7" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cotton_candy_B.png" id="43_ognu0"]
+[ext_resource type="Texture2D" uid="uid://dvhae46mmcdj4" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cucumber.png" id="44_bo3jj"]
+[ext_resource type="Texture2D" uid="uid://bjguk8dnb1csl" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cupcake_A.png" id="45_au6y3"]
+[ext_resource type="Texture2D" uid="uid://dfgyrf1hgo5kv" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/cupcake_B.png" id="46_3d2j7"]
+[ext_resource type="Texture2D" uid="uid://2u7amtis0m42" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/eggplant.png" id="47_1717y"]
+[ext_resource type="Texture2D" uid="uid://10mhu04o76q" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/green_beans.png" id="48_3bvfs"]
+[ext_resource type="Texture2D" uid="uid://bbtlmlqa7b5yy" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/green_grapes.png" id="49_3mnxl"]
+[ext_resource type="Texture2D" uid="uid://b0nuptq8gn0ml" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/green_pepper.png" id="50_7aw2m"]
+[ext_resource type="Texture2D" uid="uid://0fbis2neerpb" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/lemon.png" id="51_tyf0q"]
+[ext_resource type="Texture2D" uid="uid://cs1k6oe7bx348" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/lettuce.png" id="52_vl20t"]
+[ext_resource type="Texture2D" uid="uid://cufgld1tq6x24" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/lime.png" id="53_skvfx"]
+[ext_resource type="Texture2D" uid="uid://o21ef1k58far" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/lollipop_A.png" id="54_fxctv"]
+[ext_resource type="Texture2D" uid="uid://ckj376qta74xv" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/lollipop_B.png" id="55_jonfv"]
+[ext_resource type="Texture2D" uid="uid://dpspseexb0h83" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/lollipop_C.png" id="56_22qx3"]
+[ext_resource type="Texture2D" uid="uid://c6oims488ah3e" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/lollipop_D.png" id="57_q1bsb"]
+[ext_resource type="Texture2D" uid="uid://bduynappojedf" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/mango.png" id="58_0xe3r"]
+[ext_resource type="Texture2D" uid="uid://bkeam2yd4w36b" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/mashed_potato_bowl.png" id="59_p46h4"]
+[ext_resource type="Texture2D" uid="uid://dbv8ry2rvad02" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/meat_large.png" id="60_j5g8f"]
+[ext_resource type="Texture2D" uid="uid://c8e7nhym40547" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/meat_small.png" id="61_la17q"]
+[ext_resource type="Texture2D" uid="uid://57ckngwe0fms" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/mushroom.png" id="62_6p4qt"]
+[ext_resource type="Texture2D" uid="uid://crh3nrisrec2u" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/orange.png" id="63_ac4mx"]
+[ext_resource type="Texture2D" uid="uid://4jgpjaqi2e2s" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/pear.png" id="64_y2j76"]
+[ext_resource type="Texture2D" uid="uid://iexecn60sfmv" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/pea_bowl.png" id="65_h2qv8"]
+[ext_resource type="Texture2D" uid="uid://c6fjkgotiyf3q" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/red_grapes.png" id="66_phbmw"]
+[ext_resource type="Texture2D" uid="uid://csea7jpviwbt0" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/red_onion.png" id="67_ooprh"]
+[ext_resource type="Texture2D" uid="uid://bwf2w7xa033hm" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/red_pepper.png" id="68_gcjhm"]
+[ext_resource type="Texture2D" uid="uid://bbxy6f2bc6e8n" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/rice_bowl.png" id="69_7wwhw"]
+[ext_resource type="Texture2D" uid="uid://bwvi6lgx14yd" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/snap_pea.png" id="70_lcgka"]
+[ext_resource type="Texture2D" uid="uid://iml0yqs1xpyx" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/spicy_pepper.png" id="71_ar0r5"]
+[ext_resource type="Texture2D" uid="uid://cegvxu2a42isk" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/stir_fry.png" id="72_01ic2"]
+[ext_resource type="Texture2D" uid="uid://cxqxfxthov0xk" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/strawberry.png" id="73_v30gi"]
+[ext_resource type="Texture2D" uid="uid://b1on88o0slhdu" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/tomato.png" id="74_18jor"]
+[ext_resource type="Texture2D" uid="uid://cuekg35g1vpip" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/tomato_soup.png" id="75_8geu7"]
+[ext_resource type="Texture2D" uid="uid://c1nm4a00steby" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/turkey.png" id="76_od5kx"]
+[ext_resource type="Texture2D" uid="uid://dgn6w3rmltv1j" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/watermelon.png" id="77_q8q0u"]
+[ext_resource type="Texture2D" uid="uid://bsthglqxpui5b" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/watermelon_slice.png" id="78_hjddp"]
+[ext_resource type="Texture2D" uid="uid://n47bby6tu1ec" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/white_onion.png" id="79_tx7w1"]
+[ext_resource type="Texture2D" uid="uid://crxsh6qnyv0wv" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/wine.png" id="80_6ro8p"]
+[ext_resource type="Texture2D" uid="uid://bbs4p1kg4i1v0" path="res://art/super_pixel/Super Pixel Objects And Items/PNG/outline_none/yellow_pepper.png" id="81_gjvg2"]
+[ext_resource type="Texture2D" uid="uid://bjynhgepeyxyv" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_door.png" id="82_5ox2q"]
+[ext_resource type="Texture2D" uid="uid://b8slwafhtonqo" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_door_damage_high.png" id="83_828wm"]
+[ext_resource type="Texture2D" uid="uid://cau056u57gpnp" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2_right_roof_damage_high.png" id="84_7w6mh"]
+[ext_resource type="Texture2D" uid="uid://tby6qk2rct5m" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2_right_roof_damage_med.png" id="85_ov0um"]
+[ext_resource type="Texture2D" uid="uid://dculypdrdxgtl" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_A.png" id="86_wvgil"]
+[ext_resource type="Texture2D" uid="uid://7rdxxpbmfowa" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_A_damage_high.png" id="87_as73x"]
+[ext_resource type="Texture2D" uid="uid://ddiklt7cnapuw" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_A_damage_med.png" id="88_q4oyt"]
+[ext_resource type="Texture2D" uid="uid://sy5ge4ex2cv3" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_B.png" id="89_3s4fl"]
+[ext_resource type="Texture2D" uid="uid://dbstdwlnx85xq" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_B_damage_high.png" id="90_tye13"]
+[ext_resource type="Texture2D" uid="uid://d0t43l8uw7xwk" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_B_damage_med.png" id="91_8ga1q"]
+[ext_resource type="Texture2D" uid="uid://dj844lktlgrts" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_C.png" id="92_hdhkq"]
+[ext_resource type="Texture2D" uid="uid://ci1uih7bnwb6y" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_C_damage_high.png" id="93_uhhsl"]
+[ext_resource type="Texture2D" uid="uid://f71vflsk54a" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_door_damage_med.png" id="94_u8ob2"]
+[ext_resource type="Texture2D" uid="uid://bt3k78u72ts33" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x4_C_damage_med.png" id="95_f676p"]
+[ext_resource type="Texture2D" uid="uid://us5j3bc0xhua" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_4x4.png" id="96_nb88h"]
+[ext_resource type="Texture2D" uid="uid://bwk05r8qpmemh" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_4x4_damage_high.png" id="97_55eji"]
+[ext_resource type="Texture2D" uid="uid://perppd3i00g0" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_4x4_damage_med.png" id="98_gdbgj"]
+[ext_resource type="Texture2D" uid="uid://djbk7u7t67cy2" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_6x2.png" id="99_8yep5"]
+[ext_resource type="Texture2D" uid="uid://dvul1wqs1iib7" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_6x2_damage_high.png" id="100_44otg"]
+[ext_resource type="Texture2D" uid="uid://buo8hsd4unf8s" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_6x2_damage_med.png" id="101_m12w5"]
+[ext_resource type="Texture2D" uid="uid://cmohmsq7hyukx" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_6x2_roof_both.png" id="102_3qrek"]
+[ext_resource type="Texture2D" uid="uid://cjf0sctwlm8ny" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_6x2_roof_both_damage_high.png" id="103_85kt1"]
+[ext_resource type="Texture2D" uid="uid://xpmy62gq1hxx" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_6x2_roof_both_damage_med.png" id="104_jbjcp"]
+[ext_resource type="Texture2D" uid="uid://pe8v4s53jqiu" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2.png" id="105_esjwi"]
+[ext_resource type="Texture2D" uid="uid://dtrvklrsk7p0d" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_bottom_left (2).png" id="106_m57dx"]
+[ext_resource type="Texture2D" uid="uid://dv5v87hgtutbd" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_bottom_left.png" id="107_bjn4c"]
+[ext_resource type="Texture2D" uid="uid://1rnxlre7o5ff" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_bottom_right (2).png" id="108_5lm3q"]
+[ext_resource type="Texture2D" uid="uid://dnbagbb625vxd" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_bottom_right.png" id="109_vgvfv"]
+[ext_resource type="Texture2D" uid="uid://cjynmxm2p3go3" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left (2).png" id="110_2xwar"]
+[ext_resource type="Texture2D" uid="uid://brfboa6y3f3s3" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left.png" id="111_kabao"]
+[ext_resource type="Texture2D" uid="uid://db1m70cbxhjqq" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left_damage_high (2).png" id="112_7854g"]
+[ext_resource type="Texture2D" uid="uid://bbypjoxcvj63x" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left_damage_high.png" id="113_1a807"]
+[ext_resource type="Texture2D" uid="uid://dtr8uj3d0pv3c" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left_damage_med (2).png" id="114_fydk6"]
+[ext_resource type="Texture2D" uid="uid://3sqj7xe8wwun" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_left_damage_med.png" id="115_omaan"]
+[ext_resource type="Texture2D" uid="uid://c2is6g2as3oor" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2_damage_high.png" id="116_t3cw5"]
+[ext_resource type="Texture2D" uid="uid://dyxngswftcc32" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right (2).png" id="117_bkpfo"]
+[ext_resource type="Texture2D" uid="uid://dnoyyqsdfqaar" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right.png" id="118_rs0lk"]
+[ext_resource type="Texture2D" uid="uid://bvuyeadsnpadc" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right_damage_high (2).png" id="119_f6ow6"]
+[ext_resource type="Texture2D" uid="uid://brba2sa877h8a" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right_damage_high.png" id="120_nfjv7"]
+[ext_resource type="Texture2D" uid="uid://h53xg2ovxx36" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right_damage_med (2).png" id="121_6edaf"]
+[ext_resource type="Texture2D" uid="uid://cicgv5bpv65mu" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_large_right_damage_med.png" id="122_1u3gm"]
+[ext_resource type="Texture2D" uid="uid://x3krjqslau8m" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left (2).png" id="123_ndhcd"]
+[ext_resource type="Texture2D" uid="uid://kad7m2ks7opa" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left.png" id="124_4qnj6"]
+[ext_resource type="Texture2D" uid="uid://cag6eqrnkw3ll" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left_damage_high (2).png" id="125_nw1xe"]
+[ext_resource type="Texture2D" uid="uid://cvmrpja57k8a5" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left_damage_high.png" id="126_hgc3j"]
+[ext_resource type="Texture2D" uid="uid://se1cd0d25lw3" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2_damage_med.png" id="127_caw65"]
+[ext_resource type="Texture2D" uid="uid://ddcko584vgmnc" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left_damage_med (2).png" id="128_hs80x"]
+[ext_resource type="Texture2D" uid="uid://cn144tet3c3s2" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_left_damage_med.png" id="129_okcip"]
+[ext_resource type="Texture2D" uid="uid://do7cfbkgm0u0h" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right (2).png" id="130_qp7kr"]
+[ext_resource type="Texture2D" uid="uid://c1sfapi2t2mk7" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right.png" id="131_ro3t2"]
+[ext_resource type="Texture2D" uid="uid://bwyumun2emjds" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right_damage_high (2).png" id="132_vgw7p"]
+[ext_resource type="Texture2D" uid="uid://3b2w14nmvdoc" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right_damage_high.png" id="133_s6whw"]
+[ext_resource type="Texture2D" uid="uid://ic2x81sn46x2" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right_damage_med (2).png" id="134_4ney7"]
+[ext_resource type="Texture2D" uid="uid://bbt8h4jfl6euu" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_small_right_damage_med.png" id="135_cul4s"]
+[ext_resource type="Texture2D" uid="uid://cpnns23ldeql2" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_top (2).png" id="136_is34b"]
+[ext_resource type="Texture2D" uid="uid://bunnm6o5077h3" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_roof_top.png" id="137_ahf3x"]
+[ext_resource type="Texture2D" uid="uid://cj3jcvh2d7cn" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2_left_roof.png" id="138_ejfw4"]
+[ext_resource type="Texture2D" uid="uid://bxhpijgp5dg7x" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_side.png" id="139_oueei"]
+[ext_resource type="Texture2D" uid="uid://bmo4k7v8ypdld" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_side_roof_bottom_left.png" id="140_4bgtf"]
+[ext_resource type="Texture2D" uid="uid://csh2vht2af0c5" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_side_roof_bottom_right.png" id="141_0lquh"]
+[ext_resource type="Texture2D" uid="uid://bkv72auag8uik" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_side_roof_center.png" id="142_hs0gd"]
+[ext_resource type="Texture2D" uid="uid://b7voqj6c0v5c3" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_side_roof_top.png" id="143_nfjuc"]
+[ext_resource type="Texture2D" uid="uid://ctsp0j3dsj57a" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_subroof_left.png" id="144_afk5n"]
+[ext_resource type="Texture2D" uid="uid://b823s8r5huogn" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_subroof_right.png" id="145_1ckab"]
+[ext_resource type="Texture2D" uid="uid://dxexl8xja4h1q" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_window.png" id="146_o40h7"]
+[ext_resource type="Texture2D" uid="uid://cc26vvg4kk601" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_window_damaged.png" id="147_s214r"]
+[ext_resource type="Texture2D" uid="uid://b4tqpmqprhlwd" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2_left_roof_damage_high.png" id="148_ehiqt"]
+[ext_resource type="Texture2D" uid="uid://fnwaf2e4lphn" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2_left_roof_damage_med.png" id="149_jdfbp"]
+[ext_resource type="Texture2D" uid="uid://baytygpc4tduv" path="res://art/super_pixel/medieval_village_full/medieval_village/pieces/building_panel_2x2_right_roof.png" id="150_l425d"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8wd0q"]
+texture = ExtResource("82_5ox2q")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hg7ms"]
+texture = ExtResource("83_828wm")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t775t"]
+texture = ExtResource("84_7w6mh")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_agsnl"]
+texture = ExtResource("85_ov0um")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x21nu"]
+texture = ExtResource("86_wvgil")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6s8xr"]
+texture = ExtResource("87_as73x")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d0idd"]
+texture = ExtResource("88_q4oyt")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_125x6"]
+texture = ExtResource("89_3s4fl")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8utn5"]
+texture = ExtResource("90_tye13")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xps15"]
+texture = ExtResource("91_8ga1q")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l31tw"]
+texture = ExtResource("92_hdhkq")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1etxl"]
+texture = ExtResource("93_uhhsl")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ad5tf"]
+texture = ExtResource("94_u8ob2")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imvfl"]
+texture = ExtResource("95_f676p")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6x8xm"]
+texture = ExtResource("96_nb88h")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77hw2"]
+texture = ExtResource("97_55eji")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ca4q"]
+texture = ExtResource("98_gdbgj")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ad1pk"]
+texture = ExtResource("99_8yep5")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbshg"]
+texture = ExtResource("100_44otg")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cot05"]
+texture = ExtResource("101_m12w5")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkyh7"]
+texture = ExtResource("102_3qrek")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_if4ux"]
+texture = ExtResource("103_85kt1")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8wvcm"]
+texture = ExtResource("104_jbjcp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kayar"]
+texture = ExtResource("105_esjwi")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cinjq"]
+texture = ExtResource("106_m57dx")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2tpva"]
+texture = ExtResource("107_bjn4c")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hv1q4"]
+texture = ExtResource("108_5lm3q")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5wlu8"]
+texture = ExtResource("109_vgvfv")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srky3"]
+texture = ExtResource("110_2xwar")
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2al1f"]
+texture = ExtResource("111_kabao")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b78ee"]
+texture = ExtResource("112_7854g")
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lxky2"]
+texture = ExtResource("113_1a807")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjw76"]
+texture = ExtResource("114_fydk6")
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnwyd"]
+texture = ExtResource("115_omaan")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvay6"]
+texture = ExtResource("116_t3cw5")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ftktr"]
+texture = ExtResource("117_bkpfo")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2no76"]
+texture = ExtResource("118_rs0lk")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_63r0d"]
+texture = ExtResource("119_f6ow6")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tjw8y"]
+texture = ExtResource("120_nfjv7")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fiiho"]
+texture = ExtResource("121_6edaf")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vk61c"]
+texture = ExtResource("122_1u3gm")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bqqd4"]
+texture = ExtResource("123_ndhcd")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2piun"]
+texture = ExtResource("124_4qnj6")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1n2fp"]
+texture = ExtResource("125_nw1xe")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7rqh"]
+texture = ExtResource("126_hgc3j")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mebuc"]
+texture = ExtResource("127_caw65")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pnub7"]
+texture = ExtResource("128_hs80x")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dj0wh"]
+texture = ExtResource("129_okcip")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddrqm"]
+texture = ExtResource("130_qp7kr")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_07gl0"]
+texture = ExtResource("131_ro3t2")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ov8kn"]
+texture = ExtResource("132_vgw7p")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aydqk"]
+texture = ExtResource("133_s6whw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fois1"]
+texture = ExtResource("134_4ney7")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_namn7"]
+texture = ExtResource("135_cul4s")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e6o5p"]
+texture = ExtResource("136_is34b")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phtko"]
+texture = ExtResource("137_ahf3x")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_babku"]
+texture = ExtResource("138_ejfw4")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2inn0"]
+texture = ExtResource("139_oueei")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k8he6"]
+texture = ExtResource("140_4bgtf")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i7y3i"]
+texture = ExtResource("141_0lquh")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5kej4"]
+texture = ExtResource("142_hs0gd")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s55ol"]
+texture = ExtResource("143_nfjuc")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b6xp1"]
+texture = ExtResource("144_afk5n")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ewjda"]
+texture = ExtResource("145_1ckab")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hy71f"]
+texture = ExtResource("146_o40h7")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0ufe"]
+texture = ExtResource("147_s214r")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xojqa"]
+texture = ExtResource("148_ehiqt")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itklx"]
+texture = ExtResource("149_jdfbp")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6etf6"]
+texture = ExtResource("150_l425d")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_s2vla"]
+sources/0 = SubResource("TileSetAtlasSource_8wd0q")
+sources/1 = SubResource("TileSetAtlasSource_hg7ms")
+sources/2 = SubResource("TileSetAtlasSource_ad5tf")
+sources/3 = SubResource("TileSetAtlasSource_kayar")
+sources/4 = SubResource("TileSetAtlasSource_qvay6")
+sources/5 = SubResource("TileSetAtlasSource_mebuc")
+sources/6 = SubResource("TileSetAtlasSource_babku")
+sources/7 = SubResource("TileSetAtlasSource_xojqa")
+sources/8 = SubResource("TileSetAtlasSource_itklx")
+sources/9 = SubResource("TileSetAtlasSource_6etf6")
+sources/10 = SubResource("TileSetAtlasSource_t775t")
+sources/11 = SubResource("TileSetAtlasSource_agsnl")
+sources/12 = SubResource("TileSetAtlasSource_x21nu")
+sources/13 = SubResource("TileSetAtlasSource_6s8xr")
+sources/14 = SubResource("TileSetAtlasSource_d0idd")
+sources/15 = SubResource("TileSetAtlasSource_125x6")
+sources/16 = SubResource("TileSetAtlasSource_8utn5")
+sources/17 = SubResource("TileSetAtlasSource_xps15")
+sources/18 = SubResource("TileSetAtlasSource_l31tw")
+sources/19 = SubResource("TileSetAtlasSource_1etxl")
+sources/20 = SubResource("TileSetAtlasSource_imvfl")
+sources/21 = SubResource("TileSetAtlasSource_6x8xm")
+sources/22 = SubResource("TileSetAtlasSource_77hw2")
+sources/23 = SubResource("TileSetAtlasSource_3ca4q")
+sources/24 = SubResource("TileSetAtlasSource_ad1pk")
+sources/25 = SubResource("TileSetAtlasSource_lbshg")
+sources/26 = SubResource("TileSetAtlasSource_cot05")
+sources/27 = SubResource("TileSetAtlasSource_vkyh7")
+sources/28 = SubResource("TileSetAtlasSource_if4ux")
+sources/29 = SubResource("TileSetAtlasSource_8wvcm")
+sources/30 = SubResource("TileSetAtlasSource_cinjq")
+sources/31 = SubResource("TileSetAtlasSource_2tpva")
+sources/32 = SubResource("TileSetAtlasSource_hv1q4")
+sources/33 = SubResource("TileSetAtlasSource_5wlu8")
+sources/34 = SubResource("TileSetAtlasSource_srky3")
+sources/35 = SubResource("TileSetAtlasSource_2al1f")
+sources/36 = SubResource("TileSetAtlasSource_b78ee")
+sources/37 = SubResource("TileSetAtlasSource_lxky2")
+sources/38 = SubResource("TileSetAtlasSource_wjw76")
+sources/39 = SubResource("TileSetAtlasSource_xnwyd")
+sources/40 = SubResource("TileSetAtlasSource_ftktr")
+sources/41 = SubResource("TileSetAtlasSource_2no76")
+sources/42 = SubResource("TileSetAtlasSource_63r0d")
+sources/43 = SubResource("TileSetAtlasSource_tjw8y")
+sources/44 = SubResource("TileSetAtlasSource_fiiho")
+sources/45 = SubResource("TileSetAtlasSource_vk61c")
+sources/46 = SubResource("TileSetAtlasSource_bqqd4")
+sources/47 = SubResource("TileSetAtlasSource_2piun")
+sources/48 = SubResource("TileSetAtlasSource_1n2fp")
+sources/49 = SubResource("TileSetAtlasSource_a7rqh")
+sources/50 = SubResource("TileSetAtlasSource_pnub7")
+sources/51 = SubResource("TileSetAtlasSource_dj0wh")
+sources/52 = SubResource("TileSetAtlasSource_ddrqm")
+sources/53 = SubResource("TileSetAtlasSource_07gl0")
+sources/54 = SubResource("TileSetAtlasSource_ov8kn")
+sources/55 = SubResource("TileSetAtlasSource_aydqk")
+sources/56 = SubResource("TileSetAtlasSource_fois1")
+sources/57 = SubResource("TileSetAtlasSource_namn7")
+sources/58 = SubResource("TileSetAtlasSource_e6o5p")
+sources/59 = SubResource("TileSetAtlasSource_phtko")
+sources/60 = SubResource("TileSetAtlasSource_2inn0")
+sources/61 = SubResource("TileSetAtlasSource_k8he6")
+sources/62 = SubResource("TileSetAtlasSource_i7y3i")
+sources/63 = SubResource("TileSetAtlasSource_5kej4")
+sources/64 = SubResource("TileSetAtlasSource_s55ol")
+sources/65 = SubResource("TileSetAtlasSource_b6xp1")
+sources/66 = SubResource("TileSetAtlasSource_ewjda")
+sources/67 = SubResource("TileSetAtlasSource_hy71f")
+sources/68 = SubResource("TileSetAtlasSource_h0ufe")
 
 [node name="KitchenBuff" type="Node2D"]
+texture_filter = 1
+
+[node name="foods" type="Node2D" parent="."]
+
+[node name="AppetizerA" type="Sprite2D" parent="foods"]
+position = Vector2(304, 104)
+texture = ExtResource("1_x7eyt")
+
+[node name="AppetizerB" type="Sprite2D" parent="foods"]
+position = Vector2(300, 142)
+texture = ExtResource("2_n2sv3")
+
+[node name="AppleAGreenLarge" type="Sprite2D" parent="foods"]
+position = Vector2(-152, 143)
+texture = ExtResource("3_psii4")
+
+[node name="AppleARedLarge" type="Sprite2D" parent="foods"]
+position = Vector2(264, 24)
+texture = ExtResource("4_sr2np")
+
+[node name="AppleBRedLarge" type="Sprite2D" parent="foods"]
+position = Vector2(108, 142)
+texture = ExtResource("5_t4mae")
+
+[node name="AppleCGreenSmall" type="Sprite2D" parent="foods"]
+position = Vector2(297, 83)
+texture = ExtResource("6_gec4p")
+
+[node name="AppleCRedSmall" type="Sprite2D" parent="foods"]
+position = Vector2(267, 72)
+texture = ExtResource("7_gljii")
+
+[node name="AppleDGreenSmall" type="Sprite2D" parent="foods"]
+position = Vector2(266, -48)
+texture = ExtResource("8_nbn2t")
+
+[node name="AppleDRedSmall" type="Sprite2D" parent="foods"]
+position = Vector2(-233, 55)
+texture = ExtResource("9_7ypo1")
+
+[node name="BakedPotato" type="Sprite2D" parent="foods"]
+position = Vector2(245, -65)
+texture = ExtResource("10_x6ipj")
+
+[node name="Banana" type="Sprite2D" parent="foods"]
+position = Vector2(294, -51)
+texture = ExtResource("11_dr61j")
+
+[node name="BananaBunch" type="Sprite2D" parent="foods"]
+position = Vector2(285, -30)
+texture = ExtResource("12_ljtwn")
+
+[node name="Booze" type="Sprite2D" parent="foods"]
+position = Vector2(-190, 171)
+texture = ExtResource("13_gqp6l")
+
+[node name="Cabbage" type="Sprite2D" parent="foods"]
+position = Vector2(-101, 160)
+texture = ExtResource("14_yi8pn")
+
+[node name="CakeA" type="Sprite2D" parent="foods"]
+position = Vector2(7, 174)
+texture = ExtResource("15_4guoc")
+
+[node name="CakeB" type="Sprite2D" parent="foods"]
+position = Vector2(206, 139)
+texture = ExtResource("16_1gj7p")
+
+[node name="CakeSliceA" type="Sprite2D" parent="foods"]
+position = Vector2(211, 28)
+texture = ExtResource("17_3pqho")
+
+[node name="CakeSliceB" type="Sprite2D" parent="foods"]
+position = Vector2(212, -69)
+texture = ExtResource("18_g5j08")
+
+[node name="CandyA" type="Sprite2D" parent="foods"]
+position = Vector2(224, -52)
+texture = ExtResource("19_w07ng")
+
+[node name="CandyB" type="Sprite2D" parent="foods"]
+position = Vector2(225, 153)
+texture = ExtResource("20_tjdkf")
+
+[node name="CandyBarAUnwrapped" type="Sprite2D" parent="foods"]
+position = Vector2(154, 148)
+texture = ExtResource("21_tqupk")
+
+[node name="CandyBarAWrapped" type="Sprite2D" parent="foods"]
+position = Vector2(134, 171)
+texture = ExtResource("22_7iim7")
+
+[node name="CandyBarBUnwrapped" type="Sprite2D" parent="foods"]
+position = Vector2(76, 159)
+texture = ExtResource("23_p254k")
+
+[node name="CandyBarBWrapped" type="Sprite2D" parent="foods"]
+position = Vector2(15, 146)
+texture = ExtResource("24_jm3c2")
+
+[node name="CandyC" type="Sprite2D" parent="foods"]
+position = Vector2(-11, 150)
+texture = ExtResource("25_f6lj7")
+
+[node name="CandyCaneA" type="Sprite2D" parent="foods"]
+position = Vector2(182, 160)
+texture = ExtResource("26_g2xo8")
+
+[node name="CandyCaneB" type="Sprite2D" parent="foods"]
+position = Vector2(29, 145)
+texture = ExtResource("27_ccqb1")
+
+[node name="CandyD" type="Sprite2D" parent="foods"]
+position = Vector2(-50, 149)
+texture = ExtResource("28_lemxa")
+
+[node name="Cantaloupe" type="Sprite2D" parent="foods"]
+position = Vector2(-224, 152)
+texture = ExtResource("29_g0bq2")
+
+[node name="CantaloupeSlice" type="Sprite2D" parent="foods"]
+position = Vector2(-223, 131)
+texture = ExtResource("30_4ng7m")
+
+[node name="Carrot" type="Sprite2D" parent="foods"]
+position = Vector2(53, 148)
+texture = ExtResource("31_n0p5o")
+
+[node name="Celery" type="Sprite2D" parent="foods"]
+position = Vector2(-79, 151)
+texture = ExtResource("32_qtbqk")
+
+[node name="Cherry" type="Sprite2D" parent="foods"]
+position = Vector2(-199, 148)
+texture = ExtResource("33_rq8t7")
+
+[node name="ChocolateBar" type="Sprite2D" parent="foods"]
+position = Vector2(-126, -67)
+texture = ExtResource("34_nnqn5")
+
+[node name="ChocolateStrawberry" type="Sprite2D" parent="foods"]
+position = Vector2(-239, 98)
+texture = ExtResource("35_2d6bm")
+
+[node name="CookieA" type="Sprite2D" parent="foods"]
+position = Vector2(-215, 114)
+texture = ExtResource("36_rnbgj")
+
+[node name="CookieB" type="Sprite2D" parent="foods"]
+position = Vector2(-192, 131)
+texture = ExtResource("37_7jcga")
+
+[node name="CookieC" type="Sprite2D" parent="foods"]
+position = Vector2(-156, -92)
+texture = ExtResource("38_yf1pg")
+
+[node name="CookieD" type="Sprite2D" parent="foods"]
+position = Vector2(-79, -85)
+texture = ExtResource("39_ykj5f")
+
+[node name="CookieSandwich" type="Sprite2D" parent="foods"]
+position = Vector2(-196, -89)
+texture = ExtResource("40_6i3wr")
+
+[node name="Corn" type="Sprite2D" parent="foods"]
+position = Vector2(-229, -62)
+texture = ExtResource("41_7w061")
+
+[node name="CottonCandyA" type="Sprite2D" parent="foods"]
+position = Vector2(-211, -18)
+texture = ExtResource("42_id4dp")
+
+[node name="CottonCandyB" type="Sprite2D" parent="foods"]
+position = Vector2(283, 116)
+texture = ExtResource("43_ognu0")
+
+[node name="Cucumber" type="Sprite2D" parent="foods"]
+position = Vector2(-155, -72)
+texture = ExtResource("44_bo3jj")
+
+[node name="CupcakeA" type="Sprite2D" parent="foods"]
+position = Vector2(-212, -41)
+texture = ExtResource("45_au6y3")
+
+[node name="CupcakeB" type="Sprite2D" parent="foods"]
+position = Vector2(-109, -78)
+texture = ExtResource("46_3d2j7")
+
+[node name="Eggplant" type="Sprite2D" parent="foods"]
+position = Vector2(200, 6)
+texture = ExtResource("47_1717y")
+
+[node name="GreenBeans" type="Sprite2D" parent="foods"]
+position = Vector2(-198, -69)
+texture = ExtResource("48_3bvfs")
+
+[node name="GreenGrapes" type="Sprite2D" parent="foods"]
+position = Vector2(212, -8)
+texture = ExtResource("49_3mnxl")
+
+[node name="GreenPepper" type="Sprite2D" parent="foods"]
+position = Vector2(133, 128)
+texture = ExtResource("50_7aw2m")
+
+[node name="Lemon" type="Sprite2D" parent="foods"]
+position = Vector2(42, -53)
+texture = ExtResource("51_tyf0q")
+
+[node name="Lettuce" type="Sprite2D" parent="foods"]
+position = Vector2(6, -55)
+texture = ExtResource("52_vl20t")
+
+[node name="Lime" type="Sprite2D" parent="foods"]
+position = Vector2(-116, -7)
+texture = ExtResource("53_skvfx")
+
+[node name="LollipopA" type="Sprite2D" parent="foods"]
+position = Vector2(-26, -49)
+texture = ExtResource("54_fxctv")
+
+[node name="LollipopB" type="Sprite2D" parent="foods"]
+position = Vector2(-96, -38)
+texture = ExtResource("55_jonfv")
+
+[node name="LollipopC" type="Sprite2D" parent="foods"]
+position = Vector2(-119, -29)
+texture = ExtResource("56_22qx3")
+
+[node name="LollipopD" type="Sprite2D" parent="foods"]
+position = Vector2(-153, -10)
+texture = ExtResource("57_q1bsb")
+
+[node name="Mango" type="Sprite2D" parent="foods"]
+position = Vector2(-80, -29)
+texture = ExtResource("58_0xe3r")
+
+[node name="MashedPotatoBowl" type="Sprite2D" parent="foods"]
+position = Vector2(-61, -31)
+texture = ExtResource("59_p46h4")
+
+[node name="MeatLarge" type="Sprite2D" parent="foods"]
+position = Vector2(-111, 130)
+texture = ExtResource("60_j5g8f")
+
+[node name="MeatSmall" type="Sprite2D" parent="foods"]
+position = Vector2(-155, 90)
+texture = ExtResource("61_la17q")
+
+[node name="Mushroom" type="Sprite2D" parent="foods"]
+position = Vector2(-134, 118)
+texture = ExtResource("62_6p4qt")
+
+[node name="Orange" type="Sprite2D" parent="foods"]
+position = Vector2(-23, 136)
+texture = ExtResource("63_ac4mx")
+
+[node name="Pear" type="Sprite2D" parent="foods"]
+position = Vector2(28, -32)
+texture = ExtResource("64_y2j76")
+
+[node name="PeaBowl" type="Sprite2D" parent="foods"]
+position = Vector2(24, 131)
+texture = ExtResource("65_h2qv8")
+
+[node name="RedGrapes" type="Sprite2D" parent="foods"]
+position = Vector2(64, 109)
+texture = ExtResource("66_phbmw")
+
+[node name="RedOnion" type="Sprite2D" parent="foods"]
+position = Vector2(97, 71)
+texture = ExtResource("67_ooprh")
+
+[node name="RedPepper" type="Sprite2D" parent="foods"]
+position = Vector2(0, 123)
+texture = ExtResource("68_gcjhm")
+
+[node name="RiceBowl" type="Sprite2D" parent="foods"]
+position = Vector2(82, 34)
+texture = ExtResource("69_7wwhw")
+
+[node name="SnapPea" type="Sprite2D" parent="foods"]
+position = Vector2(62, 28)
+texture = ExtResource("70_lcgka")
+
+[node name="SpicyPepper" type="Sprite2D" parent="foods"]
+position = Vector2(18, 27)
+texture = ExtResource("71_ar0r5")
+
+[node name="StirFry" type="Sprite2D" parent="foods"]
+position = Vector2(-14, 69)
+texture = ExtResource("72_01ic2")
+
+[node name="Strawberry" type="Sprite2D" parent="foods"]
+position = Vector2(6, 100)
+texture = ExtResource("73_v30gi")
+
+[node name="Tomato" type="Sprite2D" parent="foods"]
+position = Vector2(-32, 79)
+texture = ExtResource("74_18jor")
+
+[node name="TomatoSoup" type="Sprite2D" parent="foods"]
+position = Vector2(10, 49)
+texture = ExtResource("75_8geu7")
+
+[node name="Turkey" type="Sprite2D" parent="foods"]
+position = Vector2(-19, 50)
+texture = ExtResource("76_od5kx")
+
+[node name="Watermelon" type="Sprite2D" parent="foods"]
+position = Vector2(59, 52)
+texture = ExtResource("77_q8q0u")
+
+[node name="WatermelonSlice" type="Sprite2D" parent="foods"]
+position = Vector2(85, 94)
+texture = ExtResource("78_hjddp")
+
+[node name="WhiteOnion" type="Sprite2D" parent="foods"]
+position = Vector2(96, 45)
+texture = ExtResource("79_tx7w1")
+
+[node name="Wine" type="Sprite2D" parent="foods"]
+position = Vector2(58, 81)
+texture = ExtResource("80_6ro8p")
+
+[node name="YellowPepper" type="Sprite2D" parent="foods"]
+position = Vector2(78, 63)
+texture = ExtResource("81_gjvg2")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_s2vla")

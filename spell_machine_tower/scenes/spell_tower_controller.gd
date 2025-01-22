@@ -100,8 +100,8 @@ func apply_combined_stats() -> void:
 		$spell_machine_tower/main_gun.secondary_firing_interval = stats.secondary_firing_interval
 		
 		cursor_radials.set_rad_1_min_max(0, stats.primary_cooldown_max)
-		machine_gun_cooldown_bar.init_health(stats.primary_cooldown_max)
-		harpoon_cooldown_bar.init_health(stats.secondary_firing_interval * 100)
+		machine_gun_cooldown_bar.init_bar(stats.primary_cooldown_max)
+		harpoon_cooldown_bar.init_bar(stats.secondary_firing_interval * 100)
 
 func add_item_to_queue(item):
 	ItemQueue.append(item)
@@ -116,12 +116,12 @@ func face_right():
 	$stars2/PinJoint2D.motor_target_velocity = -0.2
 
 func init_spellward_health(amount):
-	spellward_health_bar.init_health(amount)
+	spellward_health_bar.init_bar(amount)
 	spellward_max_health = amount
 	spellward_health = amount
 
 func set_spellward_health(amount):
-	spellward_health_bar._set_health(amount)
+	spellward_health_bar.set_bar(amount)
 
 	if amount < spellward_health:
 		if not SoundManager.is_playing("explosion2"):
@@ -130,27 +130,27 @@ func set_spellward_health(amount):
 	spellward_health = amount
 
 func init_tower_health(max_health):
-	tower_health_bar.init_health(max_health)
+	tower_health_bar.init_bar(max_health)
 
 func apply_tower_damage(amount: float) -> void:
 	level_camera.apply_shake(amount*10)
 	if not SoundManager.is_playing("metal1"):
 		SoundManager.play_sfx("metal1", 0, 2, pow(amount,0.3))
 
-	tower_health_bar._set_health(tower_health_bar.health - amount)
+	tower_health_bar.set_bar(tower_health_bar.health - amount)
 	tower_health = tower_health_bar.health - amount
 	$spell_machine_tower.modulate = Color(1, 0.2, 0.2)  # Set the color to red
 	$damage_timer.start()
 
 func _process(delta: float) -> void:
-	machine_gun_cooldown_bar._set_health($spell_machine_tower/main_gun.primary_projectiles_fired)
+	machine_gun_cooldown_bar.set_bar($spell_machine_tower/main_gun.primary_projectiles_fired)
 	cursor_radials.set_rad_1_value($spell_machine_tower/main_gun.primary_projectiles_fired)
 
 
 	if $spell_machine_tower/main_gun.secondary_firing:
-		harpoon_cooldown_bar._set_health($spell_machine_tower/main_gun.secondary_firing_interval * 100)
+		harpoon_cooldown_bar.set_bar($spell_machine_tower/main_gun.secondary_firing_interval * 100)
 
-	harpoon_cooldown_bar._set_health(($spell_machine_tower/main_gun.secondary_firing_interval - $spell_machine_tower/main_gun.secondary_firing_timer) * 100)
+	harpoon_cooldown_bar.set_bar(($spell_machine_tower/main_gun.secondary_firing_interval - $spell_machine_tower/main_gun.secondary_firing_timer) * 100)
 
 func _on_damage_timer_timeout() -> void:
 	$spell_machine_tower.modulate = Color(1, 1, 1)  # Reset the color to white

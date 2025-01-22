@@ -55,20 +55,20 @@ func _ready() -> void:
 	
 	var tower_element: int = 114 # plant
 	
-	powderviewport.powder_instance.health_element = 20
+	powderviewport.health_element = 20
 	
-	powderviewport.powder_instance.polygon(Vector2(60,60), 20.0, 8, 5, tower_element)
-	powderviewport.powder_instance.powder_toy.powder_box(40, 120, 80, 75, tower_element)
+	powderviewport.polygon(Vector2(60,60), 20.0, 8, 5, tower_element)
+	powderviewport.powder_instance.powder_box(40, 120, 80, 75, tower_element)
 	
 	
 	$slime_tracker.set_slime_goal_position(spelltowernode.global_position)
 	
-	powderviewport.powder_instance.powder_toy.flood_powder(60, 60, 28, 0) # diamond
+	powderviewport.powder_instance.flood_powder(60, 60, 28, 0) # diamond
 	
 	spelltowernode.init_tower_health(tower_health)
 	
-	$slime_health_layer/HealthBar.init_health(100.0)
-	$slime_health_layer/HealthBar._set_health(0.0)
+	$slime_health_layer/HealthBar.init_bar(100.0)
+	$slime_health_layer/HealthBar.set_bar(0.0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if spelltowernode.tower_health <= 0 and not lost:
@@ -79,7 +79,7 @@ func _process(delta: float) -> void:
 		$slime_health_layer.add_child(lost_screen)
 		
 	# init powder health. Gotta wait a sec for the initial powder manifests to go off
-	var powder_health: float = powderviewport.powder_instance.get_health()
+	var powder_health: float = powderviewport.get_health()
 	
 	# calculate spellward hp
 	var margin_health: int = powder_health - spelltowernode.spellward_health_margin
@@ -93,7 +93,7 @@ func _process(delta: float) -> void:
 	
 	total_slime_health = max(total_slime_health, float($slime_tracker.current_max_slime_health))
 	
-	$slime_health_layer/HealthBar._set_health(100*($slime_tracker.current_slime_health/total_slime_health))
+	$slime_health_layer/HealthBar.set_bar(100*($slime_tracker.current_slime_health/total_slime_health))
 	
 	# set and get total slime health
 	
@@ -136,7 +136,7 @@ func _process(delta: float) -> void:
 			# slimes tunnel into your tower
 			#powderviewport.powder_instance.powder_toy.clear_sim_area(powder_x, powder_y, slime_circle_size, slime_circle_size)
 			
-			powderviewport.powder_instance.circle(Vector2(powder_x,powder_y), slime_circle_size, element)
+			powderviewport.circle(Vector2(powder_x,powder_y), slime_circle_size, element)
 	
 	if Input.is_action_pressed("cam_left"):
 		camera_node.position.x -= camera_move_speed * delta
@@ -152,7 +152,7 @@ func _process(delta: float) -> void:
 		$slime_health_layer.add_child(pause)
 		
 	if Input.is_physical_key_pressed(KEY_E):
-		powderviewport.powder_instance.polygon(Vector2(60,60), 30.0, 8, 2, 2)
+		powderviewport.polygon(Vector2(60,60), 30.0, 8, 2, 2)
 
 	# Determine the camera's relative position to the center and call face_left or face_right
 	var camera_center_x: float = camera_node.position.x
