@@ -87,6 +87,11 @@ func _process(delta: float) -> void:
 	
 	state = smp.get_current()
 	
+	if health <= 0:
+		SoundManager.stop_all()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		SceneLoader.load_scene("res://maaack/scenes/opening/opening_with_logo.tscn")
+	
 	# regen mana
 	if state == "active":
 		mana = min(mana + (player_attack_stats.mana_recharge_rate * delta), player_attack_stats.max_mana)

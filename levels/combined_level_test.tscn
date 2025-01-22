@@ -86,6 +86,11 @@ player = NodePath("../player")
 position = Vector2(1847, -6)
 player = NodePath("../player")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-1030, 828, -1992, 754, -2873, 741, -2907, 505, -2907, 35, -2900, -551, -2853, -753, 2017, -779, 2011, -510, 1990, 721, -828, 754, -990, 768, -909, 990, 2481, 1010, 2461, -1197, -3304, -1116, -3331, 1118, -990, 1111)
+
 [connection signal="portal_entered" from="exit_portal" to="." method="_on_exit_portal_portal_entered" flags=6]
 [connection signal="portal_entered" from="exit_portal2" to="." method="_on_exit_portal_2_portal_entered" flags=6]
 

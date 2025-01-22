@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://bccavc2gq6x18"]
+[gd_scene load_steps=45 format=3 uid="uid://bccavc2gq6x18"]
 
 [ext_resource type="PackedScene" uid="uid://iatpne3a4rwl" path="res://maaack/scenes/menus/main_menu/main_menu.tscn" id="1_umbo3"]
 [ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_xtkjf"]
@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://bw67w52g4rasi" path="res://maaack/scenes/opening/cutscene_small_slime.tscn" id="19_mstru"]
 [ext_resource type="Script" path="res://vfx/move_to_mouse.gd" id="20_3nrei"]
 [ext_resource type="Script" path="res://maaack/scenes/menus/main_menu/jump_on_beat.gd" id="20_fr6r1"]
-[ext_resource type="Script" path="res://addons/rhythm_notifier/rhythm_notifier.gd" id="21_78qqv"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -408,7 +407,7 @@ radius = 17.21
 
 [node name="MainMenu" instance=ExtResource("1_umbo3")]
 script = ExtResource("2_xtkjf")
-game_scene_path = "res://savedata/load_save.tscn"
+game_scene_path = "res://event_locations/scenes/home/home_scene.tscn"
 
 [node name="UISoundController" parent="." index="0"]
 button_hovered = ExtResource("4_oxs2l")
@@ -535,11 +534,7 @@ position = Vector2(-8, -106)
 position = Vector2(659, 1031)
 shape = SubResource("RectangleShape2D_1x5nm")
 
-[node name="rhythm_node" type="Node" parent="." index="12" node_paths=PackedStringArray("audio_stream_player")]
-script = ExtResource("21_78qqv")
-audio_stream_player = NodePath("../BackgroundMusicPlayer")
-
-[node name="play_slimes" type="Node2D" parent="." index="13"]
+[node name="play_slimes" type="Node2D" parent="." index="12"]
 script = ExtResource("20_fr6r1")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="play_slimes" index="0"]
